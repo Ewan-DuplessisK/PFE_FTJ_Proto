@@ -3,6 +3,13 @@
 	"EngineAssociation": "5.5",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "FTJ_Proto",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",
@@ -12,8 +19,8 @@
 			]
 		},
 		{
-			"Name": "CommonUI",
-			"Enabled": true
+			"Name" : "HoudiniEngine",
+			"Enabled" : false
 		}
 	]
 }
