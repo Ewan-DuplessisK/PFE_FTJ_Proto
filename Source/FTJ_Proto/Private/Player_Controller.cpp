@@ -30,9 +30,9 @@ void APlayer_Controller::SetupInputComponent(){
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
 
-	if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings())){
+	/*if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings())){
 		EnhancedInputUserSettings->RegisterInputMappingContext(InputMapping);
-	}
+	}*/
 	
 }
 
