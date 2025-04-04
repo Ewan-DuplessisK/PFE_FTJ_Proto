@@ -10,17 +10,21 @@
 			"LoadingPhase": "Default"
 		}
 	],
-	"Plugins": [
-		{
-			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
-		},
-		{
-			"Name" : "HoudiniEngine",
-			"Enabled" : false
-		}
-	]
+ "Plugins": [
+  {
+   "Name": "ModelingToolsEditorMode",
+   "Enabled": true,
+   "TargetAllowList": [
+    "Editor"
+   ]
+  },
+  {
+   "Name": "HoudiniEngine",
+   "Enabled": false
+  },
+  {
+   "Name": "GeometryCollectionPlugin",
+   "Enabled": true
+  }
+ ]
 }
