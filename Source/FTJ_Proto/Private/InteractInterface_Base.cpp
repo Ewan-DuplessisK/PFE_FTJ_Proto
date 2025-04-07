@@ -3,10 +3,3 @@
 
 #include "InteractInterface_Base.h"
 
-InteractInterface_Base::InteractInterface_Base()
-{
-}
-
-InteractInterface_Base::~InteractInterface_Base()
-{
-}
