@@ -7,24 +7,27 @@
 		{
 			"Name": "FTJ_Proto",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"GeometryCollectionEngine"
+			]
 		}
 	],
- "Plugins": [
-  {
-   "Name": "ModelingToolsEditorMode",
-   "Enabled": true,
-   "TargetAllowList": [
-    "Editor"
-   ]
-  },
-  {
-   "Name": "HoudiniEngine",
-   "Enabled": false
-  },
-  {
-   "Name": "GeometryCollectionPlugin",
-   "Enabled": true
-  }
- ]
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		},
+		{
+			"Name": "HoudiniEngine",
+			"Enabled": false
+		},
+		{
+			"Name": "GeometryCollectionPlugin",
+			"Enabled": true
+		}
+	]
 }
