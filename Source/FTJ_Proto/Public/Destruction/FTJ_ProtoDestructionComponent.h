@@ -4,8 +4,6 @@
 #include"Components/ActorComponent.h"
 #include"FTJ_ProtoDestructionComponent.generated.h"
 
-struct FChaosBreakEvent;
-
 UCLASS(Blueprintable) class FTJ_PROTO_API UFTJ_ProtoDestructionComponent : public UActorComponent
 {
     GENERATED_BODY()
