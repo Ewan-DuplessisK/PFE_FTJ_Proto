@@ -3,7 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/TimelineComponent.h"
 #include "GameFramework/PlayerController.h"
+#include "Data_3C/CameraFeel.h"
 #include "Player_Controller.generated.h"
 
 /**
@@ -18,6 +20,8 @@ public:
 	virtual void SetupInputComponent() override;
 	virtual void SetPawn(APawn* InPawn) override;
 	virtual void BeginPlay() override;
+
+	virtual void Tick(float DeltaSeconds) override;
 
 protected:
 	class AGame_Character* Character = nullptr;
@@ -36,6 +40,8 @@ protected:
 	void MovePlayer(const struct FInputActionValue& Value);
 	void Look(const struct FInputActionValue& Value);
 
+	void HeadTilt(float DeltaTime);
+	void Rota180();
 
 	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change X axis sensitivity.", ClampMin = "0.1",ClampMax="3.0"))
 	float InputSensitivityX = 1.f;
@@ -55,4 +61,14 @@ public:
 
 	void SetInputSensitivityX(float InSensitivity);
 	void SetInputSensitivityY(float InSensitivity);
+
+protected:
+	bool bCan180Rota = true;
+	FRotator TempRota = {0, 0, 0};
+	
+	
+	float Tilt = 0.0f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FUCameraFeel CameraFeel;
 };

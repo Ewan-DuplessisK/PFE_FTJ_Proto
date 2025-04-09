@@ -8,7 +8,11 @@
 #include "EnhancedInputComponent.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
+#include "Camera/CameraComponent.h"
 #include "FTJ_Proto/Public/Game_Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "src/Core/util/Meta.h"
+#include "src/Core/util/Meta.h"
 #include "UserSettings/EnhancedInputUserSettings.h"
 
 void APlayer_Controller::SetupInputComponent(){
@@ -45,6 +49,20 @@ void APlayer_Controller::SetPawn(APawn* InPawn){
 void APlayer_Controller::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// Timeline
+	const ConstructorHelpers::FObjectFinder<UCurveFloat> Curve(TEXT("CurveFloat'/Game/OwnStuff/EffectCurve.EffectCurve'"));
+	Timeline180Rota = FTimeline{};
+	FOnTimelineFloat progressFunction{};
+	progressFunction.BindUFunction(this, "EffectProgress"); // The function EffectProgress gets called
+	Timeline180Rota.AddInterpFloat(Curve.Object, progressFunction, FName{TEXT("EFFECTFADE")});
+}
+
+void APlayer_Controller::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+	
+	HeadTilt(DeltaSeconds);
 }
 
 void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
@@ -73,6 +91,63 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 
 	if (MoveValue.X != 0.f) {
 		Character->AddControllerYawInput(MoveValue.X);
+	}
+}
+
+void APlayer_Controller::HeadTilt(float DeltaTime)
+{
+	// Tilt Calc
+	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
+	
+	// end Tilt Cal
+	if(Character)
+	{
+		// Tilt Clamp
+		if (Tilt < 0.0f)
+		{
+			Tilt = FMath::Clamp(Tilt, (CameraFeel.TiltMax * -1.0f), CameraFeel.TiltClamp);
+		}
+		else
+		{
+			Tilt = FMath::Clamp(Tilt, CameraFeel.TiltClamp, CameraFeel.TiltMax);
+		}
+		
+		Character->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+		FRotator DeltaRotation = {0, 0, Tilt};
+		Character->FirstPersonCameraComponent->AddRelativeRotation(DeltaRotation);
+	}
+}
+
+void APlayer_Controller::Rota180()
+{
+	if(bCan180Rota)
+	{
+		bCan180Rota = false;
+		UCharacterMovementComponent* charaMovComp = Character->GetCharacterMovement();
+		
+		charaMovComp->StopMovementImmediately();
+
+		float tempYaw = 0.0f;
+		
+		if(GetControlRotation().Yaw < 0.0f)
+		{
+			tempYaw = GetControlRotation().Yaw - 180;
+		}
+		else
+		{
+			tempYaw = GetControlRotation().Yaw + 180;
+		}
+		if(tempYaw <= 0)
+		{
+			tempYaw += 360;
+		}
+		else if(tempYaw >= 360)
+		{
+			tempYaw -= 360;
+		}
+		TempRota = {GetControlRotation().Pitch, tempYaw, GetControlRotation().Roll};
+
+		// Timeline to lerp from Control Rota to temp rota then set rota and reset bCan180Rota on timeline complete
 	}
 }
 
@@ -107,4 +182,3 @@ void APlayer_Controller::SetInputSensitivityY(float InSensitivity)
 {
 	InputSensitivityY=InSensitivity;
 }
-

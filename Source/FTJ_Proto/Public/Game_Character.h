@@ -14,7 +14,8 @@ UCLASS()
 class FTJ_PROTO_API AGame_Character : public ACharacter
 {
 	GENERATED_BODY()
-
+	
+public:
 	/** Spring Arm */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* SpringArm;
@@ -22,11 +23,10 @@ class FTJ_PROTO_API AGame_Character : public ACharacter
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
-
-public:
+	
 	// Sets default values for this character's properties
 	AGame_Character();
-
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
