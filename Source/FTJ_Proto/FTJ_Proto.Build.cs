@@ -29,6 +29,8 @@ public class FTJ_Proto : ModuleRules
           "DataflowCore"
           ,
           "GeometryCollectionNodes"
+          ,
+          "FieldSystemEngine"
       }
   );
 	}

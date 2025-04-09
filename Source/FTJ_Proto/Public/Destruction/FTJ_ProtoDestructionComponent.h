@@ -45,5 +45,5 @@ UCLASS(Blueprintable) class FTJ_PROTO_API UFTJ_ProtoDestructionComponent : publi
         @param InStrain Damage to apply to specific piece of geometry collection in efforts to break it down
         @param InVelocity Velocity to apply on specific peace which tries to separate other pieces and move them
     */
-    UFUNCTION(BlueprintCallable) bool Hit(UPrimitiveComponent * InComponent , FHitResult InHit , float InRadius , int32 InDepth , float InFactor , float InStrain , FVector InVelocity);
+    UFUNCTION(BlueprintCallable) virtual bool Hit(UPrimitiveComponent * InComponent , FHitResult InHit , float InRadius , int32 InDepth , float InFactor , float InStrain , FVector InVelocity);
 };
