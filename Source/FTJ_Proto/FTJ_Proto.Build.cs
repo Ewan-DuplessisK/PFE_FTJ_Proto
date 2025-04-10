@@ -6,7 +6,6 @@ public class FTJ_Proto : ModuleRules
 {
 	public FTJ_Proto(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PrivateDependencyModuleNames.AddRange(new string[] { "Eigen"});
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange

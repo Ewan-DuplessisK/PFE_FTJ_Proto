@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+//#include "Data_3C/PlayerFeel.h"
 #include "Game_Character.generated.h"
 
 class USkeletalMeshComponent;
@@ -38,4 +39,8 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+
+	// Struct Ref
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	//FUPlayerFeel PlayerFeel;
 };
