@@ -4,6 +4,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 
 // Sets default values
@@ -36,7 +37,8 @@ AGame_Character::AGame_Character()
 void AGame_Character::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	InitializeVarsWithPlayerFeelStruct();
 }
 
 // Called every frame
@@ -53,3 +55,12 @@ void AGame_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 }
 
+void AGame_Character::InitializeVarsWithPlayerFeelStruct()
+{
+	GetCharacterMovement()->GravityScale = PlayerFeel.Gravity;
+	
+	GetCharacterMovement()->MaxWalkSpeed = PlayerFeel.WalkSpeed;
+	
+	GetCapsuleComponent()->SetLinearDamping(PlayerFeel.LinearDamping);
+	GetCapsuleComponent()->SetAngularDamping(PlayerFeel.AngularDamping);
+}

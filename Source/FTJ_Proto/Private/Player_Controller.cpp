@@ -224,9 +224,10 @@ void APlayer_Controller::FOVChangeSpeed()
 			Character->FirstPersonCameraComponent->FieldOfView, 
 			FMath::Lerp(CameraFeel.FOVBase,CameraFeel.FOVTarget, ForwardAlpha), 
 			GetWorld()->GetDeltaSeconds(), 
+			
 			CameraFeel.FOVInterpSpeed
 		);
-
+		
 		Character->FirstPersonCameraComponent->SetFieldOfView(newFOV);
 	}
 

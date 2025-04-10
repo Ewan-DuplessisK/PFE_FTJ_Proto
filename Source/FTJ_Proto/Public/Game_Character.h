@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-//#include "Data_3C/PlayerFeel.h"
+#include "Data_3C/PlayerFeel.h"
 #include "Game_Character.generated.h"
 
 class USkeletalMeshComponent;
@@ -41,6 +41,9 @@ public:
 
 
 	// Struct Ref
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	//FUPlayerFeel PlayerFeel;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FUPlayerFeel PlayerFeel;
+	
+	UFUNCTION(BlueprintCallable)
+	void InitializeVarsWithPlayerFeelStruct();
 };

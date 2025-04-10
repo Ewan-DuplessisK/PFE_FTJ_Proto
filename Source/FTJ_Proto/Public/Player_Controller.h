@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/TimelineComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "Data_3C/CameraFeel.h"
 #include "Player_Controller.generated.h"
@@ -24,13 +23,11 @@ public:
 
 	virtual void Tick(float DeltaSeconds) override;
 
+protected:
 	// Timer
 	// You should keep the timer handle in one of your properties
 	FTimerHandle MyTimerHandle;
- 
-	// This member function will be called on every timer event
-	void OnTimer();
- 
+	
 	// We need to override EndPlay to do some timer handle housekeeping
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
