@@ -32,7 +32,7 @@ void APlayer_Controller::SetupInputComponent()
 	{
 		return;
 	}
-	EnhancedInputComponent->ClearActionBindings();
+	//EnhancedInputComponent->ClearActionBindings();
 
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
