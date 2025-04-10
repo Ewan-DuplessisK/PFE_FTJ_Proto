@@ -42,10 +42,10 @@ void UAimComponent_Base::BeginPlay()
 void UAimComponent_Base::ExecuteSystem()
 {
 	bool bPawnFound = false;
-	FVector2d InLocation = {0,0};
+	FVector2D InLocation = {0,0};
 	bool bDoesImplementInterface = false; 
-	FVector2d BaseSpotLocation = {0,0}; 
-	FVector2d WeakspotLocation = {0,0};
+	FVector2D BaseSpotLocation = {0,0}; 
+	FVector2D WeakspotLocation = {0,0};
 	
 	PawnSearch(bPawnFound, InLocation, bDoesImplementInterface, BaseSpotLocation, WeakspotLocation);
 	CrosshairScreenLocation = SetCrosshairLocation(bPawnFound, InLocation, bDoesImplementInterface, BaseSpotLocation, WeakspotLocation);
@@ -58,12 +58,12 @@ void UAimComponent_Base::ExecuteSystem()
 	}
 }
 
-void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2d& InLocation, bool& bDoesImplementInterface,
-	FVector2d& BaseSpotLocation, FVector2d& WeakspotLocation)
+void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, bool& bDoesImplementInterface,
+	FVector2D& BaseSpotLocation, FVector2D& WeakspotLocation)
 {
 	HitPawnsDistToCenter.Empty();
 	
-	FVector2d viewportSize = {1.0f, 1.0f};
+	FVector2D viewportSize = {1.0f, 1.0f};
 	GEngine->GameViewport->GetViewportSize(viewportSize);
 	FVector WorldLocation  = {0, 0, 0};
 	FVector WorldDirection = {0, 0, 0};
@@ -82,7 +82,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2d& InLocation, boo
 	{
 		for (FHitResult ArrayElement : HitPawns)
 		{
-			FVector2d screenPosition = {0, 0};
+			FVector2D screenPosition = {0, 0};
 			playerControler->ProjectWorldLocationToScreen(ArrayElement.ImpactPoint, screenPosition);
 			
 			HitPawnsDistToCenter.Add(UKismetMathLibrary::Distance2D(viewportSize/2, screenPosition));
@@ -92,9 +92,9 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2d& InLocation, boo
 		UKismetMathLibrary::MinOfFloatArray(HitPawnsDistToCenter, indexOfMinValue, valueOfMinValue);
 		
 		FHitResult chosenHit = HitPawns[indexOfMinValue];
-		FVector2d screenLocation = {0, 0};
+		FVector2D screenLocation = {0, 0};
 		playerControler->ProjectWorldLocationToScreen(chosenHit.ImpactPoint, screenLocation);
-		FVector2d L_EngagedPawnScreenLoc = screenLocation;
+		FVector2D L_EngagedPawnScreenLoc = screenLocation;
 		AActor* L_EngagedPawn = chosenHit.GetActor();
 
 		if (/*Implement Interface BPI Damageable*/ false)
@@ -133,12 +133,12 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2d& InLocation, boo
 }
 
 
-FVector2d UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2d InLocation, bool bDoesImplementInterface,
-	FVector2d BaseSpotLocation, FVector2d WeakspotLocation)
+FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D InLocation, bool bDoesImplementInterface,
+	FVector2D BaseSpotLocation, FVector2D WeakspotLocation)
 {
-	FVector2d viewportSize = {0, 0};
+	FVector2D viewportSize = {0, 0};
 	GEngine->GameViewport->GetViewportSize(viewportSize);
-	FVector2d viewportCenter = viewportSize / 2.0f;
+	FVector2D viewportCenter = viewportSize / 2.0f;
 	
 	float PawnDistToCenter = UKismetMathLibrary::Distance2D(InLocation, viewportCenter);
 
@@ -218,7 +218,7 @@ FVector2d UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2d In
 	return viewportCenter;
 }
 
-FVector2d UAimComponent_Base::GetCrosshairLocation()
+FVector2D UAimComponent_Base::GetCrosshairLocation()
 {
 	return CrosshairScreenLocation;
 }

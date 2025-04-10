@@ -27,9 +27,9 @@ protected:
 	void ExecuteSystem();
 
 private:
-	void PawnSearch(bool &bPawnFound, FVector2d &InLocation, bool &bDoesImplementInterface, FVector2d &BaseSpotLocation, FVector2d &WeaksotLocation);
-	FVector2d SetCrosshairLocation(bool bPawnFound, FVector2d InLocation, bool bDoesImplementInterface, FVector2d BaseSpotLocation, FVector2d WeaksotLocation);
-	FVector2d GetCrosshairLocation();
+	void PawnSearch(bool &bPawnFound, FVector2D &InLocation, bool &bDoesImplementInterface, FVector2D &BaseSpotLocation, FVector2D &WeaksotLocation);
+	FVector2D SetCrosshairLocation(bool bPawnFound, FVector2D InLocation, bool bDoesImplementInterface, FVector2D BaseSpotLocation, FVector2D WeaksotLocation);
+	FVector2D GetCrosshairLocation();
 	
 public:	
 	// Called every frame
@@ -45,16 +45,21 @@ private:
 	float TempHorizCamSpeed = 0.0f;
 	float TempVertCamSpeed = 0.0f;
 
-	 TArray<FHitResult> HitPawns;
+	TArray<FHitResult> HitPawns;
 	TArray<float> HitPawnsDistToCenter;
-	FVector2d CrosshairScreenLocation = {0, 0};
+
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FVector2D CrosshairScreenLocation;
+	
+private:
 	//EAimingSysState currentState;
 
 	// Refs
-	class APlayer_Controller* playerControler;
-
+	class APlayer_Controller* playerControler = nullptr;
 	
 protected:
+	
 	// Timer
 	// You should keep the timer handle in one of your properties
 	FTimerHandle MyTimerHandle;
