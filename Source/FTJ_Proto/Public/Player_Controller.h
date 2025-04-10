@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "Data_3C/CameraFeel.h"
 #include "Player_Controller.generated.h"
 
 /**
@@ -17,12 +18,23 @@ class FTJ_PROTO_API APlayer_Controller : public APlayerController
 public:
 	virtual void SetupInputComponent() override;
 	virtual void SetPawn(APawn* InPawn) override;
+	
 	virtual void BeginPlay() override;
+
+	virtual void Tick(float DeltaSeconds) override;
+
+protected:
+	// Timer
+	// You should keep the timer handle in one of your properties
+	FTimerHandle MyTimerHandle;
+	
+	// We need to override EndPlay to do some timer handle housekeeping
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 protected:
 	class AGame_Character* Character = nullptr;
 
-
+	
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput")
 	class UInputMappingContext* InputMapping;
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Movement")
@@ -36,12 +48,16 @@ protected:
 	void MovePlayer(const struct FInputActionValue& Value);
 	void Look(const struct FInputActionValue& Value);
 
+	void HeadTilt(float DeltaTime);
 
 	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change X axis sensitivity.", ClampMin = "0.1",ClampMax="3.0"))
 	float InputSensitivityX = 1.f;
 	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change Y axis sensitivity.", ClampMin = "0.1", ClampMax = "3.0"))
 	float InputSensitivityY = 1.f;
-
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Tilt", meta = (ToolTip = "Tilt Multiplier for Look", ClampMin = "0.1", ClampMax = "2.0"))
+	float TiltLookFactor = 1.25f;
+	
 
 	class UEnhancedInputLocalPlayerSubsystem* EnhancedInputSubsystem = nullptr;
 	class UEnhancedInputUserSettings* EnhancedInputUserSettings = nullptr;
@@ -55,4 +71,24 @@ public:
 
 	void SetInputSensitivityX(float InSensitivity);
 	void SetInputSensitivityY(float InSensitivity);
+	
+	
+	// Struct Ref
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FUCameraFeel CameraFeel;
+	
+protected:
+	
+	// Tilt
+	float Tilt = 0.0f;
+
+	// FOV
+	float ForwardAlpha = 0.0f;
+
+	FVector FlattenZAxis(FVector inVec);
+	
+public:
+	UFUNCTION(BlueprintCallable)
+	void InitializeVarsWithCameraFeelStruct();
+	void FOVChangeSpeed();
 };

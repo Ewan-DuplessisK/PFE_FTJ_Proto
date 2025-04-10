@@ -1,0 +1,28 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "PlayerFeel.generated.h"
+
+/**
+ * 
+ */
+USTRUCT(BlueprintType)
+struct FTJ_PROTO_API FUPlayerFeel
+{
+	GENERATED_BODY()
+
+	// Variables
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Gravity = 1.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float WalkSpeed = 700.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float RunSpeed = 900.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float LinearDamping = 0.01f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AngularDamping = 0.0f;
+};

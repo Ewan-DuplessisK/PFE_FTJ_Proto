@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Data_3C/PlayerFeel.h"
+#include "Data_3C/CombatFeel.h"
 #include "Game_Character.generated.h"
 
 class USkeletalMeshComponent;
@@ -14,7 +16,8 @@ UCLASS()
 class FTJ_PROTO_API AGame_Character : public ACharacter
 {
 	GENERATED_BODY()
-
+	
+public:
 	/** Spring Arm */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* SpringArm;
@@ -22,11 +25,10 @@ class FTJ_PROTO_API AGame_Character : public ACharacter
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
-
-public:
+	
 	// Sets default values for this character's properties
 	AGame_Character();
-
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -38,4 +40,13 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+
+	// Struct Ref
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FUPlayerFeel PlayerFeel;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FUCombatFeel CombatFeel;
+	
+	UFUNCTION(BlueprintCallable)
+	void InitializeVarsWithPlayerFeelStruct();
 };
