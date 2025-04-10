@@ -45,13 +45,13 @@ private:
 	float TempHorizCamSpeed = 0.0f;
 	float TempVertCamSpeed = 0.0f;
 
-	TArray<FVector2d> HitPawns;
+	 TArray<FHitResult> HitPawns;
 	TArray<float> HitPawnsDistToCenter;
 	FVector2d CrosshairScreenLocation = {0, 0};
 	//EAimingSysState currentState;
 
 	// Refs
-	//APlayer_Controller playerControler;
+	class APlayer_Controller* playerControler;
 
 	
 protected:
