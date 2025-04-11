@@ -35,8 +35,6 @@ AGame_Character::AGame_Character()
 
 	// Aim Component
 	AimComponent = CreateDefaultSubobject<UAimComponent_Base>(TEXT("AC_AimAssist"));
-	//AddOwnedComponent(AimComponent);
-	//AimComponent->RegisterComponent();
 }
 
 // Called when the game starts or when spawned

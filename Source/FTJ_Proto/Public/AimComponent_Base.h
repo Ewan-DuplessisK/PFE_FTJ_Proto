@@ -7,6 +7,7 @@
 #include "Data_3C/AimAssistFeel.h"
 #include "AimState_Enum.h"
 #include "Player_Controller.h"
+#include "HUD.generated.h"
 #include "AimComponent_Base.generated.h"
 
 
@@ -65,4 +66,13 @@ protected:
 	// Timer
 	// You should keep the timer handle in one of your properties
 	FTimerHandle MyTimerHandle;
+
+protected:
+	// Debug Widget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Aiming Debug HUD"))
+	TSubclassOf<AHUD> wAimDebugWidget = nullptr;
+	
+	// Variable to hold the widget After Creating it.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Widget Reference of the Aiming Debug Widget"))
+	AHUD* MyAimDebugMenu = nullptr;
 };
