@@ -3,16 +3,23 @@
 
 #include "FTJ_Proto/Public/Player_Controller.h"
 
+#include "Blueprint/UserWidget.h"
+
 #include "EnhancedInputSubsystems.h"
 #include "InputMappingContext.h"
 #include "EnhancedInputComponent.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
+
 #include "FTJ_Proto/Public/Game_Character.h"
+
+
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Camera/CameraComponent.h"
+
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
+
 #include "UserSettings/EnhancedInputUserSettings.h"
 
 void APlayer_Controller::SetupInputComponent()
@@ -63,7 +70,7 @@ void APlayer_Controller::BeginPlay()
 	///
 
 	InitializeVarsWithCameraFeelStruct();
-
+	
 	// Timer for FOV Switch (don't add anything after this)
 	GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &APlayer_Controller::FOVChangeSpeed, CameraFeel.FOVSwitchSpeed, true);
 }

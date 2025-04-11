@@ -93,4 +93,12 @@ public:
 	void InitializeVarsWithCameraFeelStruct();
 	
 	void FOVChangeSpeed();
+
+	// Debug Widget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Debug Widget"))
+	TSubclassOf<UUserWidget> wDebugWidget = nullptr;
+	
+	// Variable to hold the widget After Creating it.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Widget Reference of the Debug Widget"))
+	UUserWidget* MyDebugMenu = nullptr;
 };
