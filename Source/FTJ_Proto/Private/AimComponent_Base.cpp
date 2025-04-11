@@ -33,6 +33,8 @@ void UAimComponent_Base::BeginPlay()
 	TempHorizCamSpeed = playerControler->CameraFeel.HorizontalCamSpeed;
 	TempVertCamSpeed = playerControler->CameraFeel.VerticalCamSpeed;
 	
+	CurrentAimState = UAimState_Enum::NotEngaged;
+	
 	// Timer for Aim System (don't add anything after this)
 	// Time(60 FPS) = 1/60 = 0.016667 or (30 FPS) = 1/30 = 0.033333
 	float inRate = 0.016667f;
@@ -141,8 +143,7 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 	FVector2D viewportCenter = viewportSize / 2.0f;
 	
 	float PawnDistToCenter = UKismetMathLibrary::Distance2D(InLocation, viewportCenter);
-
-
+	
 	if(bPawnFound && PawnDistToCenter <= AimFeel.BendShotRadius)
 	{
 		if(bDoesImplementInterface)
@@ -150,6 +151,7 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 			if(UKismetMathLibrary::Distance2D(WeakspotLocation, viewportCenter) <= AimFeel.HeadshotRadius)
 			{
 				// Set State "Locking on Weakspot"
+				CurrentAimState = UAimState_Enum::LockingWeakSpot;
 				
 				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.WeakFactor;
 				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.WeakFactor;
@@ -159,16 +161,18 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 			else if(UKismetMathLibrary::Distance2D(BaseSpotLocation, viewportCenter) <= AimFeel.BaseShotRadius)
 				{
 					// Set State "Locking on Basespot"
+					CurrentAimState = UAimState_Enum::LockingBaseSpot;
 					
 					playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.BaseFactor;
 					playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.BaseFactor;
-
+					
 					return BaseSpotLocation;
 				}
 		}
 		else
 		{
 			// Set State to "Not Engaged"
+			CurrentAimState = UAimState_Enum::NotEngaged;
 			
 			playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed;
 			playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed;
@@ -176,6 +180,7 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 			if(PawnDistToCenter <= AimFeel.BaseShotRadius)
 			{
 				// Set State "Simple Engaged"
+				CurrentAimState = UAimState_Enum::SimpleEngaged;
 				
 				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.SimpleFactor;
 				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.SimpleFactor;
@@ -185,6 +190,7 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 			else
 			{
 				// Set State "Bending Crosshair"
+				CurrentAimState = UAimState_Enum::BendingCrosshair;
 				
 				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.BendFactor;
 				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.BendFactor;
@@ -199,6 +205,7 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 		if (PawnDistToCenter <= AimFeel.MagneticRadius)
 		{
 			// set state to "Magnetic Crosshair"
+			CurrentAimState = UAimState_Enum::MagnetiseCrosshair;
 			
 			playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.MagneticFactor;
 			playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.MagneticFactor;
@@ -207,7 +214,8 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 		else
 		{
 			// Set State to "Not Engaged"
-
+			CurrentAimState = UAimState_Enum::NotEngaged;
+			
 			playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed;
 			playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed;
 		}

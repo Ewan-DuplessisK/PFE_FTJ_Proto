@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "Data_3C/CombatFeel.h"
 #include "Data_3C/AimAssistFeel.h"
+#include "AimState_Enum.h"
 #include "Player_Controller.h"
 #include "AimComponent_Base.generated.h"
 
@@ -57,6 +58,10 @@ private:
 
 	// Refs
 	class APlayer_Controller* playerControler = nullptr;
+
+public:
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	UAimState_Enum CurrentAimState = UAimState_Enum::NotEngaged;
 	
 protected:
 	
