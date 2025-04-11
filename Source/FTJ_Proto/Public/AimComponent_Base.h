@@ -4,15 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Data_3C/CombatFeel.h"
 #include "Data_3C/AimAssistFeel.h"
 #include "AimState_Enum.h"
 #include "Player_Controller.h"
 #include "AimComponent_Base.generated.h"
 
 
-//UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-UCLASS(Blueprintable)
+
+UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class FTJ_PROTO_API UAimComponent_Base : public UActorComponent
 {
 	GENERATED_BODY()
@@ -37,9 +36,7 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Struct Ref
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
-	FUCombatFeel CombatFeel;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUAimAssistFeel AimFeel;
 
 private:

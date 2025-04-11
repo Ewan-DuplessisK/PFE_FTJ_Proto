@@ -53,7 +53,7 @@ void UAimComponent_Base::ExecuteSystem()
 	CrosshairScreenLocation = SetCrosshairLocation(bPawnFound, InLocation, bDoesImplementInterface, BaseSpotLocation, WeakspotLocation);
 	
 	// Debug
-	if(CombatFeel.bDebugActive)
+	if(AimFeel.bIsDebugActive)
 	{
 		//set crosshair location in debug hud
 		//DebugHUD->MainCrosshairLocation = CrosshairScreenLocation;

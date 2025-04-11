@@ -31,10 +31,11 @@ protected:
 	// We need to override EndPlay to do some timer handle housekeeping
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
-protected:
-	class AGame_Character* Character = nullptr;
+public:
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	class AGame_Character* PlayerCharacterRef = nullptr;
 
-	
+protected:
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput")
 	class UInputMappingContext* InputMapping;
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Movement")
@@ -74,7 +75,7 @@ public:
 	
 	
 	// Struct Ref
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUCameraFeel CameraFeel;
 	
 protected:
@@ -90,5 +91,6 @@ protected:
 public:
 	UFUNCTION(BlueprintCallable)
 	void InitializeVarsWithCameraFeelStruct();
+	
 	void FOVChangeSpeed();
 };

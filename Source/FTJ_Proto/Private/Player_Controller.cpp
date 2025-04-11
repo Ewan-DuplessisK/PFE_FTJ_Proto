@@ -8,9 +8,9 @@
 #include "EnhancedInputComponent.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
-#include "Camera/CameraComponent.h"
 #include "FTJ_Proto/Public/Game_Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Camera/CameraComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "UserSettings/EnhancedInputUserSettings.h"
@@ -47,9 +47,9 @@ void APlayer_Controller::SetupInputComponent()
 
 void APlayer_Controller::SetPawn(APawn* InPawn)
 {
-	if (Character) return;
+	if (PlayerCharacterRef) return;
 	Super::SetPawn(InPawn);
-	Character = Cast<AGame_Character>(InPawn);
+	PlayerCharacterRef = Cast<AGame_Character>(InPawn);
 }
 
 void APlayer_Controller::BeginPlay()
@@ -90,21 +90,21 @@ void APlayer_Controller::EndPlay(const EEndPlayReason::Type EndPlayReason) // If
 void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 {
 	//UE_LOG(LogTemp, Log, TEXT("Move Player"));
-	if (!Character) return;
+	if (!PlayerCharacterRef) return;
 
 	const FVector2D MoveValue = Value.Get<FVector2D>();
 
 	if (MoveValue.X != 0.f)
 	{
 		
-		//Character->AddMovementInput(Character->GetActorForwardVector(), MoveValue.X);
+		//PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorForwardVector(), MoveValue.X);
 		
 		FVector forwardVec = UKismetMathLibrary::GetForwardVector(GetControlRotation());
-		Character->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.X);
+		PlayerCharacterRef->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.X);
 	}
 	if (MoveValue.Y != 0.f)
 	{
-		Character->AddMovementInput(Character->GetActorRightVector(), MoveValue.Y);
+		PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorRightVector(), MoveValue.Y);
 	}
 
 	// Tilt Set for Move
@@ -113,24 +113,24 @@ void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 
 void APlayer_Controller::Look(const FInputActionValue& Value)
 {
-	if (!Character) return;
+	if (!PlayerCharacterRef) return;
 	const FVector2D MoveValue = Value.Get<FVector2D>();
 	
 	if (MoveValue.Y != 0.f) 
 	{
 		if(CameraFeel.bInvertCam)
      	{
-     		Character->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+     		PlayerCharacterRef->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
      	}
 		else
 		{
-			Character->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
+			PlayerCharacterRef->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
 		}
 	}
 
 	if (MoveValue.X != 0.f)
 	{
-		Character->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
+		PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
 	}
 
 	// Tilt set for Look
@@ -149,7 +149,7 @@ void APlayer_Controller::HeadTilt(float DeltaTime)
 	// Tilt Calc
 	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
 	
-	if(Character)
+	if(PlayerCharacterRef)
 	{
 		// Tilt Clamp
 		if (Tilt < 0.0f)
@@ -161,10 +161,10 @@ void APlayer_Controller::HeadTilt(float DeltaTime)
 			Tilt = FMath::Clamp(Tilt, CameraFeel.TiltClamp, CameraFeel.TiltMax);
 		}
 		
-		Character->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+		PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
 		// Tilt Set
 		FRotator DeltaRotation = {0.0f, 0.0f, Tilt};
-		Character->FirstPersonCameraComponent->AddRelativeRotation(DeltaRotation);
+		PlayerCharacterRef->FirstPersonCameraComponent->AddRelativeRotation(DeltaRotation);
 	}
 }
 
@@ -209,26 +209,26 @@ FVector APlayer_Controller::FlattenZAxis(FVector inVec)
 
 void APlayer_Controller::InitializeVarsWithCameraFeelStruct() // Set FOV From Player Controller
 {
-	Character->FirstPersonCameraComponent->SetFieldOfView(CameraFeel.FOVBase);
+	PlayerCharacterRef->FirstPersonCameraComponent->SetFieldOfView(CameraFeel.FOVBase);
 }
 
 void APlayer_Controller::FOVChangeSpeed()
 {
-	FVector charaVel = Character->GetVelocity();
+	FVector charaVel = PlayerCharacterRef->GetVelocity();
 	charaVel.Normalize(0.0001);
-	ForwardAlpha = FVector::DotProduct(charaVel, Character->GetActorForwardVector());
+	ForwardAlpha = FVector::DotProduct(charaVel, PlayerCharacterRef->GetActorForwardVector());
 	if(ForwardAlpha >= 0.0f)
 	{
 		float newFOV =FMath::FInterpConstantTo
 		(
-			Character->FirstPersonCameraComponent->FieldOfView, 
+			PlayerCharacterRef->FirstPersonCameraComponent->FieldOfView, 
 			FMath::Lerp(CameraFeel.FOVBase,CameraFeel.FOVTarget, ForwardAlpha), 
 			GetWorld()->GetDeltaSeconds(), 
 			
 			CameraFeel.FOVInterpSpeed
 		);
 		
-		Character->FirstPersonCameraComponent->SetFieldOfView(newFOV);
+		PlayerCharacterRef->FirstPersonCameraComponent->SetFieldOfView(newFOV);
 	}
 
 	UE_LOG(LogTemp, Log, TEXT("FOV Timer"));

@@ -16,30 +16,30 @@ struct FTJ_PROTO_API FUCameraFeel
 
 	// Variables
 	// FOV
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | FOV")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | FOV")
 	float FOVBase = 90.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | FOV")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | FOV")
 	float FOVTarget = 95.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | FOV")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | FOV")
 	float FOVInterpSpeed = 50.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | FOV")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | FOV")
 	float FOVSwitchSpeed = 0.01f;
 	// Camera
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
 	bool bInvertCam = false;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
 	float HorizontalCamSpeed = 1.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
 	float VerticalCamSpeed = 0.45f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
 	float ViewPitchMin = -70.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
 	float ViewPitchMax = 65.0f;
 	// Tilt
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | Tilt")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Tilt")
 	float TiltRecoverySpeed = 8.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | Tilt")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Tilt")
 	float TiltClamp = 0.05f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cam | Tilt")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Tilt")
 	float TiltMax = 1.75f;
 };

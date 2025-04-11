@@ -21,11 +21,19 @@ public:
 	/** Spring Arm */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* SpringArm;
-
+	
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
-	
+
+protected:
+	/** Aim Component */
+	//UPROPERTY(EditDefaultsOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+	class UAimComponent_Base* AimComponent;
+
+public:
 	// Sets default values for this character's properties
 	AGame_Character();
 	
@@ -42,9 +50,9 @@ public:
 
 
 	// Struct Ref
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUPlayerFeel PlayerFeel;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUCombatFeel CombatFeel;
 	
 	UFUNCTION(BlueprintCallable)
