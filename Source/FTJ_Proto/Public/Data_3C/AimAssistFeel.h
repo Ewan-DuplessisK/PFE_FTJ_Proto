@@ -16,33 +16,33 @@ struct FTJ_PROTO_API FUAimAssistFeel
 	
 	// Variables
 	// Aim
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Trace")
 	float SearchRadius = 80.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Trace")
 	float StartOffset = 75.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Trace")
 	float AssistRange = 2000.0f;
 	// Radius
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Radiuses")
 	float HeadshotRadius = 30.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Radiuses")
 	float BaseShotRadius = 80.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Radiuses")
 	float BendShotRadius = 160.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Radiuses")
 	float MagneticRadius = 200.0f;
 	// Debug
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Debug")
 	bool bIsDebugActive = true;
 	// Factor
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Factors")
 	float WeakFactor = 2.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Factors")
 	float BaseFactor = 1.75f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Factors")
 	float SimpleFactor = -1.5f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Factors")
 	float BendFactor = 1.3f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aim Feel | Factors")
 	float MagneticFactor = 1.2f;
 };

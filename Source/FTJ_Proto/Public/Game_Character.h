@@ -42,9 +42,9 @@ public:
 
 
 	// Struct Ref
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
 	FUPlayerFeel PlayerFeel;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
 	FUCombatFeel CombatFeel;
 	
 	UFUNCTION(BlueprintCallable)

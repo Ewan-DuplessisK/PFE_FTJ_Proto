@@ -74,7 +74,7 @@ public:
 	
 	
 	// Struct Ref
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
 	FUCameraFeel CameraFeel;
 	
 protected:

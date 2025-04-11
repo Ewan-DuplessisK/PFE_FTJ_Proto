@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include"Data_3C/CombatFeel.h"
-#include"Data_3C/AimAssistFeel.h"
+#include "Data_3C/CombatFeel.h"
+#include "Data_3C/AimAssistFeel.h"
 #include "Player_Controller.h"
 #include "AimComponent_Base.generated.h"
 
@@ -36,9 +36,9 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Struct Ref
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
 	FUCombatFeel CombatFeel;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs")
 	FUAimAssistFeel AimFeel;
 
 private:

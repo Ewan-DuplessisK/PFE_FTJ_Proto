@@ -15,14 +15,14 @@ struct FTJ_PROTO_API FUPlayerFeel
 	GENERATED_BODY()
 
 	// Variables
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Feel")
 	float Gravity = 1.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Feel | Speed")
 	float WalkSpeed = 700.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Feel | Speed")
 	float RunSpeed = 900.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Feel | Damping")
 	float LinearDamping = 0.01f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Feel | Damping")
 	float AngularDamping = 0.0f;
 };
