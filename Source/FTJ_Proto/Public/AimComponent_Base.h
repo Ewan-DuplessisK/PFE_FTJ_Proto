@@ -71,6 +71,6 @@ protected:
 	TSubclassOf<AHUD> wAimDebugWidget = nullptr;
 	
 	// Variable to hold the widget After Creating it.
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Widget Reference of the Aiming Debug Widget"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "HUD Reference of the Aiming Debug HUD"))
 	AHUD* MyAimDebugMenu = nullptr;
 };
