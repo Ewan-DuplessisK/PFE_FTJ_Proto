@@ -27,15 +27,19 @@ protected:
 	// Timer
 	// You should keep the timer handle in one of your properties
 	FTimerHandle MyTimerHandle;
+	///
 	
-	// We need to override EndPlay to do some timer handle housekeeping
-	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
-
 public:
+	// Refs
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
 	class AGame_Character* PlayerCharacterRef = nullptr;
-
+	
+	// Struct Ref
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
+	FUCameraFeel CameraFeel;
+	
 protected:
+	// Inputs
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput")
 	class UInputMappingContext* InputMapping;
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Movement")
@@ -45,18 +49,19 @@ protected:
 	/*UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Kick");
 	class UInputAction* InputActionKick;*/
 
-
+	//
 	void MovePlayer(const struct FInputActionValue& Value);
 	void Look(const struct FInputActionValue& Value);
 
 	void HeadTilt(float DeltaTime);
-
-	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change X axis sensitivity.", ClampMin = "0.1",ClampMax="3.0"))
-	float InputSensitivityX = 1.f;
-	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change Y axis sensitivity.", ClampMin = "0.1", ClampMax = "3.0"))
-	float InputSensitivityY = 1.f;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Tilt", meta = (ToolTip = "Tilt Multiplier for Look", ClampMin = "0.1", ClampMax = "2.0"))
+	//
+	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change X axis sensitivity.", ClampMin = "0.1",ClampMax="3.0"))
+	float InputSensitivityX = 1.0f;
+	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change Y axis sensitivity.", ClampMin = "0.1", ClampMax = "3.0"))
+	float InputSensitivityY = 1.0f;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Tilt", meta = (ToolTip = "Tilt Multiplier for Look", ClampMin = "0.1", ClampMax = "2.5"))
 	float TiltLookFactor = 1.25f;
 	
 
@@ -64,6 +69,7 @@ protected:
 	class UEnhancedInputUserSettings* EnhancedInputUserSettings = nullptr;
 	
 public:
+	// Camera/Look
 	virtual void AddPitchInput(float Value);
 	virtual void AddYawInput(float Value);
 
@@ -73,11 +79,6 @@ public:
 	void SetInputSensitivityX(float InSensitivity);
 	void SetInputSensitivityY(float InSensitivity);
 	
-	
-	// Struct Ref
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
-	FUCameraFeel CameraFeel;
-	
 protected:
 	
 	// Tilt
@@ -86,6 +87,7 @@ protected:
 	// FOV
 	float ForwardAlpha = 0.0f;
 
+	// For smooth look up/down
 	FVector FlattenZAxis(FVector inVec);
 	
 public:

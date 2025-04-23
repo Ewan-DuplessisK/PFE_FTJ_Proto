@@ -54,6 +54,7 @@ public:
 	FUPlayerFeel PlayerFeel;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUCombatFeel CombatFeel;
+
 	
 	UFUNCTION(BlueprintCallable)
 	void InitializeVarsWithPlayerFeelStruct();

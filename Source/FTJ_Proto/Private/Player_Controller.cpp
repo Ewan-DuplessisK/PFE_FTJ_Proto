@@ -39,7 +39,6 @@ void APlayer_Controller::SetupInputComponent()
 	{
 		return;
 	}
-	//EnhancedInputComponent->ClearActionBindings();
 
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
@@ -82,18 +81,6 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 	HeadTilt(DeltaSeconds);
 }
 
-// Timer
-void APlayer_Controller::EndPlay(const EEndPlayReason::Type EndPlayReason) // If you ever want to stop the timer for some reason
-{
-	// It's important to keep the call chain on EndPlay or you may end up with serious bugs or crashes
-	Super::EndPlay(EndPlayReason);
-	
-	// There's a chance your timer is still running when our Actor is destroyed, So we need to make sure we clear the timer on EndPlay just in case.
-	// This is safe to call even if the timer handle's already been cleared.
-	GetWorld()->GetTimerManager().ClearTimer(MyTimerHandle);
-}
-/// 
-
 void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 {
 	//UE_LOG(LogTemp, Log, TEXT("Move Player"));
@@ -103,9 +90,6 @@ void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 
 	if (MoveValue.X != 0.f)
 	{
-		
-		//PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorForwardVector(), MoveValue.X);
-		
 		FVector forwardVec = UKismetMathLibrary::GetForwardVector(GetControlRotation());
 		PlayerCharacterRef->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.X);
 	}

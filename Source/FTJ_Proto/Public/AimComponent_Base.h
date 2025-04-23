@@ -52,8 +52,6 @@ protected:
 	FVector2D CrosshairScreenLocation;
 	
 private:
-	//EAimingSysState currentState;
-
 	// Refs
 	class APlayer_Controller* playerControler = nullptr;
 

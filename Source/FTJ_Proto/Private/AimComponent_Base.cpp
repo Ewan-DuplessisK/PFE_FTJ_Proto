@@ -55,7 +55,7 @@ void UAimComponent_Base::ExecuteSystem()
 	// Debug
 	if(AimFeel.bIsDebugActive)
 	{
-		//set crosshair location in debug hud
+		// set crosshair location in debug hud
 		//DebugHUD->MainCrosshairLocation = CrosshairScreenLocation;
 	}
 }
