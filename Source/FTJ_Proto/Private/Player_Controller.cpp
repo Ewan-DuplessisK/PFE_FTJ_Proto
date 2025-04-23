@@ -61,13 +61,13 @@ void APlayer_Controller::SetPawn(APawn* InPawn)
 void APlayer_Controller::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	// Camera Clamp
 	APlayerCameraManager* cameraManager = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
 	cameraManager->ViewPitchMin = CameraFeel.ViewPitchMin;
 	cameraManager->ViewPitchMax = CameraFeel.ViewPitchMax;
 	///
-
+	
 	InitializeVarsWithCameraFeelStruct();
 	
 	// Timer for FOV Switch (don't add anything after this)
@@ -78,7 +78,7 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	
-	HeadTilt(DeltaSeconds);
+	//HeadTilt(DeltaSeconds);
 }
 
 void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
@@ -135,7 +135,7 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 	}
 }
 
-void APlayer_Controller::HeadTilt(float DeltaTime)
+void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add to Weapon 
 {
 	// Tilt Calc
 	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
