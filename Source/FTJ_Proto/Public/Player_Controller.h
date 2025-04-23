@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "Data_3C/CameraFeel.h"
 #include "Player_Controller.generated.h"
 
 /**
@@ -17,31 +18,47 @@ class FTJ_PROTO_API APlayer_Controller : public APlayerController
 public:
 	virtual void SetupInputComponent() override;
 	virtual void SetPawn(APawn* InPawn) override;
+	
 	virtual void BeginPlay() override;
 
+	virtual void Tick(float DeltaSeconds) override;
+
 protected:
-	class AGame_Character* Character = nullptr;
+	// Timer
+	// You should keep the timer handle in one of your properties
+	FTimerHandle MyTimerHandle;
+	
+	// We need to override EndPlay to do some timer handle housekeeping
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
+public:
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	class AGame_Character* PlayerCharacterRef = nullptr;
 
+protected:
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput")
 	class UInputMappingContext* InputMapping;
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Movement")
 	class UInputAction* InputActionMove;
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Look")
 	class UInputAction* InputActionLook;
-	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Kick");
-	class UInputAction* InputActionKick;
+	/*UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Kick");
+	class UInputAction* InputActionKick;*/
 
 
 	void MovePlayer(const struct FInputActionValue& Value);
 	void Look(const struct FInputActionValue& Value);
 
+	void HeadTilt(float DeltaTime);
 
 	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change X axis sensitivity.", ClampMin = "0.1",ClampMax="3.0"))
 	float InputSensitivityX = 1.f;
 	UPROPERTY(EditDefaultsOnly, Category = "Sensitivity", meta = (ToolTip = "Change Y axis sensitivity.", ClampMin = "0.1", ClampMax = "3.0"))
 	float InputSensitivityY = 1.f;
-
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Tilt", meta = (ToolTip = "Tilt Multiplier for Look", ClampMin = "0.1", ClampMax = "2.0"))
+	float TiltLookFactor = 1.25f;
+	
 
 	class UEnhancedInputLocalPlayerSubsystem* EnhancedInputSubsystem = nullptr;
 	class UEnhancedInputUserSettings* EnhancedInputUserSettings = nullptr;
@@ -55,4 +72,33 @@ public:
 
 	void SetInputSensitivityX(float InSensitivity);
 	void SetInputSensitivityY(float InSensitivity);
+	
+	
+	// Struct Ref
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
+	FUCameraFeel CameraFeel;
+	
+protected:
+	
+	// Tilt
+	float Tilt = 0.0f;
+
+	// FOV
+	float ForwardAlpha = 0.0f;
+
+	FVector FlattenZAxis(FVector inVec);
+	
+public:
+	UFUNCTION(BlueprintCallable)
+	void InitializeVarsWithCameraFeelStruct();
+	
+	void FOVChangeSpeed();
+
+	// Debug Widget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Debug Widget"))
+	TSubclassOf<UUserWidget> wDebugWidget = nullptr;
+	
+	// Variable to hold the widget After Creating it.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Widget Reference of the Debug Widget"))
+	UUserWidget* MyDebugMenu = nullptr;
 };

@@ -31,6 +31,12 @@ public class FTJ_Proto : ModuleRules
           "GeometryCollectionNodes"
           ,
           "FieldSystemEngine"
+          , 
+          "UMG"
+          , 
+          "Slate"
+          , 
+          "SlateCore" 
       }
   );
 	}

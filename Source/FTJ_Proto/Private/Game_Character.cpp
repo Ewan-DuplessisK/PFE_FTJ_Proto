@@ -4,11 +4,16 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Camera/CameraComponent.h"
+#include "AimComponent_Base.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 
 // Sets default values
 AGame_Character::AGame_Character()
 {
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+ 	PrimaryActorTick.bCanEverTick = true;
+	
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 	
@@ -24,19 +29,20 @@ AGame_Character::AGame_Character()
 	FirstPersonCameraComponent->SetRelativeRotation(FRotator(-22.f,0.f,0.f));
 	FirstPersonCameraComponent->bUsePawnControlRotation=false;
 
+	// Set Mesh
 	GetMesh()->SetRelativeLocation(FVector(0.f,0.f,-90.f));
 	GetMesh()->SetRelativeRotation(FRotator(0.f,-90.f,0.f));
-	
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
 
+	// Aim Component
+	AimComponent = CreateDefaultSubobject<UAimComponent_Base>(TEXT("AC_AimAssist"));
 }
 
 // Called when the game starts or when spawned
 void AGame_Character::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	InitializeVarsWithPlayerFeelStruct();
 }
 
 // Called every frame
@@ -53,3 +59,12 @@ void AGame_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 }
 
+void AGame_Character::InitializeVarsWithPlayerFeelStruct()
+{
+	GetCharacterMovement()->GravityScale = PlayerFeel.Gravity;
+	
+	GetCharacterMovement()->MaxWalkSpeed = PlayerFeel.WalkSpeed;
+	
+	GetCapsuleComponent()->SetLinearDamping(PlayerFeel.LinearDamping);
+	GetCapsuleComponent()->SetAngularDamping(PlayerFeel.AngularDamping);
+}
