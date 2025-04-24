@@ -7,7 +7,11 @@
 		{
 			"Name": "FTJ_Proto",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"GeometryCollectionEngine",
+				"CoreUObject"
+			]
 		}
 	],
 	"Plugins": [
@@ -19,8 +23,16 @@
 			]
 		},
 		{
-			"Name" : "HoudiniEngine",
-			"Enabled" : false
+			"Name": "HoudiniEngine",
+			"Enabled": false
+		},
+		{
+			"Name": "GeometryCollectionPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "CommonUI",
+			"Enabled": true
 		}
 	]
 }

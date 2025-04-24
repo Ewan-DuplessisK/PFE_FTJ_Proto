@@ -8,6 +8,36 @@ public class FTJ_Proto : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange
+  (
+      new string[]
+      {
+          "Core"
+          ,
+          "CoreUObject"
+          ,
+          "Engine"
+          ,
+          "InputCore"
+          ,
+          "EnhancedInput"
+          ,
+          "GeometryCollectionEngine"
+          ,
+          "DataflowEngine"
+          ,
+          "DataflowCore"
+          ,
+          "GeometryCollectionNodes"
+          ,
+          "FieldSystemEngine"
+          , 
+          "UMG"
+          , 
+          "Slate"
+          , 
+          "SlateCore" 
+      }
+  );
 	}
 }
