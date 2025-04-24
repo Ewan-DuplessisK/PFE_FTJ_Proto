@@ -36,7 +36,7 @@ public class FTJ_Proto : ModuleRules
           , 
           "Slate"
           , 
-          "SlateCore" 
+          "SlateCore", "Eigen", "Eigen"
       }
   );
 	}
