@@ -99,7 +99,7 @@ void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 	}
 
 	// Tilt Set for Move
-	Tilt = ((CameraFeel.TiltRecoverySpeed * 0.5f) * MoveValue.X) + Tilt;
+	//Tilt = ((CameraFeel.TiltRecoverySpeed * 0.5f) * MoveValue.X) + Tilt;
 }
 
 void APlayer_Controller::Look(const FInputActionValue& Value)
@@ -124,7 +124,10 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 		PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
 	}
 
+	PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+	
 	// Tilt set for Look
+	/*
 	if(MoveValue.X < -CameraFeel.TiltClamp || MoveValue.X > CameraFeel.TiltClamp)
 	{
 		Tilt = (Tilt * TiltLookFactor) + MoveValue.X;
@@ -133,10 +136,12 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 	{
 		Tilt = 0.0f;
 	}
+	*/
 }
 
 void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add to Weapon 
 {
+	
 	// Tilt Calc
 	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
 	
@@ -153,6 +158,9 @@ void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add
 		}
 		
 		PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+		
+		Tilt=0.0f;
+		
 		// Tilt Set
 		FRotator DeltaRotation = {0.0f, 0.0f, Tilt};
 		PlayerCharacterRef->FirstPersonCameraComponent->AddRelativeRotation(DeltaRotation);
@@ -183,12 +191,12 @@ float APlayer_Controller::GetInputSensitivityY() const
 
 void APlayer_Controller::SetInputSensitivityX(float InSensitivity)
 {
-	InputSensitivityX=InSensitivity;
+	InputSensitivityX = InSensitivity;
 }
 
 void APlayer_Controller::SetInputSensitivityY(float InSensitivity)
 {
-	InputSensitivityY=InSensitivity;
+	InputSensitivityY = InSensitivity;
 }
 
 FVector APlayer_Controller::FlattenZAxis(FVector inVec)
@@ -222,5 +230,5 @@ void APlayer_Controller::FOVChangeSpeed()
 		PlayerCharacterRef->FirstPersonCameraComponent->SetFieldOfView(newFOV);
 	}
 
-	UE_LOG(LogTemp, Log, TEXT("FOV Timer"));
+	//UE_LOG(LogTemp, Log, TEXT("FOV Timer"));
 }
