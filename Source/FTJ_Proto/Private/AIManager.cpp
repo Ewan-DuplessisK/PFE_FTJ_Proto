@@ -2,6 +2,7 @@
 
 
 #include "AIManager.h"
+#include "Game_Character.h"
 
 // Sets default values
 AAIManager::AAIManager()
@@ -22,6 +23,7 @@ void AAIManager::BeginPlay()
 void AAIManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
 
 }
 

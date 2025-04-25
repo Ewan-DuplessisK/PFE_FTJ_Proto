@@ -6,6 +6,7 @@ public class FTJ_Proto : ModuleRules
 {
 	public FTJ_Proto(ReadOnlyTargetRules Target) : base(Target)
 	{
+
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange
@@ -36,7 +37,9 @@ public class FTJ_Proto : ModuleRules
           , 
           "Slate"
           , 
-          "SlateCore", "Eigen", "Eigen"
+          "SlateCore"
+          ,
+          "AIModule"
       }
   );
 	}

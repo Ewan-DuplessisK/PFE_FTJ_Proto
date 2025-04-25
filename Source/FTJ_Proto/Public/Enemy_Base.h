@@ -27,6 +27,14 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION()
+	void OnPlayerInRangeBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+
+	UFUNCTION()
+	void OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
 	// Enemy Variables for DataTable
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy WalkSpeed depending on the ABP and BlendSpace"))
 	float WalkSpeed = 0.f;
@@ -35,10 +43,10 @@ public:
 	float RunSpeed = 0.f;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy max HP"))
-	int MaxHealth = 0.f;
+	int MaxHealth = 0;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy Damages to player"))
-	int Damages = 0.f;
+	int Damages = 0;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy distance to charge on the player"))
 	float ChargeDistance = 0.f;
@@ -67,6 +75,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy is attacking the player"))
 	bool IsAttacking = false;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Enemy|Variables", meta = (ToolTip = "Boolean to see if the player is in the enemy attack range"))
+	bool bIsPlayerInAttackRange = false;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy can talk"))
 	bool bCanTalk = false;
 
@@ -74,7 +85,13 @@ public:
 	bool isLaunched = false;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Integer where we save the new enemy HP value after he get hit by the player"))
-	int CurrentHealth = 0.f;
+	int CurrentHealth = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere"))
+	float PlayerAttackSphereSize = 32.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
+	class USphereComponent* PlayerInRangeSphere;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the player if he get in the range of the enemy for the attack"))
 	FVector OverlapedPosition = {0, 0, 0};
@@ -117,5 +134,17 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
 	bool E_Stun = false;
+
+// -----------------------------------------------------
+
+	// Behavior Tree Bool Name Variables
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
+	FName PlayerInAttackRangeKey = "playerInAttackRange?";
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
+	FName CanTalkWithOtherKey = "CanTalkWithOther?";
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
+	FName hasSeenPlayerKey = "hasSeenPlayer?";
 	
 };
