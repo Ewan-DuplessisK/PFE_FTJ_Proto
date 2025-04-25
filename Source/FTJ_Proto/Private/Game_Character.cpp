@@ -7,28 +7,30 @@
 #include "AimComponent_Base.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 // Sets default values
 AGame_Character::AGame_Character()
 {
-	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame. You can turn this off to improve performance if you don't need it.
  	PrimaryActorTick.bCanEverTick = true;
 	
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 	
+	// Spring Arm
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->SetupAttachment(GetCapsuleComponent());
 	SpringArm->SetRelativeLocation(FVector(25.f,2.f,70.f));
 	SpringArm->TargetArmLength = 0.f;
-		
+	
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(SpringArm);
 	FirstPersonCameraComponent->SetRelativeLocation(FVector(0.f, 0.f, 0.f)); // Position the camera
 	FirstPersonCameraComponent->SetRelativeRotation(FRotator(-22.f,0.f,0.f));
 	FirstPersonCameraComponent->bUsePawnControlRotation=false;
-
+	
 	// Set Mesh
 	GetMesh()->SetRelativeLocation(FVector(0.f,0.f,-90.f));
 	GetMesh()->SetRelativeRotation(FRotator(0.f,-90.f,0.f));
@@ -49,14 +51,12 @@ void AGame_Character::BeginPlay()
 void AGame_Character::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
 void AGame_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
 void AGame_Character::InitializeVarsWithPlayerFeelStruct()
@@ -67,4 +67,16 @@ void AGame_Character::InitializeVarsWithPlayerFeelStruct()
 	
 	GetCapsuleComponent()->SetLinearDamping(PlayerFeel.LinearDamping);
 	GetCapsuleComponent()->SetAngularDamping(PlayerFeel.AngularDamping);
+}
+
+void AGame_Character::Kick()
+{
+	FVector Start = GetActorLocation();
+	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_GameTraceChannel5));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
+	FHitResult OutHit;
+	UKismetSystemLibrary::SphereTraceSingleForObjects(GetWorld(),Start,End,20,ObjectTypes,false,TArray<AActor*>{},EDrawDebugTrace::None,OutHit, false);
 }

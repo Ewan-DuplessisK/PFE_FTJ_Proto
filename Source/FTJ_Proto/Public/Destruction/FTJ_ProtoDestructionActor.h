@@ -26,7 +26,7 @@ UCLASS() class FTJ_PROTO_API AFTJ_ProtoDestructionActor : public AGeometryCollec
     //Protected functions
     protected :
     //Makes Geometry Collection static automatically from the very beginning to avoid invalid collision with entities
-    UFUNCTION(BlueprintCallable) virtual void BeginPlay() override;
+    virtual void BeginPlay() override;
 
     //Public functions
     public :

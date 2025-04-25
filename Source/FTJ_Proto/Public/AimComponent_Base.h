@@ -52,8 +52,6 @@ protected:
 	FVector2D CrosshairScreenLocation;
 	
 private:
-	//EAimingSysState currentState;
-
 	// Refs
 	class APlayer_Controller* playerControler = nullptr;
 
@@ -73,6 +71,6 @@ protected:
 	TSubclassOf<AHUD> wAimDebugWidget = nullptr;
 	
 	// Variable to hold the widget After Creating it.
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Widget Reference of the Aiming Debug Widget"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "HUD Reference of the Aiming Debug HUD"))
 	AHUD* MyAimDebugMenu = nullptr;
 };
