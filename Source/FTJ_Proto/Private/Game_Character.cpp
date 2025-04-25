@@ -78,5 +78,5 @@ void AGame_Character::Kick()
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_GameTraceChannel5));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
 	FHitResult OutHit;
-	UKismetSystemLibrary::SphereTraceSingleForObjects(GetWorld(),Start,End,20,ObjectTypes,false,TArray<AActor*>{},EDrawDebugTrace::None,OutHit, false)
+	UKismetSystemLibrary::SphereTraceSingleForObjects(GetWorld(),Start,End,20,ObjectTypes,false,TArray<AActor*>{},EDrawDebugTrace::None,OutHit, false);
 }
