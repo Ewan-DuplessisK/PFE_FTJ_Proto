@@ -56,7 +56,7 @@ public:
 	FUCombatFeel CombatFeel;
 
 	// Boolean to know the player do a action for the enemy to go toward him
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player State Check")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player State Check")
 	bool PlayerAction = false;
 
 	

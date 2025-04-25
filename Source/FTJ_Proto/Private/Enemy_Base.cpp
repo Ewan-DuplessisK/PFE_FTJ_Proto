@@ -19,25 +19,23 @@ AEnemy_Base::AEnemy_Base()
 	PlayerInRangeSphere->SetupAttachment(GetCapsuleComponent());
 	//PlayerInRangeSphere->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
 	PlayerInRangeSphere->InitSphereRadius(PlayerAttackSphereSize);
+	PlayerInRangeSphere->Deactivate();
+
+	PlayerInRangeSphere->OnComponentBeginOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerInRangeBeginOverlap);
+	
+	PlayerInRangeSphere->OnComponentEndOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerOutOfRange);
 }
 
 // Called when the game starts or when spawned
 void AEnemy_Base::BeginPlay()
 {
 	Super::BeginPlay();
-
-	if (PlayerInRangeSphere)
-	{
-		PlayerInRangeSphere->OnComponentBeginOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerInRangeBeginOverlap);
-	}
-	PlayerInRangeSphere->OnComponentEndOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerOutOfRange);
 }	
 
 // Called every frame
 void AEnemy_Base::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
@@ -52,6 +50,7 @@ void AEnemy_Base::OnPlayerInRangeBeginOverlap(UPrimitiveComponent* OverlappedCom
 {
 	if (OtherActor && OtherActor->IsA(AGame_Character::StaticClass()))
 	{
+		IsAttacking = true;
 		if (AAIController* AIController = Cast<AAIController>(GetController()))
 		{
 			if (UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent())
@@ -67,6 +66,7 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 {
 	if (OtherActor && OtherActor->IsA(AGame_Character::StaticClass()))
 	{
+		IsAttacking = false;
 		if (AAIController* AIController = Cast<AAIController>(GetController()))
 		{
 			if (UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent())

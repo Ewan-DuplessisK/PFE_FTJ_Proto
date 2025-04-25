@@ -2,7 +2,13 @@
 
 
 #include "AIManager.h"
+
+#include "AIController.h"
+#include "Enemy_Base.h"
 #include "Game_Character.h"
+#include "BehaviorTree/BlackboardComponent.h"
+#include "Components/SphereComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AAIManager::AAIManager()
@@ -16,14 +22,47 @@ AAIManager::AAIManager()
 void AAIManager::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	AGame_Character* Player = Cast<AGame_Character>(UGameplayStatics::GetPlayerPawn(GetWorld(),0));
+	if (Player->PlayerAction)
+	{
+		ActivatePlayerInRangeBox();
+		for (AActor* Actor : EnemyOnScene)
+		{
+			AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
+			if (Enemy)
+			{
+				AAIController* AIController = Cast<AAIController>(Enemy->GetController());
+				if (AIController)
+				{
+					UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent();
+					if (BlackboardComp)
+					{
+						BlackboardComp->SetValueAsBool(PlayerActionKey, true);
+					}
+				}
+			}
+		}
+	}
 }
 
 // Called every frame
 void AAIManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+}
 
+void AAIManager::ActivatePlayerInRangeBox()
+{
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AEnemy_Base::StaticClass(), EnemyOnScene);
+	
+	for (AActor* Actor : EnemyOnScene)
+	{
+		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
+		if (IsValid(Enemy) && IsValid(Enemy->PlayerInRangeSphere))
+		{
+			Enemy->PlayerInRangeSphere->Activate();
+		}
+	}
 }
 

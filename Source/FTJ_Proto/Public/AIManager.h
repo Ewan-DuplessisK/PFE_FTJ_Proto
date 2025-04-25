@@ -30,5 +30,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIManager|Variables")
 	TArray<AActor*> EnemyTalking;
 	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIManager|Variables")
+	TArray<AActor*> EnemyOnScene;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="AIManager|Variables|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
+	FName PlayerActionKey = "playerAction?";
+
+	void ActivatePlayerInRangeBox();
 };
