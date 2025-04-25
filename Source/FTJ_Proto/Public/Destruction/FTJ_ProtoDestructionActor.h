@@ -4,6 +4,8 @@
 #include"GeometryCollection/GeometryCollectionActor.h"
 #include"FTJ_ProtoDestructionActor.generated.h"
 
+struct FChaosRemovalEvent;
+
 UCLASS() class FTJ_PROTO_API AFTJ_ProtoDestructionActor : public AGeometryCollectionActor
 {
     GENERATED_BODY()
@@ -16,6 +18,7 @@ UCLASS() class FTJ_PROTO_API AFTJ_ProtoDestructionActor : public AGeometryCollec
 
     //Public variables
     public :
+    int32 Removed;
 
     //UProperties
     public :
@@ -33,4 +36,6 @@ UCLASS() class FTJ_PROTO_API AFTJ_ProtoDestructionActor : public AGeometryCollec
 
     //UFunctions
     public :
+    //Registers piece removals
+    UFUNCTION() void OnRemoved(FChaosRemovalEvent const& InRemoval);
 };
