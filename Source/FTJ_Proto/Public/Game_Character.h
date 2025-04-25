@@ -55,7 +55,13 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUCombatFeel CombatFeel;
 
+	// Boolean to know the player do a action for the enemy to go toward him
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player State Check")
+	bool PlayerAction = false;
+
 	
 	UFUNCTION(BlueprintCallable)
 	void InitializeVarsWithPlayerFeelStruct();
+	UFUNCTION(BlueprintCallable)
+	void Kick();
 };

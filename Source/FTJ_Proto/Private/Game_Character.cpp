@@ -7,6 +7,7 @@
 #include "AimComponent_Base.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 // Sets default values
 AGame_Character::AGame_Character()
@@ -66,4 +67,16 @@ void AGame_Character::InitializeVarsWithPlayerFeelStruct()
 	
 	GetCapsuleComponent()->SetLinearDamping(PlayerFeel.LinearDamping);
 	GetCapsuleComponent()->SetAngularDamping(PlayerFeel.AngularDamping);
+}
+
+void AGame_Character::Kick()
+{
+	FVector Start = GetActorLocation();
+	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_GameTraceChannel5));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
+	FHitResult OutHit;
+	UKismetSystemLibrary::SphereTraceSingleForObjects(GetWorld(),Start,End,20,ObjectTypes,false,TArray<AActor*>{},EDrawDebugTrace::None,OutHit, false)
 }
