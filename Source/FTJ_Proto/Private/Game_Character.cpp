@@ -5,9 +5,15 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Camera/CameraComponent.h"
 #include "AimComponent_Base.h"
+#include "Enemy_Base.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
+#include "Physics_Props.h"
+#include "Destruction/FTJ_ProtoDestructionActor.h"
+#include "Destruction/FTJ_ProtoDestructionComponent.h"
 
 // Sets default values
 AGame_Character::AGame_Character()
@@ -37,6 +43,7 @@ AGame_Character::AGame_Character()
 
 	// Aim Component
 	AimComponent = CreateDefaultSubobject<UAimComponent_Base>(TEXT("AC_AimAssist"));
+	DestructionComponent = CreateDefaultSubobject<UFTJ_ProtoDestructionComponent>(TEXT("AC_Destruction"));
 }
 
 // Called when the game starts or when spawned
@@ -71,6 +78,7 @@ void AGame_Character::InitializeVarsWithPlayerFeelStruct()
 
 void AGame_Character::Kick()
 {
+	if(WantPlayerAction&!PlayerAction)PlayerAction=true;
 	FVector Start = GetActorLocation();
 	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
@@ -78,5 +86,21 @@ void AGame_Character::Kick()
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_GameTraceChannel5));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
 	FHitResult OutHit;
-	UKismetSystemLibrary::SphereTraceSingleForObjects(GetWorld(),Start,End,20,ObjectTypes,false,TArray<AActor*>{},EDrawDebugTrace::None,OutHit, false);
+	UKismetSystemLibrary::SphereTraceSingleForObjects(GetWorld(),Start,End,20,ObjectTypes,false,TArray<AActor*>{},EDrawDebugTrace::ForOneFrame,OutHit, false);
+
+	UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(),Kick_VFX,OutHit.Location);
+	if(OutHit.GetActor()->GetClass()==AEnemy_Base::StaticClass())
+	{
+		//need Launched in c++
+	}
+	else if (OutHit.GetActor()->GetClass()==APhysics_Props::StaticClass())
+	{
+		APhysics_Props* prop = Cast<APhysics_Props>(OutHit.GetActor());
+		prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
+	}
+	else if(OutHit.GetActor()->GetClass()==AFTJ_ProtoDestructionActor::StaticClass())
+	{
+		FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce);
+		DestructionComponent->Hit(OutHit.GetComponent(),OutHit,100.f,0,1.f,1.f,force,FVector());
+	}
 }
