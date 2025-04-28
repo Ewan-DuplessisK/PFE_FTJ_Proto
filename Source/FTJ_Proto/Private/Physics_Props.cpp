@@ -11,9 +11,13 @@ APhysics_Props::APhysics_Props()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	OverlapPhysics = CreateDefaultSubobject<UBoxComponent>(TEXT("OverlapPhysics"));
+	
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
+	StaticMesh->SetupAttachment(GetRootComponent());
+	StaticMesh->SetRelativeLocation(FVector(0.f,0.f,0.f));
+	OverlapPhysics = CreateDefaultSubobject<UBoxComponent>(TEXT("OverlapPhysics"));
+	OverlapPhysics->SetupAttachment(StaticMesh);
+	OverlapPhysics->SetRelativeLocation(FVector(0.f,0.f,0.f));
 	OverlapPhysics->OnComponentBeginOverlap.AddDynamic(this, &APhysics_Props::OnPhysicsOverlap);
 
 }
