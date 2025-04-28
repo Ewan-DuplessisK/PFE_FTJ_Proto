@@ -35,6 +35,9 @@ public:
 	void OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
+	UFUNCTION(BlueprintCallable)
+	void Launched(FVector Force);
+
 	// Enemy Variables for DataTable
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy WalkSpeed depending on the ABP and BlendSpace"))
 	float WalkSpeed = 0.f;
@@ -75,8 +78,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy is attacking the player"))
 	bool IsAttacking = false;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Enemy|Variables", meta = (ToolTip = "Boolean to see if the player is in the enemy attack range"))
-	bool bIsPlayerInAttackRange = false;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Boolean to see if the player is in the enemy attack range"))
+	bool IsPlayerInAttackRangeBOOL = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy can talk"))
 	bool bCanTalk = false;
@@ -88,7 +91,7 @@ public:
 	int CurrentHealth = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere"))
-	float PlayerAttackSphereSize = 32.f;
+	float PlayerAttackSphereSize = 125.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
 	class USphereComponent* PlayerInRangeSphere;
