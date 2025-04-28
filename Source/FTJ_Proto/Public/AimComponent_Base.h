@@ -21,6 +21,11 @@ public:
 	// Sets default values for this component's properties
 	UAimComponent_Base();
 
+	
+	UFUNCTION(BlueprintCallable)
+	bool SetTempInvertCam(bool invertCam);
+	bool tempInvertCam = false;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -30,6 +35,7 @@ protected:
 private:
 	void PawnSearch(bool &bPawnFound, FVector2D &InLocation, bool &bDoesImplementInterface, FVector2D &BaseSpotLocation, FVector2D &WeaksotLocation);
 	FVector2D SetCrosshairLocation(bool bPawnFound, FVector2D InLocation, bool bDoesImplementInterface, FVector2D BaseSpotLocation, FVector2D WeaksotLocation);
+	UFUNCTION(BlueprintCallable)
 	FVector2D GetCrosshairLocation();
 	
 public:	
@@ -54,7 +60,7 @@ protected:
 private:
 	// Refs
 	class APlayer_Controller* playerControler = nullptr;
-
+	
 public:
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
 	UAimState_Enum CurrentAimState = UAimState_Enum::NotEngaged;

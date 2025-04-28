@@ -39,10 +39,9 @@ void APlayer_Controller::SetupInputComponent()
 	{
 		return;
 	}
-
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
-
+	
 	/*
 	if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings()))
 	{
@@ -85,15 +84,15 @@ void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 {
 	//UE_LOG(LogTemp, Log, TEXT("Move Player"));
 	if (!PlayerCharacterRef) return;
-
+	
 	const FVector2D MoveValue = Value.Get<FVector2D>();
-
-	if (MoveValue.X != 0.f)
+	
+	if (MoveValue.X != 0.0f)
 	{
 		FVector forwardVec = UKismetMathLibrary::GetForwardVector(GetControlRotation());
 		PlayerCharacterRef->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.X);
 	}
-	if (MoveValue.Y != 0.f)
+	if (MoveValue.Y != 0.0f)
 	{
 		PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorRightVector(), MoveValue.Y);
 	}
@@ -105,27 +104,34 @@ void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 void APlayer_Controller::Look(const FInputActionValue& Value)
 {
 	if (!PlayerCharacterRef) return;
+	
 	const FVector2D MoveValue = Value.Get<FVector2D>();
 	
-	if (MoveValue.Y != 0.f) 
+	if (MoveValue.X != 0.0f)
+	{
+		//PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
+		AddYawInput(MoveValue.X);
+	}
+	
+	if (MoveValue.Y != 0.0f) 
 	{
 		if(CameraFeel.bInvertCam)
      	{
-     		PlayerCharacterRef->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+     		//PlayerCharacterRef->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+			AddPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
      	}
 		else
 		{
-			PlayerCharacterRef->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
+			//PlayerCharacterRef->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
+			AddPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
 		}
+		
+		PlayerCharacterRef->FirstPersonCameraComponent->SetRelativeRotation(FRotator(GetControlRotation().Pitch,0.0,0.0));
 	}
-
-	if (MoveValue.X != 0.f)
-	{
-		PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
-	}
-
-	PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
 	
+	//PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+	
+	UE_LOG(LogTemp, Log, TEXT("%f"),MoveValue.Y);
 	// Tilt set for Look
 	/*
 	if(MoveValue.X < -CameraFeel.TiltClamp || MoveValue.X > CameraFeel.TiltClamp)

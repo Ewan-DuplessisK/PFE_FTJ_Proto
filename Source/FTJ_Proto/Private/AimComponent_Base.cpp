@@ -13,21 +13,14 @@ UAimComponent_Base::UAimComponent_Base()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = false;
-
 	
 	playerControler = Cast<APlayer_Controller>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 }
-
 
 // Called when the game starts
 void UAimComponent_Base::BeginPlay()
 {
 	Super::BeginPlay();
-	// Set Debug
-	if(AimFeel.bIsDebugActive)
-	{
-		// Debug HUD Ref
-	}
 	
 	// Set Camera Base Speed
 	TempHorizCamSpeed = playerControler->CameraFeel.HorizontalCamSpeed;
@@ -35,10 +28,18 @@ void UAimComponent_Base::BeginPlay()
 	
 	CurrentAimState = UAimState_Enum::NotEngaged;
 	
+	// To stop cam invert on pawn targeted
+	SetTempInvertCam(playerControler->CameraFeel.bInvertCam);
+	
 	// Timer for Aim System (don't add anything after this)
 	// Time(60 FPS) = 1/60 = 0.016667 or (30 FPS) = 1/30 = 0.033333
 	float inRate = 0.016667f;
 	GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &UAimComponent_Base::ExecuteSystem, inRate, true);
+}
+
+bool UAimComponent_Base::SetTempInvertCam(bool invertCam)
+{
+	return tempInvertCam = invertCam;
 }
 
 void UAimComponent_Base::ExecuteSystem()
@@ -51,13 +52,6 @@ void UAimComponent_Base::ExecuteSystem()
 	
 	PawnSearch(bPawnFound, InLocation, bDoesImplementInterface, BaseSpotLocation, WeakspotLocation);
 	CrosshairScreenLocation = SetCrosshairLocation(bPawnFound, InLocation, bDoesImplementInterface, BaseSpotLocation, WeakspotLocation);
-	
-	// Debug
-	if(AimFeel.bIsDebugActive)
-	{
-		// set crosshair location in debug hud
-		//DebugHUD->MainCrosshairLocation = CrosshairScreenLocation;
-	}
 }
 
 void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, bool& bDoesImplementInterface,
@@ -96,6 +90,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		FHitResult chosenHit = HitPawns[indexOfMinValue];
 		FVector2D screenLocation = {0, 0};
 		playerControler->ProjectWorldLocationToScreen(chosenHit.ImpactPoint, screenLocation);
+		
 		FVector2D L_EngagedPawnScreenLoc = screenLocation;
 		AActor* L_EngagedPawn = chosenHit.GetActor();
 
@@ -116,7 +111,9 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 			bDoesImplementInterface = false;
 			BaseSpotLocation = {0, 0};
 			WeakspotLocation = {0, 0};
-		
+			
+			playerControler->CameraFeel.bInvertCam = !tempInvertCam;
+			
 			return;
 		}
 	}
@@ -128,12 +125,13 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		BaseSpotLocation = {0, 0};
 		WeakspotLocation = {0, 0};
 		
+		playerControler->CameraFeel.bInvertCam = tempInvertCam;
+		
 		return;
 	}
 	
 	return;
 }
-
 
 FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D InLocation, bool bDoesImplementInterface,
 	FVector2D BaseSpotLocation, FVector2D WeakspotLocation)
