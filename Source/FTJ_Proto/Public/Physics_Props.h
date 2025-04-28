@@ -28,6 +28,8 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	
+	UFUNCTION(BlueprintCallable)
 	void Launched(FVector force);
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)

@@ -18,7 +18,6 @@ AEnemy_Base::AEnemy_Base()
 
 	PlayerInRangeSphere = CreateDefaultSubobject<USphereComponent>(TEXT("PlayerInRangeSphere"));
 	PlayerInRangeSphere->SetupAttachment(GetCapsuleComponent());
-	//PlayerInRangeSphere->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
 	PlayerInRangeSphere->InitSphereRadius(PlayerAttackSphereSize);
 	PlayerInRangeSphere->Deactivate();
 
@@ -52,6 +51,8 @@ void AEnemy_Base::OnPlayerInRangeBeginOverlap(UPrimitiveComponent* OverlappedCom
 	if (OtherActor && OtherActor->IsA(AGame_Character::StaticClass()))
 	{
 		IsAttacking = true;
+		IsPlayerInAttackRangeBOOL = true;
+		
 		if (AAIController* AIController = Cast<AAIController>(GetController()))
 		{
 			if (UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent())
@@ -68,6 +69,8 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 	if (OtherActor && OtherActor->IsA(AGame_Character::StaticClass()))
 	{
 		IsAttacking = false;
+		IsPlayerInAttackRangeBOOL = false;
+		
 		if (AAIController* AIController = Cast<AAIController>(GetController()))
 		{
 			if (UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent())
@@ -78,26 +81,21 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 	}
 }
 
-// void AEnemy_Base::Launched(FVector Force)
-// {
-// 	AController* Controller = GetController();
-//
-// 	if (Controller)
-// 	{
-// 		// 2. Stop Logic
-// 		if (Controller->IsA(AAIController::StaticClass()))
-// 		{
-// 			AAIController* AIController = Cast<AAIController>(Controller);
-// 			if (AIController)
-// 			{
-// 				FAIRequestID RequestID = AIController->GetBrainComponent() ? AIController->GetBrainComponent()->StopLogic(TEXT("Dead")) : FAIRequestID::InvalidRequest;
-// 			}
-// 		}
-// 	}
-// 	
-// 	GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
-// 	Tags.Add(FName("Dead"));
-// 	LaunchCharacter(Force, true, true);
-// }
+void AEnemy_Base::Launched(FVector Force)
+{
+	// 2. Stop Logic
+	AAIController* AIController = Cast<AAIController>(Controller);
+	if (IsValid(AIController))
+	{
+		if(IsValid(AIController->GetBrainComponent()))
+		{
+			AIController->GetBrainComponent()->StopLogic(TEXT("Dead"));
+		}
+	}
+	
+	GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
+	Tags.Add(FName("Dead"));
+	LaunchCharacter(Force, true, true);
+}
 
 

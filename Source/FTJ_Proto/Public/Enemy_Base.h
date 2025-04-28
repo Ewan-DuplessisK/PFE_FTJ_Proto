@@ -34,6 +34,8 @@ public:
 	UFUNCTION()
 	void OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
+	UFUNCTION(BlueprintCallable)
 	void Launched(FVector Force);
 
 	// Enemy Variables for DataTable
@@ -77,7 +79,7 @@ public:
 	bool IsAttacking = false;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Boolean to see if the player is in the enemy attack range"))
-	bool IsPlayerInAttackRange = false;
+	bool IsPlayerInAttackRangeBOOL = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy can talk"))
 	bool bCanTalk = false;
