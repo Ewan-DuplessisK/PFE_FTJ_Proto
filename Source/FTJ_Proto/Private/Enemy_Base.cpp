@@ -6,8 +6,11 @@
 #include "Components/CapsuleComponent.h"
 #include "AIController.h"
 #include "BrainComponent.h"
+#include "AIManager.h"
+#include "ConstraintsManager.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Components/SphereComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -23,14 +26,15 @@ AEnemy_Base::AEnemy_Base()
 
 	PlayerInRangeSphere->OnComponentBeginOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerInRangeBeginOverlap);
 	
-	PlayerInRangeSphere->OnComponentEndOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerOutOfRange);
+	//PlayerInRangeSphere->OnComponentEndOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerOutOfRange);
 }
 
 // Called when the game starts or when spawned
 void AEnemy_Base::BeginPlay()
 {
 	Super::BeginPlay();
-}	
+	aiManagerRef = Cast<AAIManager>(UGameplayStatics::GetActorOfClass(GetWorld(), AAIManager::StaticClass()));
+}
 
 // Called every frame
 void AEnemy_Base::Tick(float DeltaTime)
@@ -52,6 +56,7 @@ void AEnemy_Base::OnPlayerInRangeBeginOverlap(UPrimitiveComponent* OverlappedCom
 	{
 		IsAttacking = true;
 		IsPlayerInAttackRangeBOOL = true;
+		aiManagerRef->ManagerAttackEnable = true;
 		
 		if (AAIController* AIController = Cast<AAIController>(GetController()))
 		{
@@ -70,6 +75,7 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 	{
 		IsAttacking = false;
 		IsPlayerInAttackRangeBOOL = false;
+		aiManagerRef->ManagerAttackEnable = false;
 		
 		if (AAIController* AIController = Cast<AAIController>(GetController()))
 		{

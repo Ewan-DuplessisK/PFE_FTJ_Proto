@@ -35,6 +35,8 @@ public:
 	void OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
+	class AAIManager* aiManagerRef;
+
 	UFUNCTION(BlueprintCallable)
 	void Launched(FVector Force);
 
@@ -149,5 +151,7 @@ public:
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
 	FName hasSeenPlayerKey = "hasSeenPlayer?";
+
+	
 	
 };
