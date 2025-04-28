@@ -46,8 +46,8 @@ protected:
 	class UInputAction* InputActionMove;
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Look")
 	class UInputAction* InputActionLook;
-	/*UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Kick");
-	class UInputAction* InputActionKick;*/
+	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Kick");
+	class UInputAction* InputActionKick;
 
 	//
 	void MovePlayer(const struct FInputActionValue& Value);
@@ -95,6 +95,7 @@ public:
 	void InitializeVarsWithCameraFeelStruct();
 	
 	void FOVChangeSpeed();
+	void OnKickTriggered();
 
 	// Debug Widget
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Debug Widget"))

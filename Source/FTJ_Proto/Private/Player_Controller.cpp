@@ -41,6 +41,7 @@ void APlayer_Controller::SetupInputComponent()
 	}
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
+	EnhancedInputComponent->BindAction(InputActionKick,ETriggerEvent::Triggered, this,&APlayer_Controller::OnKickTriggered);
 	
 	/*
 	if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings()))
@@ -237,4 +238,9 @@ void APlayer_Controller::FOVChangeSpeed()
 	}
 
 	//UE_LOG(LogTemp, Log, TEXT("FOV Timer"));
+}
+
+void APlayer_Controller::OnKickTriggered()
+{
+	if (IsValid(PlayerCharacterRef))PlayerCharacterRef->Kick();
 }
