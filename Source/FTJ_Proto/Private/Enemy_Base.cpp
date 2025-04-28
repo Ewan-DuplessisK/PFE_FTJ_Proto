@@ -5,6 +5,7 @@
 #include "Game_Character.h"
 #include "Components/CapsuleComponent.h"
 #include "AIController.h"
+#include "BrainComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Components/SphereComponent.h"
 
@@ -76,5 +77,27 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 		}
 	}
 }
+
+// void AEnemy_Base::Launched(FVector Force)
+// {
+// 	AController* Controller = GetController();
+//
+// 	if (Controller)
+// 	{
+// 		// 2. Stop Logic
+// 		if (Controller->IsA(AAIController::StaticClass()))
+// 		{
+// 			AAIController* AIController = Cast<AAIController>(Controller);
+// 			if (AIController)
+// 			{
+// 				FAIRequestID RequestID = AIController->GetBrainComponent() ? AIController->GetBrainComponent()->StopLogic(TEXT("Dead")) : FAIRequestID::InvalidRequest;
+// 			}
+// 		}
+// 	}
+// 	
+// 	GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
+// 	Tags.Add(FName("Dead"));
+// 	LaunchCharacter(Force, true, true);
+// }
 
 
