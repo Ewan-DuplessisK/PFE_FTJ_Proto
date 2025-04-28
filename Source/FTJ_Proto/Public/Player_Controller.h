@@ -88,7 +88,7 @@ protected:
 	float ForwardAlpha = 0.0f;
 
 	// For smooth look up/down
-	FVector FlattenZAxis(FVector inVec);
+	static FVector FlattenZAxis(FVector inVec);
 	
 public:
 	UFUNCTION(BlueprintCallable)
