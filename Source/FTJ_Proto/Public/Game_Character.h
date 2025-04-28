@@ -32,6 +32,8 @@ protected:
 	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components)
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
 	class UAimComponent_Base* AimComponent;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+	class UFTJ_ProtoDestructionComponent* DestructionComponent;
 
 public:
 	// Sets default values for this character's properties
@@ -54,7 +56,20 @@ public:
 	FUPlayerFeel PlayerFeel;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUCombatFeel CombatFeel;
+
+	// Boolean to know the player do a action for the enemy to go toward him
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player State Check")
+	bool PlayerAction = false;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Debug Vars")
+	bool WantPlayerAction = true;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Niagara")
+	class UNiagaraSystem* Kick_VFX = nullptr;
+
 	
 	UFUNCTION(BlueprintCallable)
 	void InitializeVarsWithPlayerFeelStruct();
+	UFUNCTION(BlueprintCallable)
+	void Kick();
 };

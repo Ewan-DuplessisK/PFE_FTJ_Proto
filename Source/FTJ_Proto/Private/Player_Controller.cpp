@@ -3,16 +3,23 @@
 
 #include "FTJ_Proto/Public/Player_Controller.h"
 
+#include "Blueprint/UserWidget.h"
+
 #include "EnhancedInputSubsystems.h"
 #include "InputMappingContext.h"
 #include "EnhancedInputComponent.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
+
 #include "FTJ_Proto/Public/Game_Character.h"
+
+
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Camera/CameraComponent.h"
+
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
+
 #include "UserSettings/EnhancedInputUserSettings.h"
 
 void APlayer_Controller::SetupInputComponent()
@@ -32,11 +39,9 @@ void APlayer_Controller::SetupInputComponent()
 	{
 		return;
 	}
-	//EnhancedInputComponent->ClearActionBindings();
-
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
-
+	
 	/*
 	if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings()))
 	{
@@ -55,15 +60,15 @@ void APlayer_Controller::SetPawn(APawn* InPawn)
 void APlayer_Controller::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	// Camera Clamp
 	APlayerCameraManager* cameraManager = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
 	cameraManager->ViewPitchMin = CameraFeel.ViewPitchMin;
 	cameraManager->ViewPitchMax = CameraFeel.ViewPitchMax;
 	///
-
+	
 	InitializeVarsWithCameraFeelStruct();
-
+	
 	// Timer for FOV Switch (don't add anything after this)
 	GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &APlayer_Controller::FOVChangeSpeed, CameraFeel.FOVSwitchSpeed, true);
 }
@@ -72,68 +77,63 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	
-	HeadTilt(DeltaSeconds);
+	//HeadTilt(DeltaSeconds);
 }
-
-// Timer
-void APlayer_Controller::EndPlay(const EEndPlayReason::Type EndPlayReason) // If you ever want to stop the timer for some reason
-{
-	// It's important to keep the call chain on EndPlay or you may end up with serious bugs or crashes
-	Super::EndPlay(EndPlayReason);
-	
-	// There's a chance your timer is still running when our Actor is destroyed, So we need to make sure we clear the timer on EndPlay just in case.
-	// This is safe to call even if the timer handle's already been cleared.
-	GetWorld()->GetTimerManager().ClearTimer(MyTimerHandle);
-}
-/// 
 
 void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 {
 	//UE_LOG(LogTemp, Log, TEXT("Move Player"));
 	if (!PlayerCharacterRef) return;
-
+	
 	const FVector2D MoveValue = Value.Get<FVector2D>();
-
-	if (MoveValue.X != 0.f)
+	
+	if (MoveValue.X != 0.0f)
 	{
-		
-		//PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorForwardVector(), MoveValue.X);
-		
 		FVector forwardVec = UKismetMathLibrary::GetForwardVector(GetControlRotation());
 		PlayerCharacterRef->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.X);
 	}
-	if (MoveValue.Y != 0.f)
+	if (MoveValue.Y != 0.0f)
 	{
 		PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorRightVector(), MoveValue.Y);
 	}
 
 	// Tilt Set for Move
-	Tilt = ((CameraFeel.TiltRecoverySpeed * 0.5f) * MoveValue.X) + Tilt;
+	//Tilt = ((CameraFeel.TiltRecoverySpeed * 0.5f) * MoveValue.X) + Tilt;
 }
 
 void APlayer_Controller::Look(const FInputActionValue& Value)
 {
 	if (!PlayerCharacterRef) return;
+	
 	const FVector2D MoveValue = Value.Get<FVector2D>();
 	
-	if (MoveValue.Y != 0.f) 
+	if (MoveValue.X != 0.0f)
+	{
+		//PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
+		AddYawInput(MoveValue.X);
+	}
+	
+	if (MoveValue.Y != 0.0f) 
 	{
 		if(CameraFeel.bInvertCam)
      	{
-     		PlayerCharacterRef->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+     		//PlayerCharacterRef->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+			AddPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
      	}
 		else
 		{
-			PlayerCharacterRef->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
+			//PlayerCharacterRef->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
+			AddPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
 		}
+		
+		PlayerCharacterRef->FirstPersonCameraComponent->SetRelativeRotation(FRotator(GetControlRotation().Pitch,0.0,0.0));
 	}
-
-	if (MoveValue.X != 0.f)
-	{
-		PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
-	}
-
+	
+	//PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+	
+	UE_LOG(LogTemp, Log, TEXT("%f"),MoveValue.Y);
 	// Tilt set for Look
+	/*
 	if(MoveValue.X < -CameraFeel.TiltClamp || MoveValue.X > CameraFeel.TiltClamp)
 	{
 		Tilt = (Tilt * TiltLookFactor) + MoveValue.X;
@@ -142,10 +142,12 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 	{
 		Tilt = 0.0f;
 	}
+	*/
 }
 
-void APlayer_Controller::HeadTilt(float DeltaTime)
+void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add to Weapon 
 {
+	
 	// Tilt Calc
 	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
 	
@@ -162,6 +164,9 @@ void APlayer_Controller::HeadTilt(float DeltaTime)
 		}
 		
 		PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+		
+		Tilt=0.0f;
+		
 		// Tilt Set
 		FRotator DeltaRotation = {0.0f, 0.0f, Tilt};
 		PlayerCharacterRef->FirstPersonCameraComponent->AddRelativeRotation(DeltaRotation);
@@ -192,12 +197,12 @@ float APlayer_Controller::GetInputSensitivityY() const
 
 void APlayer_Controller::SetInputSensitivityX(float InSensitivity)
 {
-	InputSensitivityX=InSensitivity;
+	InputSensitivityX = InSensitivity;
 }
 
 void APlayer_Controller::SetInputSensitivityY(float InSensitivity)
 {
-	InputSensitivityY=InSensitivity;
+	InputSensitivityY = InSensitivity;
 }
 
 FVector APlayer_Controller::FlattenZAxis(FVector inVec)
@@ -231,5 +236,5 @@ void APlayer_Controller::FOVChangeSpeed()
 		PlayerCharacterRef->FirstPersonCameraComponent->SetFieldOfView(newFOV);
 	}
 
-	UE_LOG(LogTemp, Log, TEXT("FOV Timer"));
+	//UE_LOG(LogTemp, Log, TEXT("FOV Timer"));
 }

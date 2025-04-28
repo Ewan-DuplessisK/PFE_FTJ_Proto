@@ -4,8 +4,6 @@
 #include"Components/ActorComponent.h"
 #include"FTJ_ProtoDestructionComponent.generated.h"
 
-struct FChaosBreakEvent;
-
 UCLASS(Blueprintable) class FTJ_PROTO_API UFTJ_ProtoDestructionComponent : public UActorComponent
 {
     GENERATED_BODY()
@@ -43,7 +41,25 @@ UCLASS(Blueprintable) class FTJ_PROTO_API UFTJ_ProtoDestructionComponent : publi
         @param InDepth How many levels of connection (layers) to follow to propagate (to apply) strain (damage) through
         @param InFactor When using propagation, factor to multiply strain from one level to other, allowing falloff effect
         @param InStrain Damage to apply to specific piece of geometry collection in efforts to break it down
-        @param InVelocity Velocity to apply on specific peace which tries to separate other pieces and move them
+        @param InLinear Velocity to apply on specific peace which tries to separate other pieces and move them
+        @param InAngular Velocity to apply on specific peace which tries to rotate this piece around its axis
     */
-    UFUNCTION(BlueprintCallable) virtual bool Hit(UPrimitiveComponent * InComponent , FHitResult InHit , float InRadius , int32 InDepth , float InFactor , float InStrain , FVector InVelocity);
+    UFUNCTION(BlueprintCallable) virtual bool Hit
+    (
+        UPrimitiveComponent * InComponent
+        ,
+        FHitResult InHit
+        ,
+        float InRadius
+        ,
+        int32 InDepth
+        ,
+        float InFactor
+        ,
+        float InStrain
+        ,
+        FVector InLinear
+        ,
+        FVector InAngular
+    );
 };

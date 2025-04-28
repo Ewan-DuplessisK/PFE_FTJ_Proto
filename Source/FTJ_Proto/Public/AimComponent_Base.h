@@ -7,6 +7,7 @@
 #include "Data_3C/AimAssistFeel.h"
 #include "AimState_Enum.h"
 #include "Player_Controller.h"
+#include "HUD.generated.h"
 #include "AimComponent_Base.generated.h"
 
 
@@ -20,6 +21,11 @@ public:
 	// Sets default values for this component's properties
 	UAimComponent_Base();
 
+	
+	UFUNCTION(BlueprintCallable)
+	bool SetTempInvertCam(bool invertCam);
+	bool tempInvertCam = false;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -29,6 +35,7 @@ protected:
 private:
 	void PawnSearch(bool &bPawnFound, FVector2D &InLocation, bool &bDoesImplementInterface, FVector2D &BaseSpotLocation, FVector2D &WeaksotLocation);
 	FVector2D SetCrosshairLocation(bool bPawnFound, FVector2D InLocation, bool bDoesImplementInterface, FVector2D BaseSpotLocation, FVector2D WeaksotLocation);
+	UFUNCTION(BlueprintCallable)
 	FVector2D GetCrosshairLocation();
 	
 public:	
@@ -51,11 +58,9 @@ protected:
 	FVector2D CrosshairScreenLocation;
 	
 private:
-	//EAimingSysState currentState;
-
 	// Refs
 	class APlayer_Controller* playerControler = nullptr;
-
+	
 public:
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
 	UAimState_Enum CurrentAimState = UAimState_Enum::NotEngaged;
@@ -65,4 +70,13 @@ protected:
 	// Timer
 	// You should keep the timer handle in one of your properties
 	FTimerHandle MyTimerHandle;
+
+protected:
+	// Debug Widget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Aiming Debug HUD"))
+	TSubclassOf<AHUD> wAimDebugWidget = nullptr;
+	
+	// Variable to hold the widget After Creating it.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "HUD Reference of the Aiming Debug HUD"))
+	AHUD* MyAimDebugMenu = nullptr;
 };
