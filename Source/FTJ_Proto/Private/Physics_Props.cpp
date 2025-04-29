@@ -23,7 +23,7 @@ APhysics_Props::APhysics_Props()
 	OverlapPhysics->SetupAttachment(StaticMesh);
 	OverlapPhysics->SetRelativeLocation(FVector(0.f,0.f,0.f));
 	OverlapPhysics->OnComponentBeginOverlap.AddDynamic(this, &APhysics_Props::OnPhysicsOverlap);
-	StaticMesh->OnComponentHit.AddDynamic(this, &APhysics_Props::OnHit);
+	//StaticMesh->OnComponentHit.AddDynamic(this, &APhysics_Props::OnHit);
 
 	DestructionComponent = CreateDefaultSubobject<UFTJ_ProtoDestructionComponent>(TEXT("AC_Destruction"));
 }
@@ -64,31 +64,24 @@ void APhysics_Props::OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, 
 		}
 		if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AFTJ_ProtoDestructionActor::StaticClass()))
 		{
-			UE_LOG(LogTemp,Log,TEXT("Prop Overlap"));
 			FHitResult OutHit;
-			//UE_LOG(LogTemp,Log,TEXT("SweepLoc %f, %f, %f"),SweepResult.Location.X,SweepResult.Location.Y,SweepResult.Location.Z);
 			if(UKismetSystemLibrary::LineTraceSingleForObjects(GetWorld(),GetActorLocation(),OtherActor->GetActorLocation(),{UEngineTypes::ConvertToObjectType(ECC_Destructible)},false,{},EDrawDebugTrace::ForOneFrame,OutHit,true))
 			{
-				UE_LOG(LogTemp,Log,TEXT("LineHit"));
 				AFTJ_ProtoDestructionActor* DActor = Cast<AFTJ_ProtoDestructionActor>(OtherActor);
 				DestructionComponent->Hit(OutHit.GetComponent(),OutHit,100,0,1.f,1.f,GetVelocity()*TransmissionFactor,FVector());
 			}
-			/*AFTJ_ProtoDestructionActor* DActor = Cast<AFTJ_ProtoDestructionActor>(OtherActor);
-			DestructionComponent->Hit(HitComp,Hit,100,0,1.f,1.f,GetVelocity()*TransmissionFactor,FVector());*/
 		}
 		StaticMesh->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
 	}
 }
 
-void APhysics_Props::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+/*void APhysics_Props::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	UE_LOG(LogTemp,Log,TEXT("Prop OnHit"));
 	if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AFTJ_ProtoDestructionActor::StaticClass()))
 	{
-		UE_LOG(LogTemp,Log,TEXT("Prop OnHit 2"));
 		AFTJ_ProtoDestructionActor* DActor = Cast<AFTJ_ProtoDestructionActor>(OtherActor);
 		DestructionComponent->Hit(HitComp,Hit,100,0,1.f,1.f,GetVelocity()*TransmissionFactor,FVector());
 	}
 	StaticMesh->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
-}
+}*/
 
