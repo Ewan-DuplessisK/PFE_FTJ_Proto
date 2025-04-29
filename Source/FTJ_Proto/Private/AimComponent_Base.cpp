@@ -4,6 +4,7 @@
 #include "AimComponent_Base.h"
 
 #include "ComponentUtils.h"
+#include "Enemy_Base.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 
@@ -78,6 +79,23 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 	{
 		for (FHitResult ArrayElement : HitPawns)
 		{
+			// if(enemy == dead) return;
+			/*if(ArrayElement.GetActor()->IsA(AEnemy_Base::StaticClass()))
+			{
+				if(Cast<AEnemy_Base>(ArrayElement.GetActor()).dead)
+				{
+					bPawnFound = false;
+					InLocation = {-1, -1};
+					bDoesImplementInterface = false;
+					BaseSpotLocation = {0, 0};
+					WeakspotLocation = {0, 0};
+		
+					playerControler->CameraFeel.bInvertCam = tempInvertCam;
+		
+					return;
+				}
+			}*/
+			
 			FVector2D screenPosition = {0, 0};
 			playerControler->ProjectWorldLocationToScreen(ArrayElement.ImpactPoint, screenPosition);
 			
