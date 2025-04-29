@@ -25,6 +25,9 @@ protected:
 	UPROPERTY(EditAnywhere,Blueprintable,Category = "Collisions")
 	class UBoxComponent* OverlapPhysics;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+	class UFTJ_ProtoDestructionComponent* DestructionComponent;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -37,6 +40,8 @@ public:
 
 	UFUNCTION(Blueprintable)
 	void OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	UFUNCTION(Blueprintable)
+	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse,const FHitResult& Hit);
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Physics Vars")
 	float DampingFactor = .5f;

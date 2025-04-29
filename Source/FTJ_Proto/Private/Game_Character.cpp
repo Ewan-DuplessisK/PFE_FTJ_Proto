@@ -58,7 +58,6 @@ void AGame_Character::BeginPlay()
 
 	// Find Kickable Trace Channel
 	ECC_Kickable = GetCollisionChannelByName("Kickable");
-	UE_LOG(LogTemp, Warning, TEXT("Collision channel '%i',  Chanel 5 %i"), ECC_Kickable, ECC_GameTraceChannel5);
 }
 
 // Called every frame
@@ -92,7 +91,6 @@ ECollisionChannel AGame_Character::GetCollisionChannelByName(const FName& Channe
 
 		if (Name == ChannelName)
 		{
-			UE_LOG(LogTemp, Log, TEXT("trace name : %s halouf"), *Name.ToString());
 			return static_cast<ECollisionChannel>(Channel);
 		}
 	}
@@ -124,28 +122,20 @@ void AGame_Character::Kick()
 	{
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns.Top().Location);
 		
-		UE_LOG(LogTemp, Warning, TEXT("Collided with %s"), *HitPawns.Top().GetActor()->GetName());
-		
 		if(UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), AEnemy_Base::StaticClass()))
 		{
 			AEnemy_Base* enemy = Cast<AEnemy_Base>(HitPawns.Top().GetActor());
 			enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
-			
-			//UE_LOG(LogTemp, Log, TEXT("Enemy: %s Launched"), *HitPawns.Top().GetActor()->GetName())
 		}
 		else if (UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), APhysics_Props::StaticClass()))
 		{
 			APhysics_Props* prop = Cast<APhysics_Props>(HitPawns.Top().GetActor());
 			prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
-		
-			UE_LOG(LogTemp, Log, TEXT("Prop: %s Launched at %s"), *prop->GetName(), *CombatFeel.KickForce.ToString());
 		}
 		else if(UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), AFTJ_ProtoDestructionActor::StaticClass()))
 		{
 			FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce);
 			DestructionComponent->Hit(HitPawns.Top().GetComponent(),HitPawns.Top(),100.f,0,1.f,1.f,force,FVector());
-		
-			//UE_LOG(LogTemp, Log, TEXT("Destruction Actor: %s Launched"), *HitPawns.Top().GetActor()->GetName())
 		}
 	}
 }

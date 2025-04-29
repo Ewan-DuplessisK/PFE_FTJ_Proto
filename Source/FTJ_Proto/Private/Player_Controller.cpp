@@ -132,7 +132,7 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 	
 	//PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
 	
-	UE_LOG(LogTemp, Log, TEXT("%f"),MoveValue.Y);
+	//UE_LOG(LogTemp, Log, TEXT("%f"),MoveValue.Y);
 	// Tilt set for Look
 	/*
 	if(MoveValue.X < -CameraFeel.TiltClamp || MoveValue.X > CameraFeel.TiltClamp)
