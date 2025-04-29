@@ -62,7 +62,7 @@ void AEnemy_Base::OnPlayerInRangeBeginOverlap(UPrimitiveComponent* OverlappedCom
 		{
 			if (UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent())
 			{
-				BlackboardComp->SetValueAsBool(PlayerInAttackRangeKey, true);
+				BlackboardComp->SetValueAsBool(playerInAttackRangeKey, true);
 			}
 		}
 	}
@@ -81,7 +81,7 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 		{
 			if (UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent())
 			{
-				BlackboardComp->SetValueAsBool(PlayerInAttackRangeKey, false);
+				BlackboardComp->SetValueAsBool(playerInAttackRangeKey, false);
 			}
 		}
 	}

@@ -144,10 +144,10 @@ public:
 
 	// Behavior Tree Bool Name Variables
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
-	FName PlayerInAttackRangeKey = "playerInAttackRange?";
+	FName playerInAttackRangeKey = "playerInAttackRange?";
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
-	FName CanTalkWithOtherKey = "CanTalkWithOther?";
+	FName playerActionKey = "playerAction?";
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
 	FName hasSeenPlayerKey = "hasSeenPlayer?";
