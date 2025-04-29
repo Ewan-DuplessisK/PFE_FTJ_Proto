@@ -37,6 +37,10 @@ private:
 	FVector2D SetCrosshairLocation(bool bPawnFound, FVector2D InLocation, bool bDoesImplementInterface, FVector2D BaseSpotLocation, FVector2D WeaksotLocation);
 	UFUNCTION(BlueprintCallable)
 	FVector2D GetCrosshairLocation();
+	UFUNCTION(BlueprintCallable)
+	FVector GetPawnBoneLocation();
+	UFUNCTION(BlueprintCallable)
+	FVector GetPawnBoneSecondaryLocation();
 	
 public:	
 	// Called every frame
@@ -53,9 +57,15 @@ private:
 	TArray<FHitResult> HitPawns;
 	TArray<float> HitPawnsDistToCenter;
 
+	float distToHit = 1.0f;
+	
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	FVector2D CrosshairScreenLocation;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FVector PawnHitLocation;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FVector SecondaryHitLocation;
 	
 private:
 	// Refs

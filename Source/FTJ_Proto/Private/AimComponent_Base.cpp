@@ -77,6 +77,8 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 	if(UKismetSystemLibrary::SphereTraceMultiForObjects(
 		GetWorld(), Start, End, AimFeel.HeadshotRadius, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::None,HitPawns, false))
 	{
+		FVector2D screenPosition = {0, 0};
+		
 		for (FHitResult ArrayElement : HitPawns)
 		{
 			// if(enemy == dead) return;
@@ -96,7 +98,8 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 				}
 			}*/
 			
-			FVector2D screenPosition = {0, 0};
+			distToHit = ArrayElement.Distance;
+			
 			playerControler->ProjectWorldLocationToScreen(ArrayElement.ImpactPoint, screenPosition);
 			
 			HitPawnsDistToCenter.Add(UKismetMathLibrary::Distance2D(viewportSize/2, screenPosition));
@@ -108,10 +111,14 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		FHitResult chosenHit = HitPawns[indexOfMinValue];
 		FVector2D screenLocation = {0, 0};
 		playerControler->ProjectWorldLocationToScreen(chosenHit.ImpactPoint, screenLocation);
-		
-		FVector2D L_EngagedPawnScreenLoc = screenLocation;
-		AActor* L_EngagedPawn = chosenHit.GetActor();
 
+		AActor* L_EngagedPawn = chosenHit.GetActor();
+		FVector2D L_EngagedPawnScreenLoc = screenLocation;
+
+		
+		SecondaryHitLocation = {L_EngagedPawnScreenLoc.X, L_EngagedPawnScreenLoc.Y, UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)->GetActorLocation().Z};
+		PawnHitLocation = chosenHit.ImpactPoint;
+		
 		if (/*Implement Interface BPI Damageable*/ false)
 		{
 			bPawnFound = true;
@@ -245,6 +252,16 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 FVector2D UAimComponent_Base::GetCrosshairLocation()
 {
 	return CrosshairScreenLocation;
+}
+
+FVector UAimComponent_Base::GetPawnBoneLocation()
+{
+	return PawnHitLocation;
+}
+
+FVector UAimComponent_Base::GetPawnBoneSecondaryLocation()
+{
+	return SecondaryHitLocation;
 }
 
 // Called every frame
