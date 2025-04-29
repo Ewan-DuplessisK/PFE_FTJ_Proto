@@ -42,7 +42,10 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+	
+	ECollisionChannel GetCollisionChannelByName(const FName& ChannelName);
+	ECollisionChannel ECC_Kickable;
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

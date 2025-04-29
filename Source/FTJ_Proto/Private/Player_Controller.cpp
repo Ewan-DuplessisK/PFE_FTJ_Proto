@@ -148,7 +148,6 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 
 void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add to Weapon 
 {
-	
 	// Tilt Calc
 	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
 	
@@ -242,5 +241,8 @@ void APlayer_Controller::FOVChangeSpeed()
 
 void APlayer_Controller::OnKickTriggered()
 {
-	if (IsValid(PlayerCharacterRef))PlayerCharacterRef->Kick();
+	if (IsValid(PlayerCharacterRef))
+	{
+		PlayerCharacterRef->Kick();
+	}
 }
