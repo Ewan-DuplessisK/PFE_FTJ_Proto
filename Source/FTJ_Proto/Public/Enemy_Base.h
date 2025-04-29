@@ -92,6 +92,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Integer where we save the new enemy HP value after he get hit by the player"))
 	int CurrentHealth = 0;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Integer where we save the new enemy HP value after he get hit by the player"))
+	float CQCAttackAnimationTime = 2.f ;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere"))
 	float PlayerAttackSphereSize = 125.f;
 
