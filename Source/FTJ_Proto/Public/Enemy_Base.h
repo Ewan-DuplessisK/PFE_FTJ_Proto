@@ -39,6 +39,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void Launched(FVector Force);
+	
+	void Landed(const FHitResult& hit) override;
 
 	// Enemy Variables for DataTable
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy WalkSpeed depending on the ABP and BlendSpace"))

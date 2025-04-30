@@ -18,7 +18,7 @@ AEnemy_Base::AEnemy_Base()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	
 	PlayerInRangeSphere = CreateDefaultSubobject<USphereComponent>(TEXT("PlayerInRangeSphere"));
 	PlayerInRangeSphere->SetupAttachment(GetCapsuleComponent());
 	PlayerInRangeSphere->InitSphereRadius(PlayerAttackSphereSize);
@@ -98,13 +98,20 @@ void AEnemy_Base::Launched(FVector Force)
 			AIController->GetBrainComponent()->StopLogic(TEXT("Dead"));
 		}
 	}
+	 LaunchCharacter(Force, true, true);
+}
+
+void AEnemy_Base::Landed(const FHitResult& hit)
+{
+	Super::Landed(hit);
 	
 	GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
 	Tags.Add(FName("Dead"));
-	GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	PlayerInRangeSphere()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	LaunchCharacter(Force, true, true);
+	PlayerInRangeSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	GetMesh()->SetSimulatePhysics(true);
 }
+
 
 
