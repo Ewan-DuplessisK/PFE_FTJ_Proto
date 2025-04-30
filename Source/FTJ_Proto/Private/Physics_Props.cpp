@@ -5,6 +5,10 @@
 
 #include "Enemy_Base.h"
 #include "Components/BoxComponent.h"
+#include "Destruction/FTJ_ProtoDestructionActor.h"
+#include "Destruction/FTJ_ProtoDestructionComponent.h"
+#include "Kismet/KismetMathLibrary.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 // Sets default values
 APhysics_Props::APhysics_Props()
@@ -19,7 +23,9 @@ APhysics_Props::APhysics_Props()
 	OverlapPhysics->SetupAttachment(StaticMesh);
 	OverlapPhysics->SetRelativeLocation(FVector(0.f,0.f,0.f));
 	OverlapPhysics->OnComponentBeginOverlap.AddDynamic(this, &APhysics_Props::OnPhysicsOverlap);
+	//StaticMesh->OnComponentHit.AddDynamic(this, &APhysics_Props::OnHit);
 
+	DestructionComponent = CreateDefaultSubobject<UFTJ_ProtoDestructionComponent>(TEXT("AC_Destruction"));
 }
 
 // Called when the game starts or when spawned
@@ -46,17 +52,36 @@ void APhysics_Props::OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, 
 {
 	if(isLaunched&&OtherActor!=this)
 	{
-		if(OtherActor->GetClass() == AEnemy_Base::StaticClass())
+		if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AEnemy_Base::StaticClass()))
 		{
 			AEnemy_Base* Enemy = Cast<AEnemy_Base>(OtherActor);
-			if(!Enemy->isLaunched){/*Launched: Velocity*TransmissionFactor */}
+			if(!Enemy->isLaunched){Enemy->Launched(GetVelocity()*TransmissionFactor);}
 		}
-		if(OtherActor->GetClass() == APhysics_Props::StaticClass())
+		if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),APhysics_Props::StaticClass()))
 		{
 			APhysics_Props* Prop = Cast<APhysics_Props>(OtherActor);
 			if(!Prop->isLaunched)Prop->Launched(GetVelocity()*TransmissionFactor);
 		}
+		if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AFTJ_ProtoDestructionActor::StaticClass()))
+		{
+			FHitResult OutHit;
+			if(UKismetSystemLibrary::LineTraceSingleForObjects(GetWorld(),GetActorLocation(),OtherActor->GetActorLocation(),{UEngineTypes::ConvertToObjectType(ECC_Destructible)},false,{},EDrawDebugTrace::ForOneFrame,OutHit,true))
+			{
+				AFTJ_ProtoDestructionActor* DActor = Cast<AFTJ_ProtoDestructionActor>(OtherActor);
+				DestructionComponent->Hit(OutHit.GetComponent(),OutHit,100,0,1.f,1.f,GetVelocity()*TransmissionFactor,FVector());
+			}
+		}
 		StaticMesh->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
 	}
 }
+
+/*void APhysics_Props::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AFTJ_ProtoDestructionActor::StaticClass()))
+	{
+		AFTJ_ProtoDestructionActor* DActor = Cast<AFTJ_ProtoDestructionActor>(OtherActor);
+		DestructionComponent->Hit(HitComp,Hit,100,0,1.f,1.f,GetVelocity()*TransmissionFactor,FVector());
+	}
+	StaticMesh->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
+}*/
 

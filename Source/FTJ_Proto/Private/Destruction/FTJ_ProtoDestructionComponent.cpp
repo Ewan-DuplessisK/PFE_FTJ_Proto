@@ -7,6 +7,7 @@ bool UFTJ_ProtoDestructionComponent::Hit(UPrimitiveComponent * InComponent , FHi
     //Works with geometry collection components (destructibles) only, this functions returns true if cast is valid
     if(auto Component{Cast<UGeometryCollectionComponent>(InComponent)})
     {
+        //Makes Geometry Collection dynamic automatically
         Component->RemoveAllAnchors();
         //Applies external strain to specific piece of geometry collection in efforts to break it down
         Component->ApplyExternalStrain(InHit.Item , InHit.Location , InRadius , InDepth , InFactor , InStrain);

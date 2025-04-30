@@ -41,6 +41,7 @@ void APlayer_Controller::SetupInputComponent()
 	}
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
+	EnhancedInputComponent->BindAction(InputActionKick,ETriggerEvent::Triggered, this,&APlayer_Controller::OnKickTriggered);
 	
 	/*
 	if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings()))
@@ -131,7 +132,7 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 	
 	//PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
 	
-	UE_LOG(LogTemp, Log, TEXT("%f"),MoveValue.Y);
+	//UE_LOG(LogTemp, Log, TEXT("%f"),MoveValue.Y);
 	// Tilt set for Look
 	/*
 	if(MoveValue.X < -CameraFeel.TiltClamp || MoveValue.X > CameraFeel.TiltClamp)
@@ -147,7 +148,6 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 
 void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add to Weapon 
 {
-	
 	// Tilt Calc
 	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
 	
@@ -237,4 +237,12 @@ void APlayer_Controller::FOVChangeSpeed()
 	}
 
 	//UE_LOG(LogTemp, Log, TEXT("FOV Timer"));
+}
+
+void APlayer_Controller::OnKickTriggered()
+{
+	if (IsValid(PlayerCharacterRef))
+	{
+		PlayerCharacterRef->Kick();
+	}
 }
