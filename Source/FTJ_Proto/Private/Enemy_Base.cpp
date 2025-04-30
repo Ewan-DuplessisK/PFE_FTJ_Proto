@@ -101,6 +101,9 @@ void AEnemy_Base::Launched(FVector Force)
 	
 	GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
 	Tags.Add(FName("Dead"));
+	GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	PlayerInRangeSphere()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	LaunchCharacter(Force, true, true);
 }
 
