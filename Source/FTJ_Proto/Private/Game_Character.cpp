@@ -14,6 +14,9 @@
 #include "Physics_Props.h"
 #include "Destruction/FTJ_ProtoDestructionActor.h"
 #include "Destruction/FTJ_ProtoDestructionComponent.h"
+#include "Evaluation/Blending/MovieSceneBlendType.h"
+#include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 AGame_Character::AGame_Character()
@@ -52,6 +55,9 @@ void AGame_Character::BeginPlay()
 	Super::BeginPlay();
 
 	InitializeVarsWithPlayerFeelStruct();
+
+	// Find Kickable Trace Channel
+	ECC_Kickable = GetCollisionChannelByName("Kickable");
 }
 
 // Called every frame
@@ -76,31 +82,60 @@ void AGame_Character::InitializeVarsWithPlayerFeelStruct()
 	GetCapsuleComponent()->SetAngularDamping(PlayerFeel.AngularDamping);
 }
 
+ECollisionChannel AGame_Character::GetCollisionChannelByName(const FName& ChannelName)
+{
+	// Iterate over all possible collision channels
+	for (int32 Channel = ECC_GameTraceChannel1; Channel <= ECC_GameTraceChannel18; ++Channel)
+	{
+		FName Name = UCollisionProfile::Get()->ReturnChannelNameFromContainerIndex(Channel);
+
+		if (Name == ChannelName)
+		{
+			return static_cast<ECollisionChannel>(Channel);
+		}
+	}
+
+	// Not found, log a warning or handle the error
+	UE_LOG(LogTemp, Warning, TEXT("Collision channel '%s' not found!"), *ChannelName.ToString());
+	return ECC_WorldStatic; // or any default/fallback
+}
+
 void AGame_Character::Kick()
 {
-	if(WantPlayerAction&!PlayerAction)PlayerAction=true;
+	if(WantPlayerAction && !PlayerAction) PlayerAction = true;
+	
 	FVector Start = GetActorLocation();
 	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
+	
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_GameTraceChannel5));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Kickable));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
-	FHitResult OutHit;
-	UKismetSystemLibrary::SphereTraceSingleForObjects(GetWorld(),Start,End,20,ObjectTypes,false,TArray<AActor*>{},EDrawDebugTrace::ForOneFrame,OutHit, false);
-
-	UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(),Kick_VFX,OutHit.Location);
-	if(OutHit.GetActor()->GetClass()==AEnemy_Base::StaticClass())
+	
+	TArray<AActor*> ActorsToIgnore;
+	ActorsToIgnore.Emplace(UGameplayStatics::GetPlayerCharacter(GetWorld(),0));
+	
+	TArray<FHitResult> HitPawns;
+	
+	if(UKismetSystemLibrary::SphereTraceMultiForObjects(
+		GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::ForOneFrame, HitPawns, false))
 	{
-		//need Launched in c++
-	}
-	else if (OutHit.GetActor()->GetClass()==APhysics_Props::StaticClass())
-	{
-		APhysics_Props* prop = Cast<APhysics_Props>(OutHit.GetActor());
-		prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
-	}
-	else if(OutHit.GetActor()->GetClass()==AFTJ_ProtoDestructionActor::StaticClass())
-	{
-		FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce);
-		DestructionComponent->Hit(OutHit.GetComponent(),OutHit,100.f,0,1.f,1.f,force,FVector());
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns.Top().Location);
+		
+		if(UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), AEnemy_Base::StaticClass()))
+		{
+			AEnemy_Base* enemy = Cast<AEnemy_Base>(HitPawns.Top().GetActor());
+			enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
+		}
+		else if (UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), APhysics_Props::StaticClass()))
+		{
+			APhysics_Props* prop = Cast<APhysics_Props>(HitPawns.Top().GetActor());
+			prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
+		}
+		else if(UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), AFTJ_ProtoDestructionActor::StaticClass()))
+		{
+			FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce);
+			DestructionComponent->Hit(HitPawns.Top().GetComponent(),HitPawns.Top(),100.f,0,1.f,1.f,force,FVector());
+		}
 	}
 }
