@@ -49,4 +49,7 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Physics Vars")
 	float TransmissionFactor = .8f;
 
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Physics Vars")
+	float PropLandSpeedThreshold = 10.f;
+
 };

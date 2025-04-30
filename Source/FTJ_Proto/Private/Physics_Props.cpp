@@ -23,7 +23,6 @@ APhysics_Props::APhysics_Props()
 	OverlapPhysics->SetupAttachment(StaticMesh);
 	OverlapPhysics->SetRelativeLocation(FVector(0.f,0.f,0.f));
 	OverlapPhysics->OnComponentBeginOverlap.AddDynamic(this, &APhysics_Props::OnPhysicsOverlap);
-	//StaticMesh->OnComponentHit.AddDynamic(this, &APhysics_Props::OnHit);
 
 	DestructionComponent = CreateDefaultSubobject<UFTJ_ProtoDestructionComponent>(TEXT("AC_Destruction"));
 }
@@ -38,7 +37,7 @@ void APhysics_Props::BeginPlay()
 void APhysics_Props::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	if(isLaunched && GetVelocity().Length()<PropLandSpeedThreshold)isLaunched=false;
 }
 
 void APhysics_Props::Launched(FVector force)
