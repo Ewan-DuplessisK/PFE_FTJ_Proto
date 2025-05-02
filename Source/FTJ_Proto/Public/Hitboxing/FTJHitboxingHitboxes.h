@@ -29,7 +29,7 @@ UCLASS() class FTJ_PROTO_API UFTJHitboxingHitboxes : public USkeletalMeshCompone
 
     //Public functions
     public :
-    //Sets collision properties
+    //Sets mesh properties
     UFTJHitboxingHitboxes();
 
     //UFunctions

@@ -6,4 +6,6 @@ UFTJHitboxingHitboxes::UFTJHitboxingHitboxes()
     SetGenerateOverlapEvents(true);
     //Enable precise collision
     bMultiBodyOverlap = true;
+    //Disable mesh visibility
+    SetHiddenInGame(true);
 }
