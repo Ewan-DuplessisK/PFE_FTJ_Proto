@@ -8,6 +8,7 @@
 //Hitbox overlap event
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FFTJ_ProtoHitboxingAttackboxesHitEvent , FFTJ_ProtoHitboxingHit const& , InHit);
 
+//Sending damage hitboxes
 UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingAttackboxes : public UFTJ_ProtoHitboxingHitboxes
 {
     GENERATED_BODY()

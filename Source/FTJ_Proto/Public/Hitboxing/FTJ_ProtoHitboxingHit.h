@@ -3,6 +3,7 @@
 #include"CoreMinimal.h"
 #include"FTJ_ProtoHitboxingHit.generated.h"
 
+//Hitbox overlap data
 USTRUCT(BlueprintType) struct FFTJ_ProtoHitboxingHit
 {
     GENERATED_BODY()
@@ -18,7 +19,10 @@ USTRUCT(BlueprintType) struct FFTJ_ProtoHitboxingHit
 
     //Clears overlap data
     FFTJ_ProtoHitboxingHit();
-    //Writes overlap data
+    /*
+        Writes overlap data
+        @param InSweep OnComponentBeginOverlap SweepResult parameter
+    */
     void Record(FHitResult const& InSweep);
     //Checks overlap completeness
     bool IsPopulated();

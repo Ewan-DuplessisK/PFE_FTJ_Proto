@@ -2,8 +2,8 @@
 
 UFTJ_ProtoHitboxingHitboxes::UFTJ_ProtoHitboxingHitboxes()
 {
-    //Enables touch registration
+    //Enable touch registration
     SetGenerateOverlapEvents(true);
-    //Enables precise collision
+    //Enable precise collision
     bMultiBodyOverlap = true;
 }

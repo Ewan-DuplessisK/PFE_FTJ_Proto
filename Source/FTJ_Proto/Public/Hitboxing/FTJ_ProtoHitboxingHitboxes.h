@@ -4,6 +4,7 @@
 #include"Components/SkeletalMeshComponent.h"
 #include"FTJ_ProtoHitboxingHitboxes.generated.h"
 
+//Overlapping invisible mesh
 UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingHitboxes : public USkeletalMeshComponent
 {
     GENERATED_BODY()

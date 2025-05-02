@@ -4,6 +4,7 @@
 #include"Hitboxing/FTJ_ProtoHitboxingHitboxes.h"
 #include"FTJ_ProtoHitboxingHurtboxes.generated.h"
 
+//Receiving damage hitboxes
 UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingHurtboxes : public UFTJ_ProtoHitboxingHitboxes
 {
     GENERATED_BODY()

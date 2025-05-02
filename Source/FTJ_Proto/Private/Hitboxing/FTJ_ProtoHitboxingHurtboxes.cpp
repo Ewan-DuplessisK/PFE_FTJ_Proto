@@ -2,6 +2,6 @@
 
 UFTJ_ProtoHitboxingHurtboxes::UFTJ_ProtoHitboxingHurtboxes()
 {
-    //Configures valid preset
+    //Configure valid preset
     SetCollisionProfileName("Hurtbox");
 }
