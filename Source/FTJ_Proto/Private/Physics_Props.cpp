@@ -33,11 +33,17 @@ void APhysics_Props::BeginPlay()
 	Super::BeginPlay();
 }
 
+bool canLand = false;
 // Called every frame
 void APhysics_Props::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if(isLaunched && GetVelocity().Length()<PropLandSpeedThreshold)isLaunched=false;
+	if(!canLand && GetVelocity().Length()>PropLandSpeedThreshold)canLand=true;
+	if(isLaunched && canLand && GetVelocity().Length()<PropLandSpeedThreshold)
+	{
+		isLaunched=false;
+		canLand=false;
+	}
 }
 
 void APhysics_Props::Launched(FVector force)
