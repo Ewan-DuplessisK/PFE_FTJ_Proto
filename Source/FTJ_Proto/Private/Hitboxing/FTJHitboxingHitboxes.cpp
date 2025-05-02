@@ -1,6 +1,6 @@
-#include"Hitboxing/FTJ_ProtoHitboxingHitboxes.h"
+#include"Hitboxing/FTJHitboxingHitboxes.h"
 
-UFTJ_ProtoHitboxingHitboxes::UFTJ_ProtoHitboxingHitboxes()
+UFTJHitboxingHitboxes::UFTJHitboxingHitboxes()
 {
     //Enable touch registration
     SetGenerateOverlapEvents(true);

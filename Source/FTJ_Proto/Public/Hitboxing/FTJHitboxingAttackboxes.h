@@ -1,15 +1,16 @@
 #pragma once
 
+#include"Hitboxing/FTJHitboxingHit.h"
+
 #include"CoreMinimal.h"
-#include"Hitboxing/FTJ_ProtoHitboxingHitboxes.h"
-#include"Hitboxing/FTJ_ProtoHitboxingHit.h"
-#include"FTJ_ProtoHitboxingAttackboxes.generated.h"
+#include"Hitboxing/FTJHitboxingHitboxes.h"
+#include"FTJHitboxingAttackboxes.generated.h"
 
 //Hitbox overlap event
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FFTJ_ProtoHitboxingAttackboxesHitEvent , FFTJ_ProtoHitboxingHit const& , InHit);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FFTJHitboxingAttackboxesHitEvent , FFTJHitboxingHit const& , InHit);
 
 //Sending damage hitboxes
-UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingAttackboxes : public UFTJ_ProtoHitboxingHitboxes
+UCLASS() class FTJ_PROTO_API UFTJHitboxingAttackboxes : public UFTJHitboxingHitboxes
 {
     GENERATED_BODY()
 
@@ -22,12 +23,12 @@ UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingAttackboxes : public UFTJ_ProtoH
     //Public variables
     public :
     //Hitbox overlap data
-    FFTJ_ProtoHitboxingHit HitResult;
+    FFTJHitboxingHit HitResult;
 
     //UProperties
     public :
     //Hitbox overlap event
-    UPROPERTY(BlueprintAssignable) FFTJ_ProtoHitboxingAttackboxesHitEvent HitEvent;
+    UPROPERTY(BlueprintAssignable) FFTJHitboxingAttackboxesHitEvent HitEvent;
 
     //Private functions
     private :
@@ -40,7 +41,7 @@ UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingAttackboxes : public UFTJ_ProtoH
     //Public functions
     public :
     //Configures valid preset
-    UFTJ_ProtoHitboxingAttackboxes();
+    UFTJHitboxingAttackboxes();
 
     //UFunctions
     public :

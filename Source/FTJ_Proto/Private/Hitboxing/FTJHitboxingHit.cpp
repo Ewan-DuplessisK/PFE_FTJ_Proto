@@ -1,19 +1,19 @@
-#include"Hitboxing/FTJ_ProtoHitboxingHit.h"
+#include"Hitboxing/FTJHitboxingHit.h"
 
-#include"Hitboxing/FTJ_ProtoHitboxingAttackboxes.h"
+#include"Hitboxing/FTJHitboxingAttackboxes.h"
 
-FFTJ_ProtoHitboxingHit::FFTJ_ProtoHitboxingHit()
+FFTJHitboxingHit::FFTJHitboxingHit()
 {
     //Clear overlap data
     Reset();
 }
 
-void FFTJ_ProtoHitboxingHit::Record(FHitResult const& InSweep)
+void FFTJHitboxingHit::Record(FHitResult const& InSweep)
 {
     //Store overlapped hitbox
     FName * Hitbox{nullptr};
     //Check hurtbox overlap
-    if(Cast<UFTJ_ProtoHitboxingAttackboxes>(InSweep.Component))
+    if(Cast<UFTJHitboxingAttackboxes>(InSweep.Component))
     {
         //Select attackbox overlap
         Hitbox = &Attackbox;
@@ -25,16 +25,16 @@ void FFTJ_ProtoHitboxingHit::Record(FHitResult const& InSweep)
         Hitbox = &Hurtbox;
     }
     //Retrieve hitbox name
-    *Hitbox = Cast<UFTJ_ProtoHitboxingHitboxes>(InSweep.Component)->FindConstraintBoneName(InSweep.Item - 1);
+    *Hitbox = Cast<UFTJHitboxingHitboxes>(InSweep.Component)->FindConstraintBoneName(InSweep.Item - 1);
 }
 
-bool FFTJ_ProtoHitboxingHit::IsPopulated()
+bool FFTJHitboxingHit::IsPopulated()
 {
     //Check overlap completeness
     return(Attackbox != NAME_None && Hurtbox != NAME_None);
 }
 
-void FFTJ_ProtoHitboxingHit::Reset()
+void FFTJHitboxingHit::Reset()
 {
     //Clear damaging entity
     Attackboxer = nullptr;

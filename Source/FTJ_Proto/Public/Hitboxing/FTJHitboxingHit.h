@@ -1,10 +1,10 @@
 #pragma once
 
 #include"CoreMinimal.h"
-#include"FTJ_ProtoHitboxingHit.generated.h"
+#include"FTJHitboxingHit.generated.h"
 
 //Hitbox overlap data
-USTRUCT(BlueprintType) struct FFTJ_ProtoHitboxingHit
+USTRUCT(BlueprintType) struct FFTJHitboxingHit
 {
     GENERATED_BODY()
     
@@ -18,7 +18,7 @@ USTRUCT(BlueprintType) struct FFTJ_ProtoHitboxingHit
     UPROPERTY(BlueprintReadWrite) FName Hurtbox;
 
     //Clears overlap data
-    FFTJ_ProtoHitboxingHit();
+    FFTJHitboxingHit();
     /*
         Writes overlap data
         @param InSweep OnComponentBeginOverlap SweepResult parameter

@@ -1,32 +1,32 @@
-#include"Hitboxing/FTJ_ProtoHitboxingAttackboxes.h"
+#include"Hitboxing/FTJHitboxingAttackboxes.h"
 
-void UFTJ_ProtoHitboxingAttackboxes::BeginPlay()
+void UFTJHitboxingAttackboxes::BeginPlay()
 {
     //Delegate to SkeletalMeshComponent
     Super::BeginPlay();
     //Subscribe to overlaps
-    OnComponentBeginOverlap.AddDynamic(this , &UFTJ_ProtoHitboxingAttackboxes::OnHit);
+    OnComponentBeginOverlap.AddDynamic(this , &UFTJHitboxingAttackboxes::OnHit);
 }
 
-UFTJ_ProtoHitboxingAttackboxes::UFTJ_ProtoHitboxingAttackboxes()
+UFTJHitboxingAttackboxes::UFTJHitboxingAttackboxes()
 {
     //Configure valid preset
     SetCollisionProfileName("Attackbox");
 }
 
-void UFTJ_ProtoHitboxingAttackboxes::Enable()
+void UFTJHitboxingAttackboxes::Enable()
 {
     //Enable overlap registration
     SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 }
 
-void UFTJ_ProtoHitboxingAttackboxes::Disable()
+void UFTJHitboxingAttackboxes::Disable()
 {
     //Disable overlap registration
     SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
-void UFTJ_ProtoHitboxingAttackboxes::OnHit(UPrimitiveComponent * InOverlapped , AActor * InActor , UPrimitiveComponent * InOther , int32 InBody , bool bInSweep , FHitResult const& InSweep)
+void UFTJHitboxingAttackboxes::OnHit(UPrimitiveComponent * InOverlapped , AActor * InActor , UPrimitiveComponent * InOther , int32 InBody , bool bInSweep , FHitResult const& InSweep)
 {
     //Check overlap correctness
     if(InSweep.Item <= 0)

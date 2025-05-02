@@ -1,11 +1,11 @@
 #pragma once
 
 #include"CoreMinimal.h"
-#include"Hitboxing/FTJ_ProtoHitboxingHitboxes.h"
-#include"FTJ_ProtoHitboxingHurtboxes.generated.h"
+#include"Hitboxing/FTJHitboxingHitboxes.h"
+#include"FTJHitboxingHurtboxes.generated.h"
 
 //Receiving damage hitboxes
-UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingHurtboxes : public UFTJ_ProtoHitboxingHitboxes
+UCLASS() class FTJ_PROTO_API UFTJHitboxingHurtboxes : public UFTJHitboxingHitboxes
 {
     GENERATED_BODY()
 
@@ -30,7 +30,7 @@ UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingHurtboxes : public UFTJ_ProtoHit
     //Public functions
     public :
     //Configures valid preset
-    UFTJ_ProtoHitboxingHurtboxes();
+    UFTJHitboxingHurtboxes();
 
     //UFunctions
     public :

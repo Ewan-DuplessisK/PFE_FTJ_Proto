@@ -2,10 +2,10 @@
 
 #include"CoreMinimal.h"
 #include"Components/SkeletalMeshComponent.h"
-#include"FTJ_ProtoHitboxingHitboxes.generated.h"
+#include"FTJHitboxingHitboxes.generated.h"
 
 //Overlapping invisible mesh
-UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingHitboxes : public USkeletalMeshComponent
+UCLASS() class FTJ_PROTO_API UFTJHitboxingHitboxes : public USkeletalMeshComponent
 {
     GENERATED_BODY()
 
@@ -30,7 +30,7 @@ UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingHitboxes : public USkeletalMeshC
     //Public functions
     public :
     //Sets collision properties
-    UFTJ_ProtoHitboxingHitboxes();
+    UFTJHitboxingHitboxes();
 
     //UFunctions
     public :
