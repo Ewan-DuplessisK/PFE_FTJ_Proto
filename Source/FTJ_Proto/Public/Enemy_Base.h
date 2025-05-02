@@ -82,9 +82,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy is attacking the player"))
 	bool IsAttacking = false;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Boolean to see if the player is in the enemy attack range"))
-	bool IsPlayerInAttackRangeBOOL = false;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy can talk"))
 	bool bCanTalk = false;
 

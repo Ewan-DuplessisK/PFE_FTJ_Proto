@@ -23,7 +23,7 @@ void AAIManager::BeginPlay()
 {
 	Super::BeginPlay();
 
-	AGame_Character* Player = Cast<AGame_Character>(UGameplayStatics::GetPlayerPawn(GetWorld(),0));
+	Player = Cast<AGame_Character>(UGameplayStatics::GetPlayerPawn(GetWorld(),0));
 	if (Player->PlayerAction)
 	{
 		ActivatePlayerInRangeBox();
@@ -44,6 +44,8 @@ void AAIManager::BeginPlay()
 			}
 		}
 	}
+
+	UpdateActorOnScene();
 }
 
 // Called every frame
@@ -52,13 +54,30 @@ void AAIManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-void AAIManager::ActivatePlayerInRangeBox()
+void AAIManager::NotifyInRange(AEnemy_Base* Enemy)
+{
+	EnemyInRange.AddUnique(Enemy);
+}
+
+void AAIManager::NotifyOutOfRange(AEnemy_Base* Enemy)
+{
+	if(IsValid(Enemy))
+	{
+		EnemyInRange.Remove(Enemy);
+	}
+}
+
+void AAIManager::UpdateActorOnScene()
 {
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AEnemy_Base::StaticClass(), EnemyOnScene);
-	
+}
+
+void AAIManager::ActivatePlayerInRangeBox()
+{
 	for (AActor* Actor : EnemyOnScene)
 	{
 		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
+		
 		if (IsValid(Enemy) && IsValid(Enemy->PlayerInRangeSphere))
 		{
 			Enemy->PlayerInRangeSphere->Activate();
