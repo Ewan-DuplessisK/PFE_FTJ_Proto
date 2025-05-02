@@ -45,6 +45,7 @@ protected:
 	
 	ECollisionChannel GetCollisionChannelByName(const FName& ChannelName);
 	ECollisionChannel ECC_Kickable;
+	ECollisionChannel ECC_Enemy;
 	
 public:	
 	// Called every frame

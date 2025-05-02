@@ -58,6 +58,7 @@ void AGame_Character::BeginPlay()
 
 	// Find Kickable Trace Channel
 	ECC_Kickable = GetCollisionChannelByName("Kickable");
+	ECC_Enemy = GetCollisionChannelByName("Enemy");
 }
 
 // Called every frame
@@ -108,7 +109,7 @@ void AGame_Character::Kick()
 	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
 	
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Enemy));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Kickable));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
 	
