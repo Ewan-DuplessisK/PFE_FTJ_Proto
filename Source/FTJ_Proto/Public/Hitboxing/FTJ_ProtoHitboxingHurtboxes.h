@@ -16,10 +16,6 @@ UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingHurtboxes : public UFTJ_ProtoHit
 
     //Public variables
     public :
-    //Attackbox overlapped earlier
-    FName Attackbox;
-    //Hurtbox overlapped earlier
-    FName Hurtbox;
 
     //UProperties
     public :
@@ -29,14 +25,12 @@ UCLASS() class FTJ_PROTO_API UFTJ_ProtoHitboxingHurtboxes : public UFTJ_ProtoHit
 
     //Protected functions
     protected :
-    //Subscribes to overlaps
-    virtual void BeginPlay() override;
 
     //Public functions
     public :
+    //Configures valid preset
+    UFTJ_ProtoHitboxingHurtboxes();
 
     //UFunctions
     public :
-    //Registers hitbox overlaps
-    UFUNCTION() void OnOverlapped(UPrimitiveComponent * InOverlapped , AActor * InActor , UPrimitiveComponent * InOther , int32 InBody , bool bInSweep , FHitResult const& InSweep);
 };
