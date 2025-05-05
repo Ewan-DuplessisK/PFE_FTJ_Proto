@@ -6,6 +6,7 @@
 #include "ComponentUtils.h"
 #include "Player_Controller.h"
 #include "Enemy_Base.h"
+#include "Game_Character.h"
 #include "HUD.generated.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
