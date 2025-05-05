@@ -119,7 +119,9 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 					WeakspotLocation = {0, 0};
 		
 					playerControler->CameraFeel.bInvertCam = tempInvertCam;
-		
+					
+					PawnHitLocation = playerControler->PlayerCharacterRef->GetActorLocation() + (playerControler->PlayerCharacterRef->GetActorForwardVector() * 40.0f);
+					
 					return;
 				}
 			//}
@@ -142,7 +144,6 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		FVector2D L_EngagedPawnScreenLoc = screenLocation;
 
 		
-		SecondaryHitLocation = {L_EngagedPawnScreenLoc.X, L_EngagedPawnScreenLoc.Y, UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)->GetActorLocation().Z};
 		PawnHitLocation = chosenHit.ImpactPoint;
 		
 		if (/*Implement Interface BPI Damageable*/ false)
@@ -177,6 +178,8 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		WeakspotLocation = {0, 0};
 		
 		playerControler->CameraFeel.bInvertCam = tempInvertCam;
+		
+		PawnHitLocation = playerControler->PlayerCharacterRef->GetActorLocation() + (playerControler->PlayerCharacterRef->GetActorForwardVector() * 40.0f);
 		
 		return;
 	}
@@ -283,11 +286,6 @@ FVector2D UAimComponent_Base::GetCrosshairLocation()
 FVector UAimComponent_Base::GetPawnBoneLocation()
 {
 	return PawnHitLocation;
-}
-
-FVector UAimComponent_Base::GetPawnBoneSecondaryLocation()
-{
-	return SecondaryHitLocation;
 }
 
 // Called every frame

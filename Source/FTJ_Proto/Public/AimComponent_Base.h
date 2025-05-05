@@ -41,8 +41,6 @@ private:
 	FVector2D GetCrosshairLocation();
 	UFUNCTION(BlueprintCallable)
 	FVector GetPawnBoneLocation();
-	UFUNCTION(BlueprintCallable)
-	FVector GetPawnBoneSecondaryLocation();
 	
 public:	
 	// Called every frame
@@ -67,8 +65,6 @@ protected:
 	FVector2D CrosshairScreenLocation;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	FVector PawnHitLocation;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	FVector SecondaryHitLocation;
 	
 private:
 	// Refs
