@@ -26,7 +26,7 @@ AEnemy_Base::AEnemy_Base()
 
 	PlayerInRangeSphere->OnComponentBeginOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerInRangeBeginOverlap);
 	
-	//PlayerInRangeSphere->OnComponentEndOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerOutOfRange);
+	PlayerInRangeSphere->OnComponentEndOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerOutOfRange);
 }
 
 // Called when the game starts or when spawned
@@ -53,10 +53,8 @@ void AEnemy_Base::OnPlayerInRangeBeginOverlap(UPrimitiveComponent* OverlappedCom
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (OtherActor && OtherActor->IsA(AGame_Character::StaticClass()))
-	{
-		IsAttacking = true;
-		IsPlayerInAttackRangeBOOL = true;
-		aiManagerRef->ManagerAttackEnable = true;
+	{		
+		aiManagerRef->NotifyInRange(this);
 		
 		if (AAIController* AIController = Cast<AAIController>(GetController()))
 		{
@@ -73,9 +71,7 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 {
 	if (OtherActor && OtherActor->IsA(AGame_Character::StaticClass()))
 	{
-		IsAttacking = false;
-		IsPlayerInAttackRangeBOOL = false;
-		aiManagerRef->ManagerAttackEnable = false;
+		aiManagerRef->NotifyOutOfRange(this);
 		
 		if (AAIController* AIController = Cast<AAIController>(GetController()))
 		{
@@ -85,6 +81,7 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 			}
 		}
 	}
+	UE_LOG(LogTemp, Warning, TEXT("PlayerOutOfRange"));
 }
 
 void AEnemy_Base::Launched(FVector Force)
