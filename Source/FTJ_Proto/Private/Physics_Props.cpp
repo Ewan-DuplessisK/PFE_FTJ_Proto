@@ -66,10 +66,15 @@ void APhysics_Props::OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, 
 		if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AEnemy_Base::StaticClass()))
 		{
 			AEnemy_Base* Enemy = Cast<AEnemy_Base>(OtherActor);
-			if(!isLaunched)
+			if(!isLaunched&&Enemy->isLaunched)
 			{
 				Launched(Enemy->GetVelocity()*TransmissionFactor);
-				Enemy->GetMesh()->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
+				Enemy->GetMesh()->SetAllPhysicsLinearVelocity(Enemy->GetVelocity()*DampingFactor);
+			}
+			if(isLaunched&&!Enemy->isLaunched)
+			{
+				Enemy->Launched(GetVelocity()*TransmissionFactor);
+				StaticMesh->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
 			}
 		}
 		
