@@ -122,13 +122,7 @@ public:
 	bool E_Sit = false;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
-	bool E_Charge = false;
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
-	bool E_Grab = false;
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
-	bool E_Stun = false;
+	bool E_AFK = false;
 
 // -----------------------------------------------------
 

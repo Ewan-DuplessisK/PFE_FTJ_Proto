@@ -12,8 +12,6 @@ enum class EEnemyType : uint8
 	CHASE        UMETA(DisplayName = "Chase"),
 	SITTING     UMETA(DisplayName = "Sitting"),
 	TALKING     UMETA(DisplayName = "Talking"),
-	CHARGE     UMETA(DisplayName = "Charge"),
-	GRAB     UMETA(DisplayName = "Grab"),
-	STUN     UMETA(DisplayName = "Stun"),
+	AFK     UMETA(DisplayName = "AFK"),
 	MAX      UMETA(Hidden)
 };
