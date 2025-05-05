@@ -291,7 +291,8 @@ FVector UAimComponent_Base::GetPawnBoneLocation()
 
 void UAimComponent_Base::ResetPawnBoneLocation()
 {
-	PawnHitLocation = playerControler->PlayerCharacterRef->GetActorLocation() + (playerControler->PlayerCharacterRef->GetActorForwardVector() * 40.0f);
+	//PawnHitLocation = playerControler->PlayerCharacterRef->GetActorLocation() + (playerControler->PlayerCharacterRef->GetActorForwardVector() * 40.0f);
+	PawnHitLocation = FVector::Zero();
 }
 
 // Called every frame
