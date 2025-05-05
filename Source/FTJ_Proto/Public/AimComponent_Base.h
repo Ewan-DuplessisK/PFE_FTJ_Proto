@@ -6,10 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "Data_3C/AimAssistFeel.h"
 #include "AimState_Enum.h"
-#include "Player_Controller.h"
-#include "HUD.generated.h"
 #include "AimComponent_Base.generated.h"
-
 
 
 UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
@@ -20,8 +17,8 @@ class FTJ_PROTO_API UAimComponent_Base : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UAimComponent_Base();
-
 	
+	// Fix for cam invert on aim
 	UFUNCTION(BlueprintCallable)
 	bool SetTempInvertCam(bool invertCam);
 	bool tempInvertCam = false;
@@ -30,6 +27,11 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	// Collision channel 
+	ECollisionChannel GetCollisionChannelByName(const FName& ChannelName);
+	ECollisionChannel ECC_Enemy;
+	//
+	
 	void ExecuteSystem();
 
 private:
@@ -51,6 +53,7 @@ public:
 	FUAimAssistFeel AimFeel;
 
 private:
+	// Temp cam Speed for aim reset
 	float TempHorizCamSpeed = 0.0f;
 	float TempVertCamSpeed = 0.0f;
 
@@ -80,8 +83,8 @@ protected:
 	// Timer
 	// You should keep the timer handle in one of your properties
 	FTimerHandle MyTimerHandle;
-
-protected:
+	
+	
 	// Debug Widget
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Aiming Debug HUD"))
 	TSubclassOf<AHUD> wAimDebugWidget = nullptr;

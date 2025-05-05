@@ -4,7 +4,9 @@
 #include "AimComponent_Base.h"
 
 #include "ComponentUtils.h"
+#include "Player_Controller.h"
 #include "Enemy_Base.h"
+#include "HUD.generated.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 
@@ -26,16 +28,40 @@ void UAimComponent_Base::BeginPlay()
 	// Set Camera Base Speed
 	TempHorizCamSpeed = playerControler->CameraFeel.HorizontalCamSpeed;
 	TempVertCamSpeed = playerControler->CameraFeel.VerticalCamSpeed;
-	
+
+	// Aim State
 	CurrentAimState = UAimState_Enum::NotEngaged;
 	
 	// To stop cam invert on pawn targeted
 	SetTempInvertCam(playerControler->CameraFeel.bInvertCam);
 	
+	// Get collision chanel
+	ECC_Enemy = GetCollisionChannelByName("Enemy");
+	//
+	
 	// Timer for Aim System (don't add anything after this)
 	// Time(60 FPS) = 1/60 = 0.016667 or (30 FPS) = 1/30 = 0.033333
 	float inRate = 0.016667f;
 	GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &UAimComponent_Base::ExecuteSystem, inRate, true);
+}
+
+
+ECollisionChannel UAimComponent_Base::GetCollisionChannelByName(const FName& ChannelName)
+{
+	// Iterate over all possible collision channels
+	for (int32 Channel = ECC_GameTraceChannel1; Channel <= ECC_GameTraceChannel18; ++Channel)
+	{
+		FName Name = UCollisionProfile::Get()->ReturnChannelNameFromContainerIndex(Channel);
+
+		if (Name == ChannelName)
+		{
+			return static_cast<ECollisionChannel>(Channel);
+		}
+	}
+
+	// Not found, log a warning & handle the error
+	UE_LOG(LogTemp, Warning, TEXT("Collision channel '%s' not found!"), *ChannelName.ToString());
+	return ECC_Pawn; // default/fallback
 }
 
 bool UAimComponent_Base::SetTempInvertCam(bool invertCam)
@@ -70,7 +96,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 	const FVector End = WorldLocation + (WorldDirection * AimFeel.AssistRange);
 	
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Enemy));
 	TArray<AActor*> ActorsToIgnore;
 	ActorsToIgnore.Add(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
 	
@@ -82,9 +108,9 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		for (FHitResult ArrayElement : HitPawns)
 		{
 			// if(enemy == dead) return;
-			/*if(ArrayElement.GetActor()->IsA(AEnemy_Base::StaticClass()))
-			{
-				if(Cast<AEnemy_Base>(ArrayElement.GetActor()).dead)
+			//if(ArrayElement.GetActor()->IsA(AEnemy_Base::StaticClass()))
+			//{
+				if(Cast<AEnemy_Base>(ArrayElement.GetActor())->ActorHasTag("Dead"))
 				{
 					bPawnFound = false;
 					InLocation = {-1, -1};
@@ -96,7 +122,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		
 					return;
 				}
-			}*/
+			//}
 			
 			distToHit = ArrayElement.Distance;
 			
