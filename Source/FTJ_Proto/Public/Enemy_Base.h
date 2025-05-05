@@ -55,23 +55,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy Damages to player"))
 	int Damages = 0;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy distance to charge on the player"))
-	float ChargeDistance = 0.f;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy Speed charge"))
-	float SpeedCharge = 0.f;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy range he can grab the player"))
-	float GrabDistance = 0.f;
-	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Number of time you need to spam the input to exit the QTE"))
 	int QTEInputRequired = 0.f;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Number of time the enemy stay still after the player exit the QTE"))
 	float TimeAFKAfterQTE = 0.f;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Number of time the enemy stay stun"))
-	float StunDuration = 0.f;
 
 // --------------------------------------------------------
 	
