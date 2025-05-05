@@ -41,6 +41,8 @@ private:
 	FVector2D GetCrosshairLocation();
 	UFUNCTION(BlueprintCallable)
 	FVector GetPawnBoneLocation();
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Will Work once animations point weapons forward, currently shoot up due to going from weapon forward towards player forward"))
+	void ResetPawnBoneLocation();
 	
 public:	
 	// Called every frame

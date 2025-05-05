@@ -121,7 +121,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		
 					playerControler->CameraFeel.bInvertCam = tempInvertCam;
 					
-					PawnHitLocation = playerControler->PlayerCharacterRef->GetActorLocation() + (playerControler->PlayerCharacterRef->GetActorForwardVector() * 40.0f);
+					ResetPawnBoneLocation();
 					
 					return;
 				}
@@ -180,7 +180,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		
 		playerControler->CameraFeel.bInvertCam = tempInvertCam;
 		
-		PawnHitLocation = playerControler->PlayerCharacterRef->GetActorLocation() + (playerControler->PlayerCharacterRef->GetActorForwardVector() * 40.0f);
+		ResetPawnBoneLocation();
 		
 		return;
 	}
@@ -287,6 +287,11 @@ FVector2D UAimComponent_Base::GetCrosshairLocation()
 FVector UAimComponent_Base::GetPawnBoneLocation()
 {
 	return PawnHitLocation;
+}
+
+void UAimComponent_Base::ResetPawnBoneLocation()
+{
+	PawnHitLocation = playerControler->PlayerCharacterRef->GetActorLocation() + (playerControler->PlayerCharacterRef->GetActorForwardVector() * 40.0f);
 }
 
 // Called every frame
