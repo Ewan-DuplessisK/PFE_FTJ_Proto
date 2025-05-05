@@ -19,10 +19,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere,Blueprintable,Category = "Mesh")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Mesh")
 	UStaticMeshComponent* StaticMesh = nullptr;
 
-	UPROPERTY(EditAnywhere,Blueprintable,Category = "Collisions")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Collisions")
 	class UBoxComponent* OverlapPhysics;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
@@ -50,6 +50,6 @@ public:
 	float TransmissionFactor = .8f;
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Physics Vars")
-	float PropLandSpeedThreshold = 10.f;
+	float PropLandSpeedThreshold = 1.f;
 
 };

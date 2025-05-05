@@ -23,7 +23,6 @@ APhysics_Props::APhysics_Props()
 	OverlapPhysics->SetupAttachment(StaticMesh);
 	OverlapPhysics->SetRelativeLocation(FVector(0.f,0.f,0.f));
 	OverlapPhysics->OnComponentBeginOverlap.AddDynamic(this, &APhysics_Props::OnPhysicsOverlap);
-
 	DestructionComponent = CreateDefaultSubobject<UFTJ_ProtoDestructionComponent>(TEXT("AC_Destruction"));
 }
 
@@ -31,6 +30,11 @@ APhysics_Props::APhysics_Props()
 void APhysics_Props::BeginPlay()
 {
 	Super::BeginPlay();
+	for(TObjectPtr<USceneComponent> Child : OverlapPhysics->GetAttachChildren())
+	{
+		UBoxComponent* ChildBox = Cast<UBoxComponent>(Child);
+		ChildBox->OnComponentBeginOverlap.AddDynamic(this,&APhysics_Props::OnPhysicsOverlap);
+	}
 }
 
 bool canLand = false;
@@ -55,18 +59,31 @@ void APhysics_Props::Launched(FVector force)
 
 void APhysics_Props::OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if(isLaunched&&OtherActor!=this)
-	{
+	UE_LOG(LogTemp,Warning,TEXT("Overlap %d"),isLaunched);
+	/*if(isLaunched&&OtherActor!=this)
+	{*/
+		//UE_LOG(LogTemp,Warning,TEXT("Overlap %s"),*OtherActor->GetName());
 		if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AEnemy_Base::StaticClass()))
 		{
 			AEnemy_Base* Enemy = Cast<AEnemy_Base>(OtherActor);
-			if(!Enemy->isLaunched){Enemy->Launched(GetVelocity()*TransmissionFactor);}
+			if(!isLaunched)
+			{
+				Launched(Enemy->GetVelocity()*TransmissionFactor);
+				Enemy->GetMesh()->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
+			}
 		}
-		if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),APhysics_Props::StaticClass()))
+		
+		APhysics_Props* Prop = Cast<APhysics_Props>(OtherActor);
+		if(IsValid(Prop) || UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),APhysics_Props::StaticClass()))
 		{
-			APhysics_Props* Prop = Cast<APhysics_Props>(OtherActor);
-			if(!Prop->isLaunched)Prop->Launched(GetVelocity()*TransmissionFactor);
+			//UE_LOG(LogTemp,Warning,TEXT("Prop Overlap"));
+			if(!isLaunched)
+			{
+				Launched(Prop->GetVelocity()*TransmissionFactor);
+				Prop->StaticMesh->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
+			}
 		}
+		
 		if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AFTJ_ProtoDestructionActor::StaticClass()))
 		{
 			FHitResult OutHit;
@@ -76,8 +93,8 @@ void APhysics_Props::OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, 
 				DestructionComponent->Hit(OutHit.GetComponent(),OutHit,100,0,1.f,1.f,GetVelocity()*TransmissionFactor,FVector());
 			}
 		}
-		StaticMesh->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
-	}
+		
+	//}
 }
 
 /*void APhysics_Props::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
