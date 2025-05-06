@@ -61,7 +61,7 @@ ECollisionChannel UAimComponent_Base::GetCollisionChannelByName(const FName& Cha
 	}
 
 	// Not found, log a warning & handle the error
-	UE_LOG(LogTemp, Warning, TEXT("Collision channel '%s' not found!"), *ChannelName.ToString());
+	UE_LOG(LogTemp, Warning, TEXT("Collision channel '%s' not found !"), *ChannelName.ToString());
 	return ECC_Pawn; // default/fallback
 }
 
@@ -108,7 +108,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		
 		for (FHitResult ArrayElement : HitPawns)
 		{
-			// if(enemy == dead) return;
+			// if enemy is dead don't aim
 			//if(ArrayElement.GetActor()->IsA(AEnemy_Base::StaticClass()))
 			//{
 				if(Cast<AEnemy_Base>(ArrayElement.GetActor())->ActorHasTag("Dead"))
@@ -118,10 +118,10 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 					bDoesImplementInterface = false;
 					BaseSpotLocation = {0, 0};
 					WeakspotLocation = {0, 0};
-		
-					playerControler->CameraFeel.bInvertCam = tempInvertCam;
-					
+
 					ResetPawnBoneLocation();
+					
+					//playerControler->CameraFeel.bInvertCam = tempInvertCam;
 					
 					return;
 				}
@@ -133,7 +133,8 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 			
 			HitPawnsDistToCenter.Add(UKismetMathLibrary::Distance2D(viewportSize/2, screenPosition));
 		}
-		int indexOfMinValue = 0;
+		
+		int32 indexOfMinValue = 0;
 		float valueOfMinValue = 0.0f;
 		UKismetMathLibrary::MinOfFloatArray(HitPawnsDistToCenter, indexOfMinValue, valueOfMinValue);
 		
@@ -143,7 +144,6 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 
 		AActor* L_EngagedPawn = chosenHit.GetActor();
 		FVector2D L_EngagedPawnScreenLoc = screenLocation;
-
 		
 		PawnHitLocation = chosenHit.ImpactPoint;
 		
@@ -165,7 +165,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 			BaseSpotLocation = {0, 0};
 			WeakspotLocation = {0, 0};
 			
-			playerControler->CameraFeel.bInvertCam = !tempInvertCam;
+			//playerControler->CameraFeel.bInvertCam = !tempInvertCam;
 			
 			return;
 		}
@@ -178,7 +178,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		BaseSpotLocation = {0, 0};
 		WeakspotLocation = {0, 0};
 		
-		playerControler->CameraFeel.bInvertCam = tempInvertCam;
+		//playerControler->CameraFeel.bInvertCam = tempInvertCam;
 		
 		ResetPawnBoneLocation();
 		
@@ -206,8 +206,8 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 				// Set State "Locking on Weakspot"
 				CurrentAimState = UAimState_Enum::LockingWeakSpot;
 				
-				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.WeakFactor;
-				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.WeakFactor;
+				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed * AimFeel.WeakFactor;
+				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed * AimFeel.WeakFactor;
 
 				return WeakspotLocation;
 			}
@@ -216,8 +216,8 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 					// Set State "Locking on Basespot"
 					CurrentAimState = UAimState_Enum::LockingBaseSpot;
 					
-					playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.BaseFactor;
-					playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.BaseFactor;
+					playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed * AimFeel.BaseFactor;
+					playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed * AimFeel.BaseFactor;
 					
 					return BaseSpotLocation;
 				}
@@ -235,8 +235,8 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 				// Set State "Simple Engaged"
 				CurrentAimState = UAimState_Enum::SimpleEngaged;
 				
-				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.SimpleFactor;
-				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.SimpleFactor;
+				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed * AimFeel.SimpleFactor;
+				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed * AimFeel.SimpleFactor;
 				
 				return InLocation;
 			}
@@ -245,8 +245,8 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 				// Set State "Bending Crosshair"
 				CurrentAimState = UAimState_Enum::BendingCrosshair;
 				
-				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.BendFactor;
-				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.BendFactor;
+				playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed * AimFeel.BendFactor;
+				playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed * AimFeel.BendFactor;
 				
 				return viewportCenter + (UKismetMathLibrary::Normal2D((InLocation - viewportCenter)) *
 					(AimFeel.BaseShotRadius * (AimFeel.BendShotRadius - PawnDistToCenter)) / (AimFeel.BendShotRadius - AimFeel.BaseShotRadius));
@@ -260,8 +260,8 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 			// set state to "Magnetic Crosshair"
 			CurrentAimState = UAimState_Enum::MagnetiseCrosshair;
 			
-			playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed / AimFeel.MagneticFactor;
-			playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed / AimFeel.MagneticFactor;
+			playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed * AimFeel.MagneticFactor;
+			playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed * AimFeel.MagneticFactor;
 
 		}
 		else
@@ -300,4 +300,3 @@ void UAimComponent_Base::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }
-

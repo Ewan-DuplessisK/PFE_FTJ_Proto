@@ -88,14 +88,14 @@ void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 	
 	const FVector2D MoveValue = Value.Get<FVector2D>();
 	
-	if (MoveValue.X != 0.0f)
-	{
-		FVector forwardVec = UKismetMathLibrary::GetForwardVector(GetControlRotation());
-		PlayerCharacterRef->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.X);
-	}
 	if (MoveValue.Y != 0.0f)
 	{
-		PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorRightVector(), MoveValue.Y);
+		FVector forwardVec = UKismetMathLibrary::GetForwardVector(GetControlRotation());
+		PlayerCharacterRef->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.Y);
+	}
+	if (MoveValue.X != 0.0f)
+	{
+		PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorRightVector(), MoveValue.X);
 	}
 
 	// Tilt Set for Move
@@ -119,12 +119,12 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 		if(CameraFeel.bInvertCam)
      	{
      		//PlayerCharacterRef->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
-			AddPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+			AddPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
      	}
 		else
 		{
 			//PlayerCharacterRef->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
-			AddPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
+			AddPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
 		}
 		
 		PlayerCharacterRef->FirstPersonCameraComponent->SetRelativeRotation(FRotator(GetControlRotation().Pitch,0.0,0.0));

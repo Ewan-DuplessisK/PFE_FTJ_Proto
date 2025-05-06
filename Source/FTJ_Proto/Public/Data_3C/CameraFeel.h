@@ -27,9 +27,9 @@ struct FTJ_PROTO_API FUCameraFeel
 	// Camera
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
 	bool bInvertCam = false;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base", meta=(ClampMin=0.0, ClampMax=1.0))
 	float HorizontalCamSpeed = 1.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base", meta=(ClampMin=0.0, ClampMax=1.0))
 	float VerticalCamSpeed = 0.45f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
 	float ViewPitchMin = -70.0f;

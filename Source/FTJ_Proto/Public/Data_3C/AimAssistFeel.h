@@ -35,14 +35,14 @@ struct FTJ_PROTO_API FUAimAssistFeel
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Debug")
 	bool bIsDebugActive = true;
 	// Factor
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors")
-	float WeakFactor = 2.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors")
-	float BaseFactor = 1.75f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors")
-	float SimpleFactor = -1.5f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors")
-	float BendFactor = 1.3f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors")
-	float MagneticFactor = 1.2f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors", meta=(ClampMin=0.0, ClampMax=1.0))
+	float WeakFactor = 0.2f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors", meta=(ClampMin=0.0, ClampMax=1.0))
+	float BaseFactor = 0.75f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors", meta=(ClampMin=0.0, ClampMax=1.0))
+	float SimpleFactor = 0.85f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors", meta=(ClampMin=0.0, ClampMax=1.0))
+	float BendFactor = 0.3f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel | Factors", meta=(ClampMin=0.0, ClampMax=1.0))
+	float MagneticFactor = 0.7f;
 };

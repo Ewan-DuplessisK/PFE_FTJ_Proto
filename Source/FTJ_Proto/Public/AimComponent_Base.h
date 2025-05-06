@@ -19,7 +19,7 @@ public:
 	UAimComponent_Base();
 	
 	// Fix for cam invert on aim
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Set Invert Cam for aim"))
 	bool SetTempInvertCam(bool invertCam);
 	bool tempInvertCam = false;
 
@@ -37,11 +37,11 @@ protected:
 private:
 	void PawnSearch(bool &bPawnFound, FVector2D &InLocation, bool &bDoesImplementInterface, FVector2D &BaseSpotLocation, FVector2D &WeaksotLocation);
 	FVector2D SetCrosshairLocation(bool bPawnFound, FVector2D InLocation, bool bDoesImplementInterface, FVector2D BaseSpotLocation, FVector2D WeaksotLocation);
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Gets 2D screen Location of the crosshair"))
 	FVector2D GetCrosshairLocation();
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Get the current bon Location of the aim"))
 	FVector GetPawnBoneLocation();
-	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Will Work once animations point weapons forward, currently shoot up due to going from weapon forward towards player forward"))
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Sets location to FVector::Zero() For when the aim is inactive"))
 	void ResetPawnBoneLocation();
 	
 public:	
@@ -63,9 +63,9 @@ private:
 	float distToHit = 1.0f;
 	
 protected:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (ToolTip = "Crosshair Screen Location"))
 	FVector2D CrosshairScreenLocation;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (ToolTip = "Bone Location of the aimed enemy"))
 	FVector PawnHitLocation;
 	
 private:
