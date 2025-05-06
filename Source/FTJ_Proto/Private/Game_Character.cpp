@@ -96,9 +96,9 @@ ECollisionChannel AGame_Character::GetCollisionChannelByName(const FName& Channe
 		}
 	}
 
-	// Not found, log a warning or handle the error
+	// Not found, log a warning & handle the error
 	UE_LOG(LogTemp, Warning, TEXT("Collision channel '%s' not found!"), *ChannelName.ToString());
-	return ECC_WorldStatic; // or any default/fallback
+	return ECC_WorldStatic; // default/fallback
 }
 
 void AGame_Character::Kick()

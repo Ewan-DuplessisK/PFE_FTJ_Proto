@@ -83,7 +83,6 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 
 void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 {
-	//UE_LOG(LogTemp, Log, TEXT("Move Player"));
 	if (!PlayerCharacterRef) return;
 	
 	const FVector2D MoveValue = Value.Get<FVector2D>();
@@ -131,8 +130,8 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 	}
 	
 	//PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+
 	
-	//UE_LOG(LogTemp, Log, TEXT("%f"),MoveValue.Y);
 	// Tilt set for Look
 	/*
 	if(MoveValue.X < -CameraFeel.TiltClamp || MoveValue.X > CameraFeel.TiltClamp)
@@ -164,8 +163,9 @@ void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add
 		}
 		
 		PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
-		
-		Tilt=0.0f;
+
+		// TO REMOVE ON SWITCH TO WEAPON
+		Tilt = 0.0f;
 		
 		// Tilt Set
 		FRotator DeltaRotation = {0.0f, 0.0f, Tilt};
@@ -235,8 +235,6 @@ void APlayer_Controller::FOVChangeSpeed()
 		
 		PlayerCharacterRef->FirstPersonCameraComponent->SetFieldOfView(newFOV);
 	}
-
-	//UE_LOG(LogTemp, Log, TEXT("FOV Timer"));
 }
 
 void APlayer_Controller::OnKickTriggered()

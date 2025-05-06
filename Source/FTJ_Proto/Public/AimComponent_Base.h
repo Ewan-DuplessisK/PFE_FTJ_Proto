@@ -18,10 +18,10 @@ public:
 	// Sets default values for this component's properties
 	UAimComponent_Base();
 	
-	// Fix for cam invert on aim
-	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Set Invert Cam for aim"))
+	// Invert Cam
+	/*UFUNCTION(BlueprintCallable, meta = (ToolTip = "Set Invert Cam"))
 	bool SetTempInvertCam(bool invertCam);
-	bool tempInvertCam = false;
+	bool tempInvertCam = false;*/
 
 protected:
 	// Called when the game starts
@@ -39,7 +39,7 @@ private:
 	FVector2D SetCrosshairLocation(bool bPawnFound, FVector2D InLocation, bool bDoesImplementInterface, FVector2D BaseSpotLocation, FVector2D WeaksotLocation);
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Gets 2D screen Location of the crosshair"))
 	FVector2D GetCrosshairLocation();
-	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Get the current bon Location of the aim"))
+	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Get the current bone Location of the aim"))
 	FVector GetPawnBoneLocation();
 	UFUNCTION(BlueprintCallable, meta = (ToolTip = "Sets location to FVector::Zero() For when the aim is inactive"))
 	void ResetPawnBoneLocation();
@@ -53,10 +53,10 @@ public:
 	FUAimAssistFeel AimFeel;
 
 private:
-	// Temp cam Speed for aim reset
+	// Temp cam Speed for aim cam speed reset
 	float TempHorizCamSpeed = 0.0f;
 	float TempVertCamSpeed = 0.0f;
-
+	
 	TArray<FHitResult> HitPawns;
 	TArray<float> HitPawnsDistToCenter;
 
@@ -86,8 +86,7 @@ protected:
 	// Debug Widget
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Aiming Debug HUD"))
 	TSubclassOf<AHUD> wAimDebugWidget = nullptr;
-	
-	// Variable to hold the widget After Creating it.
+	// Variable to hold the debug widget After Creating it.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "HUD Reference of the Aiming Debug HUD"))
 	AHUD* MyAimDebugMenu = nullptr;
 };
