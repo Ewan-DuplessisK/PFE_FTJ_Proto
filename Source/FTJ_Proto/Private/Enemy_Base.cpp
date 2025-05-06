@@ -81,7 +81,7 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 			}
 		}
 	}
-	UE_LOG(LogTemp, Warning, TEXT("PlayerOutOfRange"));
+	//UE_LOG(LogTemp, Warning, TEXT("PlayerOutOfRange"));
 }
 
 void AEnemy_Base::Launched(FVector Force)
@@ -95,12 +95,15 @@ void AEnemy_Base::Launched(FVector Force)
 			AIController->GetBrainComponent()->StopLogic(TEXT("Dead"));
 		}
 	}
-	 LaunchCharacter(Force, true, true);
+	LaunchCharacter(Force, true, true);
+	isLaunched=true;
+	//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));
 }
 
 void AEnemy_Base::Landed(const FHitResult& hit)
 {
 	Super::Landed(hit);
+	UE_LOG(LogTemp,Warning,TEXT("Enemy Landed"));
 	
 	GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
 	Tags.Add(FName("Dead"));
@@ -108,6 +111,7 @@ void AEnemy_Base::Landed(const FHitResult& hit)
 	PlayerInRangeSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	GetMesh()->SetSimulatePhysics(true);
+	isLaunched=false;
 }
 
 

@@ -70,9 +70,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy is attacking the player"))
 	bool IsAttacking = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy can talk"))
-	bool bCanTalk = false;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy is launched"))
 	bool isLaunched = false;
 	
@@ -87,9 +84,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
 	class USphereComponent* PlayerInRangeSphere;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the player if he get in the range of the enemy for the attack"))
-	FVector OverlapedPosition = {0, 0, 0};
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the second enemy this enemy is supposed to talk to, for him to look at him"))
 	FVector TalkingToPosition = {0, 0, 0};

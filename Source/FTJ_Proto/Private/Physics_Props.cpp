@@ -59,7 +59,7 @@ void APhysics_Props::Launched(FVector force)
 
 void APhysics_Props::OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	UE_LOG(LogTemp,Warning,TEXT("Overlap %d"),isLaunched);
+	//UE_LOG(LogTemp,Warning,TEXT("Overlap %d"),isLaunched);
 	/*if(isLaunched&&OtherActor!=this)
 	{*/
 		//UE_LOG(LogTemp,Warning,TEXT("Overlap %s"),*OtherActor->GetName());
