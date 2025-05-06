@@ -25,6 +25,4 @@ struct FTJ_PROTO_API FUPlayerFeel
 	float LinearDamping = 0.01f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player Feel | Damping")
 	float AngularDamping = 0.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player Feel | Invincible")
-	float Invincibility_Time = 2.0f;
 };
