@@ -43,22 +43,22 @@ public:
 	void Landed(const FHitResult& hit) override;
 
 	// Enemy Variables for DataTable
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy WalkSpeed depending on the ABP and BlendSpace"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	float WalkSpeed = 0.f;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy RunSpeed depending on the ABP and BlendSpace"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	float RunSpeed = 0.f;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy max HP"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	int MaxHealth = 0;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Enemy Damages to player"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	int Damages = 0;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Number of time you need to spam the input to exit the QTE"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	int QTEInputRequired = 0.f;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Datatable Variables [Don't Touch]", meta = (ToolTip = "[Modify in DataTable] Number of time the enemy stay still after the player exit the QTE"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	float TimeAFKAfterQTE = 0.f;
 
 // --------------------------------------------------------
@@ -67,13 +67,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Define the Enemy State"))
 	EEnemyType EnemyState;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy is attacking the player"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	bool IsAttacking = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Boolean to see if the enemy is launched"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	bool isLaunched = false;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Integer where we save the new enemy HP value after he get hit by the player"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	int CurrentHealth = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Integer where we save the new enemy HP value after he get hit by the player"))
@@ -85,7 +85,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
 	class USphereComponent* PlayerInRangeSphere;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the second enemy this enemy is supposed to talk to, for him to look at him"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the second enemy this enemy is supposed to talk to, for him to look at him"))
 	FVector TalkingToPosition = {0, 0, 0};
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "When the player exit the QTE, the direction and force the enemy will be launch"))
@@ -94,42 +94,39 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "The reference to the enemy this enemy is supposed to talk, don't forget to change the enemy state to talking"))
 	AActor* TalkingTo = nullptr;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "[Don't Touch] Reference to the Player"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	AActor* Player = nullptr;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "[Don't Touch] Reference to the AIManager"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	AActor* AIManager = nullptr;
 
 // -----------------------------------------------------
 
 	// Enum Bool Variables
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
 	bool E_Patrol = false;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
 	bool E_Chase = false;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
 	bool E_Talk = false;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
 	bool E_Sit = false;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Enum Bool [Don't Touch]", meta = (ToolTip = "[Don't Touch] Boolean for the enemy state"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
 	bool E_AFK = false;
 
 // -----------------------------------------------------
 
 	// Behavior Tree Bool Name Variables
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
 	FName playerInAttackRangeKey = "playerInAttackRange?";
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
 	FName playerActionKey = "playerAction?";
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
 	FName hasSeenPlayerKey = "hasSeenPlayer?";
-
-	
-	
 };

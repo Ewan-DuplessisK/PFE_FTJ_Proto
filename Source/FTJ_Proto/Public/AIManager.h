@@ -33,7 +33,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void UpdateActorOnScene();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "[Don't Touch] Reference to the Player"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "[Don't Touch] Reference to the Player"))
 	class AGame_Character* Player = nullptr;
 
 	// Array of Sitting and Talking Enemy for GD to know who are in this State
@@ -46,10 +46,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIManager|Variables")
 	TArray<AActor*> EnemyOnScene;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIManager|Variables")
+	UPROPERTY(BlueprintReadOnly, Category = "AIManager|Variables")
 	TArray<AEnemy_Base*> EnemyInRange;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="AIManager|Variables|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
+	UPROPERTY(BlueprintReadWrite, Category="AIManager|Variables|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
 	FName PlayerActionKey = "playerAction?";
 
 	void ActivatePlayerInRangeBox();
