@@ -49,7 +49,7 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Struct Ref
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
+	UPROPERTY(BlueprintReadWrite, Category = "Refs")
 	FUAimAssistFeel AimFeel;
 
 private:
@@ -73,7 +73,7 @@ private:
 	class APlayer_Controller* playerControler = nullptr;
 	
 public:
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UAimState_Enum CurrentAimState = UAimState_Enum::NotEngaged;
 	
 protected:
@@ -87,6 +87,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Aiming Debug HUD"))
 	TSubclassOf<AHUD> wAimDebugWidget = nullptr;
 	// Variable to hold the debug widget After Creating it.
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "HUD Reference of the Aiming Debug HUD"))
+	UPROPERTY(BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "HUD Reference of the Aiming Debug HUD"))
 	AHUD* MyAimDebugMenu = nullptr;
 };
