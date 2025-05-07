@@ -43,7 +43,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIManager|Variables")
 	TArray<AEnemy_Base*> EnemyTalking;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIManager|Variables")
+	UPROPERTY(BlueprintReadOnly, Category = "AIManager|Variables")
 	TArray<AActor*> EnemyOnScene;
 
 	UPROPERTY(BlueprintReadOnly, Category = "AIManager|Variables")
