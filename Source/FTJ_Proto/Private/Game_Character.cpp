@@ -109,8 +109,8 @@ void AGame_Character::Kick()
 	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
 	
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Enemy));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Kickable));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Enemy));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
 	
 	TArray<AActor*> ActorsToIgnore;
