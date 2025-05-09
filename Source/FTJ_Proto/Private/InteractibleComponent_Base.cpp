@@ -3,6 +3,8 @@
 
 #include "InteractibleComponent_Base.h"
 
+#include "Components/SphereComponent.h"
+
 // Sets default values for this component's properties
 UInteractibleComponent_Base::UInteractibleComponent_Base()
 {
@@ -19,7 +21,7 @@ void UInteractibleComponent_Base::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	Mesh = Cast<UStaticMeshComponent>(GetOwner()->GetComponentByClass(UStaticMeshComponent::StaticClass()));
 	
 }
 
@@ -30,5 +32,14 @@ void UInteractibleComponent_Base::TickComponent(float DeltaTime, ELevelTick Tick
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+}
+
+USphereComponent* UInteractibleComponent_Base::AddOverlapCollision()
+{
+	USphereComponent* tmp = Cast<USphereComponent>(GetOwner()->AddComponentByClass(UStaticMeshComponent::StaticClass(),false,{},false));
+	tmp->AttachToComponent(Mesh,{EAttachmentRule::KeepRelative,EAttachmentRule::KeepRelative,EAttachmentRule::KeepRelative,true},NAME_None);
+	tmp->SetSphereRadius(CollisionRadius,true);
+	tmp->SetCollisionProfileName("Interactable",true);
+	return tmp;
 }
 

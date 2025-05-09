@@ -16,13 +16,34 @@ public:
 	// Sets default values for this component's properties
 	UInteractUserComponent_Base();
 
+	// Refs
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	class APlayer_Controller* PlayerControllerRef = nullptr;
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	class AGame_Character* PlayerCharacterRef = nullptr;
+	UPROPERTY(BlueprintReadWrite,VisibleAnywhere)
+	class UInteractibleComponent_Base* Closest;
+	UPROPERTY(BlueprintReadWrite,VisibleAnywhere)
+	TArray<class UInteractibleComponent_Base*> Overlapping;
+
+protected:
+	UPROPERTY(BlueprintReadWrite)
+	class UInputMappingContext* InputMapping;
+	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Interact")
+	class UInputAction* InputActionInteract;
+
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
+	void Interact();
+	void HandleInteract(UInteractibleComponent_Base* Interact);
+	UFUNCTION()
+	void OwnerBeginOverlap(AActor* OverlappedActor, AActor* OtherActor);
+	void OwnerEndOverlap(AActor* OverlappedActor, AActor* OtherActor);
 
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-		
+	UInteractibleComponent_Base* FindClosest();
 };
