@@ -27,7 +27,7 @@ public:
 	UCameraComponent* FirstPersonCameraComponent;
 
 protected:
-	/** Aim Component */
+	/** Components */
 	//UPROPERTY(EditDefaultsOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
 	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components)
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
@@ -61,16 +61,16 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUCombatFeel CombatFeel;
 
-	// Boolean to know the player do a action for the enemy to go toward him
+	// Boolean to know the player does an action for the enemy to go toward him
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player State Check")
 	bool PlayerAction = false;
-
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Debug Vars")
 	bool WantPlayerAction = true;
-
+	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Niagara")
 	class UNiagaraSystem* Kick_VFX = nullptr;
-
+	
 	
 	UFUNCTION(BlueprintCallable)
 	void InitializeVarsWithPlayerFeelStruct();

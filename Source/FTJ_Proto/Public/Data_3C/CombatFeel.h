@@ -14,11 +14,11 @@ struct FTJ_PROTO_API FUCombatFeel
 {
 	GENERATED_BODY()
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat | Kick")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Kick")
 	FVector KickForce = {3000.0f, 0.0f, 150.0f};
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat | Kick")
-	float KickLength = 200.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Kick")
+	float KickLength = 300.0f;
 	// Debug
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat | Debug")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Debug")
 	bool bDebugActive = true;
 };

@@ -34,7 +34,7 @@ void UAimComponent_Base::BeginPlay()
 	CurrentAimState = UAimState_Enum::NotEngaged;
 	
 	// To stop cam invert on pawn targeted
-	SetTempInvertCam(playerControler->CameraFeel.bInvertCam);
+	//SetTempInvertCam(playerControler->CameraFeel.bInvertCam);
 	
 	// Get collision chanel
 	ECC_Enemy = GetCollisionChannelByName("Enemy");
@@ -65,10 +65,10 @@ ECollisionChannel UAimComponent_Base::GetCollisionChannelByName(const FName& Cha
 	return ECC_Pawn; // default/fallback
 }
 
-bool UAimComponent_Base::SetTempInvertCam(bool invertCam)
+/*bool UAimComponent_Base::SetTempInvertCam(bool invertCam)
 {
 	return tempInvertCam = invertCam;
-}
+}*/
 
 void UAimComponent_Base::ExecuteSystem()
 {
@@ -98,6 +98,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 	
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Enemy));
+	
 	TArray<AActor*> ActorsToIgnore;
 	ActorsToIgnore.Add(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
 	
@@ -108,7 +109,7 @@ void UAimComponent_Base::PawnSearch(bool& bPawnFound, FVector2D& InLocation, boo
 		
 		for (FHitResult ArrayElement : HitPawns)
 		{
-			// if enemy is dead don't aim
+			// Don't aim on dead enemy
 			//if(ArrayElement.GetActor()->IsA(AEnemy_Base::StaticClass()))
 			//{
 				if(Cast<AEnemy_Base>(ArrayElement.GetActor())->ActorHasTag("Dead"))
@@ -262,7 +263,6 @@ FVector2D UAimComponent_Base::SetCrosshairLocation(bool bPawnFound, FVector2D In
 			
 			playerControler->CameraFeel.HorizontalCamSpeed = TempHorizCamSpeed * AimFeel.MagneticFactor;
 			playerControler->CameraFeel.VerticalCamSpeed = TempVertCamSpeed * AimFeel.MagneticFactor;
-
 		}
 		else
 		{

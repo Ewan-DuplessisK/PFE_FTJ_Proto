@@ -96,9 +96,9 @@ ECollisionChannel AGame_Character::GetCollisionChannelByName(const FName& Channe
 		}
 	}
 
-	// Not found, log a warning or handle the error
+	// Not found, log a warning & handle the error
 	UE_LOG(LogTemp, Warning, TEXT("Collision channel '%s' not found!"), *ChannelName.ToString());
-	return ECC_WorldStatic; // or any default/fallback
+	return ECC_WorldStatic; // default/fallback
 }
 
 void AGame_Character::Kick()
@@ -109,8 +109,8 @@ void AGame_Character::Kick()
 	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
 	
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Enemy));
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Kickable));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
 	
 	TArray<AActor*> ActorsToIgnore;

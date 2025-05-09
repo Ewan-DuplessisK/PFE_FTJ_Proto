@@ -16,30 +16,30 @@ struct FTJ_PROTO_API FUCameraFeel
 
 	// Variables
 	// FOV
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | FOV")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
 	float FOVBase = 90.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | FOV")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
 	float FOVTarget = 90.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | FOV")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
 	float FOVInterpSpeed = 50.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | FOV")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
 	float FOVSwitchSpeed = 0.01f;
 	// Camera
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
 	bool bInvertCam = false;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base", meta=(ClampMin=0.0, ClampMax=1.0))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base", meta=(ClampMin=0.0, ClampMax=1.0))
 	float HorizontalCamSpeed = 1.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base", meta=(ClampMin=0.0, ClampMax=1.0))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base", meta=(ClampMin=0.0, ClampMax=1.0))
 	float VerticalCamSpeed = 0.45f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
 	float ViewPitchMin = -70.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Base")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
 	float ViewPitchMax = 25.0f;
 	// Tilt
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Tilt")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Tilt")
 	float TiltRecoverySpeed = 8.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Tilt")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Tilt")
 	float TiltClamp = 0.05f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Cam | Tilt")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Tilt")
 	float TiltMax = 1.75f;
 };
