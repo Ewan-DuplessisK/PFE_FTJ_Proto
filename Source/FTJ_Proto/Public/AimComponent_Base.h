@@ -65,7 +65,7 @@ private:
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (ToolTip = "Crosshair Screen Location"))
 	FVector2D CrosshairScreenLocation;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (ToolTip = "Bone Location of the aimed enemy"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (ToolTip = "Bone Location of the targeted enemy bone"))
 	FVector PawnHitLocation;
 	
 private:
