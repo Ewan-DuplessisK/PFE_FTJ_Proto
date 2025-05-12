@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "InteractUserComponent_Base.h"
+#include "Weapons/InteractUserComponent_Base.h"
 
 #include "EnhancedInputComponent.h"
 #include "Game_Character.h"
-#include "InteractibleComponent_Base.h"
+#include "Weapons/InteractibleComponent_Base.h"
 #include "Player_Controller.h"
 #include "Camera/CameraComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -17,7 +17,7 @@ UInteractUserComponent_Base::UInteractUserComponent_Base()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	PlayerCharacterRef->OnActorBeginOverlap.AddDynamic(this,&UInteractUserComponent_Base::OwnerBeginOverlap);
+	
 }
 
 
@@ -35,7 +35,8 @@ void UInteractUserComponent_Base::BeginPlay()
 		return;
 	}
 	EnhancedInputComponent->BindAction(InputActionInteract, ETriggerEvent::Triggered, this, &UInteractUserComponent_Base::Interact);
-	
+	GetOwner()->OnActorBeginOverlap.AddDynamic(this,&UInteractUserComponent_Base::OwnerBeginOverlap);
+	GetOwner()->OnActorEndOverlap.AddDynamic(this,&UInteractUserComponent_Base::OwnerEndOverlap);
 }
 
 void UInteractUserComponent_Base::Interact()
@@ -53,10 +54,12 @@ void UInteractUserComponent_Base::HandleInteract(UInteractibleComponent_Base* In
 
 void UInteractUserComponent_Base::OwnerBeginOverlap(AActor* OverlappedActor, AActor* OtherActor)
 {
+	UE_LOG(LogTemp,Warning,TEXT("OwnerOverlap"));
 	UInteractibleComponent_Base* Comp=Cast<UInteractibleComponent_Base>(OtherActor->GetComponentByClass(UInteractibleComponent_Base::StaticClass()));
 	if(IsValid(Comp))
 	{
 		Overlapping.AddUnique(Comp);
+		UE_LOG(LogTemp,Warning,TEXT("ValidComp"));
 		Comp->ShowBillboard(true,true);
 	}
 
@@ -64,6 +67,7 @@ void UInteractUserComponent_Base::OwnerBeginOverlap(AActor* OverlappedActor, AAc
 
 void UInteractUserComponent_Base::OwnerEndOverlap(AActor* OverlappedActor, AActor* OtherActor)
 {
+	UE_LOG(LogTemp,Warning,TEXT("OwnerEndOverlap"));
 	UInteractibleComponent_Base* Comp=Cast<UInteractibleComponent_Base>(OtherActor->GetComponentByClass(UInteractibleComponent_Base::StaticClass()));
 	if(IsValid(Comp))
 	{

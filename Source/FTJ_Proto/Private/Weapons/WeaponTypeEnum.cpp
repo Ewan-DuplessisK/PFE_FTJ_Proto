@@ -1,5 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "InteractInterface_Base.h"
+#include "Weapons/WeaponTypeEnum.h"
 

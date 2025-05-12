@@ -18,6 +18,8 @@ public:
 	UInteractibleComponent_Base();
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
 	class UStaticMeshComponent* Mesh;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+	class UWidgetComponent* WidgetComponent;
 	
 
 protected:
@@ -25,9 +27,17 @@ protected:
 	virtual void BeginPlay() override;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Collisions")
 	float CollisionRadius = 100.f;
-
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Widget")
+	TSubclassOf<class UWidgetComponent> InteractibleWidgetComponentClass;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Widget")
+	TSubclassOf<class UInteractableWidget> InteractibleWidgetClass;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Name")
+	FText Title = FText::FromString("Interact");
+	
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	USphereComponent* AddOverlapCollision();
+	void ShowBillboard(bool State, bool Passive);
+	void AddWidget();
 };

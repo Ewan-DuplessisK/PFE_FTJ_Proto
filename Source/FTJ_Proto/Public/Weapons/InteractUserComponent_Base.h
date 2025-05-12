@@ -40,6 +40,7 @@ protected:
 	void HandleInteract(UInteractibleComponent_Base* Interact);
 	UFUNCTION()
 	void OwnerBeginOverlap(AActor* OverlappedActor, AActor* OtherActor);
+	UFUNCTION()
 	void OwnerEndOverlap(AActor* OverlappedActor, AActor* OtherActor);
 
 public:	
