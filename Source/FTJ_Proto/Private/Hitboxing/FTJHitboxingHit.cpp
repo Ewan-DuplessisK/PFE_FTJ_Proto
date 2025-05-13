@@ -2,6 +2,9 @@
 
 #include"Hitboxing/FTJHitboxingAttackboxes.h"
 
+#include"PhysicsEngine/PhysicsAsset.h"
+#include"PhysicsEngine/PhysicsConstraintTemplate.h"
+
 FFTJHitboxingHit::FFTJHitboxingHit()
 {
     //Clear overlap data
@@ -32,8 +35,16 @@ void FFTJHitboxingHit::Record(FHitResult const& InSweep)
     }
     //Retrieve hitboxer actor
     *Hitboxer = InSweep.GetActor();
-    //Retrieve hitbox name
-    *Hitbox = Cast<UFTJHitboxingHitboxes>(InSweep.Component)->FindConstraintBoneName(InSweep.Item - 1);
+    //Iterate through indices
+    for(auto const& [LKey , LValue] : Cast<UFTJHitboxingHitboxes>(InSweep.Component)->GetPhysicsAsset()->BodySetupIndexMap)
+    {
+        //Find required one
+        if(InSweep.Item == LValue)
+        {
+            //Retrieve hitbox name
+            *Hitbox = LKey;
+        }
+    }
 }
 
 bool FFTJHitboxingHit::IsPopulated()

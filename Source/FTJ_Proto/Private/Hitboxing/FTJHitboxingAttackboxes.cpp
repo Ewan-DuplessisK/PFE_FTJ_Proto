@@ -29,7 +29,7 @@ void UFTJHitboxingAttackboxes::Disable()
 void UFTJHitboxingAttackboxes::OnHit(UPrimitiveComponent * InOverlapped , AActor * InActor , UPrimitiveComponent * InOther , int32 InBody , bool bInSweep , FHitResult const& InSweep)
 {
     //Check overlap correctness
-    if(InSweep.Item <= 0)
+    if(InSweep.Item < 0)
     {
         //Return if incorrect
         return;
