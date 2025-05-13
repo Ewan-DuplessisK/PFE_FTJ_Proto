@@ -51,9 +51,21 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	int MaxHealth = 0;
+
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
+	float AttackDistanceRange = 0.f;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
-	int Damages = 0;
+	int CQCDamages = 0;
+
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
+	float CQCInvincibilityTime = 0.f;
+
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
+	int DistanceDamages = 0;
+
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
+	float DistanceInvincibilityTime = 0.f;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	int QTEInputRequired = 0.f;
@@ -123,6 +135,9 @@ public:
 	// Behavior Tree Bool Name Variables
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
 	FName playerInAttackRangeKey = "playerInAttackRange?";
+
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
+	FName playerInDistanceAttackRangeKey = "playerInDistanceAttackRange?";
 
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
 	FName playerActionKey = "playerAction?";
