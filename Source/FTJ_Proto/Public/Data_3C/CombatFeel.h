@@ -25,9 +25,20 @@ struct FTJ_PROTO_API FUCombatFeel
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys",  meta = (ToolTip = "This means each time we hit we will add X amount of points as a base."))
 	float BaseComboPoints = 15.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "The speed at wich the combo bar decreases."))
-	float ComboBarDecreasingSpeed   = 0.1f;
+	float ComboBarDecreasingSpeed = 0.1f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "The base value for how much we will add to combo bar when hit an enemy."))
-	float ComboBarIncreasingValue  = 0.35f;
+	float ComboBarIncreasingValue = 0.35f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "How much combo bar should decrease if we miss."))
-	float MissDecreaseValue   = 0.25f;
+	float MissDecreaseValue = 0.25f;
+	// Combo Damage Factors
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Head."))
+	float HeadDamageFactor = 2.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Body."))
+	float BodyDamageFactor = 1.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Arms."))
+	float ArmsDamageFactor = 0.45f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Legs."))
+	float LegsDamageFactor = 0.65f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Kick."))
+	float KickAttackFactor = 0.25f;
 };
