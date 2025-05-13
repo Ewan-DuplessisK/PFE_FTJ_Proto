@@ -51,7 +51,7 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	int MaxHealth = 0;
-
+	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	float AttackDistanceRange = 0.f;
 	

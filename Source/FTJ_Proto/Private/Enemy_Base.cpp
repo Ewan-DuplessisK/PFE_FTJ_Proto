@@ -86,32 +86,40 @@ void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, A
 
 void AEnemy_Base::Launched(FVector Force)
 {
-	// 2. Stop Logic
-	AAIController* AIController = Cast<AAIController>(Controller);
-	if (IsValid(AIController))
+	CurrentHealth--;
+	if(CurrentHealth <= 0)
 	{
-		if(IsValid(AIController->GetBrainComponent()))
+		// 2. Stop Logic
+		AAIController* AIController = Cast<AAIController>(Controller);
+		if (IsValid(AIController))
 		{
-			AIController->GetBrainComponent()->StopLogic(TEXT("Dead"));
+			if(IsValid(AIController->GetBrainComponent()))
+			{
+				AIController->GetBrainComponent()->StopLogic(TEXT("Dead"));
+			}
 		}
+		LaunchCharacter(Force, true, true);
+		isLaunched=true;
+		//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));
 	}
-	LaunchCharacter(Force, true, true);
-	isLaunched=true;
-	//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));
 }
 
 void AEnemy_Base::Landed(const FHitResult& hit)
 {
 	Super::Landed(hit);
-	UE_LOG(LogTemp,Warning,TEXT("Enemy Landed"));
+	if (CurrentHealth <= 0)
+	{
+		UE_LOG(LogTemp,Warning,TEXT("Enemy Landed"));
 	
-	GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
-	Tags.Add(FName("Dead"));
-	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	PlayerInRangeSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
+		Tags.Add(FName("Dead"));
+		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		PlayerInRangeSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
-	GetMesh()->SetSimulatePhysics(true);
-	isLaunched=false;
+		GetMesh()->SetSimulatePhysics(true);
+		isLaunched=false;
+	}
+
 }
 
 
