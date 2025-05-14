@@ -76,4 +76,7 @@ public:
 	void InitializeVarsWithPlayerFeelStruct();
 	UFUNCTION(BlueprintCallable)
 	void Kick();
+
+	UFUNCTION(BlueprintNativeEvent)
+	void KickFeedback(FVector Location);
 };
