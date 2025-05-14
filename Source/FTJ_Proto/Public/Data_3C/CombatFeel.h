@@ -31,14 +31,14 @@ struct FTJ_PROTO_API FUCombatFeel
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "How much combo bar should decrease if we miss."))
 	float MissDecreaseValue = 0.25f;
 	// Combo Damage Factors
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Head."))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Combo Multiplier for the Head."))
 	float HeadComboFactor = 2.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Body."))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Combo Multiplier for the Body."))
 	float BodyComboFactor = 1.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Arms."))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Combo Multiplier for the Arms."))
 	float ArmsComboFactor = 0.45f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Legs."))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Combo Multiplier for the Legs."))
 	float LegsComboFactor = 0.65f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Kick."))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Combo Multiplier for the Kick."))
 	float KickComboFactor = 0.25f;
 };
