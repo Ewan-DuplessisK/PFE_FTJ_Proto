@@ -32,13 +32,13 @@ struct FTJ_PROTO_API FUCombatFeel
 	float MissDecreaseValue = 0.25f;
 	// Combo Damage Factors
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Head."))
-	float HeadDamageFactor = 2.0f;
+	float HeadComboFactor = 2.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Body."))
-	float BodyDamageFactor = 1.0f;
+	float BodyComboFactor = 1.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Arms."))
-	float ArmsDamageFactor = 0.45f;
+	float ArmsComboFactor = 0.45f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Legs."))
-	float LegsDamageFactor = 0.65f;
+	float LegsComboFactor = 0.65f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys", meta = (ToolTip = "Damage Multiplier for the Kick."))
-	float KickAttackFactor = 0.25f;
+	float KickComboFactor = 0.25f;
 };
