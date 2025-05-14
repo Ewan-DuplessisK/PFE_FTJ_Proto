@@ -141,7 +141,7 @@ void AGame_Character::Kick()
 			DestructionComponent->Hit(HitPawns.Top().GetComponent(),HitPawns.Top(),100.f,0,1.f,1.f,force,FVector());
 		}
 	}
-	KickFeedback(End);
+	else KickFeedback(End);
 }
 
 void AGame_Character::KickFeedback_Implementation(FVector Location)
