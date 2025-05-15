@@ -112,6 +112,7 @@ void AGame_Character::Kick()
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Enemy));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
 	
 	TArray<AActor*> ActorsToIgnore;
 	ActorsToIgnore.Emplace(UGameplayStatics::GetPlayerCharacter(GetWorld(),0));
@@ -121,6 +122,7 @@ void AGame_Character::Kick()
 	if(UKismetSystemLibrary::SphereTraceMultiForObjects(
 		GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::ForOneFrame, HitPawns, false))
 	{
+		KickFeedback(HitPawns.Top().Location);
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns.Top().Location);
 		
 		if(UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), AEnemy_Base::StaticClass()))
@@ -139,4 +141,10 @@ void AGame_Character::Kick()
 			DestructionComponent->Hit(HitPawns.Top().GetComponent(),HitPawns.Top(),100.f,0,1.f,1.f,force,FVector());
 		}
 	}
+	else KickFeedback(End);
+}
+
+void AGame_Character::KickFeedback_Implementation(FVector Location)
+{
+	
 }
