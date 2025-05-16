@@ -147,6 +147,7 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 
 void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add to Weapon 
 {
+	/*
 	// Tilt Calc
 	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
 	
@@ -171,6 +172,7 @@ void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add
 		FRotator DeltaRotation = {0.0f, 0.0f, Tilt};
 		PlayerCharacterRef->FirstPersonCameraComponent->AddRelativeRotation(DeltaRotation);
 	}
+	*/
 }
 
 void APlayer_Controller::AddPitchInput(float Value)

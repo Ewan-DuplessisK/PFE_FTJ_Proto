@@ -35,11 +35,14 @@ struct FTJ_PROTO_API FUCameraFeel
 	float ViewPitchMin = -70.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
 	float ViewPitchMax = 25.0f;
+	
 	// Tilt
+	/*
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Tilt")
 	float TiltRecoverySpeed = 8.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Tilt")
 	float TiltClamp = 0.05f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Tilt")
 	float TiltMax = 1.75f;
+	*/
 };
