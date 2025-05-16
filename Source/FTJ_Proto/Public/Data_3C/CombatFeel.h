@@ -21,6 +21,11 @@ struct FTJ_PROTO_API FUCombatFeel
 	// Debug
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Debug")
 	bool bDebugActive = true;
+	// Dash
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="How far will the Dash go"))
+	float dashDistance = 20.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="Amount of time before the player can Dash again"))
+	float delayBetweenTwoDash = 1.0f;
 	// Combo System
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys",  meta = (ToolTip = "This means each time we hit we will add X amount of points as a base."))
 	float BaseComboPoints = 15.0f;
