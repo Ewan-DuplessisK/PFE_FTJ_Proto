@@ -41,7 +41,8 @@ void APlayer_Controller::SetupInputComponent()
 	}
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
-	EnhancedInputComponent->BindAction(InputActionKick,ETriggerEvent::Triggered, this,&APlayer_Controller::OnKickTriggered);
+	EnhancedInputComponent->BindAction(InputActionKick,ETriggerEvent::Triggered, this, &APlayer_Controller::OnKickTriggered);
+	EnhancedInputComponent->BindAction(InputActionDash,ETriggerEvent::Triggered, this, &APlayer_Controller::Dash);
 	
 	/*
 	if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings()))
@@ -244,5 +245,26 @@ void APlayer_Controller::OnKickTriggered()
 	if (IsValid(PlayerCharacterRef))
 	{
 		PlayerCharacterRef->Kick();
+	}
+}
+
+void APlayer_Controller::Dash_Implementation()
+{
+	if(bCanDash)
+	{
+		bCanDash = false;
+		
+		if (PlayerCharacterRef->GetVelocity().Length() <= 0.0f)
+		{
+			PlayerCharacterRef->GetCharacterMovement()->Velocity = PlayerCharacterRef->GetActorForwardVector() * (PlayerCharacterRef->CombatFeel.dashDistance * (-1.0f))
+			* (PlayerCharacterRef->CombatFeel.dashDistance * 15);
+		}
+		else
+		{
+			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * PlayerCharacterRef->CombatFeel.dashDistance;
+			LaunchVel.Z = 0.0f;
+			PlayerCharacterRef->LaunchCharacter(LaunchVel, true, true);
+		}
+		// Delay & bCanDash Reset done in Blueprint
 	}
 }

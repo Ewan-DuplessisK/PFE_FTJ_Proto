@@ -105,12 +105,11 @@ void AGame_Character::Kick()
 	if(WantPlayerAction && !PlayerAction) PlayerAction = true;
 	FVector Start = GetActorLocation();
 	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
-	bool TraceHit=false;
 	AEnemy_Base* HitEnemy = nullptr;
 	
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Enemy));
+	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
 	
@@ -123,54 +122,25 @@ void AGame_Character::Kick()
 	if(UKismetSystemLibrary::SphereTraceMultiForObjects(
 		GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::ForOneFrame, HitPawns, false))
 	{
-		TraceHit=true;
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns.Top().Location);
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns[0].Location);
 		
-		if(UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), AEnemy_Base::StaticClass()))
+		if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AEnemy_Base::StaticClass()))
 		{
-			AEnemy_Base* enemy = Cast<AEnemy_Base>(HitPawns.Top().GetActor());
+			AEnemy_Base* enemy = Cast<AEnemy_Base>(HitPawns[0].GetActor());
 			enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
 			HitEnemy = enemy;
 		}
-		else if (UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), APhysics_Props::StaticClass()))
+		else if (UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), APhysics_Props::StaticClass()))
 		{
-			APhysics_Props* prop = Cast<APhysics_Props>(HitPawns.Top().GetActor());
+			APhysics_Props* prop = Cast<APhysics_Props>(HitPawns[0].GetActor());
 			prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
 		}
-		else if(UKismetMathLibrary::ClassIsChildOf(HitPawns.Top().GetActor()->GetClass(), AFTJ_ProtoDestructionActor::StaticClass()))
+		else if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AFTJ_ProtoDestructionActor::StaticClass()))
 		{
 			FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce);
-			DestructionComponent->Hit(HitPawns.Top().GetComponent(),HitPawns.Top(),100.f,0,1.f,1.f,force,FVector());
+			DestructionComponent->Hit(HitPawns[0].GetComponent(),HitPawns[0],100.f,0,1.f,1.f,force,FVector());
 		}
-	}
-	
-	if(!KickSafetyOverlap.IsEmpty())
-	{
-		UE_LOG(LogTemp, Warning, TEXT("OverlapSafety"));
-		for(AActor* InBox : KickSafetyOverlap)
-		{
-			if(UKismetMathLibrary::ClassIsChildOf(InBox->GetClass(), AEnemy_Base::StaticClass()))
-			{
-				AEnemy_Base* enemy = Cast<AEnemy_Base>(InBox);
-				enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
-			}
-			else if (UKismetMathLibrary::ClassIsChildOf(InBox->GetClass(), APhysics_Props::StaticClass()))
-			{
-				APhysics_Props* prop = Cast<APhysics_Props>(InBox);
-				prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
-			}
-		}
-	}
-	
-	if(FirstPersonCameraComponent->GetRelativeRotation().Pitch<-50.f)
-	{
-		KickFeedback(Start+FirstPersonCameraComponent->GetForwardVector()*80.f,HitEnemy);
-	}else if(TraceHit)
-	{
-		KickFeedback(HitPawns.Top().Location,HitEnemy);
-	}else if(!KickSafetyOverlap.IsEmpty())
-	{
-		KickFeedback(Start+GetActorForwardVector()*60.f,HitEnemy);
+		KickFeedback(HitPawns[0].Location,HitEnemy);
 	}else
 	{
 		KickFeedback(End,HitEnemy);

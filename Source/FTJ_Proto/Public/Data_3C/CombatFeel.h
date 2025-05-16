@@ -18,14 +18,14 @@ struct FTJ_PROTO_API FUCombatFeel
 	FVector KickForce = {3000.0f, 0.0f, 150.0f};
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Kick")
 	float KickLength = 300.0f;
+	
 	// Debug
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Debug")
 	bool bDebugActive = true;
+	
 	// Dash
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="How Far will the Dash Go"))
-	float dashDistance = 25.0f;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="Amount of Time Before the Player can Dash Again"))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="How far will the Dash go"))
+	float dashDistance = 20.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="Amount of time before the player can Dash again"))
 	float delayBetweenTwoDash = 1.0f;
-	//UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash")
-	//float dashVelocity = 250.0f;
 };
