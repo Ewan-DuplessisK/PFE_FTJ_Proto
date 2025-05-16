@@ -70,7 +70,9 @@ public:
 	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Niagara")
 	class UNiagaraSystem* Kick_VFX = nullptr;
-	
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	TArray<AActor*> KickSafetyOverlap;
 	
 	UFUNCTION(BlueprintCallable)
 	void InitializeVarsWithPlayerFeelStruct();
