@@ -115,7 +115,6 @@ void AGame_Character::Kick()
 	
 	TArray<AActor*> ActorsToIgnore;
 	ActorsToIgnore.Emplace(UGameplayStatics::GetPlayerCharacter(GetWorld(),0));
-	ActorsToIgnore.Append(KickSafetyOverlap);
 	
 	TArray<FHitResult> HitPawns;
 	
