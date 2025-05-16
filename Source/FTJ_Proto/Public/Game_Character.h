@@ -80,5 +80,5 @@ public:
 	void Kick();
 
 	UFUNCTION(BlueprintNativeEvent)
-	void KickFeedback(FVector Location);
+	void KickFeedback(FVector Location,class AEnemy_Base* HitEnemy);
 };
