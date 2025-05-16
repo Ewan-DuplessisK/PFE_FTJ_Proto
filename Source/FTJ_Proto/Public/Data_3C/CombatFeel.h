@@ -23,7 +23,7 @@ struct FTJ_PROTO_API FUCombatFeel
 	bool bDebugActive = true;
 	// Dash
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash")
-	float dashDistance = 25.0f;
+	float dashDistance = 250.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash")
 	float delayBetweenTwoDash = 1.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash")
