@@ -108,6 +108,7 @@ void AGame_Character::Kick()
 
 	if(!KickSafetyOverlap.IsEmpty())
 	{
+		UE_LOG(LogTemp, Warning, TEXT("OverlapSafety"));
 		for(AActor* InBox : KickSafetyOverlap)
 		{
 			if(UKismetMathLibrary::ClassIsChildOf(InBox->GetClass(), AEnemy_Base::StaticClass()))
