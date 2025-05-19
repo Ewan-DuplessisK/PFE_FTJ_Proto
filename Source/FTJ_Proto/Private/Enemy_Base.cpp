@@ -61,7 +61,7 @@ void AEnemy_Base::Launched(FVector Force)
 		}
 		LaunchCharacter(Force, true, true);
 		isLaunched=true;
-		//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));<
+		//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));
 	}
 }
 
