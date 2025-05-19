@@ -71,12 +71,11 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Niagara")
 	class UNiagaraSystem* Kick_VFX = nullptr;
 	
-	
 	UFUNCTION(BlueprintCallable)
 	void InitializeVarsWithPlayerFeelStruct();
 	UFUNCTION(BlueprintCallable)
 	void Kick();
 
 	UFUNCTION(BlueprintNativeEvent)
-	void KickFeedback(FVector Location);
+	void KickFeedback(FVector Location,class AEnemy_Base* HitEnemy);
 };

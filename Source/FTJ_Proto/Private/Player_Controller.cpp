@@ -41,7 +41,8 @@ void APlayer_Controller::SetupInputComponent()
 	}
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
-	EnhancedInputComponent->BindAction(InputActionKick,ETriggerEvent::Triggered, this,&APlayer_Controller::OnKickTriggered);
+	EnhancedInputComponent->BindAction(InputActionKick,ETriggerEvent::Triggered, this, &APlayer_Controller::OnKickTriggered);
+	EnhancedInputComponent->BindAction(InputActionDash,ETriggerEvent::Triggered, this, &APlayer_Controller::Dash);
 	
 	/*
 	if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings()))
@@ -147,6 +148,7 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 
 void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add to Weapon 
 {
+	/*
 	// Tilt Calc
 	Tilt = Tilt - (Tilt * CameraFeel.TiltRecoverySpeed * DeltaTime);
 	
@@ -171,6 +173,7 @@ void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add
 		FRotator DeltaRotation = {0.0f, 0.0f, Tilt};
 		PlayerCharacterRef->FirstPersonCameraComponent->AddRelativeRotation(DeltaRotation);
 	}
+	*/
 }
 
 void APlayer_Controller::AddPitchInput(float Value)
@@ -242,5 +245,26 @@ void APlayer_Controller::OnKickTriggered()
 	if (IsValid(PlayerCharacterRef))
 	{
 		PlayerCharacterRef->Kick();
+	}
+}
+
+void APlayer_Controller::Dash_Implementation()
+{
+	if(bCanDash)
+	{
+		bCanDash = false;
+		
+		if (PlayerCharacterRef->GetVelocity().Length() <= 0.0f)
+		{
+			PlayerCharacterRef->GetCharacterMovement()->Velocity = PlayerCharacterRef->GetActorForwardVector() * (PlayerCharacterRef->PlayerFeel.dashDistance * (-1.0f))
+			* (PlayerCharacterRef->PlayerFeel.dashDistance * 15);
+		}
+		else
+		{
+			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * PlayerCharacterRef->PlayerFeel.dashDistance;
+			LaunchVel.Z = 0.0f;
+			PlayerCharacterRef->LaunchCharacter(LaunchVel, true, true);
+		}
+		// Delay & bCanDash Reset done in Blueprint
 	}
 }

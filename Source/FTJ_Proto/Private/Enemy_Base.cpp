@@ -23,10 +23,6 @@ AEnemy_Base::AEnemy_Base()
 	PlayerInRangeSphere->SetupAttachment(GetCapsuleComponent());
 	PlayerInRangeSphere->InitSphereRadius(PlayerAttackSphereSize);
 	PlayerInRangeSphere->Deactivate();
-
-	PlayerInRangeSphere->OnComponentBeginOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerInRangeBeginOverlap);
-	
-	PlayerInRangeSphere->OnComponentEndOverlap.AddDynamic(this, &AEnemy_Base::OnPlayerOutOfRange);
 }
 
 // Called when the game starts or when spawned
@@ -49,41 +45,6 @@ void AEnemy_Base::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 }
 
-void AEnemy_Base::OnPlayerInRangeBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
-	if (OtherActor && OtherActor->IsA(AGame_Character::StaticClass()))
-	{		
-		aiManagerRef->NotifyInRange(this);
-		
-		if (AAIController* AIController = Cast<AAIController>(GetController()))
-		{
-			if (UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent())
-			{
-				BlackboardComp->SetValueAsBool(playerInAttackRangeKey, true);
-			}
-		}
-	}
-}
-
-void AEnemy_Base::OnPlayerOutOfRange(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
-	if (OtherActor && OtherActor->IsA(AGame_Character::StaticClass()))
-	{
-		aiManagerRef->NotifyOutOfRange(this);
-		
-		if (AAIController* AIController = Cast<AAIController>(GetController()))
-		{
-			if (UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent())
-			{
-				BlackboardComp->SetValueAsBool(playerInAttackRangeKey, false);
-			}
-		}
-	}
-	//UE_LOG(LogTemp, Warning, TEXT("PlayerOutOfRange"));
-}
-
 void AEnemy_Base::Launched(FVector Force)
 {
 	CurrentHealth--;
@@ -100,7 +61,7 @@ void AEnemy_Base::Launched(FVector Force)
 		}
 		LaunchCharacter(Force, true, true);
 		isLaunched=true;
-		//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));
+		//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));<
 	}
 }
 
@@ -112,7 +73,7 @@ void AEnemy_Base::Landed(const FHitResult& hit)
 		UE_LOG(LogTemp,Warning,TEXT("Enemy Landed"));
 	
 		GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
-		Tags.Add(FName("Dead"));
+		Tags.Add(FName("Dead"));	
 		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		PlayerInRangeSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 

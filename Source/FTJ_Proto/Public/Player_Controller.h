@@ -48,6 +48,8 @@ protected:
 	class UInputAction* InputActionLook;
 	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Kick");
 	class UInputAction* InputActionKick;
+	UPROPERTY(EditDefaultsOnly, Category = "EnhancedInput|Dash");
+	class UInputAction* InputActionDash;
 
 	//
 	void MovePlayer(const struct FInputActionValue& Value);
@@ -96,7 +98,13 @@ public:
 	
 	void FOVChangeSpeed();
 	void OnKickTriggered();
-
+	
+	UFUNCTION(BlueprintNativeEvent)
+	void Dash();
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+	bool bCanDash = true;
+	
+	
 	// Debug Widget
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Debug Widget"))
 	TSubclassOf<UUserWidget> wDebugWidget = nullptr;
