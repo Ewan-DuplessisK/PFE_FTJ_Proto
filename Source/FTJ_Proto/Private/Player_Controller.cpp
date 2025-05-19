@@ -256,12 +256,12 @@ void APlayer_Controller::Dash_Implementation()
 		
 		if (PlayerCharacterRef->GetVelocity().Length() <= 0.0f)
 		{
-			PlayerCharacterRef->GetCharacterMovement()->Velocity = PlayerCharacterRef->GetActorForwardVector() * (PlayerCharacterRef->CombatFeel.dashDistance * (-1.0f))
-			* (PlayerCharacterRef->CombatFeel.dashDistance * 15);
+			PlayerCharacterRef->GetCharacterMovement()->Velocity = PlayerCharacterRef->GetActorForwardVector() * (PlayerCharacterRef->PlayerFeel.dashDistance * (-1.0f))
+			* (PlayerCharacterRef->PlayerFeel.dashDistance * 15);
 		}
 		else
 		{
-			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * PlayerCharacterRef->CombatFeel.dashDistance;
+			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * PlayerCharacterRef->PlayerFeel.dashDistance;
 			LaunchVel.Z = 0.0f;
 			PlayerCharacterRef->LaunchCharacter(LaunchVel, true, true);
 		}

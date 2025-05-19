@@ -25,4 +25,10 @@ struct FTJ_PROTO_API FUPlayerFeel
 	float LinearDamping = 0.01f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player Feel | Damping")
 	float AngularDamping = 0.0f;
+	
+	// Dash
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="How far will the Dash go"))
+	float dashDistance = 20.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="Amount of time before the player can Dash again"))
+	float delayBetweenTwoDash = 1.0f;
 };
