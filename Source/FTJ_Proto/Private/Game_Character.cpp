@@ -126,8 +126,10 @@ void AGame_Character::Kick()
 		if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AEnemy_Base::StaticClass()))
 		{
 			AEnemy_Base* enemy = Cast<AEnemy_Base>(HitPawns[0].GetActor());
-			enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
+			//enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
+			enemy->Damaged(damage, GetActorRotation().RotateVector(CombatFeel.KickForce));
 			HitEnemy = enemy;
+			
 		}
 		else if (UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), APhysics_Props::StaticClass()))
 		{

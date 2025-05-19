@@ -45,12 +45,22 @@ void AEnemy_Base::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 }
 
-void AEnemy_Base::Launched(FVector Force)
+void AEnemy_Base::Damaged(float damage, FVector Force = FVector())
 {
+	if(Force == FVector())
+	{
+		Force = launchForce;
+	}
+	
 	CurrentHealth--;
+	
 	if(CurrentHealth <= 0)
 	{
+		// 1. Set enemy to Dead State
+		Tags.Add(FName("Dead"));
+		
 		// 2. Stop Logic
+		//stop move
 		AAIController* AIController = Cast<AAIController>(Controller);
 		if (IsValid(AIController))
 		{
@@ -59,29 +69,33 @@ void AEnemy_Base::Launched(FVector Force)
 				AIController->GetBrainComponent()->StopLogic(TEXT("Dead"));
 			}
 		}
-		LaunchCharacter(Force, true, true);
-		isLaunched=true;
-		//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));
 	}
+	
+	Launched(Force);
+}
+
+void AEnemy_Base::Launched(FVector Force)
+{
+	LaunchCharacter(Force, true, true);
+	isLaunched=true;
+	//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));
 }
 
 void AEnemy_Base::Landed(const FHitResult& hit)
 {
 	Super::Landed(hit);
+	
 	if (CurrentHealth <= 0)
 	{
-		UE_LOG(LogTemp,Warning,TEXT("Enemy Landed"));
+		UE_LOG(LogTemp, Warning, TEXT("Enemy Landed"));
 	
 		GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
-		Tags.Add(FName("Dead"));	
+		
 		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		PlayerInRangeSphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 		GetMesh()->SetSimulatePhysics(true);
-		isLaunched=false;
 	}
-
+	
+	isLaunched=false;
 }
-
-
-

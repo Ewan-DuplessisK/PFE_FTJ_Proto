@@ -30,6 +30,11 @@ public:
 	class AAIManager* aiManagerRef;
 
 	UFUNCTION(BlueprintCallable)
+	void Damaged(float damage, FVector Force);
+	
+	FVector launchForce = {2500.0f, 0.0f, 0.0f};
+	
+	UFUNCTION(BlueprintCallable)
 	void Launched(FVector Force);
 	
 	void Landed(const FHitResult& hit) override;
