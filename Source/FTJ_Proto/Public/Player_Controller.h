@@ -103,6 +103,8 @@ public:
 	void Dash();
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 	bool bCanDash = true;
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+	bool isDashing = false;
 	
 	
 	// Debug Widget
