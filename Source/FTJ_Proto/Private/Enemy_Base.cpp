@@ -50,14 +50,20 @@ void AEnemy_Base::Damaged(float damage, FVector Force = FVector())
 	if(Force == FVector())
 	{
 		Force = launchForce;
+		
+		UE_LOG(LogTemp, Warning, TEXT("Force fallback"));
 	}
 	
 	CurrentHealth--;
+	
+	//UE_LOG(LogTemp,Warning,TEXT("Enemy Hit"));
 	
 	if(CurrentHealth <= 0)
 	{
 		// 1. Set enemy to Dead State
 		Tags.Add(FName("Dead"));
+		
+		//UE_LOG(LogTemp, Warning, TEXT("Enemy Dead"));
 		
 		// 2. Stop Logic
 		//stop move
@@ -78,7 +84,7 @@ void AEnemy_Base::Launched(FVector Force)
 {
 	LaunchCharacter(Force, true, true);
 	isLaunched=true;
-	//UE_LOG(LogTemp,Warning,TEXT("Enemy Launched"));
+	//UE_LOG(LogTemp, Warning, TEXT("Enemy Launched"));
 }
 
 void AEnemy_Base::Landed(const FHitResult& hit)
@@ -87,7 +93,7 @@ void AEnemy_Base::Landed(const FHitResult& hit)
 	
 	if (CurrentHealth <= 0)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Enemy Landed"));
+		//UE_LOG(LogTemp, Warning, TEXT("Enemy Landed"));
 	
 		GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
 		
