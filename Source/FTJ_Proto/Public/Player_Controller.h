@@ -105,6 +105,10 @@ public:
 	bool bCanDash = true;
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 	bool isDashing = false;
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	FVector velBeforeDash = FVector::Zero();
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	bool canStopDash = false;
 	
 	
 	// Debug Widget
