@@ -81,8 +81,12 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 	
 	//HeadTilt(DeltaSeconds);
 	
-	if(!canStopDash && PlayerCharacterRef->GetVelocity().Length() >= PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed) canStopDash = true;
-	if(isDashing && canStopDash && PlayerCharacterRef->GetVelocity().Length() <= PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed * 0.99f)
+	if(!canStopDash && PlayerCharacterRef->GetVelocity().Length() > PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed)
+	{
+		canStopDash = true;
+		isDashing = true;
+	}
+	if(isDashing && canStopDash && PlayerCharacterRef->GetVelocity().Length() < PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed * 1.02f)
 	{
 		canStopDash = false;
 		isDashing = false;
@@ -105,11 +109,15 @@ void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 	{
 		PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorRightVector(), MoveValue.X);
 	}
-
-	if (MoveValue != FVector2D::Zero())
+	
+	/*if (MoveValue != FVector2D::Zero())
 	{
-		// No Dashing
-	}
+		if(!bCanDash && canStopDash)
+		{
+			isDashing = false;
+		}
+	}*/
+	
 	// Tilt Set for Move
 	//Tilt = ((CameraFeel.TiltRecoverySpeed * 0.5f) * MoveValue.X) + Tilt;
 }
@@ -264,8 +272,6 @@ void APlayer_Controller::Dash_Implementation()
 {
 	if(bCanDash)
 	{
-		velBeforeDash = PlayerCharacterRef->GetVelocity();
-		
 		bCanDash = false;
 		isDashing = true;
 
