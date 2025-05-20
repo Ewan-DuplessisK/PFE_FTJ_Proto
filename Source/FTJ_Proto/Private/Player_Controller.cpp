@@ -80,16 +80,20 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 	
 	//HeadTilt(DeltaSeconds);
-	
+
+	/// Dashing 
+	// Allows the player to stop their dash (for physics collisions)
 	if(!canStopDash && PlayerCharacterRef->GetVelocity().Length() > PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed)
 	{
 		canStopDash = true;
 		isDashing = true;
 	}
+	// Dash end -- Resets vars & re-Enables user inputs
 	if(isDashing && canStopDash && PlayerCharacterRef->GetVelocity().Length() < PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed * 1.02f)
 	{
 		canStopDash = false;
 		isDashing = false;
+		
 		PlayerCharacterRef->EnableInput(this);
 	}
 }
@@ -272,18 +276,23 @@ void APlayer_Controller::Dash_Implementation()
 {
 	if(bCanDash)
 	{
+		// no spamming
 		bCanDash = false;
+		// for physics collisions
 		isDashing = true;
-
-		PlayerCharacterRef->DisableInput(this);
 		
+		PlayerCharacterRef->DisableInput(this);
+
+		// Directional Dash (Dash with Input)
 		if (PlayerCharacterRef->GetVelocity().Length() <= 0.0f)
 		{
 			PlayerCharacterRef->GetCharacterMovement()->Velocity =
 				PlayerCharacterRef->GetActorForwardVector() * (PlayerCharacterRef->PlayerFeel.dashDistance * (-1.0f)) * (PlayerCharacterRef->PlayerFeel.dashDistance * 15);
 		}
+		// Input-less Dash
 		else
 		{
+			// Backwards Dash
 			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * PlayerCharacterRef->PlayerFeel.dashDistance;
 			LaunchVel.Z = 0.0f;
 			PlayerCharacterRef->LaunchCharacter(LaunchVel, true, true);
