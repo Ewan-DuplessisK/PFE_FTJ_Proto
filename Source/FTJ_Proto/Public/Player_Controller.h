@@ -101,12 +101,6 @@ public:
 	
 	UFUNCTION(BlueprintNativeEvent)
 	void Dash();
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-	bool bCanDash = true;
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-	bool isDashing = false;
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-	bool canStopDash = false;
 	
 	
 	// Debug Widget

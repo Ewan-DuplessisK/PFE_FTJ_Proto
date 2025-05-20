@@ -83,16 +83,16 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 
 	/// Dashing 
 	// Allows the player to stop their dash (for physics collisions)
-	if(!canStopDash && PlayerCharacterRef->GetVelocity().Length() > PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed)
+	if(!PlayerCharacterRef->canStopDash && PlayerCharacterRef->GetVelocity().Length() > PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed)
 	{
-		canStopDash = true;
-		isDashing = true;
+		PlayerCharacterRef->canStopDash = true;
+		PlayerCharacterRef->isDashing = true;
 	}
 	// Dash end -- Resets vars & re-Enables user inputs
-	if(isDashing && canStopDash && PlayerCharacterRef->GetVelocity().Length() < PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed * 1.02f)
+	if(PlayerCharacterRef->isDashing && PlayerCharacterRef->canStopDash && PlayerCharacterRef->GetVelocity().Length() < PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed * 1.02f)
 	{
-		canStopDash = false;
-		isDashing = false;
+		PlayerCharacterRef->canStopDash = false;
+		PlayerCharacterRef->isDashing = false;
 		
 		PlayerCharacterRef->EnableInput(this);
 	}
@@ -274,12 +274,12 @@ void APlayer_Controller::OnKickTriggered()
 
 void APlayer_Controller::Dash_Implementation()
 {
-	if(bCanDash)
+	if(PlayerCharacterRef->bCanDash)
 	{
 		// no spamming
-		bCanDash = false;
+		PlayerCharacterRef->bCanDash = false;
 		// for physics collisions
-		isDashing = true;
+		PlayerCharacterRef->isDashing = true;
 		
 		PlayerCharacterRef->DisableInput(this);
 
