@@ -24,6 +24,15 @@ void AAIManager::BeginPlay()
 	Super::BeginPlay();
 
 	Player = Cast<AGame_Character>(UGameplayStatics::GetPlayerPawn(GetWorld(),0));
+
+	UpdateActorOnScene();
+}
+
+// Called every frame
+void AAIManager::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	
 	if (Player->PlayerAction)
 	{
 		ActivatePlayerInRangeBox();
@@ -44,14 +53,6 @@ void AAIManager::BeginPlay()
 			}
 		}
 	}
-
-	UpdateActorOnScene();
-}
-
-// Called every frame
-void AAIManager::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
 }
 
 void AAIManager::NotifyInRange(AEnemy_Base* Enemy)
@@ -81,6 +82,10 @@ void AAIManager::ActivatePlayerInRangeBox()
 		if (IsValid(Enemy) && IsValid(Enemy->PlayerInRangeSphere))
 		{
 			Enemy->PlayerInRangeSphere->Activate();
+		}
+		if (IsValid(Enemy->PlayerDashAttackSphere) && Enemy->AttackCanDash == true)
+		{
+			Enemy->PlayerDashAttackSphere->Activate();
 		}
 	}
 }

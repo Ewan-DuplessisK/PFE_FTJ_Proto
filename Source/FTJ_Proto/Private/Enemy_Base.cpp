@@ -23,6 +23,11 @@ AEnemy_Base::AEnemy_Base()
 	PlayerInRangeSphere->SetupAttachment(GetCapsuleComponent());
 	PlayerInRangeSphere->InitSphereRadius(PlayerAttackSphereSize);
 	PlayerInRangeSphere->Deactivate();
+
+	PlayerDashAttackSphere = CreateDefaultSubobject<USphereComponent>(TEXT("PlayerDashAttackSphere"));
+	PlayerDashAttackSphere->SetupAttachment(GetCapsuleComponent());
+	PlayerDashAttackSphere->InitSphereRadius(PlayerDashAttackSphereSize);
+	PlayerDashAttackSphere->Deactivate();
 }
 
 // Called when the game starts or when spawned
@@ -54,7 +59,7 @@ void AEnemy_Base::Damaged(float damage, FVector Force = FVector())
 		UE_LOG(LogTemp, Warning, TEXT("Force fallback"));
 	}
 	
-	CurrentHealth--;
+	CurrentHealth-=damage;
 	
 	//UE_LOG(LogTemp,Warning,TEXT("Enemy Hit"));
 	

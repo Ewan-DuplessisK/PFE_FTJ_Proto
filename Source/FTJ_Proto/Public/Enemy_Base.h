@@ -88,6 +88,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	bool isLaunched = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables")
+	bool AttackCanDash = false;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	int CurrentHealth = 0;
@@ -95,11 +98,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Integer where we save the new enemy HP value after he get hit by the player"))
 	float CQCAttackAnimationTime = 2.f ;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere for cqc attack"))
 	float PlayerAttackSphereSize = 125.f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere for dash"))
+	float PlayerDashAttackSphereSize = 225.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
 	class USphereComponent* PlayerInRangeSphere;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for dashing"))
+	class USphereComponent* PlayerDashAttackSphere;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the second enemy this enemy is supposed to talk to, for him to look at him"))
 	FVector TalkingToPosition = {0, 0, 0};
@@ -139,6 +148,9 @@ public:
 	// Behavior Tree Bool Name Variables
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
 	FName playerInAttackRangeKey = "playerInAttackRange?";
+
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
+	FName PlayerDashAttackRangeKey = "playerDashAttackRange?";
 
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
 	FName playerInDistanceAttackRangeKey = "playerInDistanceAttackRange?";
