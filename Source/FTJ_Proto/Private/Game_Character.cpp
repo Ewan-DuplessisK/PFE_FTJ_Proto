@@ -135,6 +135,7 @@ void AGame_Character::Kick()
 		{
 			APhysics_Props* prop = Cast<APhysics_Props>(HitPawns[0].GetActor());
 			prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
+			prop->HitFeedBack();
 		}
 		else if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AFTJ_ProtoDestructionActor::StaticClass()))
 		{

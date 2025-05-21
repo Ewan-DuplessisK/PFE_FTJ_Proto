@@ -102,6 +102,10 @@ void APhysics_Props::OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, 
 	//}
 }
 
+void APhysics_Props::HitFeedBack_Implementation()
+{
+}
+
 /*void APhysics_Props::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	if(UKismetMathLibrary::ClassIsChildOf(OtherActor->GetClass(),AFTJ_ProtoDestructionActor::StaticClass()))
