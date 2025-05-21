@@ -80,16 +80,20 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 	
 	//HeadTilt(DeltaSeconds);
-	
-	if(!canStopDash && PlayerCharacterRef->GetVelocity().Length() > PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed)
+
+	/// Dashing 
+	// Allows the player to stop their dash (for physics collisions)
+	if(!PlayerCharacterRef->canStopDash && PlayerCharacterRef->GetVelocity().Length() > PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed)
 	{
-		canStopDash = true;
-		isDashing = true;
+		PlayerCharacterRef->canStopDash = true;
+		PlayerCharacterRef->isDashing = true;
 	}
-	if(isDashing && canStopDash && PlayerCharacterRef->GetVelocity().Length() < PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed * 1.02f)
+	// Dash end -- Resets vars & re-Enables user inputs
+	if(PlayerCharacterRef->isDashing && PlayerCharacterRef->canStopDash && PlayerCharacterRef->GetVelocity().Length() < PlayerCharacterRef->GetCharacterMovement()->MaxWalkSpeed * 1.02f)
 	{
-		canStopDash = false;
-		isDashing = false;
+		PlayerCharacterRef->canStopDash = false;
+		PlayerCharacterRef->isDashing = false;
+		
 		PlayerCharacterRef->EnableInput(this);
 	}
 }
@@ -270,20 +274,25 @@ void APlayer_Controller::OnKickTriggered()
 
 void APlayer_Controller::Dash_Implementation()
 {
-	if(bCanDash)
+	if(PlayerCharacterRef->bCanDash)
 	{
-		bCanDash = false;
-		isDashing = true;
-
-		PlayerCharacterRef->DisableInput(this);
+		// no spamming
+		PlayerCharacterRef->bCanDash = false;
+		// for physics collisions
+		PlayerCharacterRef->isDashing = true;
 		
+		PlayerCharacterRef->DisableInput(this);
+
+		// Directional Dash (Dash with Input)
 		if (PlayerCharacterRef->GetVelocity().Length() <= 0.0f)
 		{
 			PlayerCharacterRef->GetCharacterMovement()->Velocity =
 				PlayerCharacterRef->GetActorForwardVector() * (PlayerCharacterRef->PlayerFeel.dashDistance * (-1.0f)) * (PlayerCharacterRef->PlayerFeel.dashDistance * 15);
 		}
+		// Input-less Dash
 		else
 		{
+			// Backwards Dash
 			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * PlayerCharacterRef->PlayerFeel.dashDistance;
 			LaunchVel.Z = 0.0f;
 			PlayerCharacterRef->LaunchCharacter(LaunchVel, true, true);

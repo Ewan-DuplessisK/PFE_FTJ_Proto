@@ -81,4 +81,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Kick|Damage")
 	float damage = 1.0f;
+
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+	bool bCanDash = true;
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+	bool isDashing = false;
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	bool canStopDash = false;
 };
