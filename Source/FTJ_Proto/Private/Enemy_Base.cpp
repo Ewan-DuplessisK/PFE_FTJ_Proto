@@ -26,7 +26,7 @@ AEnemy_Base::AEnemy_Base()
 
 	PlayerDashAttackSphere = CreateDefaultSubobject<USphereComponent>(TEXT("PlayerDashAttackSphere"));
 	PlayerDashAttackSphere->SetupAttachment(GetCapsuleComponent());
-	PlayerDashAttackSphere->InitSphereRadius(PlayerDashAttackSphereSize);
+	PlayerDashAttackSphere->InitSphereRadius(DashRange);
 	PlayerDashAttackSphere->Deactivate();
 }
 
@@ -36,7 +36,7 @@ void AEnemy_Base::BeginPlay()
 	Super::BeginPlay();
 	aiManagerRef = Cast<AAIManager>(UGameplayStatics::GetActorOfClass(GetWorld(), AAIManager::StaticClass()));
 	PlayerInRangeSphere->SetSphereRadius(PlayerAttackSphereSize);
-	PlayerDashAttackSphere->SetSphereRadius(PlayerDashAttackSphereSize);
+	PlayerDashAttackSphere->SetSphereRadius(DashRange);
 }
 
 // Called every frame

@@ -102,7 +102,7 @@ public:
 	float PlayerAttackSphereSize = 125.f;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere for dash"))
-	float PlayerDashAttackSphereSize = 225.f;
+	float DashRange = 225.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
 	class USphereComponent* PlayerInRangeSphere;
