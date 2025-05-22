@@ -35,6 +35,8 @@ void AEnemy_Base::BeginPlay()
 {
 	Super::BeginPlay();
 	aiManagerRef = Cast<AAIManager>(UGameplayStatics::GetActorOfClass(GetWorld(), AAIManager::StaticClass()));
+	PlayerInRangeSphere->SetSphereRadius(PlayerAttackSphereSize);
+	PlayerDashAttackSphere->SetSphereRadius(PlayerDashAttackSphereSize);
 }
 
 // Called every frame
