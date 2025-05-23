@@ -90,3 +90,47 @@ void AAIManager::ActivatePlayerInRangeBox()
 	}
 }
 
+void AAIManager::TriggerWithKick()
+{
+	for (AActor* Actor : EnemyOnScene)
+	{
+		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
+		if (IsValid(Enemy) && Enemy->AggroType == EAggroType::KICK)
+		{
+			Enemy->AggroActivate = true;
+			
+			AAIController* AIController = Cast<AAIController>(Enemy->GetController());
+			if (AIController)
+			{
+				UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent();
+				if (BlackboardComp)
+				{
+					BlackboardComp->SetValueAsBool(PlayerActionKey, true);
+				}
+			}
+		}
+	}
+}
+
+void AAIManager::TriggerWithSpotted()
+{
+	for (AActor* Actor : EnemyOnScene)
+	{
+		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
+		if (IsValid(Enemy) && Enemy->AggroType == EAggroType::SPOTTED)
+		{
+			Enemy->AggroActivate = true;
+			
+			AAIController* AIController = Cast<AAIController>(Enemy->GetController());
+			if (AIController)
+			{
+				UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent();
+				if (BlackboardComp)
+				{
+					BlackboardComp->SetValueAsBool(PlayerActionKey, true);
+				}
+			}
+		}
+	}
+}
+

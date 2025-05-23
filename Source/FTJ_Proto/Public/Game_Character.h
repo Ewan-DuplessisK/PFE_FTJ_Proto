@@ -65,9 +65,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player State Check")
 	bool PlayerAction = false;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Debug Vars")
-	bool WantPlayerAction = true;
-	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Niagara")
 	class UNiagaraSystem* Kick_VFX = nullptr;
 	

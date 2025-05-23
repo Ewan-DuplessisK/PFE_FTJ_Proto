@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EnemyAggroTypeEnum.h"
 #include "GameFramework/Character.h"
 #include "EnemyStateEnum.h"
 #include "Enemy_Base.generated.h"
@@ -38,6 +39,7 @@ public:
 	void Launched(FVector Force);
 	
 	void Landed(const FHitResult& hit) override;
+	
 
 	// Enemy Variables for DataTable
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
@@ -82,6 +84,9 @@ public:
 	// Enemy Variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Define the Enemy State"))
 	EEnemyType EnemyState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Define the Enemy State"))
+	EAggroType AggroType;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	bool IsAttacking = false;
@@ -142,6 +147,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
 	bool E_AFK = false;
+
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Debug")
+	bool AggroActivate = false;
 
 // -----------------------------------------------------
 
