@@ -19,7 +19,7 @@ struct FTJ_PROTO_API FUCameraFeel
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
 	float FOVBase = 90.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
-	float FOVTarget = 90.0f;
+	float FOVTarget = 95.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
 	float FOVInterpSpeed = 50.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
