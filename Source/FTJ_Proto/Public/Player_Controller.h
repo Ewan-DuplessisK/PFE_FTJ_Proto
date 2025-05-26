@@ -99,10 +99,6 @@ public:
 	void FOVChangeSpeed();
 	void OnKickTriggered();
 	
-	UFUNCTION(BlueprintNativeEvent)
-	void Dash();
-	
-	
 	// Debug Widget
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Class Reference to Debug Widget"))
 	TSubclassOf<UUserWidget> wDebugWidget = nullptr;

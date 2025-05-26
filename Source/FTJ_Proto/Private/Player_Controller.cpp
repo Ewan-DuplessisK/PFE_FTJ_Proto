@@ -42,7 +42,6 @@ void APlayer_Controller::SetupInputComponent()
 	EnhancedInputComponent->BindAction(InputActionMove, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputActionLook, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
 	EnhancedInputComponent->BindAction(InputActionKick,ETriggerEvent::Triggered, this, &APlayer_Controller::OnKickTriggered);
-	EnhancedInputComponent->BindAction(InputActionDash,ETriggerEvent::Triggered, this, &APlayer_Controller::Dash);
 	
 	/*
 	if((EnhancedInputUserSettings = EnhancedInputSubsystem->GetUserSettings()))
@@ -269,35 +268,5 @@ void APlayer_Controller::OnKickTriggered()
 	if (IsValid(PlayerCharacterRef))
 	{
 		PlayerCharacterRef->Kick();
-	}
-}
-
-void APlayer_Controller::Dash_Implementation()
-{
-	if(PlayerCharacterRef->bCanDash)
-	{
-		// no spamming
-		PlayerCharacterRef->bCanDash = false;
-		// for physics collisions
-		PlayerCharacterRef->isDashing = true;
-		
-		PlayerCharacterRef->DisableInput(this);
-
-		float tempDashDistance = 35.0f;
-		// Directional Dash (Dash with Input)
-		if (PlayerCharacterRef->GetVelocity().Length() <= 0.0f)
-		{
-			PlayerCharacterRef->GetCharacterMovement()->Velocity =
-				PlayerCharacterRef->GetActorForwardVector() * (tempDashDistance * (-1.0f)) * (tempDashDistance * 15);
-		}
-		// Input-less Dash
-		else
-		{
-			// Backwards Dash
-			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * tempDashDistance;
-			LaunchVel.Z = 0.0f;
-			PlayerCharacterRef->LaunchCharacter(LaunchVel, true, true);
-		}
-		// Delay & bCanDash/isDashing Reset done in Blueprint
 	}
 }
