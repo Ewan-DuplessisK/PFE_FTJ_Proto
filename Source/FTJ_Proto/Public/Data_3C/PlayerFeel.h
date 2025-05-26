@@ -22,17 +22,17 @@ struct FTJ_PROTO_API FUPlayerFeel
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player Feel | Speed")
 	float RunSpeed = 1900.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player Feel | Damping")
-	float LinearDamping = 0.01f;
+	float LinearDamping = 0.01f; // 0.01
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player Feel | Damping")
-	float AngularDamping = 0.0f;
+	float AngularDamping = 0.0f; // cero
 	
 	// Dash
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="rate of the FOV switch for dash"))
-	float dashRate = 5.15f;
+	float dashRate = 5.15f; // 5.0
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="How far will the Dash go"))
-	float dashDistance = 747.0f;
+	float dashDistance = 747.0f; // 750.0
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="DO NOT TOUCH, Speed = Rate x Distance"))
-	float dashSpeed = 1.0f;
+	float dashSpeed = 1.0f; /// Not Touchy
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="Amount of time before the player can Dash again"))
-	float delayBetweenTwoDash = 0.95f;
+	float delayBetweenTwoDash = 0.95f; // 0.95
 };

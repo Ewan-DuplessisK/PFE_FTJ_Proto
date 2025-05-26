@@ -31,7 +31,7 @@ struct FTJ_PROTO_API FUAimAssistFeel
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel|Radiuses")
 	float BendShotRadius = 160.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel|Radiuses")
-	float MagneticRadius = 200.0f;
+	float MagneticRadius = 190.0f;
 	
 	// Debug
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel|Debug")
@@ -39,13 +39,13 @@ struct FTJ_PROTO_API FUAimAssistFeel
 	
 	// Factor
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel|Factors", meta=(ClampMin=0.0, ClampMax=1.0))
-	float WeakFactor = 0.2f;
+	float WeakFactor = 0.54f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel|Factors", meta=(ClampMin=0.0, ClampMax=1.0))
-	float BaseFactor = 0.75f;
+	float BaseFactor = 0.67f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel|Factors", meta=(ClampMin=0.0, ClampMax=1.0))
-	float SimpleFactor = 0.85f;
+	float BendFactor = 0.85f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel|Factors", meta=(ClampMin=0.0, ClampMax=1.0))
-	float BendFactor = 0.3f;
+	float MagneticFactor = 0.9f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Aim Feel|Factors", meta=(ClampMin=0.0, ClampMax=1.0))
-	float MagneticFactor = 0.7f;
+	float SimpleFactor = 1.0f;
 };
