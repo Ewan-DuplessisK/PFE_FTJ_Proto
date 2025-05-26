@@ -105,15 +105,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere for cqc attack"))
 	float PlayerAttackSphereSize = 125.f;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere for dash"))
-	float DashRange = 225.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
 	class USphereComponent* PlayerInRangeSphere;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for dashing"))
-	class USphereComponent* PlayerDashAttackSphere;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the second enemy this enemy is supposed to talk to, for him to look at him"))
 	FVector TalkingToPosition = {0, 0, 0};

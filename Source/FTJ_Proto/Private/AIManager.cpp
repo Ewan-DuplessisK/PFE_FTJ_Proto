@@ -83,10 +83,6 @@ void AAIManager::ActivatePlayerInRangeBox()
 		{
 			Enemy->PlayerInRangeSphere->Activate();
 		}
-		if (IsValid(Enemy->PlayerDashAttackSphere) && Enemy->AttackCanDash == true)
-		{
-			Enemy->PlayerDashAttackSphere->Activate();
-		}
 	}
 }
 
@@ -97,6 +93,7 @@ void AAIManager::TriggerWithKick()
 		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
 		if (IsValid(Enemy) && Enemy->AggroType == EAggroType::KICK)
 		{
+			Player->PlayerAction = true;
 			Enemy->AggroActivate = true;
 			
 			AAIController* AIController = Cast<AAIController>(Enemy->GetController());
