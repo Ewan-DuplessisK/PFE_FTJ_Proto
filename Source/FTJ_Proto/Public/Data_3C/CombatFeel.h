@@ -15,7 +15,7 @@ struct FTJ_PROTO_API FUCombatFeel
 	GENERATED_BODY()
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Kick")
-	FVector KickForce = {3000.0f, 0.0f, 150.0f};
+	FVector KickForce = {2000.0f, 0.0f, 250.0f};
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Kick")
 	float KickLength = 300.0f;
 	// Debug
