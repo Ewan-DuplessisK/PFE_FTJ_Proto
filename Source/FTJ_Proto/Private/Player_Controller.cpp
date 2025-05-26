@@ -72,7 +72,7 @@ void APlayer_Controller::BeginPlay()
 	InitializeVarsWithCameraFeelStruct();
 	
 	// Timer for FOV Switch (don't add anything after this)
-	GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &APlayer_Controller::FOVChangeSpeed, CameraFeel.FOVSwitchSpeed, true);
+	//GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &APlayer_Controller::FOVChangeSpeed, CameraFeel.FOVSwitchSpeed, true);
 }
 
 void APlayer_Controller::Tick(float DeltaSeconds)
