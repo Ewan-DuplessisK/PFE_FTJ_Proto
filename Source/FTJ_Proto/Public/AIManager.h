@@ -53,4 +53,11 @@ public:
 	FName PlayerActionKey = "playerAction?";
 
 	void ActivatePlayerInRangeBox();
+
+	UFUNCTION()
+	void TriggerWithKick();
+	
+	UFUNCTION(BlueprintCallable)
+	void TriggerWithSpotted();
+	
 };

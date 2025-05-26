@@ -1,6 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "FTJ_Proto/Public/Game_Character.h"
+
+#include "AIManager.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Camera/CameraComponent.h"
@@ -102,7 +104,10 @@ ECollisionChannel AGame_Character::GetCollisionChannelByName(const FName& Channe
 
 void AGame_Character::Kick()
 {
-	if(WantPlayerAction && !PlayerAction) PlayerAction = true;
+	AAIManager* AiManagerRef = Cast<AAIManager>(UGameplayStatics::GetActorOfClass(GetWorld(), AAIManager::StaticClass()));
+
+	AiManagerRef->TriggerWithKick();
+	
 	FVector Start = GetActorLocation();
 	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
 	AEnemy_Base* HitEnemy = nullptr;

@@ -83,9 +83,50 @@ void AAIManager::ActivatePlayerInRangeBox()
 		{
 			Enemy->PlayerInRangeSphere->Activate();
 		}
-		if (IsValid(Enemy->PlayerDashAttackSphere) && Enemy->AttackCanDash == true)
+	}
+}
+
+void AAIManager::TriggerWithKick()
+{
+	for (AActor* Actor : EnemyOnScene)
+	{
+		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
+		if (IsValid(Enemy) && Enemy->AggroType == EAggroType::KICK)
 		{
-			Enemy->PlayerDashAttackSphere->Activate();
+			Player->PlayerAction = true;
+			Enemy->AggroActivate = true;
+			
+			AAIController* AIController = Cast<AAIController>(Enemy->GetController());
+			if (AIController)
+			{
+				UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent();
+				if (BlackboardComp)
+				{
+					BlackboardComp->SetValueAsBool(PlayerActionKey, true);
+				}
+			}
+		}
+	}
+}
+
+void AAIManager::TriggerWithSpotted()
+{
+	for (AActor* Actor : EnemyOnScene)
+	{
+		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
+		if (IsValid(Enemy) && Enemy->AggroType == EAggroType::SPOTTED)
+		{
+			Enemy->AggroActivate = true;
+			
+			AAIController* AIController = Cast<AAIController>(Enemy->GetController());
+			if (AIController)
+			{
+				UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent();
+				if (BlackboardComp)
+				{
+					BlackboardComp->SetValueAsBool(PlayerActionKey, true);
+				}
+			}
 		}
 	}
 }

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EnemyAggroTypeEnum.h"
 #include "GameFramework/Character.h"
 #include "EnemyStateEnum.h"
 #include "Enemy_Base.generated.h"
@@ -38,6 +39,7 @@ public:
 	void Launched(FVector Force);
 	
 	void Landed(const FHitResult& hit) override;
+	
 
 	// Enemy Variables for DataTable
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
@@ -82,6 +84,9 @@ public:
 	// Enemy Variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Define the Enemy State"))
 	EEnemyType EnemyState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Define the Enemy State"))
+	EAggroType AggroType;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	bool IsAttacking = false;
@@ -100,15 +105,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere for cqc attack"))
 	float PlayerAttackSphereSize = 125.f;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Size of the Player Detection Sphere for dash"))
-	float DashRange = 225.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
 	class USphereComponent* PlayerInRangeSphere;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for dashing"))
-	class USphereComponent* PlayerDashAttackSphere;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the second enemy this enemy is supposed to talk to, for him to look at him"))
 	FVector TalkingToPosition = {0, 0, 0};
@@ -142,6 +141,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
 	bool E_AFK = false;
+
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Debug")
+	bool AggroActivate = false;
 
 // -----------------------------------------------------
 
