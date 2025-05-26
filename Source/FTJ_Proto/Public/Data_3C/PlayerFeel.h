@@ -13,7 +13,7 @@ USTRUCT(BlueprintType)
 struct FTJ_PROTO_API FUPlayerFeel
 {
 	GENERATED_BODY()
-
+	
 	// Variables
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player Feel")
 	float Gravity = 1.75f;
@@ -28,11 +28,11 @@ struct FTJ_PROTO_API FUPlayerFeel
 	
 	// Dash
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="rate of the FOV switch for dash"))
-	float dashRate = 5.0f;
+	float dashRate = 5.15f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="How far will the Dash go"))
-	float dashDistance = 750.0f;
+	float dashDistance = 747.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="DO NOT TOUCH, Speed = Rate x Distance"))
 	float dashSpeed = 1.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="Amount of time before the player can Dash again"))
-	float delayBetweenTwoDash = 1.0f;
+	float delayBetweenTwoDash = 0.95f;
 };

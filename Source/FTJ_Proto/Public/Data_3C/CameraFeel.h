@@ -24,17 +24,18 @@ struct FTJ_PROTO_API FUCameraFeel
 	float FOVInterpSpeed = 50.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
 	float FOVSwitchSpeed = 0.01f;
+	
 	// Camera
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
 	bool bInvertCam = false;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base", meta=(ClampMin=0.0, ClampMax=1.0))
-	float HorizontalCamSpeed = 2.0f;
+	float HorizontalCamSpeed = 1.94f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base", meta=(ClampMin=0.0, ClampMax=1.0))
-	float VerticalCamSpeed = 1.0f;
+	float VerticalCamSpeed = 1.67f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
-	float ViewPitchMin = -70.0f;
+	float ViewPitchMin = -74.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
-	float ViewPitchMax = 25.0f;
+	float ViewPitchMax = 33.0f;
 	
 	// Tilt
 	/*
