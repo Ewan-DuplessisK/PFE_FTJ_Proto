@@ -66,6 +66,7 @@ void AGame_Character::BeginPlay()
 void AGame_Character::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if(CurrentCooldown>0.f)CurrentCooldown-=DeltaTime;
 }
 
 // Called to bind functionality to input
@@ -104,53 +105,57 @@ ECollisionChannel AGame_Character::GetCollisionChannelByName(const FName& Channe
 
 void AGame_Character::Kick()
 {
-	AAIManager* AiManagerRef = Cast<AAIManager>(UGameplayStatics::GetActorOfClass(GetWorld(), AAIManager::StaticClass()));
+	if(CurrentCooldown<=0.f)
+	{
+		CurrentCooldown=KickCooldown;
+		AAIManager* AiManagerRef = Cast<AAIManager>(UGameplayStatics::GetActorOfClass(GetWorld(), AAIManager::StaticClass()));
 
-	AiManagerRef->TriggerWithKick();
+		AiManagerRef->TriggerWithKick();
 	
-	FVector Start = GetActorLocation();
-	FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
-	AEnemy_Base* HitEnemy = nullptr;
+		FVector Start = GetActorLocation();
+		FVector End = GetActorLocation()+(FirstPersonCameraComponent->GetForwardVector()*CombatFeel.KickLength);
+		AEnemy_Base* HitEnemy = nullptr;
 	
-	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
-	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
+		TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+		ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
+		ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
+		ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
+		ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
 	
-	TArray<AActor*> ActorsToIgnore;
-	ActorsToIgnore.Emplace(UGameplayStatics::GetPlayerCharacter(GetWorld(),0));
+		TArray<AActor*> ActorsToIgnore;
+		ActorsToIgnore.Emplace(UGameplayStatics::GetPlayerCharacter(GetWorld(),0));
 	
-	TArray<FHitResult> HitPawns;
+		TArray<FHitResult> HitPawns;
 	
-	if(UKismetSystemLibrary::SphereTraceMultiForObjects(
-		GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::ForOneFrame, HitPawns, false))
-	{
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns[0].Location);
+		if(UKismetSystemLibrary::SphereTraceMultiForObjects(
+			GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::ForOneFrame, HitPawns, false))
+		{
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns[0].Location);
 		
-		if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AEnemy_Base::StaticClass()))
-		{
-			AEnemy_Base* enemy = Cast<AEnemy_Base>(HitPawns[0].GetActor());
-			//enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
-			enemy->Damaged(damage, GetActorRotation().RotateVector(CombatFeel.KickForce));
-			HitEnemy = enemy;
+			if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AEnemy_Base::StaticClass()))
+			{
+				AEnemy_Base* enemy = Cast<AEnemy_Base>(HitPawns[0].GetActor());
+				//enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
+				enemy->Damaged(damage, GetActorRotation().RotateVector(CombatFeel.KickForce));
+				HitEnemy = enemy;
 			
-		}
-		else if (UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), APhysics_Props::StaticClass()))
+			}
+			else if (UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), APhysics_Props::StaticClass()))
+			{
+				APhysics_Props* prop = Cast<APhysics_Props>(HitPawns[0].GetActor());
+				prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
+				prop->HitFeedBack();
+			}
+			else if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AFTJ_ProtoDestructionActor::StaticClass()))
+			{
+				FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce);
+				DestructionComponent->Hit(HitPawns[0].GetComponent(),HitPawns[0],100.f,0,1.f,1.f,force,FVector());
+			}
+			KickFeedback(HitPawns[0].Location,HitEnemy);
+		}else
 		{
-			APhysics_Props* prop = Cast<APhysics_Props>(HitPawns[0].GetActor());
-			prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
-			prop->HitFeedBack();
+			KickFeedback(End,HitEnemy);
 		}
-		else if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AFTJ_ProtoDestructionActor::StaticClass()))
-		{
-			FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce);
-			DestructionComponent->Hit(HitPawns[0].GetComponent(),HitPawns[0],100.f,0,1.f,1.f,force,FVector());
-		}
-		KickFeedback(HitPawns[0].Location,HitEnemy);
-	}else
-	{
-		KickFeedback(End,HitEnemy);
 	}
 }
 
