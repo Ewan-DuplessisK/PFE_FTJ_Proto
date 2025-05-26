@@ -20,7 +20,7 @@ struct FTJ_PROTO_API FUCombatFeel
 	float KickLength = 300.0f;
 	// Debug
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Debug")
-	bool bDebugActive = true;
+	bool bDebugActive = false;
 	
 	// Combo System
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo Sys",  meta = (ToolTip = "This means each time we hit we will add X amount of points as a base."))

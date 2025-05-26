@@ -69,11 +69,13 @@ void APhysics_Props::OnPhysicsOverlap(UPrimitiveComponent* OverlappedComponent, 
 			if(!isLaunched&&Enemy->isLaunched)
 			{
 				Launched(Enemy->GetVelocity()*TransmissionFactor);
+				Enemy->Damaged(Damage,FVector());
 				Enemy->GetMesh()->SetAllPhysicsLinearVelocity(Enemy->GetVelocity()*DampingFactor);
 			}
 			if(isLaunched&&!Enemy->isLaunched)
 			{
-				Enemy->Launched(GetVelocity()*TransmissionFactor);
+				Enemy->Damaged(Damage,GetVelocity()*TransmissionFactor);
+				//Enemy->Launched(GetVelocity()*TransmissionFactor);
 				StaticMesh->SetAllPhysicsLinearVelocity(GetVelocity()*DampingFactor);
 			}
 		}

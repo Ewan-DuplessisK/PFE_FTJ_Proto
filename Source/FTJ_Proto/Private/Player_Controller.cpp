@@ -134,7 +134,7 @@ void APlayer_Controller::Look(const FInputActionValue& Value)
 	if (MoveValue.X != 0.0f)
 	{
 		//PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
-		AddYawInput(MoveValue.X);
+		AddYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
 	}
 	
 	if (MoveValue.Y != 0.0f) 
