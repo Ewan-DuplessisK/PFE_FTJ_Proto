@@ -52,6 +52,9 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Physics Vars")
 	float PropLandSpeedThreshold = 1.f;
 
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Physics Vars")
+	int Damage = 1;
+
 	UFUNCTION(BlueprintNativeEvent)
 	void HitFeedBack();
 
