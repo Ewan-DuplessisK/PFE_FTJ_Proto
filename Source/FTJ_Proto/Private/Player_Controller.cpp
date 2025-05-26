@@ -72,7 +72,7 @@ void APlayer_Controller::BeginPlay()
 	InitializeVarsWithCameraFeelStruct();
 	
 	// Timer for FOV Switch (don't add anything after this)
-	GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &APlayer_Controller::FOVChangeSpeed, CameraFeel.FOVSwitchSpeed, true);
+	//GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &APlayer_Controller::FOVChangeSpeed, CameraFeel.FOVSwitchSpeed, true);
 }
 
 void APlayer_Controller::Tick(float DeltaSeconds)
@@ -283,17 +283,18 @@ void APlayer_Controller::Dash_Implementation()
 		
 		PlayerCharacterRef->DisableInput(this);
 
+		float tempDashDistance = 35.0f;
 		// Directional Dash (Dash with Input)
 		if (PlayerCharacterRef->GetVelocity().Length() <= 0.0f)
 		{
 			PlayerCharacterRef->GetCharacterMovement()->Velocity =
-				PlayerCharacterRef->GetActorForwardVector() * (PlayerCharacterRef->PlayerFeel.dashDistance * (-1.0f)) * (PlayerCharacterRef->PlayerFeel.dashDistance * 15);
+				PlayerCharacterRef->GetActorForwardVector() * (tempDashDistance * (-1.0f)) * (tempDashDistance * 15);
 		}
 		// Input-less Dash
 		else
 		{
 			// Backwards Dash
-			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * PlayerCharacterRef->PlayerFeel.dashDistance;
+			FVector LaunchVel = PlayerCharacterRef->GetVelocity() * tempDashDistance;
 			LaunchVel.Z = 0.0f;
 			PlayerCharacterRef->LaunchCharacter(LaunchVel, true, true);
 		}
