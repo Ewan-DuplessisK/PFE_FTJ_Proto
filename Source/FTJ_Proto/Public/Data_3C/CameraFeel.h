@@ -13,7 +13,7 @@ USTRUCT(BlueprintType)
 struct FTJ_PROTO_API FUCameraFeel
 {
 	GENERATED_BODY()
-
+	
 	// Variables
 	// FOV
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|FOV")
@@ -27,15 +27,15 @@ struct FTJ_PROTO_API FUCameraFeel
 	
 	// Camera
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
-	bool bInvertCam = false;
+	bool bInvertCam = false; // flase
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base", meta=(ClampMin=0.0, ClampMax=1.0))
-	float HorizontalCamSpeed = 1.94f;
+	float HorizontalCamSpeed = 1.94f; // 1.94
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base", meta=(ClampMin=0.0, ClampMax=1.0))
-	float VerticalCamSpeed = 1.67f;
+	float VerticalCamSpeed = 1.67f; // 1.67
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
-	float ViewPitchMin = -74.0f;
+	float ViewPitchMin = -74.0f; // -70.0
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Camera Feel|Base")
-	float ViewPitchMax = 33.0f;
+	float ViewPitchMax = 33.0f; // 30.0
 	
 	// Tilt
 	/*

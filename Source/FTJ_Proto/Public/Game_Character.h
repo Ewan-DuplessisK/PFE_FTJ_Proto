@@ -78,6 +78,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Kick|Damage")
 	float damage = 1.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Kick|Cooldown")
+	float KickCooldown = 1.0f;
+	float CurrentCooldown = 0.f;
 
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 	bool bCanDash = true;
