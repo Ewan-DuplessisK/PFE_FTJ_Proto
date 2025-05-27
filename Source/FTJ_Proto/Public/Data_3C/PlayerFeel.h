@@ -27,7 +27,7 @@ struct FTJ_PROTO_API FUPlayerFeel
 	float AngularDamping = 0.0f; // cero
 	
 	// Dash
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="rate of the FOV switch for dash"))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="rate for how long the dash will last"))
 	float dashRate = 5.15f; // 5.0
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="How far will the Dash go"))
 	float dashDistance = 747.0f; // 750.0
