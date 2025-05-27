@@ -74,9 +74,6 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
 	float CQC_Range = 0.f;
-
-	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")
-	float CQC_AcceptanceRadius = 0.f;
 	
 
 // --------------------------------------------------------
