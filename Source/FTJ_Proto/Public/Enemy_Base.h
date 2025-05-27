@@ -91,7 +91,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	bool isLaunched = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables|Dash")
 	bool AttackCanDash = false;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
