@@ -91,7 +91,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	bool isLaunched = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables|Dash")
 	bool AttackCanDash = false;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
@@ -106,13 +106,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy|Variables", meta = (ToolTip = "Collision box for the enemy to detext thep layer in range for attacking"))
 	class USphereComponent* PlayerInRangeSphere;
 	
-	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "Get the position of the second enemy this enemy is supposed to talk to, for him to look at him"))
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables|Talking", meta = (ToolTip = "Get the position of the second enemy this enemy is supposed to talk to, for him to look at him"))
 	FVector TalkingToPosition = {0, 0, 0};
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "When the player exit the QTE, the direction and force the enemy will be launch"))
-	FVector LaunchVelocity = {0, 0, 0};
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables|QTE", meta = (ToolTip = "When the player exit the QTE, the direction and force the enemy will be launch"))
+	FVector QTE_LaunchVelocity = {2500, 0, 0};
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables", meta = (ToolTip = "The reference to the enemy this enemy is supposed to talk, don't forget to change the enemy state to talking"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Enemy|Variables|Talking", meta = (ToolTip = "The reference to the enemy this enemy is supposed to talk, don't forget to change the enemy state to talking"))
 	AActor* TalkingTo = nullptr;
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
@@ -121,7 +121,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Variables")
 	AActor* AIManager = nullptr;
 
-// -----------------------------------------------------
+// ----------------------------------------------------- meta = (EditCondition = "bHasFlowers")
 
 	// Enum Bool Variables
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
