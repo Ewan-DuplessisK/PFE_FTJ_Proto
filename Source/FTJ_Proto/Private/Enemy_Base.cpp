@@ -46,7 +46,7 @@ void AEnemy_Base::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 }
 
-void AEnemy_Base::Damaged(float damage, FVector Force = FVector())
+ void AEnemy_Base::Damaged(float damage, FVector Force = FVector())
 {
 	if(Force == FVector())
 	{
