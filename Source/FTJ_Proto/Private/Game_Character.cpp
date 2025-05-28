@@ -14,6 +14,7 @@
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
 #include "Physics_Props.h"
+#include "Vending_Base.h"
 #include "Destruction/FTJ_ProtoDestructionActor.h"
 #include "Destruction/FTJ_ProtoDestructionComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -150,6 +151,11 @@ void AGame_Character::Kick()
 			{
 				FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce);
 				DestructionComponent->Hit(HitPawns[0].GetComponent(),HitPawns[0],100.f,0,1.f,1.f,force,FVector());
+			}
+			else if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AVending_Base::StaticClass()))
+			{
+				AVending_Base* vending = Cast<AVending_Base>(HitPawns[0].GetActor());
+				vending->IsKicked();
 			}
 			KickFeedback(HitPawns[0].Location,HitEnemy);
 		}else
