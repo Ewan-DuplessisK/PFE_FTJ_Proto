@@ -2,6 +2,10 @@
 
 #include"GeometryCollection/GeometryCollectionComponent.h"
 
+void UFTJ_ProtoDestructionComponent::BreakFeedback_Implementation(FVector Location)
+{
+}
+
 bool UFTJ_ProtoDestructionComponent::Hit(UPrimitiveComponent * InComponent , FHitResult InHit , float InRadius , int32 InDepth , float InFactor , float InStrain , FVector InLinear , FVector InAngular)
 {
     //Works with geometry collection components (destructibles) only, this functions returns true if cast is valid
@@ -16,6 +20,7 @@ bool UFTJ_ProtoDestructionComponent::Hit(UPrimitiveComponent * InComponent , FHi
         //Applies angular velocity on specific piece which tries to rotate this piece around its axis
         Component->ApplyAngularVelocity(InHit.Item , InAngular);
         //Component is destructible (damage was applied), you can perform any additional post-hit actions (if any)
+        BreakFeedback(Component->GetComponentLocation());
         return(true);
     }
     else

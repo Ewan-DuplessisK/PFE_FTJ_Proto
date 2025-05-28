@@ -29,6 +29,9 @@ UCLASS(Blueprintable) class FTJ_PROTO_API UFTJ_ProtoDestructionComponent : publi
     //Public functions
     public :
 
+    UFUNCTION(BlueprintNativeEvent)
+    void BreakFeedback(FVector Location);
+
     //UFunctions
     public : 
     /*
