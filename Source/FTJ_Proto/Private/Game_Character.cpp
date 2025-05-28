@@ -132,7 +132,7 @@ void AGame_Character::Kick()
 			GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::ForOneFrame, HitPawns, false))
 		{
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns[0].Location);
-			UE_LOG(LogTemp,Warning,TEXT("%s"),*HitPawns[0].GetActor()->GetName());
+			//UE_LOG(LogTemp,Warning,TEXT("%s"),*HitPawns[0].GetActor()->GetName());
 		
 			if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AEnemy_Base::StaticClass()))
 			{
@@ -152,7 +152,7 @@ void AGame_Character::Kick()
 			{
 				FVector force = GetActorRotation().RotateVector(CombatFeel.KickForce*.5f);
 				DestructionComponent->Hit(HitPawns[0].GetComponent(),HitPawns[0],100.f,0,1.f,1.f,force,FVector());
-				UE_LOG(LogTemp,Warning,TEXT("Hit destuct"))
+				//UE_LOG(LogTemp,Warning,TEXT("Hit destuct"))
 			}
 			else if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AVending_Base::StaticClass()))
 			{
