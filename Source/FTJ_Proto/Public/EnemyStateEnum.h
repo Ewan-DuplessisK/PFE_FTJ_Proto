@@ -8,10 +8,11 @@
 UENUM(BlueprintType)
 enum class EEnemyType : uint8
 {
-	PATROL    UMETA(DisplayName = "Patrol"),
+	PATROL       UMETA(DisplayName = "Patrol"),
 	CHASE        UMETA(DisplayName = "Chase"),
-	SITTING     UMETA(DisplayName = "Sitting"),
-	TALKING     UMETA(DisplayName = "Talking"),
-	AFK     UMETA(DisplayName = "AFK"),
-	MAX      UMETA(Hidden)
+	SITTING      UMETA(DisplayName = "Sitting"),
+	TALKING      UMETA(DisplayName = "Talking"),
+	AFK          UMETA(DisplayName = "AFK"),
+	AroundPlayer UMETA(DisplayName = "Around Player"),
+	MAX          UMETA(Hidden)
 };

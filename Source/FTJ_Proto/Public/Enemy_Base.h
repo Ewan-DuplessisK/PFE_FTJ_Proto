@@ -138,7 +138,11 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
 	bool E_AFK = false;
+	
+	UPROPERTY(BlueprintReadWrite, Category="Enemy|Enum Bool")
+	bool E_AroundPlayer = false;
 
+	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Debug")
 	bool AggroActivate = false;
 

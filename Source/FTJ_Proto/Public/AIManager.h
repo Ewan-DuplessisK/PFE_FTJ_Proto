@@ -62,5 +62,5 @@ public:
 	
 	// Regulate enemy attacks
 	UPROPERTY(BlueprintReadWrite, Category="AIManager|Variables|Control", meta=(ToolTip = "Amount of enemies that can attack the player at once"))
-	int amountEnemyAttack = 3;
+	int amountEnemyAttack = 2;
 };
