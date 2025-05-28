@@ -159,4 +159,9 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|BehaviorTree")
 	FName hasSeenPlayerKey = "hasSeenPlayer?";
+
+public:
+	// For enemy amount
+	UPROPERTY(BlueprintReadWrite, Category="AIManager|Variables|Control", meta=(ToolTip = "Can enemy attack player"))
+	bool bCanAttack = true;
 };

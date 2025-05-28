@@ -57,6 +57,8 @@ void AAIManager::Tick(float DeltaTime)
 
 void AAIManager::NotifyInRange(AEnemy_Base* Enemy)
 {
+	Enemy->bCanAttack = true;
+	
 	EnemyInRange.AddUnique(Enemy);
 }
 
@@ -64,6 +66,8 @@ void AAIManager::NotifyOutOfRange(AEnemy_Base* Enemy)
 {
 	if(IsValid(Enemy))
 	{
+		Enemy->bCanAttack = false;
+		
 		EnemyInRange.Remove(Enemy);
 	}
 }
@@ -130,4 +134,3 @@ void AAIManager::TriggerWithSpotted()
 		}
 	}
 }
-
