@@ -14,7 +14,7 @@ UCLASS()
 class FTJ_PROTO_API APlayer_Controller : public APlayerController
 {
 	GENERATED_BODY()
-
+	
 public:
 	virtual void SetupInputComponent() override;
 	virtual void SetPawn(APawn* InPawn) override;
@@ -106,4 +106,9 @@ public:
 	// Variable to hold the widget After Creating it.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Refs|Debug", meta = (ToolTip = "Widget Reference of the Debug Widget"))
 	UUserWidget* MyDebugMenu = nullptr;
+
+	
+	// Variable to hold the widget After Creating it.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (ToolTip = "boolean to stop player movement"))
+	bool bCanPlayerMove = true;
 };

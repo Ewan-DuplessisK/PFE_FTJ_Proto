@@ -99,74 +99,80 @@ void APlayer_Controller::Tick(float DeltaSeconds)
 
 void APlayer_Controller::MovePlayer(const FInputActionValue& Value)
 {
-	if (!PlayerCharacterRef) return;
-	
-	const FVector2D MoveValue = Value.Get<FVector2D>();
-	
-	if (MoveValue.Y != 0.0f)
+	if(bCanPlayerMove)
 	{
-		FVector forwardVec = UKismetMathLibrary::GetForwardVector(GetControlRotation());
-		PlayerCharacterRef->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.Y);
-	}
-	if (MoveValue.X != 0.0f)
-	{
-		PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorRightVector(), MoveValue.X);
-	}
+		if (!PlayerCharacterRef) return;
 	
-	/*if (MoveValue != FVector2D::Zero())
-	{
-		if(!bCanDash && canStopDash)
+		const FVector2D MoveValue = Value.Get<FVector2D>();
+	
+		if (MoveValue.Y != 0.0f)
 		{
-			isDashing = false;
+			FVector forwardVec = UKismetMathLibrary::GetForwardVector(GetControlRotation());
+			PlayerCharacterRef->AddMovementInput(FlattenZAxis(forwardVec), MoveValue.Y);
 		}
-	}*/
+		if (MoveValue.X != 0.0f)
+		{
+			PlayerCharacterRef->AddMovementInput(PlayerCharacterRef->GetActorRightVector(), MoveValue.X);
+		}
 	
-	// Tilt Set for Move
-	//Tilt = ((CameraFeel.TiltRecoverySpeed * 0.5f) * MoveValue.X) + Tilt;
+		/*if (MoveValue != FVector2D::Zero())
+		{
+			if(!bCanDash && canStopDash)
+			{
+				isDashing = false;
+			}
+		}*/
+	
+		// Tilt Set for Move
+		//Tilt = ((CameraFeel.TiltRecoverySpeed * 0.5f) * MoveValue.X) + Tilt;
+	}
 }
 
 void APlayer_Controller::Look(const FInputActionValue& Value)
 {
-	if (!PlayerCharacterRef) return;
-	
-	const FVector2D MoveValue = Value.Get<FVector2D>();
-	
-	if (MoveValue.X != 0.0f)
+	if(bCanPlayerMove)
 	{
-		//PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
-		AddYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
-	}
+		if (!PlayerCharacterRef) return;
 	
-	if (MoveValue.Y != 0.0f) 
-	{
-		if(CameraFeel.bInvertCam)
-     	{
-     		//PlayerCharacterRef->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
-			AddPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
-     	}
-		else
+		const FVector2D MoveValue = Value.Get<FVector2D>();
+	
+		if (MoveValue.X != 0.0f)
 		{
-			//PlayerCharacterRef->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
-			AddPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+			//PlayerCharacterRef->AddControllerYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
+			AddYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
 		}
-		
-		PlayerCharacterRef->FirstPersonCameraComponent->SetRelativeRotation(FRotator(GetControlRotation().Pitch,0.0,0.0));
-	}
 	
-	//PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
+		if (MoveValue.Y != 0.0f) 
+		{
+			if(CameraFeel.bInvertCam)
+			{
+				//PlayerCharacterRef->AddControllerPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+				AddPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
+			}
+			else
+			{
+				//PlayerCharacterRef->AddControllerPitchInput(-(MoveValue.Y * CameraFeel.VerticalCamSpeed));
+				AddPitchInput(MoveValue.Y * CameraFeel.VerticalCamSpeed);
+			}
+		
+			PlayerCharacterRef->FirstPersonCameraComponent->SetRelativeRotation(FRotator(GetControlRotation().Pitch,0.0,0.0));
+		}
+	
+		//PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
 
 	
-	// Tilt set for Look
-	/*
-	if(MoveValue.X < -CameraFeel.TiltClamp || MoveValue.X > CameraFeel.TiltClamp)
-	{
-		Tilt = (Tilt * TiltLookFactor) + MoveValue.X;
+		// Tilt set for Look
+		/*
+		if(MoveValue.X < -CameraFeel.TiltClamp || MoveValue.X > CameraFeel.TiltClamp)
+		{
+			Tilt = (Tilt * TiltLookFactor) + MoveValue.X;
+		}
+		else
+		{
+			Tilt = 0.0f;
+		}
+		*/
 	}
-	else
-	{
-		Tilt = 0.0f;
-	}
-	*/
 }
 
 void APlayer_Controller::HeadTilt(float DeltaTime) // TODO: remove from PC & add to Weapon 
@@ -265,7 +271,7 @@ void APlayer_Controller::FOVChangeSpeed()
 
 void APlayer_Controller::OnKickTriggered()
 {
-	if (IsValid(PlayerCharacterRef))
+	if (IsValid(PlayerCharacterRef) && bCanPlayerMove)
 	{
 		PlayerCharacterRef->Kick();
 	}
