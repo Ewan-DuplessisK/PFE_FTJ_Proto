@@ -30,7 +30,7 @@ struct FTJ_PROTO_API FUPlayerFeel
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="rate for how long the dash will last"))
 	float dashRate = 5.15f; // 5.0
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="How far will the Dash go"))
-	float dashDistance = 747.0f; // 750.0
+	float dashDistance = 450.0f; // 750.0
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="DO NOT TOUCH, Speed = Rate x Distance"))
 	float dashSpeed = 1.0f; /// Not Touchy
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat Feel|Dash", meta=(tooltip="Amount of time before the player can Dash again"))
