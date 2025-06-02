@@ -48,6 +48,9 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, Category = "AIManager|Variables")
 	TArray<AEnemy_Base*> EnemyInRange;
+	
+	UPROPERTY(BlueprintReadWrite, Category = "AIManager|Variables")
+	TArray<AActor*> EnemyAlive;
 
 	UPROPERTY(BlueprintReadWrite, Category="AIManager|Variables|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
 	FName PlayerActionKey = "playerAction?";
