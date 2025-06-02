@@ -16,6 +16,8 @@ void AFTJ_ProtoDestructionActor::BeginPlay()
     Removed = 0;
 }
 
+void AFTJ_ProtoDestructionActor::DestructionFeedback_Implementation(){}
+
 void AFTJ_ProtoDestructionActor::OnRemoved(FChaosRemovalEvent const& InRemoval)
 {
     //Registers new removal

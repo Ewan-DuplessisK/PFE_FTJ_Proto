@@ -33,7 +33,9 @@ UCLASS() class FTJ_PROTO_API AFTJ_ProtoDestructionActor : public AGeometryCollec
 
     //Public functions
     public :
-
+    UFUNCTION(BlueprintNativeEvent)
+    void DestructionFeedback();
+    
     //UFunctions
     public :
     //Registers piece removals
