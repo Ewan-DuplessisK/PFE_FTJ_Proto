@@ -167,6 +167,10 @@ void AGame_Character::Kick()
 	}
 }
 
+void AGame_Character::KickHit_Implementation(FVector Location, AActor* HitActor)
+{
+}
+
 void AGame_Character::KickFeedback_Implementation(FVector Location,AEnemy_Base* HitEnemy)
 {
 	

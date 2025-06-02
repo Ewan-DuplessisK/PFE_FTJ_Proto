@@ -72,6 +72,9 @@ public:
 	UFUNCTION(BlueprintNativeEvent)
 	void KickFeedback(FVector Location,class AEnemy_Base* HitEnemy);
 
+	UFUNCTION(BlueprintNativeEvent)
+	void KickHit(FVector Location,class AActor* HitActor);
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Kick|Damage")
 	float damage = 1.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Kick|Cooldown")
