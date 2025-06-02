@@ -140,6 +140,7 @@ void AGame_Character::Kick()
 				//enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
 				enemy->Damaged(damage, GetActorRotation().RotateVector(CombatFeel.KickForce));
 				HitEnemy = enemy;
+				KickHit(HitPawns[0].Location,enemy);
 			
 			}
 			else if (UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), APhysics_Props::StaticClass()))
@@ -147,6 +148,8 @@ void AGame_Character::Kick()
 				APhysics_Props* prop = Cast<APhysics_Props>(HitPawns[0].GetActor());
 				prop->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
 				prop->HitFeedBack();
+				KickHit(HitPawns[0].Location,prop);
+				
 			}
 			else if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AFTJ_ProtoDestructionActor::StaticClass()))
 			{
