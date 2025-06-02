@@ -106,3 +106,8 @@ void AEnemy_Base::Landed(const FHitResult& hit)
 	
 	isLaunched=false;
 }
+
+void AEnemy_Base::ActivatePlayerInRangeBox()
+{
+	PlayerInRangeSphere->Activate();
+}

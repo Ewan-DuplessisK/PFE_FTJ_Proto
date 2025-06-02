@@ -60,10 +60,6 @@ public:
 	FUPlayerFeel PlayerFeel;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
 	FUCombatFeel CombatFeel;
-
-	// Boolean to know the player does an action for the enemy to go toward him
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player State Check")
-	bool PlayerAction = false;
 	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Niagara")
 	class UNiagaraSystem* Kick_VFX = nullptr;

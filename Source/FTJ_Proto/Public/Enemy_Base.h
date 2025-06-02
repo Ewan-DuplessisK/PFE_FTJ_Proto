@@ -39,7 +39,8 @@ public:
 	void Launched(FVector Force);
 	
 	void Landed(const FHitResult& hit) override;
-	
+	void ActivatePlayerInRangeBox();
+
 
 	// Enemy Variables for DataTable
 	UPROPERTY(BlueprintReadWrite, Category="Enemy|Datatable Variables")

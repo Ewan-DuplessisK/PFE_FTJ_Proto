@@ -55,13 +55,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="AIManager|Variables|BehaviorTree", meta = (ToolTip = "Name to focus on the good boolean in the behaviortree"))
 	FName PlayerActionKey = "playerAction?";
 
-	void ActivatePlayerInRangeBox();
-
 	UFUNCTION()
 	void TriggerWithKick();
-	
-	UFUNCTION(BlueprintCallable)
-	void TriggerWithSpotted();
 	
 	// Regulate enemy attacks
 	UPROPERTY(BlueprintReadWrite, Category="AIManager|Variables|Control", meta=(ToolTip = "Amount of enemies that can attack the player at once"))

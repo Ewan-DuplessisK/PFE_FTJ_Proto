@@ -32,27 +32,6 @@ void AAIManager::BeginPlay()
 void AAIManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
-	if (Player->PlayerAction)
-	{
-		ActivatePlayerInRangeBox();
-		for (AActor* Actor : EnemyOnScene)
-		{
-			AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
-			if (Enemy)
-			{
-				AAIController* AIController = Cast<AAIController>(Enemy->GetController());
-				if (AIController)
-				{
-					UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent();
-					if (BlackboardComp)
-					{
-						BlackboardComp->SetValueAsBool(PlayerActionKey, true);
-					}
-				}
-			}
-		}
-	}
 }
 
 void AAIManager::NotifyInRange(AEnemy_Base* Enemy)
@@ -77,18 +56,6 @@ void AAIManager::UpdateActorOnScene()
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AEnemy_Base::StaticClass(), EnemyOnScene);
 }
 
-void AAIManager::ActivatePlayerInRangeBox()
-{
-	for (AActor* Actor : EnemyOnScene)
-	{
-		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
-		
-		if (IsValid(Enemy) && IsValid(Enemy->PlayerInRangeSphere))
-		{
-			Enemy->PlayerInRangeSphere->Activate();
-		}
-	}
-}
 
 void AAIManager::TriggerWithKick()
 {
@@ -97,9 +64,9 @@ void AAIManager::TriggerWithKick()
 		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
 		if (IsValid(Enemy) && Enemy->AggroType == EAggroType::KICK)
 		{
-			Player->PlayerAction = true;
 			Enemy->AggroActivate = true;
-			
+			Enemy->ActivatePlayerInRangeBox();
+
 			AAIController* AIController = Cast<AAIController>(Enemy->GetController());
 			if (AIController)
 			{
@@ -113,24 +80,4 @@ void AAIManager::TriggerWithKick()
 	}
 }
 
-void AAIManager::TriggerWithSpotted()
-{
-	for (AActor* Actor : EnemyOnScene)
-	{
-		AEnemy_Base* Enemy = Cast<AEnemy_Base>(Actor);
-		if (IsValid(Enemy) && Enemy->AggroType == EAggroType::SPOTTED)
-		{
-			Enemy->AggroActivate = true;
-			
-			AAIController* AIController = Cast<AAIController>(Enemy->GetController());
-			if (AIController)
-			{
-				UBlackboardComponent* BlackboardComp = AIController->GetBlackboardComponent();
-				if (BlackboardComp)
-				{
-					BlackboardComp->SetValueAsBool(PlayerActionKey, true);
-				}
-			}
-		}
-	}
-}
+
