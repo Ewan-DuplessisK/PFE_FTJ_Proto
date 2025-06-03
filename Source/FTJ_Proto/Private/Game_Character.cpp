@@ -129,7 +129,7 @@ void AGame_Character::Kick()
 		TArray<FHitResult> HitPawns;
 	
 		if(UKismetSystemLibrary::SphereTraceMultiForObjects(
-			GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::ForOneFrame, HitPawns, false))
+			GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::None, HitPawns, false))
 		{
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns[0].Location);
 			//UE_LOG(LogTemp,Warning,TEXT("%s"),*HitPawns[0].GetActor()->GetName());
