@@ -34,9 +34,9 @@ void AEnemy_Base::SetInUse_Implementation(bool InUse)
 	SetActorTickEnabled(InUse);
 }
 
-void AEnemy_Base::Kicked_Implementation(FVector LaunchVector, FVector PlayerPosition)
+/*void AEnemy_Base::Kicked_Implementation(FVector LaunchVector, FVector PlayerPosition)
 {
-}
+}*/
 
 void AEnemy_Base::BeginPlay()
 {

@@ -38,7 +38,7 @@ void APlayer_Controller::SetupInputComponent()
 	}
 	EnhancedInputComponent->BindAction(InputAction_Move, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
 	EnhancedInputComponent->BindAction(InputAction_Look, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
-	EnhancedInputComponent->BindAction(InputAction_Kick,ETriggerEvent::Triggered, this, &APlayer_Controller::OnKickTriggered);
+	//EnhancedInputComponent->BindAction(InputAction_Kick,ETriggerEvent::Triggered, this, &APlayer_Controller::OnKickTriggered);
 	EnhancedInputComponent->BindAction(InputAction_Pause, ETriggerEvent::Triggered, this,&APlayer_Controller::PauseGame);
 	
 	/*
@@ -57,7 +57,8 @@ void APlayer_Controller::SetPawn(APawn* InPawn)
 }
 
 void APlayer_Controller::BeginPlay()
-{	Super::BeginPlay();
+{
+	Super::BeginPlay();
 	
 	GameHUD = Cast<AGameHUD>(GetHUD());
 	
@@ -65,11 +66,13 @@ void APlayer_Controller::BeginPlay()
 	APlayerCameraManager* cameraManager = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
 	cameraManager->ViewPitchMin = CameraFeel.ViewPitchMin;
 	cameraManager->ViewPitchMax = CameraFeel.ViewPitchMax;
+	
 	///
 	
 	// Timer for FOV Switch (don't add anything after this)
 	//GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &APlayer_Controller::FOVChangeSpeed, CameraFeel.FOVSwitchSpeed, true);
 }
+
 void APlayer_Controller::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
@@ -193,7 +196,7 @@ FVector APlayer_Controller::FlattenZAxis(FVector inVec)
 	return inVec;
 }
 
-void APlayer_Controller::OnKickTriggered()
+/*void APlayer_Controller::OnKickTriggered()
 {
 	
 	if (IsValid(PlayerCharacterRef) && canPlayerMove)
@@ -202,7 +205,7 @@ void APlayer_Controller::OnKickTriggered()
 		
 		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Kick Triggered"));
 	}
-}
+}*/
 
 UInputMappingContext* APlayer_Controller::GetInputMappingContext() const
 {

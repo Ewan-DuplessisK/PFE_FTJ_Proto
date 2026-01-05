@@ -3,10 +3,14 @@
 
 #include "UI/Menus/BaseMenuWidget.h"
 
+#include "Components/CanvasPanel.h"
+#include "Components/VerticalBox.h"
 #include "Kismet/GameplayStatics.h"
 #include "UI/BaseHUD.h"
+#include "UI/GameHUD.h"
 #include "UI/Menus/SettingsMenuWidget.h"
 #include "UI/UIElements/MainMenuButton.h"
+#include "UI/UIElements/SwitcherTabSettings.h"
 
 class UMainMenuButton* UBaseMenuWidget::GetFocusedButton() const
 {
@@ -18,27 +22,24 @@ void UBaseMenuWidget::NativeConstruct()
 	Super::NativeConstruct();
 
 	APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-	
-	FInputModeGameAndUI InputMode;
-	InputMode.SetWidgetToFocus(this->TakeWidget());
-	InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
 
 	if (ensure(PC))
 	{
-		PC->SetInputMode(InputMode);
-		PC->SetShowMouseCursor(false);
 		PC->bEnableClickEvents = false;
 		PC->bEnableTouchEvents = false;
 	}
-	check(ChangeLevelButton);
-	ChangeLevelButton->OnClicked().AddUObject(this, &UBaseMenuWidget::OnChangeLevelClicked);
 	
-	check(SettingsButton)
-	SettingsButton->OnClicked().AddUObject(this, &UBaseMenuWidget::OnSettingsClicked);
+	check(YesQuitButton);
+	YesQuitButton->OnClicked().AddUObject(this, &UBaseMenuWidget::Quit);
 
-	check(QuitButton);
-	QuitButton->OnClicked().AddUObject(this, &UBaseMenuWidget::OnQuitClicked);	
+	check(CanvasPanel);
+	CanvasPanel->SetVisibility(ESlateVisibility::Collapsed);
 	
+}
+
+class UVerticalBox* UBaseMenuWidget::GetMenuVerticalBox() const
+{
+	return nullptr;
 }
 
 void UBaseMenuWidget::OnChangeLevelClicked()
@@ -48,22 +49,60 @@ void UBaseMenuWidget::OnChangeLevelClicked()
 
 void UBaseMenuWidget::OnSettingsClicked()
 {
+	OpenSettings();
+}
+
+void UBaseMenuWidget::OnQuitClicked()
+{
+	UKismetSystemLibrary::QuitGame(this, nullptr, EQuitPreference::Quit, false);
+
+	//OpenQuitPanel();
+}
+
+void UBaseMenuWidget::UnQuit()
+{
+	CanvasPanel->SetVisibility(ESlateVisibility::Collapsed);
+	
+	if (APlayerController* PC = GetOwningPlayer())
+	{
+		if (ABaseHUD* HUD = Cast<ABaseHUD>(PC->GetHUD()))
+		{
+			HUD->GetPreviousWidget()->GetMenuVerticalBox()->SetVisibility(ESlateVisibility::Visible);
+		}
+	}
+}
+
+void UBaseMenuWidget::OpenSettings()
+{
 	if (APlayerController* PC = GetOwningPlayer())
 	{
 		if (ABaseHUD* HUD = Cast<ABaseHUD>(PC->GetHUD()))
 		{
 			if (USettingsMenuWidget* Settings = HUD->GetSettingsMenuWidget())
 			{
-				Settings->AddToViewport();
-				Settings->SetupInputComponent();
-				HUD->GetPreviousWidget()->SetIsFocusable(false);
+				if (Settings)
+				{
+					Settings->AddToViewport(TOP_LEVEL + 1);
+				}
+				HUD->GetPreviousWidget()->SetVisibility(ESlateVisibility::Collapsed);
+				Settings->GetSwitcherTabSettings()->SetIndex(0, 0.02f);
+				Settings->SetVisibility(ESlateVisibility::Visible);
+				HUD->GetPreviousWidget()->SetIsEnabled(false);
 			}
 		}
 	}
-	
+
 }
 
-void UBaseMenuWidget::OnQuitClicked()
+void UBaseMenuWidget::OpenQuitPanel()
 {
-	UKismetSystemLibrary::QuitGame(this, nullptr, EQuitPreference::Quit, false);
+	if (APlayerController* PC = GetOwningPlayer())
+	{
+		if (ABaseHUD* HUD = Cast<ABaseHUD>(PC->GetHUD()))
+		{
+			HUD->GetPreviousWidget()->GetMenuVerticalBox()->SetVisibility(ESlateVisibility::Collapsed);
+		}
+	}
+	CanvasPanel->SetVisibility(ESlateVisibility::Visible);
+	YesQuitButton->SetFocus();
 }

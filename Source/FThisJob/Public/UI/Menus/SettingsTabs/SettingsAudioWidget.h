@@ -4,14 +4,24 @@
 
 #include "CoreMinimal.h"
 #include "CommonUserWidget.h"
+#include "SettingsTabBase.h"
 #include "SettingsAudioWidget.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class FTHISJOB_API USettingsAudioWidget : public UCommonUserWidget
+class FTHISJOB_API USettingsAudioWidget : public USettingsTabBase
 {
 	GENERATED_BODY()
 	
+public:
+	virtual void NativeConstruct() override;
+
+protected:
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
+	class USliderSettings* MasterSlider;
+
+	UFUNCTION()
+	void OnMasterSliderValueChanged(float Value);
 };

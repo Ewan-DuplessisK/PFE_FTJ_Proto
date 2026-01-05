@@ -18,6 +18,8 @@ public:
 
 	virtual void NativeConstruct() override;
 
+	virtual class UVerticalBox* GetMenuVerticalBox() const;
+
 protected:
 
 	// Buttons Functions
@@ -30,9 +32,21 @@ protected:
 	UFUNCTION()
 	virtual void OnQuitClicked();
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void Quit();
+
+	UFUNCTION(BlueprintCallable)
+	virtual void UnQuit();
+
+	UFUNCTION(BlueprintCallable)
+	void OpenSettings();
+
+	UFUNCTION(BlueprintCallable)
+	void OpenQuitPanel();
+
 	
 	// Widgets Button
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	UMainMenuButton* ChangeLevelButton;
 
 	UPROPERTY(meta = (BindWidget))
@@ -40,10 +54,21 @@ protected:
 	
 	UPROPERTY(meta = (BindWidget))
 	UMainMenuButton* QuitButton;
+	
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UMainMenuButton* YesQuitButton;
+	
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UMainMenuButton* NoQuitButton;
 
 
 	// Variables for GD
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Menus", meta = (AllowedClasses="World"))
 	TSoftObjectPtr<UWorld> NewLevel;
+
+	UPROPERTY(BlueprintReadWrite ,meta = (BindWidget))
+	class UCanvasPanel* CanvasPanel;
+
+
 
 };

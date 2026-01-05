@@ -2,10 +2,8 @@
 
 
 #include "UI/UIElements/MainMenuButton.h"
-
+#include "CommonTextBlock.h"
 #include "Animation/WidgetAnimation.h"
-#include "Components/Image.h"
-#include "Components/TextBlock.h"
 
 void UMainMenuButton::NativeConstruct()
 {
@@ -17,36 +15,36 @@ void UMainMenuButton::NativeConstruct()
 	}
 
 	TextBlock->SetText(Text);
+	TextBlock->SetStyle(NormalTextStyle);
 }
 
 void UMainMenuButton::NativeOnHovered()
 {
+	check(TextBlock);
+	TextBlock->SetStyle(HoveredTextStyle);
+	
 	Super::NativeOnHovered();
-
-	if (ButtonHoveredAnim)
-	{
-		PlayAnimation(ButtonHoveredAnim, 0.f, 1); 
-	}
 }
 
 void UMainMenuButton::NativeOnUnhovered()
 {
-	Super::NativeOnUnhovered();
+	check(TextBlock);
+	TextBlock->SetStyle(NormalTextStyle);
 	
-	if (ButtonHoveredAnim)
-	{
-		PlayAnimation(ButtonHoveredAnim, 0.f, 1, EUMGSequencePlayMode::Reverse); 
-	}
+	Super::NativeOnUnhovered();
 }
 
 void UMainMenuButton::NativeOnPressed()
 {
+	check(TextBlock);
+	TextBlock->SetStyle(PressedTextStyle);
+	
 	Super::NativeOnClicked();
 	
-	if (ButtonClickedAnim)
+	/*if (ButtonClickedAnim)
 	{
 		PlayAnimation(ButtonClickedAnim, 0.f, 1);
-	}
+	}*/
 }
 
 

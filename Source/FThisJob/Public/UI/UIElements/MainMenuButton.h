@@ -22,7 +22,7 @@ public:
 
 protected:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class UTextBlock* TextBlock;
+	class UCommonTextBlock* TextBlock;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (BindWidget))
 	FText Text;
@@ -33,6 +33,15 @@ protected:
 
 	UPROPERTY(Transient, meta = (BindWidgetAnim))
 	class UWidgetAnimation* ButtonClickedAnim;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Button|TextStyle")
+	TSubclassOf<UCommonTextStyle> NormalTextStyle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Button|TextStyle")
+	TSubclassOf<UCommonTextStyle> HoveredTextStyle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Button|TextStyle")
+	TSubclassOf<UCommonTextStyle> PressedTextStyle;
 	
 
 

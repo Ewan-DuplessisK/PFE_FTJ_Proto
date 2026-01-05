@@ -3,19 +3,25 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CommonUserWidget.h"
+#include "UIElementButton.h"
 #include "CheckBoxSettings.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class FTHISJOB_API UCheckBoxSettings : public UCommonUserWidget
+class FTHISJOB_API UCheckBoxSettings : public UUIElementButton
 {
 	GENERATED_BODY()
 	
 public:
 	virtual void NativeConstruct() override;
+
+	class UCheckBox* GetCheckBox() const;
+	
+	virtual void NativeOnHovered() override;
+
+	virtual void NativeOnUnhovered() override;
 	
 protected:
 	UPROPERTY(meta = (BindWidget))
@@ -23,9 +29,15 @@ protected:
 
 	// Text
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class URichTextBlock* RichTextBlock;
+	class UCommonTextBlock* CommonTextBlock;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="CheckBox|Name")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|CheckBox|Name")
 	FText Text;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|CheckBox|Text")
+	TSubclassOf<class UCommonTextStyle> NormalTextStyle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|CheckBox|Text")
+	TSubclassOf<UCommonTextStyle> HoveredTextStyle;
 	
 };

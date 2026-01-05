@@ -9,12 +9,12 @@
 /**
  * 
  */
+#define TOP_LEVEL 100000
 UCLASS()
 class FTHISJOB_API AGameHUD : public ABaseHUD
 {
 	GENERATED_BODY()
 public:
-	virtual class UInputMappingContext* GetGameplayMappingContext() override;
 
 protected:
 	virtual void BeginPlay() override;
@@ -29,11 +29,4 @@ public:
 
 	UFUNCTION()
 	void ResumeGame();
-
-protected:
-	UPROPERTY(EditDefaultsOnly, Category="GameHUD|Enhanced Inputs")
-	TObjectPtr<class UInputMappingContext> InputMappingContext;
-
-	UPROPERTY()
-	UInputMappingContext* SavedPlayerIMC = nullptr;
 };

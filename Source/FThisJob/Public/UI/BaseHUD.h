@@ -24,9 +24,6 @@ public:
 	UFUNCTION()
 	virtual class USettingsMenuWidget* GetSettingsMenuWidget() const;
 
-	UFUNCTION()
-	virtual class UInputMappingContext* GetGameplayMappingContext();
-
 protected:
 	UPROPERTY()
 	UBaseMenuWidget* PreviousWidgetInstance = nullptr;

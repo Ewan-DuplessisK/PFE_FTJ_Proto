@@ -15,30 +15,21 @@ class FTHISJOB_API USettingsMenuWidget : public UCommonActivatableWidget
 	GENERATED_BODY()
 
 public:
+	class USwitcherTabSettings* GetSwitcherTabSettings() const;
+	
 	virtual void NativeConstruct() override;
+	
+	virtual FReply NativeOnKeyDown(const FGeometry& InGeometry, const FKeyEvent& InKeyEvent) override;
 
-	void SetupInputComponent();
+	virtual void NativeOnFocusLost(const FFocusEvent& InFocusEvent) override;
 
-	UFUNCTION()
-	UInputMappingContext* GetInputMappingContext() const;
+	UFUNCTION(BlueprintImplementableEvent)
+	void SwitchCameraDefault();
+	
 protected:
 	UPROPERTY(meta = (BindWidget))
 	class USwitcherTabSettings* SwitcherTabSettings;
 	
-	// Inputs
-	UPROPERTY(EditDefaultsOnly,Blueprintable, Category = "Menus|Enhanced Input")
-	class UInputMappingContext* MenusInputMappingContext;
-	UPROPERTY(EditDefaultsOnly,Blueprintable, Category = "Menus|Enhanced Input")
-	class UInputAction* InputActionToRightTab;
-	UPROPERTY(EditDefaultsOnly, Category = "Menus|Enhanced Input")
-	class UInputAction* InputActionToLeftTab;
-	UPROPERTY(EditDefaultsOnly, Category = "Menus|Enhanced Input")
-	class UInputAction* InputActionReturn;
-
-	UFUNCTION()
-	void ToRightTab(const struct FInputActionValue& Value);
-	UFUNCTION()
-	void ToLeftTab(const struct FInputActionValue& Value);
-	UFUNCTION()
-	void Return(const struct FInputActionValue& Value);
+	UFUNCTION(BlueprintCallable)
+	void Return();
 };

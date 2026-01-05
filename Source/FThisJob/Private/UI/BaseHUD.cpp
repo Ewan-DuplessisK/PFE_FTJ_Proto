@@ -8,11 +8,6 @@ void ABaseHUD::BeginPlay()
 	Super::BeginPlay();
 }
 
-class UInputMappingContext* ABaseHUD::GetGameplayMappingContext()
-{
-	return nullptr;
-}
-
 class USettingsMenuWidget* ABaseHUD::GetSettingsMenuWidget() const
 {
 	return nullptr;

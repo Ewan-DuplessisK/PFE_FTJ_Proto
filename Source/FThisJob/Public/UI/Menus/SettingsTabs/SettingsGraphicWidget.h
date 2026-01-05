@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CommonUserWidget.h"
+#include "SettingsTabBase.h"
 #include "SettingsGraphicWidget.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class FTHISJOB_API USettingsGraphicWidget : public UCommonUserWidget
+class FTHISJOB_API USettingsGraphicWidget : public USettingsTabBase
 {
 	GENERATED_BODY()
 	

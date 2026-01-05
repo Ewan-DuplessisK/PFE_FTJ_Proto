@@ -4,10 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "HealthInterface.h"
+#include "HitInterface.h"
 #include "FTJ_CharaBase.generated.h"
 
+
 UCLASS()
-class FTHISJOB_API AFTJ_CharaBase : public ACharacter
+class FTHISJOB_API AFTJ_CharaBase : public ACharacter, public IHealthInterface, public IHitInterface
 {
 	GENERATED_BODY()
 
@@ -23,7 +26,6 @@ public:
 
 	//Public components
 
-
 	
 	//Public variables
 
@@ -32,21 +34,28 @@ public:
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 	bool isDashing = false;
 
-	UPROPERTY(BlueprintReadWrite)
-	int MaxHealth = 100;
-	UPROPERTY(BlueprintReadWrite)
-	int CurrentHealth = 100;
-
 	UPROPERTY(BlueprintReadWrite, Category="")
 	float WalkSpeed = 0.f;
 	UPROPERTY(BlueprintReadWrite, Category="")
 	float RunSpeed = 0.f;
 
+	UPROPERTY(BlueprintReadWrite, Category="Health")
+	float CurrentHealth = 100.f;
+	UPROPERTY(BlueprintReadWrite, Category="Health")
+	float MaxHealth = 100.f;
+	
 	UPROPERTY(BlueprintReadWrite, Category="")
 	int CQCDamages = 0;
 
 	UPROPERTY(BlueprintReadWrite, Category="")
 	TArray<FString>States;
+
+	//Interface
+	// Health
+	virtual void RemoveHealth_Implementation(float Damage, AActor* EnemyRef) override;
+	virtual void AddHealth_Implementation(float Amount) override;
+	//Hit
+	virtual void GetHit_Implementation(float Damage, float HitStunDuration, FVector KnockbackVector, float InvincibilityTime,AActor* SourceActor) override;
 
 protected:
 	// Called when the game starts or when spawned

@@ -4,13 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "CommonUserWidget.h"
+#include "SettingsTabBase.h"
 #include "SettingsControlWidget.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class FTHISJOB_API USettingsControlWidget : public UCommonUserWidget
+class FTHISJOB_API USettingsControlWidget : public USettingsTabBase
 {
 	GENERATED_BODY()
 	

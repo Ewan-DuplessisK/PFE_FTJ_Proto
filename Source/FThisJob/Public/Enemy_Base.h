@@ -27,8 +27,8 @@ public:
 	UFUNCTION(BlueprintNativeEvent,BlueprintCallable)
 	void SetInUse(bool InUse);
 
-	UFUNCTION(BlueprintNativeEvent,BlueprintCallable)
-	void Kicked(FVector LaunchVector, FVector PlayerPosition);
+	/*UFUNCTION(BlueprintNativeEvent,BlueprintCallable)
+	void Kicked(FVector LaunchVector, FVector PlayerPosition);*/
 
 	UFUNCTION(BlueprintCallable)
 	void StartTimers();

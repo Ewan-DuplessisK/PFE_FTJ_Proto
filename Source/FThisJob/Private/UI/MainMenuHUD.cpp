@@ -15,6 +15,8 @@ void AMainMenuHUD::BeginPlay()
 
 	APlayerController* PC = GetOwningPlayerController();
 
+	PC->SetInputMode(FInputModeGameOnly());
+
 	if (ULocalPlayer* LocalPlayer = PC->GetLocalPlayer())
 	{
 		if (UCommonInputSubsystem* InputSubsystem = ULocalPlayer::GetSubsystem<UCommonInputSubsystem>(LocalPlayer))
@@ -30,7 +32,6 @@ void AMainMenuHUD::BeginPlay()
 		if (ensure(PreviousWidgetInstance))
 		{
 			PreviousWidgetInstance->AddToViewport();
-			PreviousWidgetInstance->GetFocusedButton()->SetFocus();
 		}
 	}
 	if (ensure(SettingsMenuWidgetClass) && ensure(PC))

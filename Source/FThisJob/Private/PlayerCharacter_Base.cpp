@@ -71,7 +71,7 @@ void APlayerCharacter_Base::SetupPlayerInputComponent(UInputComponent* PlayerInp
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void APlayerCharacter_Base::Kick()
+/*void APlayerCharacter_Base::Kick()
 {
 	if(CurrentCooldown<=0.f && CanKick)
 	{
@@ -82,10 +82,11 @@ void APlayerCharacter_Base::Kick()
 		AActor* HitEnemy = nullptr;
 		
 		TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
-		//*ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
+		ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldDynamic));
 		ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
 		//*ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_Destructible));
-		//*ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
+		//ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
+		//ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECC_PhysicsBody));
 	
 		TArray<AActor*> ActorsToIgnore;
 		ActorsToIgnore.Emplace(UGameplayStatics::GetPlayerCharacter(GetWorld(),0));
@@ -96,11 +97,12 @@ void APlayerCharacter_Base::Kick()
 			GetWorld(), Start, End, 20, ObjectTypes, false, ActorsToIgnore, EDrawDebugTrace::None, HitPawns, false))
 		{
 			//*UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Kick_VFX, HitPawns[0].Location);
-			//UE_LOG(LogTemp,Warning,TEXT("%s"),*HitPawns[0].GetActor()->GetName());
+			UE_LOG(LogTemp,Warning,TEXT("%s"),*HitPawns[0].GetActor()->GetName());
+			HitEnemy = HitPawns[0].GetActor();
 			
-			if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AActor::StaticClass()))
+			if(UKismetMathLibrary::ClassIsChildOf(HitPawns[0].GetActor()->GetClass(), AEnemy_Base::StaticClass()))
 			{
-				AActor* enemy = Cast<AActor>(HitPawns[0].GetActor());
+				AEnemy_Base* enemy = Cast<AEnemy_Base>(HitPawns[0].GetActor());
 				//enemy->Launched(GetActorRotation().RotateVector(CombatFeel.KickForce));
 				//*enemy->Damaged(damage, GetActorRotation().RotateVector(CombatFeel.KickForce));
 				HitEnemy = enemy;
@@ -115,19 +117,19 @@ void APlayerCharacter_Base::Kick()
 				vending->IsKicked();
 			}
 			*
-			*/
+			
 			KickFeedback(HitPawns[0].Location, HitEnemy);
 		}else
 		{
 			KickFeedback(End, HitEnemy);
 		}
 	}
-}
+}*/
 
 void APlayerCharacter_Base::KickHit_Implementation(FVector Location, AActor* HitActor)
 {
 }
 
-void APlayerCharacter_Base::KickFeedback_Implementation(FVector Location, AActor* HitEnemy)
+/*void APlayerCharacter_Base::KickFeedback_Implementation(FVector Location, AActor* HitEnemy)
 {
-}
+}*/

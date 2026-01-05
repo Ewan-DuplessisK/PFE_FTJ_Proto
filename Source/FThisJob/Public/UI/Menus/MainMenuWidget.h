@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "BaseMenuWidget.h"
-#include "CommonActivatableWidget.h"
 #include "MainMenuWidget.generated.h"
 
 /**
@@ -28,7 +27,12 @@ public:
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void SwitchCameraQuit();
-	
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void SwitchCameraDefault();
+
+	virtual void UnQuit() override;
+
 
 protected:
 	virtual void OnChangeLevelClicked() override;
@@ -36,4 +40,6 @@ protected:
 	virtual void OnQuitClicked() override;
 
 	virtual void OnSettingsClicked() override;
+
+
 };

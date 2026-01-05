@@ -7,28 +7,42 @@
 void UMainMenuWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
-	ChangeLevelButton->SetFocus();
+	
+	FInputModeUIOnly InputMode;
+	InputMode.SetWidgetToFocus(this->TakeWidget());
+	InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+
+	check(ChangeLevelButton);
+	ChangeLevelButton->OnClicked().AddUObject(this, &UMainMenuWidget::OnChangeLevelClicked);
+	
+	check(SettingsButton)
+	SettingsButton->OnClicked().AddUObject(this, &UMainMenuWidget::OnSettingsClicked);
+
+	check(QuitButton);
+	QuitButton->OnClicked().AddUObject(this, &UMainMenuWidget::OnQuitClicked);
+
+	check(NoQuitButton);
+	NoQuitButton->OnClicked().AddUObject(this, &UMainMenuWidget::UnQuit);
 }
 
+void UMainMenuWidget::UnQuit()
+{
+	SwitchCameraDefault();
+}
 
 void UMainMenuWidget::OnChangeLevelClicked()
 {
 	SwitchCameraPlay();
-	
-	//Super::OnChangeLevelClicked();
 }
 
 void UMainMenuWidget::OnQuitClicked()
 {
 	SwitchCameraQuit();
-	
-	//Super::OnQuitClicked();
 }
 
 void UMainMenuWidget::OnSettingsClicked()
 {
 	SwitchCameraSettings();
-	Super::OnSettingsClicked();
 }
 
 class UMainMenuButton* UMainMenuWidget::GetFocusedButton() const

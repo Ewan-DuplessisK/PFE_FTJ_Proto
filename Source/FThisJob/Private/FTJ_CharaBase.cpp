@@ -11,6 +11,22 @@ AFTJ_CharaBase::AFTJ_CharaBase()
 
 }
 
+void AFTJ_CharaBase::RemoveHealth_Implementation(float Damage, AActor* EnemyRef)
+{
+	IHealthInterface::RemoveHealth_Implementation(Damage, EnemyRef);
+}
+
+void AFTJ_CharaBase::AddHealth_Implementation(float Amount)
+{
+	IHealthInterface::AddHealth_Implementation(Amount);
+}
+
+void AFTJ_CharaBase::GetHit_Implementation(float Damage, float HitStunDuration, FVector KnockbackVector, float InvincibilityTime,AActor* SourceActor)
+{
+	//IHitInterface::GetHit_Implementation(Damage, HitStunDuration, KnockbackVector, InvincibilityTime,SourceActor);
+}
+
+
 // Called when the game starts or when spawned
 void AFTJ_CharaBase::BeginPlay()
 {
