@@ -3,12 +3,14 @@
 
 #include "UI/Menus/BaseMenuWidget.h"
 
+#include "CommonAnimatedSwitcher.h"
 #include "Components/CanvasPanel.h"
 #include "Components/VerticalBox.h"
 #include "Kismet/GameplayStatics.h"
 #include "UI/BaseHUD.h"
 #include "UI/GameHUD.h"
 #include "UI/Menus/SettingsMenuWidget.h"
+#include "UI/Menus/SettingsTabs/SettingsTabBase.h"
 #include "UI/UIElements/MainMenuButton.h"
 #include "UI/UIElements/SwitcherTabSettings.h"
 
@@ -86,6 +88,8 @@ void UBaseMenuWidget::OpenSettings()
 				}
 				HUD->GetPreviousWidget()->SetVisibility(ESlateVisibility::Collapsed);
 				Settings->GetSwitcherTabSettings()->SetIndex(0, 0.02f);
+				USettingsTabBase* FirstTab = Cast<USettingsTabBase>(Settings->GetSwitcherTabSettings()->GetAnimatedSwitcher()->GetChildAt(0));
+				FirstTab->GetVerticalBox()->GetChildAt(0)->SetFocus();
 				Settings->SetVisibility(ESlateVisibility::Visible);
 				HUD->GetPreviousWidget()->SetIsEnabled(false);
 			}

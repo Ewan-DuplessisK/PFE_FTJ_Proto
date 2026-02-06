@@ -40,7 +40,7 @@ protected:
 	float MasterVolume;
 
 public:
-	UPROPERTY(EditDefaultsOnly, Category = "Events")
+	UPROPERTY(EditDefaultsOnly, BlueprintCallable, Category = "Events")
 	FOnSettingsChanged OnSettingsChanged;
 
 	// Events
@@ -70,11 +70,11 @@ public:
 
 	// Getters
 	// Gameplay
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	float GetHorizontalSensitivity() const;
-	UFUNCTION()
+	UFUNCTION(blueprintCallable)
 	float GetVerticalSensitivity() const;
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	bool GetControllerHapticFeedback() const;
 
 	//Graphics

@@ -11,6 +11,7 @@ class AFTJ_Turret_ProjectileBase;
 class UAISenseConfig_Sight;
 class UNiagaraComponent;
 class UFTJ_ScoringSystem_Score;
+class UCapsuleComponent;
 
 //An AFTJ_Turret_Turret base compatibility layer.
 UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitInterface
@@ -27,6 +28,7 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
     FTimerHandle Timer;
     //The rendered shape.
     USkeletalMeshComponent * Mesh;
+    UCapsuleComponent * Collision;
     //The detection module.
     UAIPerceptionComponent * Perception;
     //The sensing model.
@@ -36,9 +38,11 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
     UAudioComponent * HitSound;
     UAudioComponent * DeathSound;
     UAudioComponent * HideSound;
+    UNiagaraComponent * ShowEffect;
     UNiagaraComponent * ShootEffect;
     UNiagaraComponent * HitEffect;
     UNiagaraComponent * DeathEffect;
+    UNiagaraComponent * AdditionalDeathEffect;
     //The shot type to spawn.
     UPROPERTY(EditAnywhere , AdvancedDisplay) UClass * ProjectileClass;
     //The duration after popping out.
@@ -54,6 +58,8 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
     //The sight radius to trigger.
     UPROPERTY(EditAnywhere) float Range;
     UPROPERTY(EditAnywhere) int32 ScoreForDestruction;
+    UPROPERTY(EditAnywhere) double HeadRotationSpeed;
+    UPROPERTY(EditAnywhere) double ShootingMarginalError;
 
     //Protected variables
     protected :
@@ -81,6 +87,7 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
         For parameters, go to IHitInterface::GetHit.
     */
     void GetHit_Implementation(float InDamage , float InStun , FVector InKnockback , float InInvincibility , AActor * InSource) override;
+    void EndPlay(EEndPlayReason::Type const InReason) override;
     //Spawns a projectile and sets up a shooting timer.
     void Shoot();
     /*

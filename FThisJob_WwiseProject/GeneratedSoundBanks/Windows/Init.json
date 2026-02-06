@@ -20,7 +20,7 @@
        "Id": "2317455096",
        "Name": "No_Output",
        "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
-       "GUID": "{546CD63A-49D7-4B55-8B4B-0F69B28A15AB}",
+       "GUID": "{1BAE693D-7910-4EEF-B1CF-45E10E6B8A38}",
        "LibName": "No Output",
        "LibId": "11862023"
       },
@@ -28,7 +28,7 @@
        "Id": "3859886410",
        "Name": "System",
        "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
-       "GUID": "{81F014D3-3D6B-4829-A135-B3951583054B}",
+       "GUID": "{30F46EA7-2B85-41A5-B778-5D627B4C658F}",
        "LibName": "System",
        "LibId": "11403271"
       }
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{670A5745-682F-CE4D-179F-7309DC8E93C4}"
+  "FileHash": "{547096F2-1EC3-4272-A81B-A1A5937F823A}"
  }
 }

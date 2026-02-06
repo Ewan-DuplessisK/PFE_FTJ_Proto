@@ -7,6 +7,7 @@
 class UCapsuleComponent;
 class UHitInterface;
 class AFTJ_Turret_TurretBase;
+class AFTJ_Turret_DecalBase;
 
 //An AFTJ_Turret_Projectile base compatibility layer.
 UCLASS() class FTHISJOB_API AFTJ_Turret_ProjectileBase : public AActor
@@ -17,6 +18,7 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_ProjectileBase : public AActor
     private :
     //The owning actor.
     AFTJ_Turret_TurretBase * Turret;
+    UPROPERTY(EditDefaultsOnly , AdvancedDisplay) TSubclassOf<AFTJ_Turret_DecalBase> DecalSpawnClass;
     //The health amount to reduce.
     UPROPERTY(EditDefaultsOnly) float Damage;
 

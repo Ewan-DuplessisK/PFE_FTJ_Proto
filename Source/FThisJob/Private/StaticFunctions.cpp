@@ -12,3 +12,12 @@ void UStaticFunctions::OrderByDistance(AActor* PlayerActor, TArray<AActor*> inAr
 	});
 	outArray = inArray;
 }
+
+bool UStaticFunctions::IsInBuild()
+{
+#if WITH_EDITOR
+	return  false;
+#else
+	return true;
+#endif
+}

@@ -16,4 +16,6 @@ class FTHISJOB_API UStaticFunctions : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable,Category=Helpers)
 	static void OrderByDistance(AActor* PlayerActor, TArray<AActor*>inArray,TArray<AActor*>& outArray);
+	UFUNCTION(BlueprintCallable,Category=Helpers)
+	static bool IsInBuild();
 };

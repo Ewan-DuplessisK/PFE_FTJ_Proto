@@ -3,9 +3,6 @@
 #pragma once
 
 #include "FTJ_CharaBase.h"
-#include "Data_3C/CameraFeel.h"
-#include "Data_3C/CombatFeel.h"
-#include "Data_3C/PlayerFeel.h"
 #include "PlayerCharacter_Base.generated.h"
 
 /**
@@ -34,17 +31,8 @@ public:
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FirstPersonCameraComponent;
-
-
+	
 	//Public variables
-
-	// Struct Ref
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
-	FUPlayerFeel PlayerFeel;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
-	FUCombatFeel CombatFeel;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
-	FUCameraFeel CameraFeel;
 
 	UPROPERTY(BlueprintReadWrite)
 	int HitCounter;
@@ -70,11 +58,16 @@ public:
 protected:
 	
 	//Protected components
-	
 
 	//Protected functions
 
 	virtual void BeginPlay() override;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void MapSettingsDataBlueprint();
+
+	UPROPERTY(BlueprintReadWrite)
+	class USettingsSave* SettingsSave;
 
 public:
 	// Kick
@@ -93,7 +86,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Kick|Damage")
 	float damage = 1.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Kick|Cooldown")
-	float KickCooldown = 1.0f;
 	float CurrentCooldown = 0.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Kick")

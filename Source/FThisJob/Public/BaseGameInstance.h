@@ -20,7 +20,7 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	class USettingsDataAsset* SettingsDataAsset = nullptr;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	class USettingsSave* GetSettingsSave() const;
 
 protected:

@@ -10,6 +10,23 @@ UFTJ_ScoringSystem_ScoreBase::UFTJ_ScoringSystem_ScoreBase()
     MultiplierPercentage = 0;
 }
 
+bool UFTJ_ScoringSystem_ScoreBase::ShouldCreateSubsystem(UObject * InOwner) const
+{
+    return(Super::ShouldCreateSubsystem(InOwner) && GetClass() == ClassOfSubsystemToInitialize);
+}
+
+void UFTJ_ScoringSystem_ScoreBase::Initialize(FSubsystemCollectionBase & InCollection)
+{
+    Super::Initialize(InCollection);
+    InitializeBlueprint();
+}
+
+void UFTJ_ScoringSystem_ScoreBase::Deinitialize()
+{
+    DeinitializeBlueprint();
+    Super::Deinitialize();
+}
+
 int32 UFTJ_ScoringSystem_ScoreBase::GetScore() const
 {
     //Just return a copy directly
@@ -91,4 +108,19 @@ void UFTJ_ScoringSystem_ScoreBase::Increase(int32 const InScoreIncrease , int32 
         ,
         MultiplierPercentageDecreaseDelay
     );
+}
+
+void UFTJ_ScoringSystem_ScoreBase::SetScore(int32 InValue)
+{
+    Score = InValue;
+}
+
+void UFTJ_ScoringSystem_ScoreBase::SetMultiplier(int32 InValue)
+{
+    Multiplier = InValue;
+}
+
+void UFTJ_ScoringSystem_ScoreBase::SetMultiplierPercentage(int32 InValue)
+{
+    MultiplierPercentage = InValue;
 }

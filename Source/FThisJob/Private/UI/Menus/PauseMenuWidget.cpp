@@ -40,7 +40,7 @@ void UPauseMenuWidget::NativeConstruct()
 
 FReply UPauseMenuWidget::NativeOnKeyDown(const FGeometry& InGeometry, const FKeyEvent& InKeyEvent)
 {
-	if (InKeyEvent.GetKey() == EKeys::Gamepad_FaceButton_Right)
+	if (InKeyEvent.GetKey() == EKeys::Gamepad_FaceButton_Right || InKeyEvent.GetKey() == EKeys::Gamepad_Special_Right)
 	{
 		OnResumeClicked();
 		
@@ -48,6 +48,16 @@ FReply UPauseMenuWidget::NativeOnKeyDown(const FGeometry& InGeometry, const FKey
 	}
 	
 	return Super::NativeOnKeyDown(InGeometry, InKeyEvent);
+}
+
+void UPauseMenuWidget::NativeOnActivated()
+{
+	Super::NativeOnActivated();
+
+	if (ResumeButton)
+	{
+		ResumeButton->SetFocus();
+	}
 }
 
 void UPauseMenuWidget::OnResumeClicked() const

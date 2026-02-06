@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include "Data_3C/CameraFeel.h"
 #include "GameFramework/PlayerController.h"
 #include "Player_Controller.generated.h"
 
@@ -28,10 +27,6 @@ public:
 	
 	UPROPERTY()
 	class AGameHUD* GameHUD = nullptr;
-	
-	// Struct Ref
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Refs")
-	FUCameraFeel CameraFeel;
 	
 protected:
 	// Mapping

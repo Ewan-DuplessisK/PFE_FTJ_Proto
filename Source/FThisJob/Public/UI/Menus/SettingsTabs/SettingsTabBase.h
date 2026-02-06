@@ -17,6 +17,8 @@ class FTHISJOB_API USettingsTabBase : public UCommonActivatableWidget
 public:
 	virtual void SetupSettingsValues(class USettingsSave* SettingSave);
 
+	virtual void NativeOnActivated() override;
+
 	class UVerticalBox* GetVerticalBox() const;
 
 protected:

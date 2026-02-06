@@ -4,6 +4,7 @@
 
 #include"HitInterface.h"
 #include"Turret/FTJ_Turret_TurretBase.h"
+#include"Turret/FTJ_Turret_DecalBase.h"
 
 void AFTJ_Turret_ProjectileBase::BeginPlay()
 {
@@ -19,6 +20,10 @@ void AFTJ_Turret_ProjectileBase::OnHit(UPrimitiveComponent * InThisComponent , A
     if(InActor->Implements<UHitInterface>())
     {
         IHitInterface::Execute_GetHit(InActor , Damage , 0.0 , (InActor->GetActorLocation() - GetActorLocation()).GetSafeNormal() , 0.0 , Turret);
+    }
+    if(auto Pawn{Cast<APawn>(InActor)} ; !IsValid(Pawn) || !Pawn->IsPlayerControlled())
+    {
+        GetWorld()->SpawnActor<AFTJ_Turret_DecalBase>(DecalSpawnClass , GetActorTransform());
     }
     Destroy();
 }

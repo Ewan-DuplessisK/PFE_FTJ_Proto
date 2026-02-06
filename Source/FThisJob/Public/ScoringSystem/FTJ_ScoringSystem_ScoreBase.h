@@ -1,16 +1,17 @@
 #pragma once
 
 #include"CoreMinimal.h"
-#include"Components/ActorComponent.h"
+#include"Subsystems/GameInstanceSubsystem.h"
 #include"FTJ_ScoringSystem_ScoreBase.generated.h"
 
 //A score's base for compatibility.
-UCLASS() class FTHISJOB_API UFTJ_ScoringSystem_ScoreBase : public UActorComponent
+UCLASS() class FTHISJOB_API UFTJ_ScoringSystem_ScoreBase : public UGameInstanceSubsystem
 {
     GENERATED_BODY()
 
     //Private variables
     private :
+    UPROPERTY(EditDefaultsOnly , AdvancedDisplay) TSubclassOf<UFTJ_ScoringSystem_ScoreBase> ClassOfSubsystemToInitialize;
     //A value which is increased depending on the multiplier which is affected by its percentage.
     int32 Score;
     //A value which is affecting the score and which is itself affected by the percentage.
@@ -39,6 +40,11 @@ UCLASS() class FTHISJOB_API UFTJ_ScoringSystem_ScoreBase : public UActorComponen
     protected :
     //Implements C++ constructor as a stub for Unreal Engine and as the Multiplier field initializer.
     UFTJ_ScoringSystem_ScoreBase();
+    virtual bool ShouldCreateSubsystem(UObject * InOwner) const override;
+    virtual void Initialize(FSubsystemCollectionBase & InCollection) override;
+    virtual void Deinitialize() override;
+    UFUNCTION(BlueprintImplementableEvent) void InitializeBlueprint();
+    UFUNCTION(BlueprintImplementableEvent) void DeinitializeBlueprint();
 
     //Public functions
     public :
@@ -75,4 +81,7 @@ UCLASS() class FTHISJOB_API UFTJ_ScoringSystem_ScoreBase : public UActorComponen
         @param InMultiplierPercentageIncrease A value which will be added to the MultiplierPercentage.
     */
     UFUNCTION(BlueprintCallable) void Increase(int32 const InScoreIncrease , int32 const InMultiplierPercentageIncrease);
+    UFUNCTION(BlueprintCallable) void SetScore(int32 InValue);
+    UFUNCTION(BlueprintCallable) void SetMultiplier(int32 InValue);
+    UFUNCTION(BlueprintCallable) void SetMultiplierPercentage(int32 InValue);
 };

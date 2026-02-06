@@ -11,6 +11,19 @@
 void USettingsGameplayWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
+
+	UBaseGameInstance* GI = Cast<UBaseGameInstance>(GetWorld()->GetGameInstance());
+	check(GI);
+	USettingsSave* SettingsSave = GI->GetSettingsSave();
+	check(SettingsSave);
+
+	check(VerticalSensibilitySlider);
+	VerticalSensibilitySlider->SetNumberSlider(SettingsSave->GetVerticalSensitivity());
+	VerticalSensibilitySlider->GetSlider()->OnValueChanged.AddDynamic(this, &USettingsGameplayWidget::OnVerticalSensitivitySliderValueChanged);
+
+	check(HorizontalSensibilitySlider);
+	HorizontalSensibilitySlider->SetNumberSlider(SettingsSave->GetHorizontalSensitivity());
+	HorizontalSensibilitySlider->GetSlider()->OnValueChanged.AddDynamic(this, &USettingsGameplayWidget::OnHorizontalSensitivitySliderValueChanged);
 }
 
 void USettingsGameplayWidget::SetupSettingsValues(class USettingsSave* SettingSave)

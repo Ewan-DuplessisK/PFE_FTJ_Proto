@@ -37,7 +37,7 @@ void APlayer_Controller::SetupInputComponent()
 		return;
 	}
 	EnhancedInputComponent->BindAction(InputAction_Move, ETriggerEvent::Triggered, this, &APlayer_Controller::MovePlayer);
-	EnhancedInputComponent->BindAction(InputAction_Look, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
+	//EnhancedInputComponent->BindAction(InputAction_Look, ETriggerEvent::Triggered, this, &APlayer_Controller::Look);
 	//EnhancedInputComponent->BindAction(InputAction_Kick,ETriggerEvent::Triggered, this, &APlayer_Controller::OnKickTriggered);
 	EnhancedInputComponent->BindAction(InputAction_Pause, ETriggerEvent::Triggered, this,&APlayer_Controller::PauseGame);
 	
@@ -64,8 +64,8 @@ void APlayer_Controller::BeginPlay()
 	
 	// Camera Clamp
 	APlayerCameraManager* cameraManager = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
-	cameraManager->ViewPitchMin = CameraFeel.ViewPitchMin;
-	cameraManager->ViewPitchMax = CameraFeel.ViewPitchMax;
+	//cameraManager->ViewPitchMin = CameraFeel.ViewPitchMin;
+	//cameraManager->ViewPitchMax = CameraFeel.ViewPitchMax;
 	
 	///
 	
@@ -111,6 +111,7 @@ void APlayer_Controller::Look(const struct FInputActionValue& value)
 	
 		const FVector2D MoveValue = value.Get<FVector2D>();
 	
+		/*
 		if (MoveValue.X != 0.0f)
 		{
 			AddYawInput(MoveValue.X * CameraFeel.HorizontalCamSpeed);
@@ -128,7 +129,9 @@ void APlayer_Controller::Look(const struct FInputActionValue& value)
 			}
 		
 			PlayerCharacterRef->FirstPersonCameraComponent->SetRelativeRotation(FRotator(GetControlRotation().Pitch,0.0,0.0));
+			
 		}
+		*/
 		
 		//PlayerCharacterRef->FirstPersonCameraComponent->SetWorldRotation(GetControlRotation());
 		

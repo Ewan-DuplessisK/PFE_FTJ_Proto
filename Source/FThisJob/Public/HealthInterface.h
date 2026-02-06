@@ -27,4 +27,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Health")
 	void AddHealth(float Amount);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Health")
+	void DamageBreakable(float Damage, FVector Push);
 };

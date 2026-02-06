@@ -22,6 +22,8 @@ class FTHISJOB_API UPauseMenuWidget : public UBaseMenuWidget
 	
 	virtual FReply NativeOnKeyDown(const FGeometry& InGeometry, const FKeyEvent& InKeyEvent) override;
 
+	virtual void NativeOnActivated() override;
+
 	// Buttons Functions
 	UFUNCTION()
 	void OnResumeClicked() const;

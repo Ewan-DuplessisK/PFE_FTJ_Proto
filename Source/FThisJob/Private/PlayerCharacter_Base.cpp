@@ -3,6 +3,7 @@
 
 #include "FThisJob/Public/PlayerCharacter_Base.h"
 
+#include "BaseGameInstance.h"
 #include "NiagaraComponent.h"
 #include "NiagaraFunctionLibrary.h"
 
@@ -15,6 +16,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "UI/SettingsSave.h"
 
 // Sets default values
 APlayerCharacter_Base::APlayerCharacter_Base()
@@ -55,6 +57,13 @@ void APlayerCharacter_Base::WidgetVisibility_Implementation()
 void APlayerCharacter_Base::BeginPlay()
 {
 	Super::BeginPlay();
+
+	UBaseGameInstance* GI = Cast<UBaseGameInstance>(GetWorld()->GetGameInstance());
+	check(GI);
+	SettingsSave = GI->GetSettingsSave();
+	check(SettingsSave);
+	SettingsSave->OnSettingsChanged.AddDynamic(this, &APlayerCharacter_Base::MapSettingsDataBlueprint);
+	MapSettingsDataBlueprint();
 }
 
 // Called every frame
