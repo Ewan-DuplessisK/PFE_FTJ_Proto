@@ -3,6 +3,8 @@
 
 #include "FThisJob/Public/FTJ_CharaBase.h"
 
+#include "Kismet/KismetMathLibrary.h"
+
 // Sets default values
 AFTJ_CharaBase::AFTJ_CharaBase()
 {
@@ -13,12 +15,21 @@ AFTJ_CharaBase::AFTJ_CharaBase()
 
 void AFTJ_CharaBase::RemoveHealth_Implementation(float Damage, AActor* EnemyRef)
 {
-	IHealthInterface::RemoveHealth_Implementation(Damage, EnemyRef);
+	//IHealthInterface::RemoveHealth_Implementation(Damage, EnemyRef);
+	CurrentHealth = UKismetMathLibrary::FClamp(CurrentHealth-Damage,0.f,MaxHealth);
+	if (CurrentHealth<=0.f)
+	{
+		GetWorld()->GetTimerManager().SetTimerForNextTick(FTimerDelegate::CreateWeakLambda(this, [this]()
+	{
+		Destroy();
+	}));
+	}
 }
 
 void AFTJ_CharaBase::AddHealth_Implementation(float Amount)
 {
-	IHealthInterface::AddHealth_Implementation(Amount);
+	//IHealthInterface::AddHealth_Implementation(Amount);
+	CurrentHealth = UKismetMathLibrary::FClamp(CurrentHealth+Amount,0.f,MaxHealth);
 }
 
 void AFTJ_CharaBase::GetHit_Implementation(float Damage, float HitStunDuration, FVector KnockbackVector, float InvincibilityTime,AActor* SourceActor)

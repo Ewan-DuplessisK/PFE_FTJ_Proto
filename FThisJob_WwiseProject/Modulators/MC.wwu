@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{05E79BEF-F159-4B9D-BE07-D6EC8BAA6721}" SchemaVersion="123">
+	<Modulators>
+		<WorkUnit Name="MC" ID="{05E79BEF-F159-4B9D-BE07-D6EC8BAA6721}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="3"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ModulatorTime Name="MC_Vaccum_Activate" ID="{87A93583-B76A-442B-9734-E28E9388894E}" ShortID="407949618">
+					<PropertyList>
+						<Property Name="EnvelopeStopPlayback" Type="bool" Value="False"/>
+						<Property Name="TimeModDuration" Type="Real64" Value="0.2"/>
+					</PropertyList>
+				</ModulatorTime>
+			</ChildrenList>
+		</WorkUnit>
+	</Modulators>
+</WwiseDocument>

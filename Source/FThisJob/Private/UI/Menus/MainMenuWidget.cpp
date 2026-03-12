@@ -7,10 +7,11 @@
 void UMainMenuWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
-	
-	FInputModeUIOnly InputMode;
-	InputMode.SetWidgetToFocus(this->TakeWidget());
-	InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+
+
+	APlayerController* PC = GetWorld()->GetFirstPlayerController();
+	check(PC);
+	PC->SetShowMouseCursor(true);	
 
 	check(ChangeLevelButton);
 	ChangeLevelButton->OnClicked().AddUObject(this, &UMainMenuWidget::OnChangeLevelClicked);
@@ -23,6 +24,16 @@ void UMainMenuWidget::NativeConstruct()
 
 	check(NoQuitButton);
 	NoQuitButton->OnClicked().AddUObject(this, &UMainMenuWidget::UnQuit);
+}
+
+void UMainMenuWidget::NativeOnActivated()
+{	
+	Super::NativeOnActivated();
+}
+
+TOptional<FUIInputConfig> UMainMenuWidget::GetDesiredInputConfig() const
+{
+	return FUIInputConfig(ECommonInputMode::All, EMouseCaptureMode::NoCapture);
 }
 
 void UMainMenuWidget::UnQuit()

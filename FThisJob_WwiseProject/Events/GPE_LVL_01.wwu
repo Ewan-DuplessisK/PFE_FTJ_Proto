@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6E5E1CEC-A139-45F3-A7A2-93734DFBDBBD}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{A4B68176-E962-4F5A-8E78-8E710EBF6C90}">
+	<Events>
+		<WorkUnit Name="GPE_LVL_01" ID="{6E5E1CEC-A139-45F3-A7A2-93734DFBDBBD}" OwnerID="{A4B68176-E962-4F5A-8E78-8E710EBF6C90}" PersistMode="Nested"/>
+	</Events>
+</WwiseDocument>

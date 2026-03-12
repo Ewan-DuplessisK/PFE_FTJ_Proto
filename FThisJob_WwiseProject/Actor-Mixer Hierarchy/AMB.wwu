@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D5404735-E68D-44AA-9086-19B05F4525F9}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="AMB" ID="{D5404735-E68D-44AA-9086-19B05F4525F9}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="AMB_LVL_01" ID="{75B889A3-5814-408D-BCAA-5905B30ABAA3}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_02" ID="{0BE4437C-1E1F-480C-A1DE-2AC62BC1BCE1}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_03" ID="{294F23D0-5FD4-45B1-8B93-E3284C79DD6D}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

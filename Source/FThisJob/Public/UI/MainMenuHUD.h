@@ -25,4 +25,5 @@ protected:
 
 	virtual UBaseMenuWidget* GetPreviousWidget() override;
 
+
 };

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D7731F99-A959-4C74-AC4F-568B16985F14}" SchemaVersion="123">
+	<Busses>
+		<WorkUnit Name="SFX" ID="{D7731F99-A959-4C74-AC4F-568B16985F14}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="11"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Bus Name="AB_SFX" ID="{4C74FB4F-49C0-4943-A43C-6E0837510F51}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{30F46EA7-2B85-41A5-B778-5D627B4C658F}" WorkUnitID="{CDC24A2C-B4B1-47E7-A644-FF77CA93A6D5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="AB_SFX_LVL_01" ID="{40A0934F-3A21-46DF-B9BC-65ECE5EE26C5}"/>
+						<Bus Name="AB_SFX_LVL_02" ID="{0EE162C0-7C9B-4739-AAA2-D27DC5EF1E6D}"/>
+						<Bus Name="AB_SFX_LVL_03" ID="{EB45F836-5D56-431E-908B-5071AE240EA0}"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CBAA17B3-C526-4FC5-8392-E3214569C061}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}">
+	<SoundBanks>
+		<WorkUnit Name="GPE" ID="{CBAA17B3-C526-4FC5-8392-E3214569C061}" OwnerID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="GPE_LVL_01" ID="{CBB6C57B-F436-4A37-A4A3-9D1F175394B7}" PersistMode="Reference"/>
+				<WorkUnit Name="GPE_LVL_02" ID="{CEC9B50C-5126-4F2D-82F5-49E1E73B850E}" PersistMode="Reference"/>
+				<WorkUnit Name="GPE_LVL_03" ID="{E77F31B5-9D15-48B1-9413-3F6ACBDBF203}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

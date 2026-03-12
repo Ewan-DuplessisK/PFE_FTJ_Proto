@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E1FDA0DF-3AC0-45F4-A404-9FE0EDCCD0A8}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}">
+	<SoundBanks>
+		<WorkUnit Name="SFX" ID="{E1FDA0DF-3AC0-45F4-A404-9FE0EDCCD0A8}" OwnerID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="25"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="SFX_LVL_01" ID="{640DD321-0FBC-4BD8-83A9-E9AAB4FFBFC2}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_LVL_02" ID="{BAB307BA-50FA-44B4-84F5-A6E205BD8CFA}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_LVL_03" ID="{9FAB4C17-0C9F-46AF-95BE-DD37B3CF531C}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

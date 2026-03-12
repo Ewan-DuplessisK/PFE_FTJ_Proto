@@ -2,7 +2,6 @@
 
 #include "PoolingManager.h"
 
-#include "Enemy_Base.h"
 #include "WaveManager.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -18,17 +17,69 @@ void APoolingManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	FTimerHandle DelayBeginPlay;
-	//GetWorldTimerManager().SetTimer(DelayBeginPlay, this, ,&InitializePoolSize, 0.f, false);
+	/*
+	FTimerHandle DelayBeginHandle;
+	GetWorldTimerManager().SetTimer(DelayBeginHandle, this, &APoolingManager::InitializePoolSize, 0.2f, false);
+	*/
 }
 
-void APoolingManager::AddTempToPool(TArray<TSubclassOf<AEnemy_Base>> EnemiesClasses, TArray<class AEnemy_Base*> SpawnedEnemies)
+// Called every frame
+void APoolingManager::Tick(float DeltaTime)
 {
-	for (int i = 0; i < EnemiesClasses.Num(); i++)
+	Super::Tick(DeltaTime);
+}
+
+FPoolRequestResponce APoolingManager::PooledActorRequest_Implementation(TSubclassOf<AActor> Class, int Num)
+{
+	if (Pool.Find(Class))
 	{
-		//Pool.Add(EnemiesClasses[i], SpawnedEnemies);
-		Pool.FindOrAdd(EnemiesClasses[i], SpawnedEnemies);
+		if (Pool.Find(Class)->Num() >= Num)
+		{
+			FPoolRequestResponce Response{true, "Success", {}};
+			for (int i = 0; i < Num; i++)
+			{
+				Response.ActorPointers.Add(Pool.Find(Class)->Pop());
+				//Response.ActorPointers.Last()->SetInUse(true);
+			}
+			
+			return Response;
+		}
+		else
+		{
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("FAIL : Actor Request | Pool.Find(Class)->Num() >= Num"));
+			
+			UE_LOG(LogTemp, Log, TEXT("Pool does not have enough actors of class %s (requested %d, available %d)"), *Class->GetName(), Num, Pool.Find(Class)->Num());
+			
+			FPoolRequestResponce Response{false, "Not Enough Actors", {}};
+			for (int i = 0; i < Pool.Find(Class)->Num(); i++)
+			{
+				Response.ActorPointers.Add(Pool.Find(Class)->Pop());
+				//Response.ActorPointers.Last()->SetInUse(true);
+			}
+			
+			return Response;
+		}
 	}
+	else
+	{
+		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FAIL : Actor Request | Pool.Find(Class)"));
+		
+		UE_LOG(LogTemp, Log, TEXT("Requested class %s does not exist in Pool!"), *Class->GetName());
+		return FPoolRequestResponce{false,"Fail: Requested class does not exist in Pool",{}};
+	}
+}
+
+bool APoolingManager::HandOverActor_Implementation(AActor* Actor)
+{
+	if (Pool.Find(Actor->GetClass()))
+	{
+		Pool.Find(Actor->GetClass())->Add(Actor);
+		//Actor->SetInUse(false);
+		Actor->SetActorLocation(PoolSpawnPosition);
+		
+		return true;
+	}
+	return false;
 }
 
 void APoolingManager::InitializePoolSize_Implementation()
@@ -59,7 +110,7 @@ void APoolingManager::InitializePoolSize_Implementation()
 
 void APoolingManager::PopulatePool_Implementation()
 {
-	//FRotator TmpRota = FRotator::ZeroRotator;
+	//FRotator TempRota = FRotator::ZeroRotator;
 	
 	/*for (TPair<TSubclassOf<AEnemy_Base>, int> Pair:PoolSizeMap)
 	{
@@ -70,7 +121,7 @@ void APoolingManager::PopulatePool_Implementation()
 		
 		for (int i = 0; i < Pair.Value; i++)
 		{
-			Pool[Pair.Key].Add(Cast<AEnemy_Base>(GetWorld()->SpawnActor(Pair.Key, &PoolSpawnPosition, &TmpRota)));
+			Pool[Pair.Key].Add(Cast<AActor>(GetWorld()->SpawnActor(Pair.Key, &PoolSpawnPosition, &TempRota)));
 			
 			Pool[Pair.Key].Last()->SetActorEnableCollision(false);
 			Pool[Pair.Key].Last()->SetActorHiddenInGame(true);
@@ -79,59 +130,10 @@ void APoolingManager::PopulatePool_Implementation()
 	}*/
 }
 
-// Called every frame
-void APoolingManager::Tick(float DeltaTime)
+void APoolingManager::AddTempToPool(TArray<TSubclassOf<AActor>> ActorClasses, TArray<class AActor*> SpawnedActors)
 {
-	Super::Tick(DeltaTime);
-}
-
-bool APoolingManager::HandOverActor_Implementation(AEnemy_Base* Actor)
-{
-	if (Pool.Find(Actor->GetClass()))
+	for (int i = 0; i < ActorClasses.Num(); i++)
 	{
-		Pool.Find(Actor->GetClass())->Add(Actor);
-		Actor->SetInUse(false);
-		Actor->SetActorLocation(PoolSpawnPosition);
-		
-		return true;
+		Pool.FindOrAdd(ActorClasses[i], SpawnedActors);
 	}
-	return false;
-}
-
-FPoolRequestResponce APoolingManager::PooledActorRequest_Implementation(TSubclassOf<AEnemy_Base> Class, int Num)
-{
-	if (Pool.Find(Class))
-	{
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Success : Enemy Request | Pool.Find(Class)"));
-		
-		if (Pool.Find(Class)->Num() >= Num)
-		{
-			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Success : Enemy Request | Pool.Find(Class)->Num() >= Num"));
-			
-			FPoolRequestResponce Response{true, "Success", {}};
-			for (int i = 0; i < Num; i++)
-			{
-				Response.EnemyPointers.Add(Pool.Find(Class)->Pop());
-				//Response.EnemyPointers.Last()->SetInUse(true);
-			}
-			
-			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Response : Enemy Request"));
-			
-			return Response;
-		}
-		else
-		{
-			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("FAIL : Enemy Request | Pool.Find(Class)->Num() >= Num"));
-			
-			UE_LOG(LogTemp, Log, TEXT("Pool does not have enough actors of class %s (requested %d, available %d)"), *Class->GetName(), Num, Pool.Find(Class)->Num());
-			return FPoolRequestResponce{false,"Fail: Pool does not have enough actors of requested class",{}};
-		}
-	}
-	else
-	{
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FAIL : Enemy Request | Pool.Find(Class)"));
-		
-		UE_LOG(LogTemp, Log, TEXT("Requested class %s does not exist in Pool!"), *Class->GetName());
-		return FPoolRequestResponce{false,"Fail: Requested class does not exist in Pool",{}};
-	}
-}
+} 

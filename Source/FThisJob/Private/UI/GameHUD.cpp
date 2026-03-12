@@ -48,11 +48,13 @@ USettingsMenuWidget* AGameHUD::GetSettingsMenuWidget() const
 
 void AGameHUD::PauseGame() 
 {
-	if (PreviousWidgetInstance)
+	/*if (PreviousWidgetInstance)
 	{
 		PreviousWidgetInstance->AddToViewport(TOP_LEVEL);
 		PreviousWidgetInstance->GetFocusedButton()->SetFocus();
-	}
+	}*/
+
+	PauseGameInBlueprint();
 
 	UGameplayStatics::SetGamePaused(GetWorld(), true);
 	GetOwningPlayerController()->SetInputMode(FInputModeUIOnly());
@@ -60,10 +62,12 @@ void AGameHUD::PauseGame()
 
 void AGameHUD::ResumeGame() 
 {
-	if (PreviousWidgetInstance)
+	/*if (PreviousWidgetInstance)
 	{
 		PreviousWidgetInstance->RemoveFromParent();
-	}
+	}*/
+
+	ResumeGameInBlueprint();
 
 	UGameplayStatics::SetGamePaused(GetWorld(), false);
 	GetOwningPlayerController()->SetInputMode(FInputModeGameOnly());

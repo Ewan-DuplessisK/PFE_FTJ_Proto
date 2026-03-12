@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" SchemaVersion="123">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="AMB" ID="{81645571-81C4-4597-804A-7DEFE377A771}" PersistMode="Reference"/>
+				<WorkUnit Name="ENEMIES" ID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}" PersistMode="Reference"/>
+				<WorkUnit Name="GPE" ID="{CBAA17B3-C526-4FC5-8392-E3214569C061}" PersistMode="Reference"/>
+				<WorkUnit Name="MC" ID="{FF7AED5C-CF96-4CC5-AF5C-047903ACC387}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX" ID="{E1FDA0DF-3AC0-45F4-A404-9FE0EDCCD0A8}" PersistMode="Reference"/>
+				<WorkUnit Name="UI" ID="{EC3A9503-3D4F-402C-9C33-8C5A54F2EEE4}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES" ID="{AF1230B0-07CF-4354-988B-18E8D8F0754D}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

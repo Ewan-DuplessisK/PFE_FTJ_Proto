@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{73E762C4-2FE4-40FB-A0C9-53BD8BDA56D2}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}">
+	<Events>
+		<WorkUnit Name="SECURITY_GUARDS" ID="{73E762C4-2FE4-40FB-A0C9-53BD8BDA56D2}" OwnerID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" PersistMode="Nested"/>
+	</Events>
+</WwiseDocument>

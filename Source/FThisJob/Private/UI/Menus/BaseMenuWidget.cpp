@@ -82,16 +82,8 @@ void UBaseMenuWidget::OpenSettings()
 		{
 			if (USettingsMenuWidget* Settings = HUD->GetSettingsMenuWidget())
 			{
-				if (Settings)
-				{
-					Settings->AddToViewport(TOP_LEVEL + 1);
-				}
-				HUD->GetPreviousWidget()->SetVisibility(ESlateVisibility::Collapsed);
+				check(Settings);
 				Settings->GetSwitcherTabSettings()->SetIndex(0, 0.02f);
-				USettingsTabBase* FirstTab = Cast<USettingsTabBase>(Settings->GetSwitcherTabSettings()->GetAnimatedSwitcher()->GetChildAt(0));
-				FirstTab->GetVerticalBox()->GetChildAt(0)->SetFocus();
-				Settings->SetVisibility(ESlateVisibility::Visible);
-				HUD->GetPreviousWidget()->SetIsEnabled(false);
 			}
 		}
 	}

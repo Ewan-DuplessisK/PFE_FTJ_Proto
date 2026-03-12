@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{53851A3B-CB82-4C92-9B36-C1E5D780E8BA}" SchemaVersion="123">
+	<Busses>
+		<WorkUnit Name="GPE" ID="{53851A3B-CB82-4C92-9B36-C1E5D780E8BA}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Bus Name="AB_GPE" ID="{DADFE831-89C5-4D68-8E6C-EBCEC6F0A414}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{30F46EA7-2B85-41A5-B778-5D627B4C658F}" WorkUnitID="{CDC24A2C-B4B1-47E7-A644-FF77CA93A6D5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="AB_GPE_LVL_01" ID="{7A7CCBB8-55E8-427E-B659-88A7D3D74822}"/>
+						<Bus Name="AB_GPE_LVL_02" ID="{124F4024-6CA0-4BC4-AE88-99EFC5B25680}"/>
+						<Bus Name="AB_GPE_LVL_03" ID="{B8873A19-5600-4034-AFDA-5F0A31F67A00}"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

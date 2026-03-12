@@ -15,8 +15,6 @@ void AMainMenuHUD::BeginPlay()
 
 	APlayerController* PC = GetOwningPlayerController();
 
-	PC->SetInputMode(FInputModeGameOnly());
-
 	if (ULocalPlayer* LocalPlayer = PC->GetLocalPlayer())
 	{
 		if (UCommonInputSubsystem* InputSubsystem = ULocalPlayer::GetSubsystem<UCommonInputSubsystem>(LocalPlayer))
@@ -25,19 +23,20 @@ void AMainMenuHUD::BeginPlay()
 		}
 	}
 
-	if (ensure(PreviousWidgetClass) && ensure(PC))
+	/*if (ensure(PreviousWidgetClass) && ensure(PC))
 	{
 		PreviousWidgetInstance = CreateWidget<UBaseMenuWidget>(PC, PreviousWidgetClass);
 
 		if (ensure(PreviousWidgetInstance))
 		{
 			PreviousWidgetInstance->AddToViewport();
+			PreviousWidgetInstance->GetFocusedButton()->SetFocus();
 		}
 	}
 	if (ensure(SettingsMenuWidgetClass) && ensure(PC))
 	{
 		SettingsMenuWidgetInstance = CreateWidget<USettingsMenuWidget>(PC, SettingsMenuWidgetClass);
-	}
+	}*/
 }
 
 void AMainMenuHUD::HandleInputMethodChanged(ECommonInputType NewInputType) const
@@ -45,13 +44,12 @@ void AMainMenuHUD::HandleInputMethodChanged(ECommonInputType NewInputType) const
 	switch (NewInputType)
 	{
 	case ECommonInputType::Gamepad:
-		UE_LOG(LogTemp, Warning, TEXT("Switched to Gamepad!"));
-		PreviousWidgetInstance->GetFocusedButton()->SetFocus();
+		//UE_LOG(LogTemp, Warning, TEXT("Switched to Gamepad!"));
 
 		break;
 
 	case ECommonInputType::MouseAndKeyboard:
-		UE_LOG(LogTemp, Warning, TEXT("Switched to Mouse & Keyboard!"));
+		//UE_LOG(LogTemp, Warning, TEXT("Switched to Mouse & Keyboard!"));
 		break;
 
 	default:

@@ -13,5 +13,16 @@ UCLASS()
 class FTHISJOB_API USettingsGraphicWidget : public USettingsTabBase
 {
 	GENERATED_BODY()
-	
+
+public:
+	virtual void NativeConstruct() override;
+
+	virtual void SetupSettingsValues(class USettingsSave* SettingSave) override;
+
+protected:
+	UPROPERTY(meta = (BindWidget))
+	class UCheckBoxSettings* CameraMotionBlurCheckBox;
+
+	UFUNCTION()
+	void OnMotionBlurChanged(bool bValue);
 };

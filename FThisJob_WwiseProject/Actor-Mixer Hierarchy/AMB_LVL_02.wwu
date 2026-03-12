@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0BE4437C-1E1F-480C-A1DE-2AC62BC1BCE1}" SchemaVersion="123" RootDocumentID="{50F281B2-308B-410C-A95E-7ED5349D7002}" ParentDocumentID="{D5404735-E68D-44AA-9086-19B05F4525F9}">
+	<AudioObjects>
+		<WorkUnit Name="AMB_LVL_02" ID="{0BE4437C-1E1F-480C-A1DE-2AC62BC1BCE1}" OwnerID="{D5404735-E68D-44AA-9086-19B05F4525F9}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_AMB_LVL_02" ID="{80C36036-4F8B-4C88-ABA8-D4A28190C5FC}" ShortID="620872869">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

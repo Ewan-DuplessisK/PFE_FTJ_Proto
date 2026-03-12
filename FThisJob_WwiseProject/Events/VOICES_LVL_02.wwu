@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{54C85867-2FC6-4A49-A289-14A282CE9297}">
+	<Events>
+		<WorkUnit Name="VOICES_LVL_02" ID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" OwnerID="{54C85867-2FC6-4A49-A289-14A282CE9297}" PersistMode="Nested"/>
+	</Events>
+</WwiseDocument>

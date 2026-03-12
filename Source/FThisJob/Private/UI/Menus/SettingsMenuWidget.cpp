@@ -6,6 +6,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "UI/UIElements/SwitcherTabSettings.h"
 #include "UI/BaseHUD.h"
+#include "UI/GameHUD.h"
+#include "UI/MainMenuHUD.h"
 #include "UI/Menus/BaseMenuWidget.h"
 #include "UI/UIElements/MainMenuButton.h"
 
@@ -23,7 +25,16 @@ FReply USettingsMenuWidget::NativeOnKeyDown(const FGeometry& InGeometry, const F
 {
 	if (InKeyEvent.GetKey() == EKeys::Gamepad_FaceButton_Right || InKeyEvent.GetKey() == EKeys::M)
 	{
-		SwitchCameraDefault();
+		const APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+		AHUD* BaseHud = PC->GetHUD();
+		if (AGameHUD* GameHUD = Cast<AGameHUD>(BaseHud))
+		{
+			Return();
+		}
+		else if (AMainMenuHUD* MainMenuHUD = Cast<AMainMenuHUD>(BaseHud))
+		{
+			SwitchCameraDefault();
+		}
 		return FReply::Handled();
 	}
 	
@@ -32,7 +43,7 @@ FReply USettingsMenuWidget::NativeOnKeyDown(const FGeometry& InGeometry, const F
 
 void USettingsMenuWidget::NativeOnFocusLost(const FFocusEvent& InFocusEvent)
 {
-	SwitcherTabSettings->SetFocusOnElement(0.01f);
+	//SwitcherTabSettings->SetFocusOnElement(0.01f);
 	Super::NativeOnFocusLost(InFocusEvent);
 }
 
@@ -42,12 +53,15 @@ void USettingsMenuWidget::Return()
 	ABaseHUD* HUD = Cast<ABaseHUD>(PC->GetHUD());
 	if (ensure(HUD))
 	{
+		HUD->CloseSettingsInBlueprint();
+		/*
 		UBaseMenuWidget* PreviousMenu = HUD->GetPreviousWidget();
 		check(PreviousMenu);
 		PreviousMenu->SetIsEnabled(true);
 		PreviousMenu->SetVisibility(ESlateVisibility::Visible);
 		PreviousMenu->GetFocusedButton()->SetFocus();
 		HUD->GetSettingsMenuWidget()->SetVisibility(ESlateVisibility::Collapsed);
+		*/
 		
 	}
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{54C85867-2FC6-4A49-A289-14A282CE9297}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}">
+	<Events>
+		<WorkUnit Name="VOICES" ID="{54C85867-2FC6-4A49-A289-14A282CE9297}" OwnerID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="27"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="VOICES_LVL_01" ID="{2235F791-147B-4D44-9867-9D417B12B131}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_LVL_02" ID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_LVL_03" ID="{4967E7E3-3E7A-4D96-B5E8-DCE40023959C}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

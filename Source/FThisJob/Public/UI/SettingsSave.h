@@ -26,14 +26,15 @@ protected:
 	bool ControllerHapticFeedback;
 	UPROPERTY(EditDefaultsOnly, Category = "Gameplay")
 	bool CameraShake;
-	UPROPERTY(EditDefaultsOnly, Category = "Gameplay")
-	bool CameraBlur;
+	
 
 	//Graphics
 	UPROPERTY(EditDefaultsOnly, Category = "Graphics")
 	int32 ResolutionDropdownIndex;
 	UPROPERTY(EditDefaultsOnly, Category = "Graphics")
 	int32 DisplayDropdownIndex;
+	UPROPERTY(EditDefaultsOnly, Category = "Gameplay")
+	bool CameraMotionBlur;
 
 	//Audio
 	UPROPERTY(EditDefaultsOnly, Category = "Audio")
@@ -62,6 +63,8 @@ public:
 	void SetResolutionDropdownIndex(int32 Index);
 	UFUNCTION()
 	void SetDisplayDropdownIndex(int32 Index);
+	UFUNCTION()
+	void SetCameraMotionBlur(bool bValue);
 
 	// Audio
 	UFUNCTION()
@@ -82,7 +85,8 @@ public:
 	int32 GetResolutionDropdownIndex() const;
 	UFUNCTION()
 	int32 GetDisplayDropdownIndex() const;
-
+	UFUNCTION(BlueprintCallable)
+	bool GetCameraMotionBlur() const;
 	// Audio
 	UFUNCTION()
 	float GetMasterVolume() const;

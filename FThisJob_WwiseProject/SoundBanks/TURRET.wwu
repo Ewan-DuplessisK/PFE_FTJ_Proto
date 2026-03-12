@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{45215DE0-6CA4-43E5-ADBE-A45483A74C51}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}">
+	<SoundBanks>
+		<WorkUnit Name="TURRET" ID="{45215DE0-6CA4-43E5-ADBE-A45483A74C51}" OwnerID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="TURRET" ID="{667EC829-AFB4-4643-B125-2D464A80D87B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="TURRET" ID="{601C3478-0D2B-4F23-BA36-5056CA217E57}" WorkUnitID="{601C3478-0D2B-4F23-BA36-5056CA217E57}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

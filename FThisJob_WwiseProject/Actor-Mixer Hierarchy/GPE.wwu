@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="GPE" ID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="GPE_LVL_01" ID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}" PersistMode="Reference"/>
+				<WorkUnit Name="GPE_LVL_02" ID="{3F008658-72BC-4C74-A846-DF1996455987}" PersistMode="Reference"/>
+				<WorkUnit Name="GPE_LVL_03" ID="{FFECD535-903C-4141-BB32-00F2DE763EE2}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

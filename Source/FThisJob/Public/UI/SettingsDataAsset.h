@@ -17,11 +17,11 @@ class FTHISJOB_API USettingsDataAsset : public UDataAsset
 	public:
     	//Gameplay 
     	UPROPERTY(EditDefaultsOnly, Category = "Gameplay",
-    		meta = (ClampMin = "0.01", ClampMax = "2.0", DisplayPrecision = "2"))
+    		meta = (ClampMin = "1.0", ClampMax = "5.0", DisplayPrecision = "2"))
     	float HorizontalSensitivity = 1.2f;
     
     	UPROPERTY(EditDefaultsOnly, Category = "Gameplay",
-    		meta = (ClampMin = "0.01", ClampMax = "2.0", DisplayPrecision = "2"))
+    		meta = (ClampMin = "1.0", ClampMax = "5.0", DisplayPrecision = "2"))
     	float VerticalSensitivity = 0.7f;
     
     	UPROPERTY(EditDefaultsOnly, Category = "Gameplay")
@@ -34,6 +34,9 @@ class FTHISJOB_API USettingsDataAsset : public UDataAsset
     
     	UPROPERTY(EditDefaultsOnly, Category = "Graphics")
     	int32 ResolutionIndex;
+
+		UPROPERTY(EditDefaultsOnly, Category = "Graphics")
+		bool CameraMotionBlur;
     
     
     

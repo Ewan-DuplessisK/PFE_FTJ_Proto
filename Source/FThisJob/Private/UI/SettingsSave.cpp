@@ -15,6 +15,7 @@ void USettingsSave::InitializeFromDefaults(class USettingsDataAsset* DefaultData
 	HorizontalSensitivity = DefaultData->HorizontalSensitivity;
 	VerticalSensitivity = DefaultData->VerticalSensitivity;
 	MasterVolume = DefaultData->MasterVolume;
+	CameraMotionBlur = DefaultData->CameraMotionBlur;
 }
 
 void USettingsSave::SetHorizontalSensitivity(float Value)
@@ -52,6 +53,13 @@ void USettingsSave::SetDisplayDropdownIndex(int32 Index)
 	UGameplayStatics::SaveGameToSlot(this, TEXT("Settings"), 0);
 }
 
+void USettingsSave::SetCameraMotionBlur(bool bValue)
+{
+	CameraMotionBlur = bValue;
+	OnSettingsChanged.Broadcast();
+	UGameplayStatics::SaveGameToSlot(this, TEXT("Settings"), 0);
+}
+
 void USettingsSave::SetMasterVolume(float Value)
 {
 	MasterVolume = Value;
@@ -82,6 +90,11 @@ int32 USettingsSave::GetResolutionDropdownIndex() const
 int32 USettingsSave::GetDisplayDropdownIndex() const
 {
 	return DisplayDropdownIndex;
+}
+
+bool USettingsSave::GetCameraMotionBlur() const
+{
+	return CameraMotionBlur;
 }
 
 float USettingsSave::GetMasterVolume() const

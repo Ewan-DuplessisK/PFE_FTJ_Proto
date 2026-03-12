@@ -22,6 +22,8 @@ public:
 	virtual void NativeOnHovered() override;
 
 	virtual void NativeOnUnhovered() override;
+
+	virtual void NativeOnClicked() override;
 	
 protected:
 	UPROPERTY(meta = (BindWidget))

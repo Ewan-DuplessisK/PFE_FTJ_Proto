@@ -45,7 +45,7 @@ void USwitcherTabSettings::SetIndex(int Index, float WaitingTime) const
 	check(CurrentWidget);
 	CurrentWidget->Toggle(true);
 
-	SetFocusOnElement(WaitingTime);
+	//SetFocusOnElement(WaitingTime);
 }
 
 void USwitcherTabSettings::SetFocusOnElement(float WaitingTime) const
@@ -63,6 +63,7 @@ void USwitcherTabSettings::SetFocusOnElement(float WaitingTime) const
 		Handle,
 		[this]()
 		{
+			check(AnimatedSwitcher);
 			USettingsTabBase* CurrentWidget = Cast<USettingsTabBase>(AnimatedSwitcher->GetActiveWidget());
 			if (!CurrentWidget)
 			{

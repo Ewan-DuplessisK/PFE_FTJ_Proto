@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}" SchemaVersion="123" RootDocumentID="{50F281B2-308B-410C-A95E-7ED5349D7002}" ParentDocumentID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}">
+	<AudioObjects>
+		<WorkUnit Name="SFX_LVL_03" ID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}" OwnerID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_SFX_LVL_03" ID="{A1B61043-AB7A-4A5D-93FC-1F1DDA108C78}" ShortID="818146642">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

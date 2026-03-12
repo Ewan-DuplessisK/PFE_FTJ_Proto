@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F22DA8D4-FE78-44F9-A5E5-604AB4A70627}" SchemaVersion="123">
+	<Switches>
+		<WorkUnit Name="MC" ID="{F22DA8D4-FE78-44F9-A5E5-604AB4A70627}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="3"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchGroup Name="MC_GroundMaterials" ID="{74C1541C-D549-48AB-8354-02CAA6937B4D}">
+					<ChildrenList>
+						<Switch Name="Carpet" ID="{267E70B8-1CCD-4AB5-AF9F-8192FEC7CC66}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="MC_KickMaterials" ID="{0AF65288-C030-4F6F-82B0-04751740DB48}">
+					<ChildrenList>
+						<Switch Name="Generic" ID="{957BB0CC-1CE0-4116-AFA7-4E39BD85A469}"/>
+						<Switch Name="Glass" ID="{06206F12-FD72-49E7-92E3-752FDCEFD1F9}"/>
+						<Switch Name="Door" ID="{A419B255-E38C-439D-A8C1-BAE4D6401296}"/>
+						<Switch Name="Metal" ID="{453D6195-8971-4BDD-8879-45FB15EC6F46}"/>
+						<Switch Name="VendingMachine" ID="{44558652-49DD-479B-AA83-7900F2F5DF16}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

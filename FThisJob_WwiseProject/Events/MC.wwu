@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}">
+	<Events>
+		<WorkUnit Name="MC" ID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}" OwnerID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="3"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="MC_FTS" ID="{34436816-185E-4439-A737-43BBFDB3ABA9}">
+					<ChildrenList>
+						<Action Name="" ID="{B4373F11-35CE-43B1-9149-6E73E345899D}" ShortID="240445246">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_FTS_RunWalk" ID="{52BC9191-5F52-4B7D-B4A2-6D5EE63C0836}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{48C66346-567B-4D06-8D89-D58BB902C9BA}" ShortID="216555112">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_FOL_RunWalk" ID="{90981376-D2B3-4B5D-8AA4-05C5841BC7EF}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Vaccum_Activate" ID="{61278EDB-7699-4D77-9B1C-578671526A2B}">
+					<ChildrenList>
+						<Action Name="" ID="{BB4C30AD-0642-4397-9CE0-A581AF384C36}" ShortID="103438285">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_MC_Vaccum_Activate" ID="{3B2E2994-688A-4478-8F99-3B6560B4A620}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{620097D1-ECAD-44BF-A81F-12F658F5A9E5}" ShortID="12958978">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MV_Vaccum_LP" ID="{E071377F-BAE4-4469-9A35-A4694CE2A298}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9C4B4514-E3E0-4DCE-AB2E-99ADFA708063}" ShortID="738399741">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{63308389-2DD3-4AF5-A21A-F27E04F96739}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Vaccum_Full_LP" ID="{8CC34B5A-3414-43D5-A37D-089B2C7C4C9C}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{09DEB0D7-5E44-482C-808C-53DC63FA52A4}" ShortID="183153848">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EEDEFDDB-D5C3-40A6-92C9-36F29E9772F1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Vaccum_LP" ID="{44560C7F-B25C-4584-BA6E-05019903761E}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Vaccum_Deactivate" ID="{5354281F-1109-4C15-8284-BB94B581E326}">
+					<ChildrenList>
+						<Action Name="" ID="{097FB6A4-2BB4-44C2-824A-DD4CD17CF6F8}" ShortID="16648776">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_MC_Vaccum_Deactivate" ID="{D1F29AC2-6F3F-48B8-98F0-C8374AABE596}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{60067F0A-9F26-4155-A251-08693C21020D}" ShortID="40960767">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Vaccum_Full_LP" ID="{8CC34B5A-3414-43D5-A37D-089B2C7C4C9C}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{133FBDFA-B1B8-4615-8B21-92C946555260}" ShortID="203229919">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Vaccum_LP" ID="{44560C7F-B25C-4584-BA6E-05019903761E}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BE801ECA-9559-45AB-B0DA-128540A8E53E}" ShortID="115239553">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_MC_Vaccum_Blow_Out" ID="{50FDA76C-33EF-494D-9F7F-19273E8DDF35}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9CE16E3E-4B56-41ED-AB6E-03A10422376F}" ShortID="878613612">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_Vaccum_Suck_Pitch" ID="{14D5B901-DC82-4EF2-982D-3A59D0E54FC2}" WorkUnitID="{F01A6234-BB88-4D71-8D5F-B347209A366C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Vaccum_Suck" ID="{0C508F0D-C84D-40CF-A3B0-B2D5C99CFD62}">
+					<ChildrenList>
+						<Action Name="" ID="{1DFD05EA-17C8-438C-906E-C33A9BB78ADD}" ShortID="203382709">
+							<PropertyList>
+								<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_Vaccum_Suck_Pitch" ID="{14D5B901-DC82-4EF2-982D-3A59D0E54FC2}" WorkUnitID="{F01A6234-BB88-4D71-8D5F-B347209A366C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F29A9DDB-9F76-45E4-B0A6-71F2F1F80362}" ShortID="622639219">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_MC_Vaccum_Suck" ID="{775B36F8-261D-48FA-9B67-A3677A01AA1C}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Vaccum_Shoot" ID="{A2AD2BEA-9C54-46FC-8168-770716B73699}">
+					<ChildrenList>
+						<Action Name="" ID="{CD2E405A-3E94-4E43-A736-C0FFFD068280}" ShortID="938335432">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_MC_Vaccum_Shoot" ID="{67850FF0-A59F-4EF8-BA54-7B5664418B5F}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F6A89A7C-9BF4-478A-8961-3AC60F2330C8}" ShortID="74597138">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_MC_Vaccum_Shoot" ID="{67850FF0-A59F-4EF8-BA54-7B5664418B5F}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_FOL_Kick" ID="{5A484656-AB0C-47F4-A8C7-DDE8BE816E21}">
+					<ChildrenList>
+						<Action Name="" ID="{616C30CC-1E53-4E28-87EB-06E05878CF4F}" ShortID="891526996">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_FOL_Kick" ID="{C19BEF88-B8C4-4BE2-B0A7-B16119608489}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick" ID="{39C1E57B-E04E-4098-85FE-23DE85DEC499}">
+					<ChildrenList>
+						<Action Name="" ID="{2A1200B7-A86E-4DE0-AC5E-CEE96116E9E7}" ShortID="937368513">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick" ID="{C5DC4700-0EAD-4468-8C59-30B2E02489EB}" WorkUnitID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

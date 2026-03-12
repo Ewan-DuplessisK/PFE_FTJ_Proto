@@ -33,16 +33,12 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
     UAIPerceptionComponent * Perception;
     //The sensing model.
     UAISenseConfig_Sight * Sight;
-    UAudioComponent * ShowSound;
-    UAudioComponent * ShootSound;
-    UAudioComponent * HitSound;
-    UAudioComponent * DeathSound;
-    UAudioComponent * HideSound;
     UNiagaraComponent * ShowEffect;
     UNiagaraComponent * ShootEffect;
     UNiagaraComponent * HitEffect;
     UNiagaraComponent * DeathEffect;
     UNiagaraComponent * AdditionalDeathEffect;
+    FTimerHandle PreShootingTimer;
     //The shot type to spawn.
     UPROPERTY(EditAnywhere , AdvancedDisplay) UClass * ProjectileClass;
     //The duration after popping out.
@@ -60,6 +56,7 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
     UPROPERTY(EditAnywhere) int32 ScoreForDestruction;
     UPROPERTY(EditAnywhere) double HeadRotationSpeed;
     UPROPERTY(EditAnywhere) double ShootingMarginalError;
+    UPROPERTY(EditAnywhere) float PreShootingTimepoint;
 
     //Protected variables
     protected :
@@ -110,6 +107,12 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
 
     //Protected functions
     protected :
+    UFUNCTION(BlueprintImplementableEvent) void OnTurretShow();
+    UFUNCTION(BlueprintImplementableEvent) void OnTurretPreShoot();
+    UFUNCTION(BlueprintImplementableEvent) void OnTurretShoot();
+    UFUNCTION(BlueprintImplementableEvent) void OnTurretHit();
+    UFUNCTION(BlueprintImplementableEvent) void OnTurretDestroyed();
+    UFUNCTION(BlueprintImplementableEvent) void OnTurretHide();
 
     //Public functions
     public :

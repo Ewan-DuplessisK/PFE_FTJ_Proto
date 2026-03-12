@@ -33,4 +33,6 @@ void USettingsAudioWidget::OnMasterSliderValueChanged(float Value)
 	check(SettingsSave);
 
 	SettingsSave->SetMasterVolume(Value);
+
+	//Add logique master volume
 }

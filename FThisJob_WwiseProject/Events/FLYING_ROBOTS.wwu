@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1457C4F2-19A3-4E28-ACA5-CBCC67E57A60}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}">
+	<Events>
+		<WorkUnit Name="FLYING_ROBOTS" ID="{1457C4F2-19A3-4E28-ACA5-CBCC67E57A60}" OwnerID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" PersistMode="Nested"/>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A836F1BE-99CA-43C9-9F9B-B4AC2604633C}" SchemaVersion="123">
+	<Busses>
+		<WorkUnit Name="AMB" ID="{A836F1BE-99CA-43C9-9F9B-B4AC2604633C}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Bus Name="AB_AMB" ID="{3768AB80-2D99-47ED-BF98-4EC579E28128}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{30F46EA7-2B85-41A5-B778-5D627B4C658F}" WorkUnitID="{CDC24A2C-B4B1-47E7-A644-FF77CA93A6D5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="AB_AMB_LVL_01" ID="{0DF4F836-8E1B-47B3-A32D-0862BE830EA7}"/>
+						<Bus Name="AB_AMB_LVL_02" ID="{5C5C6B6F-CA84-43AE-AEBB-B26284D02FE3}"/>
+						<Bus Name="AB_AMB_LVL_03" ID="{B3AF4373-2A3D-40E6-997B-F06082A1C09E}"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{37EB2B47-3352-422C-8900-870DFDB2179F}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{3C794BBE-5F60-40DF-881B-138623497689}">
+	<Events>
+		<WorkUnit Name="SFX_LVL_01" ID="{37EB2B47-3352-422C-8900-870DFDB2179F}" OwnerID="{3C794BBE-5F60-40DF-881B-138623497689}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Water_Impact" ID="{26DB14F1-DE28-4353-B8AB-1DD7E33F1774}">
+					<ChildrenList>
+						<Action Name="" ID="{D6C39720-FE0D-475E-9C18-235E23727BAF}" ShortID="364657442">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Water_Impact" ID="{37F9C4F6-5BF3-4914-AA23-57948C4C32FF}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Water_Launch" ID="{BB2C9375-6A94-4ED9-963D-F629684E35B6}">
+					<ChildrenList>
+						<Action Name="" ID="{7D9FE916-202B-4C0B-AE05-5415549F4FF4}" ShortID="352790018">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Water_Launch" ID="{F35F732A-E849-4EC5-8808-7C923D4B0979}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Water_Grab" ID="{565D1F07-667D-4E03-80E6-5FE88F54C3AE}">
+					<ChildrenList>
+						<Action Name="" ID="{80416915-DE36-4D6F-806E-41CA9018B45B}" ShortID="399332158">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Water_Grab" ID="{0E9A6B7D-6C37-444B-BDEC-5C71AA25F515}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vending_Machine_Can_Drop" ID="{A1349FE4-44FD-480D-8FEA-1E67E493D345}">
+					<ChildrenList>
+						<Action Name="" ID="{1979E516-9D1A-44B5-B068-67261A4DB7CA}" ShortID="57253922">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Vending_Machine_Can_Drop" ID="{D4598B07-AFF4-4728-905A-1CE74690761C}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vending_Machine_Jingle" ID="{07AA261E-BE8C-4756-AB46-90B9F1F4611D}">
+					<ChildrenList>
+						<Action Name="" ID="{0D0765B5-13DC-48B4-BA6A-5DFD839C17B7}" ShortID="376484477">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Vending_Machine_Jingle" ID="{AD0C2808-C104-4F38-9FE3-EA369B98DB72}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{11981DDD-CE6A-4C07-8DCB-D2E32C9B4DBD}" ShortID="279962257">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Vending_Machine_Voice" ID="{5ED56553-A858-4801-B722-3267D5EDA273}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1EC86C38-33C0-4835-99AD-ED0D92418653}" ShortID="2143226">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Vending_Machine_Jingle" ID="{AD0C2808-C104-4F38-9FE3-EA369B98DB72}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D13B384E-9C93-455E-BBE9-3F10672966E2}" ShortID="526702825">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Vending_Machine_Voice" ID="{5ED56553-A858-4801-B722-3267D5EDA273}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vending_Machine_Explosion" ID="{3ED25EE4-02BD-41F9-B6B8-91AF60627694}">
+					<ChildrenList>
+						<Action Name="" ID="{119B61E4-D78C-4AD9-95F7-6850B5115183}" ShortID="436290254">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Vending_Machine_On_LP" ID="{0BFE78DB-CE50-4169-B22A-9D3C48BFFD1B}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EC70B07C-967C-4979-853B-602334D83AEC}" ShortID="104384547">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Vending_Machine_Explosion" ID="{C76C1039-BCDF-4996-B472-44AFDD836C05}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FD4F30EE-0CD3-49BE-8AF0-21C022BDF530}" ShortID="374787577">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Vending_Machine_Broken_LP" ID="{095C1BFE-9EFE-47CB-B32B-F5492BF6476D}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vending_Machine_On_LP" ID="{14420DB1-A881-4056-8BCC-82D0A87DE709}">
+					<ChildrenList>
+						<Action Name="" ID="{E6BA3AF0-E16C-4274-8509-4EDAB2CA73A4}" ShortID="171366859">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Vending_Machine_On_LP" ID="{0BFE78DB-CE50-4169-B22A-9D3C48BFFD1B}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vending_Machine_Error" ID="{34F4F43D-70AC-432F-9430-952CA3555096}">
+					<ChildrenList>
+						<Action Name="" ID="{941E7489-59C9-4EFA-BE7B-9E9F8A064A36}" ShortID="416882944">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Vending_Machine_Error" ID="{B95243C5-CB07-4D87-8272-58082E26DC63}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

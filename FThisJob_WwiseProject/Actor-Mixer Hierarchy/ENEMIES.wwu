@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="ENEMIES" ID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="WU_TURRET" ID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}" PersistMode="Reference"/>
+				<WorkUnit Name="WU_FLYING_ROBOTS" ID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}" PersistMode="Reference"/>
+				<WorkUnit Name="WU_SECURTIY_GUARDS" ID="{21D6008E-D6E2-437F-9A19-806FCC63BFEC}" PersistMode="Reference"/>
+				<WorkUnit Name="WU_BOSS_THE_CEO" ID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

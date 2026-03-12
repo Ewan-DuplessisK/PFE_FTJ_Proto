@@ -73,6 +73,14 @@ void UPauseMenuWidget::OnResumeClicked() const
 
 void UPauseMenuWidget::OnSettingsClicked()
 {
+	const APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	AGameHUD* HUD = Cast<AGameHUD>(PC->GetHUD());
+
+	if (ensure(HUD))
+	{
+		HUD->OpenSettingsInBlueprint();
+	}
+	
 	Super::OnSettingsClicked();
 }
 

@@ -29,4 +29,9 @@ public:
 
 	UFUNCTION()
 	void ResumeGame();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void PauseGameInBlueprint();
+	UFUNCTION(BlueprintImplementableEvent)
+	void ResumeGameInBlueprint();
 };

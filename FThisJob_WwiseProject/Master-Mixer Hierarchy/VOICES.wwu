@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FF9B936D-C4ED-4F1A-8499-EB3759DD7285}" SchemaVersion="123">
+	<Busses>
+		<WorkUnit Name="VOICES" ID="{FF9B936D-C4ED-4F1A-8499-EB3759DD7285}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="27"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Bus Name="AB_VOICES" ID="{200A2F7E-181C-4C35-A89B-8572B2F6138E}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{30F46EA7-2B85-41A5-B778-5D627B4C658F}" WorkUnitID="{CDC24A2C-B4B1-47E7-A644-FF77CA93A6D5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="AB_VOICES_LVL_01" ID="{A15668BD-4EF2-4616-8E13-E7DF6961B72F}"/>
+						<Bus Name="AB_VOICES_LVL_02" ID="{F2D52E57-FAC9-4499-8F7D-F9471C6F1967}"/>
+						<Bus Name="AB_VOICES_LVL_03" ID="{81F1D8D9-D6E3-4593-B81C-A843DA07DE24}"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

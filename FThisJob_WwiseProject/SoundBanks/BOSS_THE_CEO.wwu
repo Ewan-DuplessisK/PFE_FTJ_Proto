@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E67F6791-3FF8-4A89-AB55-1C44FF11236A}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}">
+	<SoundBanks>
+		<WorkUnit Name="BOSS_THE_CEO" ID="{E67F6791-3FF8-4A89-AB55-1C44FF11236A}" OwnerID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="BOSS_THE_CEO" ID="{82A8F8A9-776F-4FE0-BF0F-1D06DCAFAD68}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

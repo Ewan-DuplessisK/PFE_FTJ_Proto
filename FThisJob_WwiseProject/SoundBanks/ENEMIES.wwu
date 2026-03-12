@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}">
+	<SoundBanks>
+		<WorkUnit Name="ENEMIES" ID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}" OwnerID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="BOSS_THE_CEO" ID="{E67F6791-3FF8-4A89-AB55-1C44FF11236A}" PersistMode="Reference"/>
+				<WorkUnit Name="FLYING_ROBOTS" ID="{7C21365D-6AEA-4675-B297-DDA4CC40900B}" PersistMode="Reference"/>
+				<WorkUnit Name="TURRET" ID="{45215DE0-6CA4-43E5-ADBE-A45483A74C51}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

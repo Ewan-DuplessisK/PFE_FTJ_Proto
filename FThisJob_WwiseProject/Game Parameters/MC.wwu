@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F01A6234-BB88-4D71-8D5F-B347209A366C}" SchemaVersion="123">
+	<GameParameters>
+		<WorkUnit Name="MC" ID="{F01A6234-BB88-4D71-8D5F-B347209A366C}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="3"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<GameParameter Name="RTPC_Vaccum_Ammo" ID="{98694FB2-FC86-4832-B3A2-B0C28D9EE6DF}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="50"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_Vaccum_Suck_Pitch" ID="{14D5B901-DC82-4EF2-982D-3A59D0E54FC2}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="50"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

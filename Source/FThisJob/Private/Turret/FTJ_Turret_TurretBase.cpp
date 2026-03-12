@@ -27,11 +27,6 @@ void AFTJ_Turret_TurretBase::BeginPlay()
     Sight = Perception->GetSenseConfig<UAISenseConfig_Sight>();
     //Synchronize the sight radius to trigger with the perception
     SetRange(Range);
-    ShowSound = Cast<UAudioComponent>(GetDefaultSubobjectByName(TEXT("ShowSound")));
-    ShootSound = Cast<UAudioComponent>(GetDefaultSubobjectByName(TEXT("ShootSound")));
-    HitSound = Cast<UAudioComponent>(GetDefaultSubobjectByName(TEXT("HitSound")));
-    DeathSound = Cast<UAudioComponent>(GetDefaultSubobjectByName(TEXT("DeathSound")));
-    HideSound = Cast<UAudioComponent>(GetDefaultSubobjectByName(TEXT("HideSound")));
     ShowEffect = Cast<UNiagaraComponent>(GetDefaultSubobjectByName(TEXT("ShowEffect")));
     ShootEffect = Cast<UNiagaraComponent>(GetDefaultSubobjectByName(TEXT("ShootEffect")));
     HitEffect = Cast<UNiagaraComponent>(GetDefaultSubobjectByName(TEXT("HitEffect")));
@@ -68,7 +63,6 @@ void AFTJ_Turret_TurretBase::GetHit_Implementation(float InDamage , float InStun
     Health -= InDamage;
     if(Health <= 0.0)
     {
-        DeathSound->Activate();
         DeathEffect->Activate();
         AdditionalDeathEffect->Activate();
         Perception->OnTargetPerceptionUpdated.RemoveDynamic(this , &AFTJ_Turret_TurretBase::OnSensed);
@@ -76,6 +70,7 @@ void AFTJ_Turret_TurretBase::GetHit_Implementation(float InDamage , float InStun
         Mesh->SetVisibility(false);
         Collision->SetSimulatePhysics(false);
         Collision->SetCollisionProfileName("NoCollision");
+        OnTurretDestroyed();
         GetWorld()->GetTimerManager().SetTimer
         (
             Timer
@@ -90,20 +85,22 @@ void AFTJ_Turret_TurretBase::GetHit_Implementation(float InDamage , float InStun
         );
         return;
     }
-    HitSound->Activate();
     HitEffect->Activate();
     bIsHit = true;
+    OnTurretHit();
 }
 
 void AFTJ_Turret_TurretBase::EndPlay(EEndPlayReason::Type const InReason)
 {
     GetWorld()->GetTimerManager().ClearTimer(Timer);
+    GetWorld()->GetTimerManager().ClearTimer(PreShootingTimer);
     Super::EndPlay(InReason);
 }
 
 void AFTJ_Turret_TurretBase::Shoot()
 {
     //Set up a shooting timer
+    auto Delay{FMath::RandRange(MinimalCooldown , MaximalCooldown)};
     GetWorld()->GetTimerManager().SetTimer
     (
         Timer
@@ -121,12 +118,23 @@ void AFTJ_Turret_TurretBase::Shoot()
             )
             ->Spawn(this);
             Shoot();
-            ShootSound->Activate();
             ShootEffect->Activate();
             bIsShooting = true;
+            OnTurretShoot();
         }
         ,
-        1'000'000.0 , false , FMath::RandRange(MinimalCooldown , MaximalCooldown)
+        1'000'000.0 , false , Delay
+    );
+    GetWorld()->GetTimerManager().SetTimer
+    (
+        PreShootingTimer
+        ,
+        [&]
+        {
+            OnTurretPreShoot();
+        }
+        ,
+        1'000'000.0 , false , Delay - PreShootingTimepoint
     );
 }
 
@@ -156,8 +164,8 @@ void AFTJ_Turret_TurretBase::OnSensed(AActor * InActor , FAIStimulus InStimulus)
             ,
             1'000'000.0 , false , ShowingDelay
         );
-        ShowSound->Activate();
         ShowEffect->Activate();
+        OnTurretShow();
     }
     else
     {
@@ -170,7 +178,7 @@ void AFTJ_Turret_TurretBase::OnSensed(AActor * InActor , FAIStimulus InStimulus)
             [&]
             {
                 bIsSensing = false;
-                HideSound->Activate();
+                OnTurretHide();
             }
             ,
             1'000'000.0 , false , HidingDelay

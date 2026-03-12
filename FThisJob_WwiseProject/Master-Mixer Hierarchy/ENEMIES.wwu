@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3B035C83-A030-410F-8993-B6958AAAF989}" SchemaVersion="123">
+	<Busses>
+		<WorkUnit Name="ENEMIES" ID="{3B035C83-A030-410F-8993-B6958AAAF989}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Bus Name="AB_ENEMIES" ID="{D70C0868-40F1-4717-AD07-A41F8F7943B1}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{30F46EA7-2B85-41A5-B778-5D627B4C658F}" WorkUnitID="{CDC24A2C-B4B1-47E7-A644-FF77CA93A6D5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="AB_ENEMIES_01" ID="{17A64253-1BA3-46A1-ABBB-46C672FC576B}"/>
+						<Bus Name="AB_ENEMIES_02" ID="{EC31A297-ED1F-4638-A50A-5141F61D7741}"/>
+						<Bus Name="AB_ENEMIES_03" ID="{9DB2FA4D-85E2-46E5-AD65-EFA1711DCD68}"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CBB6C57B-F436-4A37-A4A3-9D1F175394B7}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{CBAA17B3-C526-4FC5-8392-E3214569C061}">
+	<SoundBanks>
+		<WorkUnit Name="GPE_LVL_01" ID="{CBB6C57B-F436-4A37-A4A3-9D1F175394B7}" OwnerID="{CBAA17B3-C526-4FC5-8392-E3214569C061}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="GPE_LVL_01" ID="{A2759956-F2AD-4580-83A4-2BF9D2AA540D}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

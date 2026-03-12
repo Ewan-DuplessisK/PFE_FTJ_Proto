@@ -15,6 +15,8 @@ class FTHISJOB_API UBaseGameInstance : public UGameInstance
 	GENERATED_BODY()
 
 	virtual void Init() override;
+
+	void OnMapLoaded(UWorld* World);
 	
 public:
 	UPROPERTY(EditDefaultsOnly)
@@ -22,6 +24,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	class USettingsSave* GetSettingsSave() const;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void MapSettingsData();
 
 protected:
 	UPROPERTY()

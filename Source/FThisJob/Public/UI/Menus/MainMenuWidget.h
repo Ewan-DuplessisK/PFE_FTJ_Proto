@@ -17,7 +17,11 @@ class FTHISJOB_API UMainMenuWidget : public UBaseMenuWidget
 public:
 	virtual void NativeConstruct() override;
 
+	virtual void NativeOnActivated() override;
+
 	virtual class UMainMenuButton* GetFocusedButton() const override;
+
+	virtual TOptional<FUIInputConfig> GetDesiredInputConfig() const override;
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void SwitchCameraPlay();
@@ -33,6 +37,8 @@ public:
 
 	virtual void UnQuit() override;
 
+	UPROPERTY(BlueprintReadWrite)
+	bool bHasBeenActivatedAlready;
 
 protected:
 	virtual void OnChangeLevelClicked() override;
@@ -40,6 +46,7 @@ protected:
 	virtual void OnQuitClicked() override;
 
 	virtual void OnSettingsClicked() override;
+
 
 
 };

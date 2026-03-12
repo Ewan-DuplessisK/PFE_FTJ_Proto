@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}" SchemaVersion="123" RootDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" ParentDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}">
+	<AudioObjects>
+		<WorkUnit Name="WU_TURRET" ID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}" OwnerID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_TURRET" ID="{A5A38560-BEE5-4A9E-86B6-15D5118873EE}" ShortID="923107729">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="AM_TURRET_Voice" ID="{AB045F63-FC36-4DCA-A616-FF18ECFF7731}" ShortID="319196901">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="RC_TURRET_Voice_Appear" ID="{381179A6-C5AB-4DDD-A8B6-020897AADACD}" ShortID="26863850">
+									<PropertyList>
+										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A61C8291-899E-4A97-A318-2E7F29260863}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Robot_Small_Voice_02" ID="{CB5083B5-92CA-45E7-B9E0-B71814489901}" ShortID="798639210">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Robot_Small_Voice_02" ID="{C3E12252-B318-4FFE-B681-9804C5F7742B}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\TURRET\SFX_Robot_Small_Voice_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="70762498"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Robot_Small_Voice_02" ID="{C3E12252-B318-4FFE-B681-9804C5F7742B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Robot_Small_Voice_03" ID="{D6A5AA7D-482A-4830-B9DC-C32775A1A4A8}" ShortID="348863826">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Robot_Small_Voice_03" ID="{0A266EBC-E3DE-4A2A-8A13-39042072D81E}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\TURRET\SFX_Robot_Small_Voice_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="319502260"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Robot_Small_Voice_03" ID="{0A266EBC-E3DE-4A2A-8A13-39042072D81E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Robot_Small_Voice_04" ID="{086F1557-6F7E-4157-A507-36565F422142}" ShortID="963216935">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Robot_Small_Voice_04" ID="{C16A3046-86D8-4C01-8720-536C7EF9D70D}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\TURRET\SFX_Robot_Small_Voice_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="240985668"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Robot_Small_Voice_04" ID="{C16A3046-86D8-4C01-8720-536C7EF9D70D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_TURRET_Voice_Damage" ID="{E9714F73-F986-4530-962B-B123583A7FE4}" ShortID="1043744490">
+									<PropertyList>
+										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1A8468F0-2BBC-4340-9C64-AD7507C011AD}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Robot_Small_Voice_01" ID="{05A2478E-E454-4B43-83CB-7093E9ACE348}" ShortID="720192666">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Robot_Small_Voice_01" ID="{BFB081DE-CB47-4B15-B43D-912EFD5684CE}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\TURRET\SFX_Robot_Small_Voice_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="742425535"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Robot_Small_Voice_01" ID="{BFB081DE-CB47-4B15-B43D-912EFD5684CE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Robot_Small_Voice_05" ID="{737AE64D-E543-4067-9EF6-91236313B6C8}" ShortID="31996065">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Robot_Small_Voice_05" ID="{51FCC106-7857-45D3-B777-75B99D9F8B5B}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\TURRET\SFX_Robot_Small_Voice_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="402622460"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Robot_Small_Voice_05" ID="{51FCC106-7857-45D3-B777-75B99D9F8B5B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Robot_Small_Voice_07" ID="{E84A561B-3E38-4478-9B7D-E30F8A84F109}" ShortID="984333826">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Robot_Small_Voice_07" ID="{E4DCD3BE-1137-4923-A4FC-03C6007175C1}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\TURRET\SFX_Robot_Small_Voice_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="103560841"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Robot_Small_Voice_07" ID="{E4DCD3BE-1137-4923-A4FC-03C6007175C1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_TURRET_Voice_Death" ID="{26162515-F9E2-491E-872F-856C5CED7AB1}" ShortID="792015168">
+									<PropertyList>
+										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{15FA9E1F-E913-414D-BC9A-00A5DD566476}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Robot_Small_Voice_06" ID="{6D49FF63-A148-48E5-9F0A-82B697C0AF6F}" ShortID="383724742">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Robot_Small_Voice_06" ID="{DBABCFCE-104C-4818-ADE9-9FDBB2687250}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\TURRET\SFX_Robot_Small_Voice_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="201168655"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Robot_Small_Voice_06" ID="{DBABCFCE-104C-4818-ADE9-9FDBB2687250}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Robot_Small_Voice_08" ID="{A368E89E-5710-42BB-AA71-4760317235FA}" ShortID="534650238">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Robot_Small_Voice_08" ID="{A4938AE0-DEB1-4A3E-B1A8-ED716C127114}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\TURRET\SFX_Robot_Small_Voice_08.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="495853510"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Robot_Small_Voice_08" ID="{A4938AE0-DEB1-4A3E-B1A8-ED716C127114}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<RandomSequenceContainer Name="RC_TURRET_Damage" ID="{2B066112-FF87-4CDB-B8AA-A6CA22CBA78F}" ShortID="664736919">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Robot_Hit_01" ID="{3ACC9239-1F53-41B3-9DC4-9F9BFF43AA6E}" ShortID="568928142">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Hit_01" ID="{1ED730DA-BF5F-40F8-A4AC-D43951D40FB5}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Hit_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="850772921"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Hit_01" ID="{1ED730DA-BF5F-40F8-A4AC-D43951D40FB5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Hit_02" ID="{5BED48FC-1F98-4358-ACED-DFE3160E11ED}" ShortID="941802756">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Hit_02" ID="{579E6FF8-F797-4CAF-BEFC-9E93C1231E8F}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Hit_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="775794782"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Hit_02" ID="{579E6FF8-F797-4CAF-BEFC-9E93C1231E8F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Hit_03" ID="{9A68FFBB-8769-4527-A344-76289BA096BD}" ShortID="355556915">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Hit_03" ID="{37316684-D038-4F2C-8580-F5800AA0BB06}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Hit_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="174734452"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Hit_03" ID="{37316684-D038-4F2C-8580-F5800AA0BB06}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Hit_04" ID="{292E5627-202A-4E5E-9CCE-F37FF6BA1E91}" ShortID="423479672">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Hit_04" ID="{20DF583E-6D8E-4366-82EE-0DFC4AD3EC5D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Hit_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="257863929"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Hit_04" ID="{20DF583E-6D8E-4366-82EE-0DFC4AD3EC5D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Hit_05" ID="{0D5C4472-3807-4D19-8C03-6C4E620CC4AB}" ShortID="1008071948">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Hit_05" ID="{0126612F-199F-4286-8B5E-FB4ACD330D59}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Hit_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="337367894"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Hit_05" ID="{0126612F-199F-4286-8B5E-FB4ACD330D59}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_TURRET_Explosion" ID="{3EC3D967-F5B0-4CD7-B54B-514C8B979BC2}" ShortID="113113340">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Robot_Explosion_01" ID="{3897A110-D5DC-4C7F-AB9F-CA1DA672E229}" ShortID="160787445">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Explosion_01" ID="{FC3DBDAE-67D7-4FCF-893A-2A4201F96C82}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Explosion_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="528944104"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Explosion_01" ID="{FC3DBDAE-67D7-4FCF-893A-2A4201F96C82}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Explosion_02" ID="{5D6A8934-E745-4F8E-8B21-3A932F84BD9B}" ShortID="71394060">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Explosion_02" ID="{2D637EB1-073A-49DB-B715-FB5F8B25D993}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Explosion_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="211391567"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Explosion_02" ID="{2D637EB1-073A-49DB-B715-FB5F8B25D993}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Explosion_03" ID="{EBEC838A-A15D-418E-91AA-E9AAE7FF08D5}" ShortID="250390389">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Explosion_03" ID="{BFFFACFE-8043-446C-ADAD-40EC06A60261}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Explosion_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="141567871"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Explosion_03" ID="{BFFFACFE-8043-446C-ADAD-40EC06A60261}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Explosion_04" ID="{1A5C1379-D840-43D9-9970-137A31E075B8}" ShortID="907263688">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Explosion_04" ID="{5DD33D5B-FEA1-461C-A022-EBFD07485195}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Explosion_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="889704423"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Explosion_04" ID="{5DD33D5B-FEA1-461C-A022-EBFD07485195}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_TURRET_Appear" ID="{B488281A-1828-4B5B-BB4F-1FD50F5D859B}" ShortID="264175807">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Robot_Appear_01" ID="{5BC8D2FA-FA79-4D45-BA3D-4A05EF7D1B44}" ShortID="238556809">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Appear_01" ID="{DD62A535-EEC7-4E5B-B73B-7700A6A960B3}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Appear_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="306073926"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Appear_01" ID="{DD62A535-EEC7-4E5B-B73B-7700A6A960B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Appear_02" ID="{23521260-A521-4E7C-8575-75DBD572EA5B}" ShortID="102796595">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Appear_02" ID="{98F2AC3E-3FBA-4C3C-B4D7-D390DE44CF4A}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Appear_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="15783071"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Appear_02" ID="{98F2AC3E-3FBA-4C3C-B4D7-D390DE44CF4A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Appear_03" ID="{6F8244BA-2EC1-4801-BA64-E0DB220DD159}" ShortID="546075070">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Appear_03" ID="{A8517DDA-1BA5-4B27-8303-F1234177A480}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Appear_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1574637"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Appear_03" ID="{A8517DDA-1BA5-4B27-8303-F1234177A480}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_TURRET_Disappear" ID="{3958086D-B3DC-4407-9BE3-B85F647071C3}" ShortID="775753496">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Robot_Disappear_01" ID="{AE127A0E-49CC-4F64-A870-5417562F7F71}" ShortID="824620699">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Disappear_01" ID="{A0B6F263-C92C-4D98-B807-B403F64038D1}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Disappear_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="307013799"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Disappear_01" ID="{A0B6F263-C92C-4D98-B807-B403F64038D1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Disappear_02" ID="{0E482EA8-183B-4DE1-BD84-CD7069F1D756}" ShortID="377614634">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Disappear_02" ID="{10FD94C8-02D7-49D4-B740-0C44D0BA7FFB}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Disappear_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="109281745"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Disappear_02" ID="{10FD94C8-02D7-49D4-B740-0C44D0BA7FFB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Disappear_03" ID="{C06734F0-01B7-4C8A-9B85-DD038297DB06}" ShortID="66923225">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Disappear_03" ID="{CD82AD8C-374A-46E1-BECA-8A23455FD0D2}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Disappear_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="614374098"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Disappear_03" ID="{CD82AD8C-374A-46E1-BECA-8A23455FD0D2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_TURRET_Shoot" ID="{92A0E538-7497-4FF6-B906-130941AEF970}" ShortID="720768026">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Robot_Shoot_01" ID="{2243A6C0-6779-4E6A-A7F5-2DC7C23DB96A}" ShortID="41287403">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Shoot_01" ID="{A132E493-B5F0-4802-B481-D8BA27194D99}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Shoot_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="736654975"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Shoot_01" ID="{A132E493-B5F0-4802-B481-D8BA27194D99}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Shoot_02" ID="{03E0EBAE-4C46-4060-84D1-223D79267A98}" ShortID="212793292">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Shoot_02" ID="{1CF56B74-F781-47FD-AAD7-287C725183F3}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Shoot_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="752299451"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Shoot_02" ID="{1CF56B74-F781-47FD-AAD7-287C725183F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Shoot_03" ID="{077076CD-1AD2-463D-8270-0967A2855AED}" ShortID="590760737">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Robot_Shoot_03" ID="{EEA0AD89-2674-4EB2-98BA-F83237BA471B}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Shoot_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="959307242"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Robot_Shoot_03" ID="{EEA0AD89-2674-4EB2-98BA-F83237BA471B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_TURRET_Charge" ID="{7DE3F94D-B517-4B62-8987-4AFB746AADA3}" ShortID="640007579">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Robot_Charge_01" ID="{4C075688-34AC-46B4-9230-87544D99B4A7}" ShortID="206156913">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MC_Robot_Charge_01" ID="{A8E3D428-F164-48A0-8FE2-77420700E9DC}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\MC_Robot_Charge_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="843637883"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MC_Robot_Charge_01" ID="{A8E3D428-F164-48A0-8FE2-77420700E9DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Charge_02" ID="{3B5958FC-91F5-48AE-B247-4E481157FBA0}" ShortID="105364008">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MC_Robot_Charge_02" ID="{4FEC556A-A665-45B5-BFD8-3D5F16A17884}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\MC_Robot_Charge_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="260748206"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MC_Robot_Charge_02" ID="{4FEC556A-A665-45B5-BFD8-3D5F16A17884}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Charge_03" ID="{8257E1A1-163C-4000-8E11-DAC593905DA9}" ShortID="49257462">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MC_Robot_Charge_03" ID="{74E08C7F-3113-4A4D-BC86-C39F40D15A01}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\MC_Robot_Charge_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="892751571"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MC_Robot_Charge_03" ID="{74E08C7F-3113-4A4D-BC86-C39F40D15A01}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_TURRET_Bullet_PassBy" ID="{9FB42F00-2909-4E02-AC4D-A86E6F1115A8}" ShortID="919226942">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Robot_Bullet_PassBy_01" ID="{1465AC06-0379-4DCC-96FA-384F77911E8C}" ShortID="216371433">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MC_Robot_Bullet_PassBy_01" ID="{DFD9DD10-60EB-4B2E-825F-E20793AE0DE7}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\MC_Robot_Bullet_PassBy_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="897541544"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MC_Robot_Bullet_PassBy_01" ID="{DFD9DD10-60EB-4B2E-825F-E20793AE0DE7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Bullet_PassBy_02" ID="{3A5617A0-5952-489A-82EC-307066000A65}" ShortID="637773346">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MC_Robot_Bullet_PassBy_02" ID="{A6B21BE5-182C-4458-B2E2-A3B3DE84B6C5}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\MC_Robot_Bullet_PassBy_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="120761753"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MC_Robot_Bullet_PassBy_02" ID="{A6B21BE5-182C-4458-B2E2-A3B3DE84B6C5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Bullet_PassBy_03" ID="{4FB4D137-4FBB-40EF-BABA-DB3AA4F2C5EB}" ShortID="685836036">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MC_Robot_Bullet_PassBy_03" ID="{2C2F288D-C1C4-43AA-AB96-0024994B41C2}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\MC_Robot_Bullet_PassBy_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="37212620"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MC_Robot_Bullet_PassBy_03" ID="{2C2F288D-C1C4-43AA-AB96-0024994B41C2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Robot_Bullet_PassBy_04" ID="{8B8FFA34-088B-4993-8961-0E0C2D9E4727}" ShortID="883483101">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MC_Robot_Bullet_PassBy_04" ID="{1E4EB7C2-156A-4938-84DF-49AD6350680D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\MC_Robot_Bullet_PassBy_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="288142238"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MC_Robot_Bullet_PassBy_04" ID="{1E4EB7C2-156A-4938-84DF-49AD6350680D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

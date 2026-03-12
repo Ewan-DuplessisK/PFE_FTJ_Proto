@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7C21365D-6AEA-4675-B297-DDA4CC40900B}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}">
+	<SoundBanks>
+		<WorkUnit Name="FLYING_ROBOTS" ID="{7C21365D-6AEA-4675-B297-DDA4CC40900B}" OwnerID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="FLYING_ROBOTS" ID="{3C40D382-E2D7-40B4-9D5E-248C8DF2F1C7}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

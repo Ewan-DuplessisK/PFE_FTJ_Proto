@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{601C3478-0D2B-4F23-BA36-5056CA217E57}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}">
+	<Events>
+		<WorkUnit Name="TURRET" ID="{601C3478-0D2B-4F23-BA36-5056CA217E57}" OwnerID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Turret_Appear" ID="{5A5170D0-1D46-47FD-9307-746E67620EE4}">
+					<ChildrenList>
+						<Action Name="" ID="{B7F6582E-157D-471C-8577-DE887E93999E}" ShortID="882748952">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Appear" ID="{B488281A-1828-4B5B-BB4F-1FD50F5D859B}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BDD8D135-9913-4623-99FE-28024CFC0C40}" ShortID="574217032">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CD3B427E-3BD0-4CCF-A834-F41F4E6DD09B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Voice_Appear" ID="{381179A6-C5AB-4DDD-A8B6-020897AADACD}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Turret_Disappear" ID="{D38D558E-E36B-4B2E-B9A3-06B1ECD964CB}">
+					<ChildrenList>
+						<Action Name="" ID="{DCFE0030-7A8E-4E90-BE13-0112C2082582}" ShortID="537851668">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Disappear" ID="{3958086D-B3DC-4407-9BE3-B85F647071C3}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4159624A-7700-4019-929D-77DD449EC0C0}" ShortID="648504651">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Charge" ID="{7DE3F94D-B517-4B62-8987-4AFB746AADA3}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Turret_Hit" ID="{17D52AB1-73F1-4442-8BA6-36544D80A4EC}">
+					<ChildrenList>
+						<Action Name="" ID="{22CC22A5-966D-4928-B40B-F2A52BCAF3B4}" ShortID="671271436">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Damage" ID="{2B066112-FF87-4CDB-B8AA-A6CA22CBA78F}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E44E62D0-D3BB-4AE1-852C-21CE32753399}" ShortID="977942790">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Voice_Damage" ID="{E9714F73-F986-4530-962B-B123583A7FE4}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6A0C331E-6E84-449C-8BDD-3013FB4F47C8}" ShortID="455930759">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Charge" ID="{7DE3F94D-B517-4B62-8987-4AFB746AADA3}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Turret_Death" ID="{5E517214-7369-4813-9B61-C36581BCADEC}">
+					<ChildrenList>
+						<Action Name="" ID="{1447D8EB-B400-4B89-94D9-F7C7DFDA69D9}" ShortID="281442454">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Explosion" ID="{3EC3D967-F5B0-4CD7-B54B-514C8B979BC2}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{125A854D-A0B4-4BC4-A717-9049EDC2E880}" ShortID="628285181">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Voice_Death" ID="{26162515-F9E2-491E-872F-856C5CED7AB1}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1CBABF2F-E047-4EC6-B45B-C2AAC550420F}" ShortID="712272115">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Charge" ID="{7DE3F94D-B517-4B62-8987-4AFB746AADA3}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Turret_Shoot" ID="{28EC0E76-A3F5-4339-93AE-0C60E6812F7B}">
+					<ChildrenList>
+						<Action Name="" ID="{8B02EC7A-9740-4C06-A6E4-8A85330C20FB}" ShortID="503245401">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Shoot" ID="{92A0E538-7497-4FF6-B906-130941AEF970}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Turret_Charge" ID="{81CC9EBD-C986-4D25-8012-BECD6DD382FE}">
+					<ChildrenList>
+						<Action Name="" ID="{84DDD47F-62ED-4A08-B25A-22EA8984ADB5}" ShortID="534115047">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Charge" ID="{7DE3F94D-B517-4B62-8987-4AFB746AADA3}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Turret_Bullet_PassBy" ID="{360C5B83-FC1A-40CE-9BD0-A47091C9D725}">
+					<ChildrenList>
+						<Action Name="" ID="{CFC31CC9-D18A-49EF-96CD-A6C90A72AA32}" ShortID="195799488">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Bullet_PassBy" ID="{9FB42F00-2909-4E02-AC4D-A86E6F1115A8}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

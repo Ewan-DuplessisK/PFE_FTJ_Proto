@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{21D6008E-D6E2-437F-9A19-806FCC63BFEC}" SchemaVersion="123" RootDocumentID="{50F281B2-308B-410C-A95E-7ED5349D7002}" ParentDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}">
+	<AudioObjects>
+		<WorkUnit Name="WU_SECURTIY_GUARDS" ID="{21D6008E-D6E2-437F-9A19-806FCC63BFEC}" OwnerID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_SECURITY_GUARDS" ID="{E976061A-F421-4EAA-A22A-6D33553A1015}" ShortID="567085918">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

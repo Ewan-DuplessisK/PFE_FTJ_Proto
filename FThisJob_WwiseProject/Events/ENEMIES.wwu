@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}">
+	<Events>
+		<WorkUnit Name="ENEMIES" ID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" OwnerID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="BOSS_THE_CEO" ID="{0D84605E-2432-4004-B2F5-8E80848063F5}" PersistMode="Reference"/>
+				<WorkUnit Name="FLYING_ROBOTS" ID="{1457C4F2-19A3-4E28-ACA5-CBCC67E57A60}" PersistMode="Reference"/>
+				<WorkUnit Name="SECURITY_GUARDS" ID="{73E762C4-2FE4-40FB-A0C9-53BD8BDA56D2}" PersistMode="Reference"/>
+				<WorkUnit Name="TURRET" ID="{601C3478-0D2B-4F23-BA36-5056CA217E57}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

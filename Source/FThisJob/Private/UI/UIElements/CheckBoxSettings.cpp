@@ -4,6 +4,7 @@
 #include "UI/UIElements/CheckBoxSettings.h"
 
 #include "CommonTextBlock.h"
+#include "Components/CheckBox.h"
 #include "Components/RichTextBlock.h"
 
 void UCheckBoxSettings::NativeConstruct()
@@ -29,6 +30,13 @@ void UCheckBoxSettings::NativeOnUnhovered()
 	CommonTextBlock->SetStyle(NormalTextStyle);
 
 	Super::NativeOnUnhovered();
+}
+
+void UCheckBoxSettings::NativeOnClicked()
+{
+	Super::NativeOnClicked();
+
+	CheckBox->SetIsChecked(!CheckBox->IsChecked());
 }
 
 class UCheckBox* UCheckBoxSettings::GetCheckBox() const

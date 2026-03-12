@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{ED720400-EB28-4A80-B32C-E600131A82D2}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="MC" ID="{ED720400-EB28-4A80-B32C-E600131A82D2}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="3"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<StateGroup Name="MC_RunWalk" ID="{919A58E4-4676-4114-9B17-9404A0EC2345}">
+					<ChildrenList>
+						<State Name="None" ID="{F19508C5-D6A3-4C6F-A152-0EAF8CA13CC6}"/>
+						<State Name="Run" ID="{DE549E63-0F42-4BBF-B3F0-948F091BEC04}"/>
+						<State Name="Walk" ID="{FAC30609-5C73-4254-998D-3FA30D2B9334}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MC_Vaccum_Duck" ID="{0C5B537A-4155-4E60-AE0C-E573A29477BF}">
+					<ChildrenList>
+						<State Name="None" ID="{7FAB4050-F94E-43F6-9FAF-567D4B45FCF2}"/>
+						<State Name="On" ID="{7F418AA0-FEFA-47B9-9A10-865AA5ACC0FE}"/>
+						<State Name="Off" ID="{A1ED2278-BC90-43C7-BF12-06F3E5594BCB}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Off" ID="{A1ED2278-BC90-43C7-BF12-06F3E5594BCB}"/>
+							<EndState Name="On" ID="{7F418AA0-FEFA-47B9-9A10-865AA5ACC0FE}"/>
+							<Time>0.02</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="On" ID="{7F418AA0-FEFA-47B9-9A10-865AA5ACC0FE}"/>
+							<EndState Name="Off" ID="{A1ED2278-BC90-43C7-BF12-06F3E5594BCB}"/>
+							<Time>0.05</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

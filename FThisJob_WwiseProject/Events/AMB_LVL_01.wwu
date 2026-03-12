@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6FB04D22-D3F3-4CC5-B6C7-AA96E5D90D65}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}">
+	<Events>
+		<WorkUnit Name="AMB_LVL_01" ID="{6FB04D22-D3F3-4CC5-B6C7-AA96E5D90D65}" OwnerID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Beds_General_Office" ID="{A174EE7C-7EB6-4717-A222-BF851D287061}">
+					<ChildrenList>
+						<Action Name="" ID="{49B0EE96-A169-43CC-BB7A-8FC107DA0020}" ShortID="821977464">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_BEDS_RT_Office_LP" ID="{037AF497-D059-4E7C-B3EA-FFCE0B9AB558}" WorkUnitID="{75B889A3-5814-408D-BCAA-5905B30ABAA3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Sp_OldPc_Office" ID="{7D6C1C9A-9E8E-4025-B554-D572B2752FBC}">
+					<ChildrenList>
+						<Action Name="" ID="{29362CCD-ACAF-45D0-9F3F-10D3D0819EB5}" ShortID="275568958">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_SP_PC_LP" ID="{20707B59-AA49-4B02-8725-03E01DB0DAFE}" WorkUnitID="{75B889A3-5814-408D-BCAA-5905B30ABAA3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

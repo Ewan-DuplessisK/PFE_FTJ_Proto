@@ -12,13 +12,13 @@ struct FPoolRequestResponce
 	GENERATED_BODY()
 	
 	UPROPERTY(BlueprintReadOnly)
-	bool Success;
+	bool Success = false;
 	
 	UPROPERTY(BlueprintReadOnly)
 	FString Message;
 	
 	UPROPERTY(BlueprintReadOnly)
-	TArray<class AEnemy_Base*> EnemyPointers;
+	TArray<class AActor*> ActorPointers;
 };
 
 UCLASS()
@@ -31,32 +31,53 @@ public:
 	
 	// Sets default values for this actor's properties
 	APoolingManager();
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	
-	UFUNCTION(BlueprintNativeEvent, Blueprintable, BlueprintCallable, meta=(ToolTip="Request {Num} Enemies of {Class} class from the Pool"))
-	FPoolRequestResponce PooledActorRequest(TSubclassOf<AEnemy_Base> Class, int Num);
+	UFUNCTION(BlueprintNativeEvent, Blueprintable, BlueprintCallable, meta=(ToolTip="Request {Num} Actor of {Class} class from the Pool"))
+	FPoolRequestResponce PooledActorRequest(TSubclassOf<AActor> Class, int Num);
 	
-	UFUNCTION(BlueprintNativeEvent, Blueprintable, BlueprintCallable, meta=(ToolTip="Give back an Enemy to the Pool once it's dead or unloaded"))
-	bool HandOverActor(AEnemy_Base* Actor);
+	UFUNCTION(BlueprintNativeEvent, Blueprintable, BlueprintCallable, meta=(ToolTip="Give back an Actor to the Pool once it's dead or unloaded"))
+	bool HandOverActor(AActor* Actor);
 	
 	/**Public variables*/
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(ToolTip="Spawn Point of all the enemies assigned to the pooling manager"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Default", meta=(ToolTip="Spawn Point of all the Actors assigned to the pooling manager"))
 	FVector PoolSpawnPosition;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(ToolTip="DO NOT TOUCH"))
-	TMap<TSubclassOf<class AEnemy_Base>, int> PoolSizeMap;
+	/** Amount of a certain class */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Default", meta=(ToolTip="DO NOT TOUCH"))
+	TMap<TSubclassOf<class AActor>, int> PoolSizeMap;
 	
-	/** all spawned enemies of a certain class */
-	TMap<TSubclassOf<class AEnemy_Base>, TArray<class AEnemy_Base*>> Pool;
+	/** All spawned enemies of a certain class */
+	TMap<TSubclassOf<class AActor>, TArray<class AActor*>> Pool;
+	
+	// Suckable Vars
+	
+	/** Should we make the pool from existing Suckable assets on the scene or spawn them ourselves */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Suck")
+	bool MakePoolFromExistingSuckables = false;
+	/** Amount of LIGHT Suckable */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Suck|Amount", meta = (EditCondition="!MakePoolFromExistingSuckables"))
+	int SuckableAmount_Light = 500;
+	/** Amount of MEDIUM Suckable */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Suck|Amount", meta = (EditCondition="!MakePoolFromExistingSuckables"))
+	int SuckableAmount_Medium = 500;
+	/** Amount of HEAVY Suckable */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Suck|Amount", meta = (EditCondition="!MakePoolFromExistingSuckables"))
+	int SuckableAmount_Heavy = 500;
+	/** Which Classes of Suckable Props should we spawn */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Suck", meta = (EditCondition="!MakePoolFromExistingSuckables"))
+	TArray<TSubclassOf<AActor>> SuckableToSpawn;
 	
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(ToolTip="DO NOT TOUCH"))
-	TArray<class AEnemy_Base*> TempPoolArray;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Temp", meta = (ToolTip="DO NOT TOUCH"))
+	TArray<class AActor*> TempPoolActorsArray;
 	
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Temp", meta = (ToolTip="DO NOT TOUCH"))
+	TArray<TSubclassOf<AActor>> TempPoolClassesArray;
 	
 	UFUNCTION(BlueprintNativeEvent, Blueprintable, BlueprintCallable)
 	void InitializePoolSize();
@@ -64,5 +85,5 @@ protected:
 	void PopulatePool();
 	
 	UFUNCTION(Blueprintable, BlueprintCallable)
-	void AddTempToPool(TArray<TSubclassOf<AEnemy_Base>> EnemiesClasses, TArray<class AEnemy_Base*> SpawnedEnemies); 
+	void AddTempToPool(TArray<TSubclassOf<AActor>> ActorClasses, TArray<class AActor*> SpawnedActors); 
 };
