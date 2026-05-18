@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="TURRET" ID="{667EC829-AFB4-4643-B125-2D464A80D87B}">
 					<ObjectInclusionList>
+						<ObjectRef Name="AB_ENEMIES_01" ID="{96FA30C6-D9A0-4517-AF79-368F6E7D32CD}" WorkUnitID="{FA4E556E-03CC-4D15-967D-9EC8AFAF9369}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TURRET" ID="{601C3478-0D2B-4F23-BA36-5056CA217E57}" WorkUnitID="{601C3478-0D2B-4F23-BA36-5056CA217E57}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

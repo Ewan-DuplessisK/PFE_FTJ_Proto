@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CC76E281-2C99-49F3-82F9-3FD125494A2B}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="AMB" ID="{CC76E281-2C99-49F3-82F9-3FD125494A2B}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<StateGroup Name="AMB_Menu" ID="{E0DD2CA8-44C4-490C-8F09-281DD5B515A9}">
+					<ChildrenList>
+						<State Name="None" ID="{B6E45F90-8CB4-4A32-9046-F381468115E7}"/>
+						<State Name="Quit" ID="{2411D6AF-F760-4219-BE3B-79644F9E7638}"/>
+						<State Name="Enter" ID="{1485C4FB-D1D9-4C0D-8382-D398A80F912D}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

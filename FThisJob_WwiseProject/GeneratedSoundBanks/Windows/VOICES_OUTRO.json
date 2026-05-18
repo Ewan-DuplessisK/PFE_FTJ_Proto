@@ -1,0 +1,95 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "305893232",
+    "Type": "User",
+    "GUID": "{0E527151-6986-4E8D-8DC1-3E19B0400A02}",
+    "Color": "27",
+    "Language": "SFX",
+    "Hash": "{705ABF6D-7A80-CE71-A5F0-8F9F0B62EA58}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOICES\\VOICES_OUTRO\\VOICES_OUTRO",
+    "ShortName": "VOICES_OUTRO",
+    "Path": "VOICES_OUTRO.bnk",
+    "Media": [
+     {
+      "Id": "400129071",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Outro\\VOC_Jake_Cutscene_Outro_01.wav",
+      "CachePath": "80/{80CD448F-0A64-087E-846F-2AF54965892C}.wem"
+     },
+     {
+      "Id": "534695601",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Outro\\VOC_Jake_Cutscene_Outro_02.wav",
+      "CachePath": "99/{99EE94DA-4679-1936-8C8F-A31D16B4E73C}.wem"
+     },
+     {
+      "Id": "630093348",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Outro\\VOC_Jake_Cutscene_Outro_03.wav",
+      "CachePath": "60/{609B3A2C-7FF1-629D-8A2E-F09E607087EB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2203717666",
+      "Name": "VOC_Jake_Cutscene_Outro_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_OUTRO\\VOC_Jake_Cutscene_Outro_01",
+      "GUID": "{A61C4D91-7B68-4603-A691-1BE49FAA659F}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "13.0182085",
+      "DurationMax": "13.0182085",
+      "MediaRefs": [
+       {
+        "Id": "400129071"
+       }
+      ]
+     },
+     {
+      "Id": "2203717665",
+      "Name": "VOC_Jake_Cutscene_Outro_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_OUTRO\\VOC_Jake_Cutscene_Outro_02",
+      "GUID": "{E4F31490-AC1F-409D-855B-D07E3B9F13C7}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "15.336792",
+      "DurationMax": "15.336792",
+      "MediaRefs": [
+       {
+        "Id": "534695601"
+       }
+      ]
+     },
+     {
+      "Id": "2203717664",
+      "Name": "VOC_Jake_Cutscene_Outro_03",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_OUTRO\\VOC_Jake_Cutscene_Outro_03",
+      "GUID": "{2B309FD9-6313-4E5F-BB41-A9C3A89BCBF3}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "3.0212293",
+      "DurationMax": "3.0212293",
+      "MediaRefs": [
+       {
+        "Id": "630093348"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{FB8EB364-2D29-7921-B790-DC0F9C3230E4}"
+ }
+}

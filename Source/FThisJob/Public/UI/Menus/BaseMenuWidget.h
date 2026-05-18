@@ -1,74 +1,55 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "CommonActivatableWidget.h"
-#include "BaseMenuWidget.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API UBaseMenuWidget : public UCommonActivatableWidget
+#include"CoreMinimal.h"
+#include"CommonActivatableWidget.h"
+#include"BaseMenuWidget.generated.h"
+
+//
+
+class UVerticalBox;
+class UMainMenuButton;
+
+//
+
+UCLASS() class FTHISJOB_API UBaseMenuWidget : public UCommonActivatableWidget
 {
-	GENERATED_BODY()
-public:
-	virtual class UMainMenuButton* GetFocusedButton() const;
+    GENERATED_BODY()
 
-	virtual void NativeConstruct() override;
+    private:
 
-	virtual class UVerticalBox* GetMenuVerticalBox() const;
+    protected:
 
-protected:
+    //Widgets Button
+    UPROPERTY(BlueprintReadWrite , Meta = (BindWidget)) UMainMenuButton * ChangeLevelButton;
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) UMainMenuButton * SettingsButton;
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) UMainMenuButton * QuitButton;
 
-	// Buttons Functions
-	UFUNCTION()
-	virtual void OnChangeLevelClicked();
+    //Variables for GD
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Menus" , Meta = (AllowedClasses = "World")) TSoftObjectPtr<UWorld> NewLevel;
+    
+    public:
 
-	UFUNCTION()
-	virtual void OnSettingsClicked() ;
+    private:
 
-	UFUNCTION()
-	virtual void OnQuitClicked();
+    protected:
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void Quit();
+    //Buttons Functions
+    UFUNCTION() virtual void OnChangeLevelClicked();
+    UFUNCTION() virtual void OnSettingsClicked();
+    UFUNCTION() virtual void OnQuitClicked();
 
-	UFUNCTION(BlueprintCallable)
-	virtual void UnQuit();
+    UFUNCTION(BlueprintImplementableEvent) void Quit();
+    UFUNCTION(BlueprintCallable) virtual void UnQuit();
 
-	UFUNCTION(BlueprintCallable)
-	void OpenSettings();
+    UFUNCTION(BlueprintCallable) void OpenSettings();
+    UFUNCTION(BlueprintCallable) void OpenQuitPanel();
+    
+    public:
 
-	UFUNCTION(BlueprintCallable)
-	void OpenQuitPanel();
+    virtual void NativeConstruct() override;
 
-	
-	// Widgets Button
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
-	UMainMenuButton* ChangeLevelButton;
-
-	UPROPERTY(meta = (BindWidget))
-	UMainMenuButton* SettingsButton;
-	
-	UPROPERTY(meta = (BindWidget))
-	UMainMenuButton* QuitButton;
-	
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
-	UMainMenuButton* YesQuitButton;
-	
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
-	UMainMenuButton* NoQuitButton;
-
-
-	// Variables for GD
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Menus", meta = (AllowedClasses="World"))
-	TSoftObjectPtr<UWorld> NewLevel;
-
-	UPROPERTY(BlueprintReadWrite ,meta = (BindWidget))
-	class UCanvasPanel* CanvasPanel;
-
-
-
+    virtual UMainMenuButton * GetFocusedButton() const;
+    virtual UVerticalBox * GetMenuVerticalBox() const;
 };

@@ -1,27 +1,43 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "CommonUserWidget.h"
-#include "SettingsTabBase.h"
-#include "SettingsAudioWidget.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API USettingsAudioWidget : public USettingsTabBase
+#include"CoreMinimal.h"
+#include"SettingsTabBase.h"
+#include"SettingsAudioWidget.generated.h"
+
+//
+
+class USliderSettings;
+
+//
+
+UCLASS() class FTHISJOB_API USettingsAudioWidget : public USettingsTabBase
 {
-	GENERATED_BODY()
-	
-public:
-	virtual void NativeConstruct() override;
+    GENERATED_BODY()
 
-protected:
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class USliderSettings* MasterSlider;
+    private:
 
-	UFUNCTION()
-	void OnMasterSliderValueChanged(float Value);
+    protected:
+
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) USliderSettings * MasterVolumeSlider;
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) USliderSettings * VoicesVolumeSlider;
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) USliderSettings * SFXVolumeSlider;
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) USliderSettings * MusicVolumeSlider;
+
+    public:
+
+    private:
+
+    protected:
+
+    UFUNCTION() void OnMasterVolumeSliderValueChanged(float Value);
+    UFUNCTION() void OnVoicesVolumeSliderValueChanged(float Value);
+    UFUNCTION() void OnSFXVolumeSliderValueChanged(float Value);
+    UFUNCTION() void OnMusicVolumeSliderValueChanged(float Value);
+    
+    public:
+
+    virtual void NativeConstruct() override;
+    virtual void SetupSettingsValues(USettingsSave * SettingSave) override;
 };

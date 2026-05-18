@@ -18,4 +18,11 @@ class FTHISJOB_API UStaticFunctions : public UBlueprintFunctionLibrary
 	static void OrderByDistance(AActor* PlayerActor, TArray<AActor*>inArray,TArray<AActor*>& outArray);
 	UFUNCTION(BlueprintCallable,Category=Helpers)
 	static bool IsInBuild();
+	UFUNCTION(BlueprintCallable,Category=Helpers)
+	static void UnregisterAllComponents(AActor* Actor);
+	UFUNCTION(BlueprintCallable,Category=Helpers)
+	static void RegisterAllComponentsDelegate(AActor* Actor);
+
+	UFUNCTION(BlueprintCallable, Category = Helpers)
+	static TArray<FHitResult> SortHitsByDistance(TArray<FHitResult> inArray, TArray<AActor*>& outArray);
 };

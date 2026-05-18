@@ -1,19 +1,109 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/BaseHUD.h"
 
-#include "UI/BaseHUD.h"
+#include"UI/Menus/GameLayoutWidget.h"
+#include"UI/Menus/SettingsMenuWidget.h"
+
+#include"CommonActivatableWidget.h"
+#include"Widgets/CommonActivatableWidgetContainer.h"
+
+//Private
+
+//Protected
 
 void ABaseHUD::BeginPlay()
 {
-	Super::BeginPlay();
+    Super::BeginPlay();
+    //ABSOLUTE MUST
+    check(GameLayoutWidgetClass);
+    if(GameLayoutWidget)
+    {
+        return;
+    }
+    GameLayoutWidget = CreateWidget<UGameLayoutWidget>(GetWorld()->GetFirstPlayerController() , GameLayoutWidgetClass);
+    GameLayoutWidget->AddToViewport();
 }
 
-class USettingsMenuWidget* ABaseHUD::GetSettingsMenuWidget() const
+//Public
+
+UBaseMenuWidget * ABaseHUD::GetPreviousWidget()
 {
-	return nullptr;
+    return(nullptr);
 }
 
-class UBaseMenuWidget* ABaseHUD::GetPreviousWidget()
+USettingsMenuWidget * ABaseHUD::GetSettingsMenuWidget() const
 {
-	return nullptr;
+    return(nullptr);
+}
+
+UCommonActivatableWidgetStack * ABaseHUD::GetWidgetStack() const
+{
+    check(GameLayoutWidget);
+    return(GameLayoutWidget->GetStack());
+}
+
+//
+
+UCommonActivatableWidget * ABaseHUD::PushWidget(TSubclassOf<UCommonActivatableWidget> WidgetClass)
+{
+    check(GameLayoutWidget);
+    return(GameLayoutWidget->GetStack()->AddWidget<UCommonActivatableWidget>(WidgetClass));
+}
+
+void ABaseHUD::PopWidget(UCommonActivatableWidget * Widget)
+{
+    check(Widget);
+    Widget->DeactivateWidget();
+}
+
+//
+
+void ABaseHUD::OpenSettings()
+{
+    if(!ensure(SettingsMenuWidgetClass))
+    {
+        return;
+    }
+    if(!SettingsMenuWidgetInstance)
+    {
+        SettingsMenuWidgetInstance = CreateWidget<USettingsMenuWidget>(GetWorld()->GetFirstPlayerController() , SettingsMenuWidgetClass);
+    }
+    if(ensure(SettingsMenuWidgetInstance) && !SettingsMenuWidgetInstance->IsActivated())
+    {
+        GetWidgetStack()->AddWidgetInstance(*SettingsMenuWidgetInstance);
+    }
+}
+
+void ABaseHUD::OpenQuitPanel()
+{
+    if (!ensure(QuitPanelClass)){return;}
+
+    if (!QuitPanelInstance)
+    {
+        QuitPanelInstance = CreateWidget<USettingsMenuWidget>(GetWorld()->GetFirstPlayerController(), QuitPanelClass);
+    }
+
+    if (ensure(QuitPanelInstance) && !QuitPanelInstance->IsActivated())
+    {
+        GetWidgetStack()->AddWidgetInstance(*QuitPanelInstance);
+    }
+}
+
+//
+
+void ABaseHUD::CloseSettings()
+{
+    if(SettingsMenuWidgetInstance)
+    {
+        SettingsMenuWidgetInstance->DeactivateWidget();
+    }
+}
+
+void ABaseHUD::CloseQuitPanel()
+{
+    if(QuitPanelInstance)
+    {
+        QuitPanelInstance->DeactivateWidget();
+    }
 }

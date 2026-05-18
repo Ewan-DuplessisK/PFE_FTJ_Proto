@@ -14,7 +14,7 @@ UCLASS() class FTHISJOB_API AFTJ_Prop_ChaosActBase : public AGeometryCollectionA
     //Private variables
     private :
     //A counter to destroy the destructuble upon fading out.
-    int32 RemovedPieceCount;
+        int32 RemovedPieceCount{0};
 
     //Protected variables
     protected :

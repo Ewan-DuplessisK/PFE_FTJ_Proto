@@ -22,16 +22,11 @@ void AFTJ_Turret_TurretBase::BeginPlay()
     //Cache the module to detect
     Perception = GetComponentByClass<UAIPerceptionComponent>();
     //Subscribe to detections
-    Perception->OnTargetPerceptionUpdated.AddDynamic(this , &AFTJ_Turret_TurretBase::OnSensed);
+    Perception->OnTargetPerceptionUpdated.AddUniqueDynamic(this , &AFTJ_Turret_TurretBase::OnSensed);
     //Cache the model to sense
     Sight = Perception->GetSenseConfig<UAISenseConfig_Sight>();
     //Synchronize the sight radius to trigger with the perception
     SetRange(Range);
-    ShowEffect = Cast<UNiagaraComponent>(GetDefaultSubobjectByName(TEXT("ShowEffect")));
-    ShootEffect = Cast<UNiagaraComponent>(GetDefaultSubobjectByName(TEXT("ShootEffect")));
-    HitEffect = Cast<UNiagaraComponent>(GetDefaultSubobjectByName(TEXT("HitEffect")));
-    DeathEffect = Cast<UNiagaraComponent>(GetDefaultSubobjectByName(TEXT("DeathEffect")));
-    AdditionalDeathEffect = Cast<UNiagaraComponent>(GetDefaultSubobjectByName(TEXT("AdditionalDeathEffect")));
     SetActorTickEnabled(false);
 }
 
@@ -55,7 +50,16 @@ void AFTJ_Turret_TurretBase::Tick(float InDelta)
 void AFTJ_Turret_TurretBase::GetHit_Implementation(float InDamage , float InStun , FVector InKnockback , float InInvincibility , AActor * InSource)
 {
     //Check the player detection status
-    if(!bIsSensing || Health <= 0.0)
+    if(!bIsSensing)
+    {
+        return;
+    }
+    Execute_RemoveHealth(this , InDamage , InSource);
+}
+
+void AFTJ_Turret_TurretBase::RemoveHealth_Implementation(float InDamage , AActor * InSource)
+{
+    if(Health <= 0.0)
     {
         return;
     }
@@ -63,8 +67,6 @@ void AFTJ_Turret_TurretBase::GetHit_Implementation(float InDamage , float InStun
     Health -= InDamage;
     if(Health <= 0.0)
     {
-        DeathEffect->Activate();
-        AdditionalDeathEffect->Activate();
         Perception->OnTargetPerceptionUpdated.RemoveDynamic(this , &AFTJ_Turret_TurretBase::OnSensed);
         SetActorTickEnabled(false);
         Mesh->SetVisibility(false);
@@ -77,15 +79,13 @@ void AFTJ_Turret_TurretBase::GetHit_Implementation(float InDamage , float InStun
             ,
             [&]
             {
-	               UGameplayStatics::GetGameInstance(GetWorld())->GetSubsystem<UFTJ_ScoringSystem_Score>()->IncreaseWithText(ScoreForDestruction , 0 , FText::FromString("Turret"));
                 Destroy();
             }
             ,
-            1'000'000.0 , false , 3.0
+            2.0 , false , -1.0
         );
         return;
     }
-    HitEffect->Activate();
     bIsHit = true;
     OnTurretHit();
 }
@@ -93,48 +93,45 @@ void AFTJ_Turret_TurretBase::GetHit_Implementation(float InDamage , float InStun
 void AFTJ_Turret_TurretBase::EndPlay(EEndPlayReason::Type const InReason)
 {
     GetWorld()->GetTimerManager().ClearTimer(Timer);
-    GetWorld()->GetTimerManager().ClearTimer(PreShootingTimer);
     Super::EndPlay(InReason);
 }
 
 void AFTJ_Turret_TurretBase::Shoot()
 {
     //Set up a shooting timer
-    auto Delay{FMath::RandRange(MinimalCooldown , MaximalCooldown)};
     GetWorld()->GetTimerManager().SetTimer
     (
         Timer
         ,
         [&]
         {
-            //Spawn a projectile
-            GetWorld()->SpawnActor<AFTJ_Turret_ProjectileBase>
-            (
-                ProjectileClass , FTransform
-                {
-                    FQuat::MakeFromEuler({0.0 , FMath::RandRange(-ShootingMarginalError , +ShootingMarginalError) , FMath::RandRange(-ShootingMarginalError , +ShootingMarginalError)})
-                }
-                * Mesh->GetSocketTransform("ProjectileSocket")
-            )
-            ->Spawn(this);
-            Shoot();
-            ShootEffect->Activate();
-            bIsShooting = true;
-            OnTurretShoot();
-        }
-        ,
-        1'000'000.0 , false , Delay
-    );
-    GetWorld()->GetTimerManager().SetTimer
-    (
-        PreShootingTimer
-        ,
-        [&]
-        {
             OnTurretPreShoot();
+            GetWorld()->GetTimerManager().SetTimer
+            (
+                Timer
+                ,
+                [&]
+                {
+                    //Spawn a projectile
+                    GetWorld()->SpawnActor<AFTJ_Turret_ProjectileBase>
+                    (
+                        ProjectileClass , FTransform
+                        {
+                            FQuat::MakeFromEuler({0.0 , FMath::RandRange(-ShootingMarginalError , +ShootingMarginalError) , FMath::RandRange(-ShootingMarginalError , +ShootingMarginalError)})
+                        }
+                        * Mesh->GetSocketTransform("ProjectileSocket")
+                    )
+                    ->Spawn(this);
+                    Shoot();
+                    bIsShooting = true;
+                    OnTurretShoot();
+                }
+                ,
+                PreShootingTimepoint , false , -1.0
+            );
         }
         ,
-        1'000'000.0 , false , Delay - PreShootingTimepoint
+        FMath::RandRange(MinimalCooldown , MaximalCooldown) , false , -1.0
     );
 }
 
@@ -152,6 +149,8 @@ void AFTJ_Turret_TurretBase::OnSensed(AActor * InActor , FAIStimulus InStimulus)
     {
         //Shoots after delaying
         bIsSensing = true;
+        Collision->SetSimulatePhysics(true);
+        Collision->SetCollisionProfileName("FTJTurret");
         GetWorld()->GetTimerManager().SetTimer
         (
             Timer
@@ -162,9 +161,8 @@ void AFTJ_Turret_TurretBase::OnSensed(AActor * InActor , FAIStimulus InStimulus)
                 SetActorTickEnabled(true);
             }
             ,
-            1'000'000.0 , false , ShowingDelay
+            ShowingDelay , false , -1.0
         );
-        ShowEffect->Activate();
         OnTurretShow();
     }
     else
@@ -179,9 +177,11 @@ void AFTJ_Turret_TurretBase::OnSensed(AActor * InActor , FAIStimulus InStimulus)
             {
                 bIsSensing = false;
                 OnTurretHide();
+                Collision->SetSimulatePhysics(false);
+                Collision->SetCollisionProfileName("NoCollision");
             }
             ,
-            1'000'000.0 , false , HidingDelay
+            HidingDelay , false , -1.0
         );
     }
 }

@@ -44,21 +44,21 @@ public:
 	
 	/**Public variables*/
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Default", meta=(ToolTip="Spawn Point of all the Actors assigned to the pooling manager"))
-	FVector PoolSpawnPosition;
-	
 	/** Amount of a certain class */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Default", meta=(ToolTip="DO NOT TOUCH"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Default|Map", meta=(ToolTip="DO NOT TOUCH"))
 	TMap<TSubclassOf<class AActor>, int> PoolSizeMap;
 	
 	/** All spawned enemies of a certain class */
-	TMap<TSubclassOf<class AActor>, TArray<class AActor*>> Pool;
+	//TMap<TSubclassOf<class AActor>, TArray<class AActor*>> Pool;
 	
 	// Suckable Vars
 	
 	/** Should we make the pool from existing Suckable assets on the scene or spawn them ourselves */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Suck")
 	bool MakePoolFromExistingSuckables = false;
+	/** Actor spawn Buffer */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Suck|Amount", meta = (EditCondition="!MakePoolFromExistingSuckables", ClampMin=5))
+	int SpawnBuffer = 20;
 	/** Amount of LIGHT Suckable */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Suck|Amount", meta = (EditCondition="!MakePoolFromExistingSuckables"))
 	int SuckableAmount_Light = 500;
@@ -73,17 +73,14 @@ public:
 	TArray<TSubclassOf<AActor>> SuckableToSpawn;
 	
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Temp", meta = (ToolTip="DO NOT TOUCH"))
-	TArray<class AActor*> TempPoolActorsArray;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Default", meta = (ToolTip="Array of actors contained in the Pool"))
+	TArray<class AActor*> PoolActorsArray;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Temp", meta = (ToolTip="DO NOT TOUCH"))
-	TArray<TSubclassOf<AActor>> TempPoolClassesArray;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Default", meta = (ToolTip="Array of classes contained in the Pool"))
+	TArray<TSubclassOf<AActor>> PoolClassesArray;
 	
 	UFUNCTION(BlueprintNativeEvent, Blueprintable, BlueprintCallable)
 	void InitializePoolSize();
 	UFUNCTION(BlueprintNativeEvent, Blueprintable, BlueprintCallable)
 	void PopulatePool();
-	
-	UFUNCTION(Blueprintable, BlueprintCallable)
-	void AddTempToPool(TArray<TSubclassOf<AActor>> ActorClasses, TArray<class AActor*> SpawnedActors); 
 };

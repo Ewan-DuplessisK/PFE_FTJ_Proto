@@ -4,7 +4,9 @@
 		<WorkUnit Name="FLYING_ROBOTS" ID="{7C21365D-6AEA-4675-B297-DDA4CC40900B}" OwnerID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}" PersistMode="Nested">
 			<ChildrenList>
 				<SoundBank Name="FLYING_ROBOTS" ID="{3C40D382-E2D7-40B4-9D5E-248C8DF2F1C7}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="FLYING_ROBOTS" ID="{1457C4F2-19A3-4E28-ACA5-CBCC67E57A60}" WorkUnitID="{1457C4F2-19A3-4E28-ACA5-CBCC67E57A60}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

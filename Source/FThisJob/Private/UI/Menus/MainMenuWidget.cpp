@@ -1,62 +1,65 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/Menus/MainMenuWidget.h"
 
-#include "UI/Menus/MainMenuWidget.h"
-#include "UI/UIElements/MainMenuButton.h"
+#include"UI/UIElements/MainMenuButton.h"
 
-void UMainMenuWidget::NativeConstruct()
-{
-	Super::NativeConstruct();
+//Private
 
-
-	APlayerController* PC = GetWorld()->GetFirstPlayerController();
-	check(PC);
-	PC->SetShowMouseCursor(true);	
-
-	check(ChangeLevelButton);
-	ChangeLevelButton->OnClicked().AddUObject(this, &UMainMenuWidget::OnChangeLevelClicked);
-	
-	check(SettingsButton)
-	SettingsButton->OnClicked().AddUObject(this, &UMainMenuWidget::OnSettingsClicked);
-
-	check(QuitButton);
-	QuitButton->OnClicked().AddUObject(this, &UMainMenuWidget::OnQuitClicked);
-
-	check(NoQuitButton);
-	NoQuitButton->OnClicked().AddUObject(this, &UMainMenuWidget::UnQuit);
-}
-
-void UMainMenuWidget::NativeOnActivated()
-{	
-	Super::NativeOnActivated();
-}
-
-TOptional<FUIInputConfig> UMainMenuWidget::GetDesiredInputConfig() const
-{
-	return FUIInputConfig(ECommonInputMode::All, EMouseCaptureMode::NoCapture);
-}
-
-void UMainMenuWidget::UnQuit()
-{
-	SwitchCameraDefault();
-}
+//Protected
 
 void UMainMenuWidget::OnChangeLevelClicked()
 {
-	SwitchCameraPlay();
+    SwitchCameraPlay();
 }
 
 void UMainMenuWidget::OnQuitClicked()
 {
-	SwitchCameraQuit();
+    SwitchCameraQuit();
 }
 
 void UMainMenuWidget::OnSettingsClicked()
 {
-	SwitchCameraSettings();
+    SwitchCameraSettings();
 }
 
-class UMainMenuButton* UMainMenuWidget::GetFocusedButton() const
+//Public
+
+void UMainMenuWidget::NativeConstruct()
 {
-	return ChangeLevelButton;
+    Super::NativeConstruct();
+    auto PC{GetWorld()->GetFirstPlayerController()};
+    check(PC);
+    PC->SetShowMouseCursor(true);	
+    check(ChangeLevelButton);
+    check(SettingsButton)
+    check(QuitButton);
+    ChangeLevelButton->OnClicked().AddUObject(this , &UMainMenuWidget::OnChangeLevelClicked);
+    SettingsButton->OnClicked().AddUObject(this , &UMainMenuWidget::OnSettingsClicked);
+    QuitButton->OnClicked().AddUObject(this , &UMainMenuWidget::OnQuitClicked);
+
+}
+
+void UMainMenuWidget::NativeOnActivated()
+{	
+    Super::NativeOnActivated();
+}
+
+//
+
+TOptional<FUIInputConfig> UMainMenuWidget::GetDesiredInputConfig() const
+{
+    return(FUIInputConfig{ECommonInputMode::All, EMouseCaptureMode::NoCapture});
+}
+
+UMainMenuButton * UMainMenuWidget::GetFocusedButton() const
+{
+    return(ChangeLevelButton);
+}
+
+//
+
+void UMainMenuWidget::UnQuit()
+{
+    SwitchCameraDefault();
 }

@@ -1,29 +1,36 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include <CommonInputSubsystem.h>
-#include "UI/BaseHUD.h"
-#include "MainMenuHUD.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API AMainMenuHUD : public ABaseHUD
+#include"CoreMinimal.h"
+#include"UI/BaseHUD.h"
+#include"MainMenuHUD.generated.h"
+
+//
+
+enum class ECommonInputType : uint8;
+
+//
+
+UCLASS() class FTHISJOB_API AMainMenuHUD : public ABaseHUD
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-protected:
-	virtual void BeginPlay() override;
+    private:
 
-	UFUNCTION()
-	void HandleInputMethodChanged(ECommonInputType NewInputType) const;
+    protected:
 
-	virtual USettingsMenuWidget* GetSettingsMenuWidget() const override;
+    public:
 
-	virtual UBaseMenuWidget* GetPreviousWidget() override;
+    private:
+    
+    protected:
 
+    virtual void BeginPlay() override;
+    UFUNCTION() void HandleInputMethodChanged(ECommonInputType NewInputType) const;
 
+    virtual UBaseMenuWidget * GetPreviousWidget() override;
+    virtual USettingsMenuWidget * GetSettingsMenuWidget() const override;
+
+    public:
 };

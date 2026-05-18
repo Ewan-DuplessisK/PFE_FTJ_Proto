@@ -1,45 +1,51 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "UIElementButton.h"
-#include "CheckBoxSettings.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API UCheckBoxSettings : public UUIElementButton
+#include"CoreMinimal.h"
+#include"CommonUserWidget.h"
+#include"CheckBoxSettings.generated.h"
+
+//
+
+class UCheckBox;
+class UCommonTextBlock;
+class UCommonTextStyle;
+
+//
+
+UCLASS() class FTHISJOB_API UCheckBoxSettings : public UCommonUserWidget
 {
-	GENERATED_BODY()
-	
-public:
-	virtual void NativeConstruct() override;
+    GENERATED_BODY()
 
-	class UCheckBox* GetCheckBox() const;
-	
-	virtual void NativeOnHovered() override;
+    private:
 
-	virtual void NativeOnUnhovered() override;
+    protected:
 
-	virtual void NativeOnClicked() override;
-	
-protected:
-	UPROPERTY(meta = (BindWidget))
-	class UCheckBox* CheckBox;
+    public:
 
-	// Text
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class UCommonTextBlock* CommonTextBlock;
+    //Text
+    UPROPERTY(BlueprintReadWrite , Meta = (BindWidget)) UCheckBox * CheckBox;
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UCommonTextBlock * CommonTextBlock;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|CheckBox|Name") FText Text;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|CheckBox|Name")
-	FText Text;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|CheckBox|Text") TSubclassOf<UCommonTextStyle> NormalTextStyle;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|CheckBox|Text") TSubclassOf<UCommonTextStyle> HoveredTextStyle;
+    
+    private:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|CheckBox|Text")
-	TSubclassOf<class UCommonTextStyle> NormalTextStyle;
+    protected:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|CheckBox|Text")
-	TSubclassOf<UCommonTextStyle> HoveredTextStyle;
-	
+    virtual void NativePreConstruct() override;
+    virtual void NativeConstruct() override;
+    virtual void NativeOnMouseEnter(FGeometry const& InGeometry , FPointerEvent const& InMouseEvent) override;
+    virtual void NativeOnMouseLeave(FPointerEvent const& InMouseEvent) override;
+    
+    public:
+
+    UFUNCTION(BlueprintCallable)
+    UCheckBox * GetCheckBox() const;
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnHoveredSound();
 };

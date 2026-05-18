@@ -1,28 +1,61 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "SettingsTabBase.h"
-#include "SettingsGraphicWidget.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API USettingsGraphicWidget : public USettingsTabBase
+#include"CoreMinimal.h"
+#include"SettingsTabBase.h"
+#include"SettingsGraphicWidget.generated.h"
+
+//
+class UDropdownSettings;
+class USliderSettings;
+class UCheckBoxSettings;
+//
+
+UCLASS() class FTHISJOB_API USettingsGraphicWidget : public USettingsTabBase
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
+
+    private:
+
+    protected:
+    UPROPERTY(meta=(BindWidget))
+    UDropdownSettings* GlobalQuality;
+    UPROPERTY(meta=(BindWidget))
+    USliderSettings* ResolutionScale;
+    UPROPERTY(meta=(BindWidget))
+    UDropdownSettings* Framerate;
+    UPROPERTY(meta=(BindWidget))
+    UCheckBoxSettings* VSync;
+    UPROPERTY(meta=(BindWidget))
+    UCheckBoxSettings* MotionBlur;
+    UPROPERTY(meta=(BindWidget))
+    UDropdownSettings* Display;
+    UPROPERTY(meta=(BindWidget))
+    UDropdownSettings* ScreenResolution;
+    UPROPERTY(meta=(BindWidget))
+    UDropdownSettings* AntiAliasing;
+    UPROPERTY(meta=(BindWidget))
+    USliderSettings* Brightness;
+
+
+    UFUNCTION() void OnGlobalQualityChanged(UWidget* Widget, int32 Index);
+    UFUNCTION() void OnResolutionScaleChanged(float Value);
+    UFUNCTION() void OnFramerateChanged(UWidget* Widget, int32 Index);
+    UFUNCTION() void OnVSyncChanged(bool bValue);
+    UFUNCTION() void OnMotionBlurChanged(bool bValue);
+    UFUNCTION() void OnDisplayChanged(UWidget* Widget, int32 Index);
+    UFUNCTION() void OnScreenResolutionChanged(UWidget* Widget, int32 Index);
+    UFUNCTION() void OnAntiAliasingChanged(UWidget* Widget, int32 Index);
+    UFUNCTION() void OnBrightnessChanged(float Value);
+
+    void ApplyWithFocusRestore(UWidget* Widget);
+    void ApplyAndSave();
 
 public:
-	virtual void NativeConstruct() override;
 
-	virtual void SetupSettingsValues(class USettingsSave* SettingSave) override;
-
-protected:
-	UPROPERTY(meta = (BindWidget))
-	class UCheckBoxSettings* CameraMotionBlurCheckBox;
-
-	UFUNCTION()
-	void OnMotionBlurChanged(bool bValue);
+    virtual void NativeConstruct() override;
+    virtual void NativeOnActivated() override;
+    virtual void NativeOnDeactivated() override;
+    virtual void SetupSettingsValues(USettingsSave * SettingSave) override;
 };

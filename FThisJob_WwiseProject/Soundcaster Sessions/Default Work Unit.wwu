@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{43E8BACD-1FCE-4F5E-A720-D31370E4AC1C}" SchemaVersion="123">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{43E8BACD-1FCE-4F5E-A720-D31370E4AC1C}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{43E8BACD-1FCE-4F5E-A720-D31370E4AC1C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="SC_MUSIC" ID="{89F5F40B-5A89-4A5E-A8C6-E9F491087964}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="MusicMaster" ID="{D3597931-BD3F-49B3-B99E-A6FA568A0439}" WorkUnitID="{17F843A6-CDFC-4DD2-9F3B-5E7CD27B614D}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_MusicMaster" ID="{3B9DA204-64B6-46D6-9BED-84E07774FB7D}" WorkUnitID="{17F843A6-CDFC-4DD2-9F3B-5E7CD27B614D}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_Slowmo_End" ID="{A838BBD1-0413-49A8-9B23-49236BBB9A80}" WorkUnitID="{11F5A011-3997-4C9C-A18D-955213F50FD7}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_Slowmo_Start" ID="{46F60FCE-E6E8-4EFF-8F7F-6A386A2707AC}" WorkUnitID="{11F5A011-3997-4C9C-A18D-955213F50FD7}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

@@ -11,5 +11,8 @@ public class FThisJobTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_6;
 		ExtraModuleNames.Add("FThisJob");
+		
+		//BuildEnvironment = TargetBuildEnvironment.Unique;
+		//bUseLoggingInShipping = true;
 	}
 }

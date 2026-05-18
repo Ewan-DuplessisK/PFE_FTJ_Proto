@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{EC06768B-7DAA-4601-9C68-22090911C274}" SchemaVersion="123">
 	<Modulators>
-		<WorkUnit Name="Default Work Unit" ID="{EC06768B-7DAA-4601-9C68-22090911C274}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{EC06768B-7DAA-4601-9C68-22090911C274}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="GPE" ID="{2CD583A8-581F-4AD0-8554-50E4B426A2F3}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Modulators>
 </WwiseDocument>

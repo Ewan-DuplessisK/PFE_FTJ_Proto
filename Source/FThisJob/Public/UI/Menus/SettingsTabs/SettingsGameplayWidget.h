@@ -1,33 +1,51 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "CommonUserWidget.h"
-#include "SettingsTabBase.h"
-#include "SettingsGameplayWidget.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API USettingsGameplayWidget : public USettingsTabBase
+#include"CoreMinimal.h"
+#include"SettingsTabBase.h"
+#include"SettingsGameplayWidget.generated.h"
+
+//
+
+class USliderSettings;
+class UCheckBoxSettings;
+class UDropdownSettings;
+
+//
+
+UCLASS() class FTHISJOB_API USettingsGameplayWidget : public USettingsTabBase
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-public:
-	virtual void NativeConstruct() override;
+    private:
 
-	virtual void SetupSettingsValues(class USettingsSave* SettingSave) override;
+    protected:
 
-protected:
-	UPROPERTY(meta=(BindWidget))
-	class USliderSettings* VerticalSensibilitySlider;
-	UPROPERTY(meta=(BindWidget))
-	class USliderSettings* HorizontalSensibilitySlider;
+    UPROPERTY(Meta = (BindWidget)) USliderSettings * HorizontalSensitivitySlider;
+    UPROPERTY(Meta = (BindWidget)) USliderSettings * VerticalSensitivitySlider;
+    UPROPERTY(BlueprintReadOnly ,Meta = (BindWidget)) UCheckBoxSettings * VibrationCheckBox;
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) UCheckBoxSettings * CrosshairCheckBox;
+    UPROPERTY(Meta = (BindWidget)) UCheckBoxSettings * CameraShakeCheckBox;
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) UDropdownSettings * InvertVerticalDropdown;
+    UPROPERTY(BlueprintReadOnly, Meta = (BindWidget)) UDropdownSettings * InvertHorizontalDropdown;
 
-	UFUNCTION()
-	void OnVerticalSensitivitySliderValueChanged(float Value);
-	UFUNCTION()
-	void OnHorizontalSensitivitySliderValueChanged(float Value);
+    public:
+
+    private:
+
+    protected:
+
+    UFUNCTION() void OnHorizontalSensitivitySliderValueChanged(float Value);
+    UFUNCTION() void OnVerticalSensitivitySliderValueChanged(float Value);
+    UFUNCTION() void OnHorizontalAxisDropdownChanged(UWidget* Widget, int32 Index);
+    UFUNCTION() void OnVerticalAxisDropdownChanged(UWidget* Widget, int32 Index);
+    UFUNCTION() void OnVibrationChanged(bool bValue);
+    UFUNCTION() void OnCrosshairChanged(bool bValue);
+    UFUNCTION() void OnCameraShakeChanged(bool bValue);
+
+    public:
+
+    virtual void NativeConstruct() override;
+    virtual void SetupSettingsValues(USettingsSave * SettingSave) override;
 };

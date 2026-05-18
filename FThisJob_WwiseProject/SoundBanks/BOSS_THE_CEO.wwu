@@ -4,7 +4,9 @@
 		<WorkUnit Name="BOSS_THE_CEO" ID="{E67F6791-3FF8-4A89-AB55-1C44FF11236A}" OwnerID="{8D9F0622-CA8A-4C10-B7BC-BABCDE7FFDD0}" PersistMode="Nested">
 			<ChildrenList>
 				<SoundBank Name="BOSS_THE_CEO" ID="{82A8F8A9-776F-4FE0-BF0F-1D06DCAFAD68}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="BOSS_THE_CEO" ID="{0D84605E-2432-4004-B2F5-8E80848063F5}" WorkUnitID="{0D84605E-2432-4004-B2F5-8E80848063F5}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

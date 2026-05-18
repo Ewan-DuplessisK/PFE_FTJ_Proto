@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{606D3D59-4622-4FAB-B73E-EEEB91478EBE}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{81645571-81C4-4597-804A-7DEFE377A771}">
+	<SoundBanks>
+		<WorkUnit Name="AMB_LVL_OPEN_OFFICE_01" ID="{606D3D59-4622-4FAB-B73E-EEEB91478EBE}" OwnerID="{81645571-81C4-4597-804A-7DEFE377A771}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="AMB_LVL_OPEN_OFFICE_01" ID="{5ACE51D2-96A3-4DC4-813B-AA8F4E1B1DF1}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AMB_LVL_OPEN_OFFICE_01" ID="{41745C92-B956-4488-ACA3-BF6CAE0C4042}" WorkUnitID="{41745C92-B956-4488-ACA3-BF6CAE0C4042}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="AB_AMB_OPEN_OFFICE_01" ID="{724A73B1-BCED-463A-9B10-3BCDC14D961A}" WorkUnitID="{D0811865-DBB9-4CA7-86EE-98046AB40B58}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

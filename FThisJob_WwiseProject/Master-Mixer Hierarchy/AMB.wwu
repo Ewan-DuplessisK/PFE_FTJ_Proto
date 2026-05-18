@@ -1,23 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{A836F1BE-99CA-43C9-9F9B-B4AC2604633C}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{D0811865-DBB9-4CA7-86EE-98046AB40B58}" SchemaVersion="123" RootDocumentID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}" ParentDocumentID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}">
 	<Busses>
-		<WorkUnit Name="AMB" ID="{A836F1BE-99CA-43C9-9F9B-B4AC2604633C}" PersistMode="Standalone">
+		<WorkUnit Name="AMB" ID="{D0811865-DBB9-4CA7-86EE-98046AB40B58}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<PropertyList>
 				<Property Name="Color" Type="int16" Value="4"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Bus Name="AB_AMB" ID="{3768AB80-2D99-47ED-BF98-4EC579E28128}">
-					<ReferenceList>
-						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
-							<ObjectRef Name="System" ID="{30F46EA7-2B85-41A5-B778-5D627B4C658F}" WorkUnitID="{CDC24A2C-B4B1-47E7-A644-FF77CA93A6D5}"/>
-						</Reference>
-					</ReferenceList>
+				<Bus Name="AB_AMB" ID="{59DB19C6-EB13-482D-8611-6EC719792818}">
 					<ChildrenList>
-						<Bus Name="AB_AMB_LVL_01" ID="{0DF4F836-8E1B-47B3-A32D-0862BE830EA7}"/>
-						<Bus Name="AB_AMB_LVL_02" ID="{5C5C6B6F-CA84-43AE-AEBB-B26284D02FE3}"/>
-						<Bus Name="AB_AMB_LVL_03" ID="{B3AF4373-2A3D-40E6-997B-F06082A1C09E}"/>
+						<Bus Name="AB_AMB_OPEN_OFFICE_01" ID="{724A73B1-BCED-463A-9B10-3BCDC14D961A}"/>
+						<Bus Name="AB_AMB_OPEN_OFFICE_02" ID="{0040A270-B746-4893-AAD6-C215BD80420A}"/>
+						<Bus Name="AB_AMB_TUTO" ID="{0B658429-AFA2-4ADB-BA76-DA329A537869}"/>
+						<Bus Name="AB_AMB_MENU" ID="{F4A6D689-F004-4F76-B835-22F4BD1E6977}"/>
+						<Bus Name="AB_AMB_CEO" ID="{CA7F4790-3122-4317-84DD-444ECAE73C21}"/>
+						<Bus Name="AB_AMB_LABORATORY" ID="{0D3372CF-7431-485E-A9FC-65076A39F320}"/>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="STG_SLOWMO" ID="{1D2DAD21-09CF-4E14-B2E1-0BEA47C47222}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="MC_CriticalHealth" ID="{A5FC26C3-7658-4327-B092-C5E156E8EE7C}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="STG_MUSIC_GAMEPLAY" ID="{EB6E6A45-5646-484E-8633-75CE485228A6}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="STG_DUCKGAMEOVER" ID="{F8602139-94B4-472E-AE05-7C1BACD04DDB}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="STG_DUCKPAUSE" ID="{15ECBCBF-3F06-4289-AFC6-8844C587E497}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="None" ID="{10E7B2CF-4595-401F-BAF7-2F9EE0BAE887}"/>
+								<CustomState Name="" ID="{BF385FCC-0D72-446A-81F9-8FB236426BE0}" ShortID="36989338"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{7A3FC7CE-16CA-40AC-816B-E0C6955D12CA}"/>
+								<CustomState Name="" ID="{11B98BE4-B773-46FF-BB8B-ECF3C419B9B7}" ShortID="74424668"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="OFF" ID="{2F7E0F06-4458-411D-94B6-8AB9D860C269}"/>
+								<CustomState Name="" ID="{F4D922D7-789D-4D88-979F-6D6FD562C9AE}" ShortID="313837424"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{4249B618-F554-41B7-92C0-6474F0C51E05}"/>
+								<CustomState Name="" ID="{4D3EFA80-87A6-451D-936D-190687278DD2}" ShortID="268443795"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ST_Calm" ID="{E5655C9F-9E44-4389-81B7-8CD2F50807F6}"/>
+								<CustomState Name="" ID="{970F2206-9432-4B6B-A755-C937F772423F}" ShortID="186907613">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64" Value="3"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ON" ID="{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}"/>
+								<CustomState Name="" ID="{2B94A850-5B54-4508-9E1F-4BB57C5E5EE9}" ShortID="81407526">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32" Value="-800"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="OFF" ID="{05000AAB-A14A-470B-9CB9-8B447EF0C75F}"/>
+								<CustomState Name="" ID="{C9251FEA-BB16-4A7B-94F1-DFE6113DDCA0}" ShortID="692146792"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{5BC3290D-432D-4808-8DF2-9ECD959311FD}"/>
+								<CustomState Name="" ID="{FAE822FD-AC3C-4CBC-834E-A3CACD2CB972}" ShortID="903686732"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="OFF" ID="{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}"/>
+								<CustomState Name="" ID="{F2A1827E-AD62-4280-A44D-11A16DE9A073}" ShortID="384498647"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ST_Fight" ID="{BE760FC5-4883-4955-8567-42DBB5A5B6B5}"/>
+								<CustomState Name="" ID="{04CF98CD-4D30-4E10-BBA7-5F51CEA80F56}" ShortID="212044373"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{6A1E09E1-E251-4B2B-A184-1D936B6FE643}"/>
+								<CustomState Name="" ID="{EEAC9848-25DA-4F0F-BC95-E2A7DE4FE98E}" ShortID="287399852"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="OFF" ID="{EF39E2B7-CB41-4B8D-84ED-75738314CD46}"/>
+								<CustomState Name="" ID="{AE9B8959-7061-4BBC-8BFE-7471EE61A02E}" ShortID="280407579"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ON" ID="{24F35669-AD62-4CAA-ADE5-6808BDE93D74}"/>
+								<CustomState Name="" ID="{23BC1C42-BC46-4017-968E-40CC1CDC7012}" ShortID="234167997">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="50"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ON" ID="{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}"/>
+								<CustomState Name="" ID="{89E14606-4582-4EB8-A0C9-5EB0403C59A3}" ShortID="730171564">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="50"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ON" ID="{ED100031-70CD-4F13-BF9B-914069821D22}"/>
+								<CustomState Name="" ID="{9A5EBD55-A87F-423C-80E4-B82D1B5AB367}" ShortID="578467817">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="50"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ST_Arena" ID="{D0489C50-297F-4F23-ABA6-3C81E0A62EFD}"/>
+								<CustomState Name="" ID="{27525B30-3FC7-4120-8145-D3F7FAD4D662}" ShortID="860556078">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64" Value="-3"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{B79E756E-E548-44CC-9B3B-7DFF990EFE01}" ShortID="387621859">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_SFX_Volume" ID="{0EB4588E-0728-469E-A6B1-EA1EF70CCB3E}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{EAF18B8A-E380-480F-8719-4F79E888B675}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{23BE9B3E-3C94-4272-8DA3-3CCA1E86011E}" ShortID="990443777">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Sidechain_Rage_Enter" ID="{CDBA16C9-1E19-496A-B420-2194AE170CC6}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{54D13464-45E6-45E0-868B-A47E0A14BF59}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0.02644</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-9.96521</XPos>
+																<YPos>-12.28211</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>-12.50203</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

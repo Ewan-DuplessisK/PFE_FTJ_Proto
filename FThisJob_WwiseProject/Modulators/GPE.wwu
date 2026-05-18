@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2CD583A8-581F-4AD0-8554-50E4B426A2F3}" SchemaVersion="123" RootDocumentID="{EC06768B-7DAA-4601-9C68-22090911C274}" ParentDocumentID="{EC06768B-7DAA-4601-9C68-22090911C274}">
+	<Modulators>
+		<WorkUnit Name="GPE" ID="{2CD583A8-581F-4AD0-8554-50E4B426A2F3}" OwnerID="{EC06768B-7DAA-4601-9C68-22090911C274}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ModulatorTime Name="MD_Extinguisher" ID="{13FC0624-078D-4B84-96D8-FA222ED4A7B7}" ShortID="811282509">
+					<PropertyList>
+						<Property Name="TimeModDuration" Type="Real64" Value="10"/>
+						<Property Name="TimeModPlaybackRate" Type="Real64" Value="2"/>
+					</PropertyList>
+				</ModulatorTime>
+			</ChildrenList>
+		</WorkUnit>
+	</Modulators>
+</WwiseDocument>

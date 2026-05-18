@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{57A748A8-9DC0-4AF7-8993-986FD3A97A94}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}">
+	<SoundBanks>
+		<WorkUnit Name="CINEMATIC" ID="{57A748A8-9DC0-4AF7-8993-986FD3A97A94}" OwnerID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="6"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SoundBank Name="CINEMATIC" ID="{B7EF423C-4B8B-40B1-BCFF-C4CD9F601194}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AB_CINEMATIC" ID="{B1F2DC65-F93B-48C1-B578-10C739F994E3}" WorkUnitID="{5351FC4D-D05D-4BE4-A41E-10C61D211ADC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="CINEMATIC" ID="{5BBE2AAA-1C83-4BC3-9C36-ABE901612B63}" WorkUnitID="{5BBE2AAA-1C83-4BC3-9C36-ABE901612B63}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

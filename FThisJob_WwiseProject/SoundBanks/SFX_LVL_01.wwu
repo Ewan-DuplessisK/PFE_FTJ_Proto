@@ -6,6 +6,7 @@
 				<SoundBank Name="SFX_LVL_01" ID="{0E3F2FD3-8CC8-4DEA-8DB5-C2528A77AB79}">
 					<ObjectInclusionList>
 						<ObjectRef Name="SFX_LVL_01" ID="{37EB2B47-3352-422C-8900-870DFDB2179F}" WorkUnitID="{37EB2B47-3352-422C-8900-870DFDB2179F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="AB_SFX_LVL_01" ID="{99C04D22-BE70-4FF5-A7FD-8AAFF7F5FDCA}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

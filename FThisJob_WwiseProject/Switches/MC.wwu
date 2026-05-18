@@ -10,15 +10,11 @@
 				<SwitchGroup Name="MC_GroundMaterials" ID="{74C1541C-D549-48AB-8354-02CAA6937B4D}">
 					<ChildrenList>
 						<Switch Name="Carpet" ID="{267E70B8-1CCD-4AB5-AF9F-8192FEC7CC66}"/>
-					</ChildrenList>
-				</SwitchGroup>
-				<SwitchGroup Name="MC_KickMaterials" ID="{0AF65288-C030-4F6F-82B0-04751740DB48}">
-					<ChildrenList>
-						<Switch Name="Generic" ID="{957BB0CC-1CE0-4116-AFA7-4E39BD85A469}"/>
-						<Switch Name="Glass" ID="{06206F12-FD72-49E7-92E3-752FDCEFD1F9}"/>
-						<Switch Name="Door" ID="{A419B255-E38C-439D-A8C1-BAE4D6401296}"/>
-						<Switch Name="Metal" ID="{453D6195-8971-4BDD-8879-45FB15EC6F46}"/>
-						<Switch Name="VendingMachine" ID="{44558652-49DD-479B-AA83-7900F2F5DF16}"/>
+						<Switch Name="Concrete" ID="{F2B985B1-FD4E-445D-B78A-8FCFE5D9B28D}"/>
+						<Switch Name="Paper" ID="{CB029650-BA22-42A8-BA12-165BC98AC1B4}"/>
+						<Switch Name="Tiles" ID="{322C8597-68F3-4FE9-AFA5-177F696D911D}"/>
+						<Switch Name="Wood" ID="{6BD20F17-7637-4452-BD50-3755E4B09462}"/>
+						<Switch Name="Metal" ID="{FAAC12CA-028C-4D67-8098-FE4D5962CEE1}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

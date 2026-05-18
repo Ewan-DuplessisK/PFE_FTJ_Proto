@@ -4,7 +4,10 @@
 		<WorkUnit Name="SFX_LVL_02" ID="{BAB307BA-50FA-44B4-84F5-A6E205BD8CFA}" OwnerID="{E1FDA0DF-3AC0-45F4-A404-9FE0EDCCD0A8}" PersistMode="Nested">
 			<ChildrenList>
 				<SoundBank Name="SFX_LVL_02" ID="{A594CFB5-5ABD-45D6-A2E4-B75504554EF0}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="AB_SFX_LVL_02" ID="{74DE5A6F-AEC5-4401-B3AA-29539587BB90}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX_LVL_02" ID="{FEA4471B-E467-4DE5-B2CF-06CFCBC803E0}" WorkUnitID="{FEA4471B-E467-4DE5-B2CF-06CFCBC803E0}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

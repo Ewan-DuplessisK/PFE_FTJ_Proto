@@ -1,14 +1,19 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/UIElements/CommonTextBlockDropdown.h"
 
-#include "UI/UIElements/CommonTextBlockDropdown.h"
+//Private
 
 void UCommonTextBlockDropdown::NativeConstruct()
 {
-	Super::NativeConstruct();
+    Super::NativeConstruct();
 }
 
-class UCommonTextBlock* UCommonTextBlockDropdown::GetCommonTextBlock() const
+//Protected
+
+//Public
+
+UCommonTextBlock * UCommonTextBlockDropdown::GetCommonTextBlock() const
 {
-	return CommonTextBlock;
+    return(CommonTextBlock);
 }

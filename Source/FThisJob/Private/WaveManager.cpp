@@ -35,22 +35,41 @@ bool AWaveManager::RemoveEnemyFromWaveManager_Implementation(AEnemy_Base* Enemy_
 	{
 		SpawnedEnemies.Remove(Enemy_To_Remove);
 		
+		if (!IsValid(PoolingManager))
+		{
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FAIL : Invalid PoolingManager ref | WaveManager"));
+			}
+			UE_LOG(LogTemp, Error, TEXT("WaveManager: PoolingManager is invalid when trying to hand over %s"), *Enemy_To_Remove->GetName());
+			return false;
+		}
+		
 		if (PoolingManager->HandOverActor(Enemy_To_Remove))
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Success : Enemy Handover | Wave --> Pool"));
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Success : Enemy Handover | Wave --> Pool"));
+			}
 			
 			return true;
 		}
 		else
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FAIL : Enemy Handover | Wave --> Pool"));
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FAIL : Enemy Handover | Wave --> Pool"));
+			}
 			
 			return false;
 		}
 	}
 	else
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FAIL : Invalid Enemy to remove | wave manager"));
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FAIL : Invalid Enemy to remove | wave manager"));
+		}
 		
 		return false;
 	}

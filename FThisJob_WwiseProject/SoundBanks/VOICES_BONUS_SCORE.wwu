@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{304B097B-9154-40EB-BDA5-8F6DE6AB6B66}" SchemaVersion="123" RootDocumentID="{B344EECF-BD62-499B-9B75-0F6D0480869F}" ParentDocumentID="{AF1230B0-07CF-4354-988B-18E8D8F0754D}">
+	<SoundBanks>
+		<WorkUnit Name="VOICES_BONUS_SCORE" ID="{304B097B-9154-40EB-BDA5-8F6DE6AB6B66}" OwnerID="{AF1230B0-07CF-4354-988B-18E8D8F0754D}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="VOICES_BONUS_SCORE" ID="{8574D750-C226-4A34-9151-B78749E41D8A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="VOICES_BONUS_SCORE" ID="{81DDD046-B151-4896-A08D-A569724D907C}" WorkUnitID="{81DDD046-B151-4896-A08D-A569724D907C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

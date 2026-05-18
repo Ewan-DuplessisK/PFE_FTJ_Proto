@@ -21,3 +21,23 @@ bool UStaticFunctions::IsInBuild()
 	return true;
 #endif
 }
+
+void UStaticFunctions::UnregisterAllComponents(AActor* Actor)
+{
+	for (UActorComponent* Comp : Actor->GetComponents())
+	{
+		Comp->UnregisterComponent();
+	}
+}
+
+void UStaticFunctions::RegisterAllComponentsDelegate(AActor* Actor)
+{
+	Actor->RegisterAllComponents();
+}
+
+TArray<FHitResult> UStaticFunctions::SortHitsByDistance(TArray<FHitResult> hitResults, TArray<AActor*>& outArray) {
+	hitResults.Sort([](const FHitResult& A, const FHitResult& B) {
+		return A.Distance < B.Distance;
+	});
+	return hitResults;
+}

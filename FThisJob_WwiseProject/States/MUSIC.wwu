@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3373958D-D934-4EE2-B7B6-32848450A2FA}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="MUSIC" ID="{3373958D-D934-4EE2-B7B6-32848450A2FA}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="STG_MUSIC_GAMEPLAY" ID="{EB6E6A45-5646-484E-8633-75CE485228A6}">
+					<ChildrenList>
+						<State Name="None" ID="{10E7B2CF-4595-401F-BAF7-2F9EE0BAE887}"/>
+						<State Name="ST_Calm" ID="{E5655C9F-9E44-4389-81B7-8CD2F50807F6}"/>
+						<State Name="ST_Arena" ID="{D0489C50-297F-4F23-ABA6-3C81E0A62EFD}"/>
+						<State Name="ST_Fight" ID="{BE760FC5-4883-4955-8567-42DBB5A5B6B5}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="STG_MUSIC_MASTER" ID="{47C3757E-92AA-4FA8-B80F-85307FFC3FAA}">
+					<ChildrenList>
+						<State Name="None" ID="{70D7E160-B039-4F5F-84EC-B59114771BAA}"/>
+						<State Name="ST_InLevel" ID="{40807314-AE89-49E1-80E8-EC577135D35D}"/>
+						<State Name="ST_Defeat" ID="{56B0637B-0A1E-4A64-9F5A-C0AB7A5E6A0C}"/>
+						<State Name="ST_Victory" ID="{6BC16B51-0A9A-4221-A6E5-EBE895F5E1A4}"/>
+						<State Name="ST_Elevator" ID="{3213DE3B-FF7C-48D5-BD38-3344869B6204}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="STG_MUSIC_LEVEL_ID" ID="{F7CAF8DC-C354-48E6-A674-6EE750A08CCC}">
+					<ChildrenList>
+						<State Name="None" ID="{786EC21B-FD47-490B-B4FF-BD9BFDAA58A6}"/>
+						<State Name="ST_LEVEL_02" ID="{19645657-E006-48CA-A05C-755936DBB524}"/>
+						<State Name="ST_LEVEL_03" ID="{08706C89-7D35-487A-B3CE-BF831FBDB320}"/>
+						<State Name="ST_LEVEL_04" ID="{7A46C7CB-4C74-4343-8653-24A07143C52F}"/>
+						<State Name="ST_LEVEL_Boss" ID="{ECB6125B-D542-4DFD-8591-5F49F813D7B4}"/>
+						<State Name="ST_LEVEL_01" ID="{60A9EF33-38F1-45C3-BC57-6C14ABF6EC05}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="STG_MUSICDUCK" ID="{4B162117-2BAE-4948-A0F1-81F07F0D4FEC}">
+					<ChildrenList>
+						<State Name="None" ID="{66671BD1-1157-4BC5-BFC4-D47335CA2DE6}"/>
+						<State Name="ST_ON" ID="{DC975B96-2C67-4A36-BDA0-1CBAF00CB17E}"/>
+						<State Name="ST_OFF" ID="{FE9BC0AA-680C-425C-86B1-BF236A007A2D}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="STG_MUTEMUSIC" ID="{18651F0D-57FE-47DE-9C10-A36BFF7BE653}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="1.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{95B6946E-D516-4476-BDC0-76D9406786FC}"/>
+						<State Name="ST_ON" ID="{DE09A316-6AB8-47B4-B0C0-8F7197EE0911}"/>
+						<State Name="ST_OFF" ID="{DB606463-CE3B-4685-A20A-D51185180108}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

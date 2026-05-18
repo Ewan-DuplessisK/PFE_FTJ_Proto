@@ -4,7 +4,9 @@
 		<WorkUnit Name="VOICES_LVL_02" ID="{33EAA61A-D383-4CBA-AE0C-9DC92B6EA9D7}" OwnerID="{AF1230B0-07CF-4354-988B-18E8D8F0754D}" PersistMode="Nested">
 			<ChildrenList>
 				<SoundBank Name="VOICES_LVL_02" ID="{95EFF61B-B1A9-418F-95ED-7B812D45DCA8}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="VOICES_LVL_02" ID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" WorkUnitID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

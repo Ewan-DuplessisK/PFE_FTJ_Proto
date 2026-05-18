@@ -1,26 +1,32 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "CommonUserWidget.h"
-#include "CommonTextBlockDropdown.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API UCommonTextBlockDropdown : public UCommonUserWidget
+#include"CoreMinimal.h"
+#include"CommonUserWidget.h"
+#include"CommonTextBlockDropdown.generated.h"
+
+//
+
+UCLASS() class FTHISJOB_API UCommonTextBlockDropdown : public UCommonUserWidget
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-	virtual void NativeConstruct() override;
+    private:
 
-public:
-	UFUNCTION()
-	class UCommonTextBlock* GetCommonTextBlock() const;
+    protected:
 
-protected:
-	UPROPERTY(meta=(BindWidget))
-	class UCommonTextBlock* CommonTextBlock;
+    UPROPERTY(Meta = (BindWidget)) UCommonTextBlock * CommonTextBlock;
+
+    public:
+
+    private:
+
+    virtual void NativeConstruct() override;
+
+    protected:
+
+    public:
+
+    UFUNCTION() UCommonTextBlock * GetCommonTextBlock() const;
 };

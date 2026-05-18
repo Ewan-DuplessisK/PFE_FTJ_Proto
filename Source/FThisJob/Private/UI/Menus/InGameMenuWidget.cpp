@@ -1,5 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/Menus/InGameMenuWidget.h"
 
-#include "UI/Menus/InGameMenuWidget.h"
+//Private
 
+TOptional<FUIInputConfig> UInGameMenuWidget::GetDesiredInputConfig() const
+{
+    return(FUIInputConfig{ECommonInputMode::Game , EMouseCaptureMode::CapturePermanently});
+}
+
+//Protected
+
+//Public

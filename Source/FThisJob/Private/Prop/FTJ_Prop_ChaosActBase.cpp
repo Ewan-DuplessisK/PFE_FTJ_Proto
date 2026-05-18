@@ -8,14 +8,21 @@ void AFTJ_Prop_ChaosActBase::BeginPlay()
 {
     //Delegate to Actor
     Super::BeginPlay();
-    //Subscribe to hits
-    GetGeometryCollectionComponent()->OnComponentHit.AddDynamic(this , &AFTJ_Prop_ChaosActBase::OnHit);
-    //Enable removal notifications
-    GeometryCollectionComponent->SetNotifyRemovals(true);
-    //Subscribe to removals
-    GeometryCollectionComponent->OnChaosRemovalEvent.AddDynamic(this , &AFTJ_Prop_ChaosActBase::OnPieceRemoved);
-    //Unregister any removals
+
+    //Unregister any removals (must be done before enabling notifications)
     RemovedPieceCount = 0;
+
+    UGeometryCollectionComponent * GeometryComponent = GetGeometryCollectionComponent();
+    if(!IsValid(GeometryComponent))
+    {
+        return;
+    }
+    //Subscribe to hits
+    GeometryComponent->OnComponentHit.AddDynamic(this , &AFTJ_Prop_ChaosActBase::OnHit);
+    //Enable removal notifications
+    GeometryComponent->SetNotifyRemovals(true);
+    //Subscribe to removals
+    GeometryComponent->OnChaosRemovalEvent.AddDynamic(this , &AFTJ_Prop_ChaosActBase::OnPieceRemoved);
 }
 
 void AFTJ_Prop_ChaosActBase::OnHit(UPrimitiveComponent * InThisComponent , AActor * InActor , UPrimitiveComponent * InThatComponent , FVector InImpulse , FHitResult const& InResult)
@@ -40,8 +47,17 @@ void AFTJ_Prop_ChaosActBase::OnPieceRemoved(FChaosRemovalEvent const& InEvent)
 {
     //Register a removal
     RemovedPieceCount++;
+
+    if(!IsValid(GeometryCollectionComponent) || GeometryCollectionComponent->RestCollection == nullptr)
+    {
+        return;
+    }
+
+    const int32 TransformCount = GeometryCollectionComponent->RestCollection->GetBreadthFirstTransformIndices().Num();
+    const int32 PieceCount = FMath::Max(0 , TransformCount - 1);
+    const int32 DestroyThreshold = FMath::CeilToInt(PieceCount * 0.95f);
     //Check the decaying percentage as Chaos doesn't send everything
-    if(RemovedPieceCount >= (GeometryCollectionComponent->RestCollection->GetBreadthFirstTransformIndices().Num() - 1) * 0.95)
+    if(RemovedPieceCount >= DestroyThreshold)
     {
         //Erase after decaying
         Destroy();

@@ -35,6 +35,33 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="MC_KickMaterials" ID="{F4D2594D-96C1-46C9-96B3-A06B25B01E6B}">
+					<ChildrenList>
+						<State Name="None" ID="{4FD081FF-DF4E-4A7F-ADF9-75064E44F8FD}"/>
+						<State Name="Generic" ID="{DB0C815E-184D-481C-86F8-121F43C626E4}"/>
+						<State Name="Door" ID="{7CF1E0AF-65B6-438C-8ED4-7F70F36CB07D}"/>
+						<State Name="Glass" ID="{A2F8958F-0B85-4776-8468-4E39E3288256}"/>
+						<State Name="Machine" ID="{C85DD532-0452-47C4-BF34-E5309C966EA9}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MC_CriticalHealth" ID="{A5FC26C3-7658-4327-B092-C5E156E8EE7C}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="1.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{5BC3290D-432D-4808-8DF2-9ECD959311FD}"/>
+						<State Name="ON" ID="{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}"/>
+						<State Name="OFF" ID="{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="ON" ID="{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}"/>
+							<EndState Name="OFF" ID="{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}"/>
+							<Time>0.5</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -1,45 +1,53 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/UIElements/CheckBoxSettings.h"
 
-#include "UI/UIElements/CheckBoxSettings.h"
+#include"CommonTextBlock.h"
+#include"Components/RichTextBlock.h"
+#include"Components/CheckBox.h"
 
-#include "CommonTextBlock.h"
-#include "Components/CheckBox.h"
-#include "Components/RichTextBlock.h"
+//Private
+
+//Protected
+
+void UCheckBoxSettings::NativePreConstruct()
+{
+    Super::NativePreConstruct();
+    if(ensure(CommonTextBlock))
+    {
+        CommonTextBlock->SetText(Text);
+        CommonTextBlock->SetStyle(NormalTextStyle);
+    }
+    if(!ensure(CheckBox))
+    {
+        return;
+    }
+    SetDesiredFocusWidget(CheckBox);
+}
 
 void UCheckBoxSettings::NativeConstruct()
 {
-	Super::NativeConstruct();
-
-	if (ensure(CommonTextBlock != nullptr))
-	{
-		CommonTextBlock->SetText(Text);
-		CommonTextBlock->SetStyle(NormalTextStyle);
-	}
+    Super::NativeConstruct();
 }
 
-void UCheckBoxSettings::NativeOnHovered()
+void UCheckBoxSettings::NativeOnMouseEnter(FGeometry const& InGeometry , FPointerEvent const& InMouseEvent)
 {
-	CommonTextBlock->SetStyle(HoveredTextStyle);
-	
-	Super::NativeOnHovered();
+    Super::NativeOnMouseEnter(InGeometry , InMouseEvent);
+    CheckBox->SetIsEnabled(true);
+    CommonTextBlock->SetStyle(HoveredTextStyle);
+    OnHoveredSound();
 }
 
-void UCheckBoxSettings::NativeOnUnhovered()
+void UCheckBoxSettings::NativeOnMouseLeave(FPointerEvent const& InMouseEvent)
 {
-	CommonTextBlock->SetStyle(NormalTextStyle);
-
-	Super::NativeOnUnhovered();
+    Super::NativeOnMouseLeave(InMouseEvent);
+    CheckBox->SetIsEnabled(false);
+    CheckBox->SetRenderOpacity(1.0f);
+    CommonTextBlock->SetStyle(NormalTextStyle);
 }
 
-void UCheckBoxSettings::NativeOnClicked()
+//Public
+UCheckBox * UCheckBoxSettings::GetCheckBox() const
 {
-	Super::NativeOnClicked();
-
-	CheckBox->SetIsChecked(!CheckBox->IsChecked());
-}
-
-class UCheckBox* UCheckBoxSettings::GetCheckBox() const
-{
-	return CheckBox;
+    return(CheckBox);
 }

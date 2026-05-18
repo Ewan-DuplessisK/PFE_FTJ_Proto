@@ -8,7 +8,10 @@
 			</PropertyList>
 			<ChildrenList>
 				<SoundBank Name="UI" ID="{81B99D84-89AE-44D1-8FA7-551F8531F82A}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="AB_UI" ID="{1F61919E-D9A4-449B-8215-D2ED53B236DA}" WorkUnitID="{F03EBC84-738D-4137-B6CF-95A631DC55C1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{F6A0B217-C21E-4558-AAD0-E1FDB4EEDC42}" WorkUnitID="{F6A0B217-C21E-4558-AAD0-E1FDB4EEDC42}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

@@ -1,0 +1,118 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3313685232",
+    "Type": "User",
+    "GUID": "{936086CB-4B37-4A12-A0ED-D89A9B1F31C9}",
+    "Color": "27",
+    "Language": "SFX",
+    "Hash": "{A122436A-9253-78CF-70E2-E562CC8BB18E}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOICES\\VOICES",
+    "ShortName": "VOICES",
+    "Path": "VOICES.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1072384616",
+       "Name": "Meter (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VOICES\\AB_VOICES\\[Effect Slot [0]: (Meter)]\\Meter (Custom)",
+       "GUID": "{476C8132-559D-4BE5-88F0-8A18A31E8C2F}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "1261969274",
+      "Name": "AB_VOICES",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VOICES\\AB_VOICES",
+      "GUID": "{FDBDADD7-3A3D-43B4-A3C5-B9D7BB3EBA55}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1072384616"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2554301646",
+        "Name": "COMPRESSION_VOICE",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\COMPRESSION_VOICE",
+        "GUID": "{187057D8-A503-4A94-8AD9-38E68BA377C2}"
+       }
+      ]
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1998977308",
+      "Name": "RTPC_Voice_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Voice_Volume",
+      "GUID": "{C0C54088-0B3D-4AD2-8C5C-1C297A2B7EB6}",
+      "Color": "1"
+     },
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     },
+     {
+      "Id": "3312150600",
+      "Name": "RTPC_Sidechain_Rage_Enter",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Sidechain_Rage_Enter",
+      "GUID": "{CDBA16C9-1E19-496A-B420-2194AE170CC6}",
+      "Color": "1"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2037745005",
+      "Name": "STG_DUCKGAMEOVER",
+      "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER",
+      "GUID": "{F8602139-94B4-472E-AE05-7C1BACD04DDB}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\None",
+        "GUID": "{4249B618-F554-41B7-92C0-6474F0C51E05}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\OFF",
+        "GUID": "{2F7E0F06-4458-411D-94B6-8AB9D860C269}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\ON",
+        "GUID": "{ED100031-70CD-4F13-BF9B-914069821D22}",
+        "Color": "23"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F01B10F9-A93D-38A2-C23C-D7F0E9142D15}"
+ }
+}

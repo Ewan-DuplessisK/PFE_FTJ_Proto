@@ -1,105 +1,75 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "CommonUserWidget.h"
-#include "UIElementButton.h"
-#include "SliderSettings.generated.h"
+#include"CoreMinimal.h"
+#include"CommonUserWidget.h"
+#include"SliderSettings.generated.h"
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API USliderSettings : public UUIElementButton
+//
+
+class ABaseHUD;
+class USlider;
+class UCommonTextBlock;
+class UCommonTextStyle;
+
+//
+
+UCLASS() class FTHISJOB_API USliderSettings : public UCommonUserWidget
 {
-	GENERATED_BODY()
-	
-public:
-	class USlider* GetSlider() const;
+    GENERATED_BODY()
 
-	class UCommonTextBlock* GetValueCommonTextBlock() const;
+    private:
 
-protected:
-	virtual void NativeConstruct() override;
+    UPROPERTY() float LastCall;
 
-	virtual void NativeOnHovered() override;
+    protected:
 
-	virtual void NativeOnUnhovered() override;
+    //Slider
+    UPROPERTY() ABaseHUD * HUD;
+    UPROPERTY(BlueprintReadWrite , Meta = (BindWidget)) USlider * Slider;
+    UPROPERTY() USlider * CurrentSlider;
+    bool bEnabled{true};
 
-	virtual FReply NativeOnPreviewKeyDown(const FGeometry& InGeometry, const FKeyEvent& InKeyEvent) override;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|Slider|Values") float SliderMin;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|Slider|Values") float SliderMax;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category="UIElement|Slider|Values") float SliderStepSize;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|Slider|Values") float SliderTempDefaultValue;
 
-	virtual FReply
-	NativeOnAnalogValueChanged(const FGeometry& InGeometry, const FAnalogInputEvent& InAnalogEvent) override;
+    //Text
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UCommonTextBlock * CommonTextBlock;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|Slider|Text") FText Text;
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UCommonTextBlock * ValueCommonTextBlock;
 
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|Slider|Text") TSubclassOf<UCommonTextStyle> NormalTextStyle;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "UIElement|Slider|Text") TSubclassOf<UCommonTextStyle> HoveredTextStyle;
 
-	// Slider
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
-	class USlider* Slider;
+    UPROPERTY() bool bIsHolding;
+    UPROPERTY() float HoldTimer;
+    UPROPERTY() float HoldRepeatDelay{0.2f};
+    UPROPERTY() float HoldRepeatRate{0.05};
+    UPROPERTY() int AxisDirection;
+    UPROPERTY() float RepeatAccumulator;
 
-	UPROPERTY()
-	class USlider* CurrentSlider;
+    public:
 
-	bool bEnabled{false};
+    private:
+    
+    protected:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|Slider|Values")
-	float SliderMin;
+    virtual void NativePreConstruct() override;
+    virtual void NativeConstruct() override;
+    virtual void NativeOnMouseEnter(const FGeometry& InGeometry , const FPointerEvent& InMouseEvent) override;
+    virtual void NativeOnMouseLeave(const FPointerEvent& InMouseEvent) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|Slider|Values")
-	float SliderMax;
+    UFUNCTION() void OnSliderValueChanged(float Value);
+    UFUNCTION() void OnSliderMouseCaptureBegin();
+    UFUNCTION() void OnSliderMouseCaptureEnd();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|Slider|Values")
-	float SliderStepSize;
+    public:
+    UFUNCTION(BlueprintImplementableEvent) void OnHoveredSound();
+    
+    USlider * GetSlider() const;
+    UCommonTextBlock * GetValueCommonTextBlock() const;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|Slider|Values")
-	float SliderTempDefaultValue;
-
-	//Text
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class UCommonTextBlock* CommonTextBlock;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|Slider|Text")
-	FText Text;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|Slider|Text")
-	TSubclassOf<UCommonTextStyle> NormalTextStyle;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|Slider|Text")
-	TSubclassOf<UCommonTextStyle> HoveredTextStyle;
-
-
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class UCommonTextBlock* ValueCommonTextBlock;
-
-	UPROPERTY()
-	bool bIsHolding = false;
-
-	UPROPERTY()
-	float HoldTimer = 0.f;
-
-	UPROPERTY()
-	float HoldRepeatDelay = 0.2f;
-
-	UPROPERTY()
-	float HoldRepeatRate = 0.05f;
-
-	UPROPERTY()
-	int AxisDirection = 0;
-
-	UPROPERTY()
-	float RepeatAccumulator = 0.f;
-
-	UPROPERTY()
-	class ABaseHUD* HUD;
-
-private:
-	UPROPERTY()
-	float LastCall = 0;
-
-public:
-	UFUNCTION()
-	void SetNumberSlider(float Value) const;
-
-	UFUNCTION()
-	void Increment(float StepAmount);
+    UFUNCTION() void SetNumberSlider(float Value) const;
+    UFUNCTION() void Increment(float StepAmount);
 };

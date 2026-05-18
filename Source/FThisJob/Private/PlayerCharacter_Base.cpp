@@ -62,7 +62,7 @@ void APlayerCharacter_Base::BeginPlay()
 	check(GI);
 	SettingsSave = GI->GetSettingsSave();
 	check(SettingsSave);
-	SettingsSave->OnSettingsChanged.AddDynamic(this, &APlayerCharacter_Base::MapSettingsDataBlueprint);
+	SettingsSave->OnSettingsChanged.AddUniqueDynamic(this, &APlayerCharacter_Base::MapSettingsDataBlueprint);
 	MapSettingsDataBlueprint();
 }
 

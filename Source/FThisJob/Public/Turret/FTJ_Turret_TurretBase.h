@@ -4,6 +4,7 @@
 #include"GameFramework/Pawn.h"
 #include"HitInterface.h"
 #include"Interfaces/KickedInterface.h"
+#include"HealthInterface.h"
 #include"FTJ_Turret_TurretBase.generated.h"
 
 class UAIPerceptionComponent;
@@ -14,7 +15,7 @@ class UFTJ_ScoringSystem_Score;
 class UCapsuleComponent;
 
 //An AFTJ_Turret_Turret base compatibility layer.
-UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitInterface
+UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitInterface , public IHealthInterface
 {
     GENERATED_BODY()
 
@@ -33,12 +34,6 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
     UAIPerceptionComponent * Perception;
     //The sensing model.
     UAISenseConfig_Sight * Sight;
-    UNiagaraComponent * ShowEffect;
-    UNiagaraComponent * ShootEffect;
-    UNiagaraComponent * HitEffect;
-    UNiagaraComponent * DeathEffect;
-    UNiagaraComponent * AdditionalDeathEffect;
-    FTimerHandle PreShootingTimer;
     //The shot type to spawn.
     UPROPERTY(EditAnywhere , AdvancedDisplay) UClass * ProjectileClass;
     //The duration after popping out.
@@ -53,7 +48,8 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
     UPROPERTY(EditAnywhere) float HealthLimit;
     //The sight radius to trigger.
     UPROPERTY(EditAnywhere) float Range;
-    UPROPERTY(EditAnywhere) int32 ScoreForDestruction;
+    UPROPERTY(EditAnywhere) float ScoreForDestruction;
+    UPROPERTY(EditAnywhere) float MultiplierGaugeForDestruction;
     UPROPERTY(EditAnywhere) double HeadRotationSpeed;
     UPROPERTY(EditAnywhere) double ShootingMarginalError;
     UPROPERTY(EditAnywhere) float PreShootingTimepoint;
@@ -84,6 +80,7 @@ UCLASS() class FTHISJOB_API AFTJ_Turret_TurretBase : public APawn , public IHitI
         For parameters, go to IHitInterface::GetHit.
     */
     void GetHit_Implementation(float InDamage , float InStun , FVector InKnockback , float InInvincibility , AActor * InSource) override;
+    void RemoveHealth_Implementation(float InDamage , AActor * InSource) override;
     void EndPlay(EEndPlayReason::Type const InReason) override;
     //Spawns a projectile and sets up a shooting timer.
     void Shoot();

@@ -1,34 +1,41 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "Engine/GameInstance.h"
-#include "BaseGameInstance.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API UBaseGameInstance : public UGameInstance
+#include"CoreMinimal.h"
+#include"Engine/GameInstance.h"
+#include"BaseGameInstance.generated.h"
+
+//
+
+class USettingsDataAsset;
+
+//
+
+UCLASS() class FTHISJOB_API UBaseGameInstance : public UGameInstance
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-	virtual void Init() override;
+    private:
 
-	void OnMapLoaded(UWorld* World);
-	
-public:
-	UPROPERTY(EditDefaultsOnly)
-	class USettingsDataAsset* SettingsDataAsset = nullptr;
+    protected:
 
-	UFUNCTION(BlueprintCallable)
-	class USettingsSave* GetSettingsSave() const;
+    UPROPERTY() TObjectPtr<USettingsSave> SettingsSave;
+    
+    public:
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void MapSettingsData();
+    UPROPERTY(EditDefaultsOnly) USettingsDataAsset * SettingsDataAsset;
 
-protected:
-	UPROPERTY()
-	TObjectPtr<class USettingsSave> SettingsSave = nullptr;
+    private:
+    
+    virtual void Init() override;
+    void OnMapLoaded(UWorld * World);
+    UFUNCTION(BlueprintCallable) void ApplySettings();
+
+    protected:
+
+    public:
+
+    UFUNCTION(BlueprintCallable) USettingsSave * GetSettingsSave() const;
+    UFUNCTION(BlueprintImplementableEvent) void MapSettingsData();
 };

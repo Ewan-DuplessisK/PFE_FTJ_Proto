@@ -1,0 +1,394 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2154636861",
+    "Type": "User",
+    "GUID": "{B28303C1-4A66-4425-A06D-2CA72BE0BF53}",
+    "Color": "27",
+    "Language": "SFX",
+    "Hash": "{99098F91-105F-A872-DA8E-501AFED4B353}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOICES_LVL_CEO",
+    "ShortName": "VOICES_LVL_CEO",
+    "Path": "VOICES_LVL_CEO.bnk",
+    "Media": [
+     {
+      "Id": "72067895",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Jake_CEO_01.wav",
+      "CachePath": "29/{293770CC-2052-0580-BB10-BD60DBA4561D}.wem"
+     },
+     {
+      "Id": "82578575",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Jake_CEO_06.wav",
+      "CachePath": "F6/{F6B67E28-E3F5-895D-C522-C10FBDCD9507}.wem"
+     },
+     {
+      "Id": "114559463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_04_02.wav",
+      "CachePath": "23/{23E0450A-E48F-4D2C-8E3B-E14E0F7D5A50}.wem"
+     },
+     {
+      "Id": "202226291",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_05.wav",
+      "CachePath": "68/{68083168-9E65-C8EE-A139-AE55F19AFB07}.wem"
+     },
+     {
+      "Id": "203455900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_04_01.wav",
+      "CachePath": "A0/{A0C25B4E-AE8F-C3CD-76AC-82B36651622F}.wem"
+     },
+     {
+      "Id": "281031035",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Jake_CEO_04.wav",
+      "CachePath": "E7/{E7022A5D-7748-B302-F006-9DC9761EE713}.wem"
+     },
+     {
+      "Id": "458024800",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_06.wav",
+      "CachePath": "13/{131DAC6B-822D-F4C2-A750-373439F493DD}.wem"
+     },
+     {
+      "Id": "510290513",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_01.wav",
+      "CachePath": "15/{15112566-AC94-B27E-EE15-98983B955793}.wem"
+     },
+     {
+      "Id": "510937307",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Jake_CEO_05.wav",
+      "CachePath": "B7/{B772061B-9BD3-0F05-FCE1-D7CC3A60919C}.wem"
+     },
+     {
+      "Id": "589337060",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Jake_CEO_07.wav",
+      "CachePath": "1B/{1BC90D07-00E4-3E29-0677-DE19452A7107}.wem"
+     },
+     {
+      "Id": "627772991",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_03.wav",
+      "CachePath": "39/{39EB4019-3FE3-74A5-77E5-A253240453DA}.wem"
+     },
+     {
+      "Id": "746801040",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_04_03.wav",
+      "CachePath": "34/{3452F4E6-02D9-0C0F-6714-C4BEF96A85FD}.wem"
+     },
+     {
+      "Id": "787853246",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Jake_CEO_03.wav",
+      "CachePath": "14/{14A5B8E9-A4D1-A1B5-E804-122F72779224}.wem"
+     },
+     {
+      "Id": "828714628",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_02.wav",
+      "CachePath": "F9/{F9C5E370-2751-2D7E-24A0-2130F5A5DC4B}.wem"
+     },
+     {
+      "Id": "964802426",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Jake_CEO_02.wav",
+      "CachePath": "F4/{F47BDFFC-8438-748C-20FF-F6039A5035E3}.wem"
+     },
+     {
+      "Id": "1020650023",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_CEO_CEO_07.wav",
+      "CachePath": "20/{20213E1B-614D-685D-B5BD-58B5E8E009FF}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2686399539",
+      "Name": "VOC_CEO_CEO_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_01",
+      "GUID": "{EC9190E3-A36E-4255-94B4-1AB85F097260}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "3.8649375",
+      "DurationMax": "3.8649375",
+      "MediaRefs": [
+       {
+        "Id": "510290513"
+       }
+      ]
+     },
+     {
+      "Id": "2686399536",
+      "Name": "VOC_CEO_CEO_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_02",
+      "GUID": "{1D419D5A-905F-46CA-9ADF-009DA3272E4D}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "5.9637084",
+      "DurationMax": "5.9637084",
+      "MediaRefs": [
+       {
+        "Id": "828714628"
+       }
+      ]
+     },
+     {
+      "Id": "2686399537",
+      "Name": "VOC_CEO_CEO_03",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_03",
+      "GUID": "{345C1D03-D489-4F80-9AC0-BAB8A96594E2}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "6.375854",
+      "DurationMax": "6.375854",
+      "MediaRefs": [
+       {
+        "Id": "627772991"
+       }
+      ]
+     },
+     {
+      "Id": "1394259286",
+      "Name": "VOC_CEO_CEO_04_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_04_1",
+      "GUID": "{0B7E6F73-9E35-4A5B-8B2B-E244066E97CA}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "5.4333334",
+      "DurationMax": "5.4333334",
+      "MediaRefs": [
+       {
+        "Id": "746801040"
+       }
+      ]
+     },
+     {
+      "Id": "1394259285",
+      "Name": "VOC_CEO_CEO_04_2",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_04_2",
+      "GUID": "{97B84B61-EF99-4B29-9B5C-5999C2B46C35}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "3.9333334",
+      "DurationMax": "3.9333334",
+      "MediaRefs": [
+       {
+        "Id": "114559463"
+       }
+      ]
+     },
+     {
+      "Id": "1394259284",
+      "Name": "VOC_CEO_CEO_04_3",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_04_3",
+      "GUID": "{7CD241FA-1EC3-46D3-8815-C3588168E5B4}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "3.4621665",
+      "DurationMax": "3.4621665",
+      "MediaRefs": [
+       {
+        "Id": "203455900"
+       }
+      ]
+     },
+     {
+      "Id": "2686399543",
+      "Name": "VOC_CEO_CEO_05",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_05",
+      "GUID": "{DD9E9C30-CB30-44F9-BF6F-793A01046EA3}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "5.5000625",
+      "DurationMax": "5.5000625",
+      "MediaRefs": [
+       {
+        "Id": "202226291"
+       }
+      ]
+     },
+     {
+      "Id": "2686399540",
+      "Name": "VOC_CEO_CEO_06",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_06",
+      "GUID": "{6F3DA41D-3EA3-444E-B376-F5242F854B32}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "6.420729",
+      "DurationMax": "6.420729",
+      "MediaRefs": [
+       {
+        "Id": "458024800"
+       }
+      ]
+     },
+     {
+      "Id": "2686399541",
+      "Name": "VOC_CEO_CEO_07",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_CEO_CEO_07",
+      "GUID": "{80E53201-0D6C-407D-9C27-D43391B7A26A}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "4.635771",
+      "DurationMax": "4.635771",
+      "MediaRefs": [
+       {
+        "Id": "1020650023"
+       }
+      ]
+     },
+     {
+      "Id": "226241099",
+      "Name": "VOC_Jake_CEO_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_Jake_CEO_01",
+      "GUID": "{B227B250-CFB1-4D14-BCEE-79FE0BE9037A}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "4.045521",
+      "DurationMax": "4.045521",
+      "MediaRefs": [
+       {
+        "Id": "72067895"
+       }
+      ]
+     },
+     {
+      "Id": "226241096",
+      "Name": "VOC_Jake_CEO_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_Jake_CEO_02",
+      "GUID": "{D53D9125-A4FC-4D3F-89F7-1072F884A6BA}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "3.0956874",
+      "DurationMax": "3.0956874",
+      "MediaRefs": [
+       {
+        "Id": "964802426"
+       }
+      ]
+     },
+     {
+      "Id": "226241097",
+      "Name": "VOC_Jake_CEO_03",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_Jake_CEO_03",
+      "GUID": "{2CFF37ED-4491-4508-9897-57C84324945F}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "3.9270418",
+      "DurationMax": "3.9270418",
+      "MediaRefs": [
+       {
+        "Id": "787853246"
+       }
+      ]
+     },
+     {
+      "Id": "226241102",
+      "Name": "VOC_Jake_CEO_04",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_Jake_CEO_04",
+      "GUID": "{98CFE5ED-AC70-4496-9A54-1A5828B73930}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6802708",
+      "DurationMax": "1.6802708",
+      "MediaRefs": [
+       {
+        "Id": "281031035"
+       }
+      ]
+     },
+     {
+      "Id": "226241103",
+      "Name": "VOC_Jake_CEO_05",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_Jake_CEO_05",
+      "GUID": "{ED98C5AD-880C-4016-BA6F-62F715B13829}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.95175",
+      "DurationMax": "1.95175",
+      "MediaRefs": [
+       {
+        "Id": "510937307"
+       }
+      ]
+     },
+     {
+      "Id": "226241100",
+      "Name": "VOC_Jake_CEO_06",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_Jake_CEO_06",
+      "GUID": "{2FA899F8-F4EC-41D8-A448-0FC1431B2AE5}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "3.942",
+      "DurationMax": "3.942",
+      "MediaRefs": [
+       {
+        "Id": "82578575"
+       }
+      ]
+     },
+     {
+      "Id": "226241101",
+      "Name": "VOC_Jake_CEO_07",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_CEO\\VOC_Jake_CEO_07",
+      "GUID": "{1D20AD78-8FF1-4C2D-8894-FA0F62A5D9C4}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "2.1706042",
+      "DurationMax": "2.1706042",
+      "MediaRefs": [
+       {
+        "Id": "589337060"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1011197E-46E3-FF0D-7731-F2DDA1644FED}"
+ }
+}

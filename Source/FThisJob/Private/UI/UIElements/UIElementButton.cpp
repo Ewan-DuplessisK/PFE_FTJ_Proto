@@ -1,18 +1,35 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/UIElements/UIElementButton.h"
 
-#include "UI/UIElements/UIElementButton.h"
+//Private
+
+//Protected
 
 void UUIElementButton::NativeConstruct()
 {
-	Super::NativeConstruct();
-
-	SetNavigationRuleExplicit(EUINavigation::Up, UpUIElement);
-	SetNavigationRuleExplicit(EUINavigation::Down, DownUIElement);
+    Super::NativeConstruct();
+    if(UpUIElement)
+    {
+        SetNavigationRuleExplicit(EUINavigation::Up , UpUIElement);
+    }
+    if(DownUIElement)
+    {
+        SetNavigationRuleExplicit(EUINavigation::Down , DownUIElement);
+    }
 
 }
+
+//
 
 void UUIElementButton::NativeOnHovered()
 {
-	Super::NativeOnHovered();
+    Super::NativeOnHovered();
 }
+
+void UUIElementButton::NativeOnUnhovered()
+{
+    Super::NativeOnUnhovered();
+}
+
+//Public

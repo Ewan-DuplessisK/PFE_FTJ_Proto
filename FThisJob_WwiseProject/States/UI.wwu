@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{61917E6B-74F5-4600-85C3-FE435D8427A5}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="UI" ID="{61917E6B-74F5-4600-85C3-FE435D8427A5}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="UI_Score_Multiplier" ID="{FB79018C-863B-4AE2-BF80-E4AE7897881A}">
+					<ChildrenList>
+						<State Name="None" ID="{DFF0133F-8623-4E36-9530-E1E30F0EF825}"/>
+						<State Name="A" ID="{D1CFE2AA-D2E8-47E0-B97B-45D6679162B3}"/>
+						<State Name="B" ID="{6D8E7C18-57AD-41F9-AE7C-E020857AA955}"/>
+						<State Name="C" ID="{A079FF6D-D46E-4DF1-B182-4AE256FD4313}"/>
+						<State Name="D" ID="{09A439FA-13D5-4437-91EC-960A4AEA2756}"/>
+						<State Name="E" ID="{471867A8-1D2D-43D3-BD72-19A104CBF8A5}"/>
+						<State Name="F" ID="{BA971D1F-17E9-4B4E-A5E3-F1115C8D7858}"/>
+						<State Name="S" ID="{70773DB7-4AF1-4031-A6DB-628406C57982}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="STG_DUCKPAUSE" ID="{15ECBCBF-3F06-4289-AFC6-8844C587E497}">
+					<ChildrenList>
+						<State Name="None" ID="{6A1E09E1-E251-4B2B-A184-1D936B6FE643}"/>
+						<State Name="ON" ID="{24F35669-AD62-4CAA-ADE5-6808BDE93D74}"/>
+						<State Name="OFF" ID="{05000AAB-A14A-470B-9CB9-8B447EF0C75F}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

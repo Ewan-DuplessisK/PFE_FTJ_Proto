@@ -12,7 +12,7 @@ public class FThisJob : ModuleRules
 		{
 			"Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "GeometryCollectionEngine", 
 			"DataflowEngine", "DataflowCore", "GeometryCollectionNodes", "FieldSystemEngine",
-			"Niagara", "CommonUI", "CommonInput","Slate", "SlateCore", "UMG","AIModule"
+			"Niagara", "CommonUI", "CommonInput","Slate", "SlateCore", "UMG","AIModule", "AkAudio"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[]

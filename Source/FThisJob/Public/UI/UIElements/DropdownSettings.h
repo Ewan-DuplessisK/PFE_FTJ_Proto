@@ -1,131 +1,125 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "UIElementButton.h"
-#include "DropdownSettings.generated.h"
+//
 
-UENUM(BlueprintType)
-enum class EDropdownValueType : uint8
+#include"CoreMinimal.h"
+#include"UIElementButton.h"
+#include"DropdownSettings.generated.h"
+
+//
+
+class UCommonAnimatedSwitcher;
+class UCommonTextBlock;
+class UCommonTextBlockDropdown;
+class UMainMenuButton;
+
+//
+
+UENUM(BlueprintType) enum class EDropdownValueType : uint8
 {
-	None,
-	IntPoint,
-	WindowMode,
-	Integer,
+    None
+    ,
+    IntPoint
+    ,
+    WindowMode
+    ,
+    Integer
+    ,
+    Bool
 };
 
-USTRUCT(BlueprintType)
-struct FDropdownOption
+//
+
+USTRUCT(BlueprintType) struct FDropdownOption
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FText DisplayName;
+    private:
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(HideInDetailPanel))
-	EDropdownValueType ValueType = EDropdownValueType::None;
+    protected:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Dropdown Option",
-		meta=(EditCondition="ValueType == EDropdownValueType::IntPoint", EditConditionHides))
-	FIntPoint IntPointValue = 0;
+    public:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Dropdown Option",
-		meta=(EditCondition="ValueType == EDropdownValueType::WindowMode", EditConditionHides))
-	TEnumAsByte<EWindowMode::Type> WindowModeValue = EWindowMode::Type::Fullscreen;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite) FText DisplayName;
+    UPROPERTY(EditAnywhere , BlueprintReadOnly , Meta = (HideInDetailPanel)) EDropdownValueType ValueType{EDropdownValueType::None};
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Dropdown Option" , Meta = (EditCondition = "ValueType == EDropdownValueType::IntPoint" , EditConditionHides)) FIntPoint IntPointValue{0};
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Dropdown Option" , Meta = (EditCondition = "ValueType == EDropdownValueType::WindowMode" , EditConditionHides))
+    TEnumAsByte<EWindowMode::Type> WindowModeValue{EWindowMode::Type::Fullscreen};
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Dropdown Option" , Meta = (EditCondition = "ValueType == EDropdownValueType::Integer" , EditConditionHides)) int32 IntValue{0};
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Dropdown Option" , Meta = (EditCondition = "ValueType == EDropdownValueType::Bool" , EditConditionHides)) bool bValue{true};
+    
+    private:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Dropdown Option",
-		meta=(EditCondition="ValueType == EDropdownValueType::Integer", EditConditionHides))
-	int32 IntValue = 0;
+    protected:
 
-	FDropdownOption()
-	{
-	}
+    public:
 
-	static FDropdownOption MakeResolution(FText Name, FIntPoint Res)
-	{
-		FDropdownOption Opt;
-		Opt.DisplayName = Name;
-		Opt.ValueType = EDropdownValueType::IntPoint;
-		Opt.IntPointValue = Res;
-		return Opt;
-	}
+    FDropdownOption();
 
-	static FDropdownOption MakeWindowMode(FText Name, EWindowMode::Type Mode)
-	{
-		FDropdownOption Opt;
-		Opt.DisplayName = Name;
-		Opt.ValueType = EDropdownValueType::WindowMode;
-		Opt.WindowModeValue = Mode;
-		return Opt;
-	}
+    static FDropdownOption MakeResolution(FText Name , FIntPoint Res);
 
-	static FDropdownOption MakeInteger(FText Name, int32 Val)
-	{
-		FDropdownOption Opt;
-		Opt.DisplayName = Name;
-		Opt.ValueType = EDropdownValueType::Integer;
-		Opt.IntValue = Val;
-		return Opt;
-	}
+    static FDropdownOption MakeWindowMode(FText Name , EWindowMode::Type Mode);
+
+    static FDropdownOption MakeInteger(FText Name , int32 Val);
+    
+    static FDropdownOption MakeBool(FText Name , bool bValue);
 };
 
-UCLASS()
-class FTHISJOB_API UDropdownSettings : public UUIElementButton
+//
+
+UCLASS() class FTHISJOB_API UDropdownSettings : public UUIElementButton
 {
-	GENERATED_BODY()
-		
-public:
-	virtual void NativeConstruct() override;
+    GENERATED_BODY()
+        
+    private:
 
-	class UCommonAnimatedSwitcher* GetSwitcher() const;
+    UPROPERTY() float LastCall;
+    
+    protected:
 
-	UFUNCTION()
-	FDropdownOption GetSelectedOption() const;
+    //Text
+    UPROPERTY(Meta = (BindWidget)) UCommonAnimatedSwitcher * Switcher;
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UCommonTextBlock * CommonTextBlock;
+    UPROPERTY() UCommonTextBlock * CommonTextBlockObject;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite, Category = "UIElement|Dropdown|Name") FText NameText;
+    UPROPERTY(EditAnywhere , Category = "UIElement|Dropdown|Name") TSubclassOf<UCommonTextStyle> NormalTextStyle;
+    UPROPERTY(EditAnywhere , Category = "UIElement|Dropdown|Name") TSubclassOf<UCommonTextStyle> HoveredTextStyle;
+    UPROPERTY(EditAnywhere , Category = "UIElement|Dropdown") TSubclassOf<UCommonTextBlockDropdown> CommonTextBlocDropDownClass;
+    UPROPERTY(Transient, meta = (BindWidgetAnim)) UWidgetAnimation* ToLeftAnimation;
+    UPROPERTY(Transient, meta = (BindWidgetAnim)) UWidgetAnimation* ToRightAnimation;
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UMainMenuButton * LeftArrowButton;
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UMainMenuButton * RightArrowButton;
+    
+    UPROPERTY(EditAnywhere , Category = "UIElement|Dropdown") TArray<FDropdownOption> Entries;
+    UPROPERTY() int32 SwitcherLenght;
 
-	virtual void NativeOnHovered() override;
+    public:
 
-	virtual void NativeOnUnhovered() override;
-	
-protected:
-	UPROPERTY(meta = (BindWidget))
-	class UCommonAnimatedSwitcher* Switcher;
+    private:
 
-	// Text
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class UCommonTextBlock* CommonTextBlock;
-	UPROPERTY()
-	UCommonTextBlock* CommonTextBlockObject;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UIElement|Dropdown|Name")
-	FText NameText;
-	UPROPERTY(EditAnywhere, Category="UIElement|Dropdown|Name")
-	TSubclassOf<UCommonTextStyle> NormalTextStyle;
-	UPROPERTY(EditAnywhere, Category="UIElement|Dropdown|Name")
-	TSubclassOf<UCommonTextStyle> HoveredTextStyle;
-	UPROPERTY(EditAnywhere, Category="UIElement|Dropdown")
-	TSubclassOf<class UCommonTextBlockDropdown> CommonTextBlocDropDownClass;
+    void OnLeftArrowClicked();
+    void OnRightArrowClicked();
+    
+    protected:
 
-	UPROPERTY(EditAnywhere, Category="UIElement|Dropdown")
-	TArray<FDropdownOption> Entries;
+    virtual FReply NativeOnPreviewKeyDown(FGeometry const& InGeometry , FKeyEvent const& InKeyEvent) override;
+    virtual FReply NativeOnAnalogValueChanged(FGeometry const& InGeometry , FAnalogInputEvent const& InAnalogEvent) override;
 
-	UPROPERTY()
-	int32 SwitcherLenght;
+    UFUNCTION() void CreateTextBlock(FText Text);
 
-	virtual FReply NativeOnPreviewKeyDown(const FGeometry& InGeometry, const FKeyEvent& InKeyEvent) override;
+    UFUNCTION() void ToLeftOption();
+    UFUNCTION() void ToRightOption();
+    
+    public:
 
-	virtual FReply
-	NativeOnAnalogValueChanged(const FGeometry& InGeometry, const FAnalogInputEvent& InAnalogEvent) override;
+    virtual void NativePreConstruct() override;
+    virtual void NativeConstruct() override;
+    virtual void NativeOnHovered() override;
+    virtual void NativeOnUnhovered() override;
 
-	UFUNCTION()
-	void CreateTextBlock(FText Text);
+    UFUNCTION(BlueprintImplementableEvent) void OnHoveredSound();
 
-	UFUNCTION()
-	void ToRightOption();
-
-	UFUNCTION()
-	void ToLeftOption();
-
-private:
-	UPROPERTY()
-	float LastCall = 0;
+    UFUNCTION(BlueprintCallable) FDropdownOption GetSelectedOption() const;
+    UFUNCTION(BlueprintCallable) UCommonAnimatedSwitcher * GetSwitcher() const;
+    TArray<FDropdownOption> const& GetEntries();
 };

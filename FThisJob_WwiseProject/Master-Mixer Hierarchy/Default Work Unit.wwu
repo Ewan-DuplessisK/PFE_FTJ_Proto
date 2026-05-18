@@ -4,11 +4,209 @@
 		<WorkUnit Name="Default Work Unit" ID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="3"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{30F46EA7-2B85-41A5-B778-5D627B4C658F}" WorkUnitID="{CDC24A2C-B4B1-47E7-A644-FF77CA93A6D5}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="AMB" ID="{D0811865-DBB9-4CA7-86EE-98046AB40B58}" PersistMode="Reference"/>
+						<WorkUnit Name="ENEMIES" ID="{FA4E556E-03CC-4D15-967D-9EC8AFAF9369}" PersistMode="Reference"/>
+						<WorkUnit Name="GPE" ID="{E3C8A65D-504C-46C0-9917-8ACA728D43FD}" PersistMode="Reference"/>
+						<WorkUnit Name="MC" ID="{593669B8-3F66-44D2-889D-92F88F3ABEB9}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX" ID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}" PersistMode="Reference"/>
+						<WorkUnit Name="UI" ID="{F03EBC84-738D-4137-B6CF-95A631DC55C1}" PersistMode="Reference"/>
+						<WorkUnit Name="VOICES" ID="{D8E6497A-AC26-4659-A3E9-978F414BBEB3}" PersistMode="Reference"/>
+						<WorkUnit Name="MUSIC" ID="{47EFCAEE-EABE-4700-B7DA-5AB8DF9EEBE8}" PersistMode="Reference"/>
+						<WorkUnit Name="REVERB" ID="{E5819D64-7CD1-4D22-8926-A8927D796F70}" PersistMode="Reference"/>
+						<AuxBus Name="RVB_TOILET_ROOM" ID="{88517EC0-268A-475D-ACDA-30EE03E36F23}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{72059CC7-1A47-415A-BA19-5B0E666D347E}" ShortID="650031523">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+														<ObjectRef Name="Bathroom1" ID="{1969D30F-C165-45C0-B290-DE3ED07A7AA3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="RVB_BIG_ROOM" ID="{D2A20092-DEE8-44A6-98B2-AA770CE07948}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{179B7234-63B5-4FB4-B921-CB27A3AA5955}" ShortID="26791124">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Plate_Medium" ID="{33384D0C-6ACB-4E3D-AC82-73AAB3AE1CA5}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="RVB_SMALL_ROOM" ID="{E7983A19-AC78-48EB-BA0C-7CD2623CDC6F}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{DBB474A9-60AC-4557-97B4-E7620570CBE4}" ShortID="917000417">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+														<ObjectRef Name="Small_Tiled_Room1" ID="{41EEE722-3009-4B3F-8820-F414623783E3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="RVB_WAITING_ROOM" ID="{246EDE5D-40D5-4EE5-915D-76F5C73D40A6}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{BB31252E-C302-4FFA-AB9E-3846F776463B}" ShortID="600860264">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Plate_Medium" ID="{33384D0C-6ACB-4E3D-AC82-73AAB3AE1CA5}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="RVB_GARAGE_ROOM" ID="{36BAB7D9-2AFE-4FD6-BEEB-46FD57705BD4}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{4F3CCD54-A354-40DA-A6FF-5C6AB6E2E1B4}" ShortID="852512483">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+														<ObjectRef Name="Big_Garage1" ID="{172402A8-22F4-40FC-BE1D-5269594CB633}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="RVB_CANTEEN_ROOM" ID="{56C63E1E-CB05-41E7-A257-59A9E9185095}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{A57EC896-F00B-46A4-A7A0-47FE58B99495}" ShortID="562083060">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="RVB_MEDIUM_ROOM" ID="{944BB470-71E4-4ADC-A25F-870081289305}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{AB8C5549-CE32-488F-99CC-5DB1B324E7CA}" ShortID="804769783">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+														<ObjectRef Name="Medium_Room1" ID="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="COMPRESSION_VOICE" ID="{187057D8-A503-4A94-8AD9-38E68BA377C2}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{C184E116-4EB7-4C34-9656-BD006AE6E939}" ShortID="625262517">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Compressor (Custom)" ID="{B29158C5-C81D-405C-AC6A-F2EAFBB4EC66}" ShortID="462187169" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																<PropertyList>
+																	<Property Name="OutputGain" Type="Real32" Value="3"/>
+																	<Property Name="ProcessLFE" Type="bool" Value="False"/>
+																	<Property Name="Threshold" Type="Real32" Value="-20"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<WorkUnit Name="CINEMATIC" ID="{5351FC4D-D05D-4BE4-A41E-10C61D211ADC}" PersistMode="Reference"/>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{46A5FBE8-9956-459D-A586-3C7C95AEB99A}" ShortID="409560918">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Master_Volume" ID="{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{E286DE01-1745-4314-8218-7C1510ECBE65}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

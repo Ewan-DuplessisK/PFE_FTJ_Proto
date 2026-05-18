@@ -7,9 +7,19 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<WorkUnit Name="AMB_LVL_01" ID="{CBE32B8C-192E-4B24-BDD5-C3C79B9ACA73}" PersistMode="Reference"/>
-				<WorkUnit Name="AMB_LVL_02" ID="{BC49D37F-49FE-48E3-AE04-35A0D3D6641B}" PersistMode="Reference"/>
-				<WorkUnit Name="AMB_LVL_03" ID="{3CCC308E-F129-4873-A2D0-DE19F43B06B3}" PersistMode="Reference"/>
+				<SoundBank Name="AMB" ID="{3561DA39-79AF-4E71-A45D-AA5754D499A3}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AMB_GENERAL" ID="{D22E2CDE-292C-41CB-97A4-5D5867D7F307}" WorkUnitID="{D22E2CDE-292C-41CB-97A4-5D5867D7F307}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<WorkUnit Name="AMB_LVL_CEO" ID="{9D87F998-3B90-43AF-A381-ACF534ECBF92}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_MENU" ID="{C0A24036-ADD0-4BEC-BDFD-8F5184C254F9}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_OPEN_OFFICE_01" ID="{606D3D59-4622-4FAB-B73E-EEEB91478EBE}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_OPEN_OFFICE_02" ID="{A6262AB6-D7FF-4EB7-BFB5-9A40418CB23C}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_TUTO" ID="{1F40E3C7-726C-498A-AE62-ED26D5A0B3A7}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_LABORATORY" ID="{5AB95658-BB4F-469E-91FA-77325A696287}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

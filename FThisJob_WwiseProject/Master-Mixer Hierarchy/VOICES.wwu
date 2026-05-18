@@ -1,23 +1,440 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{FF9B936D-C4ED-4F1A-8499-EB3759DD7285}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{D8E6497A-AC26-4659-A3E9-978F414BBEB3}" SchemaVersion="123" RootDocumentID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}" ParentDocumentID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}">
 	<Busses>
-		<WorkUnit Name="VOICES" ID="{FF9B936D-C4ED-4F1A-8499-EB3759DD7285}" PersistMode="Standalone">
-			<PropertyList>
-				<Property Name="Color" Type="int16" Value="27"/>
-				<Property Name="OverrideColor" Type="bool" Value="True"/>
-			</PropertyList>
+		<WorkUnit Name="VOICES" ID="{D8E6497A-AC26-4659-A3E9-978F414BBEB3}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
-				<Bus Name="AB_VOICES" ID="{200A2F7E-181C-4C35-A89B-8572B2F6138E}">
+				<Bus Name="AB_VOICES" ID="{FDBDADD7-3A3D-43B4-A3C5-B9D7BB3EBA55}">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
-						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
-							<ObjectRef Name="System" ID="{30F46EA7-2B85-41A5-B778-5D627B4C658F}" WorkUnitID="{CDC24A2C-B4B1-47E7-A644-FF77CA93A6D5}"/>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="COMPRESSION_VOICE" ID="{187057D8-A503-4A94-8AD9-38E68BA377C2}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
 						</Reference>
 					</ReferenceList>
-					<ChildrenList>
-						<Bus Name="AB_VOICES_LVL_01" ID="{A15668BD-4EF2-4616-8E13-E7DF6961B72F}"/>
-						<Bus Name="AB_VOICES_LVL_02" ID="{F2D52E57-FAC9-4499-8F7D-F9471C6F1967}"/>
-						<Bus Name="AB_VOICES_LVL_03" ID="{81F1D8D9-D6E3-4593-B81C-A843DA07DE24}"/>
-					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="STG_DUCKGAMEOVER" ID="{F8602139-94B4-472E-AE05-7C1BACD04DDB}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="OFF" ID="{2F7E0F06-4458-411D-94B6-8AB9D860C269}"/>
+								<CustomState Name="" ID="{8EBC7BB1-3FB0-4315-B73C-05848535EE9E}" ShortID="461399830"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{4249B618-F554-41B7-92C0-6474F0C51E05}"/>
+								<CustomState Name="" ID="{0BC228DD-36EB-4F02-8D45-C99C64CF055E}" ShortID="773916482"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ON" ID="{ED100031-70CD-4F13-BF9B-914069821D22}"/>
+								<CustomState Name="" ID="{F96B6F7B-0C1C-41B9-A263-BB5D546BDCB1}" ShortID="625894490">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="20"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{06E88392-D707-41AC-AD9A-FBEAB361F5B3}" ShortID="451362025">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Meter (Custom)" ID="{476C8132-559D-4BE5-88F0-8A18A31E8C2F}" ShortID="1072384616" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+														<PropertyList>
+															<Property Name="Max" Type="Real32" Value="6"/>
+															<Property Name="ReleaseTime" Type="Real32" Value="0.4"/>
+														</PropertyList>
+														<PluginData>
+	<GameParameter Name="RTPC_Music_SideChain" ID="{48035C4E-15B2-4C86-A81C-7505A68840D5}"/>
+</PluginData>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+										<StateInfo>
+											<CustomStateList>
+												<CustomState>
+													<StateRef Name="OFF" ID="{2F7E0F06-4458-411D-94B6-8AB9D860C269}"/>
+													<CustomState Name="" ID="{3350F35E-B1B6-4D90-AF6B-74BC5D0DE256}" ShortID="293785440"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="None" ID="{4249B618-F554-41B7-92C0-6474F0C51E05}"/>
+													<CustomState Name="" ID="{8EA5CFAB-AE79-4895-9BCD-C4039D604CBD}" ShortID="515730336"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="ON" ID="{ED100031-70CD-4F13-BF9B-914069821D22}"/>
+													<CustomState Name="" ID="{5F96873F-6F0B-4265-9765-C8458FA252C0}" ShortID="102519288"/>
+												</CustomState>
+											</CustomStateList>
+										</StateInfo>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{A9099EDD-5F22-4CE1-84CA-4415763A8A39}" ShortID="912139599">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Voice_Volume" ID="{C0C54088-0B3D-4AD2-8C5C-1C297A2B7EB6}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{32D4DD6D-A7E9-4E7C-9C25-25DCFA375FE6}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{BB009DC0-7CD6-46DB-B551-EF87446E9544}" ShortID="38948254">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Sidechain_Rage_Enter" ID="{CDBA16C9-1E19-496A-B420-2194AE170CC6}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{2605843A-8A8D-4CF3-A72D-9257F4F234F7}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0.0264400000000364</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-9.96521</XPos>
+																<YPos>-12.28211</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>-12.50203</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Bus>
+				<Bus Name="AB_VOICES_REACTION" ID="{F0425890-125E-4491-9F48-6A8F4E30C24C}">
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MC_CriticalHealth" ID="{A5FC26C3-7658-4327-B092-C5E156E8EE7C}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="STG_DUCKGAMEOVER" ID="{F8602139-94B4-472E-AE05-7C1BACD04DDB}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="OFF" ID="{2F7E0F06-4458-411D-94B6-8AB9D860C269}"/>
+								<CustomState Name="" ID="{3CC96704-9B2E-424B-AED0-DFCD9C1AA47B}" ShortID="1054741172"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{4249B618-F554-41B7-92C0-6474F0C51E05}"/>
+								<CustomState Name="" ID="{CB652A88-901B-4D33-B614-82E27F52499C}" ShortID="837137621"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{5BC3290D-432D-4808-8DF2-9ECD959311FD}"/>
+								<CustomState Name="" ID="{50814BE8-395C-485C-B1E6-F80BE86682DC}" ShortID="684020067"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="OFF" ID="{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}"/>
+								<CustomState Name="" ID="{E9FCD40C-6BF7-4117-86AC-429C06294F11}" ShortID="233555565"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ON" ID="{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}"/>
+								<CustomState Name="" ID="{D1542DE2-FEDF-41F2-803D-599D2F0F75CE}" ShortID="1032392685">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="20"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ON" ID="{ED100031-70CD-4F13-BF9B-914069821D22}"/>
+								<CustomState Name="" ID="{7C74122B-62FA-4446-892B-9F6887767994}" ShortID="203213802">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="20"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{A6205E65-950F-411E-98AB-4C6C32FFFCF6}" ShortID="641480345">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Meter (Custom)" ID="{E19BBAF9-8675-43F1-861C-63F07B24BCE7}" ShortID="384003578" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+														<PropertyList>
+															<Property Name="Max" Type="Real32" Value="6"/>
+															<Property Name="ReleaseTime" Type="Real32" Value="0.4"/>
+														</PropertyList>
+														<PluginData>
+	<GameParameter Name="RTPC_Music_SideChain_VOICEREACTION" ID="{DF6DAE97-E05E-4CFE-9371-581FF156106D}"/>
+</PluginData>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+										<StateInfo>
+											<CustomStateList>
+												<CustomState>
+													<StateRef Name="OFF" ID="{2F7E0F06-4458-411D-94B6-8AB9D860C269}"/>
+													<CustomState Name="" ID="{7D6127D2-F5CF-4294-B89C-AC30B954EBA3}" ShortID="483473062"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="None" ID="{4249B618-F554-41B7-92C0-6474F0C51E05}"/>
+													<CustomState Name="" ID="{531906BC-82DC-441B-9764-2D90DBFA0DB9}" ShortID="303595720"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="None" ID="{5BC3290D-432D-4808-8DF2-9ECD959311FD}"/>
+													<CustomState Name="" ID="{E1778F38-D22B-4389-AD4A-D3D81C2BB9B2}" ShortID="866116603"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="OFF" ID="{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}"/>
+													<CustomState Name="" ID="{6E1EE467-75D5-43D5-AD7A-F18F893B6295}" ShortID="353984208"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="ON" ID="{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}"/>
+													<CustomState Name="" ID="{A5DA9A29-ECE3-4A97-824A-F674117C9F76}" ShortID="649451766"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="ON" ID="{ED100031-70CD-4F13-BF9B-914069821D22}"/>
+													<CustomState Name="" ID="{05409D82-F279-4A41-962D-D1D2C0F59904}" ShortID="592112186"/>
+												</CustomState>
+											</CustomStateList>
+										</StateInfo>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{5989B0A0-DA8F-46F3-B3FE-8E64656B9A3D}" ShortID="1047043618">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Voice_Volume" ID="{C0C54088-0B3D-4AD2-8C5C-1C297A2B7EB6}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{7B37F73E-F1EA-41D1-8664-3A8EFA5EDB00}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{C059058A-42CF-4C48-B883-F193DE0BDBBC}" ShortID="603564064">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Sidechain_Rage_Enter" ID="{CDBA16C9-1E19-496A-B420-2194AE170CC6}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{507FEDEA-2B47-4F4E-92B7-7E875A6E8E96}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0.0264400000000364</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-9.96521</XPos>
+																<YPos>-12.28211</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>-12.50203</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Bus>
+				<Bus Name="AB_VOICES_AI" ID="{16F58050-8B74-4F9F-8AC1-83F74BE018FE}">
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{57ED0B7B-E9F7-488A-8A27-C3FB9502D28A}" ShortID="170466010">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{248D0C44-35A2-43C9-B3A9-DB6A26160DFC}" ShortID="882537526">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Sidechain_Rage_Enter" ID="{CDBA16C9-1E19-496A-B420-2194AE170CC6}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{8A2B45A7-9326-4298-8917-D496F1EB8662}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0.0264400000000364</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-9.96521</XPos>
+																<YPos>-12.28211</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>-12.50203</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{97D35D81-8411-49E9-8F4A-8B3F6FDC64AC}" ShortID="265273998">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Voice_Volume" ID="{C0C54088-0B3D-4AD2-8C5C-1C297A2B7EB6}" WorkUnitID="{EF7476DE-54D3-40E3-8F95-85100696ABDF}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{285290B4-B9AD-494E-90AC-369A54ED5B0F}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

@@ -28,29 +28,12 @@ public:
 
 	
 	//Public variables
-
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-	bool bCanDash = true;
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-	bool isDashing = false;
-
-	UPROPERTY(BlueprintReadWrite, Category="")
-	float WalkSpeed = 0.f;
-	UPROPERTY(BlueprintReadWrite, Category="")
-	float RunSpeed = 0.f;
-
-	UPROPERTY(BlueprintReadWrite, Category="Health")
-	float CurrentHealth = 100.f;
-	UPROPERTY(BlueprintReadWrite, Category="Health")
-	float MaxHealth = 100.f;
 	
-	UPROPERTY(BlueprintReadWrite, Category="")
-	int CQCDamages = 0;
-
-	UPROPERTY(BlueprintReadWrite, Category="")
-	TArray<FString>States;
-
-	//Interface
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Health")
+	float CurrentHealth = 100.f;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Health")
+	float MaxHealth = 100.f;
+   
 	// Health
 	virtual void RemoveHealth_Implementation(float Damage, AActor* EnemyRef) override;
 	virtual void AddHealth_Implementation(float Amount) override;
@@ -62,6 +45,25 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	
+
+private:
+
+	//deprecated vars
+	UPROPERTY()
+	bool bCanDash = true;
+	UPROPERTY()
+	bool isDashing = false;
+
+	UPROPERTY()
+	float WalkSpeed = 0.f;
+	UPROPERTY()
+	float RunSpeed = 0.f;
+
+	UPROPERTY()
+	int CQCDamages = 0;
+
+	UPROPERTY()
+	TArray<FString>States;
+	//end deprecated vars
 
 };

@@ -4,7 +4,10 @@
 		<WorkUnit Name="GPE_LVL_01" ID="{CBB6C57B-F436-4A37-A4A3-9D1F175394B7}" OwnerID="{CBAA17B3-C526-4FC5-8392-E3214569C061}" PersistMode="Nested">
 			<ChildrenList>
 				<SoundBank Name="GPE_LVL_01" ID="{A2759956-F2AD-4580-83A4-2BF9D2AA540D}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="GPE_LVL_01" ID="{6E5E1CEC-A139-45F3-A7A2-93734DFBDBBD}" WorkUnitID="{6E5E1CEC-A139-45F3-A7A2-93734DFBDBBD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="AB_GPE_LVL_01" ID="{545C53D3-F33D-4EE3-8DB4-63B06A445D87}" WorkUnitID="{E3C8A65D-504C-46C0-9917-8ACA728D43FD}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

@@ -1,47 +1,60 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "CommonUserWidget.h"
-#include "WidgetTabHeader.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API UWidgetTabHeader : public UCommonUserWidget
+#include"CoreMinimal.h"
+#include"CommonUserWidget.h"
+#include"WidgetTabHeader.generated.h"
+
+//
+
+class UCommonTextBlock;
+class UImage;
+class UCommonTextStyle;
+class USwitcherTabSettings;
+
+//
+
+UCLASS() class FTHISJOB_API UWidgetTabHeader : public UCommonUserWidget
 {
-	GENERATED_BODY()
-	
-public:
-	virtual void NativeConstruct() override;
+    GENERATED_BODY()
 
-	// Get/SetIndex()
-	void SetIndex(int NewIndex);
+    private:
 
-	int GetIndex() const;
+    protected:
 
-	void Toggle(bool bToggle);
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UCommonTextBlock * CommonTextBlock;
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UImage * TabImage;
+    UPROPERTY(EditAnywhere , Category = "TabHeader") UTexture2D * UnSelectedTabTexture;
+    UPROPERTY(EditAnywhere , Category = "TabHeader") UTexture2D * SelectedTabTexture;
 
-protected:
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class UCommonTextBlock* CommonTextBlock;
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class UImage* TabImage;
-	UPROPERTY(EditAnywhere,Category="TabHeader")
-	class UTexture2D* UnSelectedTabTexture;
-	UPROPERTY(EditAnywhere,Category="TabHeader")
-	class UTexture2D* SelectedTabTexture;
+    UPROPERTY(EditAnywhere , BlueprintReadOnly , Meta = (BindWidget) , Category = "TabHeader") FText Text;
+    UPROPERTY() int Index;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (BindWidget), Category="TabHeader")
-	FText Text;
-	UPROPERTY()
-	int Index;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "TabHeader|TextStyle") TSubclassOf<UCommonTextStyle> NormalTextStyle;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "TabHeader|TextStyle") TSubclassOf<UCommonTextStyle> HoveredTextStyle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="TabHeader|TextStyle")
-	TSubclassOf<class UCommonTextStyle> NormalTextStyle;
+    UPROPERTY(BlueprintReadOnly) bool isSelected;
+    USwitcherTabSettings * Switcher;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="TabHeader|TextStyle")
-	TSubclassOf<class UCommonTextStyle> HoveredTextStyle;
+    public:
+
+    private:
+
+    protected:
+    
+    public:
+
+    virtual void NativePreConstruct() override;
+    virtual void NativeConstruct() override;
+    virtual FReply NativeOnMouseButtonDown(FGeometry const& InGeometry , FPointerEvent const& InMouseEvent) override;
+    virtual void NativeOnMouseEnter(FGeometry const& InGeometry , FPointerEvent const& InMouseEvent) override;
+    virtual void NativeOnMouseLeave(FPointerEvent const& InMouseEvent) override;
+
+    //Get/SetIndex()
+    void SetIndex(int NewIndex);
+    int GetIndex() const;
+
+    void Toggle(bool bToggle);
+    void SetIsSelected(bool bIsSelected);
 };

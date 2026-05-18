@@ -10,6 +10,13 @@
 				<WorkUnit Name="GPE_LVL_01" ID="{CBB6C57B-F436-4A37-A4A3-9D1F175394B7}" PersistMode="Reference"/>
 				<WorkUnit Name="GPE_LVL_02" ID="{CEC9B50C-5126-4F2D-82F5-49E1E73B850E}" PersistMode="Reference"/>
 				<WorkUnit Name="GPE_LVL_03" ID="{E77F31B5-9D15-48B1-9413-3F6ACBDBF203}" PersistMode="Reference"/>
+				<SoundBank Name="GPE" ID="{8592F8B2-A9B7-4C32-8955-2512D0C25064}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AB_GPE" ID="{5DC2031F-A86D-4FFB-A8D7-F1A25361B9B8}" WorkUnitID="{E3C8A65D-504C-46C0-9917-8ACA728D43FD}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

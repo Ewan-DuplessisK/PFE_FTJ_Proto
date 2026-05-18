@@ -1,52 +1,45 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "BaseMenuWidget.h"
-#include "MainMenuWidget.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API UMainMenuWidget : public UBaseMenuWidget
+#include"CoreMinimal.h"
+#include"BaseMenuWidget.h"
+#include"MainMenuWidget.generated.h"
+
+//
+
+UCLASS() class FTHISJOB_API UMainMenuWidget : public UBaseMenuWidget
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-public:
-	virtual void NativeConstruct() override;
+    private:
 
-	virtual void NativeOnActivated() override;
+    protected:
 
-	virtual class UMainMenuButton* GetFocusedButton() const override;
+    public:
 
-	virtual TOptional<FUIInputConfig> GetDesiredInputConfig() const override;
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void SwitchCameraPlay();
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void SwitchCameraSettings();
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void SwitchCameraQuit();
+    UPROPERTY(BlueprintReadWrite) bool bHasBeenActivatedAlready;
+    
+    private:
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void SwitchCameraDefault();
+    protected:
 
-	virtual void UnQuit() override;
+    virtual void OnChangeLevelClicked() override;
+    virtual void OnQuitClicked() override;
+    virtual void OnSettingsClicked() override;
 
-	UPROPERTY(BlueprintReadWrite)
-	bool bHasBeenActivatedAlready;
+    public:
 
-protected:
-	virtual void OnChangeLevelClicked() override;
+    virtual void NativeConstruct() override;
+    virtual void NativeOnActivated() override;
 
-	virtual void OnQuitClicked() override;
+    virtual TOptional<FUIInputConfig> GetDesiredInputConfig() const override;
+    virtual class UMainMenuButton* GetFocusedButton() const override;
+    
+    UFUNCTION(BlueprintImplementableEvent) void SwitchCameraPlay();
+    UFUNCTION(BlueprintImplementableEvent) void SwitchCameraSettings();
+    UFUNCTION(BlueprintImplementableEvent) void SwitchCameraQuit();
+    UFUNCTION(BlueprintImplementableEvent) void SwitchCameraDefault();
 
-	virtual void OnSettingsClicked() override;
-
-
-
+    virtual void UnQuit() override;
 };

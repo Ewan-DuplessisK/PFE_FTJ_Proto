@@ -1,0 +1,81 @@
+Event	ID	Name			Wwise Object Path	Notes
+	67053552	VOC_Jake_Tuto_05			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Tuto_05	
+	67053553	VOC_Jake_Tuto_04			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Tuto_04	
+	67053556	VOC_Jake_Tuto_01			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Tuto_01	
+	67053559	VOC_Jake_Tuto_02			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Tuto_02	
+	112414854	VOC_CEO_Open_Space_08			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_08	
+	112414855	VOC_CEO_Open_Space_09			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_09	
+	112414856	VOC_CEO_Open_Space_06			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_06	
+	112414857	VOC_CEO_Open_Space_07			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_07	
+	112414858	VOC_CEO_Open_Space_04			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_04	
+	112414860	VOC_CEO_Open_Space_02			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_02	
+	112414861	VOC_CEO_Open_Space_03			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_03	
+	112414863	VOC_CEO_Open_Space_01			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_01	
+	167718984	VOC_GLADYS			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_GLADYS	
+	212576752	VOC_Jake_Open_Space_06			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Open_Space_06	
+	212576754	VOC_Jake_Open_Space_04			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Open_Space_04	
+	212576755	VOC_Jake_Open_Space_05			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Open_Space_05	
+	212576756	VOC_Jake_Open_Space_02			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Open_Space_02	
+	212576759	VOC_Jake_Open_Space_01			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Open_Space_01	
+	872668600	VOC_CEO_Open_Space_05_2			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_05_2	
+	872668603	VOC_CEO_Open_Space_05_1			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_CEO_Open_Space_05_1	
+	1906377512	VOC_Jake_Cutscene_Intro_02			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_02	
+	1906377513	VOC_Jake_Cutscene_Intro_03			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_03	
+	1906377516	VOC_Jake_Cutscene_Intro_06			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_06	
+	1906377518	VOC_Jake_Cutscene_Intro_04			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_04	
+	1906377519	VOC_Jake_Cutscene_Intro_05			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_05	
+	2127864808	VOC_AI_Cutscene_02			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_AI_Cutscene_02	
+	2127864809	VOC_AI_Cutscene_03			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_AI_Cutscene_03	
+	2127864811	VOC_AI_Cutscene_01			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_AI_Cutscene_01	
+	2127864814	VOC_AI_Cutscene_04			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_AI_Cutscene_04	
+	3152495401	VOC_Jake_Cutscene_Intro_07_1			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_07_1	
+	3152495402	VOC_Jake_Cutscene_Intro_07_2			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_07_2	
+	3477848273	VOC_Ad_Announcer_01			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Ad_Announcer_01	
+	3477848274	VOC_Ad_Announcer_02			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Ad_Announcer_02	
+	3953026453	VOC_Jake_Tuto_03_2			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Tuto_03_2	
+	3953026454	VOC_Jake_Tuto_03_1			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Tuto_03_1	
+	4099005921	VOC_Jake_Open_Space_03_1			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Open_Space_03_1	
+	4099005922	VOC_Jake_Open_Space_03_2			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Open_Space_03_2	
+	4225968792	VOC_Jake_Cutscene_Intro_01_2			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_01_2	
+	4225968795	VOC_Jake_Cutscene_Intro_01_1			\Default Work Unit\VOICES\VOICES_LVL_01\VOC_Jake_Cutscene_Intro_01_1	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	41244775	VOC_CEO_Open_Space_06	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\11\{110E30EB-4B83-521B-0C7B-11A53BB86D95}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_CEO_Open_Space_06		33380
+	58882145	VOC_CEO_Open_Space_08	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\76\{762056F9-E222-25D5-6049-6E3086335B82}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_CEO_Open_Space_08		30169
+	65708653	VOC_Jake_Tuto_05	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\A4\{A4C75ECB-C67E-47A5-5A63-A33BA13B47BF}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Tuto_05		9596
+	97678098	VOC_Jake_Cutscene_Intro_07_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\13\{1329F5A4-D1CB-FDD2-AE7E-CCBB2633C374}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_07_02		16097
+	164500379	VOC_CEO_Open_Space_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\5C\{5CDDDD4F-7461-A401-EE1E-F5A3EFBDC630}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_CEO_Open_Space_02		18830
+	177076167	VOC_Jake_Tuto_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\1F\{1F61A926-D4F2-7E3A-E5E2-4BBB4BDDD0F1}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Tuto_01		16167
+	254540573	VOC_CEO_Open_Space_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\D8\{D8FE66FF-053B-22B9-4892-02C45925FB2E}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_CEO_Open_Space_03		18330
+	295065968	VOC_AI_Cutscene_Beginning	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\01\{010E51C9-4BC9-E860-22AA-D0CE294B6A90}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Robot\VOC_AI_Cutscene_Beginning		32821
+	295120783	VOC_Jake_Open_Space_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\6B\{6BCBEA89-DFC7-0D08-BEDB-89D2C5B97C0F}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Open_Space_01		51143
+	309820500	VOC_CEO_Open_Space_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\9E\{9EE3AB95-C71D-0D20-8B70-1D3BC08E9D0B}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_CEO_Open_Space_04		49477
+	336693436	VOC_Jake_Open_Space_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\67\{676D8468-5AA7-EB57-F22F-0FA6EDFFC504}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Open_Space_02		25740
+	377849884	VOC_Jake_Tuto_03_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\4D\{4DC9E616-4D29-1917-7975-4165758448F9}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Tuto_03_01		42604
+	436058492	VOC_Jake_Open_Space_06	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\F3\{F39CF12B-8D37-416B-36E1-735F92459719}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Open_Space_06		43715
+	485837877	VOC_Jake_Cutscene_Intro_07_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\A4\{A4013FB5-AB30-65F0-DFF6-E26B99D6ECCA}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_07_01		18521
+	489802143	VOC_VOC_CEO_Open_Space_05_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\5B\{5B43D260-B19C-E158-00E1-87951AA563B2}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_VOC_CEO_Open_Space_05_02		47449
+	526592797	VOC_Jake_Tuto_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\CB\{CBD95D04-AAC0-57C7-D791-D4C284728C09}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Tuto_02		13042
+	549720651	VOC_Jake_Tuto_03_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\91\{91A9131C-6908-66B4-8339-77CDDEE785AC}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Tuto_03_02		24332
+	582334748	VOC_AI_Cutscene_Beginning_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\7C\{7C850C5B-7904-DFE5-E426-26EBF0505768}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Robot\VOC_AI_Cutscene_Beginning_03		28228
+	626647676	VOC_Jake_Cutscene_Intro_05	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\18\{181498D1-8E57-0180-3267-046B40502A36}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_05		16305
+	644490500	VOC_CEO_Open_Space_09	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\CE\{CEB3CC3B-DCEB-0320-B9C3-7AF3F1BE7265}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_CEO_Open_Space_09		44293
+	649989489	VOC_Jake_Open_Space_05	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\E0\{E0F93E69-9AC4-F59C-7F28-C194F85C9D10}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Open_Space_05		18992
+	706453134	VOC_VOC_CEO_Open_Space_05_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\29\{2990D55F-5484-5480-E8F6-8D125DBE39D7}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_VOC_CEO_Open_Space_05_01		67588
+	707730295	VOC_Jake_Cutscene_Intro_06	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B9\{B925B32B-47CB-12B8-A4D3-3C8A89A62C97}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_06		14368
+	723343543	VOC_Ad_Announcer_Cutscene_Beginning_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B0\{B0947DDE-5ACA-0767-2631-A8807980AF4E}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Robot\VOC_Ad_Announcer_Cutscene_Beginning_02		55466
+	745627999	VOC_CEO_Open_Space_07	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\F5\{F57ECA26-9BFB-BEE8-F55C-7B317EB7EF38}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_CEO_Open_Space_07		55697
+	745798160	VOC_Jake_Tuto_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\C7\{C75DEA9F-A589-8DC6-538B-394C3AF59D53}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Tuto_04		16779
+	754246621	VOC_GLADYS	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\15\{157A1445-9CEF-FD1A-4B9F-89D0BAF1986B}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_GLADYS		6155
+	765692494	VOC_Jake_Open_Space_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\15\{151AB0AA-925B-EB7C-A22B-26021CA2EDC5}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Open_Space_04		19757
+	803436642	VOC_Jake_Cutscene_Intro_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\41\{41893B1D-2FE7-4FBA-FF93-8F94624CCF07}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_04		11207
+	816260575	VOC_CEO_Open_Space_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\3B\{3BB5388A-34A0-C233-65CE-58741FEA79D9}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_CEO\VOC_CEO_Open_Space_01		12102
+	819716638	VOC_Jake_Open_Space_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\7D\{7DD917B0-38FD-00DA-A2A7-D52398CD8DDA}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Open_Space_03		13098
+	836311298	VOC_Jake_Cutscene_Intro_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B3\{B3468C85-1EEC-DE17-C7DE-3997316F33B5}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_02		30358
+	922171334	VOC_Jake_Cutscene_Intro_01_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\45\{45259EAD-5EB5-6BF2-5ABF-846F855276DA}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_01_01		40765
+	966477516	VOC_AI_Cutscene_Beginning_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\A0\{A0C868E6-3184-8942-D401-3AF926FDBF65}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Robot\VOC_AI_Cutscene_Beginning_02		16279
+	983062558	VOC_AI_Cutscene_Beginning_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\40\{403379F0-638B-1855-C3CA-509D8464AED1}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Robot\VOC_AI_Cutscene_Beginning_01		29924
+	1007601817	VOC_Jake_Cutscene_Intro_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\D2\{D2E9DCDE-F076-CB90-4E13-83D0B1A10434}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_03		23778
+	1042141188	VOC_Ad_Announcer_Cutscene_Beginning_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\6B\{6BA3A621-EE6B-9835-5E15-9F8AD700B51F}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Robot\VOC_Ad_Announcer_Cutscene_Beginning_01		50557
+	1061996782	VOC_Jake_Cutscene_Intro_01_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B6\{B6434C0F-68AF-B6F8-A53D-084CA91B7207}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_01\AM_VOICES_LVL_01\AM_Voices_Jake\VOC_Jake_Cutscene_Intro_01_02		28971
+

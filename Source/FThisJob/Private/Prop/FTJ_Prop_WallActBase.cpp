@@ -7,7 +7,10 @@ void AFTJ_Prop_WallActBase::BeginPlay()
     //Delegate to Actor
     Super::BeginPlay();
     //Subscribe to hits
-    GetStaticMeshComponent()->OnComponentHit.AddDynamic(this , &AFTJ_Prop_WallActBase::OnHit);
+    if(UStaticMeshComponent * MeshComponent = GetStaticMeshComponent())
+    {
+        MeshComponent->OnComponentHit.AddDynamic(this , &AFTJ_Prop_WallActBase::OnHit);
+    }
 }
 
 void AFTJ_Prop_WallActBase::OnHit(UPrimitiveComponent * InThisComponent , AActor * InActor , UPrimitiveComponent * InThatComponent , FVector InImpulse , FHitResult const& InResult)

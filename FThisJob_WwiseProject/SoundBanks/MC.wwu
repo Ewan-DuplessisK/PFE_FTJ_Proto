@@ -9,6 +9,7 @@
 			<ChildrenList>
 				<SoundBank Name="MC" ID="{DDF8261E-F629-4DB5-BE00-A94C1B212B25}">
 					<ObjectInclusionList>
+						<ObjectRef Name="AB_MC" ID="{E427C276-6A85-4CFB-BBCA-A6B1B0F45E74}" WorkUnitID="{593669B8-3F66-44D2-889D-92F88F3ABEB9}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MC" ID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}" WorkUnitID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

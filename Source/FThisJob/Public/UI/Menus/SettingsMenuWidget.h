@@ -1,35 +1,48 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "CommonActivatableWidget.h"
-#include "SettingsMenuWidget.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API USettingsMenuWidget : public UCommonActivatableWidget
+#include"CoreMinimal.h"
+#include"CommonActivatableWidget.h"
+#include"SettingsMenuWidget.generated.h"
+
+//
+
+class USwitcherTabSettings;
+class UMainMenuButton;
+
+//
+
+UCLASS() class FTHISJOB_API USettingsMenuWidget : public UCommonActivatableWidget
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-public:
-	class USwitcherTabSettings* GetSwitcherTabSettings() const;
-	
-	virtual void NativeConstruct() override;
-	
-	virtual FReply NativeOnKeyDown(const FGeometry& InGeometry, const FKeyEvent& InKeyEvent) override;
+    private:
 
-	virtual void NativeOnFocusLost(const FFocusEvent& InFocusEvent) override;
+    protected:
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void SwitchCameraDefault();
-	
-protected:
-	UPROPERTY(meta = (BindWidget))
-	class USwitcherTabSettings* SwitcherTabSettings;
-	
-	UFUNCTION(BlueprintCallable)
-	void Return();
+    UPROPERTY(Meta = (BindWidget)) USwitcherTabSettings * SwitcherTabSettings;
+    UPROPERTY(Meta = (BindWidget)) UMainMenuButton * BackButton;
+
+    public:
+
+    private:
+
+    protected:
+    
+    UFUNCTION(BlueprintCallable) void Return();
+    UFUNCTION() virtual void OnBackClicked();
+
+    public:
+
+    virtual void NativeConstruct() override;
+    virtual FReply NativeOnKeyDown(FGeometry const& InGeometry , FKeyEvent const& InKeyEvent) override;
+    virtual void NativeOnFocusLost(FFocusEvent const& InFocusEvent) override;
+    virtual void NativeOnActivated() override;
+
+    UFUNCTION(BlueprintImplementableEvent , BlueprintCallable)void OnReturnSound();
+    
+    class USwitcherTabSettings* GetSwitcherTabSettings() const;
+    virtual TOptional<FUIInputConfig> GetDesiredInputConfig() const override;
+    UFUNCTION(BlueprintImplementableEvent) void SwitchCameraDefault();
 };

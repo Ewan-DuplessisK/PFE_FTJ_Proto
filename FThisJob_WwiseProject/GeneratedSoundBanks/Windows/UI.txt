@@ -1,0 +1,93 @@
+Event	ID	Name			Wwise Object Path	Notes
+	337394088	UI_Toggle_Off			\Default Work Unit\UI\UI_Toggle_Off	
+	441552802	UI_Switch			\Default Work Unit\UI\UI_Switch	
+	544392906	UI_Rage_Enter			\Default Work Unit\UI\UI_Rage_Enter	
+	669396083	UI_Pause_Open			\Default Work Unit\UI\UI_Pause_Open	
+	946296110	UI_Score_Multiplier			\Default Work Unit\UI\UI_Score_Multiplier	
+	1083152754	UI_CompanyPenalty			\Default Work Unit\UI\UI_CompanyPenalty	
+	1208240901	UI_Scroll			\Default Work Unit\UI\UI_Scroll	
+	1348067456	UI_Score_Appear			\Default Work Unit\UI\UI_Score_Appear	
+	2118900976	UI_Hover			\Default Work Unit\UI\UI_Hover	
+	2227916035	UI_Rage_Enter_No_Voice			\Default Work Unit\UI\UI_Rage_Enter_No_Voice	
+	2249769530	UI_Click			\Default Work Unit\UI\UI_Click	
+	2348398514	UI_Toggle_On			\Default Work Unit\UI\UI_Toggle_On	
+	2467171692	UI_StartGame			\Default Work Unit\UI\UI_StartGame	
+	2982217457	UI_Pause_Close			\Default Work Unit\UI\UI_Pause_Close	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	946296110	UI_Score_Multiplier			\UI\UI_Score_Multiplier	
+
+State	ID	Name	State Group			Notes
+	84696428	S	UI_Score_Multiplier			
+	84696441	F	UI_Score_Multiplier			
+	84696442	E	UI_Score_Multiplier			
+	84696443	D	UI_Score_Multiplier			
+	84696444	C	UI_Score_Multiplier			
+	84696445	B	UI_Score_Multiplier			
+	84696446	A	UI_Score_Multiplier			
+	748895195	None	UI_Score_Multiplier			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	4254849545	AB_UI			\Default Work Unit\Master Audio Bus\UI\AB_UI	
+
+Effect plug-ins	ID	Name	Type				Notes
+	657689285	Meter (Custom)	Wwise Meter			
+	1064491479	Meter (Custom)	Wwise Meter			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	7780301	UI_Hover_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\CF\{CFDC8077-7BB9-84B3-8870-7D1B42A1CB71}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Hover\UI_Hover_04		1747
+	8412633	UI_Scroll_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\CD\{CDC66B5C-349C-EA9F-8B3C-DAE376246536}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Scroll\UI_Scroll_03		1534
+	15011834	UI_Score_Multiplier_B	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\BD\{BD9091B1-20BE-B97E-7F05-3E3CBFCF105B}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_B		13620
+	26928625	UI_Scroll_05	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\9A\{9A377F94-CDF2-A783-CA99-3C9A11699164}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Scroll\UI_Scroll_05		1588
+	28534816	UI_Click_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\C3\{C39D284F-209E-7037-1781-A6B68033A51D}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Click\UI_Click_02		5195
+	40864938	UI_Score_Multiplier_C	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\B5\{B54CCAF2-A901-3BE7-A806-F2ABA1BB17B9}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_C		14014
+	101738074	UI_Score_Appear	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\4E\{4E543396-A592-5AA2-9F24-D97F04B6549E}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Appear		33026
+	135414599	UI_Score_Multiplier_Tonal_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\C9\{C98A986D-074D-0FD1-342F-4399203D562C}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_Tonal\UI_Score_Multiplier_Tonal_01		17625
+	153675304	UI_Rage_Enter	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\BC\{BC7F3748-BF85-5E7C-F858-A160292CB550}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Rage_Enter\UI_Rage_Enter		81737
+	173873507	UI_Toggle_Off_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\82\{82BC54A3-5438-4472-1430-0CBC97F996B0}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Toggle_Off\UI_Toggle_Off_02		3301
+	200980648	UI_Switch_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\03\{03936336-CA2C-A1B4-8FD5-83288978E534}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Switch\UI_Switch_02		4680
+	245662582	UI_Score_Multiplier_E	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\5B\{5B02CFC8-49E2-C332-5FE9-CDEA9ACF9D83}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_E		12845
+	276716867	UI_Score_Multiplier_Tonal_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\3F\{3F3E3A14-A907-6BB3-C5B3-ADCAA346B062}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_Tonal\UI_Score_Multiplier_Tonal_03		16782
+	279025102	UI_Click_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\2C\{2C89E401-CAA1-7C23-713F-D6D4AB0E6D8F}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Click\UI_Click_01		5724
+	323100943	UI_Toggle_Off_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\6F\{6F9DCAE8-EE64-E031-CF65-D5F76E986C36}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Toggle_Off\UI_Toggle_Off_03		3168
+	341584432	UI_Toggle_On_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\AB\{AB494DD9-BA8D-6E7A-9003-325E98E0AE49}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Toggle_On\UI_Toggle_On_03		3064
+	344942605	UI_CompanyPenalty_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\2D\{2DBC3CEE-97C8-7C2F-31EB-9ACBC1FE2811}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_CompanyPenalty\UI_CompanyPenalty_02		19502
+	392050041	UI_Hover_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\2E\{2EEF7442-EF5B-48D3-A98F-95C761F00CFB}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Hover\UI_Hover_02		1617
+	421882651	UI_Scroll_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\BB\{BBD3F914-A483-174B-EE74-A2AB289ED23F}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Scroll\UI_Scroll_02		1494
+	439327841	UI_Switch_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\EB\{EB672D46-1CBA-9A76-8E53-906265C33BBE}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Switch\UI_Switch_03		5351
+	487422824	UI_Score_Multiplier_A	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\ED\{ED505AF7-A8DE-3545-E1FE-D7E89A8D12FC}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_A		13858
+	487693677	UI_Switch_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\91\{91B23C9B-9AE0-633B-C171-1E1D382C0D9D}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Switch\UI_Switch_04		5343
+	496229843	UI_Score_Multiplier_Tonal_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\6B\{6B15C7C7-B077-672A-5A6A-34F3CEE3980E}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_Tonal\UI_Score_Multiplier_Tonal_02		16396
+	502384376	UI_Score_Multiplier_D	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\0B\{0B79E0BC-C869-E67C-D75A-6E62C1B938E2}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_D		13712
+	510239101	UI_Toggle_Off_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\CB\{CB3C9A83-D37F-2D34-C7AC-AF10408B985B}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Toggle_Off\UI_Toggle_Off_01		3283
+	510726182	UI_Pause_Close	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\58\{58AF8346-F705-44EB-0D78-F6D7495B49D3}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Pause_Close		9107
+	526708103	UI_Click_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\58\{58337429-487C-481A-7E62-6DD65F96366B}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Click\UI_Click_04		6317
+	568790385	UI_Toggle_On_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\38\{38F51672-B54D-0513-4086-47441527322F}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Toggle_On\UI_Toggle_On_02		3106
+	584687376	UI_Toggle_On_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\C9\{C966FDA8-23F8-3A71-F3E5-E839DE2FB4EB}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Toggle_On\UI_Toggle_On_01		3090
+	597152331	UI_Hover_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\CE\{CEBC8BB0-9A0E-E1F1-D5BA-7817C3EAD0F0}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Hover\UI_Hover_03		1595
+	599681172	UI_Scroll_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\4C\{4C0C4663-A975-6635-D182-15C48206DB77}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Scroll\UI_Scroll_04		1563
+	630310163	UI_StartGame	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\D5\{D52B183B-9A8E-4619-21D6-CE53BDB9727B}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_StartGame		72858
+	675973177	UI_Pause_Open_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\4E\{4E28D7A5-5748-1370-79F5-530C09E06866}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Pause_Open\UI_Pause_Open_02		15191
+	676417033	UI_Rage_Enter_No_Voice	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\F6\{F6DDF526-AECB-F028-3FA9-09CF75E29159}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Rage_Enter\UI_Rage_Enter_No_Voice		57740
+	677323944	UI_Toggle_Off_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\76\{76D0FEBF-AADF-7966-B172-88A7698E8C49}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Toggle_Off\UI_Toggle_Off_04		2972
+	678653951	UI_Scroll_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\7A\{7A225DB4-4417-A3B8-22A0-702F048EE19D}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Scroll\UI_Scroll_01		1596
+	707951023	UI_Toggle_On_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\19\{19DAF6C5-82A4-E1F5-D603-A327B4FEEA3F}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Toggle_On\UI_Toggle_On_04		3257
+	720452180	UI_Score_Multiplier_F	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\89\{8902815C-42B4-4BB8-E661-87F50A80B36C}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_F		12828
+	733378794	UI_Switch_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\09\{09C1A4D1-9473-E257-44FF-591B6479E6E4}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Switch\UI_Switch_01		5437
+	798020998	UI_Score_Multiplier_S	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\78\{783BBBE2-C819-3F54-92AD-2036D095D576}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\UI_Score_Multiplier\UI_Score_Multiplier_S		25784
+	849724106	UI_Pause_Open_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\0C\{0C4845DC-1F32-B3D3-E80D-D444FBCD1770}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Pause_Open\UI_Pause_Open_01		16374
+	854469912	UI_Hover_05	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\67\{679F4684-1656-9AD0-7FFE-2769A1283155}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Hover\UI_Hover_05		1683
+	858088707	UI_Click_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\64\{64F5C760-4F10-84AD-3F49-4CF54E1DAFA4}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Click\UI_Click_03		6017
+	931690188	UI_Scroll_07	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\EF\{EFFF87A8-4A35-0AD1-4B04-C275E6619772}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Scroll\UI_Scroll_07		1481
+	949428927	UI_Scroll_08	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\25\{25550F4D-9F4A-0FF8-662F-CADB5806A817}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Scroll\UI_Scroll_08		1499
+	949479405	UI_Pause_Open_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\A9\{A9F695CF-4AF9-E5B7-DBF0-AABF867EB5C4}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Pause_Open\UI_Pause_Open_03		14608
+	959373894	UI_Hover_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\AB\{ABE8E6DA-1737-8109-9252-F89A9EC296D3}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Hover\UI_Hover_01		1831
+	1016441644	UI_Scroll_06	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\2B\{2BE2ABEF-5A1A-82E2-9D1D-7F64FD713917}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_Scroll\UI_Scroll_06		1412
+	1054058278	UI_CompanyPenalty_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\95\{950FD068-E826-1A4A-5706-880CAA720B64}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_CompanyPenalty\UI_CompanyPenalty_01		20018
+	1067973372	UI_CompanyPenalty_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\95\{957E9512-3702-BB07-1160-9C97D369D509}.wem		\Actor-Mixer Hierarchy\UI\AM_UI\RC_CompanyPenalty\UI_CompanyPenalty_03		18137
+

@@ -1,155 +1,218 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/UIElements/SwitcherTabSettings.h"
 
-#include "UI/UIElements/SwitcherTabSettings.h"
-#include "CommonActivatableWidgetSwitcher.h"
-#include "Components/HorizontalBox.h"
-#include "Components/VerticalBox.h"
-#include "UI/Menus/SettingsTabs/SettingsTabBase.h"
-#include "UI/Menus/SettingsTabs/WidgetTabHeader.h"
+#include"UI/Menus/SettingsTabs/SettingsTabBase.h"
+#include"UI/Menus/SettingsTabs/WidgetTabHeader.h"
 
-void USwitcherTabSettings::NativeConstruct()
+#include"CommonActivatableWidgetSwitcher.h"
+#include"Components/HorizontalBox.h"
+#include"Components/VerticalBox.h"
+#include"Components/Image.h"
+#include"CommonInputSubsystem.h"
+
+//Private
+
+//Protected
+
+void USwitcherTabSettings::ToLeftTab() const
 {
-	Super::NativeConstruct();
-}
-
-FReply USwitcherTabSettings::NativeOnKeyDown(const FGeometry& InGeometry, const FKeyEvent& InKeyEvent)
-{
-	if (InKeyEvent.GetKey() == EKeys::Gamepad_RightShoulder || InKeyEvent.GetKey() == EKeys::L)
-	{
-		ToRightTab();
-		return FReply::Handled();
-	}
-	if (InKeyEvent.GetKey() == EKeys::Gamepad_LeftShoulder || InKeyEvent.GetKey() == EKeys::K)
-	{
-		ToLeftTab();
-		return FReply::Handled();
-	}
-	
-	return Super::NativeOnKeyDown(InGeometry, InKeyEvent);
-}
-
-void USwitcherTabSettings::SetIndex(int Index, float WaitingTime) const
-{
-	UWidgetTabHeader* CurrentWidget = Cast<UWidgetTabHeader>(TabHeaderBox->GetChildAt(Index));
-
-	AnimatedSwitcher->SetActiveWidgetIndex(Index);
-
-	for (UWidget* Widget : TabHeaderBox->GetAllChildren())
-	{
-		if (UWidgetTabHeader* WidgetTab = Cast<UWidgetTabHeader>(Widget))
-		{
-			WidgetTab->Toggle(false);
-		}
-	}
-	check(CurrentWidget);
-	CurrentWidget->Toggle(true);
-
-	//SetFocusOnElement(WaitingTime);
-}
-
-void USwitcherTabSettings::SetFocusOnElement(float WaitingTime) const
-{
-	APlayerController* PC = GetWorld()->GetFirstPlayerController();
-	if (!PC)
-	{
-		return;
-	}
-
-	PC->FlushPressedKeys();
-
-	FTimerHandle Handle;
-	GetWorld()->GetTimerManager().SetTimer(
-		Handle,
-		[this]()
-		{
-			check(AnimatedSwitcher);
-			USettingsTabBase* CurrentWidget = Cast<USettingsTabBase>(AnimatedSwitcher->GetActiveWidget());
-			if (!CurrentWidget)
-			{
-				return;
-			}
-			CurrentWidget->GetVerticalBox()->GetChildAt(0)->SetFocus();
-		},
-		WaitingTime,
-		false
-	);
+    int32 const NewIndex{(AnimatedSwitcher->GetActiveWidgetIndex() + TabHeaderBox->GetChildrenCount() - 1) % TabHeaderBox->GetChildrenCount()};
+    SetIndex(NewIndex);
 }
 
 void USwitcherTabSettings::ToRightTab() const
 {
-	const int32 NewIndex = (AnimatedSwitcher->GetActiveWidgetIndex() + TabHeaderBox->GetChildrenCount() + 1) %
-		TabHeaderBox->GetChildrenCount();
-	UCommonActivatableWidget* NewWidget = Cast<UCommonActivatableWidget>(AnimatedSwitcher->GetActiveWidget());
-	NewWidget->ActivateWidget();
-	SetIndex(NewIndex, 0.25f);
+    int32 const NewIndex{(AnimatedSwitcher->GetActiveWidgetIndex() + TabHeaderBox->GetChildrenCount() + 1) % TabHeaderBox->GetChildrenCount()};
+    SetIndex(NewIndex);
 }
 
-void USwitcherTabSettings::ToLeftTab() const
+//Public
+
+void USwitcherTabSettings::NativePreConstruct()
 {
-	const int32 NewIndex = (AnimatedSwitcher->GetActiveWidgetIndex() + TabHeaderBox->GetChildrenCount() - 1) %
-		TabHeaderBox->GetChildrenCount();
-	UCommonActivatableWidget* NewWidget = Cast<UCommonActivatableWidget>(AnimatedSwitcher->GetActiveWidget());
-	NewWidget->ActivateWidget();
-	SetIndex(NewIndex, 0.25f);
+    Super::NativePreConstruct();
+    LeftSwitchImage->SetBrushResourceObject(NormalLeftSwitchTexture);
+    RightSwitchImage->SetBrushResourceObject(NormalRightSwitchTexture);
 }
 
-USettingsTabBase* USwitcherTabSettings::GetGameplayTab() const
+void USwitcherTabSettings::NativeConstruct()
 {
-	return GameplayTab;
+    Super::NativeConstruct();
+    if(AnimatedSwitcher)
+    {
+        AnimatedSwitcher->OnTransitioningChanged.AddUObject(this , &USwitcherTabSettings::HandleTransitioningChanged);
+    }
 }
 
-USettingsTabBase* USwitcherTabSettings::GetAudioTab() const
+void USwitcherTabSettings::NativeTick(const FGeometry& InGeometry , float InDeltaTime)
 {
-	return AudioTab;
+    Super::NativeTick(InGeometry , InDeltaTime);
+    switch(GetWorld()->GetFirstLocalPlayerFromController()->GetSubsystem<UCommonInputSubsystem>()->GetCurrentInputType())
+    {
+        case(ECommonInputType::MouseAndKeyboard):
+            LeftSwitchImage->SetOpacity(0.0);
+            RightSwitchImage->SetOpacity(0.0);
+        break;
+        case(ECommonInputType::Gamepad):
+            LeftSwitchImage->SetOpacity(1.0);
+            RightSwitchImage->SetOpacity(1.0);
+        break;
+    }
 }
 
-USettingsTabBase* USwitcherTabSettings::GetGraphicsTab() const
+FReply USwitcherTabSettings::NativeOnKeyDown(const FGeometry& InGeometry , const FKeyEvent& InKeyEvent)
 {
-	return GraphicsTab;
+    auto Reply{Super::NativeOnKeyDown(InGeometry , InKeyEvent)};
+    if (InKeyEvent.GetKey() == EKeys::Gamepad_LeftShoulder || InKeyEvent.GetKey() == EKeys::K)
+    {
+        ToLeftTab();
+        LeftSwitchImage->SetBrushResourceObject(PressedLeftSwitchTexture);
+        return(FReply::Handled());
+    }
+    if(InKeyEvent.GetKey() == EKeys::Gamepad_RightShoulder || InKeyEvent.GetKey() == EKeys::L)
+    {
+        ToRightTab();
+        RightSwitchImage->SetBrushResourceObject(PressedRightSwitchTexture);
+        return(FReply::Handled());
+    }
+    return(Reply);
 }
 
-/*USettingsTabBase* USwitcherTabSettings::GetAccessibilityTab() const
+FReply USwitcherTabSettings::NativeOnKeyUp(const FGeometry& InGeometry , const FKeyEvent& InKeyEvent)
 {
-	return AccessibilityTab;
-}*/
-
-USettingsTabBase* USwitcherTabSettings::GetControlTab() const
-{
-	return ControlTab;
+    auto Reply{Super::NativeOnKeyUp(InGeometry, InKeyEvent)};
+    if(InKeyEvent.GetKey() == EKeys::Gamepad_LeftShoulder || InKeyEvent.GetKey() == EKeys::K)
+    {
+        LeftSwitchImage->SetBrushResourceObject(NormalLeftSwitchTexture);
+        return(FReply::Handled());
+    }
+    if(InKeyEvent.GetKey() == EKeys::Gamepad_RightShoulder || InKeyEvent.GetKey() == EKeys::L)
+    {
+        RightSwitchImage->SetBrushResourceObject(NormalRightSwitchTexture);
+        return(FReply::Handled());
+    }
+    return(Reply);
 }
 
-UWidgetTabHeader* USwitcherTabSettings::GetAudioTabHeader() const
+//
+
+UHorizontalBox * USwitcherTabSettings::GetTabHeaderBox() const
 {
-	return AudioTabHeader;
+    return(TabHeaderBox);
 }
 
-UWidgetTabHeader* USwitcherTabSettings::GetGraphicsTabHeader() const
+UCommonAnimatedSwitcher * USwitcherTabSettings::GetAnimatedSwitcher() const
 {
-	return GraphicsTabHeader;
+    return(AnimatedSwitcher);
 }
 
-/*UWidgetTabHeader* USwitcherTabSettings::GetAccessibilityTabHeader() const
-{
-	return AccessibilityTabHeader;
-}*/
+//
 
-UWidgetTabHeader* USwitcherTabSettings::GetControlTabHeader() const
+void USwitcherTabSettings::HandleTransitioningChanged(bool bIsTransitioning)
 {
-	return ControlTabHeader;
+    if(!bIsTransitioning)
+    {
+        /*
+            La transition est finie, mais le widget n'est pas forcément
+            interactable dans le même frame. On attend le tick suivant
+            pour que CommonUI finalise son layout et accepte le focus.
+        */
+        if(auto World{GetWorld()})
+        {
+            //World->GetTimerManager().SetTimerForNextTick([this]()
+            //{
+                SetFocusOnElement();
+            //});
+        }
+    }
 }
 
-class UWidgetTabHeader* USwitcherTabSettings::GetGameplayTabHeader() const
+void USwitcherTabSettings::SetIndex(int Index) const
 {
-	return GameplayTabHeader;
+    auto CurrentWidget{Cast<UWidgetTabHeader>(TabHeaderBox->GetChildAt(Index))};
+    AnimatedSwitcher->SetActiveWidgetIndex(Index);
+    for(auto Widget : TabHeaderBox->GetAllChildren())
+    {
+        if(auto WidgetTab{Cast<UWidgetTabHeader>(Widget)})
+        {
+            WidgetTab->Toggle(false);
+            WidgetTab->SetIsSelected(false);
+        }
+    }
+    check(CurrentWidget);
+    CurrentWidget->Toggle(true);
+    if(auto World = GetWorld())
+    {
+        if(!AnimatedSwitcher->IsTransitionPlaying())
+        {
+            //World->GetTimerManager().SetTimerForNextTick([this]()
+            //{
+                SetFocusOnElement();
+            //});
+        }
+    }
 }
 
-class UHorizontalBox* USwitcherTabSettings::GetTabHeaderBox() const
+void USwitcherTabSettings::SetFocusOnElement() const
 {
-	return TabHeaderBox;
+    auto PC{GetWorld()->GetFirstPlayerController()};
+    if(!PC)
+    {
+        return;
+    }
+    PC->FlushPressedKeys();
+    auto ActiveTab{Cast<USettingsTabBase>(AnimatedSwitcher->GetActiveWidget())};
+    if(ActiveTab)
+    {
+        auto FocusTarget{ActiveTab->NativeGetDesiredFocusTarget()};
+        if(FocusTarget)
+        {
+            FocusTarget->SetUserFocus(PC);
+        }
+    }
 }
 
-class UCommonAnimatedSwitcher* USwitcherTabSettings::GetAnimatedSwitcher() const
+//
+
+USettingsTabBase * USwitcherTabSettings::GetGameplayTab() const
 {
-	return AnimatedSwitcher;
+    return(GameplayTab);
+}
+
+USettingsTabBase * USwitcherTabSettings::GetAudioTab() const
+{
+    return(AudioTab);
+}
+
+USettingsTabBase * USwitcherTabSettings::GetGraphicsTab() const
+{
+    return(GraphicsTab);
+}
+
+USettingsTabBase * USwitcherTabSettings::GetControlTab() const
+{
+    return(ControlTab);
+}
+
+//
+
+UWidgetTabHeader * USwitcherTabSettings::GetGameplayTabHeader() const
+{
+    return(GameplayTabHeader);
+}
+
+UWidgetTabHeader * USwitcherTabSettings::GetAudioTabHeader() const
+{
+    return(AudioTabHeader);
+}
+
+UWidgetTabHeader * USwitcherTabSettings::GetGraphicsTabHeader() const
+{
+    return(GraphicsTabHeader);
+}
+
+UWidgetTabHeader * USwitcherTabSettings::GetControlTabHeader() const
+{
+    return(ControlTabHeader);
 }

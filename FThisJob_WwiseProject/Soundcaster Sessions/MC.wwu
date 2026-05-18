@@ -10,15 +10,15 @@
 				<SoundcasterSession Name="SC_Vaccum" ID="{46FC97BA-D1D4-40C9-8928-26A3020B7883}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="MC_Vaccum_Activate" ID="{61278EDB-7699-4D77-9B1C-578671526A2B}" WorkUnitID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}"/>
+							<ObjectRef Name="MC_Vacuum_Activate" ID="{61278EDB-7699-4D77-9B1C-578671526A2B}" WorkUnitID="{4C43A64F-516F-49CA-9A52-CD11641C0925}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="MC_Vaccum_Deactivate" ID="{5354281F-1109-4C15-8284-BB94B581E326}" WorkUnitID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}"/>
+							<ObjectRef Name="MC_Vacuum_Deactivate" ID="{5354281F-1109-4C15-8284-BB94B581E326}" WorkUnitID="{4C43A64F-516F-49CA-9A52-CD11641C0925}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="MC_Vaccum_Suck" ID="{0C508F0D-C84D-40CF-A3B0-B2D5C99CFD62}" WorkUnitID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}"/>
+							<ObjectRef Name="MC_Vacuum_Suck" ID="{0C508F0D-C84D-40CF-A3B0-B2D5C99CFD62}" WorkUnitID="{4C43A64F-516F-49CA-9A52-CD11641C0925}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>

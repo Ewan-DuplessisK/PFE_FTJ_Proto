@@ -10,6 +10,17 @@
 				<WorkUnit Name="VOICES_LVL_01" ID="{8DED6ECB-BC88-448E-936A-C8783B94576D}" PersistMode="Reference"/>
 				<WorkUnit Name="VOICES_LVL_02" ID="{33EAA61A-D383-4CBA-AE0C-9DC92B6EA9D7}" PersistMode="Reference"/>
 				<WorkUnit Name="VOICES_LVL_03" ID="{2799977B-388A-406B-B5EB-19AC0316B56A}" PersistMode="Reference"/>
+				<SoundBank Name="VOICES" ID="{936086CB-4B37-4A12-A0ED-D89A9B1F31C9}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AB_VOICES" ID="{FDBDADD7-3A3D-43B4-A3C5-B9D7BB3EBA55}" WorkUnitID="{D8E6497A-AC26-4659-A3E9-978F414BBEB3}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<WorkUnit Name="VOICES_LVL_CEO" ID="{7B5ACB37-0E9A-4480-9F4A-780066C3DD5B}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_BONUS_SCORE" ID="{304B097B-9154-40EB-BDA5-8F6DE6AB6B66}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_REACTION" ID="{BBB856E8-EAAC-457D-A355-610B94158753}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_OUTRO" ID="{D1C31E3A-4613-495E-B2AB-9C4B1FE0DD7C}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

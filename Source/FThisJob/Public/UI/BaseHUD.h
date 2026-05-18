@@ -1,44 +1,58 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "GameFramework/HUD.h"
-#include "BaseHUD.generated.h"
+//
 
-/**
- * 
- */
-UCLASS()
-class FTHISJOB_API ABaseHUD : public AHUD
+#include"CoreMinimal.h"
+#include"GameFramework/HUD.h"
+#include"BaseHUD.generated.h"
+
+//
+
+class UBaseMenuWidget;
+class USettingsMenuWidget;
+class UGameLayoutWidget;
+
+//
+
+UCLASS() class FTHISJOB_API ABaseHUD : public AHUD
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-protected:
-	virtual void BeginPlay() override;
-	
-public:
-	UFUNCTION()
-	virtual class UBaseMenuWidget* GetPreviousWidget();
-	
-	UFUNCTION()
-	virtual class USettingsMenuWidget* GetSettingsMenuWidget() const;
-	
-	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
-	void OpenSettingsInBlueprint();
-	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
-	void CloseSettingsInBlueprint();
+    private:
+    
+    protected:
 
-protected:
-	UPROPERTY(BlueprintReadWrite)
-	UBaseMenuWidget* PreviousWidgetInstance = nullptr;
+    UPROPERTY(BlueprintReadWrite) UBaseMenuWidget * PreviousWidgetInstance{nullptr};
+    UPROPERTY(BlueprintReadWrite) USettingsMenuWidget * SettingsMenuWidgetInstance{nullptr};
+    UPROPERTY(BlueprintReadWrite) UCommonActivatableWidget * QuitPanelInstance{nullptr};
+    
+    UPROPERTY(EditAnywhere , BlueprintReadOnly , Category = "Widget|Menus") TSubclassOf<UBaseMenuWidget> PreviousWidgetClass;
+    UPROPERTY(EditAnywhere , BlueprintReadOnly , Category = "Widget|Menus") TSubclassOf<USettingsMenuWidget> SettingsMenuWidgetClass;
+    UPROPERTY(EditAnywhere , BlueprintReadOnly , Category = "Widget|Menus") TSubclassOf<UCommonActivatableWidget> QuitPanelClass;
 
-	UPROPERTY(BlueprintReadWrite)
-	USettingsMenuWidget* SettingsMenuWidgetInstance = nullptr;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Widget|Menus")
-	TSubclassOf<class UBaseMenuWidget> PreviousWidgetClass;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Widget|Menus")
-	TSubclassOf<class USettingsMenuWidget> SettingsMenuWidgetClass;
+    UPROPERTY(EditAnywhere , BlueprintReadOnly , Category = "Widget|Layout") TSubclassOf<UGameLayoutWidget> GameLayoutWidgetClass;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Widget|Menus") TObjectPtr<UGameLayoutWidget> GameLayoutWidget{nullptr};
 
+    public:
+
+    private:
+    
+    protected:
+
+    virtual void BeginPlay() override;
+    
+    public:
+
+    UFUNCTION() virtual UBaseMenuWidget * GetPreviousWidget();
+    UFUNCTION() virtual USettingsMenuWidget * GetSettingsMenuWidget() const;
+    UFUNCTION(BlueprintCallable) UCommonActivatableWidgetStack * GetWidgetStack() const;
+
+    UFUNCTION(BlueprintCallable) UCommonActivatableWidget * PushWidget(TSubclassOf<UCommonActivatableWidget> WidgetClass);
+    UFUNCTION(BlueprintCallable) void PopWidget(UCommonActivatableWidget * Widget);
+
+    UFUNCTION(BlueprintCallable) void OpenSettings();
+    UFUNCTION(BlueprintCallable) void OpenQuitPanel();
+
+    UFUNCTION(BlueprintCallable) void CloseSettings();
+    UFUNCTION(BlueprintCallable) void CloseQuitPanel();
 };

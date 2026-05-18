@@ -1,100 +1,110 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/Menus/PauseMenuWidget.h"
 
-#include "UI/Menus/PauseMenuWidget.h"
+#include"UI/GameHUD.h"
+#include"UI/UIElements/MainMenuButton.h"
 
-#include "Kismet/GameplayStatics.h"
-#include "UI/GameHUD.h"
-#include "UI/UIElements/MainMenuButton.h"
+#include"Kismet/GameplayStatics.h"
 
-UMainMenuButton* UPauseMenuWidget::GetFocusedButton() const
-{
-	return ResumeButton;
-}
-
-class UVerticalBox* UPauseMenuWidget::GetMenuVerticalBox() const
-{
-	return MenuVerticalBox;
-}
+//Private
 
 void UPauseMenuWidget::NativeConstruct()
 {
-	Super::NativeConstruct();
-
-	check(ResumeButton);
-	ResumeButton->OnClicked().AddUObject(this, &UPauseMenuWidget::OnResumeClicked);
-
-	check(ChangeLevelButton);
-	ChangeLevelButton->OnClicked().AddUObject(this, &UPauseMenuWidget::OnChangeLevelClicked);
-	
-	check(SettingsButton)
-	SettingsButton->OnClicked().AddUObject(this, &UPauseMenuWidget::OnSettingsClicked);
-
-	check(QuitButton);
-	QuitButton->OnClicked().AddUObject(this, &UPauseMenuWidget::OnQuitClicked);
-
-	check(NoQuitButton);
-	NoQuitButton->OnClicked().AddUObject(this, &UPauseMenuWidget::UnQuit);
-
+    Super::NativeConstruct();
+    check(ResumeButton);
+    check(ChangeLevelButton);
+    check(SettingsButton)
+    check(QuitButton);
+    ResumeButton->OnClicked().AddUObject(this , &UPauseMenuWidget::OnResumeClicked);
+    ChangeLevelButton->OnClicked().AddUObject(this , &UPauseMenuWidget::OnChangeLevelClicked);
+    SettingsButton->OnClicked().AddUObject(this , &UPauseMenuWidget::OnSettingsClicked);
+    QuitButton->OnClicked().AddUObject(this , &UPauseMenuWidget::OnQuitClicked);
+    SetDesiredFocusWidget(ResumeButton);
 }
 
-FReply UPauseMenuWidget::NativeOnKeyDown(const FGeometry& InGeometry, const FKeyEvent& InKeyEvent)
+FReply UPauseMenuWidget::NativeOnKeyDown(FGeometry const& InGeometry , FKeyEvent const& InKeyEvent)
 {
-	if (InKeyEvent.GetKey() == EKeys::Gamepad_FaceButton_Right || InKeyEvent.GetKey() == EKeys::Gamepad_Special_Right)
-	{
-		OnResumeClicked();
-		
-		return FReply::Handled();
-	}
-	
-	return Super::NativeOnKeyDown(InGeometry, InKeyEvent);
+    auto Reply{Super::NativeOnKeyDown(InGeometry , InKeyEvent)};
+    if(InKeyEvent.GetKey() == EKeys::Gamepad_FaceButton_Right || InKeyEvent.GetKey() == EKeys::Gamepad_Special_Right || InKeyEvent.GetKey() == EKeys::Escape)
+    {
+        OnResumeClicked();  
+        return(FReply::Handled());
+    }
+    return(Reply);
+}
+
+UWidget * UPauseMenuWidget::NativeGetDesiredFocusTarget() const
+{
+    return(ResumeButton);
 }
 
 void UPauseMenuWidget::NativeOnActivated()
 {
-	Super::NativeOnActivated();
-
-	if (ResumeButton)
-	{
-		ResumeButton->SetFocus();
-	}
+    Super::NativeOnActivated();
+    if(ResumeButton)
+    {
+        ResumeButton->SetFocus();
+    }
 }
+
+//
+
+UMainMenuButton * UPauseMenuWidget::GetFocusedButton() const
+{
+    return(ResumeButton);
+}
+
+UVerticalBox * UPauseMenuWidget::GetMenuVerticalBox() const
+{
+    return(MenuVerticalBox);
+}
+
+TOptional<FUIInputConfig> UPauseMenuWidget::GetDesiredInputConfig() const
+{
+    return(FUIInputConfig{ECommonInputMode::Menu , EMouseCaptureMode::NoCapture});
+}
+
+//
 
 void UPauseMenuWidget::OnResumeClicked() const
 {
-	const APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-	AGameHUD* HUD = Cast<AGameHUD>(PC->GetHUD());
-
-	if (ensure(HUD))
-	{
-		HUD->ResumeGame();
-	}
+    auto const PC{UGameplayStatics::GetPlayerController(GetWorld() , 0)};
+    auto HUD{Cast<AGameHUD>(PC->GetHUD())};
+    if(ensure(HUD))
+    {
+        HUD->ResumeGame();
+    }
 }
 
 void UPauseMenuWidget::OnSettingsClicked()
 {
-	const APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-	AGameHUD* HUD = Cast<AGameHUD>(PC->GetHUD());
-
-	if (ensure(HUD))
-	{
-		HUD->OpenSettingsInBlueprint();
-	}
-	
-	Super::OnSettingsClicked();
+    Super::OnSettingsClicked();
+    auto const PC{UGameplayStatics::GetPlayerController(GetWorld() , 0)};
+    auto HUD{Cast<AGameHUD>(PC->GetHUD())};
+    if(ensure(HUD))
+    {
+        HUD->OpenSettings();
+    }
 }
 
 void UPauseMenuWidget::OnChangeLevelClicked()
 {
-	Super::OnChangeLevelClicked();
+    OnMainMenuImplementation();
 }
 
 void UPauseMenuWidget::OnQuitClicked()
 {
-	TempQuitFunction();
+    OnQuitImplementation();
 }
+
+//
 
 void UPauseMenuWidget::UnQuit()
 {
-	Super::UnQuit();
+    Super::UnQuit();
 }
+
+//Protected
+
+//Public

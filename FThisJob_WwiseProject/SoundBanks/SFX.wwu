@@ -10,6 +10,14 @@
 				<WorkUnit Name="SFX_LVL_01" ID="{640DD321-0FBC-4BD8-83A9-E9AAB4FFBFC2}" PersistMode="Reference"/>
 				<WorkUnit Name="SFX_LVL_02" ID="{BAB307BA-50FA-44B4-84F5-A6E205BD8CFA}" PersistMode="Reference"/>
 				<WorkUnit Name="SFX_LVL_03" ID="{9FAB4C17-0C9F-46AF-95BE-DD37B3CF531C}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_GLOBAL" ID="{7D522168-110A-4F33-88D3-38159BC55B1C}" PersistMode="Reference"/>
+				<SoundBank Name="SFX" ID="{24EE9337-BC68-4BD9-8E37-57AC2BABE2C6}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AB_SFX" ID="{CA1A0EDF-BC5F-475D-BCB6-4E0333938D23}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

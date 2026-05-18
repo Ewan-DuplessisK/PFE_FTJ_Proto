@@ -1,48 +1,47 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "CommonButtonBase.h"
-#include "EngineUtils.h"
-#include "MainMenuButton.generated.h"
+//
 
-UCLASS()
-class FTHISJOB_API UMainMenuButton : public UCommonButtonBase
+#include"CoreMinimal.h"
+#include"CommonButtonBase.h"
+#include"MainMenuButton.generated.h"
+
+//
+
+class UOverlay;
+class UCommonTextBlock;
+
+//
+
+UCLASS() class FTHISJOB_API UMainMenuButton : public UCommonButtonBase
 {
-	GENERATED_BODY()
-public:
-	virtual void NativeConstruct() override;
+    GENERATED_BODY()
 
-	virtual void NativeOnHovered() override;
+    private:
+    
+    protected:
 
-	virtual void NativeOnUnhovered() override;
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UOverlay * Overlay;
+    UPROPERTY(BlueprintReadOnly , Meta = (BindWidget)) UCommonTextBlock * TextBlock;
 
-	virtual void NativeOnPressed() override;
+    UPROPERTY(EditAnywhere , BlueprintReadOnly, Meta = (BindWidget, MultiLine = True)) FText Text;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite) FMargin TextPadding;
 
-protected:
-	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
-	class UCommonTextBlock* TextBlock;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Button|TextStyle") TSubclassOf<UCommonTextStyle> NormalTextStyle;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Button|TextStyle") TSubclassOf<UCommonTextStyle> HoveredTextStyle;
+    UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Button|TextStyle") TSubclassOf<UCommonTextStyle> PressedTextStyle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (BindWidget))
-	FText Text;
+    public:
 
-	// Animation
-	UPROPERTY(Transient, meta = (BindWidgetAnim))
-	class UWidgetAnimation* ButtonHoveredAnim;
+    private:
 
-	UPROPERTY(Transient, meta = (BindWidgetAnim))
-	class UWidgetAnimation* ButtonClickedAnim;
+    protected:
+    
+    public:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Button|TextStyle")
-	TSubclassOf<UCommonTextStyle> NormalTextStyle;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Button|TextStyle")
-	TSubclassOf<UCommonTextStyle> HoveredTextStyle;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Button|TextStyle")
-	TSubclassOf<UCommonTextStyle> PressedTextStyle;
-	
-
-
+    virtual void NativePreConstruct() override;
+    virtual void NativeConstruct() override;
+    virtual void NativeOnHovered() override;
+    virtual void NativeOnUnhovered() override;
+    virtual void NativeOnPressed() override;
 };

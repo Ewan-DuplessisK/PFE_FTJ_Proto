@@ -11,6 +11,7 @@
 					<PropertyList>
 						<Property Name="EnvelopeStopPlayback" Type="bool" Value="False"/>
 						<Property Name="TimeModDuration" Type="Real64" Value="0.2"/>
+						<Property Name="TimeModPlaybackRate" Type="Real64" Value="0.25"/>
 					</PropertyList>
 				</ModulatorTime>
 			</ChildrenList>

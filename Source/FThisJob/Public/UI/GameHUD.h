@@ -1,37 +1,56 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
-#include "CoreMinimal.h"
-#include "UI/BaseHUD.h"
-#include "GameHUD.generated.h"
+//
 
-/**
- * 
- */
+#include"CoreMinimal.h"
+#include"UI/BaseHUD.h"
+#include"GameHUD.generated.h"
+
+//
+
+class UPauseMenuWidget;
+class UCommonActivatableWidget;
+//
+
 #define TOP_LEVEL 100000
-UCLASS()
-class FTHISJOB_API AGameHUD : public ABaseHUD
+
+//
+
+UCLASS() class FTHISJOB_API AGameHUD : public ABaseHUD
 {
-	GENERATED_BODY()
-public:
+    GENERATED_BODY()
 
-protected:
-	virtual void BeginPlay() override;
-	
-	virtual UBaseMenuWidget* GetPreviousWidget() override;
-	
-	virtual USettingsMenuWidget* GetSettingsMenuWidget() const override;
+    private:
 
-public:
-	UFUNCTION()
-	void PauseGame();
+    protected:
 
-	UFUNCTION()
-	void ResumeGame();
+    UPROPERTY(EditAnywhere , Category = "Widget|Menus") TSubclassOf<UPauseMenuWidget> PauseMenuWidgetClass;
+    UPROPERTY(EditAnywhere , Category = "Widget|Menus") TSubclassOf<UCommonActivatableWidget> EndScreenClass;
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void PauseGameInBlueprint();
-	UFUNCTION(BlueprintImplementableEvent)
-	void ResumeGameInBlueprint();
+    UPROPERTY(BlueprintReadWrite) TObjectPtr<UPauseMenuWidget> PauseMenuWidgetInstance{nullptr};
+    UPROPERTY(EditAnywhere) TObjectPtr<UCommonActivatableWidget> EndScreen{nullptr};
+
+    public:
+    UFUNCTION(BlueprintImplementableEvent, BlueprintCallable) void RetryPanelToPause();
+    
+    private:
+
+    protected:
+
+    virtual void BeginPlay() override;
+
+    virtual UBaseMenuWidget * GetPreviousWidget() override;
+    virtual USettingsMenuWidget * GetSettingsMenuWidget() const override;
+    UFUNCTION(BlueprintCallable) TSubclassOf<UCommonActivatableWidget> GetEndScreenClass();
+    
+
+    public:
+
+    UFUNCTION(BlueprintCallable) void PauseGame();
+
+    UFUNCTION(BlueprintImplementableEvent) void OnPauseGameSound();
+
+    UFUNCTION() void ResumeGame();
+
+    UFUNCTION(BlueprintImplementableEvent) void OnResumeGameSound();
 };

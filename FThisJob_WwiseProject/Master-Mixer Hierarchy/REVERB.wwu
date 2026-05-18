@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E5819D64-7CD1-4D22-8926-A8927D796F70}" SchemaVersion="123" RootDocumentID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}" ParentDocumentID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}">
+	<Busses>
+		<WorkUnit Name="REVERB" ID="{E5819D64-7CD1-4D22-8926-A8927D796F70}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested"/>
+	</Busses>
+</WwiseDocument>

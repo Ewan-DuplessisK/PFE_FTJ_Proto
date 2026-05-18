@@ -10,6 +10,13 @@
 				<WorkUnit Name="BOSS_THE_CEO" ID="{E67F6791-3FF8-4A89-AB55-1C44FF11236A}" PersistMode="Reference"/>
 				<WorkUnit Name="FLYING_ROBOTS" ID="{7C21365D-6AEA-4675-B297-DDA4CC40900B}" PersistMode="Reference"/>
 				<WorkUnit Name="TURRET" ID="{45215DE0-6CA4-43E5-ADBE-A45483A74C51}" PersistMode="Reference"/>
+				<SoundBank Name="ENEMIES" ID="{93FD18AA-412C-471E-B480-5BABFEF7FD79}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AB_ENEMIES" ID="{EE91C138-2EFC-4DF1-926C-0CA408E667CB}" WorkUnitID="{FA4E556E-03CC-4D15-967D-9EC8AFAF9369}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

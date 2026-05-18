@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BF9A5B04-D68B-4696-A88F-810D05B05C28}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="SFX" ID="{BF9A5B04-D68B-4696-A88F-810D05B05C28}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="23"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<StateGroup Name="STG_SLOWMO" ID="{1D2DAD21-09CF-4E14-B2E1-0BEA47C47222}">
+					<ChildrenList>
+						<State Name="None" ID="{7A3FC7CE-16CA-40AC-816B-E0C6955D12CA}"/>
+						<State Name="ON" ID="{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}"/>
+						<State Name="OFF" ID="{EF39E2B7-CB41-4B8D-84ED-75738314CD46}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="STG_DUCKGAMEOVER" ID="{F8602139-94B4-472E-AE05-7C1BACD04DDB}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{4249B618-F554-41B7-92C0-6474F0C51E05}"/>
+						<State Name="ON" ID="{ED100031-70CD-4F13-BF9B-914069821D22}"/>
+						<State Name="OFF" ID="{2F7E0F06-4458-411D-94B6-8AB9D860C269}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

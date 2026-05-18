@@ -1,0 +1,33 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1317365312	VOC_Announcer_Multiplier_Score_07			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Multiplier_Score_07	
+	1317365313	VOC_Announcer_Multiplier_Score_06			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Multiplier_Score_06	
+	1317365314	VOC_Announcer_Multiplier_Score_05			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Multiplier_Score_05	
+	1317365315	VOC_Announcer_Multiplier_Score_04			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Multiplier_Score_04	
+	1317365316	VOC_Announcer_Multiplier_Score_03			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Multiplier_Score_03	
+	1317365317	VOC_Announcer_Multiplier_Score_02			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Multiplier_Score_02	
+	1317365318	VOC_Announcer_Multiplier_Score_01			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Multiplier_Score_01	
+	1317365327	VOC_Announcer_Multiplier_Score_08			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Multiplier_Score_08	
+	1906018514	VOC_Announcer_Bonus_Score_05			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Bonus_Score_05	
+	1906018515	VOC_Announcer_Bonus_Score_04			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Bonus_Score_04	
+	1906018516	VOC_Announcer_Bonus_Score_03			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Bonus_Score_03	
+	1906018517	VOC_Announcer_Bonus_Score_02			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Bonus_Score_02	
+	1906018518	VOC_Announcer_Bonus_Score_01			\Default Work Unit\VOICES\VOICES_BONUS_SCORE\VOC_Announcer_Bonus_Score_01	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1828041389	RTPC_Music_SideChain			\MUSIC\RTPC_Music_SideChain	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	193646756	VOC_Announcer_Bonus_Score_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\15\{15A51929-D601-3402-B9B9-F55732394FDF}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Bonus_Score_01		7053
+	237104830	VOC_Announcer_Multiplier_Score_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\78\{785A5C2A-9071-8F6C-B2D5-624756C7004C}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Multiplier_Score_04		9245
+	329405683	VOC_Announcer_Bonus_Score_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\84\{8434DC86-CB08-F9B5-482A-A42FDFFF20F8}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Bonus_Score_02		8045
+	373535282	VOC_Announcer_Bonus_Score_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\43\{430E71CA-3B1D-CEFB-5726-891B2C763428}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Bonus_Score_04		6326
+	610506887	VOC_Announcer_Multiplier_Score_07	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\FE\{FE4B6FED-517D-664D-CA98-10B653C1FF36}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Multiplier_Score_07		14100
+	735358259	VOC_Announcer_Multiplier_Score_08	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\FC\{FC1415F0-5EFC-2868-1FE3-EE06729FB469}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Multiplier_Score_08		17273
+	752587782	VOC_Announcer_Bonus_Score_05	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\1F\{1F655B20-C7F4-A66A-B7B2-42765BF92D5D}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Bonus_Score_05		8608
+	849825148	VOC_Announcer_Multiplier_Score_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\0B\{0B203EF8-5B67-719C-B599-175BAA329C37}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Multiplier_Score_02		13900
+	894477837	VOC_Announcer_Bonus_Score_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\E3\{E398FF0F-2B79-3F27-F0C1-DD8AFE56860D}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Bonus_Score_03		8766
+	1029252191	VOC_Announcer_Multiplier_Score_05	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\F4\{F402250A-E150-E92E-DF82-F3376160F4BF}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Multiplier_Score_05		7781
+	1044909127	VOC_Announcer_Multiplier_Score_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\4C\{4C6EB80E-F1E5-743A-E57D-926813250DDA}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Multiplier_Score_03		8361
+	1047589878	VOC_Announcer_Multiplier_Score_06	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\86\{862D5117-8F55-DBE3-7966-7FB1A17664FE}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Multiplier_Score_06		13329
+	1060442392	VOC_Announcer_Multiplier_Score_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\BF\{BFE99BE5-C138-0A92-6681-9F6FCFEAAAFA}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_LVL_BONUS_SCORE\AM_Voices_Bonus_Score\VOC_Announcer_Multiplier_Score_01		13649
+

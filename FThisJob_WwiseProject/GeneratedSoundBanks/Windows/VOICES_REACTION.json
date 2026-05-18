@@ -1,0 +1,564 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2210119846",
+    "Type": "User",
+    "GUID": "{0637EAA3-EB65-4F9E-B46A-C1FB266F7D49}",
+    "Color": "27",
+    "Language": "SFX",
+    "Hash": "{4FB899F4-0C03-3F37-8EE0-5877B2891765}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOICES\\VOICES_REACTION\\VOICES_REACTION",
+    "ShortName": "VOICES_REACTION",
+    "Path": "VOICES_REACTION.bnk",
+    "Media": [
+     {
+      "Id": "7595696",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_38.wav",
+      "CachePath": "67/{67D12A33-7E39-C672-5F49-39037784A10D}.wem"
+     },
+     {
+      "Id": "22993549",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_18.wav",
+      "CachePath": "2A/{2ADD8369-D4C9-B7FE-3B32-9FD3E206963D}.wem"
+     },
+     {
+      "Id": "31386436",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Laugh_10.wav",
+      "CachePath": "E9/{E9CB915A-DA9A-859F-3AC0-8A7E0CF5C2B6}.wem"
+     },
+     {
+      "Id": "58009228",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_21.wav",
+      "CachePath": "14/{14E0DE1F-B78F-F2F7-CCBB-5CDCA2A30C9D}.wem"
+     },
+     {
+      "Id": "61476487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_01.wav",
+      "CachePath": "FB/{FB7D84E9-9B05-E6DE-AD3C-02AC5ADEE59E}.wem"
+     },
+     {
+      "Id": "71452330",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_23.wav",
+      "CachePath": "E1/{E1B1897F-90D8-B1B0-BB7B-FC3D47E3312E}.wem"
+     },
+     {
+      "Id": "132474160",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_16.wav",
+      "CachePath": "DC/{DC820383-A52A-4445-02F6-B189B8E035FD}.wem"
+     },
+     {
+      "Id": "149196469",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_39.wav",
+      "CachePath": "99/{9980B37F-A7A8-41D9-D565-A91796C0059C}.wem"
+     },
+     {
+      "Id": "156352680",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_06.wav",
+      "CachePath": "25/{25F56781-35EC-BE01-F62D-424C0AB90C41}.wem"
+     },
+     {
+      "Id": "166240333",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_09.wav",
+      "CachePath": "DF/{DFA170D0-94A6-2AA6-1E1C-001D469014F7}.wem"
+     },
+     {
+      "Id": "172895767",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_30.wav",
+      "CachePath": "D4/{D42F88DF-7C99-1C24-0B89-7B8051DC1E45}.wem"
+     },
+     {
+      "Id": "182387702",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_28.wav",
+      "CachePath": "B7/{B74526F8-6926-C8EB-0231-526B375C3FD1}.wem"
+     },
+     {
+      "Id": "200295859",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Laugh_08.wav",
+      "CachePath": "E8/{E80C265D-ACC1-2B3A-C682-597ABDA40C13}.wem"
+     },
+     {
+      "Id": "215902841",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_22.wav",
+      "CachePath": "6F/{6F7B93EE-4C71-C293-E8B1-862F75E41715}.wem"
+     },
+     {
+      "Id": "251610670",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_27.wav",
+      "CachePath": "B5/{B58243C5-29F5-FC53-7EC7-7E5614AC36C8}.wem"
+     },
+     {
+      "Id": "282516016",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_33.wav",
+      "CachePath": "4F/{4F3C74D3-B630-E473-3394-83AB247F522B}.wem"
+     },
+     {
+      "Id": "292728595",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_26.wav",
+      "CachePath": "82/{82E5387E-C997-D256-52B3-3C0F6DD40F09}.wem"
+     },
+     {
+      "Id": "297938509",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_08.wav",
+      "CachePath": "65/{650E87F9-5409-033F-4B92-7CB278E25407}.wem"
+     },
+     {
+      "Id": "306108096",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_07.wav",
+      "CachePath": "63/{636427DD-0528-13F0-39A0-DFFDCA82E4B9}.wem"
+     },
+     {
+      "Id": "377134493",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_36.wav",
+      "CachePath": "89/{89C6F370-9F31-E577-EA12-156941D20E5D}.wem"
+     },
+     {
+      "Id": "431656752",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_12.wav",
+      "CachePath": "0A/{0AB32B60-C901-9FFD-7405-61572168DF2A}.wem"
+     },
+     {
+      "Id": "437584870",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_31.wav",
+      "CachePath": "86/{86BB3E38-8809-717C-0530-187B45C5A682}.wem"
+     },
+     {
+      "Id": "463880741",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_04.wav",
+      "CachePath": "36/{36BFE0EB-690D-58C5-D103-CEBEE0B1E091}.wem"
+     },
+     {
+      "Id": "519330484",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_05.wav",
+      "CachePath": "06/{066054A0-59C6-7E8E-CEAC-24C60290C56E}.wem"
+     },
+     {
+      "Id": "540143329",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_17.wav",
+      "CachePath": "62/{6239A323-5889-33E8-0024-B410B3A78AB8}.wem"
+     },
+     {
+      "Id": "550541346",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_37.wav",
+      "CachePath": "F5/{F5EEFCB3-5F8D-C6B5-1568-3D1DC881812B}.wem"
+     },
+     {
+      "Id": "584085952",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_11.wav",
+      "CachePath": "BF/{BF69A63B-92CD-F928-0BBE-58F50312D4D4}.wem"
+     },
+     {
+      "Id": "607559087",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_42.wav",
+      "CachePath": "11/{11B32447-497B-09FD-E299-5750466C64D3}.wem"
+     },
+     {
+      "Id": "612831925",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Laugh_07.wav",
+      "CachePath": "24/{244E4F2B-E292-610F-9E5A-2159925E0EF2}.wem"
+     },
+     {
+      "Id": "613709723",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_44.wav",
+      "CachePath": "03/{03EFAEFD-6FDE-C492-C2AE-40D4B404D746}.wem"
+     },
+     {
+      "Id": "633758149",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_41.wav",
+      "CachePath": "32/{32472947-BA6E-2C62-AA38-7F8C25BE5790}.wem"
+     },
+     {
+      "Id": "640138482",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_40.wav",
+      "CachePath": "ED/{EDFDDB9E-2746-FEF6-FF10-C1474984AD15}.wem"
+     },
+     {
+      "Id": "681228212",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_10.wav",
+      "CachePath": "DE/{DEAF0929-F4A1-D850-2E27-E611EA8D0869}.wem"
+     },
+     {
+      "Id": "727854930",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_32.wav",
+      "CachePath": "A2/{A2B1DEEF-6A9C-579E-FB49-6A5A6FD010B1}.wem"
+     },
+     {
+      "Id": "733851142",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_24.wav",
+      "CachePath": "2C/{2CDAAAAA-35CF-8261-39EE-616673CD4FD5}.wem"
+     },
+     {
+      "Id": "743736730",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_13.wav",
+      "CachePath": "0A/{0AB496F4-AA0B-2436-AF56-16E8CF98608F}.wem"
+     },
+     {
+      "Id": "758477491",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_03.wav",
+      "CachePath": "8E/{8EE2D79A-AF7C-FFB5-7847-FE150EF79F26}.wem"
+     },
+     {
+      "Id": "816315854",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_25.wav",
+      "CachePath": "EC/{ECEF9561-F0DF-A1E5-EA5F-9C289AEC724E}.wem"
+     },
+     {
+      "Id": "818383876",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_15.wav",
+      "CachePath": "D6/{D6B5ABB8-2B14-7B94-7D48-50B278BC6F0D}.wem"
+     },
+     {
+      "Id": "842541018",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_43.wav",
+      "CachePath": "6F/{6F9D1AF6-6B23-182F-83BC-B9F1837B2412}.wem"
+     },
+     {
+      "Id": "879083185",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_29.wav",
+      "CachePath": "6A/{6ACE1610-B432-CFD5-B912-C9540C11B56F}.wem"
+     },
+     {
+      "Id": "884131049",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_02.wav",
+      "CachePath": "8D/{8D32BB78-8B7E-124A-355E-ABFDB05A1493}.wem"
+     },
+     {
+      "Id": "913218416",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_19.wav",
+      "CachePath": "89/{899FB186-6079-F488-454A-CAFB1AA4768F}.wem"
+     },
+     {
+      "Id": "987321575",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Taunt_Fight_20.wav",
+      "CachePath": "E9/{E93B13C6-D436-3944-6117-2EDB70257399}.wem"
+     },
+     {
+      "Id": "1041063962",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Laugh_09.wav",
+      "CachePath": "EF/{EFA0AEBE-53BC-1E5E-8307-36A4EB3CAB45}.wem"
+     },
+     {
+      "Id": "1057784258",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_CEO_Laugh_12.wav",
+      "CachePath": "96/{96400907-A463-A754-FE1C-07F442A5D733}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "914499916",
+      "Name": "VOICES_CEO_Laugh",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_REACTION\\VOICES_CEO_Laugh",
+      "GUID": "{16FFCC68-2459-48CA-ABD6-EFFD269A072E}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "2.3361876",
+      "DurationMax": "3.5452082",
+      "MediaRefs": [
+       {
+        "Id": "31386436"
+       },
+       {
+        "Id": "200295859"
+       },
+       {
+        "Id": "612831925"
+       },
+       {
+        "Id": "1041063962"
+       },
+       {
+        "Id": "1057784258"
+       }
+      ]
+     },
+     {
+      "Id": "3083695667",
+      "Name": "VOICES_CEO_Taunt",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_REACTION\\VOICES_CEO_Taunt",
+      "GUID": "{16B6B7DE-482D-4C1C-8E4D-E721749B5D5C}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.741625",
+      "DurationMax": "2.8664792",
+      "MediaRefs": [
+       {
+        "Id": "7595696"
+       },
+       {
+        "Id": "22993549"
+       },
+       {
+        "Id": "58009228"
+       },
+       {
+        "Id": "61476487"
+       },
+       {
+        "Id": "71452330"
+       },
+       {
+        "Id": "132474160"
+       },
+       {
+        "Id": "149196469"
+       },
+       {
+        "Id": "156352680"
+       },
+       {
+        "Id": "166240333"
+       },
+       {
+        "Id": "172895767"
+       },
+       {
+        "Id": "182387702"
+       },
+       {
+        "Id": "215902841"
+       },
+       {
+        "Id": "251610670"
+       },
+       {
+        "Id": "282516016"
+       },
+       {
+        "Id": "292728595"
+       },
+       {
+        "Id": "297938509"
+       },
+       {
+        "Id": "306108096"
+       },
+       {
+        "Id": "377134493"
+       },
+       {
+        "Id": "431656752"
+       },
+       {
+        "Id": "437584870"
+       },
+       {
+        "Id": "463880741"
+       },
+       {
+        "Id": "519330484"
+       },
+       {
+        "Id": "540143329"
+       },
+       {
+        "Id": "550541346"
+       },
+       {
+        "Id": "584085952"
+       },
+       {
+        "Id": "607559087"
+       },
+       {
+        "Id": "613709723"
+       },
+       {
+        "Id": "633758149"
+       },
+       {
+        "Id": "640138482"
+       },
+       {
+        "Id": "681228212"
+       },
+       {
+        "Id": "727854930"
+       },
+       {
+        "Id": "733851142"
+       },
+       {
+        "Id": "743736730"
+       },
+       {
+        "Id": "758477491"
+       },
+       {
+        "Id": "816315854"
+       },
+       {
+        "Id": "818383876"
+       },
+       {
+        "Id": "842541018"
+       },
+       {
+        "Id": "879083185"
+       },
+       {
+        "Id": "884131049"
+       },
+       {
+        "Id": "913218416"
+       },
+       {
+        "Id": "987321575"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1828041389",
+      "Name": "RTPC_Music_SideChain",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain",
+      "GUID": "{48035C4E-15B2-4C86-A81C-7505A68840D5}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3FA96AB1-02AF-E57D-5B4C-960B88FF0413}"
+ }
+}

@@ -1,5 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Header
 
+#include"UI/Menus/SettingsTabs/SettingsControlWidget.h"
 
-#include "UI/Menus/SettingsTabs/SettingsControlWidget.h"
+//Private
 
+//Protected
+
+//Public

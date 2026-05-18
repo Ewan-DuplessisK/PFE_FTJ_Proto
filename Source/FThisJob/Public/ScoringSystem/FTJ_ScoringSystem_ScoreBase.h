@@ -1,87 +1,139 @@
 #pragma once
 
+//
+
 #include"CoreMinimal.h"
 #include"Subsystems/GameInstanceSubsystem.h"
 #include"FTJ_ScoringSystem_ScoreBase.generated.h"
 
-//A score's base for compatibility.
-UCLASS() class FTHISJOB_API UFTJ_ScoringSystem_ScoreBase : public UGameInstanceSubsystem
+//
+
+class UFTJ_ScoringSystem_DataBase;
+
+//
+
+//The UFTJ_ScoringSystem_Score's base compatibility layer.
+UCLASS(Blueprintable) class FTHISJOB_API UFTJ_ScoringSystem_ScoreBase : public UGameInstanceSubsystem
 {
     GENERATED_BODY()
 
-    //Private variables
     private :
+
+    //The timer handle manipulating the multiplier gauge decrease process.
+    FTimerHandle GaugeDecreaseTimer;
+
+    //The score information.
+    UPROPERTY(EditDefaultsOnly , Instanced , AdvancedDisplay) UFTJ_ScoringSystem_DataBase * Data;
+
+    //The system type to create only the final one.
     UPROPERTY(EditDefaultsOnly , AdvancedDisplay) TSubclassOf<UFTJ_ScoringSystem_ScoreBase> ClassOfSubsystemToInitialize;
-    //A value which is increased depending on the multiplier which is affected by its percentage.
-    int32 Score;
-    //A value which is affecting the score and which is itself affected by the percentage.
-    int32 Multiplier;
-    //A value which increments the multiplier when hitting 99 and resets itself (and vice versa).
-    int32 MultiplierPercentage;
-    //A timer handle manipulating the multiplier percentage decrease process.
-    FTimerHandle MultiplierPercentageDecreaseTimer;
 
-    //Protected variables
     protected :
-    //Time passed before starting to subtract the MultiplierPercentageDecrease from the MultiplierPercentage.
-    UPROPERTY(EditAnywhere , BlueprintReadOnly , Meta = (ExposeOnSpawn = True)) float MultiplierPercentageDecreaseDelay;
-    //Time between subtractions of the MultiplierPercentageDecrease from the MultiplierPercentage.
-    UPROPERTY(EditAnywhere , BlueprintReadOnly , Meta = (ExposeOnSpawn = True)) float MultiplierPercentageDecreaseRate;
-    //A value which is subtracted from the MultiplierPercentage every MultiplierPercentageDecreaseRate seconds after passing MultiplierPercentageDecreaseDelay seconds.
-    UPROPERTY(EditAnywhere , BlueprintReadOnly , Meta = (ExposeOnSpawn = True)) int32 MultiplierPercentageDecrease;
 
-    //Public variables
+    //The value which is modified depending on the multiplier which is affected by its gauge.
+    UPROPERTY(BlueprintReadWrite) float Score;
+    //The value combining the rank and the gauge simultaneously.
+    UPROPERTY(BlueprintReadWrite) float RankIndex;
+
     public :
 
-    //Private functions
     private :
 
-    //Protected functions
+    /*
+        Calls the base and checks if the subsystem has a correct class to be initialized.
+        For parameters and the return value, go to USubsystem::ShouldCreateSubsystem.
+    */
+    bool ShouldCreateSubsystem(UObject * InOwner) const override;
+
+    //
+    
+    /*
+        Calls the base and transfers the control to InitializeBlueprint.
+        For parameters, go to USubsystem::Initialize.
+    */
+    void Initialize(FSubsystemCollectionBase & InCollection) override;
+
+    /*
+        Transfers the control to DeinitializeBlueprint and calls the base.
+        For parameters, go to USubsystem::Deinitialize.
+    */
+    void Deinitialize() override;
+
+    //
+    
+    /*
+        Evaluates RankIndex achieved through modification.
+        @param InGaugeIncrease The value which will be added to the gauge.
+    */
+    float PredictRankIndex(float InGaugeIncrease) const;
+
+    /*
+        Configures the timer manipulating the multiplier gauge decrease process.
+        @param InDelay The time passed before starting to subtract from the gauge after increasing the score level.
+    */
+    void ConfigureGaugeDecreaseTimer(float InDelay = 0.0);
+
+    //
+    
+    /*
+        Extracts from RankIndex.
+        @return The value which is affecting the score and which is itself affected by the gauge.
+    */
+    UFUNCTION(BlueprintCallable) float GetMultiplier() const;
+
+    /*
+        Extracts from RankIndex.
+        @return The value which increments the multiplier when hitting 1.0 and resets itself (and vice versa).
+    */
+    UFUNCTION(BlueprintCallable) float GetGauge() const;
+
     protected :
-    //Implements C++ constructor as a stub for Unreal Engine and as the Multiplier field initializer.
-    UFTJ_ScoringSystem_ScoreBase();
-    virtual bool ShouldCreateSubsystem(UObject * InOwner) const override;
-    virtual void Initialize(FSubsystemCollectionBase & InCollection) override;
-    virtual void Deinitialize() override;
+
+    /*
+        Fires on S+ rank reached.
+        @param bInEntered The signal indicating whether the transitioning is to the trance (true) or from it (false).
+    */
+    UFUNCTION(BlueprintImplementableEvent) void OnTransitionedTrance(bool bInEntered);
+
+    //
+
+    //Ends the subsystem creation after its C++ Initialize counterpart.
     UFUNCTION(BlueprintImplementableEvent) void InitializeBlueprint();
+
+    //Begins the subsystem destruction before its C++ Deinitialize counterpart.
     UFUNCTION(BlueprintImplementableEvent) void DeinitializeBlueprint();
 
-    //Public functions
+    //
+
+    UFUNCTION(BlueprintImplementableEvent) void OnTransitionedLower();
+
+    UFUNCTION(BlueprintImplementableEvent) void OnTransitionedHigher();
+
     public :
-    /*
-        Implements the Score field getter.
 
-        @return A value which is increased depending on the multiplier which is affected by its percentage.
-    */
-    UFUNCTION(BlueprintCallable) int32 GetScore() const;
     /*
-        Implements the Multiplier field getter.
-
-        @return A value which is affecting the score and which is itself affected by the percentage.
+        Just increases the score itself.
+        @param InScoreIncrease The value which will be added to the score.
+        @param InGaugeIncrease The value which will be added to the gauge.
     */
-    UFUNCTION(BlueprintCallable) int32 GetMultiplier() const;
+    UFUNCTION(BlueprintCallable) void Increase(float InScoreIncrease , float InGaugeIncrease , bool bInIsMultiplierIgnored);
+
     /*
-        Implements the MultiplierPercentage field getter.
-
-        @return A value which increments the multiplier when hitting 99 and resets itself (and vice versa).
+        Just decreases the score itself.
+        @param InGaugeDecrease The value which will be subtracted from the gauge.
     */
-    UFUNCTION(BlueprintCallable) int32 GetMultiplierPercentage() const;
-    /*
-        Implements C++ constructor by copying its parameters into fields.
+    UFUNCTION(BlueprintCallable) void Decrease(float InGaugeDecrease , bool bInIsMultiplierIgnored);
+    
+    //
+    
+    //Pauses the timer manipulating the multiplier gauge decrease process.
+    UFUNCTION(BlueprintCallable) void Pause();
 
-        @param InMultiplierPercentageDecreaseDelay Time passed before starting to subtract the MultiplierPercentageDecrease from the MultiplierPercentage.
-        @param InMultiplierPercentageDecreaseRate Time between subtractions of the MultiplierPercentageDecrease from the MultiplierPercentage.
-        @param InMultiplierPercentageDecrease A value which is subtracted from the MultiplierPercentage every MultiplierPercentageDecreaseRate seconds after passing MultiplierPercentageDecreaseDelay seconds.
-    */
-    UFTJ_ScoringSystem_ScoreBase(float const InMultiplierPercentageDecreaseDelay , float const InMultiplierPercentageDecreaseRate , int32 const InMultiplierPercentageDecrease);
-    /*
-        Just modifies the score itself.
+    //Unpauses the timer manipulating the multiplier gauge decrease process.
+    UFUNCTION(BlueprintCallable) void Unpause();
 
-        @param InScoreIncrease A value which will be added to the score.
-        @param InMultiplierPercentageIncrease A value which will be added to the MultiplierPercentage.
-    */
-    UFUNCTION(BlueprintCallable) void Increase(int32 const InScoreIncrease , int32 const InMultiplierPercentageIncrease);
-    UFUNCTION(BlueprintCallable) void SetScore(int32 InValue);
-    UFUNCTION(BlueprintCallable) void SetMultiplier(int32 InValue);
-    UFUNCTION(BlueprintCallable) void SetMultiplierPercentage(int32 InValue);
+    //
+
+    //Sets default RankIndex.
+    UFUNCTION(BlueprintCallable) void Reset();
 };
