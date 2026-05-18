@@ -1,0 +1,89 @@
+Event	ID	Name			Wwise Object Path	Notes
+	152105657	TitleScreen			\Default Work Unit\MUSIC\TitleScreen	
+	1059268390	Stop_MusicCredit			\Default Work Unit\MUSIC\Stop_MusicCredit	
+	1427760111	BossMusic			\Default Work Unit\MUSIC\BossMusic	
+	1749069110	Stop_TitleScreen			\Default Work Unit\MUSIC\Stop_TitleScreen	
+	2201105581	Credits			\Default Work Unit\MUSIC\Credits	
+	3199789248	MusicMaster			\Default Work Unit\MUSIC\MusicMaster	
+	3318448171	MusicDuck_Off			\Default Work Unit\MUSIC\MusicDuck_Off	
+	3705378287	Elevator			\Default Work Unit\MUSIC\Elevator	
+	4030145175	MusicDuck_On			\Default Work Unit\MUSIC\MusicDuck_On	
+	4080737523	Stop_MusicMaster			\Default Work Unit\MUSIC\Stop_MusicMaster	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	230524004	STG_MUSIC_LEVEL_ID			\MUSIC\STG_MUSIC_LEVEL_ID	
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	1123292758	STG_MUTEMUSIC			\MUSIC\STG_MUTEMUSIC	
+	1749661736	STG_MUSICDUCK			\MUSIC\STG_MUSICDUCK	
+	1876089722	STG_MUSIC_GAMEPLAY			\MUSIC\STG_MUSIC_GAMEPLAY	
+	1910067948	STG_MUSIC_MASTER			\MUSIC\STG_MUSIC_MASTER	
+	2925743549	STG_DUCKPAUSE			\UI\STG_DUCKPAUSE	
+
+State	ID	Name	State Group			Notes
+	748895195	None	STG_MUSIC_LEVEL_ID			
+	846576936	ST_LEVEL_02	STG_MUSIC_LEVEL_ID			
+	846576937	ST_LEVEL_03	STG_MUSIC_LEVEL_ID			
+	846576939	ST_LEVEL_01	STG_MUSIC_LEVEL_ID			
+	846576942	ST_LEVEL_04	STG_MUSIC_LEVEL_ID			
+	1309654229	ST_LEVEL_Boss	STG_MUSIC_LEVEL_ID			
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_MUTEMUSIC			
+	1729289368	ST_ON	STG_MUTEMUSIC			
+	3534829270	ST_OFF	STG_MUTEMUSIC			
+	748895195	None	STG_MUSICDUCK			
+	1729289368	ST_ON	STG_MUSICDUCK			
+	3534829270	ST_OFF	STG_MUSICDUCK			
+	748895195	None	STG_MUSIC_GAMEPLAY			
+	777581536	ST_Arena	STG_MUSIC_GAMEPLAY			
+	1149269995	ST_Fight	STG_MUSIC_GAMEPLAY			
+	2256071962	ST_Calm	STG_MUSIC_GAMEPLAY			
+	393732332	ST_InLevel	STG_MUSIC_MASTER			
+	748895195	None	STG_MUSIC_MASTER			
+	1584013055	ST_Victory	STG_MUSIC_MASTER			
+	1823901586	ST_Defeat	STG_MUSIC_MASTER			
+	4098790517	ST_Elevator	STG_MUSIC_MASTER			
+	748895195	None	STG_DUCKPAUSE			
+	930712164	OFF	STG_DUCKPAUSE			
+	1651971902	ON	STG_DUCKPAUSE			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1400970647	RTPC_Music_SideChain_VOICEREACTION			\MUSIC\RTPC_Music_SideChain_VOICEREACTION	
+	1596647065	RTPC_Music_Volume			\UI\RTPC_Music_Volume	
+	1828041389	RTPC_Music_SideChain			\MUSIC\RTPC_Music_SideChain	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3151097548	RTPC_Music_Slowmo			\MUSIC\RTPC_Music_Slowmo	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	2293551212	AB_MUSIC			\Default Work Unit\Master Audio Bus\MUSIC\AB_MUSIC	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	2065510	jin_victory	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\BF\{BFC531E1-38C0-5FAF-C057-A8CC0C6B3355}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Victory\jin_victory\jin_victory		41982
+	10422668	ost_lv01-02_182bpm_2drums	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\3D\{3D028FF8-DC3B-C93E-2137-7FB46A1DE8DF}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\MUSIC_LEVEL01\ost_lv01-02_182bpm_2drums\ost_lv01-02_182bpm_2drums		1067718
+	114658739	ost_lv03_136bpm_2drums	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\40\{40E6D87F-F357-BBD5-E56C-94E9725D349F}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL03\MUSIC_Level03_Fight\ost_lv03_136bpm_Fight\ost_lv03_136bpm_2drums		927008
+	124218432	ost_lv04_95bpm_2keys	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\CA\{CA93EC83-D281-9F38-0590-33C083573C20}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL04\MUSIC_Level04_Fight\ost_lv04_95bpm_Fight\ost_lv04_95bpm_2keys		945037
+	128193721	ost_lv03_136bpm_fill2drums	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\E8\{E8A352A3-3CF6-4A2C-4A47-B358D249C8D8}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL03\ost_lv03_136bpm_fill2drums\ost_lv03_136bpm_fill2drums		14230
+	194520095	ost_elevator_181bpm	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\15\{15E4F499-F2D0-B9F9-E9D4-F7EC41553F34}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Elevator\ost_elevator_181bpm\ost_elevator_181bpm		479585
+	228856885	ost_lv04_95bpm_5shiny	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\75\{75E6FD1C-E5BA-8619-404F-C19F10743E02}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL04\MUSIC_Level04_Fight\ost_lv04_95bpm_Fight\ost_lv04_95bpm_5shiny		1035029
+	277001088	ost_lv01-02_182bpm_2drums	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\3D\{3D028FF8-DC3B-C93E-2137-7FB46A1DE8DF}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL02\MUSIC_Level02_Fight\ost_lv01-02_182b_Guitbasspm\ost_lv01-02_182bpm_2drums		1067718
+	357347755	ost_boss_131_67bpm	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\81\{8157F897-9F7F-29D7-1EB3-63CD8A677D56}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\MUSIC_Boss\ost_boss_131_67bpm\ost_boss_131_67bpm		1167972
+	370573153	ost_lv01-02_182bpm_1guitbass	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\A9\{A927BE08-94F8-AA84-D69D-F5BB6DBFA005}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL02\MUSIC_Level02_Fight\ost_lv01-02_182b_Guitbasspm\ost_lv01-02_182bpm_1guitbass		5716
+	396034084	ost_lv03_136bpm_3keys	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\D3\{D33AD631-427A-9832-EDA0-A39E577070EA}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL03\MUSIC_Level03_Arena\ost_lv03_136bpm_Arena\ost_lv03_136bpm_3keys		859940
+	520484862	ost_lv03_136bpm_4solo	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\BB\{BBD76FF9-47C7-4608-E0D3-E4CB17B7774F}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL03\MUSIC_Level03_Arena\ost_lv03_136bpm_Arena\ost_lv03_136bpm_4solo		685751
+	569891710	ost_lv03_136bpm_1bassguit	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\65\{65FC903D-8D95-183E-99F3-B0DC14D03A48}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL03\MUSIC_Level03_Calm\ost_lv03_136bpm_Calm\ost_lv03_136bpm_1bassguit		8088
+	679128944	ost_lv04_95bpm_4cuivres	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B5\{B5912986-848F-9BB2-4A24-C98D2F4E7BFF}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL04\MUSIC_Level04_Arena\ost_lv04_95bpm_Arena\ost_lv04_95bpm_4cuivres		1249288
+	701101527	ost_lv01-02_182bpm_1guitbass	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\1B\{1BDB7546-8E94-E5FC-3F32-A76A359C47D6}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL02\MUSIC_Level02_Fight\ost_lv01-02_182b_Guitbasspm\ost_lv01-02_182bpm_1guitbass		830723
+	711362159	ost_titlescreen_146bpm	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\97\{974A4C65-5F77-B659-2158-20F4794C8B18}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\MUSIC_TitleScreen\ost_titlescreen_146bpm\ost_titlescreen_146bpm		628368
+	742619833	ost_lv04_95bpm_fill1drums	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\F2\{F2EA220A-B560-6B3D-1915-AE240D97D8CF}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL04\ost_lv04_95bpm_fill1drums\ost_lv04_95bpm_fill1drums		8021
+	772005986	ost_credits_92bpm	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\41\{41F3DA5E-A331-CAF9-5591-9D083557242B}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\MUSIC_Credit\ost_credits_92bpm\ost_credits_92bpm		1175158
+	781280541	jin_defeat	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\F2\{F261623F-D2E8-F97C-F6E8-8907D956BD80}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Defeat\Silence\jin_defeat		111068
+	791595110	ost_lv04_95bpm_1drums	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\20\{20951298-27EF-BE3D-E7F0-75789060AF66}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL04\MUSIC_Level04_Arena\ost_lv04_95bpm_Arena\ost_lv04_95bpm_1drums		1349340
+	821610322	ost_lv04_95bpm_3guitarbass	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\BC\{BC2B2979-01D8-F9C4-9F8C-47C8B94A5314}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL04\MUSIC_Level04_Arena\ost_lv04_95bpm_Arena\ost_lv04_95bpm_3guitarbass		894673
+	880695016	ost_lv01-02_182bpm_4horns	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\F0\{F0320B79-DBF5-757F-FCD8-DCBBCC7119D3}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL02\MUSIC_Level02_Arena\ost_lv01-02_182b_Guitbasspm\ost_lv01-02_182bpm_4horns		1105435
+	944243448	ost_lv01-02_182bpm_3keys	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\1E\{1E750C27-47D3-696C-914B-836756F69ABF}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL02\MUSIC_Level02_Fight\ost_lv01-02_182b_Guitbasspm\ost_lv01-02_182bpm_3keys		890883
+	964654305	ost_lv01-02_182bpm_2drums	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\AA\{AA41848D-E25D-3D4E-A84B-27F50A805061}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL02\MUSIC_Level02_Fight\ost_lv01-02_182b_Guitbasspm\ost_lv01-02_182bpm_2drums		10185
+	1067114917	ost_lv03_136bpm_1bassguit	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\46\{46EBC95B-8370-E4D3-9876-F451A32FA6A8}.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\SG_MUSIC_MASTER\MUSIC_Levels\SG_MUSIC_LEVEL03\MUSIC_Level03_Fight\ost_lv03_136bpm_Fight\ost_lv03_136bpm_1bassguit		794214
+

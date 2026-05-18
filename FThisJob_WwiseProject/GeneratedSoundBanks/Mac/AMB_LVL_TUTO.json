@@ -1,0 +1,265 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3315661217",
+    "Type": "User",
+    "GUID": "{362223CA-7D73-4979-B380-92EEAFFCDAF7}",
+    "Color": "4",
+    "Language": "SFX",
+    "Hash": "{50DC6E6C-2E01-1EE8-F680-735C89434E3A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\AMB\\AMB_LVL_TUTO\\AMB_LVL_TUTO",
+    "ShortName": "AMB_LVL_TUTO",
+    "Path": "AMB_LVL_TUTO.bnk",
+    "Media": [
+     {
+      "Id": "718384517",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\BEDS\\AMB_BEDS_TUTO_Construction_LP.wav",
+      "CachePath": "D6/{D6D77CC2-FA4E-96B4-63A8-FC77F1BD2C59}.wem"
+     },
+     {
+      "Id": "747656257",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\BEDS\\AMB_BEDS_TUTO_Office_LP.wav",
+      "CachePath": "C0/{C0DD809F-4A83-A683-6C93-22315B2D7BBE}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1838682601",
+      "Name": "Beds_Construction_LVL_TUTO",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_TUTO\\Beds_Construction_LVL_TUTO",
+      "GUID": "{F25999B2-569B-4FA9-811E-9E53FE6B72C9}",
+      "Color": "4",
+      "MaxAttenuation": "3000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "718384517"
+       }
+      ]
+     },
+     {
+      "Id": "3945902764",
+      "Name": "Beds_Office_LVL_TUTO",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_TUTO\\Beds_Office_LVL_TUTO",
+      "GUID": "{10742951-1C86-4181-8966-47F7EA11DB28}",
+      "Color": "4",
+      "MaxAttenuation": "1000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "747656257"
+       }
+      ]
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "1770656193",
+      "Name": "AB_AMB",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AMB\\AB_AMB",
+      "GUID": "{59DB19C6-EB13-482D-8611-6EC719792818}",
+      "Color": "4"
+     },
+     {
+      "Id": "2486910110",
+      "Name": "AB_AMB_TUTO",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AMB\\AB_AMB\\AB_AMB_TUTO",
+      "GUID": "{0B658429-AFA2-4ADB-BA76-DA329A537869}",
+      "Color": "4"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "932301089",
+      "Name": "RTPC_SFX_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_SFX_Volume",
+      "GUID": "{0EB4588E-0728-469E-A6B1-EA1EF70CCB3E}",
+      "Color": "1"
+     },
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     },
+     {
+      "Id": "3312150600",
+      "Name": "RTPC_Sidechain_Rage_Enter",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Sidechain_Rage_Enter",
+      "GUID": "{CDBA16C9-1E19-496A-B420-2194AE170CC6}",
+      "Color": "1"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "603700529",
+      "Name": "MC_CriticalHealth",
+      "ObjectPath": "\\States\\MC\\MC_CriticalHealth",
+      "GUID": "{A5FC26C3-7658-4327-B092-C5E156E8EE7C}",
+      "Color": "3",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\None",
+        "GUID": "{5BC3290D-432D-4808-8DF2-9ECD959311FD}",
+        "Color": "3"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\OFF",
+        "GUID": "{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}",
+        "Color": "3"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\ON",
+        "GUID": "{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "1876089722",
+      "Name": "STG_MUSIC_GAMEPLAY",
+      "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY",
+      "GUID": "{EB6E6A45-5646-484E-8633-75CE485228A6}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\None",
+        "GUID": "{10E7B2CF-4595-401F-BAF7-2F9EE0BAE887}"
+       },
+       {
+        "Id": "777581536",
+        "Name": "ST_Arena",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Arena",
+        "GUID": "{D0489C50-297F-4F23-ABA6-3C81E0A62EFD}"
+       },
+       {
+        "Id": "1149269995",
+        "Name": "ST_Fight",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Fight",
+        "GUID": "{BE760FC5-4883-4955-8567-42DBB5A5B6B5}"
+       },
+       {
+        "Id": "2256071962",
+        "Name": "ST_Calm",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Calm",
+        "GUID": "{E5655C9F-9E44-4389-81B7-8CD2F50807F6}"
+       }
+      ]
+     },
+     {
+      "Id": "2037745005",
+      "Name": "STG_DUCKGAMEOVER",
+      "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER",
+      "GUID": "{F8602139-94B4-472E-AE05-7C1BACD04DDB}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\None",
+        "GUID": "{4249B618-F554-41B7-92C0-6474F0C51E05}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\OFF",
+        "GUID": "{2F7E0F06-4458-411D-94B6-8AB9D860C269}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\ON",
+        "GUID": "{ED100031-70CD-4F13-BF9B-914069821D22}",
+        "Color": "23"
+       }
+      ]
+     },
+     {
+      "Id": "2925743549",
+      "Name": "STG_DUCKPAUSE",
+      "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE",
+      "GUID": "{15ECBCBF-3F06-4289-AFC6-8844C587E497}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\None",
+        "GUID": "{6A1E09E1-E251-4B2B-A184-1D936B6FE643}"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\OFF",
+        "GUID": "{05000AAB-A14A-470B-9CB9-8B447EF0C75F}"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\ON",
+        "GUID": "{24F35669-AD62-4CAA-ADE5-6808BDE93D74}"
+       }
+      ]
+     },
+     {
+      "Id": "3350389201",
+      "Name": "STG_SLOWMO",
+      "ObjectPath": "\\States\\SFX\\STG_SLOWMO",
+      "GUID": "{1D2DAD21-09CF-4E14-B2E1-0BEA47C47222}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\None",
+        "GUID": "{7A3FC7CE-16CA-40AC-816B-E0C6955D12CA}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\OFF",
+        "GUID": "{EF39E2B7-CB41-4B8D-84ED-75738314CD46}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\ON",
+        "GUID": "{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}",
+        "Color": "23"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E4799D85-000F-6543-B92D-BC4FE6DB496E}"
+ }
+}

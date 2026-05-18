@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}" SchemaVersion="123" RootDocumentID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}" ParentDocumentID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}">
+	<AudioObjects>
+		<WorkUnit Name="SFX_GLOBAL" ID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}" OwnerID="{70AA5910-C10A-4FFE-8B37-630055EE9CBC}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_SFX_GLOBAL" ID="{2BA1392D-644B-436A-A667-B17A98C20A88}" ShortID="354877790">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="SFX_DESTRUCTION" ID="{147BF0F2-CD6B-4D28-A27C-5D7D0271CE01}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_DOOR" ID="{2ABA2D3A-645C-407A-B888-A1AD19700DF5}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_UI" ID="{3CAE9BAF-18BC-4B43-B0C8-A36866E19580}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_ELEVATOR" ID="{7D946E0B-741B-474F-93CE-4AD64B6D6284}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_GATE" ID="{A3618F6E-30CE-4FE2-93A2-B6FAFFF99A93}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_DUCK" ID="{6778396F-B369-4738-9856-49F2E3E738C1}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_MENU_WHOOSH" ID="{8F663D37-A439-4C09-8CBC-A973D8AD61B4}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_TRASH_FLY" ID="{F20539F4-9FE1-4822-B4C8-5E3AFD000F40}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_FINISH" ID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_PRESSURE_PLATE" ID="{A9343B12-332F-48D4-A39E-F9C39BF0DB95}" PersistMode="Reference"/>
+						<Sound Name="SFX_Game_Over" ID="{6AC29F9B-8024-46D6-A232-ABEA64667AAA}" ShortID="271916661">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Game_Over" ID="{914F25AB-CFC3-42B8-B60A-E349EBB1D47D}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Game_Over.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1046975469"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Game_Over" ID="{914F25AB-CFC3-42B8-B60A-E349EBB1D47D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<WorkUnit Name="SFX_POOP" ID="{93DA7771-801B-4BAC-A0A9-B97125908F5E}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_TV" ID="{E7F067F2-DDE4-4334-A6AE-3441C26434A8}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_ARMROBOT" ID="{F08FF08F-F7E8-4009-8ABF-1EC041CACC02}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_CHEESE_BUTTON" ID="{7E6040D8-D1BE-47B5-A2A5-6D056E3B7ACD}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_SLOWMO" ID="{EA07B130-056B-4B24-A9A4-F455581CCB5A}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_SPARKS" ID="{D62C80B4-5111-4B70-8392-09F8807524FE}" PersistMode="Reference"/>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

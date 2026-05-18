@@ -1,0 +1,22 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "85035282",
+    "Type": "User",
+    "GUID": "{26D23CF3-8A11-4F33-8768-B89E73B9C010}",
+    "Color": "13",
+    "Language": "SFX",
+    "Hash": "{5C770044-9208-8D59-F759-0F7E1F9ED9C8}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\GPE\\GPE_LVL_03\\GPE_LVL_03",
+    "ShortName": "GPE_LVL_03",
+    "Path": "GPE_LVL_03.bnk"
+   }
+  ],
+  "FileHash": "{CDD627DD-EE9B-7B23-7D1B-DA3486BB48F4}"
+ }
+}

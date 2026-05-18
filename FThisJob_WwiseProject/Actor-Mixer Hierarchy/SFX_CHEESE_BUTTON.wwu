@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7E6040D8-D1BE-47B5-A2A5-6D056E3B7ACD}" SchemaVersion="123" RootDocumentID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}" ParentDocumentID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}">
+	<AudioObjects>
+		<WorkUnit Name="SFX_CHEESE_BUTTON" ID="{7E6040D8-D1BE-47B5-A2A5-6D056E3B7ACD}" OwnerID="{2BA1392D-644B-436A-A667-B17A98C20A88}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_CheeseButton" ID="{ABC335EF-1469-4934-8740-67F1CF5B48FE}" ShortID="2950887">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="SFX_CheeseButton" ID="{69AA2C3E-B799-41CA-A9F9-ADA5D149F68A}" ShortID="395470100">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_10m" ID="{DC8F0EC5-FE88-4C0F-A086-E76674593674}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Cheese_Button_Press_01" ID="{8C4A3322-FA8E-4B6E-B411-A0C6900B0633}" ShortID="613770394">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Cheese_Button_Press_01" ID="{284DDF1A-2F4A-4EC2-820A-BFD3F37B6067}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\CheeseButton\SFX_Cheese_Button_Press_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="673442347"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Cheese_Button_Press_01" ID="{284DDF1A-2F4A-4EC2-820A-BFD3F37B6067}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Cheese_Button_Press_02" ID="{B8FCCCA8-D95E-4E4B-9817-837E22B148BA}" ShortID="1016115479">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Cheese_Button_Press_02" ID="{5390CF1D-1F45-41D3-B0A3-4AA0E214F8C0}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\CheeseButton\SFX_Cheese_Button_Press_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="422133311"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Cheese_Button_Press_02" ID="{5390CF1D-1F45-41D3-B0A3-4AA0E214F8C0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Cheese_Button_Press_03" ID="{5ACCB9FF-F8F1-4A54-B7E2-F504C6141826}" ShortID="275265261">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Cheese_Button_Press_03" ID="{9176E931-3C58-4DEC-8090-93810978A597}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\CheeseButton\SFX_Cheese_Button_Press_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="830529467"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Cheese_Button_Press_03" ID="{9176E931-3C58-4DEC-8090-93810978A597}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

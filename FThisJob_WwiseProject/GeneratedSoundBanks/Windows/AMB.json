@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1117531639",
+    "Type": "User",
+    "GUID": "{3561DA39-79AF-4E71-A45D-AA5754D499A3}",
+    "Color": "4",
+    "Language": "SFX",
+    "Hash": "{2FF7E417-7718-B684-02CC-1C8D42BAF2A2}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\AMB\\AMB",
+    "ShortName": "AMB",
+    "Path": "AMB.bnk",
+    "Media": [
+     {
+      "Id": "42638950",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\BEDS\\AMB_BEDS_TUTO_Elevator_LP.wav",
+      "CachePath": "7B/{7B492C5D-6FFA-50E1-932C-4A9FC36A65AC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1845205119",
+      "Name": "Beds_Elevator_GENERAL",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_GENERAL\\Beds_Elevator_GENERAL",
+      "GUID": "{B923FC6B-0E74-42A6-AC66-8D0549315128}",
+      "Color": "4",
+      "MaxAttenuation": "1000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "42638950"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EC48F9BD-BC11-60FD-589A-78F78EC397A1}"
+ }
+}

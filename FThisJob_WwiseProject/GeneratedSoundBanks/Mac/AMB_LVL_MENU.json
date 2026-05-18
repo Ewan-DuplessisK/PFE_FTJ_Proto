@@ -1,0 +1,414 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "4194341362",
+    "Type": "User",
+    "GUID": "{119983D0-5F0D-4EEA-B901-1D311CD8EA9D}",
+    "Color": "4",
+    "Language": "SFX",
+    "Hash": "{C66120C6-B0E4-FFD1-C708-26E9F9E4CBAF}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\AMB\\AMB_LVL_MENU\\AMB_LVL_MENU",
+    "ShortName": "AMB_LVL_MENU",
+    "Path": "AMB_LVL_MENU.bnk",
+    "Media": [
+     {
+      "Id": "99410385",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\RFX\\AMB_RFX_Menu_Ringtone_04.wav",
+      "CachePath": "05/{054C9329-76B9-CBC9-2671-582B974B5F66}.wem"
+     },
+     {
+      "Id": "154818342",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\BEDS\\AMB_Beds_Menu_General_LP.wav",
+      "CachePath": "59/{591B7466-AE3A-FA3F-397D-6DFB253CD4DD}.wem"
+     },
+     {
+      "Id": "232290851",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\SOUNDPOINTS\\AMB_SP_PcScreen_LP.wav",
+      "CachePath": "DA/{DA1E2CEC-A4D1-853E-BB06-52B229E5EC0B}.wem"
+     },
+     {
+      "Id": "407966069",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\RFX\\AMB_RFX_Menu_Ringtone_03.wav",
+      "CachePath": "B3/{B3B70087-5C98-6E02-15ED-49318A01FE1F}.wem"
+     },
+     {
+      "Id": "427483224",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\SOUNDPOINTS\\AMB_SP_Menu_KeyboardTyping_LP.wav",
+      "CachePath": "C2/{C2897AA0-613F-CAC3-6C5F-223F7ECF6CF0}.wem"
+     },
+     {
+      "Id": "611484354",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\RFX\\AMB_RFX_Menu_Ringtone_01.wav",
+      "CachePath": "38/{383304D0-F566-B113-AF81-CFB6D2AD55CC}.wem"
+     },
+     {
+      "Id": "638581140",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AMB\\RFX\\AMB_RFX_Menu_Ringtone_02.wav",
+      "CachePath": "07/{073F4108-BA13-4CBD-ED85-4DFB93A12952}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3113312223",
+      "Name": "Beds_General_LVL_MENU",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_MENU\\Beds_General_LVL_MENU",
+      "GUID": "{C0ADB1C5-4115-4C18-AC5C-86F8A8813FC9}",
+      "Color": "4",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "99410385"
+       },
+       {
+        "Id": "154818342"
+       },
+       {
+        "Id": "407966069"
+       },
+       {
+        "Id": "611484354"
+       },
+       {
+        "Id": "638581140"
+       }
+      ]
+     },
+     {
+      "Id": "170235895",
+      "Name": "Sp_Keyboard_LVL_MENU",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_MENU\\Sp_Keyboard_LVL_MENU",
+      "GUID": "{4F29E6F8-B7BE-4EE5-9E05-94998ADE6207}",
+      "Color": "4",
+      "MaxAttenuation": "3000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "427483224"
+       }
+      ]
+     },
+     {
+      "Id": "1230709398",
+      "Name": "Sp_PC_Screen_LVL_MENU",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_MENU\\Sp_PC_Screen_LVL_MENU",
+      "GUID": "{A7A65D8E-6319-422A-8F98-8D7BA9F16052}",
+      "Color": "4",
+      "MaxAttenuation": "1500",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "232290851"
+       }
+      ]
+     },
+     {
+      "Id": "3093078560",
+      "Name": "State_Play_LVL_MENU",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_MENU\\State_Play_LVL_MENU",
+      "GUID": "{91A6D90A-5C74-4542-B68C-79980DA9F5AF}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "4007181763",
+      "Name": "State_QuitGame_LVL_MENU",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_MENU\\State_QuitGame_LVL_MENU",
+      "GUID": "{BFB867F5-83D4-447F-8626-AF3194B5B607}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "2552542987",
+        "Id": "2368844905",
+        "Name": "Enter",
+        "ObjectPath": "\\States\\AMB\\AMB_Menu\\Enter",
+        "GUID": "{1485C4FB-D1D9-4C0D-8382-D398A80F912D}",
+        "Color": "4"
+       }
+      ]
+     },
+     {
+      "Id": "2176748071",
+      "Name": "State_SettingIn_LVL_MENU",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_MENU\\State_SettingIn_LVL_MENU",
+      "GUID": "{EE1A23C7-3199-4B8A-BBE8-A5BBBF606596}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3383261442",
+      "Name": "State_Settingout_LVL_MENU",
+      "ObjectPath": "\\Events\\Default Work Unit\\AMB\\AMB_LVL_MENU\\State_Settingout_LVL_MENU",
+      "GUID": "{FD26EA59-3997-4C92-B8C5-982229963F89}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "1770656193",
+      "Name": "AB_AMB",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AMB\\AB_AMB",
+      "GUID": "{59DB19C6-EB13-482D-8611-6EC719792818}",
+      "Color": "4"
+     },
+     {
+      "Id": "2114868313",
+      "Name": "AB_AMB_MENU",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AMB\\AB_AMB\\AB_AMB_MENU",
+      "GUID": "{F4A6D689-F004-4F76-B835-22F4BD1E6977}",
+      "Color": "4"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "932301089",
+      "Name": "RTPC_SFX_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_SFX_Volume",
+      "GUID": "{0EB4588E-0728-469E-A6B1-EA1EF70CCB3E}",
+      "Color": "1"
+     },
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     },
+     {
+      "Id": "3312150600",
+      "Name": "RTPC_Sidechain_Rage_Enter",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Sidechain_Rage_Enter",
+      "GUID": "{CDBA16C9-1E19-496A-B420-2194AE170CC6}",
+      "Color": "1"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "603700529",
+      "Name": "MC_CriticalHealth",
+      "ObjectPath": "\\States\\MC\\MC_CriticalHealth",
+      "GUID": "{A5FC26C3-7658-4327-B092-C5E156E8EE7C}",
+      "Color": "3",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\None",
+        "GUID": "{5BC3290D-432D-4808-8DF2-9ECD959311FD}",
+        "Color": "3"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\OFF",
+        "GUID": "{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}",
+        "Color": "3"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\ON",
+        "GUID": "{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "1876089722",
+      "Name": "STG_MUSIC_GAMEPLAY",
+      "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY",
+      "GUID": "{EB6E6A45-5646-484E-8633-75CE485228A6}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\None",
+        "GUID": "{10E7B2CF-4595-401F-BAF7-2F9EE0BAE887}"
+       },
+       {
+        "Id": "777581536",
+        "Name": "ST_Arena",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Arena",
+        "GUID": "{D0489C50-297F-4F23-ABA6-3C81E0A62EFD}"
+       },
+       {
+        "Id": "1149269995",
+        "Name": "ST_Fight",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Fight",
+        "GUID": "{BE760FC5-4883-4955-8567-42DBB5A5B6B5}"
+       },
+       {
+        "Id": "2256071962",
+        "Name": "ST_Calm",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Calm",
+        "GUID": "{E5655C9F-9E44-4389-81B7-8CD2F50807F6}"
+       }
+      ]
+     },
+     {
+      "Id": "2037745005",
+      "Name": "STG_DUCKGAMEOVER",
+      "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER",
+      "GUID": "{F8602139-94B4-472E-AE05-7C1BACD04DDB}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\None",
+        "GUID": "{4249B618-F554-41B7-92C0-6474F0C51E05}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\OFF",
+        "GUID": "{2F7E0F06-4458-411D-94B6-8AB9D860C269}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\ON",
+        "GUID": "{ED100031-70CD-4F13-BF9B-914069821D22}",
+        "Color": "23"
+       }
+      ]
+     },
+     {
+      "Id": "2552542987",
+      "Name": "AMB_Menu",
+      "ObjectPath": "\\States\\AMB\\AMB_Menu",
+      "GUID": "{E0DD2CA8-44C4-490C-8F09-281DD5B515A9}",
+      "Color": "4",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\AMB\\AMB_Menu\\None",
+        "GUID": "{B6E45F90-8CB4-4A32-9046-F381468115E7}",
+        "Color": "4"
+       },
+       {
+        "Id": "2368844905",
+        "Name": "Enter",
+        "ObjectPath": "\\States\\AMB\\AMB_Menu\\Enter",
+        "GUID": "{1485C4FB-D1D9-4C0D-8382-D398A80F912D}",
+        "Color": "4"
+       },
+       {
+        "Id": "3930794392",
+        "Name": "Quit",
+        "ObjectPath": "\\States\\AMB\\AMB_Menu\\Quit",
+        "GUID": "{2411D6AF-F760-4219-BE3B-79644F9E7638}",
+        "Color": "4"
+       }
+      ]
+     },
+     {
+      "Id": "2925743549",
+      "Name": "STG_DUCKPAUSE",
+      "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE",
+      "GUID": "{15ECBCBF-3F06-4289-AFC6-8844C587E497}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\None",
+        "GUID": "{6A1E09E1-E251-4B2B-A184-1D936B6FE643}"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\OFF",
+        "GUID": "{05000AAB-A14A-470B-9CB9-8B447EF0C75F}"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\ON",
+        "GUID": "{24F35669-AD62-4CAA-ADE5-6808BDE93D74}"
+       }
+      ]
+     },
+     {
+      "Id": "3350389201",
+      "Name": "STG_SLOWMO",
+      "ObjectPath": "\\States\\SFX\\STG_SLOWMO",
+      "GUID": "{1D2DAD21-09CF-4E14-B2E1-0BEA47C47222}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\None",
+        "GUID": "{7A3FC7CE-16CA-40AC-816B-E0C6955D12CA}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\OFF",
+        "GUID": "{EF39E2B7-CB41-4B8D-84ED-75738314CD46}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\ON",
+        "GUID": "{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}",
+        "Color": "23"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{63E9EB67-02F5-89E1-DDB2-E28C1C84BBFC}"
+ }
+}

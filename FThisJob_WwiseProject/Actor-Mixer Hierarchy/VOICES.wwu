@@ -7,9 +7,2956 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<WorkUnit Name="VOICES_LVL_01" ID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}" PersistMode="Reference"/>
-				<WorkUnit Name="VOICES_LVL_02" ID="{F075F924-0139-4D48-BC1E-4079AE3D0B83}" PersistMode="Reference"/>
-				<WorkUnit Name="VOICES_LVL_03" ID="{F1AFAF7C-BE33-444D-92F6-F81CC65D46B9}" PersistMode="Reference"/>
+				<ActorMixer Name="AM_VOICES" ID="{31CF7CE1-8F04-4667-9928-F84D7EBE385A}" ShortID="156202571">
+					<PropertyList>
+						<Property Name="OutputBusVolume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AB_VOICES" ID="{FDBDADD7-3A3D-43B4-A3C5-B9D7BB3EBA55}" WorkUnitID="{D8E6497A-AC26-4659-A3E9-978F414BBEB3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="VOICES_LVL_02" ID="{F075F924-0139-4D48-BC1E-4079AE3D0B83}" PersistMode="Reference"/>
+						<WorkUnit Name="VOICES_LVL_03" ID="{F1AFAF7C-BE33-444D-92F6-F81CC65D46B9}" PersistMode="Reference"/>
+						<WorkUnit Name="VOICES_LVL_01" ID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}" PersistMode="Reference"/>
+						<WorkUnit Name="VOICES_LVL_CEO" ID="{7E994724-0541-420E-A18A-FA1CE2294173}" PersistMode="Reference"/>
+						<Sound Name="SFX_Alarm" ID="{80F10CEC-3472-4E7D-9C64-D9FE325F66CE}" ShortID="467544441">
+							<PropertyList>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-18</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="RVB_BIG_ROOM" ID="{D2A20092-DEE8-44A6-98B2-AA770CE07948}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Alarm" ID="{14BB3D0C-DDE1-4676-9749-A9B5A8582A20}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\SFX_Alarm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="203691350"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Alarm" ID="{14BB3D0C-DDE1-4676-9749-A9B5A8582A20}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<WorkUnit Name="VOICES_OUTRO" ID="{26AEB92B-E136-4576-9C7C-0F9F172FF4EF}" PersistMode="Reference"/>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="AM_VOICES_Reaction" ID="{2F99EA9D-FEE5-4FD7-BFE2-0AFDCF7EFC19}" ShortID="1024805578">
+					<PropertyList>
+						<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OutputBusVolume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AB_VOICES_REACTION" ID="{F0425890-125E-4491-9F48-6A8F4E30C24C}" WorkUnitID="{D8E6497A-AC26-4659-A3E9-978F414BBEB3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="VOICES_CEO_Laugh" ID="{50B8D2C3-4411-4F08-B2C3-1B1FC7196F74}" ShortID="961236704">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_CEO_Laugh_07" ID="{D4409377-9C9F-4C91-8229-044A4FAEB3BA}" ShortID="382362930">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Laugh_07" ID="{FD6E62DA-C985-40E5-9815-9B73F8503684}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Laugh_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="612831925"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Laugh_07" ID="{FD6E62DA-C985-40E5-9815-9B73F8503684}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Laugh_08" ID="{8A154876-71C7-48CA-93E6-2D7CB3DAE058}" ShortID="698945660">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Laugh_08" ID="{EB1AE5D3-6297-4E6D-82C9-81F48E9310EA}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Laugh_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="200295859"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Laugh_08" ID="{EB1AE5D3-6297-4E6D-82C9-81F48E9310EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Laugh_09" ID="{91983134-5C18-459B-9CE0-4A2707292DA5}" ShortID="364235558">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Laugh_09" ID="{12687DFC-2522-44F4-A241-6DA583A74566}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Laugh_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1041063962"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Laugh_09" ID="{12687DFC-2522-44F4-A241-6DA583A74566}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Laugh_10" ID="{CBAFB629-7AD9-426E-8351-6D1E8618B227}" ShortID="995388229">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Laugh_10" ID="{2A1FA9B9-C245-4C41-8AAF-44C016C0C79D}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Laugh_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="31386436"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Laugh_10" ID="{2A1FA9B9-C245-4C41-8AAF-44C016C0C79D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Laugh_12" ID="{A605B0BF-22CB-4CD7-A18A-D79EA82FD43F}" ShortID="224785983">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Laugh_12" ID="{7B992294-AF46-48DB-B9D1-E83DF8E686FD}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Laugh_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1057784258"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Laugh_12" ID="{7B992294-AF46-48DB-B9D1-E83DF8E686FD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VOICES_CEO_Taunt" ID="{9554CE5F-19AE-48B3-845A-4661383E3333}" ShortID="375359779">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_CEO_Taunt_Fight_01" ID="{E388BE9A-8765-47F6-8187-854F0EA1B9EE}" ShortID="930768900">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_01" ID="{5A412560-C524-4597-ACBB-698C04C5A85F}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="61476487"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_01" ID="{5A412560-C524-4597-ACBB-698C04C5A85F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_02" ID="{735260C2-CC06-455D-8001-151A12B55089}" ShortID="721970444">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_02" ID="{3210BEFE-FE59-47D3-AF60-0F60F51E6EA6}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="884131049"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_02" ID="{3210BEFE-FE59-47D3-AF60-0F60F51E6EA6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_03" ID="{7B1EFDDA-87ED-4997-BAC9-0061810E2B6D}" ShortID="964274223">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_03" ID="{55881467-1A6D-46E7-86D6-D13D8E9F1BC6}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="758477491"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_03" ID="{55881467-1A6D-46E7-86D6-D13D8E9F1BC6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_04" ID="{E9EFD4C5-63D8-44A8-AA38-DAEFD9800AC6}" ShortID="426254930">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_04" ID="{87BA8DEC-3DB9-44E9-9A80-111E26C37815}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="463880741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_04" ID="{87BA8DEC-3DB9-44E9-9A80-111E26C37815}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_05" ID="{F20A5861-4D66-418C-BB4F-1630275D50BA}" ShortID="20733651">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_05" ID="{3EDA4927-516E-49AF-AD29-EB2714820DFA}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="519330484"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_05" ID="{3EDA4927-516E-49AF-AD29-EB2714820DFA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_06" ID="{0A222857-6E73-4456-BD52-C7D712F4117B}" ShortID="880215273">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_06" ID="{18CD8DA2-69E8-43FA-87AD-6927277E1498}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="156352680"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_06" ID="{18CD8DA2-69E8-43FA-87AD-6927277E1498}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_07" ID="{DF191916-1402-412D-B612-64AF5A74C458}" ShortID="40697007">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_07" ID="{E2613FAE-A448-48CC-A99E-2E8522DF29EA}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="306108096"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_07" ID="{E2613FAE-A448-48CC-A99E-2E8522DF29EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_08" ID="{910262B3-0A3E-4960-A019-D9CD7AAFD9BD}" ShortID="643286424">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_08" ID="{0B359779-5C81-443D-A4FC-AD1036CC9842}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="297938509"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_08" ID="{0B359779-5C81-443D-A4FC-AD1036CC9842}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_09" ID="{C9D75C9C-A4EA-40C8-B811-F91D84A3A97C}" ShortID="210006710">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_09" ID="{2CA2A210-3B74-4EA1-8D56-060A12DC2F8F}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="166240333"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_09" ID="{2CA2A210-3B74-4EA1-8D56-060A12DC2F8F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_10" ID="{FA04EDEA-6958-4ACF-B82F-5017F6D8AAF6}" ShortID="453590043">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_10" ID="{FEF1AB6F-63A7-427B-93CD-DF56A330BEA9}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="681228212"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_10" ID="{FEF1AB6F-63A7-427B-93CD-DF56A330BEA9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_11" ID="{C322CCB1-7C2C-420E-871A-AD89356AB901}" ShortID="386605282">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_11" ID="{F6E807C5-9D21-4DDB-AB93-441F9DD95622}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="584085952"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_11" ID="{F6E807C5-9D21-4DDB-AB93-441F9DD95622}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_12" ID="{F0308F84-B79A-4933-AAC6-C39D6C7A002E}" ShortID="860891902">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_12" ID="{F0A04FA6-9A4E-490A-BBAC-8B36AF38E115}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="431656752"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_12" ID="{F0A04FA6-9A4E-490A-BBAC-8B36AF38E115}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_13" ID="{C2D488E5-2FDC-4AF2-BC7F-D913C4D3E162}" ShortID="207465471">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_13" ID="{5A0AED5A-BC7A-424F-B0FD-E2FBF1F0779C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="743736730"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_13" ID="{5A0AED5A-BC7A-424F-B0FD-E2FBF1F0779C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_15" ID="{E98D5E18-EB59-4152-ACCE-88582E1028B1}" ShortID="193959712">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_15" ID="{6879290E-5C83-4393-A6CC-3C0AE4A6CAC1}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="818383876"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_15" ID="{6879290E-5C83-4393-A6CC-3C0AE4A6CAC1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_16" ID="{913290C7-7848-4896-BCE8-44DADD9E33B7}" ShortID="418864305">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_16" ID="{C7B044F7-FFE7-4CCA-ADE8-6D8DAE7BE186}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_16.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="132474160"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_16" ID="{C7B044F7-FFE7-4CCA-ADE8-6D8DAE7BE186}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_17" ID="{5CB627CA-47A6-4769-AF57-88786478C1E4}" ShortID="175771084">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_17" ID="{A2939551-4855-40FF-99CF-ED8312725C2C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_17.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="540143329"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_17" ID="{A2939551-4855-40FF-99CF-ED8312725C2C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_18" ID="{2132A76C-A6B8-4D81-82A2-420DF3F2DCBE}" ShortID="195731666">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_18" ID="{FB6437C7-B52B-4A10-8355-D50D6A7BD98E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_18.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="22993549"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_18" ID="{FB6437C7-B52B-4A10-8355-D50D6A7BD98E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_19" ID="{3B4E59D7-C2A0-4C92-B9C7-A09F27B33053}" ShortID="1027774493">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_19" ID="{2A988B6B-B56C-49E3-8AAA-4250A129CFC6}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_19.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="913218416"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_19" ID="{2A988B6B-B56C-49E3-8AAA-4250A129CFC6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_20" ID="{B6B07D8B-4BD4-4219-80FE-CA98AA41B6C9}" ShortID="837199351">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_20" ID="{60496EF3-80BF-4051-9480-488017FD0360}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_20.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="987321575"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_20" ID="{60496EF3-80BF-4051-9480-488017FD0360}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_21" ID="{7C636BC4-039F-4F22-BCF8-862D3EC0213F}" ShortID="683601867">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_21" ID="{D315A3A2-0BB8-4014-ACE2-75E7596DAD0E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_21.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="58009228"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_21" ID="{D315A3A2-0BB8-4014-ACE2-75E7596DAD0E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_22" ID="{84720622-C82C-4E7D-BB36-C796FD7C1A5C}" ShortID="917235904">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_22" ID="{0EA75295-FAF0-403D-86AD-0B90B354AB85}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_22.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="215902841"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_22" ID="{0EA75295-FAF0-403D-86AD-0B90B354AB85}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_23" ID="{86FBE0BF-A51C-4FCB-8530-C124B5EC80A1}" ShortID="973034117">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_23" ID="{035C4373-A94B-4763-8E98-BF80685F4B61}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_23.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="71452330"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_23" ID="{035C4373-A94B-4763-8E98-BF80685F4B61}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_24" ID="{65FA03A8-063C-43B8-BDE5-28351E60A4F4}" ShortID="960640335">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_24" ID="{C12BF88D-7717-4896-90D4-2BEDC57A41E4}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_24.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="733851142"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_24" ID="{C12BF88D-7717-4896-90D4-2BEDC57A41E4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_25" ID="{2A0641CA-EE27-4243-8A87-4459A636FB58}" ShortID="836516325">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_25" ID="{43F16BE5-7465-4F70-B268-60AB0056BB1D}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_25.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="816315854"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_25" ID="{43F16BE5-7465-4F70-B268-60AB0056BB1D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_26" ID="{3B2435E4-F65F-4083-A7BA-333A66B024B6}" ShortID="603065664">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_26" ID="{EECF0656-90C5-4494-8FC0-7BF8844F4114}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_26.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="292728595"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_26" ID="{EECF0656-90C5-4494-8FC0-7BF8844F4114}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_27" ID="{A3DB7642-1F2E-49AD-9874-D979EB125BED}" ShortID="813285948">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_27" ID="{3D4A6F53-86D2-45FE-A4C8-212DD60E0FF0}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_27.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="251610670"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_27" ID="{3D4A6F53-86D2-45FE-A4C8-212DD60E0FF0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_28" ID="{FD3E3BB8-2CB1-42CC-979D-46EE1778EA8E}" ShortID="646315856">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_28" ID="{23B43595-FCC2-440D-9FC9-291245FD3A39}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_28.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="182387702"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_28" ID="{23B43595-FCC2-440D-9FC9-291245FD3A39}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_29" ID="{260DDE54-E6C9-4693-A5A8-47F90FE5C58E}" ShortID="493210525">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_29" ID="{DF3EF35E-2594-4789-9F51-73CCFB10AEA2}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_29.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="879083185"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_29" ID="{DF3EF35E-2594-4789-9F51-73CCFB10AEA2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_30" ID="{D97CC1BA-90E6-4B63-9C31-93BF30786CA7}" ShortID="402278458">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_30" ID="{18332BC2-CDFF-46C5-AE99-823A77A112BC}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_30.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="172895767"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_30" ID="{18332BC2-CDFF-46C5-AE99-823A77A112BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_31" ID="{37C0582A-BC17-46D8-8E39-845B9CD083EE}" ShortID="559081664">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_31" ID="{D0E8820F-0E07-434D-A54E-88FC9BD81727}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_31.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="437584870"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_31" ID="{D0E8820F-0E07-434D-A54E-88FC9BD81727}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_32" ID="{B8D72D65-9204-4CD6-8676-C9507DDF83E8}" ShortID="162932047">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_32" ID="{5917B8F4-49C5-4E7E-9057-A66B8774A73C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_32.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="727854930"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_32" ID="{5917B8F4-49C5-4E7E-9057-A66B8774A73C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_33" ID="{9845993C-9872-41EC-AD2A-AE65345E1314}" ShortID="750634936">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_33" ID="{338AAC19-FF9D-4678-AE4D-0DAB305453D6}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_33.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="282516016"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_33" ID="{338AAC19-FF9D-4678-AE4D-0DAB305453D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_36" ID="{E7EAA3F9-143F-40BD-A944-FF5E875A04B5}" ShortID="339056253">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_36" ID="{74B4C41B-E630-4D2B-B579-D383EA9F486A}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_36.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="377134493"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_36" ID="{74B4C41B-E630-4D2B-B579-D383EA9F486A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_37" ID="{D410EC23-C8F9-4A40-B11E-21953902E064}" ShortID="429861930">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_37" ID="{AAB6A4C5-A9F3-46B8-8329-A425682F1EAD}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_37.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="550541346"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_37" ID="{AAB6A4C5-A9F3-46B8-8329-A425682F1EAD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_38" ID="{0D3A22BA-D026-4D63-A57E-A850D9F77F36}" ShortID="823122364">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_38" ID="{29BD74BF-A476-41B7-BAD1-55ECBC52113C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_38.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="7595696"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_38" ID="{29BD74BF-A476-41B7-BAD1-55ECBC52113C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_39" ID="{E9B00775-5B49-4A30-BFBC-1FB55EC27642}" ShortID="240387906">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_39" ID="{D87FD3A9-1FB2-4F07-8F26-EF4F131C4CA8}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_39.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="149196469"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_39" ID="{D87FD3A9-1FB2-4F07-8F26-EF4F131C4CA8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_40" ID="{BAB294B9-E573-40DE-A54C-ED56AC70BD41}" ShortID="662159286">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_40" ID="{5F5C6A35-47DC-4FFD-A12E-2CBA05056E51}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_40.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="640138482"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_40" ID="{5F5C6A35-47DC-4FFD-A12E-2CBA05056E51}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_41" ID="{57B87B11-C599-4A22-9E48-E8923F5E50BF}" ShortID="786857471">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_41" ID="{D9EE08AE-9342-446B-BF7F-9E8DC485D05E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_41.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="633758149"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_41" ID="{D9EE08AE-9342-446B-BF7F-9E8DC485D05E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_42" ID="{97A76F10-8CE3-4E61-87C1-0BC0FB9B6AE5}" ShortID="558856962">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_42" ID="{E8B3DA04-7F54-4CC8-A2DF-DFE05331C908}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_42.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="607559087"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_42" ID="{E8B3DA04-7F54-4CC8-A2DF-DFE05331C908}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_43" ID="{890D97F9-D79F-4731-AD4A-FAC2229521E8}" ShortID="124011574">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_43" ID="{0FA68690-71A6-4E77-B8A6-093006A874C4}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_43.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="842541018"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_43" ID="{0FA68690-71A6-4E77-B8A6-093006A874C4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Taunt_Fight_44" ID="{5C1E0FBE-384E-4E5A-94AA-317740FEE8A5}" ShortID="119645549">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Taunt_Fight_44" ID="{072B3773-EF92-40C9-9EF4-4787D6FED03E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_CEO_Taunt_Fight_44.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="613709723"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Taunt_Fight_44" ID="{072B3773-EF92-40C9-9EF4-4787D6FED03E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VOICES_Jake_Eating" ID="{0CDE70F0-BB02-40DC-BB7A-F0DCE4D680D6}" ShortID="345530215">
+							<PropertyList>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_Jake_Eating_01" ID="{1830219C-5588-4393-8321-52AE0F8CF6DC}" ShortID="925235212">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_01" ID="{07FD39E7-1C6D-492E-BFC3-4D101E708830}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="890677736"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_01" ID="{07FD39E7-1C6D-492E-BFC3-4D101E708830}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_02" ID="{FB504C2E-ACF1-4127-9FE4-5CF980BBE361}" ShortID="832004338">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_02" ID="{C24DADA9-482C-4943-A8E6-521313A4793B}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="219349855"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_02" ID="{C24DADA9-482C-4943-A8E6-521313A4793B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_03" ID="{F3A7540B-E435-42BC-8C19-503A476C352D}" ShortID="718972127">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_03" ID="{20DE09AE-356E-4053-A956-91142C1D6F16}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="638681270"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_03" ID="{20DE09AE-356E-4053-A956-91142C1D6F16}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_04" ID="{E50F92B7-7A18-4D11-A1CD-A983F9E64BE0}" ShortID="672669391">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_04" ID="{267DEBF0-AEA0-4CA3-8475-4100343DE383}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="148682913"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_04" ID="{267DEBF0-AEA0-4CA3-8475-4100343DE383}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_05" ID="{96D4B2EE-FD40-4494-BF98-E6FAD2AEA239}" ShortID="206900236">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_05" ID="{0F225234-4B9C-48CC-99B6-6075D7CA1906}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="99361022"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_05" ID="{0F225234-4B9C-48CC-99B6-6075D7CA1906}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_06" ID="{D4D83073-1E26-46CB-9929-D02C653AC3FF}" ShortID="300808938">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_06" ID="{CF721097-FBEC-453C-A83A-9FF38002B713}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="373301366"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_06" ID="{CF721097-FBEC-453C-A83A-9FF38002B713}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_07" ID="{5277E3F8-5EE2-44EC-BE61-CD93B919C3EC}" ShortID="761460751">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_07" ID="{0A737936-BAFB-4554-A6EB-DA01E978A05E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="110458374"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_07" ID="{0A737936-BAFB-4554-A6EB-DA01E978A05E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_08" ID="{DE7CD54A-0185-430B-856C-22F11D53F803}" ShortID="157140276">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_08" ID="{7D012283-CE30-4EED-8C1C-AA55C16FDB08}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="464448397"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_08" ID="{7D012283-CE30-4EED-8C1C-AA55C16FDB08}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_09" ID="{364C9F32-8E56-4D61-A35E-6FC12F21CFE4}" ShortID="471128087">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_09" ID="{95A80CFA-7832-4114-9F79-0E375FF3068B}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="384592902"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_09" ID="{95A80CFA-7832-4114-9F79-0E375FF3068B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_10" ID="{37207F73-740C-4869-A94C-AE078B9DC232}" ShortID="929836241">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_10" ID="{E0DA45D1-AA7E-49F5-AA2A-42A466E41ECE}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="868925095"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_10" ID="{E0DA45D1-AA7E-49F5-AA2A-42A466E41ECE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_11" ID="{675035DF-D43E-4471-8B67-378DAADCA375}" ShortID="867592229">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_11" ID="{B99B7CFE-6CD9-4D50-B792-9F52CC505D22}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="783521105"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_11" ID="{B99B7CFE-6CD9-4D50-B792-9F52CC505D22}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_12" ID="{5CF0DC23-729F-4F9C-BEB8-8AAE27E557EE}" ShortID="303394737">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_12" ID="{EE1D3CE2-BB93-43AC-AE74-B1819FD7C689}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="375389764"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_12" ID="{EE1D3CE2-BB93-43AC-AE74-B1819FD7C689}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_13" ID="{854930A1-27C7-4464-B280-2FC572436DA2}" ShortID="330270737">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_13" ID="{4F039BF8-3314-4F2D-A704-99A12EEB2A57}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="91913612"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_13" ID="{4F039BF8-3314-4F2D-A704-99A12EEB2A57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_14" ID="{620CA51D-629A-4501-8C8D-31B410B03766}" ShortID="658170004">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_14" ID="{9B98F474-0F47-40AD-AB1B-5FD59FB8DE94}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="785157203"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_14" ID="{9B98F474-0F47-40AD-AB1B-5FD59FB8DE94}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_15" ID="{645CD0C6-A430-4E6A-97B1-8177A1C64517}" ShortID="18402445">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_15" ID="{D1FBBAF4-E6DA-4203-B79E-8BC603FBE18C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="239754620"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_15" ID="{D1FBBAF4-E6DA-4203-B79E-8BC603FBE18C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Eating_16" ID="{35135B70-9EE8-4BCE-9314-10547FBA39D9}" ShortID="888605151">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Eating_16" ID="{2109613C-2E22-41E7-9B85-43EFB2A4AC44}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Eating_16.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="481423162"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Eating_16" ID="{2109613C-2E22-41E7-9B85-43EFB2A4AC44}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VOICES_Jake_Kick" ID="{B6576876-54C8-496A-ACC7-F6ABE4267FB5}" ShortID="883774065">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="20"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_Jake_Kick_01" ID="{55BD0808-D635-4A87-9F92-11D006B9884D}" ShortID="971801770">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_01" ID="{59852BD8-35EC-4DA8-97B3-82D2302ECA90}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="881026977"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_01" ID="{59852BD8-35EC-4DA8-97B3-82D2302ECA90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_02" ID="{864AD270-EDBF-4595-8015-81E60516A4D8}" ShortID="48109917">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_02" ID="{D3A10C89-A3C6-4892-9971-714B68BE2014}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="71537606"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_02" ID="{D3A10C89-A3C6-4892-9971-714B68BE2014}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_04" ID="{07768078-14A7-4BB8-9DCB-6F458726D354}" ShortID="291732418">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_04" ID="{99AD953B-5889-4B57-9CD7-D6E5EE46DF5D}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="722921165"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_04" ID="{99AD953B-5889-4B57-9CD7-D6E5EE46DF5D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_05" ID="{AFD824B9-174F-4B10-94C8-E4E8EFD6DF54}" ShortID="590799806">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_05" ID="{5AE6DB22-00E4-46C2-B353-9345DB8885B2}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="535135608"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_05" ID="{5AE6DB22-00E4-46C2-B353-9345DB8885B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_11" ID="{D3494DCA-94A2-4736-A4C4-9B4C58218681}" ShortID="778957953">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_11" ID="{3F6B8579-B1FC-4B28-8072-C1BA0688C14E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="516828349"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_11" ID="{3F6B8579-B1FC-4B28-8072-C1BA0688C14E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_12" ID="{D0245226-14E0-448A-8C4D-71A964E74336}" ShortID="565622713">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_12" ID="{4A87A1CD-D2CC-4001-9E79-4249F0EA515A}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56101622"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_12" ID="{4A87A1CD-D2CC-4001-9E79-4249F0EA515A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_13" ID="{8EFF213B-9D02-4624-AEE0-0DC97CE102EF}" ShortID="867491501">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_13" ID="{D27C92AC-8C66-47E3-8B29-96B86639D8BB}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="753384197"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_13" ID="{D27C92AC-8C66-47E3-8B29-96B86639D8BB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_14" ID="{3CFAA997-C57B-4644-9050-A20AA5AD47D8}" ShortID="805695130">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_14" ID="{4ABCF082-606C-4EFF-969B-21525177A59C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="859380585"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_14" ID="{4ABCF082-606C-4EFF-969B-21525177A59C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_15" ID="{877F0F81-C74B-4B9A-8A19-BDA7C1604405}" ShortID="582653610">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_15" ID="{7A28EAF1-8199-431F-BE81-FB1C36AF76BA}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="547908844"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_15" ID="{7A28EAF1-8199-431F-BE81-FB1C36AF76BA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_17" ID="{4A4BF26F-EFD8-4104-B976-C1BE57F8E5DD}" ShortID="794658348">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_17" ID="{3794669B-6A33-4E5E-AF73-97C6F98172D2}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_17.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="70284615"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_17" ID="{3794669B-6A33-4E5E-AF73-97C6F98172D2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_18" ID="{9567652E-3F1A-4084-811E-1E5195E74A84}" ShortID="1067670035">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_18" ID="{3E90BED6-36E9-4026-AC18-B02BE08F5E0A}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_18.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="659728758"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_18" ID="{3E90BED6-36E9-4026-AC18-B02BE08F5E0A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_20" ID="{D0185455-E725-4FAD-9B0E-46996B9D2640}" ShortID="898988558">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_20" ID="{7968029E-0F72-4ED1-AF11-93810D058422}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_20.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="634502712"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_20" ID="{7968029E-0F72-4ED1-AF11-93810D058422}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_23" ID="{3EDE1450-EAB5-4CE5-80BF-9E83AB52C3CA}" ShortID="25208955">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_23" ID="{356D574D-D5E5-4FD9-AA6C-AEA0293E0123}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_23.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="430723629"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_23" ID="{356D574D-D5E5-4FD9-AA6C-AEA0293E0123}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_25" ID="{FFAEF452-246D-4CBC-83D6-7901D8E6F9ED}" ShortID="840564203">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_25" ID="{4AFCE299-64E8-4A45-BBDD-6C34845C1EC0}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_25.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="188027071"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_25" ID="{4AFCE299-64E8-4A45-BBDD-6C34845C1EC0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_26" ID="{5CF87E48-6BA3-4F6D-AAAC-126DF8597BEF}" ShortID="542783840">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_26" ID="{761971F6-6EE4-47F8-9BC4-7392871271B9}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_26.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="163228167"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_26" ID="{761971F6-6EE4-47F8-9BC4-7392871271B9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_27" ID="{3967C4DC-7D00-4EE6-A1BD-1902B6FA580D}" ShortID="340688520">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_27" ID="{2A6A9D3C-BE5C-4E11-A785-3D48B5A6C6FA}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_27.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="308261084"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_27" ID="{2A6A9D3C-BE5C-4E11-A785-3D48B5A6C6FA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_28" ID="{EA63A2E6-65D4-4166-B8E8-929452A8BBA7}" ShortID="441677935">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_28" ID="{22EEF76A-11AB-4919-BA12-124A536C7E3E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_28.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="948278384"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_28" ID="{22EEF76A-11AB-4919-BA12-124A536C7E3E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_29" ID="{9178D832-DA94-410E-A7A0-E2906C6C7BED}" ShortID="125630746">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_29" ID="{FB33D6B8-B76B-43FD-B12F-478E9E730FA2}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_29.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1035239904"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_29" ID="{FB33D6B8-B76B-43FD-B12F-478E9E730FA2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_30" ID="{1529C094-6C33-4212-A9EA-A3790B020EBB}" ShortID="854060688">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_30" ID="{44EC8739-3080-481E-AAFA-CB49BA806A9B}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_30.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="811175180"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_30" ID="{44EC8739-3080-481E-AAFA-CB49BA806A9B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_31" ID="{8058ABF9-4569-4AB2-9021-857FB8FDC0AB}" ShortID="345948001">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_31" ID="{55A8C88B-03A9-47F6-92F9-4930A0BDD049}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_31.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="589874916"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_31" ID="{55A8C88B-03A9-47F6-92F9-4930A0BDD049}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_32" ID="{DC9618FA-CE63-4A3E-A13E-B5A07D07F314}" ShortID="661988937">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_32" ID="{7E3CF23C-AC15-4BC1-A8DE-634F4070DDCD}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_32.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="871778014"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_32" ID="{7E3CF23C-AC15-4BC1-A8DE-634F4070DDCD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Kick_33" ID="{16C8EB1A-7CF2-44D5-BAD2-1D61191BD376}" ShortID="833669916">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Kick_33" ID="{A26189DD-8A76-48FD-8F75-57862716B1E3}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Kick_33.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="962367029"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Kick_33" ID="{A26189DD-8A76-48FD-8F75-57862716B1E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VOICES_Jake_Take_Damage" ID="{20B60CA1-7D7F-455B-9A79-DF8DE3EEF5B9}" ShortID="841298990">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_Jake_TakeDamage_01" ID="{0241EF45-24FD-4A34-AC62-81C0CD2E031D}" ShortID="293022745">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_01" ID="{C05A3548-406D-41A4-9A63-145A5B2206EA}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="674863895"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_01" ID="{C05A3548-406D-41A4-9A63-145A5B2206EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_02" ID="{4269132C-2282-434F-BF2B-151A7E218B6B}" ShortID="1054321758">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_02" ID="{770396C7-3A4B-490A-BB58-568AF2F794CA}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="117560217"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_02" ID="{770396C7-3A4B-490A-BB58-568AF2F794CA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_03" ID="{29452F86-F06A-4FA3-9B3B-8C76E1C7074C}" ShortID="120722064">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_03" ID="{84B6ABED-2569-4D2D-BF24-40F8F7463781}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="179651305"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_03" ID="{84B6ABED-2569-4D2D-BF24-40F8F7463781}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_04" ID="{38A529EB-1E77-4E08-8DF7-C192C19352DB}" ShortID="388749876">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_04" ID="{13220090-8ACB-45EA-9AE3-A0E36B2A4034}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="424993557"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_04" ID="{13220090-8ACB-45EA-9AE3-A0E36B2A4034}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_05" ID="{00848B6F-297A-4B5A-BA94-C62FB59405F8}" ShortID="651787280">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_05" ID="{02ECE053-74CA-4A70-8B66-D4BEC526E003}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="828640467"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_05" ID="{02ECE053-74CA-4A70-8B66-D4BEC526E003}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_06" ID="{B7CD7938-4EE9-45E1-A965-4EE06E8DCADB}" ShortID="828774197">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_06" ID="{AACD90E4-AD0B-4D23-8A9C-09C6C90956B6}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="75216355"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_06" ID="{AACD90E4-AD0B-4D23-8A9C-09C6C90956B6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_07" ID="{7964FA6D-AED7-467D-9876-81FFEC6D58AC}" ShortID="384850486">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_07" ID="{30409CB7-1EDC-401E-8F70-B91DE9EDC2C7}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="227193433"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_07" ID="{30409CB7-1EDC-401E-8F70-B91DE9EDC2C7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_08" ID="{A6B86A7B-8205-4AA1-BEE3-5C7B7FAD8D32}" ShortID="424128275">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_08" ID="{FE7DA5B2-30AC-4F8F-A2AF-938E9B856A9D}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="291514026"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_08" ID="{FE7DA5B2-30AC-4F8F-A2AF-938E9B856A9D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_09" ID="{8E784F65-0E3D-4941-932F-F8A1F7F0287A}" ShortID="173082103">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_09" ID="{EBE87057-4167-4542-8FDF-9F2A7D9FB7F4}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="68978937"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_09" ID="{EBE87057-4167-4542-8FDF-9F2A7D9FB7F4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_10" ID="{BB98C707-9831-4BE2-B866-DC0F31774A1D}" ShortID="519850632">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_10" ID="{59D1E13C-A686-41BD-BF6C-1D08A4016016}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="279026765"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_10" ID="{59D1E13C-A686-41BD-BF6C-1D08A4016016}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_11" ID="{C5E86AB8-9CAA-49ED-BE4B-2C527946EEFF}" ShortID="742269079">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_11" ID="{E9606A5B-18DD-4A1B-9607-1A3AC6B6B77F}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="770890374"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_11" ID="{E9606A5B-18DD-4A1B-9607-1A3AC6B6B77F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_12" ID="{71D5B4A5-CC29-4C58-9509-BDAC4E93E444}" ShortID="689577298">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_12" ID="{BC7AE86F-2433-4863-A01F-473BC9624066}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="954211370"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_12" ID="{BC7AE86F-2433-4863-A01F-473BC9624066}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_13" ID="{3F93227D-06AF-4388-8503-58BCD9A64080}" ShortID="422722616">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_13" ID="{B65CFAD1-09BE-46D5-B6D6-F40E347888EF}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="131704976"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_13" ID="{B65CFAD1-09BE-46D5-B6D6-F40E347888EF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_14" ID="{EE9DEF0C-527F-4807-8C10-911F4606CEC3}" ShortID="502289764">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_14" ID="{B97B9A12-28A7-4444-BE76-82ACE91B6CED}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="198110322"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_14" ID="{B97B9A12-28A7-4444-BE76-82ACE91B6CED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_15" ID="{24010B38-0633-4EEB-A473-96B5ECFF1F19}" ShortID="597187026">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_15" ID="{E95A14D6-6CA7-4E30-9C1C-E75BAEC205E7}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="174077784"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_15" ID="{E95A14D6-6CA7-4E30-9C1C-E75BAEC205E7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_16" ID="{A6A874ED-EC81-4E49-A44E-4862FB5B94FE}" ShortID="654145673">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_16" ID="{5D66010A-1DAC-491C-9E29-4D4255262273}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_16.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="184807094"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_16" ID="{5D66010A-1DAC-491C-9E29-4D4255262273}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_17" ID="{3BE3DAF2-C010-4597-972B-06806636EA1C}" ShortID="675487706">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_17" ID="{C7BAAD56-FD2E-4896-8AD0-BEED7B7C279B}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_17.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="239726444"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_17" ID="{C7BAAD56-FD2E-4896-8AD0-BEED7B7C279B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_18" ID="{26BDD9D7-EAE8-48AE-AA72-5ECC7BEE6C28}" ShortID="658759538">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_18" ID="{B5761661-6A08-4F97-9A10-A5DC48A4C741}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_18.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="612605618"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_18" ID="{B5761661-6A08-4F97-9A10-A5DC48A4C741}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_19" ID="{3EBA3B42-C0C1-46AC-BAD7-3B5A11F0B158}" ShortID="904438395">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_19" ID="{D4027AF5-0941-4991-BC3A-CD13D0C37F30}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_19.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="607757921"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_19" ID="{D4027AF5-0941-4991-BC3A-CD13D0C37F30}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_20" ID="{5DD8D41B-AA19-4608-AA53-B08F5DFB330A}" ShortID="475835560">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_20" ID="{419ECF33-62DE-462B-A075-D750475013A7}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_20.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23838431"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_20" ID="{419ECF33-62DE-462B-A075-D750475013A7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_21" ID="{B240C2F1-2D83-4807-955F-1C05F831280A}" ShortID="748706226">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_21" ID="{B4D5818C-E02A-4F79-AEB7-52107FF1CA3C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_21.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="369197725"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_21" ID="{B4D5818C-E02A-4F79-AEB7-52107FF1CA3C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_22" ID="{9FC80DCB-D570-4C1E-BBA9-10AA0F8DF0E7}" ShortID="149724752">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_22" ID="{9DB411D5-7915-4BB9-9330-9DF268804FA2}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_22.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="139267202"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_22" ID="{9DB411D5-7915-4BB9-9330-9DF268804FA2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_TakeDamage_23" ID="{2D3DEEC7-BA0C-43E5-AFB3-5C8CFBDECA4A}" ShortID="703179736">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_TakeDamage_23" ID="{FD20C00D-F731-4D6E-9DEC-50658809404C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_TakeDamage_23.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="472266478"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_TakeDamage_23" ID="{FD20C00D-F731-4D6E-9DEC-50658809404C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_07" ID="{6FFC4D54-EA55-46B7-B66B-D3B1A3680362}" ShortID="45336562">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_07" ID="{41E5B399-6AE9-4D80-BCD6-149ED42220C5}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="402555268"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_07" ID="{41E5B399-6AE9-4D80-BCD6-149ED42220C5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_08" ID="{5AA3A307-2665-4151-A9B7-A9D0771DC850}" ShortID="22164396">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_08" ID="{E8512702-DCDF-42A6-9AD5-D5A48E0E3C8B}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="767593383"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_08" ID="{E8512702-DCDF-42A6-9AD5-D5A48E0E3C8B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_09" ID="{15626744-5091-41F5-A5A8-BC057F29F90A}" ShortID="615948923">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_09" ID="{C640755E-79C2-4D03-AB0F-E70A2EE84BD3}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="660037922"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_09" ID="{C640755E-79C2-4D03-AB0F-E70A2EE84BD3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VOICES_Jake_Combat" ID="{C4CA8051-3724-4F0A-9727-2403899970BB}" ShortID="460348254">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="13"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_Jake_Combat_01" ID="{3354FF00-4B88-48F1-966E-332C8F8EF0EA}" ShortID="259096661">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_01" ID="{B8C8205B-07F5-4F68-84DF-7D74EC1654D5}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="61687523"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_01" ID="{B8C8205B-07F5-4F68-84DF-7D74EC1654D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_02" ID="{D1449646-0D78-406C-B9CE-B42BA6B3D435}" ShortID="225481050">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_02" ID="{A0BB96A9-2E98-4E1F-AE6A-B25C317EB0B2}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="442363141"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_02" ID="{A0BB96A9-2E98-4E1F-AE6A-B25C317EB0B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_03" ID="{C2604CAC-FD78-41FB-BD1A-0CCF1D5B5719}" ShortID="136158324">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_03" ID="{13BF33DA-4C9E-44F9-A84E-7BFC7806B22E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="33778773"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_03" ID="{13BF33DA-4C9E-44F9-A84E-7BFC7806B22E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_04" ID="{7469DDC5-C608-4CDE-81D8-8685C72C6B76}" ShortID="164351736">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_04" ID="{EEFA6779-2F0C-40FB-B021-85EAC7860475}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="279961866"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_04" ID="{EEFA6779-2F0C-40FB-B021-85EAC7860475}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_05" ID="{C92C7474-148D-4B86-A73C-0D6C8C2F819B}" ShortID="62247563">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_05" ID="{6C20F139-C183-47E1-B99E-C81931677D5F}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="160347885"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_05" ID="{6C20F139-C183-47E1-B99E-C81931677D5F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_06" ID="{629998BF-DCEF-415F-91CA-2C8145C18C12}" ShortID="680986000">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_06" ID="{54249C3B-B057-46F9-BCE3-9F6434AE09AF}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1020512643"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_06" ID="{54249C3B-B057-46F9-BCE3-9F6434AE09AF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_10" ID="{DDED14C1-179A-4235-AE8B-284FCEFB40AA}" ShortID="136624724">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_10" ID="{5831E837-9C61-4106-B8C0-8AAC4184615D}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="417871065"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_10" ID="{5831E837-9C61-4106-B8C0-8AAC4184615D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_11" ID="{F157A394-699E-4321-AA4E-A1C28708730D}" ShortID="767696564">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_11" ID="{7EC9085E-D730-4953-B8FC-A298E2107BD7}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="500083664"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_11" ID="{7EC9085E-D730-4953-B8FC-A298E2107BD7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_12" ID="{C0DE33E5-2DBA-4809-92BD-18E9C9F0CB68}" ShortID="410947737">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_12" ID="{A33DB972-DCCD-41BE-8DE9-737D7D41F553}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="575941717"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_12" ID="{A33DB972-DCCD-41BE-8DE9-737D7D41F553}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_13" ID="{2DF7BC31-A3DF-4430-AE2B-756EA80C1B21}" ShortID="220980550">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_13" ID="{2D40AAE6-9229-4EFD-830A-0609E3221350}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="286642904"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_13" ID="{2D40AAE6-9229-4EFD-830A-0609E3221350}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_14" ID="{DE243440-7A00-4E2F-B4CB-B118CB9DEB3B}" ShortID="618354615">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_14" ID="{9CA1C30A-4B6C-4250-8B9F-99AE184C41FD}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="605545406"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_14" ID="{9CA1C30A-4B6C-4250-8B9F-99AE184C41FD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_15" ID="{6B492E76-CEDE-41C1-8B88-7786F66F43FF}" ShortID="153179122">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_15" ID="{8102D7E1-75FB-48CE-849E-00DD09059A13}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="507113263"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_15" ID="{8102D7E1-75FB-48CE-849E-00DD09059A13}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Combat_16" ID="{E3E7298A-499C-4BD8-A302-73A10A413402}" ShortID="1305163">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Combat_16" ID="{853E9DF0-7CFB-49D0-8E58-D61AC0B4E87C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\Reaction\VOC_Jake_Combat_16.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="829377214"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Combat_16" ID="{853E9DF0-7CFB-49D0-8E58-D61AC0B4E87C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<WorkUnit Name="VOICES_LVL_BONUS_SCORE" ID="{8C4D8DC8-A9D4-4D35-B3A3-1E7890FF5007}" PersistMode="Reference"/>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{4002477B-E7C4-47CC-9320-2E42E45B393D}" ShortID="642709874">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_Music_SideChain" ID="{48035C4E-15B2-4C86-A81C-7505A68840D5}" WorkUnitID="{4A76EC59-EA3D-4446-9363-3DD63FE2886C}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{BF1EDA33-7977-4C3B-B6F7-B0FD164A7521}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>-0.02644</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>-43.25391</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{28B359AA-D0DB-4A6F-B008-28874F86EDB8}" SchemaVersion="123" RootDocumentID="{D5404735-E68D-44AA-9086-19B05F4525F9}" ParentDocumentID="{D5404735-E68D-44AA-9086-19B05F4525F9}">
+	<AudioObjects>
+		<WorkUnit Name="AMB_LVL_LABORATORY" ID="{28B359AA-D0DB-4A6F-B008-28874F86EDB8}" OwnerID="{E106E4BB-1549-410E-9C4A-7D479C0A6334}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_LVL_LABORATORY" ID="{BC265139-8A88-4A4F-880F-A46AB649E140}" ShortID="117702097">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AB_AMB_LABORATORY" ID="{0D3372CF-7431-485E-A9FC-65076A39F320}" WorkUnitID="{D0811865-DBB9-4CA7-86EE-98046AB40B58}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="AM_BEDS" ID="{24C8B3E5-3348-49B0-84EF-0ACE8103D0C5}" ShortID="11260687">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_10m" ID="{DC8F0EC5-FE88-4C0F-A086-E76674593674}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="AMB_Beds_Labo_Can_LP" ID="{C0FDBE0C-50C3-4528-AD10-F563CFBFC9CF}" ShortID="249127072">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_Beds_Labo_Can_LP" ID="{5F4D8AE0-82AD-48AE-9D4E-F6797AB4B588}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\BEDS\AMB_Beds_Labo_Can_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="859838552"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_Beds_Labo_Can_LP" ID="{5F4D8AE0-82AD-48AE-9D4E-F6797AB4B588}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AMB_Beds_Labo_Chemistry_LP" ID="{CA9758AF-A936-4CF0-B49B-F1CB9C3AD86A}" ShortID="848032981">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_Beds_Labo_Chemistry_LP" ID="{C53EAF27-1545-4795-95FD-DBF1A251EADD}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\BEDS\AMB_Beds_Labo_Chemistry_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="235541462"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_Beds_Labo_Chemistry_LP" ID="{C53EAF27-1545-4795-95FD-DBF1A251EADD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AMB_Beds_Labo_Server_LP" ID="{8B9025E6-A244-4CEB-9E2F-24A678086A08}" ShortID="827512997">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_Beds_Labo_Server_LP" ID="{681EDF7D-60EC-48D0-8F81-EFDC01CA45C9}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\BEDS\AMB_Beds_Labo_Server_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="204442319"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_Beds_Labo_Server_LP" ID="{681EDF7D-60EC-48D0-8F81-EFDC01CA45C9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AMB_Beds_Labo_TV_LP" ID="{8C1F78B3-8C80-4A72-A2DC-F8721D9060A4}" ShortID="249130649">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_Beds_Labo_TV_LP" ID="{A011288B-9AED-4626-AE24-5E9A275BCB21}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\BEDS\AMB_Beds_Labo_TV_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="719851171"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_Beds_Labo_TV_LP" ID="{A011288B-9AED-4626-AE24-5E9A275BCB21}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="AM_SP" ID="{0D9C1020-DCF8-416B-A798-1144DFE58909}" ShortID="660484783">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_15m" ID="{281C7EBD-0F06-438E-ADCE-99BDB61AE6BF}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="AMB_SP_Servo_LP" ID="{5B6B6CAB-3D4E-4C14-8077-7D8B0CEFAF1B}" ShortID="539905052">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_15m" ID="{281C7EBD-0F06-438E-ADCE-99BDB61AE6BF}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_SP_Servo_LP" ID="{2F3F5855-778C-44A3-B9EC-F2F458A58B91}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\SOUNDPOINTS\AMB_SP_Servo_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="885152548"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_SP_Servo_LP" ID="{2F3F5855-778C-44A3-B9EC-F2F458A58B91}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AMB_SP_BigScreenUi_LP" ID="{E133457A-21DB-4D8B-AD59-8074F45755A0}" ShortID="695566818">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_5m" ID="{7E17A20E-7731-427C-9583-F2AA99A4B34E}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_SP_BigScreenUi_LP" ID="{C4B7949D-340F-4572-AB4A-99953B74A21F}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\SOUNDPOINTS\AMB_SP_BigScreenUi_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="421995760"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_SP_BigScreenUi_LP" ID="{C4B7949D-340F-4572-AB4A-99953B74A21F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}" SchemaVersion="123" RootDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" ParentDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}">
 	<AudioObjects>
-		<WorkUnit Name="WU_TURRET" ID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}" OwnerID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" PersistMode="Nested">
+		<WorkUnit Name="WU_TURRET" ID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}" OwnerID="{E84919CA-0755-495B-B387-012B93C222C2}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="AM_TURRET" ID="{A5A38560-BEE5-4A9E-86B6-15D5118873EE}" ShortID="923107729">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -15,11 +29,18 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+							<ObjectRef Name="AB_ENEMIES_01" ID="{96FA30C6-D9A0-4517-AF79-368F6E7D32CD}" WorkUnitID="{FA4E556E-03CC-4D15-967D-9EC8AFAF9369}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<ActorMixer Name="AM_TURRET_Voice" ID="{AB045F63-FC36-4DCA-A616-FF18ECFF7731}" ShortID="319196901">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
@@ -526,7 +547,10 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="RC_TURRET_Appear" ID="{B488281A-1828-4B5B-BB4F-1FD50F5D859B}" ShortID="264175807">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-6</Value>
@@ -534,6 +558,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 								</Reference>
@@ -612,7 +639,10 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="RC_TURRET_Disappear" ID="{3958086D-B3DC-4407-9BE3-B85F647071C3}" ShortID="775753496">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-6</Value>
@@ -620,6 +650,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_10m" ID="{DC8F0EC5-FE88-4C0F-A086-E76674593674}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 								</Reference>
@@ -697,6 +730,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="RC_TURRET_Shoot" ID="{92A0E538-7497-4FF6-B906-130941AEF970}" ShortID="720768026">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
@@ -776,10 +816,21 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="RC_TURRET_Charge" ID="{7DE3F94D-B517-4B62-8987-4AFB746AADA3}" ShortID="640007579">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_10m_NoSpread" ID="{E6B2E95C-2A71-4816-A254-0C8CC64A10C8}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 								</Reference>
@@ -799,15 +850,32 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="MC_Robot_Charge_01" ID="{A8E3D428-F164-48A0-8FE2-77420700E9DC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.2"/>
+												<Property Name="FadeInShape" Type="int16" Value="9"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>ENNEMIES\TURRET\MC_Robot_Charge_01.wav</AudioFile>
 											<MediaIDList>
 												<MediaID ID="843637883"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="SFX_Robot_Charge_01" ID="{3B559F6D-EF55-4125-BBBA-8B05EDF90403}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.2"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Charge_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="785713535"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="MC_Robot_Charge_01" ID="{A8E3D428-F164-48A0-8FE2-77420700E9DC}" Platform="Linked"/>
+										<ActiveSource Name="SFX_Robot_Charge_01" ID="{3B559F6D-EF55-4125-BBBA-8B05EDF90403}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_Robot_Charge_02" ID="{3B5958FC-91F5-48AE-B247-4E481157FBA0}" ShortID="105364008">
@@ -821,15 +889,33 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="MC_Robot_Charge_02" ID="{4FEC556A-A665-45B5-BFD8-3D5F16A17884}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.2"/>
+												<Property Name="FadeInShape" Type="int16" Value="9"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>ENNEMIES\TURRET\MC_Robot_Charge_02.wav</AudioFile>
 											<MediaIDList>
 												<MediaID ID="260748206"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="SFX_Robot_Charge_02" ID="{A3FA54BF-DD5E-4E45-80A2-4F2CAAF34CC1}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.2"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Charge_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="46689940"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="MC_Robot_Charge_02" ID="{4FEC556A-A665-45B5-BFD8-3D5F16A17884}" Platform="Linked"/>
+										<ActiveSource Name="SFX_Robot_Charge_02" ID="{A3FA54BF-DD5E-4E45-80A2-4F2CAAF34CC1}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_Robot_Charge_03" ID="{8257E1A1-163C-4000-8E11-DAC593905DA9}" ShortID="49257462">
@@ -843,15 +929,33 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="MC_Robot_Charge_03" ID="{74E08C7F-3113-4A4D-BC86-C39F40D15A01}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.2"/>
+												<Property Name="FadeInShape" Type="int16" Value="9"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>ENNEMIES\TURRET\MC_Robot_Charge_03.wav</AudioFile>
 											<MediaIDList>
 												<MediaID ID="892751571"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="SFX_Robot_Charge_03" ID="{7634A6EF-C556-443B-A71E-F682B82CA15A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.2"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\TURRET\SFX_Robot_Charge_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="408532320"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="MC_Robot_Charge_03" ID="{74E08C7F-3113-4A4D-BC86-C39F40D15A01}" Platform="Linked"/>
+										<ActiveSource Name="SFX_Robot_Charge_03" ID="{7634A6EF-C556-443B-A71E-F682B82CA15A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

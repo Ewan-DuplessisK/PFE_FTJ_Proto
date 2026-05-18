@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8C4D8DC8-A9D4-4D35-B3A3-1E7890FF5007}" SchemaVersion="123" RootDocumentID="{B7D81390-F29E-47DE-874A-A1BC906853B9}" ParentDocumentID="{B7D81390-F29E-47DE-874A-A1BC906853B9}">
+	<AudioObjects>
+		<WorkUnit Name="VOICES_LVL_BONUS_SCORE" ID="{8C4D8DC8-A9D4-4D35-B3A3-1E7890FF5007}" OwnerID="{2F99EA9D-FEE5-4FD7-BFE2-0AFDCF7EFC19}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_Voices_Bonus_Score" ID="{3BFA7854-6B10-451D-B353-675BF2F747A3}" ShortID="801038043">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="VOC_Announcer_Bonus_Score_01" ID="{C09F47BE-9A2A-44F1-8AD9-C5AEEBB10917}" ShortID="237978924">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Bonus_Score_01" ID="{F0F1A454-04D7-44F4-A608-E9E832ED0351}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Bonus_Score_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="193646756"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Bonus_Score_01" ID="{F0F1A454-04D7-44F4-A608-E9E832ED0351}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Bonus_Score_02" ID="{FD41EE79-F977-4882-A8CC-4E6C6769FEED}" ShortID="189503667">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Bonus_Score_02" ID="{204324E0-7BD1-4797-884F-082D82AE2979}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Bonus_Score_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="329405683"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Bonus_Score_02" ID="{204324E0-7BD1-4797-884F-082D82AE2979}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Bonus_Score_03" ID="{633DDEBA-D21E-4F87-AB30-21B53EAB475A}" ShortID="644044119">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Bonus_Score_03" ID="{18841C90-A5D1-4FF5-928F-7CD78A020E99}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Bonus_Score_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="894477837"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Bonus_Score_03" ID="{18841C90-A5D1-4FF5-928F-7CD78A020E99}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Bonus_Score_04" ID="{44E25D24-AD6A-4F19-9A1C-25E49D9E2A53}" ShortID="659337160">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Bonus_Score_04" ID="{39065045-FF0D-4676-9215-2AC46C8F141A}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Bonus_Score_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="373535282"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Bonus_Score_04" ID="{39065045-FF0D-4676-9215-2AC46C8F141A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Bonus_Score_05" ID="{BFDDE09F-8BCC-4E8F-ACFF-0C5956824446}" ShortID="610878916">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Bonus_Score_05" ID="{76D2EAC3-BCC1-4940-92E1-6C3179741624}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Bonus_Score_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="752587782"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Bonus_Score_05" ID="{76D2EAC3-BCC1-4940-92E1-6C3179741624}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Multiplier_Score_01" ID="{956692EF-1DBA-401F-8818-4B8F4DE98017}" ShortID="314025205">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Multiplier_Score_01" ID="{47A3B339-AAF4-45C4-9677-8E0BB2F62E13}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Multiplier_Score_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1060442392"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Multiplier_Score_01" ID="{47A3B339-AAF4-45C4-9677-8E0BB2F62E13}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Multiplier_Score_02" ID="{00F21C90-3383-4C4F-BFD8-8A8EA1E53203}" ShortID="546326860">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Multiplier_Score_02" ID="{F079BC62-DA26-46EE-A1AF-66EFAEA6BDC1}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Multiplier_Score_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="849825148"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Multiplier_Score_02" ID="{F079BC62-DA26-46EE-A1AF-66EFAEA6BDC1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Multiplier_Score_03" ID="{22FE7844-966D-4AE7-8065-918AB8580AE6}" ShortID="384069376">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Multiplier_Score_03" ID="{C7E06C9A-62D4-4776-BEFF-10B05DCEB46A}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Multiplier_Score_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1044909127"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Multiplier_Score_03" ID="{C7E06C9A-62D4-4776-BEFF-10B05DCEB46A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Multiplier_Score_04" ID="{5F73F024-CE76-41ED-9E3D-4467832BEAA8}" ShortID="26838898">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Multiplier_Score_04" ID="{D4193C18-BECF-4D68-BFB3-1D3F4FAD22AC}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Multiplier_Score_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="237104830"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Multiplier_Score_04" ID="{D4193C18-BECF-4D68-BFB3-1D3F4FAD22AC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Multiplier_Score_05" ID="{A49CC21C-5108-4C80-B702-762D9306E8AF}" ShortID="1057843626">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Multiplier_Score_05" ID="{3B183FDB-BC01-42B8-B1EB-9370395EC5F2}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Multiplier_Score_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1029252191"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Multiplier_Score_05" ID="{3B183FDB-BC01-42B8-B1EB-9370395EC5F2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Multiplier_Score_06" ID="{209CADD8-389E-4BD0-BCBD-3B1571E3924C}" ShortID="770224018">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Multiplier_Score_06" ID="{7379683B-C773-4EFB-8819-9F969CFB14F6}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Multiplier_Score_06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1047589878"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Multiplier_Score_06" ID="{7379683B-C773-4EFB-8819-9F969CFB14F6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Multiplier_Score_07" ID="{C14A008A-E008-4E88-871C-43DE5FF6828F}" ShortID="463605419">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Multiplier_Score_07" ID="{DCD9D621-0449-4787-BE69-B2066FB1078E}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Multiplier_Score_07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="610506887"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Multiplier_Score_07" ID="{DCD9D621-0449-4787-BE69-B2066FB1078E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Announcer_Multiplier_Score_08" ID="{061AE934-1950-4947-9F89-667781498BDB}" ShortID="1010063533">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Announcer_Multiplier_Score_08" ID="{041D23F6-A71E-4335-BBC6-0A391860F8E2}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\BonusScore\VOC_Announcer_Multiplier_Score_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="735358259"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Announcer_Multiplier_Score_08" ID="{041D23F6-A71E-4335-BBC6-0A391860F8E2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5A48A10F-6843-4998-B20F-4B1DF08D5A65}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_POOP" ID="{5A48A10F-6843-4998-B20F-4B1DF08D5A65}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Poop_Open" ID="{9EE4C360-6494-4EC1-997E-6DF6D31E5D93}">
+					<ChildrenList>
+						<Action Name="" ID="{3A4B99D7-A87F-4289-8274-55758D9F7EB3}" ShortID="737338508">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_PoopOpen" ID="{591A197C-659E-40AC-81EB-9DBEC0A0B297}" WorkUnitID="{93DA7771-801B-4BAC-A0A9-B97125908F5E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

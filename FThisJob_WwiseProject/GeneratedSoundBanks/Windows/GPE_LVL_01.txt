@@ -1,0 +1,67 @@
+Event	ID	Name			Wwise Object Path	Notes
+	276231153	Extinguisher_Steam			\Default Work Unit\GPE\GPE_LVL_01\Extinguisher_Steam	
+	323939019	Trolley_Wood_Push			\Default Work Unit\GPE\GPE_LVL_01\Trolley_Wood_Push	
+	781447242	Extinguisher_ImpactExplosion			\Default Work Unit\GPE\GPE_LVL_01\Extinguisher_ImpactExplosion	
+	1397545049	Extinguisher_ImpactFloor			\Default Work Unit\GPE\GPE_LVL_01\Extinguisher_ImpactFloor	
+	1529599477	Extinguisher_Grab			\Default Work Unit\GPE\GPE_LVL_01\Extinguisher_Grab	
+	2493400436	Trolley_Plastic_Push			\Default Work Unit\GPE\GPE_LVL_01\Trolley_Plastic_Push	
+	2800942775	Trolley_Metal_Push			\Default Work Unit\GPE\GPE_LVL_01\Trolley_Metal_Push	
+	3446414162	Extinguisher_Launch			\Default Work Unit\GPE\GPE_LVL_01\Extinguisher_Launch	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+	4144970303	RTPC_Extinguisher_Volume			\GPE\RTPC_Extinguisher_Volume	
+
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	811282509	MD_Extinguisher			\Default Work Unit\GPE\MD_Extinguisher	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1485142487	AB_GPE			\Default Work Unit\Master Audio Bus\GPE\AB_GPE	
+	3565491922	AB_GPE_LVL_01			\Default Work Unit\Master Audio Bus\GPE\AB_GPE\AB_GPE_LVL_01	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	155149420	GPE_ExtinguisherSteam_LP	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\9A\{9AA93CFB-63F7-A6E2-FBB4-B97B41AF29DD}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\GPE_ExtinguisherSteam_LP		338193
+	168352679	GPE_Estinguisher_Launch_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\11\{11457B4F-A61F-7A3B-C9EC-EC3A0EC8CF65}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_Launch\GPE_Estinguisher_Launch_01		10592
+	185949229	SFX_Trolley_Wood_Push_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\67\{6738A00F-AF0E-BC7A-BF5C-3A248EE72164}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Wood_Push\SFX_Trolley_Wood_Push_01		10129
+	217541128	SFX_Trolley_Plastic_Push_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\6A\{6AC3F8BF-E4C2-55E4-1AE8-C2B97255FB2D}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Plastic_Push\SFX_Trolley_Plastic_Push_01		12491
+	264649836	SFX_Trolley_Metal_Push_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\E6\{E6CFCBF7-7DEB-C200-EEC8-CB65DBC09E22}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Metal_Push\SFX_Trolley_Metal_Push_04		8994
+	287751928	SFX_Trolley_Metal_Push_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\9B\{9BB80EDC-70E6-45D1-A957-43BF0D29796B}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Metal_Push\SFX_Trolley_Metal_Push_01		9694
+	379294725	SFX_Trolley_Plastic_Push_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\DD\{DDFEB59B-2F8B-086C-CAEA-AC5D96C1B54C}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Plastic_Push\SFX_Trolley_Plastic_Push_02		10069
+	388496544	SFX_Trolley_Plastic_Push_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\C4\{C4BCEC71-D185-E6F4-78EA-3327D274D922}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Plastic_Push\SFX_Trolley_Plastic_Push_03		11993
+	461939361	GPE_Extinguisher_Grab_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\02\{021727E8-ACED-7CD1-1FCC-2B270E3A48BF}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactGrab\GPE_Extinguisher_Grab_02		10174
+	462574172	SFX_Trolley_Wood_Push_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B4\{B435AA61-5640-8FDD-8D9D-D4CEAD25E078}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Wood_Push\SFX_Trolley_Wood_Push_03		11228
+	536603680	GPE_Extinguisher_Grab_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\CB\{CB9B3FB5-284B-1EE4-13FA-E8D71CC28837}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactGrab\GPE_Extinguisher_Grab_03		9581
+	646540880	SFX_Trolley_Wood_Push_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\2C\{2C0B559F-8C0A-DF2C-B7B4-E0B27D767C09}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Wood_Push\SFX_Trolley_Wood_Push_02		10199
+	685031485	GPE_Extinguisher_ImpactFloor_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\90\{9089E453-C278-EC33-7073-65DE13B20833}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactFloor\GPE_Extinguisher_ImpactFloor_02		30850
+	723370423	GPE_Estinguisher_Launch_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\D2\{D2060ED6-6E49-E1C9-7EA4-9B22A1E2EB70}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_Launch\GPE_Estinguisher_Launch_02		8383
+	735447114	GPE_Extinguisher_ImpactFloor_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\C9\{C9A45151-C7A3-CD5E-E18A-BCDC37DC0A5C}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactFloor\GPE_Extinguisher_ImpactFloor_03		32238
+	735477568	SFX_Trolley_Metal_Push_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\91\{915CFA6D-FB19-536A-0836-47DE76FD9A69}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Metal_Push\SFX_Trolley_Metal_Push_03		9835
+	752327437	SFX_Trolley_Plastic_Push_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\03\{037F59DC-0475-C6AE-C3F0-B6639E0A7888}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Plastic_Push\SFX_Trolley_Plastic_Push_04		12515
+	776925664	GPE_Extinguisher_ImpactExplosion_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\13\{13709052-9138-78D8-0AB9-90BB7F99D95C}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactExplosion\GPE_Extinguisher_ImpactExplosion_03		33613
+	792069997	GPE_Extinguisher_ImpactFloor_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\22\{22CE58BB-4F4F-4FDD-4930-2C26BF868908}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactFloor\GPE_Extinguisher_ImpactFloor_01		32197
+	823105612	GPE_Extinguisher_ImpactExplosion_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\33\{3307D6C4-2117-D561-C7AB-D50CF1247F53}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactExplosion\GPE_Extinguisher_ImpactExplosion_02		26328
+	939019149	GPE_Extinguisher_Grab_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\DD\{DDB0956A-1BEF-D01A-9611-C1F88C754757}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactGrab\GPE_Extinguisher_Grab_01		10736
+	958750338	GPE_Extinguisher_ImpactExplosion_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\02\{024A650E-C23F-FBEA-1A7A-A5A51B8C8F01}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_ImpactExplosion\GPE_Extinguisher_ImpactExplosion_01		29711
+	999162193	GPE_Estinguisher_Launch_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B6\{B64F1249-B0AC-609F-1E76-9BD1D34C59CD}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Extinguisher\RC_Launch\GPE_Estinguisher_Launch_03		9293
+	1015472390	SFX_Trolley_Wood_Push_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\63\{63ED7C58-2892-9734-D5F6-1DB2AB3301D7}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Wood_Push\SFX_Trolley_Wood_Push_04		9112
+	1036270381	SFX_Trolley_Metal_Push_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\F3\{F3C4A6A9-6870-4412-02C6-EBA70A840D04}.wem		\Actor-Mixer Hierarchy\GPE\AM_GPE\GPE_LVL_01\AM_GPE_LVL_01\GPE_Trolley\RC_Trolley_Metal_Push\SFX_Trolley_Metal_Push_02		10207
+

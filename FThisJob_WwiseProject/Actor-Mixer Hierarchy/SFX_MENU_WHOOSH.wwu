@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8F663D37-A439-4C09-8CBC-A973D8AD61B4}" SchemaVersion="123" RootDocumentID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}" ParentDocumentID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}">
+	<AudioObjects>
+		<WorkUnit Name="SFX_MENU_WHOOSH" ID="{8F663D37-A439-4C09-8CBC-A973D8AD61B4}" OwnerID="{2BA1392D-644B-436A-A667-B17A98C20A88}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_MENU_WHOOSH" ID="{E1F7BD44-7C1C-4C3B-956E-A96A8837E904}" ShortID="50337471">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="RC_Menu_Whoosh" ID="{00F98196-4681-4681-AE40-E7A06FF96F33}" ShortID="111995334">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Menu_Whoosh_01" ID="{89A91821-0EE1-4887-B0D3-61232A9BD095}" ShortID="875432547">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Menu_Whoosh_01" ID="{504D676F-99E4-424A-A6ED-B0E80F89D998}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\MenuWhoosh\SFX_Menu_Whoosh_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="812495128"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Menu_Whoosh_01" ID="{504D676F-99E4-424A-A6ED-B0E80F89D998}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Menu_Whoosh_02" ID="{3B2D7397-D02C-4170-9133-E86EBB58BA72}" ShortID="647682219">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Menu_Whoosh_02" ID="{6EFB63B9-4636-4C3F-9E97-7EF9039B5B18}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\MenuWhoosh\SFX_Menu_Whoosh_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="7832178"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Menu_Whoosh_02" ID="{6EFB63B9-4636-4C3F-9E97-7EF9039B5B18}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Menu_Whoosh_03" ID="{6CE0BE87-AAF7-494F-8F34-64532BE9CDAA}" ShortID="770902073">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Menu_Whoosh_03" ID="{67EE102B-E8A2-4DC4-BB09-FE77E00AA06D}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\MenuWhoosh\SFX_Menu_Whoosh_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="371108533"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Menu_Whoosh_03" ID="{67EE102B-E8A2-4DC4-BB09-FE77E00AA06D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,6 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0D84605E-2432-4004-B2F5-8E80848063F5}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}">
 	<Events>
-		<WorkUnit Name="BOSS_THE_CEO" ID="{0D84605E-2432-4004-B2F5-8E80848063F5}" OwnerID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" PersistMode="Nested"/>
+		<WorkUnit Name="BOSS_THE_CEO" ID="{0D84605E-2432-4004-B2F5-8E80848063F5}" OwnerID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="BOSS_Taunt" ID="{7BB5F268-0F12-4328-B095-42B6675EDA45}">
+					<ChildrenList>
+						<Action Name="" ID="{D81AD065-B68C-4A13-81C5-F4112E3652E5}" ShortID="392106494">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_Punch" ID="{3ED93F64-35D1-4FB4-B4F8-04D0006FDAC9}">
+					<ChildrenList>
+						<Action Name="" ID="{4D4AC19D-DE11-4A27-9A88-48ADB4242408}" ShortID="276535054">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4105AC69-4AAD-4634-9749-48DEF2793269}" ShortID="893967400">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Punch" ID="{A4529974-741F-411C-8B46-FB1C38C1AC2D}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_Skid" ID="{90610836-6691-4B93-85D6-53740FE462AA}">
+					<ChildrenList>
+						<Action Name="" ID="{08FF685D-EA38-4CF3-A5CC-232A54391527}" ShortID="202350900">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EEBB9273-6DE2-4190-A456-FE73A709F661}" ShortID="754964963">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Skid" ID="{4D0FE02B-84B4-48A9-9B75-95166C90D37F}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_Walk" ID="{AAE5C561-3D34-4F8C-8213-5BD32AE84C82}">
+					<ChildrenList>
+						<Action Name="" ID="{E581DB2A-EC0B-4B4D-A2C8-9CA33F819D2C}" ShortID="988619053">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F1603167-11EF-42CE-AF2A-7AB4C9F9F20B}" ShortID="677899282">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Walk" ID="{F0607369-1F71-41BA-A6C1-470B8E9BF269}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_HardPunch" ID="{35975F3D-0946-4652-A256-077B110D7551}">
+					<ChildrenList>
+						<Action Name="" ID="{59B9BE56-8080-4050-9D08-DB22087D0CC4}" ShortID="60633147">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EAE2FFAF-13AC-47C4-B905-70F305C99A6B}" ShortID="552288633">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_HardPunch" ID="{9E27EB0F-740A-438C-AB7F-70E26AA3BCB2}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_Clap" ID="{70CF4375-E2E5-4C93-97B7-740BDA07B008}">
+					<ChildrenList>
+						<Action Name="" ID="{288E160C-75E9-4C34-9A4B-E25650ED0AB7}" ShortID="1040395736">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{15459F3F-A685-4646-BC01-9C7E1D1F538F}" ShortID="1057123538">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Clap" ID="{F642F3FA-D60A-4ED0-9B94-3956286B7E2D}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_LaunchPunch" ID="{8CFF0C87-5C63-463C-9F55-D0E7C376B4FB}">
+					<ChildrenList>
+						<Action Name="" ID="{F9B8A8B8-0899-46E2-B753-B4BE1EA9721B}" ShortID="276786169">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{277C1743-D2A6-4773-AB37-224E8F58EF24}" ShortID="235032920">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_LaunchPunch" ID="{B51C7B45-E818-4045-906F-717C0DAE2428}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_Hits" ID="{0EC38A01-E5EF-4F2A-90F6-91D03E8E1A61}">
+					<ChildrenList>
+						<Action Name="" ID="{CE5BF9FF-533E-494E-AF32-DAC32BF1AA6B}" ShortID="479975702">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8A71A69E-63F9-4392-99ED-39215CB026E5}" ShortID="652341491">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Hits" ID="{E72BDC38-5760-40C6-8346-97749CAA0C55}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ED19F52B-7DE4-44AF-AA88-6EE1A9CA8BB1}" ShortID="902674659">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="49"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Hurts_Boss" ID="{CB3220AF-014B-410B-A691-F595E2B18D0B}" WorkUnitID="{7E994724-0541-420E-A18A-FA1CE2294173}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_Charge" ID="{8A794F4D-02DD-4216-AB61-F33FCC427565}">
+					<ChildrenList>
+						<Action Name="" ID="{E0B7B7E0-B65A-488F-842B-5ACED4E24BDA}" ShortID="242241863">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BA7B3ED5-E9D5-4C50-9414-FBF217D8297B}" ShortID="139105643">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Charge" ID="{45CA49A3-C66B-4CA8-A84A-8146576E3A4B}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_HitsConfirm" ID="{66327DFB-3281-48C3-85E8-A8FA94CBCC0D}">
+					<ChildrenList>
+						<Action Name="" ID="{4D4E4E03-CA05-4B46-99EE-1BBB4187D4EE}" ShortID="250374591">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{76972F7B-318A-41CD-AC97-512298CED5C6}" ShortID="126615601">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="49"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Hurts_Boss" ID="{CB3220AF-014B-410B-A691-F595E2B18D0B}" WorkUnitID="{7E994724-0541-420E-A18A-FA1CE2294173}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{188EE65F-783E-43FE-9B2F-EEB4F32DBE61}" ShortID="701158827">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_HitsConfirm" ID="{7559EE13-7D5E-423E-848B-425594AC3E17}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_Stun" ID="{874F0875-06AA-47D5-8EBF-2900C1A2FC02}">
+					<ChildrenList>
+						<Action Name="" ID="{F8276445-50CF-45D9-8B39-C568D2363983}" ShortID="1065395376">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ENEMY_Ceo_Stun_LP" ID="{DE9BDBED-5FCF-470D-98B0-9524338EF62D}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

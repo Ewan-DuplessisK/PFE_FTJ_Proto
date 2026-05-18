@@ -7,9 +7,13 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<WorkUnit Name="AMB_LVL_01" ID="{6FB04D22-D3F3-4CC5-B6C7-AA96E5D90D65}" PersistMode="Reference"/>
-				<WorkUnit Name="AMB_LVL_02" ID="{7DFC1A66-7A27-454C-A0B4-2E931578D5CB}" PersistMode="Reference"/>
-				<WorkUnit Name="AMB_LVL_03" ID="{6D575E5F-200B-4D01-92FE-1BDC0EC555CE}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_TUTO" ID="{1509CB77-A818-4C1B-B20E-74D6287F102D}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_MENU" ID="{0943230B-DFB1-4AC0-906D-2B32C8EF1201}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_OPEN_OFFICE_01" ID="{41745C92-B956-4488-ACA3-BF6CAE0C4042}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_OPEN_OFFICE_02" ID="{2D7826B7-7AD9-41DF-9430-E5531F5555F0}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_CEO" ID="{224980AC-5E5F-4602-9855-33AFA5AF079B}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_GENERAL" ID="{D22E2CDE-292C-41CB-97A4-5D5867D7F307}" PersistMode="Reference"/>
+				<WorkUnit Name="AMB_LVL_LABORATORY" ID="{0AEA948D-5067-4703-8068-89AC7980827C}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

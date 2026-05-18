@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{60F366D7-08C2-4D17-A507-58CBA1F25EF3}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_DUCK" ID="{60F366D7-08C2-4D17-A507-58CBA1F25EF3}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_Duck" ID="{9BD4422C-7A01-43C5-A0A9-98D0F3783AC6}">
+					<ChildrenList>
+						<Action Name="" ID="{17CDD634-83B0-4C94-A5E9-9F1D6032DAE3}" ShortID="311747504">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Duck" ID="{BCED0062-1E00-4DA9-9579-92E3611F9F0E}" WorkUnitID="{6778396F-B369-4738-9856-49F2E3E738C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Duck_LP" ID="{3CF099B3-B846-428D-9210-74F3C3B22870}">
+					<ChildrenList>
+						<Action Name="" ID="{F819652E-8E9B-4AF7-AC63-D9ABC33ABD82}" ShortID="783039618">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Duck_LP" ID="{1948ED72-16DF-4A94-977F-92B242513C7E}" WorkUnitID="{6778396F-B369-4738-9856-49F2E3E738C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Stop_Duck_LP" ID="{CB6EEFD2-3DB8-43EA-98ED-6AD383ADDD40}">
+					<ChildrenList>
+						<Action Name="" ID="{44DF9B48-F4CA-4447-A8DD-21C9B3DA92A1}" ShortID="998404158">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Duck_LP" ID="{1948ED72-16DF-4A94-977F-92B242513C7E}" WorkUnitID="{6778396F-B369-4738-9856-49F2E3E738C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

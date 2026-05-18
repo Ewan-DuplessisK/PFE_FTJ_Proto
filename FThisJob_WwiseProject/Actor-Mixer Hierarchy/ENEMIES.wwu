@@ -7,10 +7,25 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<WorkUnit Name="WU_TURRET" ID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}" PersistMode="Reference"/>
-				<WorkUnit Name="WU_FLYING_ROBOTS" ID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}" PersistMode="Reference"/>
-				<WorkUnit Name="WU_SECURTIY_GUARDS" ID="{21D6008E-D6E2-437F-9A19-806FCC63BFEC}" PersistMode="Reference"/>
-				<WorkUnit Name="WU_BOSS_THE_CEO" ID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}" PersistMode="Reference"/>
+				<ActorMixer Name="AM_ENEMIES" ID="{E84919CA-0755-495B-B387-012B93C222C2}" ShortID="263563577">
+					<PropertyList>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AB_ENEMIES" ID="{EE91C138-2EFC-4DF1-926C-0CA408E667CB}" WorkUnitID="{FA4E556E-03CC-4D15-967D-9EC8AFAF9369}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="WU_BOSS_THE_CEO" ID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}" PersistMode="Reference"/>
+						<WorkUnit Name="WU_SECURTIY_GUARDS" ID="{21D6008E-D6E2-437F-9A19-806FCC63BFEC}" PersistMode="Reference"/>
+						<WorkUnit Name="WU_FLYING_ROBOTS" ID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}" PersistMode="Reference"/>
+						<WorkUnit Name="WU_TURRET" ID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}" PersistMode="Reference"/>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

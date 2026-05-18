@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{17F843A6-CDFC-4DD2-9F3B-5E7CD27B614D}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}">
+	<Events>
+		<WorkUnit Name="MUSIC" ID="{17F843A6-CDFC-4DD2-9F3B-5E7CD27B614D}" OwnerID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="8"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Elevator" ID="{D55108C0-64A6-4743-9BD7-1D53FE6639E3}">
+					<ChildrenList>
+						<Action Name="" ID="{1F4B8A7C-8E6C-4818-922E-C841AEC66FE6}" ShortID="502513797">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_Elevator" ID="{3213DE3B-FF7C-48D5-BD38-3344869B6204}" WorkUnitID="{3373958D-D934-4EE2-B7B6-32848450A2FA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TitleScreen" ID="{332431A6-2C65-44C7-B5BA-95F8ECFB9412}">
+					<ChildrenList>
+						<Action Name="" ID="{96E58FC1-06A8-4E32-BD86-B7E73F23A6F1}" ShortID="875638549">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_TitleScreen" ID="{F81A9759-89E8-46B3-A738-FD00DF49EDAF}" WorkUnitID="{1FFD06EC-C6E8-4C18-A01A-4D68A19F1C95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_TitleScreen" ID="{C5AEEAB6-083C-4A54-89FA-3A1430CD580C}">
+					<ChildrenList>
+						<Action Name="" ID="{69902CD5-B19D-4D9C-BDEC-31C8C9260F09}" ShortID="1065669981">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_TitleScreen" ID="{F81A9759-89E8-46B3-A738-FD00DF49EDAF}" WorkUnitID="{1FFD06EC-C6E8-4C18-A01A-4D68A19F1C95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Credits" ID="{DCCAFD7D-54D5-4978-B43F-991990B3C3D6}">
+					<ChildrenList>
+						<Action Name="" ID="{A05E1FAC-80BB-4AF3-9E93-08CF5E4FFA8E}" ShortID="778934624">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_Credit" ID="{F0132DEF-0F66-4EAF-9C02-B43E3E6F81BB}" WorkUnitID="{1FFD06EC-C6E8-4C18-A01A-4D68A19F1C95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicMaster" ID="{D3597931-BD3F-49B3-B99E-A6FA568A0439}">
+					<ChildrenList>
+						<Action Name="" ID="{A66BEC06-8424-4DD3-98E9-F4EBD4EA739E}" ShortID="798866806">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SG_MUSIC_MASTER" ID="{655AA038-A06E-4228-998F-7F1336582431}" WorkUnitID="{1FFD06EC-C6E8-4C18-A01A-4D68A19F1C95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicDuck_On" ID="{142F4171-654E-4B2D-8AEB-35913AA371D0}">
+					<ChildrenList>
+						<Action Name="" ID="{50A233B6-89C0-4D32-A917-AF20C7042B6E}" ShortID="33958015">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_ON" ID="{DC975B96-2C67-4A36-BDA0-1CBAF00CB17E}" WorkUnitID="{3373958D-D934-4EE2-B7B6-32848450A2FA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicDuck_Off" ID="{E3E4CE59-0349-40B6-9334-CEEBDB0796BB}">
+					<ChildrenList>
+						<Action Name="" ID="{9FD35531-7504-4B1D-BE1D-591C37EBCE12}" ShortID="913811148">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_OFF" ID="{FE9BC0AA-680C-425C-86B1-BF236A007A2D}" WorkUnitID="{3373958D-D934-4EE2-B7B6-32848450A2FA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BossMusic" ID="{CE8724A0-B61E-4B4E-8FF8-5779A44889C5}">
+					<ChildrenList>
+						<Action Name="" ID="{EC927CEF-057B-41FA-BE98-B23CD63C3F62}" ShortID="1053408057">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_Boss" ID="{09AD54A5-4755-4293-87C8-39BEF1FA0D6C}" WorkUnitID="{1FFD06EC-C6E8-4C18-A01A-4D68A19F1C95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_MusicMaster" ID="{3B9DA204-64B6-46D6-9BED-84E07774FB7D}">
+					<ChildrenList>
+						<Action Name="" ID="{5B0DB916-6D4F-40EE-A8DC-3477854F479E}" ShortID="340724703">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SG_MUSIC_MASTER" ID="{655AA038-A06E-4228-998F-7F1336582431}" WorkUnitID="{1FFD06EC-C6E8-4C18-A01A-4D68A19F1C95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_MusicCredit" ID="{F186E870-494D-4388-A62D-2D324C1A806A}">
+					<ChildrenList>
+						<Action Name="" ID="{E0917410-7599-42E3-B774-B5F83499809A}" ShortID="286490919">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_Credit" ID="{F0132DEF-0F66-4EAF-9C02-B43E3E6F81BB}" WorkUnitID="{1FFD06EC-C6E8-4C18-A01A-4D68A19F1C95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

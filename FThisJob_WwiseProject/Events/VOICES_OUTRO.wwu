@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BE325C96-80F3-4D7B-9C0C-54FDEB87F1E8}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{54C85867-2FC6-4A49-A289-14A282CE9297}">
+	<Events>
+		<WorkUnit Name="VOICES_OUTRO" ID="{BE325C96-80F3-4D7B-9C0C-54FDEB87F1E8}" OwnerID="{54C85867-2FC6-4A49-A289-14A282CE9297}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="VOC_Jake_Cutscene_Outro_01" ID="{A61C4D91-7B68-4603-A691-1BE49FAA659F}">
+					<ChildrenList>
+						<Action Name="" ID="{283DC898-65FE-44C8-B93D-E63723664B4E}" ShortID="851585616">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Outro_01" ID="{B5AFB864-1953-4A4E-88E4-2DF5DF5758A1}" WorkUnitID="{26AEB92B-E136-4576-9C7C-0F9F172FF4EF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Outro_02" ID="{E4F31490-AC1F-409D-855B-D07E3B9F13C7}">
+					<ChildrenList>
+						<Action Name="" ID="{85075171-7F80-4945-990E-06D14468A9E2}" ShortID="69254079">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Outro_02" ID="{2B7366D1-8B37-4266-AF8A-4054FA24ECDB}" WorkUnitID="{26AEB92B-E136-4576-9C7C-0F9F172FF4EF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Outro_03" ID="{2B309FD9-6313-4E5F-BB41-A9C3A89BCBF3}">
+					<ChildrenList>
+						<Action Name="" ID="{20E30BEB-8617-4FFE-90D1-89B83EBB81ED}" ShortID="681962437">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Outro_03" ID="{10E29645-52A1-4B59-B6FD-76DEA857DC25}" WorkUnitID="{26AEB92B-E136-4576-9C7C-0F9F172FF4EF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,6 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6E5E1CEC-A139-45F3-A7A2-93734DFBDBBD}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{A4B68176-E962-4F5A-8E78-8E710EBF6C90}">
 	<Events>
-		<WorkUnit Name="GPE_LVL_01" ID="{6E5E1CEC-A139-45F3-A7A2-93734DFBDBBD}" OwnerID="{A4B68176-E962-4F5A-8E78-8E710EBF6C90}" PersistMode="Nested"/>
+		<WorkUnit Name="GPE_LVL_01" ID="{6E5E1CEC-A139-45F3-A7A2-93734DFBDBBD}" OwnerID="{A4B68176-E962-4F5A-8E78-8E710EBF6C90}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Trolley_Metal_Push" ID="{66BD37FC-A052-47E6-952D-E0D3A1232027}">
+					<ChildrenList>
+						<Action Name="" ID="{CCCBBF27-50AF-4C56-8B50-6C5DBCDDF18D}" ShortID="972769898">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Trolley_Metal_Push" ID="{449B7460-AD29-4898-B943-7D6FFECA269A}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Trolley_Plastic_Push" ID="{6072CC44-55C3-4CCD-9CBB-967010CF0262}">
+					<ChildrenList>
+						<Action Name="" ID="{2124FD10-A7DA-4018-8492-260D4F97AB4C}" ShortID="969794393">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Trolley_Plastic_Push" ID="{96BB9373-AC17-4BCF-BA8A-9EA8858072DA}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Trolley_Wood_Push" ID="{5FEC68C5-E5C8-4F3D-B0E8-9DCDFDDBE3F8}">
+					<ChildrenList>
+						<Action Name="" ID="{535E2028-36B5-4F6A-A693-B0E0DD508774}" ShortID="329837584">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Trolley_Wood_Push" ID="{3C6527D0-C279-4DE3-86DD-560F4A4CA1B7}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Extinguisher_Grab" ID="{7066E952-1C2A-43E0-8ADA-F0EDB5C56925}">
+					<ChildrenList>
+						<Action Name="" ID="{4182834E-E95B-49AA-8F8D-C984474E3D5D}" ShortID="997547386">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_ImpactGrab" ID="{C80C8585-9C41-4B81-B244-F184285DAAFB}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Extinguisher_ImpactExplosion" ID="{6DB36355-AFFF-4F31-B0F3-F6577408882C}">
+					<ChildrenList>
+						<Action Name="" ID="{24C45CC3-0EB9-42DF-8B36-4463315FD4D2}" ShortID="830322193">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GPE_ExtinguisherSteam_LP" ID="{C5179663-BBA8-4435-9C52-2F312F6B8FE4}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EEA4165B-A562-42C6-9034-C2CFE9AD9CE5}" ShortID="1016681655">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_ImpactExplosion" ID="{D2278244-30DD-4524-B2D8-8FC965082C77}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Extinguisher_Steam" ID="{1C004F4A-651D-4EC1-97E5-DC7316436A81}">
+					<ChildrenList>
+						<Action Name="" ID="{F7B01D2B-1D57-41E7-ADB4-9B9C02E976C3}" ShortID="983590089">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GPE_ExtinguisherSteam_LP" ID="{C5179663-BBA8-4435-9C52-2F312F6B8FE4}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Extinguisher_ImpactFloor" ID="{01A8D39C-7E7D-401F-9827-7BC4552D3662}">
+					<ChildrenList>
+						<Action Name="" ID="{6A2E2FB2-D6E0-4BDF-BE65-8B18C69DFF79}" ShortID="1055795975">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_ImpactFloor" ID="{EB705545-0652-4271-A6B8-A941D428B374}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Extinguisher_Launch" ID="{506A5F83-5BD6-4176-A17D-A6996A9CB5A6}">
+					<ChildrenList>
+						<Action Name="" ID="{C711219F-B4A6-40D7-B85D-D15DC763EC23}" ShortID="400232496">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Launch" ID="{7926E4CC-ED1B-49F5-A56F-74E083657486}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{43977E1D-61D8-46A5-90BE-950C740FBAF3}" ShortID="574825598">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_ImpactFloor" ID="{EB705545-0652-4271-A6B8-A941D428B374}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

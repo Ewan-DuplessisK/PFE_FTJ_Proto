@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F08FF08F-F7E8-4009-8ABF-1EC041CACC02}" SchemaVersion="123" RootDocumentID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}" ParentDocumentID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}">
+	<AudioObjects>
+		<WorkUnit Name="SFX_ARMROBOT" ID="{F08FF08F-F7E8-4009-8ABF-1EC041CACC02}" OwnerID="{2BA1392D-644B-436A-A667-B17A98C20A88}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_ARMROBOT" ID="{02029AEA-1178-455A-8CF8-C23806E44600}" ShortID="803090367">
+					<PropertyList>
+						<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="RC_ArmRobot_Dead" ID="{439EE3DB-6763-4E83-8837-DAA34B68F128}" ShortID="898841428">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_10m" ID="{DC8F0EC5-FE88-4C0F-A086-E76674593674}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_ArmRobot_Destruction_01" ID="{2A3FBA42-D547-42F4-86FB-B8BA2BA686D1}" ShortID="508853715">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_ArmRobot_Destruction_01" ID="{49F3FEE3-4B2E-4D8E-AA25-7B86D2F65DCD}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\ArmRobot\SFX_ArmRobot_Destruction_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1024246438"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_ArmRobot_Destruction_01" ID="{49F3FEE3-4B2E-4D8E-AA25-7B86D2F65DCD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_ArmRobot_Destruction_02" ID="{E9D9788B-2425-4E67-811E-43D571042FE6}" ShortID="360870775">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_ArmRobot_Destruction_02" ID="{FA7D8174-70D3-4574-A9F6-30514A806CC7}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\ArmRobot\SFX_ArmRobot_Destruction_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="57580596"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_ArmRobot_Destruction_02" ID="{FA7D8174-70D3-4574-A9F6-30514A806CC7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_ArmRobot_Destruction_03" ID="{AA595178-4D3A-4A34-8CCF-8A3CBA06F9D8}" ShortID="277266672">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_ArmRobot_Destruction_03" ID="{3019648D-CA83-4A52-A0C4-6D29319B3909}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\ArmRobot\SFX_ArmRobot_Destruction_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="898511319"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_ArmRobot_Destruction_03" ID="{3019648D-CA83-4A52-A0C4-6D29319B3909}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

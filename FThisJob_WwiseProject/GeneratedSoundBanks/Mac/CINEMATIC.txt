@@ -1,0 +1,25 @@
+Event	ID	Name			Wwise Object Path	Notes
+	360225307	VOC_CINEMATIC_Hits_FTJ			\Default Work Unit\CINEMATIC\VOC_CINEMATIC_Hits_FTJ	
+	1285739534	Cinematic_CEO_Boss			\Default Work Unit\CINEMATIC\Cinematic_CEO_Boss	
+	2731504652	Cinematic_AMB_CreditJake			\Default Work Unit\CINEMATIC\Cinematic_AMB_CreditJake	
+	2960963571	Cinematic_OpenSpace2			\Default Work Unit\CINEMATIC\Cinematic_OpenSpace2	
+	3789567414	Cinematic_Tuto_Intro			\Default Work Unit\CINEMATIC\Cinematic_Tuto_Intro	
+	3887018901	Cinematic_CEO_Death			\Default Work Unit\CINEMATIC\Cinematic_CEO_Death	
+	3996600900	Cinematic_End_Ceo			\Default Work Unit\CINEMATIC\Cinematic_End_Ceo	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3352592138	AB_CINEMATIC			\Default Work Unit\Master Audio Bus\CINEMATIC\AB_CINEMATIC	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	101227745	CINEMATIC_TUTO_Intro	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\75\{759CDA15-8961-0CD3-D76F-AC16C28F2BEB}.wem		\Actor-Mixer Hierarchy\CINEMATIC\AM_SFX_CINEMATIC\CINEMATIC_TUTO_Intro		553420
+	231724061	CINEMATIC_AMB_Credit_JakeTalking	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\53\{53533D1A-9AD3-EEDB-0EBE-B681E389BABB}.wem		\Actor-Mixer Hierarchy\CINEMATIC\AM_SFX_CINEMATIC\CINEMATIC_AMB_Credit_JakeTalking		416241
+	363210994	CINEMATIC_CEO_Boss_Death	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\76\{76F1D754-4440-9AB1-B6F9-6E965B15ED48}.wem		\Actor-Mixer Hierarchy\CINEMATIC\AM_SFX_CINEMATIC\CINEMATIC_CEO_Boss_Death		58119
+	585842975	CINEMATIC_End_Ceo	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\B6\{B6C63A1F-9FE7-EC93-E2E5-483C2A8A0091}.wem		\Actor-Mixer Hierarchy\CINEMATIC\AM_SFX_CINEMATIC\CINEMATIC_End_Ceo		133512
+	695004644	CINEMATIC_Credit_Hits_FTJ	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\F0\{F0CEEA58-9558-8E2A-2768-CAFE62940D28}.wem		\Actor-Mixer Hierarchy\CINEMATIC\AM_SFX_CINEMATIC\CINEMATIC_Credit_Hits_FTJ		73459
+	829787062	CINEMATIC_Open_Space_2	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\E8\{E83C2DFD-1589-D8E0-0E98-0C8247616443}.wem		\Actor-Mixer Hierarchy\CINEMATIC\AM_SFX_CINEMATIC\CINEMATIC_Open_Space_2		90976
+	861306818	CINEMATIC_CEO_Boss_Scene	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\95\{95304A7A-3582-AC5B-27BC-2740A4F075E1}.wem		\Actor-Mixer Hierarchy\CINEMATIC\AM_SFX_CINEMATIC\CINEMATIC_CEO_Boss_Scene		186922
+

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5BBE2AAA-1C83-4BC3-9C36-ABE901612B63}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}">
+	<Events>
+		<WorkUnit Name="CINEMATIC" ID="{5BBE2AAA-1C83-4BC3-9C36-ABE901612B63}" OwnerID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="6"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Cinematic_End_Ceo" ID="{BE499E00-7180-435C-9C52-1935EE909758}">
+					<ChildrenList>
+						<Action Name="" ID="{554D9B61-4F54-4515-95FA-67F635B88981}" ShortID="152858533">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CINEMATIC_End_Ceo" ID="{E5B0CC63-2F65-4E0A-8342-710AC9D32C21}" WorkUnitID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cinematic_AMB_CreditJake" ID="{CCC33D63-D2FC-401B-921E-1A8DA4A1AEC5}">
+					<ChildrenList>
+						<Action Name="" ID="{0A4C3AA4-8717-4E5F-9E8E-ABCC03F11E78}" ShortID="765907380">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CINEMATIC_AMB_Credit_JakeTalking" ID="{B3B99DB2-D308-46AB-9AF6-EF256E974A86}" WorkUnitID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cinematic_CEO_Boss" ID="{26575903-D266-41D5-8A15-935F9AC82987}">
+					<ChildrenList>
+						<Action Name="" ID="{0E46C320-8A36-432A-B3C1-1D39BE7ADD9A}" ShortID="931494521">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CINEMATIC_CEO_Boss_Scene" ID="{7C5BC45F-51CB-44BC-BB9F-A34250F8E7B5}" WorkUnitID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cinematic_OpenSpace2" ID="{30778327-7A62-4B36-A199-6C7766587B0D}">
+					<ChildrenList>
+						<Action Name="" ID="{57959555-BA1D-43A8-9885-B82F6DBF2161}" ShortID="366816207">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CINEMATIC_Open_Space_2" ID="{29D31497-44D2-4E0A-9468-0920CF10D02D}" WorkUnitID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cinematic_Tuto_Intro" ID="{06338019-B598-4346-8C01-1B0A31F0DAEA}">
+					<ChildrenList>
+						<Action Name="" ID="{C4D8BA43-26C5-4075-BF5E-88CF3874B54A}" ShortID="663452588">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CINEMATIC_TUTO_Intro" ID="{69EF58FD-79BE-441A-B3F9-61AFEA3F4AAF}" WorkUnitID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CINEMATIC_Hits_FTJ" ID="{A53B3994-E7EE-4AC9-9A12-37330FE0ED14}">
+					<ChildrenList>
+						<Action Name="" ID="{BAA0FE99-D542-4088-BB7A-BC964CB46EA6}" ShortID="905667322">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CINEMATIC_Credit_Hits_FTJ" ID="{1D81101B-0A1A-465C-8243-97AB8D320E8E}" WorkUnitID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cinematic_CEO_Death" ID="{ECF49889-F2C0-4DE5-BC54-14EE9E75869E}">
+					<ChildrenList>
+						<Action Name="" ID="{D2408A50-4892-4F3B-99C0-EDE38A2D13D8}" ShortID="163423393">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CINEMATIC_CEO_Boss_Death" ID="{FF67B476-EDDD-448D-9DD5-361E5B44E389}" WorkUnitID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

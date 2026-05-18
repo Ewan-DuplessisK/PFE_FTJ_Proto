@@ -1,0 +1,37 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2717964529	Water_ExplosionElec			\Default Work Unit\SFX\SFX_LVL_02\Water_ExplosionElec	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	1400970647	RTPC_Music_SideChain_VOICEREACTION			\MUSIC\RTPC_Music_SideChain_VOICEREACTION	
+	1828041389	RTPC_Music_SideChain			\MUSIC\RTPC_Music_SideChain	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1650947108	AB_SFX			\Default Work Unit\Master Audio Bus\SFX\AB_SFX	
+	1669415112	AB_SFX_LVL_02			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_LVL_02	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	143275072	SFX_Water_ExplosionElec_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\00\{00E37CC3-B078-DFC2-D0B2-B27E24A02457}.wem		\Actor-Mixer Hierarchy\SFX\AM_SFX\SFX_LVL_02\AM_SFX_LVL_02\AM_Water\RC_Water_ExplosionElec\SFX_Water_ExplosionElec_03		38593
+	217173671	SFX_Water_ExplosionElec_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\EA\{EA756C62-AAA9-3470-73F8-231DBEB98D0F}.wem		\Actor-Mixer Hierarchy\SFX\AM_SFX\SFX_LVL_02\AM_SFX_LVL_02\AM_Water\RC_Water_ExplosionElec\SFX_Water_ExplosionElec_04		37259
+	620209523	SFX_Water_ExplosionElec_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B9\{B9B4F1F5-3637-17A2-BF78-EAA14797CE2D}.wem		\Actor-Mixer Hierarchy\SFX\AM_SFX\SFX_LVL_02\AM_SFX_LVL_02\AM_Water\RC_Water_ExplosionElec\SFX_Water_ExplosionElec_01		39343
+	989321473	SFX_Water_ExplosionElec_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\2D\{2D905345-36EE-9698-D803-760DF6179EBB}.wem		\Actor-Mixer Hierarchy\SFX\AM_SFX\SFX_LVL_02\AM_SFX_LVL_02\AM_Water\RC_Water_ExplosionElec\SFX_Water_ExplosionElec_02		38688
+

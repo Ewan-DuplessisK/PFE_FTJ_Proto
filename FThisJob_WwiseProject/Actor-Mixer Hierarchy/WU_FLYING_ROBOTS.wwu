@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}" SchemaVersion="123" RootDocumentID="{50F281B2-308B-410C-A95E-7ED5349D7002}" ParentDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}">
+<WwiseDocument Type="WorkUnit" ID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}" SchemaVersion="123" RootDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" ParentDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}">
 	<AudioObjects>
-		<WorkUnit Name="WU_FLYING_ROBOTS" ID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}" OwnerID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" PersistMode="Nested">
+		<WorkUnit Name="WU_FLYING_ROBOTS" ID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}" OwnerID="{E84919CA-0755-495B-B387-012B93C222C2}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="AM_FLYING_ROBOTS" ID="{5963F857-D8BE-4FC3-BE3F-69D5F1EE68E2}" ShortID="526628728">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 						</Reference>
@@ -12,6 +19,532 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_FlyingRobot_Fly_LP" ID="{549620EB-71A2-475C-97E8-AE3ED0801870}" ShortID="730815559">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_FlyingRobot_Fly_LP" ID="{7AC4F814-CB35-43D5-9B7F-0E5F653E07F0}">
+									<Language>SFX</Language>
+									<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Fly_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="249882587"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_FlyingRobot_Fly_LP" ID="{7AC4F814-CB35-43D5-9B7F-0E5F653E07F0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_FlyingRobot_Magnet_LP" ID="{F531F15C-4683-4B7E-AC63-C3FDD2766978}" ShortID="1072642721">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_FlyingRobot_Magnet_LP" ID="{FBBBCB76-F637-4EB9-83DC-170955DEA095}">
+									<Language>SFX</Language>
+									<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Magnet_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="33877301"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_FlyingRobot_Magnet_LP" ID="{FBBBCB76-F637-4EB9-83DC-170955DEA095}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="RC_FlyingRobot_Launch" ID="{771F8ADE-8EF7-4777-BC46-ECD1C77B0457}" ShortID="946484789">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_FlyingRobot_Launch_01" ID="{9D388F20-7446-4312-A23A-9EAA3BA0291B}" ShortID="729185486">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_FlyingRobot_Launch_01" ID="{F410BB8F-A2AA-455F-B5BE-626B257C3F3A}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Launch_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="514629713"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_FlyingRobot_Launch_01" ID="{F410BB8F-A2AA-455F-B5BE-626B257C3F3A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_FlyingRobot_Launch_02" ID="{FDE32A50-8605-4C12-A471-178F71CB3349}" ShortID="395020205">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_FlyingRobot_Launch_02" ID="{8BF4C488-727E-4DD5-B20E-D26DF927D5FC}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Launch_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="912708510"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_FlyingRobot_Launch_02" ID="{8BF4C488-727E-4DD5-B20E-D26DF927D5FC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_FlyingRobot_Launch_03" ID="{FD1B284B-15D8-4465-98D2-8162E82C56FF}" ShortID="420628956">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_FlyingRobot_Launch_03" ID="{6DF2A978-1C85-4F09-BC66-88D3D1403D6D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Launch_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1071206843"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_FlyingRobot_Launch_03" ID="{6DF2A978-1C85-4F09-BC66-88D3D1403D6D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<ActorMixer Name="AM_VOICE" ID="{4E569592-9684-4AD2-97FF-D642A27DDC3D}" ShortID="258067265">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="RC_Voice_Attack" ID="{58829D46-6678-4FA1-BF1B-54936540585A}" ShortID="894495350">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_FlyingRobot_Voice_Attack_01" ID="{39C3F481-52A5-4BAD-9B32-EF04E10EF549}" ShortID="878740421">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Attack_01" ID="{49F77680-A006-420A-AE09-7AD4805608E9}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Attack_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="848120311"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Attack_01" ID="{49F77680-A006-420A-AE09-7AD4805608E9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_FlyingRobot_Voice_Attack_02" ID="{FB5A7A89-4413-4A4E-81CA-F36164B3E78F}" ShortID="127671123">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Attack_02" ID="{09F5A41E-0F49-4CA2-9A2F-2C0892D1D5DA}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Attack_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="989735915"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Attack_02" ID="{09F5A41E-0F49-4CA2-9A2F-2C0892D1D5DA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_FlyingRobot_Voice_Attack_03" ID="{FF0B2095-F663-4B86-B63E-85B575806D12}" ShortID="505268190">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Attack_03" ID="{F6A11714-6422-4587-A0AC-29DAC927EF5D}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Attack_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="395591813"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Attack_03" ID="{F6A11714-6422-4587-A0AC-29DAC927EF5D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Voice_Death" ID="{52730380-5281-4364-A1CD-87D57D8A0068}" ShortID="307703501">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_FlyingRobot_Voice_Death_01" ID="{6F4BBC46-71DE-41BB-9C72-2C334DCA6570}" ShortID="794365553">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Death_01" ID="{DE885324-A4A9-4556-8C7F-7C8542D663FE}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Death_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1064877595"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Death_01" ID="{DE885324-A4A9-4556-8C7F-7C8542D663FE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_FlyingRobot_Voice_Death_02" ID="{679C3FA9-A979-493B-96A0-21278AA3814D}" ShortID="347424962">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Death_02" ID="{D6FBDEDE-BC2C-4B9C-9FD1-24D3A6010553}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Death_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="661606390"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Death_02" ID="{D6FBDEDE-BC2C-4B9C-9FD1-24D3A6010553}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_FlyingRobot_Voice_Death_03" ID="{7A0C1555-B4E7-4316-B2A4-8A304C3C51ED}" ShortID="353616043">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Death_03" ID="{9523303A-3636-475C-89C8-C82808DCC9FD}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Death_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1024622421"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Death_03" ID="{9523303A-3636-475C-89C8-C82808DCC9FD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Voice_Hurt" ID="{A2386296-E383-49FA-A3B4-3AD8146C8DB4}" ShortID="883121514">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{242F78C1-A841-4D08-87CD-5BD1CF52FB36}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_FlyingRobot_Voice_Hurt_01" ID="{4374AE5B-1543-4F1F-8EDD-96A94D7F1E77}" ShortID="367562952">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Hurt_01" ID="{29BEEF1E-942F-419C-87F8-16A91B275B66}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Hurt_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="975308529"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Hurt_01" ID="{29BEEF1E-942F-419C-87F8-16A91B275B66}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_FlyingRobot_Voice_Hurt_02" ID="{BAB62199-C4C2-4AEE-8361-79A74F7A0930}" ShortID="811755070">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Hurt_02" ID="{DEA11B51-7C1E-422B-BDE1-406319818D57}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Hurt_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="694687919"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Hurt_02" ID="{DEA11B51-7C1E-422B-BDE1-406319818D57}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_FlyingRobot_Voice_Hurt_03" ID="{A358F5FA-6EFB-4188-895B-27E8CA87778D}" ShortID="102023320">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_FlyingRobot_Voice_Hurt_03" ID="{9A008764-702B-4592-B379-BDED0BA17447}">
+													<Language>SFX</Language>
+													<AudioFile>ENNEMIES\FLYINGROBOT\Voices\SFX_FlyingRobot_Voice_Hurt_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="370024353"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_FlyingRobot_Voice_Hurt_03" ID="{9A008764-702B-4592-B379-BDED0BA17447}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<RandomSequenceContainer Name="RC_FlyingRobot_Loot" ID="{89822C15-255D-46AD-9A43-CE242BF79206}" ShortID="555300662">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_FlyingRobot_Loot_01" ID="{AEBAD902-4A42-4081-B2E6-B96B3739152A}" ShortID="637448171">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_FlyingRobot_Loot_01" ID="{687FDE27-1F3C-4359-AC3F-ED46C7A0AEF1}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Loot_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="580764698"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_FlyingRobot_Loot_01" ID="{687FDE27-1F3C-4359-AC3F-ED46C7A0AEF1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_FlyingRobot_Loot_02" ID="{325109AF-1031-470E-99F1-B59956E4499C}" ShortID="743632199">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_FlyingRobot_Loot_02" ID="{47B6D714-98D1-411A-82F4-1F2535C182C4}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Loot_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="266744151"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_FlyingRobot_Loot_02" ID="{47B6D714-98D1-411A-82F4-1F2535C182C4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_FlyingRobot_Loot_03" ID="{B664D392-09E4-480B-803D-534E5393D2C6}" ShortID="838337554">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_FlyingRobot_Loot_03" ID="{1A18771E-9AD4-48B1-8139-5F228C48A1AE}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Loot_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="189765738"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_FlyingRobot_Loot_03" ID="{1A18771E-9AD4-48B1-8139-5F228C48A1AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_FlyingRobot_Loot_04" ID="{0DF39A68-1CF5-48A4-B73A-657998880A6C}" ShortID="717355911">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_FlyingRobot_Loot_04" ID="{99A6E46B-48C5-4D71-AB65-32BEB8202E93}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\FLYINGROBOT\SFX_FlyingRobot_Loot_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="116720865"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_FlyingRobot_Loot_04" ID="{99A6E46B-48C5-4D71-AB65-32BEB8202E93}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

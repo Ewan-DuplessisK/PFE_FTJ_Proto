@@ -1,6 +1,438 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2235F791-147B-4D44-9867-9D417B12B131}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{54C85867-2FC6-4A49-A289-14A282CE9297}">
 	<Events>
-		<WorkUnit Name="VOICES_LVL_01" ID="{2235F791-147B-4D44-9867-9D417B12B131}" OwnerID="{54C85867-2FC6-4A49-A289-14A282CE9297}" PersistMode="Nested"/>
+		<WorkUnit Name="VOICES_LVL_01" ID="{2235F791-147B-4D44-9867-9D417B12B131}" OwnerID="{54C85867-2FC6-4A49-A289-14A282CE9297}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="VOC_CEO_Open_Space_01" ID="{C095D92C-A44B-400B-AB52-06DBECAE911D}">
+					<ChildrenList>
+						<Action Name="" ID="{67EB01E6-466A-41E1-A8AA-8AF3A347541C}" ShortID="972407713">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_CEO_Open_Space_01" ID="{F26E6520-A513-445A-9758-E708306ED4B0}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_02" ID="{44B894EF-C104-450E-8326-CD79AE9F9DBA}">
+					<ChildrenList>
+						<Action Name="" ID="{6EF8281C-A4F6-4F43-82FE-A354A463890C}" ShortID="651006000">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_CEO_Open_Space_02" ID="{7C925157-5A58-4EE9-8DE3-BF2B0850E2BA}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_03" ID="{632E0B87-D8B3-4045-AFEC-39E7D6C342EA}">
+					<ChildrenList>
+						<Action Name="" ID="{BC988F3F-DA32-4A98-9B42-ABB9635ED1F6}" ShortID="395476020">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_CEO_Open_Space_03" ID="{004FB37A-5774-4C40-B70D-C4A24B9F5255}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_04" ID="{4FCD1221-CD06-4C8E-8737-5818EDCAC3BD}">
+					<ChildrenList>
+						<Action Name="" ID="{38CA7074-04E0-4A93-8416-B82F342C4DF4}" ShortID="632280162">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_CEO_Open_Space_04" ID="{552CC78C-F8AE-433F-B8EA-542C067AE21A}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_05_1" ID="{99864DC5-5908-428D-B745-05A6889743DB}">
+					<ChildrenList>
+						<Action Name="" ID="{1D9A9390-89B8-4DAF-92A7-4D3F0B495B7D}" ShortID="285227204">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_VOC_CEO_Open_Space_05_01" ID="{7137B915-E415-48E8-86DA-70484E81F876}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_06" ID="{93F751FD-0058-41B0-A4ED-8570F47823D3}">
+					<ChildrenList>
+						<Action Name="" ID="{93C95E7A-649A-4A43-84A8-F653AA36EC3E}" ShortID="203816221">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_CEO_Open_Space_06" ID="{E63BEFB3-CECA-4893-A6EB-3E561B61F3F0}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_07" ID="{86FBF9B3-0F1F-4856-84E2-74D3D47BE3C9}">
+					<ChildrenList>
+						<Action Name="" ID="{AF837421-322C-474D-9511-EAAAFE9B82FA}" ShortID="840818929">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_CEO_Open_Space_07" ID="{98E37169-60D0-4498-9F16-F728CC6B1D4A}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_08" ID="{363A7487-2241-4F92-9917-E2F077F6F709}">
+					<ChildrenList>
+						<Action Name="" ID="{0D409E7C-F920-42D8-AA6B-2201ABFFE6FA}" ShortID="1052916779">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_CEO_Open_Space_08" ID="{4E79E58A-CB9A-4228-9619-605BDCFFF6EE}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_09" ID="{C3381929-18AB-4FDA-8815-50C4DB79EEB0}">
+					<ChildrenList>
+						<Action Name="" ID="{223C8E5F-0412-4307-A582-10A481CA7862}" ShortID="1039848564">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_CEO_Open_Space_09" ID="{C7886F20-973B-4BA1-AA28-115ECE8DAA91}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_GLADYS" ID="{0BEB18C0-7A32-4031-BD17-C037C42E3CC8}">
+					<ChildrenList>
+						<Action Name="" ID="{EFE09FA4-06A1-4CA9-B839-A050E83E0030}" ShortID="531890825">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_GLADYS" ID="{F6916346-FCB3-42C9-B830-B9B549B9171C}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_01_1" ID="{78E47346-F7D7-47C2-8D45-B42F2F68B992}">
+					<ChildrenList>
+						<Action Name="" ID="{7A2DC444-66B5-42A0-9254-CC32C0406090}" ShortID="379254772">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_01_01" ID="{B30ED133-970A-45F8-9B51-D190B75DA1F0}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_02" ID="{90EE6C55-4694-4E5E-B3FF-C78A9DC72A62}">
+					<ChildrenList>
+						<Action Name="" ID="{FF5058E3-BE47-4679-8B5A-ECDA76105BAA}" ShortID="414987856">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_02" ID="{1F9498E9-AE95-4E61-BDFA-FAC38EC92840}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_03" ID="{7861EE38-E2AD-4B4D-868C-9848BEA4327E}">
+					<ChildrenList>
+						<Action Name="" ID="{CE315F84-31E2-4B17-BD24-166C1403B9D1}" ShortID="123694858">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_03" ID="{07285EA5-0C27-4527-9E43-298E2834881A}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_04" ID="{4AB273A4-6DA8-4619-A570-38EF6F8DFB99}">
+					<ChildrenList>
+						<Action Name="" ID="{A69578B5-95BE-41BB-857D-4246B66200BC}" ShortID="135949636">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_04" ID="{7A682B15-96AB-4733-A86C-BAFEBA9D0B41}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_05" ID="{63ADE6FC-17C1-4EA5-ACDD-248C5008C260}">
+					<ChildrenList>
+						<Action Name="" ID="{46851823-22F0-4CE4-92C5-6C64B8F19D6D}" ShortID="888692476">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_05" ID="{1532C966-AF0A-4576-9559-500C64FDED29}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_06" ID="{F00B4F54-63C9-48A5-927D-60315A142481}">
+					<ChildrenList>
+						<Action Name="" ID="{C4A050FC-1F55-44FC-97E7-250FD25CEF3E}" ShortID="666205421">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_06" ID="{F4D5EA63-399A-4385-A8B0-23B5711A360F}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_07_1" ID="{B5CD261B-57AE-4D08-9BF7-5BCB6F2856DD}">
+					<ChildrenList>
+						<Action Name="" ID="{E42266E8-0EB5-408A-985C-5A8EA028085C}" ShortID="481795679">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_07_01" ID="{199C3882-710B-483C-9D92-A14067F85202}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Open_Space_01" ID="{E3F677BC-57E6-4608-9889-BFC5CBB4E60E}">
+					<ChildrenList>
+						<Action Name="" ID="{B55D57E6-4F37-4A58-8385-BD4D819F70BF}" ShortID="161200556">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Open_Space_01" ID="{5CF957DE-EA9C-4BE5-B788-17FC61023CC9}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Open_Space_02" ID="{D68E6C80-5D14-4963-AE96-288408C3DE0F}">
+					<ChildrenList>
+						<Action Name="" ID="{507E8007-1854-413C-9F18-69A774192C7A}" ShortID="488845161">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Open_Space_02" ID="{A4E1C03E-F5FB-4930-9717-9CBF22F27A6F}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Open_Space_03_1" ID="{FE46F2DB-9D32-406B-8017-8D8FE34A3FC9}">
+					<ChildrenList>
+						<Action Name="" ID="{F431DDA2-23CD-4089-8591-7E66410B4872}" ShortID="423136409">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Open_Space_03" ID="{07F31532-181B-4E47-B1CE-8AA27DE7FB0F}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Open_Space_04" ID="{55FAC4C3-E02D-482F-A352-24DBB3998167}">
+					<ChildrenList>
+						<Action Name="" ID="{0944E685-2911-49E8-A1A3-B3D593AF9DBC}" ShortID="271134566">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Open_Space_04" ID="{401BA864-8FFD-49F5-9B93-88609D5CDAFC}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Open_Space_05" ID="{ABF6ED91-5AAA-4265-8399-F3C3ADBEFA86}">
+					<ChildrenList>
+						<Action Name="" ID="{502207E0-607E-4F53-A0E5-176E2FD28729}" ShortID="436895669">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Open_Space_05" ID="{7A1E15C7-69C5-427C-9DEF-0E5657E0D1BE}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Open_Space_06" ID="{EE01C01D-5B53-42D5-907E-E4753E4B7ECA}">
+					<ChildrenList>
+						<Action Name="" ID="{85BE014A-2678-40D4-B969-194E6AC47C56}" ShortID="935097744">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Open_Space_06" ID="{6F832C3C-59A4-465D-AA46-85905872B40E}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Tuto_01" ID="{78212A0D-EF7B-4DF2-AA51-F2161A4CA974}">
+					<ChildrenList>
+						<Action Name="" ID="{C7DDA19D-C64F-4C2B-85D6-0BFA171E1273}" ShortID="472279248">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Tuto_01" ID="{CDECB957-75C9-43AD-B225-5133DE08142A}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Tuto_02" ID="{D06A197E-8AAB-4314-B329-A1CE48C3FF5A}">
+					<ChildrenList>
+						<Action Name="" ID="{167D00DE-CBFE-4B93-B152-264C9A247A32}" ShortID="467611089">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Tuto_02" ID="{F7F6D841-81B4-49F5-A616-AB38AAE50D1D}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Tuto_03_1" ID="{F8A6C2CE-6976-42DB-9B18-56B2A8A59132}">
+					<ChildrenList>
+						<Action Name="" ID="{A3F756C3-6EFF-4003-BF65-33EB4F7CEE55}" ShortID="769685565">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Tuto_03_01" ID="{25638686-97DA-4982-B0F6-3EAE5FB1956B}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Tuto_04" ID="{882EED84-1339-4791-A081-A517D142DF34}">
+					<ChildrenList>
+						<Action Name="" ID="{CB18F74C-9939-482F-AC8F-0D0A3F13BA6B}" ShortID="761400689">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Tuto_04" ID="{BAB4B12A-EE67-4E29-B6D9-217792776EC8}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Tuto_05" ID="{61E9E5FF-1F49-4B53-A89D-68125F9080CD}">
+					<ChildrenList>
+						<Action Name="" ID="{05B541BA-BF3A-4D82-AAB2-4930C97BCADE}" ShortID="427275311">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Tuto_05" ID="{336C742E-FD43-4E8B-8125-2ABF3E340F04}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Ad_Announcer_01" ID="{CB8F4E30-1284-4B7C-BDFC-75967BE6E50B}">
+					<ChildrenList>
+						<Action Name="" ID="{FFC966A9-D5CA-4078-9D47-14BA584400F7}" ShortID="419607156">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Ad_Announcer_Cutscene_Beginning_01" ID="{413F4756-5729-4946-AD68-1F118EAE121B}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_AI_Cutscene_01" ID="{2D2ACF4B-BE08-427D-A30D-D7030BF01BEE}">
+					<ChildrenList>
+						<Action Name="" ID="{5A68C92F-8E7A-4D88-AEA4-DD4B774B8D27}" ShortID="160827034">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_AI_Cutscene_Beginning_01" ID="{28B89367-C4AF-479F-975C-5D9C4BFDD1B8}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_AI_Cutscene_02" ID="{B8B38D39-CB16-4536-8446-492DDB15889B}">
+					<ChildrenList>
+						<Action Name="" ID="{C65D7107-713E-4CAF-9FF9-F02759EDE990}" ShortID="265377245">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_AI_Cutscene_Beginning_02" ID="{8B834CED-DB98-431F-94DA-3B5CDEFFDFF6}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_AI_Cutscene_03" ID="{BF5FF91C-101A-4909-9678-024540AC2A6E}">
+					<ChildrenList>
+						<Action Name="" ID="{17D92071-6F93-4B20-A067-2F7C62ACC627}" ShortID="932829922">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_AI_Cutscene_Beginning_03" ID="{C82DC66E-BCF8-49AC-B212-5E990C08422F}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_AI_Cutscene_04" ID="{83CA585C-B847-4A82-8EC0-737A6629A90F}">
+					<ChildrenList>
+						<Action Name="" ID="{A3519873-38A0-41F0-9095-22E02420CAE7}" ShortID="961767497">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_AI_Cutscene_Beginning" ID="{68779D82-7F57-427B-A2F8-07678D8E5CFB}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Open_Space_05_2" ID="{FF055D93-9EB3-4180-9502-F83BDF674020}">
+					<ChildrenList>
+						<Action Name="" ID="{8AC8EAE4-20BD-4184-96C4-7A07E73FEDCE}" ShortID="747483487">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_VOC_CEO_Open_Space_05_02" ID="{705CC047-8884-4B25-BF50-BCF737B897D5}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_01_2" ID="{4C669EB9-A489-4CFC-80A2-F0303C50A161}">
+					<ChildrenList>
+						<Action Name="" ID="{ABD69673-9299-4655-BFC7-99B9554968FE}" ShortID="37293887">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_01_02" ID="{AF8F9D7A-6AF5-4391-BEA4-3F2F7F1C35D3}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Cutscene_Intro_07_2" ID="{3DD32951-2652-4757-84FA-E8C099E33FDB}">
+					<ChildrenList>
+						<Action Name="" ID="{6DAAD03E-668B-4EAD-93C7-ADA92C05CA91}" ShortID="804994502">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Cutscene_Intro_07_02" ID="{15C6283A-BB8A-4152-B04E-D3A1C6C6F999}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Open_Space_03_2" ID="{4DF40944-F8C4-4E3A-8E19-175A1E877B39}">
+					<ChildrenList>
+						<Action Name="" ID="{3606A60D-E728-4369-A753-254270F0806C}" ShortID="788748461">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Tuto_03_02" ID="{50C12BE8-1E71-4397-83C3-64BB6774E49A}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Ad_Announcer_02" ID="{1C2CFEBD-C2F0-4872-9C7D-CE4B50A7667D}">
+					<ChildrenList>
+						<Action Name="" ID="{C4A932BD-2C8A-4A60-8BFB-7E6EF77E2BFE}" ShortID="481861818">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Ad_Announcer_Cutscene_Beginning_02" ID="{F82CCEA0-526D-471F-AA1A-6F3CE7F87250}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Tuto_03_2" ID="{D9CA7649-4485-409B-9F53-0CD796A140BC}">
+					<ChildrenList>
+						<Action Name="" ID="{B7B15227-75E3-456A-A886-243EF450F27E}" ShortID="663805062">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Tuto_03_02" ID="{50C12BE8-1E71-4397-83C3-64BB6774E49A}" WorkUnitID="{2E59EE72-2C1D-43A4-95E1-FB32C6EF0BBC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

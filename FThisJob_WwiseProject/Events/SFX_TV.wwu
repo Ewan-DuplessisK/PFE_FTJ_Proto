@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E713BD40-C262-484D-9B45-9AB7E60279EB}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_TV" ID="{E713BD40-C262-484D-9B45-9AB7E60279EB}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_TV_Hits" ID="{D792EA85-F5AD-4864-9969-0867E9F59965}">
+					<ChildrenList>
+						<Action Name="" ID="{AA4615C9-918A-44B3-9EE9-8DB2BFCD1F68}" ShortID="439441221">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TV_Hits" ID="{2D337B83-9E9C-4D17-AA91-8A223CA50D8C}" WorkUnitID="{E7F067F2-DDE4-4334-A6AE-3441C26434A8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{224980AC-5E5F-4602-9855-33AFA5AF079B}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}">
+	<Events>
+		<WorkUnit Name="AMB_LVL_CEO" ID="{224980AC-5E5F-4602-9855-33AFA5AF079B}" OwnerID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Beds_CeoLarge_LVL_CEO" ID="{08F17198-5B3B-489D-80B9-394C376721C1}">
+					<ChildrenList>
+						<Action Name="" ID="{D6376C8A-BDD0-4FCD-9332-8113A52153B6}" ShortID="241335036">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Beds_Ceo_Large_LP" ID="{60AC5CFC-1C0D-4035-8ABB-68F192999DE3}" WorkUnitID="{294F23D0-5FD4-45B1-8B93-E3284C79DD6D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Beds_CeoSmall_LVL_CEO" ID="{1EA93297-467C-4383-A3FE-E49F70751A37}">
+					<ChildrenList>
+						<Action Name="" ID="{8352560C-AEA1-4957-8A80-9AC803CAA2C3}" ShortID="312635511">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Beds_Ceo_Small_LP" ID="{1C4D1B0B-67C5-43B3-9CA1-E7D4939E865B}" WorkUnitID="{294F23D0-5FD4-45B1-8B93-E3284C79DD6D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

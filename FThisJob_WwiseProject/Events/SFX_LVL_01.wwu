@@ -8,7 +8,7 @@
 						<Action Name="" ID="{D6C39720-FE0D-475E-9C18-235E23727BAF}" ShortID="364657442">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="RC_Water_Impact" ID="{37F9C4F6-5BF3-4914-AA23-57948C4C32FF}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+									<ObjectRef Name="RC_Water_Explosion" ID="{37F9C4F6-5BF3-4914-AA23-57948C4C32FF}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -25,12 +25,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Water_Grab" ID="{565D1F07-667D-4E03-80E6-5FE88F54C3AE}">
+				<Event Name="Water_Fall" ID="{565D1F07-667D-4E03-80E6-5FE88F54C3AE}">
 					<ChildrenList>
 						<Action Name="" ID="{80416915-DE36-4D6F-806E-41CA9018B45B}" ShortID="399332158">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="RC_Water_Grab" ID="{0E9A6B7D-6C37-444B-BDEC-5C71AA25F515}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+									<ObjectRef Name="RC_Water_FallImpact" ID="{0E9A6B7D-6C37-444B-BDEC-5C71AA25F515}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -60,31 +60,10 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{11981DDD-CE6A-4C07-8DCB-D2E32C9B4DBD}" ShortID="279962257">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_Vending_Machine_Voice" ID="{5ED56553-A858-4801-B722-3267D5EDA273}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{1EC86C38-33C0-4835-99AD-ED0D92418653}" ShortID="2143226">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_Vending_Machine_Jingle" ID="{AD0C2808-C104-4F38-9FE3-EA369B98DB72}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{D13B384E-9C93-455E-BBE9-3F10672966E2}" ShortID="526702825">
-							<PropertyList>
-								<Property Name="Probability" Type="Real64" Value="50"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_Vending_Machine_Voice" ID="{5ED56553-A858-4801-B722-3267D5EDA273}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -135,6 +114,138 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="RC_Vending_Machine_Error" ID="{B95243C5-CB07-4D87-8272-58082E26DC63}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Printer_Jam" ID="{E3F32042-3A59-49E7-8CAC-D24E4F7CD9DB}">
+					<ChildrenList>
+						<Action Name="" ID="{F51AE0E6-9DBD-4385-94B2-1A5BE525169F}" ShortID="689598642">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Printer_Jam" ID="{5E744229-CFB0-41A8-855D-838019840C48}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Broom_Impact" ID="{84F256B9-EF41-4ACE-8B25-2C05BD9B72FF}">
+					<ChildrenList>
+						<Action Name="" ID="{7E098A3C-428E-4C1C-8114-A5BF5BA4AA15}" ShortID="1053373805">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Broom" ID="{A675B854-F4B8-45C0-B24E-109F64725A0D}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Keyboard_Impact" ID="{C6A5E515-5FC1-4D79-B0E9-2C8C3DEAC132}">
+					<ChildrenList>
+						<Action Name="" ID="{0137D78D-781A-4AD7-8C17-B801032B4E5B}" ShortID="1063487769">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Keyboard" ID="{F51CBE7B-8025-4A3D-B084-CA1DC1D1A4AC}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Metal_Impact" ID="{4100B74F-A9D6-4EFD-932F-B5DF3B58796D}">
+					<ChildrenList>
+						<Action Name="" ID="{BEE2EA82-255F-4B71-9574-86932DD4F78D}" ShortID="526281827">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Metal" ID="{865918F2-3FAF-412C-B217-BE43048C4EB7}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Paper_Impact" ID="{F720CC3C-7402-4734-A85C-8EA45BE3755D}">
+					<ChildrenList>
+						<Action Name="" ID="{6F528848-F787-4FBE-AC13-1BCFBB3C38C1}" ShortID="873049637">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Paper" ID="{1254C5A2-F2F8-4722-90EA-8369957061BF}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PCTower_Impact" ID="{C53662D9-E27D-481D-9BD0-DBA846791146}">
+					<ChildrenList>
+						<Action Name="" ID="{319840A9-B8CC-4FD1-8143-65E6DB175916}" ShortID="523822255">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_PCTower" ID="{D35C3CF9-2517-4D83-8DE4-C3D5ABE2D49B}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Plastic_Impact" ID="{4B98F397-FC31-4CF4-9B00-0039550DF3F0}">
+					<ChildrenList>
+						<Action Name="" ID="{6EA9EE74-9623-4A27-98FD-6323302F0E73}" ShortID="639298121">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Plastic" ID="{B28178E0-101D-42A2-BEAC-FC78ECEE2C7B}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Glass_Impact" ID="{695880C2-A764-45E2-9B44-DBF8FF0F84B6}">
+					<ChildrenList>
+						<Action Name="" ID="{0ECBA2AA-E242-4963-A2B2-5E7B9F13B743}" ShortID="936652408">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Glass" ID="{4A8AB799-A00B-40FB-9CD8-35D1B60E7041}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Metal_Small_Impact" ID="{C716D0AC-CDAB-4DDD-A085-AB48C1BEF230}">
+					<ChildrenList>
+						<Action Name="" ID="{FC68914A-2BFE-43D5-B53D-7E8D0A2A663B}" ShortID="200169633">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Metal_Small" ID="{30A1C094-6AF9-4118-BA18-60317D9BC7C7}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Phone_Impact" ID="{BD8850F6-6E19-4739-8B05-0915ABF86DB4}">
+					<ChildrenList>
+						<Action Name="" ID="{DE2FB750-1A7E-47A4-9D79-DC171B1F2F24}" ShortID="319615618">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Phone" ID="{B1C70793-C788-4FDD-9A45-15B29BE6FD1E}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Rock_Impact" ID="{2C3775C2-B481-4253-A47C-37AE075D5356}">
+					<ChildrenList>
+						<Action Name="" ID="{EA02C8ED-7F55-47F7-8F14-F3429C719527}" ShortID="553930637">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Rock" ID="{71F492BA-87EA-4E2C-87E1-1CF97F34892C}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Water_Bubble" ID="{9611DB26-8237-43D9-ADBA-4A34AC1A5E0C}">
+					<ChildrenList>
+						<Action Name="" ID="{3AAC13B0-F615-4212-A88C-93B964C7F659}" ShortID="996834423">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Water_Bubble" ID="{612EB001-6C89-4FEC-A988-64BC9BFACC4F}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

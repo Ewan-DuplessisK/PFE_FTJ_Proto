@@ -1,0 +1,183 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1161578709",
+    "Type": "User",
+    "GUID": "{5F00DA19-0412-4933-93F0-9AAF827E80CF}",
+    "Color": "27",
+    "Language": "SFX",
+    "Hash": "{C186A2E0-3292-86C4-F237-5E30B8421191}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOICES\\VOICES_LVL_03\\VOICES_LVL_03",
+    "ShortName": "VOICES_LVL_03",
+    "Path": "VOICES_LVL_03.bnk",
+    "Media": [
+     {
+      "Id": "94179451",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL03\\VOC_Jake_Lab_01.wav",
+      "CachePath": "7A/{7AD122D7-7FAB-63E1-BAB9-3E4ED10F35A0}.wem"
+     },
+     {
+      "Id": "167885643",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL03\\VOC_Jake_Lab_02.wav",
+      "CachePath": "A5/{A5BA795D-F558-E99E-A388-72B079FF47E3}.wem"
+     },
+     {
+      "Id": "178594592",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL03\\VOC_AI.wav",
+      "CachePath": "B0/{B08565BD-635B-B879-713A-647C7F3E4B66}.wem"
+     },
+     {
+      "Id": "203691350",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\SFX_Alarm.wav",
+      "CachePath": "72/{72E90588-36A8-3C92-6D82-1994C13189FB}.wem"
+     },
+     {
+      "Id": "289476327",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL03\\VOC_CEO_Lab_02.wav",
+      "CachePath": "5F/{5F12286B-DBB0-CF6A-90C8-237EBD5B23C9}.wem"
+     },
+     {
+      "Id": "376798040",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL03\\VOC_CEO_Lab_01.wav",
+      "CachePath": "79/{79EA7EC1-8C43-E1A0-1D3A-6E78C03B2509}.wem"
+     },
+     {
+      "Id": "624129109",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL03\\VOC_CEO_Lab_03.wav",
+      "CachePath": "12/{12F17E5D-0004-27D9-2599-51055D3E369F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3069319072",
+      "Name": "VOC_AI_Lab",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_03\\VOC_AI_Lab",
+      "GUID": "{E6CB9485-BDB6-4470-ACEF-B5374E481DC9}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "8.333333",
+      "DurationMax": "8.333333",
+      "MediaRefs": [
+       {
+        "Id": "178594592"
+       },
+       {
+        "Id": "203691350"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "1744732112",
+        "Name": "RVB_BIG_ROOM",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB_BIG_ROOM",
+        "GUID": "{D2A20092-DEE8-44A6-98B2-AA770CE07948}"
+       }
+      ]
+     },
+     {
+      "Id": "1709258917",
+      "Name": "VOC_CEO_Lab_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_03\\VOC_CEO_Lab_01",
+      "GUID": "{9FEE63B3-7702-472A-9079-AF34991768F8}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "11.238937",
+      "DurationMax": "11.238937",
+      "MediaRefs": [
+       {
+        "Id": "376798040"
+       }
+      ]
+     },
+     {
+      "Id": "1709258918",
+      "Name": "VOC_CEO_Lab_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_03\\VOC_CEO_Lab_02",
+      "GUID": "{B4344611-FAF4-4840-90F1-5FBF0D8F1E2B}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "6.921625",
+      "DurationMax": "6.921625",
+      "MediaRefs": [
+       {
+        "Id": "289476327"
+       }
+      ]
+     },
+     {
+      "Id": "1709258919",
+      "Name": "VOC_CEO_Lab_03",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_03\\VOC_CEO_Lab_03",
+      "GUID": "{9E62A850-442D-45D4-923B-B7ECAC3F9AEE}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2",
+      "DurationMax": "1.2",
+      "MediaRefs": [
+       {
+        "Id": "624129109"
+       }
+      ]
+     },
+     {
+      "Id": "3498193821",
+      "Name": "VOC_Jake_Lab_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_03\\VOC_Jake_Lab_01",
+      "GUID": "{C9DB9A0D-94D4-4421-B453-B5031B01B6CC}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "3.499854",
+      "DurationMax": "3.499854",
+      "MediaRefs": [
+       {
+        "Id": "94179451"
+       }
+      ]
+     },
+     {
+      "Id": "3498193822",
+      "Name": "VOC_Jake_Lab_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_03\\VOC_Jake_Lab_02",
+      "GUID": "{F400C38D-FC82-4E37-AEB5-3541B6F2333D}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "2.0594168",
+      "DurationMax": "2.0594168",
+      "MediaRefs": [
+       {
+        "Id": "167885643"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{52A50C92-C780-B848-5F03-1D99A573F3AF}"
+ }
+}

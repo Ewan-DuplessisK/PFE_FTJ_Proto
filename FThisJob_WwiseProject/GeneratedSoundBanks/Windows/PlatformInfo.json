@@ -18,7 +18,7 @@
    "CopyLooseStreamedMediaFiles": "true",
    "SubFoldersForGeneratedFiles": "false",
    "RemoveUnusedGeneratedFiles": "true",
-   "SourceControlGeneratedFiles": "false",
+   "SourceControlGeneratedFiles": "true",
    "GenerateHeaderFile": "false",
    "GenerateContentTxtFile": "true",
    "GenerateMetadataXML": "false",
@@ -33,6 +33,6 @@
    "PrintObjectPath": "true",
    "PrintObjectColor": "true"
   },
-  "FileHash": "{CE4018BF-AE8E-5A65-3A1C-3B9E49CCB1C9}"
+  "FileHash": "{2830F3DF-C309-D410-E387-A4470923EE11}"
  }
 }

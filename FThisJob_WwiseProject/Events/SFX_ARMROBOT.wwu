@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{16F3AB75-A504-4F94-905E-0101781A5631}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_ARMROBOT" ID="{16F3AB75-A504-4F94-905E-0101781A5631}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_ArmRobot_Dead" ID="{7C80CF88-F357-43BC-B8A8-66CAC45D0BDE}">
+					<ChildrenList>
+						<Action Name="" ID="{0EDACE7C-A3A0-416E-A6E1-ADE6F4ACAD6A}" ShortID="630485037">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_ArmRobot_Dead" ID="{439EE3DB-6763-4E83-8837-DAA34B68F128}" WorkUnitID="{F08FF08F-F7E8-4009-8ABF-1EC041CACC02}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

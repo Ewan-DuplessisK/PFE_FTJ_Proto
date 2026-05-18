@@ -1,5 +1,135 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	230524004	STG_MUSIC_LEVEL_ID			\MUSIC\STG_MUSIC_LEVEL_ID	
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	897720240	MC_RunWalk			\MC\MC_RunWalk	
+	946296110	UI_Score_Multiplier			\UI\UI_Score_Multiplier	
+	1123292758	STG_MUTEMUSIC			\MUSIC\STG_MUTEMUSIC	
+	1749661736	STG_MUSICDUCK			\MUSIC\STG_MUSICDUCK	
+	1876089722	STG_MUSIC_GAMEPLAY			\MUSIC\STG_MUSIC_GAMEPLAY	
+	1910067948	STG_MUSIC_MASTER			\MUSIC\STG_MUSIC_MASTER	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	2120147600	MC_KickMaterials			\MC\MC_KickMaterials	
+	2552542987	AMB_Menu			\AMB\AMB_Menu	
+	2925743549	STG_DUCKPAUSE			\UI\STG_DUCKPAUSE	
+	3340000849	MC_Vaccum_Duck			\MC\MC_Vaccum_Duck	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	STG_MUSIC_LEVEL_ID			
+	846576936	ST_LEVEL_02	STG_MUSIC_LEVEL_ID			
+	846576937	ST_LEVEL_03	STG_MUSIC_LEVEL_ID			
+	846576939	ST_LEVEL_01	STG_MUSIC_LEVEL_ID			
+	846576942	ST_LEVEL_04	STG_MUSIC_LEVEL_ID			
+	1309654229	ST_LEVEL_Boss	STG_MUSIC_LEVEL_ID			
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	712161704	Run	MC_RunWalk			
+	748895195	None	MC_RunWalk			
+	2108779966	Walk	MC_RunWalk			
+	84696428	S	UI_Score_Multiplier			
+	84696441	F	UI_Score_Multiplier			
+	84696442	E	UI_Score_Multiplier			
+	84696443	D	UI_Score_Multiplier			
+	84696444	C	UI_Score_Multiplier			
+	84696445	B	UI_Score_Multiplier			
+	84696446	A	UI_Score_Multiplier			
+	748895195	None	UI_Score_Multiplier			
+	748895195	None	STG_MUTEMUSIC			
+	1729289368	ST_ON	STG_MUTEMUSIC			
+	3534829270	ST_OFF	STG_MUTEMUSIC			
+	748895195	None	STG_MUSICDUCK			
+	1729289368	ST_ON	STG_MUSICDUCK			
+	3534829270	ST_OFF	STG_MUSICDUCK			
+	748895195	None	STG_MUSIC_GAMEPLAY			
+	777581536	ST_Arena	STG_MUSIC_GAMEPLAY			
+	1149269995	ST_Fight	STG_MUSIC_GAMEPLAY			
+	2256071962	ST_Calm	STG_MUSIC_GAMEPLAY			
+	393732332	ST_InLevel	STG_MUSIC_MASTER			
+	748895195	None	STG_MUSIC_MASTER			
+	1584013055	ST_Victory	STG_MUSIC_MASTER			
+	1823901586	ST_Defeat	STG_MUSIC_MASTER			
+	4098790517	ST_Elevator	STG_MUSIC_MASTER			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	MC_KickMaterials			
+	1877847629	Door	MC_KickMaterials			
+	2449969375	Glass	MC_KickMaterials			
+	4036634340	Machine	MC_KickMaterials			
+	4294388576	Generic	MC_KickMaterials			
+	748895195	None	AMB_Menu			
+	2368844905	Enter	AMB_Menu			
+	3930794392	Quit	AMB_Menu			
+	748895195	None	STG_DUCKPAUSE			
+	930712164	OFF	STG_DUCKPAUSE			
+	1651971902	ON	STG_DUCKPAUSE			
+	748895195	None	MC_Vaccum_Duck			
+	930712164	Off	MC_Vaccum_Duck			
+	1651971902	On	MC_Vaccum_Duck			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	1400970647	RTPC_Music_SideChain_VOICEREACTION			\MUSIC\RTPC_Music_SideChain_VOICEREACTION	
+	1596647065	RTPC_Music_Volume			\UI\RTPC_Music_Volume	
+	1828041389	RTPC_Music_SideChain			\MUSIC\RTPC_Music_SideChain	
+	1998977308	RTPC_Voice_Volume			\UI\RTPC_Voice_Volume	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	169480389	AB_ENEMIES_01			\Default Work Unit\Master Audio Bus\ENEMIES\AB_ENEMIES\AB_ENEMIES_01	
+	169480390	AB_ENEMIES_02			\Default Work Unit\Master Audio Bus\ENEMIES\AB_ENEMIES\AB_ENEMIES_02	
+	169480391	AB_ENEMIES_03			\Default Work Unit\Master Audio Bus\ENEMIES\AB_ENEMIES\AB_ENEMIES_03	
+	211474678	AB_SFX_GLOBAL			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_GLOBAL	
+	362545227	AB_MC			\Default Work Unit\Master Audio Bus\MC\AB_MC	
+	678591936	AB_VOICES_REACTION			\Default Work Unit\Master Audio Bus\VOICES\AB_VOICES_REACTION	
+	1261969274	AB_VOICES			\Default Work Unit\Master Audio Bus\VOICES\AB_VOICES	
+	1325162719	AB_AMB_LABORATORY			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_LABORATORY	
+	1485142487	AB_GPE			\Default Work Unit\Master Audio Bus\GPE\AB_GPE	
+	1650947108	AB_SFX			\Default Work Unit\Master Audio Bus\SFX\AB_SFX	
+	1669415112	AB_SFX_LVL_02			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_LVL_02	
+	1669415113	AB_SFX_LVL_03			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_LVL_03	
+	1669415115	AB_SFX_LVL_01			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_LVL_01	
+	1770656193	AB_AMB			\Default Work Unit\Master Audio Bus\AMB\AB_AMB	
+	1818530009	AB_ENEMIES			\Default Work Unit\Master Audio Bus\ENEMIES\AB_ENEMIES	
+	1823876527	AB_VOICES_AI			\Default Work Unit\Master Audio Bus\VOICES\AB_VOICES_AI	
+	1943276111	AB_AMB_CEO			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_CEO	
+	2114868313	AB_AMB_MENU			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_MENU	
+	2293551212	AB_MUSIC			\Default Work Unit\Master Audio Bus\MUSIC\AB_MUSIC	
+	2486910110	AB_AMB_TUTO			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_TUTO	
+	3210875680	AB_AMB_OPEN_OFFICE_02			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_OPEN_OFFICE_02	
+	3210875683	AB_AMB_OPEN_OFFICE_01			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_OPEN_OFFICE_01	
+	3352592138	AB_CINEMATIC			\Default Work Unit\Master Audio Bus\CINEMATIC\AB_CINEMATIC	
+	3565491920	AB_GPE_LVL_03			\Default Work Unit\Master Audio Bus\GPE\AB_GPE\AB_GPE_LVL_03	
+	3565491921	AB_GPE_LVL_02			\Default Work Unit\Master Audio Bus\GPE\AB_GPE\AB_GPE_LVL_02	
+	3565491922	AB_GPE_LVL_01			\Default Work Unit\Master Audio Bus\GPE\AB_GPE\AB_GPE_LVL_01	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	4254849545	AB_UI			\Default Work Unit\Master Audio Bus\UI\AB_UI	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	494558396	RVB_CANTEEN_ROOM			\Default Work Unit\Master Audio Bus\RVB_CANTEEN_ROOM	
+	1134097283	RVB_GARAGE_ROOM			\Default Work Unit\Master Audio Bus\RVB_GARAGE_ROOM	
+	1285302765	RVB_SMALL_ROOM			\Default Work Unit\Master Audio Bus\RVB_SMALL_ROOM	
+	1744732112	RVB_BIG_ROOM			\Default Work Unit\Master Audio Bus\RVB_BIG_ROOM	
+	2553836195	RVB_TOILET_ROOM			\Default Work Unit\Master Audio Bus\RVB_TOILET_ROOM	
+	2554301646	COMPRESSION_VOICE			\Default Work Unit\Master Audio Bus\COMPRESSION_VOICE	
+	3272471469	RVB_WAITING_ROOM			\Default Work Unit\Master Audio Bus\RVB_WAITING_ROOM	
+	4159428109	RVB_MEDIUM_ROOM			\Default Work Unit\Master Audio Bus\RVB_MEDIUM_ROOM	
+
+Effect plug-ins	ID	Name	Type				Notes
+	384003578	Meter (Custom)	Wwise Meter			
+	462187169	Compressor (Custom)	Wwise Compressor			
+	535667444	Bathroom1	Wwise Matrix Reverb			
+	992902880	Small_Tiled_Room1	Wwise Matrix Reverb			
+	1072384616	Meter (Custom)	Wwise Meter			
+	1706684651	Plate_Medium	Wwise RoomVerb			
+	1904434771	Medium_Room1	Wwise Matrix Reverb			
+	1990128658	Room_Medium	Wwise RoomVerb			
+	3546444380	Big_Garage1	Wwise Matrix Reverb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

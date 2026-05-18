@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{3C794BBE-5F60-40DF-881B-138623497689}">
+	<Events>
+		<WorkUnit Name="SFX_GLOBAL" ID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" OwnerID="{3C794BBE-5F60-40DF-881B-138623497689}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="SFX_DESTRUCTION" ID="{CB2DDF1C-C81F-4031-A6BE-E9BFF90D7B8B}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_DOOR" ID="{F830C0FE-E3AB-4245-997C-C0CB614FAAD0}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_UI" ID="{8EBDD440-45A9-4D39-A9E7-91DBB72F70A5}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_ELEVATOR" ID="{50BACD14-1621-446E-9115-D07B7950E75D}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_GATE" ID="{0A8B1FED-89E1-4A33-B38D-EECEBB768705}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_TOILET_BATHROOM" ID="{4BA7FDD0-B366-4BA7-AEF7-D489B5A019B6}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_DUCK" ID="{60F366D7-08C2-4D17-A507-58CBA1F25EF3}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_MENU_WHOOSH" ID="{CC20FAE9-9DE1-4AE2-B824-9B0C83498575}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_FINISH" ID="{A0635C1A-D34F-4B5A-96F1-5F74EB095E19}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_PRESSURE" ID="{FD2A2B62-CFF4-4B21-AD04-B46AD4FFE5CA}" PersistMode="Reference"/>
+				<Event Name="SFX_GameOver" ID="{E76FE282-E35F-41E1-B252-16CC55774190}">
+					<ChildrenList>
+						<Action Name="" ID="{DC0620A0-574F-409D-8DF8-9695835CC9FF}" ShortID="111264677">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Game_Over" ID="{6AC29F9B-8024-46D6-A232-ABEA64667AAA}" WorkUnitID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<WorkUnit Name="SFX_TV" ID="{E713BD40-C262-484D-9B45-9AB7E60279EB}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_ARMROBOT" ID="{16F3AB75-A504-4F94-905E-0101781A5631}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_CHEESE" ID="{B5411A1B-E26B-44D1-B2ED-D9204CA5F845}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_SLOWMO" ID="{11F5A011-3997-4C9C-A18D-955213F50FD7}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_POOP" ID="{5A48A10F-6843-4998-B20F-4B1DF08D5A65}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_ELECTRICITY" ID="{B636FA0F-767A-4D5B-9F18-1F6FF8B96305}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

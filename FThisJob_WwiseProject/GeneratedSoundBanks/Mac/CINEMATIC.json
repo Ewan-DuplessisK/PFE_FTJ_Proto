@@ -1,0 +1,211 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1838596016",
+    "Type": "User",
+    "GUID": "{B7EF423C-4B8B-40B1-BCFF-C4CD9F601194}",
+    "Color": "6",
+    "Language": "SFX",
+    "Hash": "{3C47DF44-4388-CE31-7244-22775370B8FD}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\CINEMATIC\\CINEMATIC",
+    "ShortName": "CINEMATIC",
+    "Path": "CINEMATIC.bnk",
+    "Media": [
+     {
+      "Id": "101227745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CINEMATIC\\CINEMATIC_TUTO_Intro.wav",
+      "CachePath": "75/{759CDA15-8961-0CD3-D76F-AC16C28F2BEB}.wem"
+     },
+     {
+      "Id": "231724061",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CINEMATIC\\CINEMATIC_AMB_Credit_JakeTalking.wav",
+      "CachePath": "53/{53533D1A-9AD3-EEDB-0EBE-B681E389BABB}.wem"
+     },
+     {
+      "Id": "363210994",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CINEMATIC\\CINEMATIC_CEO_Boss_Death.wav",
+      "CachePath": "76/{76F1D754-4440-9AB1-B6F9-6E965B15ED48}.wem"
+     },
+     {
+      "Id": "585842975",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CINEMATIC_End_Ceo.wav",
+      "CachePath": "B6/{B6C63A1F-9FE7-EC93-E2E5-483C2A8A0091}.wem"
+     },
+     {
+      "Id": "695004644",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CINEMATIC\\CINEMATIC_Credit_Hits_FTJ.wav",
+      "CachePath": "F0/{F0CEEA58-9558-8E2A-2768-CAFE62940D28}.wem"
+     },
+     {
+      "Id": "829787062",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CINEMATIC\\CINEMATIC_Open_Space_2.wav",
+      "CachePath": "E8/{E83C2DFD-1589-D8E0-0E98-0C8247616443}.wem"
+     },
+     {
+      "Id": "861306818",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CINEMATIC\\CINEMATIC_CEO_Boss_Scene.wav",
+      "CachePath": "95/{95304A7A-3582-AC5B-27BC-2740A4F075E1}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2731504652",
+      "Name": "Cinematic_AMB_CreditJake",
+      "ObjectPath": "\\Events\\Default Work Unit\\CINEMATIC\\Cinematic_AMB_CreditJake",
+      "GUID": "{CCC33D63-D2FC-401B-921E-1A8DA4A1AEC5}",
+      "Color": "6",
+      "DurationType": "OneShot",
+      "DurationMin": "30.216667",
+      "DurationMax": "30.216667",
+      "MediaRefs": [
+       {
+        "Id": "231724061"
+       }
+      ]
+     },
+     {
+      "Id": "1285739534",
+      "Name": "Cinematic_CEO_Boss",
+      "ObjectPath": "\\Events\\Default Work Unit\\CINEMATIC\\Cinematic_CEO_Boss",
+      "GUID": "{26575903-D266-41D5-8A15-935F9AC82987}",
+      "Color": "6",
+      "DurationType": "OneShot",
+      "DurationMin": "36.779102",
+      "DurationMax": "36.779102",
+      "MediaRefs": [
+       {
+        "Id": "861306818"
+       }
+      ]
+     },
+     {
+      "Id": "3887018901",
+      "Name": "Cinematic_CEO_Death",
+      "ObjectPath": "\\Events\\Default Work Unit\\CINEMATIC\\Cinematic_CEO_Death",
+      "GUID": "{ECF49889-F2C0-4DE5-BC54-14EE9E75869E}",
+      "Color": "6",
+      "DurationType": "OneShot",
+      "DurationMin": "7.376741",
+      "DurationMax": "7.376741",
+      "MediaRefs": [
+       {
+        "Id": "363210994"
+       }
+      ]
+     },
+     {
+      "Id": "3996600900",
+      "Name": "Cinematic_End_Ceo",
+      "ObjectPath": "\\Events\\Default Work Unit\\CINEMATIC\\Cinematic_End_Ceo",
+      "GUID": "{BE499E00-7180-435C-9C52-1935EE909758}",
+      "Color": "6",
+      "DurationType": "OneShot",
+      "DurationMin": "8.5",
+      "DurationMax": "8.5",
+      "MediaRefs": [
+       {
+        "Id": "585842975"
+       }
+      ]
+     },
+     {
+      "Id": "2960963571",
+      "Name": "Cinematic_OpenSpace2",
+      "ObjectPath": "\\Events\\Default Work Unit\\CINEMATIC\\Cinematic_OpenSpace2",
+      "GUID": "{30778327-7A62-4B36-A199-6C7766587B0D}",
+      "Color": "6",
+      "DurationType": "OneShot",
+      "DurationMin": "6.0833335",
+      "DurationMax": "6.0833335",
+      "MediaRefs": [
+       {
+        "Id": "829787062"
+       }
+      ]
+     },
+     {
+      "Id": "3789567414",
+      "Name": "Cinematic_Tuto_Intro",
+      "ObjectPath": "\\Events\\Default Work Unit\\CINEMATIC\\Cinematic_Tuto_Intro",
+      "GUID": "{06338019-B598-4346-8C01-1B0A31F0DAEA}",
+      "Color": "6",
+      "DurationType": "OneShot",
+      "DurationMin": "51.116665",
+      "DurationMax": "51.116665",
+      "MediaRefs": [
+       {
+        "Id": "101227745"
+       }
+      ]
+     },
+     {
+      "Id": "360225307",
+      "Name": "VOC_CINEMATIC_Hits_FTJ",
+      "ObjectPath": "\\Events\\Default Work Unit\\CINEMATIC\\VOC_CINEMATIC_Hits_FTJ",
+      "GUID": "{A53B3994-E7EE-4AC9-9A12-37330FE0ED14}",
+      "Color": "6",
+      "DurationType": "OneShot",
+      "DurationMin": "5.0666666",
+      "DurationMax": "5.0666666",
+      "MediaRefs": [
+       {
+        "Id": "695004644"
+       }
+      ]
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "3352592138",
+      "Name": "AB_CINEMATIC",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\CINEMATIC\\AB_CINEMATIC",
+      "GUID": "{B1F2DC65-F93B-48C1-B578-10C739F994E3}",
+      "Color": "6"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E9731D5F-2C90-EDB2-BDD2-3716EF39C630}"
+ }
+}

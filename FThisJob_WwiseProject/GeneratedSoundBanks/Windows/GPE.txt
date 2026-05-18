@@ -1,0 +1,28 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1485142487	AB_GPE			\Default Work Unit\Master Audio Bus\GPE\AB_GPE	
+	3565491920	AB_GPE_LVL_03			\Default Work Unit\Master Audio Bus\GPE\AB_GPE\AB_GPE_LVL_03	
+	3565491921	AB_GPE_LVL_02			\Default Work Unit\Master Audio Bus\GPE\AB_GPE\AB_GPE_LVL_02	
+	3565491922	AB_GPE_LVL_01			\Default Work Unit\Master Audio Bus\GPE\AB_GPE\AB_GPE_LVL_01	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4BA7FDD0-B366-4BA7-AEF7-D489B5A019B6}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_TOILET_BATHROOM" ID="{4BA7FDD0-B366-4BA7-AEF7-D489B5A019B6}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Toilet_Open" ID="{E82B19CA-F20F-4BB5-B95C-2C2F3ADB449B}">
+					<ChildrenList>
+						<Action Name="" ID="{931B607F-9BFC-4C9C-8CE6-3213FCC9936A}" ShortID="801373919">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Toilet_Open" ID="{EDCA4F4F-2424-4671-8C09-F0BDCB180C78}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Toilet_Close" ID="{B3EEAB15-94F0-4DEA-AEE6-6AEB51DEA0E4}">
+					<ChildrenList>
+						<Action Name="" ID="{561A6283-20B1-4FEC-83CB-DC2B08C44CF3}" ShortID="622495378">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Toilet_Close" ID="{4FCEDA18-4C3A-4529-A103-A242CADC2180}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3B00D482-06EC-4972-AE40-511177E5AA9A}" ShortID="702533520">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_PoopClose" ID="{03337BF1-41C4-4330-9761-C7F9857CA77D}" WorkUnitID="{93DA7771-801B-4BAC-A0A9-B97125908F5E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

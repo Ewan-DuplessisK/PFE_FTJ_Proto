@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6FFAA1F0-046F-471A-9A96-2CD3C146C1D2}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}">
+	<Events>
+		<WorkUnit Name="MC_KICK_WU" ID="{6FFAA1F0-046F-471A-9A96-2CD3C146C1D2}" OwnerID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="MC_FOL_Kick" ID="{5A484656-AB0C-47F4-A8C7-DDE8BE816E21}">
+					<ChildrenList>
+						<Action Name="" ID="{616C30CC-1E53-4E28-87EB-06E05878CF4F}" ShortID="891526996">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_FOL_Kick" ID="{C19BEF88-B8C4-4BE2-B0A7-B16119608489}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BB4DCEA1-BCB4-440A-A54D-A5CD3987618C}" ShortID="687126132">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C86EB654-637A-4EF1-A7A7-96E71B17E0FF}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOICES_Jake_Kick" ID="{B6576876-54C8-496A-ACC7-F6ABE4267FB5}" WorkUnitID="{B7D81390-F29E-47DE-874A-A1BC906853B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick" ID="{39C1E57B-E04E-4098-85FE-23DE85DEC499}">
+					<ChildrenList>
+						<Action Name="" ID="{2A1200B7-A86E-4DE0-AC5E-CEE96116E9E7}" ShortID="937368513">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick" ID="{C5DC4700-0EAD-4468-8C59-30B2E02489EB}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Generic" ID="{5740595E-041B-4425-ABDE-3F64F5581BDB}">
+					<ChildrenList>
+						<Action Name="" ID="{7A2952E7-12E0-4C57-9E05-6CD5DD2087F6}" ShortID="731243730">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Generic" ID="{4B57F268-D390-4914-8480-F8C332A4A7C4}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Glass" ID="{7D30A891-ACC7-4F71-BF91-D6AE7655DC8A}">
+					<ChildrenList>
+						<Action Name="" ID="{22B9AE01-DBC7-4CA3-89D8-26EF1CEA4F2E}" ShortID="511778245">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Glass" ID="{54935D6B-958B-4699-93A6-5FC5D6477294}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Machine" ID="{4B124FDD-ABB0-4A9A-A6E7-8061B0C063FA}">
+					<ChildrenList>
+						<Action Name="" ID="{F9E5A952-98F8-442C-B2CD-DE1213A7A401}" ShortID="923946238">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Machine" ID="{690D5401-1D6E-433D-AE80-AE3E2CFB2B65}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Door" ID="{888A863F-B778-4263-BB79-E85019D423BD}">
+					<ChildrenList>
+						<Action Name="" ID="{34E4F7FB-9284-484C-88FD-0C755EEC8FD0}" ShortID="525357205">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Door" ID="{3A505A2E-3EC4-4D0D-A20D-63D85B1C292D}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Toilet_Open" ID="{565B47CF-E7E9-4835-8C7C-8147B47BF737}">
+					<ChildrenList>
+						<Action Name="" ID="{B48EC203-8678-4F22-A5CC-A6B739EED53C}" ShortID="247556240">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Toilet" ID="{94212D26-9F99-4C7B-8AFC-010696198256}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{82215852-E6CE-4F23-94D5-F398781AC303}" ShortID="817914892">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Toilet_Open" ID="{EDCA4F4F-2424-4671-8C09-F0BDCB180C78}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Toilet_Close" ID="{C488444A-ECDB-4755-B950-AF2728F16FFF}">
+					<ChildrenList>
+						<Action Name="" ID="{6484C0D8-28F3-49A7-80F5-5B65EFAB2881}" ShortID="468446039">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Toilet" ID="{94212D26-9F99-4C7B-8AFC-010696198256}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1959CAC1-3FE3-43F7-AB10-AA09D696E1E2}" ShortID="522289807">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Toilet_Close" ID="{4FCEDA18-4C3A-4529-A103-A242CADC2180}" WorkUnitID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BE6DBC88-C35B-48B3-816C-D0D1F6CC8AC3}" ShortID="651751502">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_PoopClose" ID="{03337BF1-41C4-4330-9761-C7F9857CA77D}" WorkUnitID="{93DA7771-801B-4BAC-A0A9-B97125908F5E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Trash" ID="{E20128C5-E428-456A-A624-E543EFB8BE17}">
+					<ChildrenList>
+						<Action Name="" ID="{F3D7D9F6-5F21-4CCD-A0AE-6D22245BA754}" ShortID="74670138">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Trash" ID="{77752D08-D0CB-45D2-B5D9-E14AB4933240}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C5A1945D-E32B-4073-A8F7-EF989FB4E6CF}" ShortID="1010707608">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TrashFly" ID="{04D03CEF-C74E-473D-84F6-C42FD1D55CDE}" WorkUnitID="{F20539F4-9FE1-4822-B4C8-5E3AFD000F40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Trash_Lid" ID="{65BA65FD-9868-466D-9591-ABBD9DC07970}">
+					<ChildrenList>
+						<Action Name="" ID="{B8A05D26-4450-4F05-B240-5D9265E097A2}" ShortID="782689356">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Trash_Lid" ID="{F701475F-1A49-4E09-967F-58D0F155D67E}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{606C9665-79C2-4AE3-A9EA-F5CB51BE1B50}" ShortID="564231326">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TrashFly" ID="{04D03CEF-C74E-473D-84F6-C42FD1D55CDE}" WorkUnitID="{F20539F4-9FE1-4822-B4C8-5E3AFD000F40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Desk" ID="{AF8C7912-F688-4599-B1C5-A1B9EC4AE9C7}">
+					<ChildrenList>
+						<Action Name="" ID="{E29F7560-6B58-42CE-A2EB-5E0B6E651831}" ShortID="398383985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Desk" ID="{7E0DD176-04B4-4DC9-B6F8-057577FD7A0B}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Statue" ID="{CCD9533B-2026-4171-8D93-2CF3FB109620}">
+					<ChildrenList>
+						<Action Name="" ID="{F9FA0F8C-AE9D-4AB3-8F72-4252A62594BC}" ShortID="1071857134">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Statue" ID="{48F4C49B-A0FC-4B23-AABA-CF43EB056E65}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_WaterMachine" ID="{350FEAC1-11D3-4F6C-A18C-9FF4ACEA2F11}">
+					<ChildrenList>
+						<Action Name="" ID="{E62F6FE7-2637-4C92-B388-2FE61123067A}" ShortID="635958986">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_WaterMachine" ID="{ABB89B68-879C-436D-B37E-B3A8B24C268C}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Server" ID="{5A434823-7D94-4459-BF3A-E2BE71459A7C}">
+					<ChildrenList>
+						<Action Name="" ID="{3D268324-E638-452D-8968-DD919DD7C5F0}" ShortID="80462704">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Server" ID="{7FADBBD0-517A-4499-A5A8-2095558DB310}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_DoorBoss" ID="{86CF863D-3961-4D8D-87E5-0077EC50F81B}">
+					<ChildrenList>
+						<Action Name="" ID="{6208AB35-FC53-4E80-86C6-3CEE8C9B6506}" ShortID="311131117">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_DoorBoss" ID="{6EB1AEA1-AC14-4692-86B8-510274E84414}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Projector" ID="{AAA18906-7B73-4ABF-BB52-E3FCCFCFD771}">
+					<ChildrenList>
+						<Action Name="" ID="{4472313A-2819-45AA-950A-54CCC82179CA}" ShortID="742801933">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Projector" ID="{AB985ECC-6091-4572-B1AC-A05BC816CB88}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MC_Kick_Hamster_Wheel" ID="{D1C78A24-B4D2-4381-9558-22EFAC121493}">
+					<ChildrenList>
+						<Action Name="" ID="{348CC98D-CABF-45ED-9B3D-27FC8F85911F}" ShortID="553039186">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Hamster_Wheel" ID="{534D8706-31ED-45DD-822B-514B755C17A8}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C9928FDF-699A-4952-9406-D7C00733E8AB}" ShortID="785190985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_Kick_Hamster_Wheel" ID="{534D8706-31ED-45DD-822B-514B755C17A8}" WorkUnitID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,43 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1838682601	Beds_Construction_LVL_TUTO			\Default Work Unit\AMB\AMB_LVL_TUTO\Beds_Construction_LVL_TUTO	
+	3945902764	Beds_Office_LVL_TUTO			\Default Work Unit\AMB\AMB_LVL_TUTO\Beds_Office_LVL_TUTO	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	1876089722	STG_MUSIC_GAMEPLAY			\MUSIC\STG_MUSIC_GAMEPLAY	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	2925743549	STG_DUCKPAUSE			\UI\STG_DUCKPAUSE	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_MUSIC_GAMEPLAY			
+	777581536	ST_Arena	STG_MUSIC_GAMEPLAY			
+	1149269995	ST_Fight	STG_MUSIC_GAMEPLAY			
+	2256071962	ST_Calm	STG_MUSIC_GAMEPLAY			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	STG_DUCKPAUSE			
+	930712164	OFF	STG_DUCKPAUSE			
+	1651971902	ON	STG_DUCKPAUSE			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1770656193	AB_AMB			\Default Work Unit\Master Audio Bus\AMB\AB_AMB	
+	2486910110	AB_AMB_TUTO			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_TUTO	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	718384517	AMB_BEDS_TUTO_Construction_LP	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\D6\{D6D77CC2-FA4E-96B4-63A8-FC77F1BD2C59}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_TUTO\AM_AMB_LVL_TUTO\AM_BEDS\AMB_BEDS_TUTO_Construction_LP		1278653
+	747656257	AMB_BEDS_TUTO_Office_LP	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\C0\{C0DD809F-4A83-A683-6C93-22315B2D7BBE}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_TUTO\AM_AMB_LVL_TUTO\AM_BEDS\AMB_BEDS_TUTO_Office_LP		865746
+

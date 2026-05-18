@@ -1,0 +1,84 @@
+Event	ID	Name			Wwise Object Path	Notes
+	124877840	Turret_Death			\Default Work Unit\ENEMIES\TURRET\Turret_Death	
+	246044385	Turret_Hit			\Default Work Unit\ENEMIES\TURRET\Turret_Hit	
+	645286053	Turret_Bullet_PassBy			\Default Work Unit\ENEMIES\TURRET\Turret_Bullet_PassBy	
+	2647283225	Turret_Disappear			\Default Work Unit\ENEMIES\TURRET\Turret_Disappear	
+	2658411749	Turret_Appear			\Default Work Unit\ENEMIES\TURRET\Turret_Appear	
+	2888394459	Turret_Shoot			\Default Work Unit\ENEMIES\TURRET\Turret_Shoot	
+	2996230726	Turret_Charge			\Default Work Unit\ENEMIES\TURRET\Turret_Charge	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	1828041389	RTPC_Music_SideChain			\MUSIC\RTPC_Music_SideChain	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	169480389	AB_ENEMIES_01			\Default Work Unit\Master Audio Bus\ENEMIES\AB_ENEMIES\AB_ENEMIES_01	
+	1818530009	AB_ENEMIES			\Default Work Unit\Master Audio Bus\ENEMIES\AB_ENEMIES	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1574637	SFX_Robot_Appear_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\1E\{1E056ECA-0D48-F239-C9B3-F5CA94451BB2}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Appear\SFX_Robot_Appear_03		9634
+	15783071	SFX_Robot_Appear_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\06\{062D8CB7-5874-62A2-8BC0-7FBAB621A676}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Appear\SFX_Robot_Appear_02		10296
+	33778773	VOC_Jake_Combat_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\3B\{3BD5BE9F-597F-4C84-B7B6-8365CD8E3959}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_03		5455
+	37212620	SFX_Robot_Bullet_PassBy_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\B7\{B7E8EA90-1E2D-9010-22F6-86909C5B6BA6}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Bullet_PassBy\SFX_Robot_Bullet_PassBy_03		4011
+	46689940	SFX_Robot_Charge_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\DD\{DD8ADF9E-E951-5357-C438-C57977FDCAC5}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Charge\SFX_Robot_Charge_02		17451
+	61687523	VOC_Jake_Combat_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\65\{65CC57C5-9009-D5EE-B333-060F3C17D567}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_01		7451
+	70762498	SFX_Robot_Small_Voice_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\D5\{D505A157-1BD4-B688-C0F8-6A4617F972C4}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\AM_TURRET_Voice\RC_TURRET_Voice_Appear\SFX_Robot_Small_Voice_02		5448
+	103560841	SFX_Robot_Small_Voice_07	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\BE\{BE92C054-81C2-13AF-2338-E087AE56A0F0}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\AM_TURRET_Voice\RC_TURRET_Voice_Damage\SFX_Robot_Small_Voice_07		3087
+	109281745	SFX_Robot_Disappear_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\B6\{B609BD09-2875-6AAA-06E5-FD340B249592}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Disappear\SFX_Robot_Disappear_02		10125
+	120761753	SFX_Robot_Bullet_PassBy_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\BF\{BFAFDB00-24CF-FC9E-B260-2B5890390BE5}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Bullet_PassBy\SFX_Robot_Bullet_PassBy_02		3940
+	141567871	SFX_Robot_Explosion_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\0C\{0C56D3D1-A825-6FCF-C121-31389F8FD793}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Explosion\SFX_Robot_Explosion_03		10935
+	160347885	VOC_Jake_Combat_05	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\D4\{D4FF1B47-1D8F-2427-C667-55E52AE2E6F8}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_05		10097
+	174734452	SFX_Robot_Hit_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\A2\{A29B6368-145E-C32C-DA3F-EC5B0240D349}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Damage\SFX_Robot_Hit_03		7660
+	201168655	SFX_Robot_Small_Voice_06	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\C2\{C238233B-652B-85A1-892F-6293019EFC64}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\AM_TURRET_Voice\RC_TURRET_Voice_Death\SFX_Robot_Small_Voice_06		3238
+	211391567	SFX_Robot_Explosion_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\BC\{BCA1AB51-0E03-2B21-1E2F-100675689927}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Explosion\SFX_Robot_Explosion_02		10943
+	240985668	SFX_Robot_Small_Voice_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\7E\{7E233A9D-8254-6B5F-F62C-6E246E2F23ED}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\AM_TURRET_Voice\RC_TURRET_Voice_Appear\SFX_Robot_Small_Voice_04		6807
+	257863929	SFX_Robot_Hit_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\88\{88730D32-25F4-AD5B-9876-700331CBFF2F}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Damage\SFX_Robot_Hit_04		7110
+	279961866	VOC_Jake_Combat_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\15\{1540ADBD-492F-D1F7-A4FE-C38D6413923A}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_04		4920
+	286642904	VOC_Jake_Combat_13	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\42\{42E62114-A232-550A-B5F4-289154ED7025}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_13		6409
+	288142238	SFX_Robot_Bullet_PassBy_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\EB\{EBA25AF2-53F3-6C52-AF28-244ED3879C00}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Bullet_PassBy\SFX_Robot_Bullet_PassBy_04		3805
+	306073926	SFX_Robot_Appear_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\E6\{E6583DDA-D1DA-CE4A-FE8F-58FC826708BA}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Appear\SFX_Robot_Appear_01		8096
+	307013799	SFX_Robot_Disappear_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\F3\{F35736CC-0CE3-C8BB-88C0-8B3F9EE9ECC1}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Disappear\SFX_Robot_Disappear_01		11044
+	319502260	SFX_Robot_Small_Voice_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\60\{604289AC-1EE8-3664-4623-3A4E6D2E70E1}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\AM_TURRET_Voice\RC_TURRET_Voice_Appear\SFX_Robot_Small_Voice_03		7733
+	337367894	SFX_Robot_Hit_05	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\E7\{E75D89C3-CE9F-873C-CB4E-3FC8EA61D9C6}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Damage\SFX_Robot_Hit_05		6965
+	402622460	SFX_Robot_Small_Voice_05	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\D8\{D8AEE70F-25E4-6A3D-D290-F78FA4B4BD8C}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\AM_TURRET_Voice\RC_TURRET_Voice_Damage\SFX_Robot_Small_Voice_05		3186
+	408532320	SFX_Robot_Charge_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\D1\{D1B73202-1BC2-0FC8-F4F9-198DD7165B88}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Charge\SFX_Robot_Charge_03		17017
+	417871065	VOC_Jake_Combat_10	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\F6\{F6F9BA52-F25A-DF6C-4077-CC2D9E800BAB}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_10		7455
+	442363141	VOC_Jake_Combat_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\FC\{FC0F607A-39EA-5444-6201-193A88A6F240}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_02		9112
+	495853510	SFX_Robot_Small_Voice_08	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\D4\{D4217E46-A28C-B337-20ED-1583060E5D10}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\AM_TURRET_Voice\RC_TURRET_Voice_Death\SFX_Robot_Small_Voice_08		4055
+	500083664	VOC_Jake_Combat_11	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\CF\{CF275DC8-B2B1-50AA-CB0F-029C66AA378A}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_11		6975
+	507113263	VOC_Jake_Combat_15	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\E5\{E5158A85-3434-8381-87F2-B3DECA24A677}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_15		6281
+	528944104	SFX_Robot_Explosion_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\3D\{3D693B01-A225-04DA-8688-869675A4D34A}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Explosion\SFX_Robot_Explosion_01		10241
+	575941717	VOC_Jake_Combat_12	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\14\{14FF07ED-005D-2E6D-37F7-D6366E3EABF0}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_12		6412
+	605545406	VOC_Jake_Combat_14	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\D0\{D0B1C2D6-050D-0181-A4A4-84667CCD5A6E}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_14		6218
+	614374098	SFX_Robot_Disappear_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\0B\{0BB9B231-F839-CD5F-54D9-E63D9363A1FC}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Disappear\SFX_Robot_Disappear_03		9730
+	736654975	SFX_Robot_Shoot_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\FC\{FCAB25A6-5E89-2519-048C-07B1299E72BB}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Shoot\SFX_Robot_Shoot_01		8236
+	742425535	SFX_Robot_Small_Voice_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\27\{2791FEF8-EF8A-94B4-C286-3AB46C4A8DF8}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\AM_TURRET_Voice\RC_TURRET_Voice_Damage\SFX_Robot_Small_Voice_01		4555
+	752299451	SFX_Robot_Shoot_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\FC\{FC13AB74-FAC2-9A56-AEBE-1E1FEA2F026A}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Shoot\SFX_Robot_Shoot_02		8346
+	775794782	SFX_Robot_Hit_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\69\{6931E594-0C2D-A1E5-2FB8-2C07DCF56C3C}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Damage\SFX_Robot_Hit_02		7496
+	785713535	SFX_Robot_Charge_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\F3\{F3742C9E-9203-51DB-CD2D-9D618B3E933F}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Charge\SFX_Robot_Charge_01		17403
+	829377214	VOC_Jake_Combat_16	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\09\{090B305D-4414-E6B2-E6D9-5F7D2D9B37A2}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_16		5351
+	850772921	SFX_Robot_Hit_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\FC\{FCF85FD9-C687-C4D2-7FFF-8ACF42D4B805}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Damage\SFX_Robot_Hit_01		6922
+	889704423	SFX_Robot_Explosion_04	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\E5\{E50C94C9-5663-903A-0412-C3A8054EA511}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Explosion\SFX_Robot_Explosion_04		10223
+	897541544	SFX_Robot_Bullet_PassBy_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\1A\{1A4D6502-255C-85AA-D49B-A6F0F4CA40F3}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Bullet_PassBy\SFX_Robot_Bullet_PassBy_01		5200
+	959307242	SFX_Robot_Shoot_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\CD\{CD934011-17FA-BE48-9839-7DE6137AB58E}.wem		\Actor-Mixer Hierarchy\ENEMIES\AM_ENEMIES\WU_TURRET\AM_TURRET\RC_TURRET_Shoot\SFX_Robot_Shoot_03		6891
+	1020512643	VOC_Jake_Combat_06	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\84\{845989DF-0ED3-BD95-51B8-C815B8C52A9D}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES_Reaction\VOICES_Jake_Combat\VOC_Jake_Combat_06		10140
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F58B1C55-2655-43DF-8109-41D790C9AD41}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}">
+	<Events>
+		<WorkUnit Name="MC_FT" ID="{F58B1C55-2655-43DF-8109-41D790C9AD41}" OwnerID="{A48B5E9A-84D3-4FF7-A151-25F5C3F61CDA}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="MC_FTS" ID="{34436816-185E-4439-A737-43BBFDB3ABA9}">
+					<ChildrenList>
+						<Action Name="" ID="{9B9A359D-0C7C-43D3-88DA-A52D56A075CC}" ShortID="1029375925">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MC_FTS_Walk" ID="{9EB08E37-6581-4C5D-A814-18572CA483FC}" WorkUnitID="{CCE01A69-4571-495E-B73D-20C6CDDCDC6A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{12EBF2FB-F1DE-4EB7-95B6-916F40069FF2}" ShortID="29040446">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_WalkFoleys" ID="{A4315C5B-F403-4384-877E-9E89646414A6}" WorkUnitID="{CCE01A69-4571-495E-B73D-20C6CDDCDC6A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D62C80B4-5111-4B70-8392-09F8807524FE}" SchemaVersion="123" RootDocumentID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}" ParentDocumentID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}">
+	<AudioObjects>
+		<WorkUnit Name="SFX_SPARKS" ID="{D62C80B4-5111-4B70-8392-09F8807524FE}" OwnerID="{2BA1392D-644B-436A-A667-B17A98C20A88}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_SPARKS" ID="{B2B0E108-C7AB-4C65-B64B-0E9423E74790}" ShortID="1072589339">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="SFX_Electrcity" ID="{56EE051D-5474-48D6-BA00-107CE5F02F2B}" ShortID="94106681">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Electricity_01" ID="{D4C99B59-3A68-4B61-BF87-EABD7BB7BDC7}" ShortID="503705677">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electricity_01" ID="{68444F86-2BA3-412D-8B12-37009439DBE3}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Electrecity\SFX_Electricity_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="595250235"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electricity_01" ID="{68444F86-2BA3-412D-8B12-37009439DBE3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electricity_02" ID="{1754178C-ADA5-4ED1-B603-45AB2240A72C}" ShortID="289023642">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electricity_02" ID="{D2DFEDE3-E70D-4528-982D-CF81D0545989}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Electrecity\SFX_Electricity_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="952955763"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electricity_02" ID="{D2DFEDE3-E70D-4528-982D-CF81D0545989}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electricity_03" ID="{70897D91-E922-4784-84D1-D9D18ED6ED5C}" ShortID="184107643">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electricity_03" ID="{5F212A43-44DC-48B1-89DA-8191F1450AF8}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Electrecity\SFX_Electricity_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="157327569"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electricity_03" ID="{5F212A43-44DC-48B1-89DA-8191F1450AF8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="SFX_Sparks_LP" ID="{1BADA4B9-E390-4EEA-9531-E89BB2AE62CB}" ShortID="555102860">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Sparks_LP" ID="{65B4FBEB-9CC9-44F7-A0CD-EA9C09025A16}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\Electrecity\SFX_Sparks_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="604834086"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Sparks_LP" ID="{65B4FBEB-9CC9-44F7-A0CD-EA9C09025A16}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

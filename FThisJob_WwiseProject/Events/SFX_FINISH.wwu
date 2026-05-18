@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A0635C1A-D34F-4B5A-96F1-5F74EB095E19}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_FINISH" ID="{A0635C1A-D34F-4B5A-96F1-5F74EB095E19}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Score_Small_Good" ID="{D28FD9B3-DFA5-4FFE-B8DD-DE6E91BD58BC}">
+					<ChildrenList>
+						<Action Name="" ID="{4AD28F90-A542-4382-9226-D803D386560B}" ShortID="597200951">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Score_Small_Good" ID="{4281D289-441A-461C-808C-CF5CF68FF0D9}" WorkUnitID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Score_Small_Neutral" ID="{4B8D886B-5856-4785-90F2-DACEE37A418F}">
+					<ChildrenList>
+						<Action Name="" ID="{5AE35491-3758-4B10-A5FB-F7826B1AE71F}" ShortID="659340557">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Score_Small_Neutral" ID="{51C131BD-E79A-4A4A-9134-C8822E4E4846}" WorkUnitID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Score_Big_Bad" ID="{BFE93717-B85F-452A-8D76-C762D8582F5C}">
+					<ChildrenList>
+						<Action Name="" ID="{EB453165-B6A8-4B6D-860F-2F59826B959D}" ShortID="492731122">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Finish_Score_Big_Bad" ID="{83E2D457-490B-442A-84BA-D956D5C638B3}" WorkUnitID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Score_Big_Good" ID="{69D213BC-4F1C-46E4-AF7F-059D587149FC}">
+					<ChildrenList>
+						<Action Name="" ID="{F976DCF7-74E6-4B31-ABA5-6F1484D307DF}" ShortID="776721535">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Finish_Score_Big_Good" ID="{8A27FECA-9760-4A2C-B3DE-EB1873689ADF}" WorkUnitID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Score_Big_Neutral" ID="{EADBE441-6F15-466D-89DE-E76EE729BA78}">
+					<ChildrenList>
+						<Action Name="" ID="{23D500A1-57F8-4789-8692-32CDEE988DA7}" ShortID="971930935">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Finish_Score_Big_Neutral" ID="{7CD9E673-0CF7-4691-BED4-64B7D1F8B3AA}" WorkUnitID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Finish_Stamp" ID="{E0E2598E-628A-4FA9-80D4-506BE458F3F4}">
+					<ChildrenList>
+						<Action Name="" ID="{2FFEF647-8A71-46D8-98FC-803B6C385B2E}" ShortID="926300756">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Finish_Stamp" ID="{2AF4133F-B77A-4E62-A13A-1C1D8A7FF5DB}" WorkUnitID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Finish_Start" ID="{059E1A08-1C95-49D7-8402-916FF14416B1}">
+					<ChildrenList>
+						<Action Name="" ID="{54CB080C-DE65-41C3-82D9-043AE658933A}" ShortID="1068709303">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Finish_Start" ID="{A105AF30-F69A-4AEE-A177-39F97F687FF3}" WorkUnitID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

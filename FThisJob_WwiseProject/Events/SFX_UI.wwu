@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8EBDD440-45A9-4D39-A9E7-91DBB72F70A5}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_UI" ID="{8EBDD440-45A9-4D39-A9E7-91DBB72F70A5}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_UI_Heal" ID="{800E9907-68C5-4907-A861-A17DF220CD65}">
+					<ChildrenList>
+						<Action Name="" ID="{14141593-EDEE-49B3-8065-1D845DCA8C29}" ShortID="366823016">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Heal" ID="{04D1A48E-6D2D-484C-AF28-95CE572C667B}" WorkUnitID="{3CAE9BAF-18BC-4B43-B0C8-A36866E19580}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{055FCE1A-7C5A-4A3E-A590-2D2021AA7665}" ShortID="37216974">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOICES_Jake_Eating" ID="{0CDE70F0-BB02-40DC-BB7A-F0DCE4D680D6}" WorkUnitID="{B7D81390-F29E-47DE-874A-A1BC906853B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

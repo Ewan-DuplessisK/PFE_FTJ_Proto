@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B5411A1B-E26B-44D1-B2ED-D9204CA5F845}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_CHEESE" ID="{B5411A1B-E26B-44D1-B2ED-D9204CA5F845}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_ButtonCheese" ID="{7970F19F-1CB5-4127-BB4C-2474CFEC52DA}">
+					<ChildrenList>
+						<Action Name="" ID="{593DBE71-A96D-4C71-B21E-6F77C62FE037}" ShortID="722056947">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_CheeseButton" ID="{69AA2C3E-B799-41CA-A9F9-ADA5D149F68A}" WorkUnitID="{7E6040D8-D1BE-47B5-A2A5-6D056E3B7ACD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_CheeseImpact" ID="{8917F02F-C444-46AE-9147-26D8E5A75067}">
+					<ChildrenList>
+						<Action Name="" ID="{93C1A403-21C4-46C5-A037-8B0BC5B0F40A}" ShortID="153135807">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Cheese" ID="{853540A9-4829-44FA-8508-9CFDF2FEA900}" WorkUnitID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,31 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	1400970647	RTPC_Music_SideChain_VOICEREACTION			\MUSIC\RTPC_Music_SideChain_VOICEREACTION	
+	1828041389	RTPC_Music_SideChain			\MUSIC\RTPC_Music_SideChain	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	211474678	AB_SFX_GLOBAL			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_GLOBAL	
+	1650947108	AB_SFX			\Default Work Unit\Master Audio Bus\SFX\AB_SFX	
+	1669415112	AB_SFX_LVL_02			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_LVL_02	
+	1669415113	AB_SFX_LVL_03			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_LVL_03	
+	1669415115	AB_SFX_LVL_01			\Default Work Unit\Master Audio Bus\SFX\AB_SFX\AB_SFX_LVL_01	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+

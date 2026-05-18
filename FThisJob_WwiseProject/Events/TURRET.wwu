@@ -67,6 +67,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{E44E62D0-D3BB-4AE1-852C-21CE32753399}" ShortID="977942790">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="30"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="RC_TURRET_Voice_Damage" ID="{E9714F73-F986-4530-962B-B123583A7FE4}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
@@ -108,11 +111,54 @@
 						<Action Name="" ID="{1CBABF2F-E047-4EC6-B45B-C2AAC550420F}" ShortID="712272115">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+								<Property Name="FadeTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B7C3111B-3405-439E-B2DF-7BED6EF3FC6B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="RC_TURRET_Charge" ID="{7DE3F94D-B517-4B62-8987-4AFB746AADA3}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BEB81252-6407-4662-B2D5-F90A44BC171D}" ShortID="497559681">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DE795BFC-10A4-4710-92EC-E7ED0E10C208}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.3"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="FadeTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A831494B-4212-4B1B-9251-1CAF6CB2C7F7}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="0.3"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOICES_Jake_Combat" ID="{C4CA8051-3724-4F0A-9727-2403899970BB}" WorkUnitID="{B7D81390-F29E-47DE-874A-A1BC906853B9}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

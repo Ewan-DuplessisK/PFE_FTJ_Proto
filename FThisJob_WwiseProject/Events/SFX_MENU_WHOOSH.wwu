@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CC20FAE9-9DE1-4AE2-B824-9B0C83498575}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_MENU_WHOOSH" ID="{CC20FAE9-9DE1-4AE2-B824-9B0C83498575}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_Menu_Whoosh" ID="{6EDDAD07-0AC5-412F-9CB8-59C05B9932F7}">
+					<ChildrenList>
+						<Action Name="" ID="{6D06B275-CAA6-48DD-9289-DE43B0F7AC8C}" ShortID="178199828">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Menu_Whoosh" ID="{00F98196-4681-4681-AE40-E7A06FF96F33}" WorkUnitID="{8F663D37-A439-4C09-8CBC-A973D8AD61B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

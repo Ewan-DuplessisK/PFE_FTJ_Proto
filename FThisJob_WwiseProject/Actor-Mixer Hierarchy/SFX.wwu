@@ -7,19 +7,21 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<WorkUnit Name="SFX_LVL_01" ID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}" PersistMode="Reference"/>
-				<WorkUnit Name="SFX_LVL_02" ID="{27F545BA-C7E4-455B-BE5E-23267845E2C4}" PersistMode="Reference"/>
-				<WorkUnit Name="SFX_LVL_03" ID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}" PersistMode="Reference"/>
-				<Sound Name="New Sound SFX" ID="{A6DA0776-32D9-4F2D-B4A6-0AECCCF4A0AA}" ShortID="640747558">
+				<ActorMixer Name="AM_SFX" ID="{70AA5910-C10A-4FFE-8B37-630055EE9CBC}" ShortID="690005854">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+							<ObjectRef Name="AB_SFX" ID="{CA1A0EDF-BC5F-475D-BCB6-4E0333938D23}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
 						</Reference>
 					</ReferenceList>
-				</Sound>
+					<ChildrenList>
+						<WorkUnit Name="SFX_GLOBAL" ID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_LVL_01" ID="{8F4F4D4C-ECCD-4C1F-AE20-8F1329ED2356}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX_LVL_02" ID="{27F545BA-C7E4-455B-BE5E-23267845E2C4}" PersistMode="Reference"/>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

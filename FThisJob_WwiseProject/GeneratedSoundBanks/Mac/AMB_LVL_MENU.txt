@@ -1,0 +1,57 @@
+Event	ID	Name			Wwise Object Path	Notes
+	170235895	Sp_Keyboard_LVL_MENU			\Default Work Unit\AMB\AMB_LVL_MENU\Sp_Keyboard_LVL_MENU	
+	1230709398	Sp_PC_Screen_LVL_MENU			\Default Work Unit\AMB\AMB_LVL_MENU\Sp_PC_Screen_LVL_MENU	
+	2176748071	State_SettingIn_LVL_MENU			\Default Work Unit\AMB\AMB_LVL_MENU\State_SettingIn_LVL_MENU	
+	3093078560	State_Play_LVL_MENU			\Default Work Unit\AMB\AMB_LVL_MENU\State_Play_LVL_MENU	
+	3113312223	Beds_General_LVL_MENU			\Default Work Unit\AMB\AMB_LVL_MENU\Beds_General_LVL_MENU	
+	3383261442	State_Settingout_LVL_MENU			\Default Work Unit\AMB\AMB_LVL_MENU\State_Settingout_LVL_MENU	
+	4007181763	State_QuitGame_LVL_MENU			\Default Work Unit\AMB\AMB_LVL_MENU\State_QuitGame_LVL_MENU	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	1876089722	STG_MUSIC_GAMEPLAY			\MUSIC\STG_MUSIC_GAMEPLAY	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	2552542987	AMB_Menu			\AMB\AMB_Menu	
+	2925743549	STG_DUCKPAUSE			\UI\STG_DUCKPAUSE	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_MUSIC_GAMEPLAY			
+	777581536	ST_Arena	STG_MUSIC_GAMEPLAY			
+	1149269995	ST_Fight	STG_MUSIC_GAMEPLAY			
+	2256071962	ST_Calm	STG_MUSIC_GAMEPLAY			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	AMB_Menu			
+	2368844905	Enter	AMB_Menu			
+	3930794392	Quit	AMB_Menu			
+	748895195	None	STG_DUCKPAUSE			
+	930712164	OFF	STG_DUCKPAUSE			
+	1651971902	ON	STG_DUCKPAUSE			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1770656193	AB_AMB			\Default Work Unit\Master Audio Bus\AMB\AB_AMB	
+	2114868313	AB_AMB_MENU			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_MENU	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	99410385	AMB_RFX_Menu_Ringtone_04	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\05\{054C9329-76B9-CBC9-2671-582B974B5F66}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_MENU\AM_LVL_MENU\AM_RFX\RC_Ringtone\AMB_RFX_Menu_Ringtone_04		16959
+	154818342	AMB_Beds_Menu_General_LP	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\59\{591B7466-AE3A-FA3F-397D-6DFB253CD4DD}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_MENU\AM_LVL_MENU\AM_BEDS\AMB_Beds_Menu_General_LP		723307
+	232290851	AMB_SP_PcScreen_LP	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\DA\{DA1E2CEC-A4D1-853E-BB06-52B229E5EC0B}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_MENU\AM_LVL_MENU\AM_SOUNDPOINTS\AMB_SP_PcScreen_LP		222525
+	407966069	AMB_RFX_Menu_Ringtone_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\B3\{B3B70087-5C98-6E02-15ED-49318A01FE1F}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_MENU\AM_LVL_MENU\AM_RFX\RC_Ringtone\AMB_RFX_Menu_Ringtone_03		17989
+	427483224	AMB_SP_Menu_KeyboardTyping_LP	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\C2\{C2897AA0-613F-CAC3-6C5F-223F7ECF6CF0}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_MENU\AM_LVL_MENU\AM_SOUNDPOINTS\AMB_SP_Menu_KeyboardTyping_LP		449946
+	611484354	AMB_RFX_Menu_Ringtone_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\38\{383304D0-F566-B113-AF81-CFB6D2AD55CC}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_MENU\AM_LVL_MENU\AM_RFX\RC_Ringtone\AMB_RFX_Menu_Ringtone_01		18085
+	638581140	AMB_RFX_Menu_Ringtone_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\07\{073F4108-BA13-4CBD-ED85-4DFB93A12952}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_MENU\AM_LVL_MENU\AM_RFX\RC_Ringtone\AMB_RFX_Menu_Ringtone_02		18308
+

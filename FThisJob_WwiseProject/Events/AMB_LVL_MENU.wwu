@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0943230B-DFB1-4AC0-906D-2B32C8EF1201}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}">
+	<Events>
+		<WorkUnit Name="AMB_LVL_MENU" ID="{0943230B-DFB1-4AC0-906D-2B32C8EF1201}" OwnerID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="State_QuitGame_LVL_MENU" ID="{BFB867F5-83D4-447F-8626-AF3194B5B607}">
+					<ChildrenList>
+						<Action Name="" ID="{D11AE6DC-7EA6-4CEA-BC76-5EF62DE53A06}" ShortID="52305327">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Enter" ID="{1485C4FB-D1D9-4C0D-8382-D398A80F912D}" WorkUnitID="{CC76E281-2C99-49F3-82F9-3FD125494A2B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Sp_Keyboard_LVL_MENU" ID="{4F29E6F8-B7BE-4EE5-9E05-94998ADE6207}">
+					<ChildrenList>
+						<Action Name="" ID="{A982789B-B264-42E4-AEFA-7B4F51CFA047}" ShortID="842783825">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_SP_Menu_KeyboardTyping_LP" ID="{CB1FADD1-E5E4-44D6-B9EC-2243704145E5}" WorkUnitID="{88921A96-35E4-4D6F-A03B-16BA4E32C809}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="State_SettingIn_LVL_MENU" ID="{EE1A23C7-3199-4B8A-BBE8-A5BBBF606596}"/>
+				<Event Name="State_Settingout_LVL_MENU" ID="{FD26EA59-3997-4C92-B8C5-982229963F89}"/>
+				<Event Name="Beds_General_LVL_MENU" ID="{C0ADB1C5-4115-4C18-AC5C-86F8A8813FC9}">
+					<ChildrenList>
+						<Action Name="" ID="{029ADA3E-265A-4BD5-8137-6B3BADCBECDA}" ShortID="187715061">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Beds_Menu_General_LP" ID="{85B03A29-05A6-49B5-B3A2-3F5443FDF18D}" WorkUnitID="{88921A96-35E4-4D6F-A03B-16BA4E32C809}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B1B04AA1-20BD-440F-B328-85B79C05D770}" ShortID="58331405">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Ringtone" ID="{34943AE7-2F49-48CC-9B8A-31DE11FA6166}" WorkUnitID="{88921A96-35E4-4D6F-A03B-16BA4E32C809}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="State_Play_LVL_MENU" ID="{91A6D90A-5C74-4542-B68C-79980DA9F5AF}"/>
+				<Event Name="Sp_PC_Screen_LVL_MENU" ID="{A7A65D8E-6319-422A-8F98-8D7BA9F16052}">
+					<ChildrenList>
+						<Action Name="" ID="{FAEEB03B-04FD-4573-9EB1-07558EBB0C89}" ShortID="1024128614">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_SP_PcScreen_LP" ID="{7CF66E73-1D2A-4F90-8357-5450A502F304}" WorkUnitID="{88921A96-35E4-4D6F-A03B-16BA4E32C809}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

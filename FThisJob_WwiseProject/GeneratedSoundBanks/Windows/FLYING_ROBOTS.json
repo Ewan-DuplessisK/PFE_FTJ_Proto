@@ -1,0 +1,558 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "47016216",
+    "Type": "User",
+    "GUID": "{3C40D382-E2D7-40B4-9D5E-248C8DF2F1C7}",
+    "Color": "10",
+    "Language": "SFX",
+    "Hash": "{7AABC35A-50A4-CAC5-3219-C69F876B362F}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\ENEMIES\\FLYING_ROBOTS\\FLYING_ROBOTS",
+    "ShortName": "FLYING_ROBOTS",
+    "Path": "FLYING_ROBOTS.bnk",
+    "Media": [
+     {
+      "Id": "33778773",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_03.wav",
+      "CachePath": "3B/{3BD5BE9F-597F-4C84-B7B6-8365CD8E3959}.wem"
+     },
+     {
+      "Id": "33877301",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Magnet_LP.wav",
+      "CachePath": "7A/{7A82D3E2-7ABB-641F-ABE1-91DCC7E5033B}.wem"
+     },
+     {
+      "Id": "61687523",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_01.wav",
+      "CachePath": "65/{65CC57C5-9009-D5EE-B333-060F3C17D567}.wem"
+     },
+     {
+      "Id": "116720865",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Loot_04.wav",
+      "CachePath": "1F/{1F296456-AFAC-6951-733F-D49F5B84DFFE}.wem"
+     },
+     {
+      "Id": "141567871",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Explosion_03.wav",
+      "CachePath": "0C/{0C56D3D1-A825-6FCF-C121-31389F8FD793}.wem"
+     },
+     {
+      "Id": "160347885",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_05.wav",
+      "CachePath": "D4/{D4FF1B47-1D8F-2427-C667-55E52AE2E6F8}.wem"
+     },
+     {
+      "Id": "174734452",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_03.wav",
+      "CachePath": "A2/{A29B6368-145E-C32C-DA3F-EC5B0240D349}.wem"
+     },
+     {
+      "Id": "189765738",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Loot_03.wav",
+      "CachePath": "1F/{1F53136F-E9B3-60A6-1D94-8354C7B07161}.wem"
+     },
+     {
+      "Id": "211391567",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Explosion_02.wav",
+      "CachePath": "BC/{BCA1AB51-0E03-2B21-1E2F-100675689927}.wem"
+     },
+     {
+      "Id": "249882587",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Fly_LP.wav",
+      "CachePath": "5A/{5A26E969-0374-7C4E-8734-2CCC9DDABB83}.wem"
+     },
+     {
+      "Id": "257863929",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_04.wav",
+      "CachePath": "88/{88730D32-25F4-AD5B-9876-700331CBFF2F}.wem"
+     },
+     {
+      "Id": "266744151",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Loot_02.wav",
+      "CachePath": "83/{8329B57C-14F6-B7E6-1038-B27E17576E2E}.wem"
+     },
+     {
+      "Id": "279961866",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_04.wav",
+      "CachePath": "15/{1540ADBD-492F-D1F7-A4FE-C38D6413923A}.wem"
+     },
+     {
+      "Id": "286642904",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_13.wav",
+      "CachePath": "42/{42E62114-A232-550A-B5F4-289154ED7025}.wem"
+     },
+     {
+      "Id": "337367894",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_05.wav",
+      "CachePath": "E7/{E75D89C3-CE9F-873C-CB4E-3FC8EA61D9C6}.wem"
+     },
+     {
+      "Id": "370024353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Hurt_03.wav",
+      "CachePath": "25/{2535916E-74F2-2201-67E3-98E525D22DEB}.wem"
+     },
+     {
+      "Id": "395591813",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Attack_03.wav",
+      "CachePath": "BA/{BAF3FEC3-4BA8-7B81-577C-672070D5B59F}.wem"
+     },
+     {
+      "Id": "417871065",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_10.wav",
+      "CachePath": "F6/{F6F9BA52-F25A-DF6C-4077-CC2D9E800BAB}.wem"
+     },
+     {
+      "Id": "442363141",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_02.wav",
+      "CachePath": "FC/{FC0F607A-39EA-5444-6201-193A88A6F240}.wem"
+     },
+     {
+      "Id": "500083664",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_11.wav",
+      "CachePath": "CF/{CF275DC8-B2B1-50AA-CB0F-029C66AA378A}.wem"
+     },
+     {
+      "Id": "507113263",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_15.wav",
+      "CachePath": "E5/{E5158A85-3434-8381-87F2-B3DECA24A677}.wem"
+     },
+     {
+      "Id": "514629713",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Launch_01.wav",
+      "CachePath": "8D/{8DCC8C57-45FF-99B7-D50A-42805DDF760B}.wem"
+     },
+     {
+      "Id": "528944104",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Explosion_01.wav",
+      "CachePath": "3D/{3D693B01-A225-04DA-8688-869675A4D34A}.wem"
+     },
+     {
+      "Id": "575941717",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_12.wav",
+      "CachePath": "14/{14FF07ED-005D-2E6D-37F7-D6366E3EABF0}.wem"
+     },
+     {
+      "Id": "580764698",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Loot_01.wav",
+      "CachePath": "A3/{A35ECEC4-7698-5C93-9B48-C1B0E8CAA319}.wem"
+     },
+     {
+      "Id": "605545406",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_14.wav",
+      "CachePath": "D0/{D0B1C2D6-050D-0181-A4A4-84667CCD5A6E}.wem"
+     },
+     {
+      "Id": "661606390",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Death_02.wav",
+      "CachePath": "88/{88930BD7-9AF9-91B6-CB1E-7EB8A85847E7}.wem"
+     },
+     {
+      "Id": "694687919",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Hurt_02.wav",
+      "CachePath": "0B/{0B7C76AD-B379-2A18-5DDE-AFD8515FFA4A}.wem"
+     },
+     {
+      "Id": "775794782",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_02.wav",
+      "CachePath": "69/{6931E594-0C2D-A1E5-2FB8-2C07DCF56C3C}.wem"
+     },
+     {
+      "Id": "829377214",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_16.wav",
+      "CachePath": "09/{090B305D-4414-E6B2-E6D9-5F7D2D9B37A2}.wem"
+     },
+     {
+      "Id": "848120311",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Attack_01.wav",
+      "CachePath": "99/{9907BC4D-F68A-7CE4-7C52-E43D71BA1BAC}.wem"
+     },
+     {
+      "Id": "850772921",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_01.wav",
+      "CachePath": "FC/{FCF85FD9-C687-C4D2-7FFF-8ACF42D4B805}.wem"
+     },
+     {
+      "Id": "889704423",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Explosion_04.wav",
+      "CachePath": "E5/{E50C94C9-5663-903A-0412-C3A8054EA511}.wem"
+     },
+     {
+      "Id": "912708510",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Launch_02.wav",
+      "CachePath": "98/{98C521F1-6F2B-E733-2135-20052FA01FC3}.wem"
+     },
+     {
+      "Id": "975308529",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Hurt_01.wav",
+      "CachePath": "13/{131BB4C3-4DA3-405C-935C-52DADBDBF88F}.wem"
+     },
+     {
+      "Id": "989735915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Attack_02.wav",
+      "CachePath": "2D/{2DC3917E-B010-7820-2F1F-A235CCCED850}.wem"
+     },
+     {
+      "Id": "1020512643",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_06.wav",
+      "CachePath": "84/{845989DF-0ED3-BD95-51B8-C815B8C52A9D}.wem"
+     },
+     {
+      "Id": "1024622421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Death_03.wav",
+      "CachePath": "30/{30827BDB-5594-5E12-F8B6-CB8F5AD3596C}.wem"
+     },
+     {
+      "Id": "1064877595",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\Voices\\SFX_FlyingRobot_Voice_Death_01.wav",
+      "CachePath": "1E/{1EBF0AB6-3D48-29EB-76F2-B6E4AAC73AD4}.wem"
+     },
+     {
+      "Id": "1071206843",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\FLYINGROBOT\\SFX_FlyingRobot_Launch_03.wav",
+      "CachePath": "35/{35A3EC5C-C6DF-2447-F805-3856A0CC9A35}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1803826171",
+      "Name": "FlyingRobot_Death",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\FLYING_ROBOTS\\FlyingRobot_Death",
+      "GUID": "{A18970D9-014D-4D95-B30D-5DD676B16C28}",
+      "Color": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2557917",
+      "DurationMax": "1.4382708",
+      "MediaRefs": [
+       {
+        "Id": "33778773"
+       },
+       {
+        "Id": "61687523"
+       },
+       {
+        "Id": "141567871"
+       },
+       {
+        "Id": "160347885"
+       },
+       {
+        "Id": "211391567"
+       },
+       {
+        "Id": "279961866"
+       },
+       {
+        "Id": "286642904"
+       },
+       {
+        "Id": "417871065"
+       },
+       {
+        "Id": "442363141"
+       },
+       {
+        "Id": "500083664"
+       },
+       {
+        "Id": "507113263"
+       },
+       {
+        "Id": "528944104"
+       },
+       {
+        "Id": "575941717"
+       },
+       {
+        "Id": "605545406"
+       },
+       {
+        "Id": "661606390"
+       },
+       {
+        "Id": "829377214"
+       },
+       {
+        "Id": "889704423"
+       },
+       {
+        "Id": "1020512643"
+       },
+       {
+        "Id": "1024622421"
+       },
+       {
+        "Id": "1064877595"
+       }
+      ]
+     },
+     {
+      "Id": "3134734778",
+      "Name": "FlyingRobot_Fly",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\FLYING_ROBOTS\\FlyingRobot_Fly",
+      "GUID": "{61084D9F-0C0D-44E8-969A-B965FB55829B}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "249882587"
+       }
+      ]
+     },
+     {
+      "Id": "3115691418",
+      "Name": "FlyingRobot_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\FLYING_ROBOTS\\FlyingRobot_Hit",
+      "GUID": "{1AA969B2-95A3-41F2-AFB8-7B925DA39636}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7324375",
+      "DurationMax": "0.8657708",
+      "MediaRefs": [
+       {
+        "Id": "174734452"
+       },
+       {
+        "Id": "257863929"
+       },
+       {
+        "Id": "337367894"
+       },
+       {
+        "Id": "370024353"
+       },
+       {
+        "Id": "694687919"
+       },
+       {
+        "Id": "775794782"
+       },
+       {
+        "Id": "850772921"
+       },
+       {
+        "Id": "975308529"
+       }
+      ]
+     },
+     {
+      "Id": "3815691574",
+      "Name": "FlyingRobot_Launch",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\FLYING_ROBOTS\\FlyingRobot_Launch",
+      "GUID": "{B77C9583-2644-409D-9056-919253FF91F0}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.039",
+      "DurationMax": "1.039",
+      "MediaRefs": [
+       {
+        "Id": "395591813"
+       },
+       {
+        "Id": "514629713"
+       },
+       {
+        "Id": "848120311"
+       },
+       {
+        "Id": "912708510"
+       },
+       {
+        "Id": "989735915"
+       },
+       {
+        "Id": "1071206843"
+       }
+      ]
+     },
+     {
+      "Id": "2929838777",
+      "Name": "FlyingRobot_Loot",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\FLYING_ROBOTS\\FlyingRobot_Loot",
+      "GUID": "{427E86E1-F5B4-446A-9B3F-A0B804EA006B}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.46666667",
+      "DurationMax": "0.46666667",
+      "MediaRefs": [
+       {
+        "Id": "116720865"
+       },
+       {
+        "Id": "189765738"
+       },
+       {
+        "Id": "266744151"
+       },
+       {
+        "Id": "580764698"
+       }
+      ]
+     },
+     {
+      "Id": "2121517945",
+      "Name": "FlyingRobot_Magnet",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\FLYING_ROBOTS\\FlyingRobot_Magnet",
+      "GUID": "{BD634FD7-4449-40FB-A208-3F082AC96876}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "33877301"
+       }
+      ]
+     },
+     {
+      "Id": "747165452",
+      "Name": "FlyingRobot_Magnet_Stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\FLYING_ROBOTS\\FlyingRobot_Magnet_Stop",
+      "GUID": "{7C3F9B58-B22F-4F01-BCB2-30436C4B1A6D}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1828041389",
+      "Name": "RTPC_Music_SideChain",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain",
+      "GUID": "{48035C4E-15B2-4C86-A81C-7505A68840D5}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6E4C34C7-1AC4-3D6D-7998-933C93B7C587}"
+ }
+}

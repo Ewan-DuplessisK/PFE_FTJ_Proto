@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0A8B1FED-89E1-4A33-B38D-EECEBB768705}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_GATE" ID="{0A8B1FED-89E1-4A33-B38D-EECEBB768705}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Gate_Open" ID="{704DB098-CAE8-4D04-A20E-81C7A7855E96}">
+					<ChildrenList>
+						<Action Name="" ID="{D3217024-F6BC-4795-9BC5-FB669F2D7A2E}" ShortID="591446005">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Gate_Close" ID="{996C6B07-DD47-48F8-AB61-B73C5AE31B78}" WorkUnitID="{A3618F6E-30CE-4FE2-93A2-B6FAFFF99A93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0A677113-AF47-41FD-B052-F3FD9EE735D7}" ShortID="667253102">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Gate_Open" ID="{A9FCD517-CB63-4C84-99B4-FE89A5458C3A}" WorkUnitID="{A3618F6E-30CE-4FE2-93A2-B6FAFFF99A93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Gate_Close" ID="{0B2F6993-FD15-4A28-A8C9-9FA972B5E1B2}">
+					<ChildrenList>
+						<Action Name="" ID="{CD9BEF8B-8C0A-460C-95D4-B4942DC075E1}" ShortID="145020942">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Gate_Open" ID="{A9FCD517-CB63-4C84-99B4-FE89A5458C3A}" WorkUnitID="{A3618F6E-30CE-4FE2-93A2-B6FAFFF99A93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C4B4AD3-F458-4323-9EE1-8695E5308055}" ShortID="162184394">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Gate_Close" ID="{996C6B07-DD47-48F8-AB61-B73C5AE31B78}" WorkUnitID="{A3618F6E-30CE-4FE2-93A2-B6FAFFF99A93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

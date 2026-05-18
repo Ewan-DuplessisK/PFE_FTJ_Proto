@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2D7826B7-7AD9-41DF-9430-E5531F5555F0}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}">
+	<Events>
+		<WorkUnit Name="AMB_LVL_OPEN_OFFICE_02" ID="{2D7826B7-7AD9-41DF-9430-E5531F5555F0}" OwnerID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Sp_OldPc_OPEN_OFFICE_02" ID="{7D6C1C9A-9E8E-4025-B554-D572B2752FBC}">
+					<ChildrenList>
+						<Action Name="" ID="{29362CCD-ACAF-45D0-9F3F-10D3D0819EB5}" ShortID="275568958">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_SP_PC_LP" ID="{20707B59-AA49-4B02-8725-03E01DB0DAFE}" WorkUnitID="{43CBA9E8-6686-4580-AF62-88D257134FAF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Beds_Kitchen_OFFICE_02" ID="{A073B166-AE6A-4A9F-A26F-8D256DDACC0A}">
+					<ChildrenList>
+						<Action Name="" ID="{A5D101ED-9949-47D4-876D-E54FAEAEC4CB}" ShortID="104498270">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Beds_Kitchen_LP" ID="{106D121B-3CB7-43C7-95C1-C2A5EDF00EFE}" WorkUnitID="{75B889A3-5814-408D-BCAA-5905B30ABAA3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Beds_Meeting_Room_OFFICE_02" ID="{FF5908D0-399C-4990-ACCC-DB9AB504C9EA}">
+					<ChildrenList>
+						<Action Name="" ID="{78402EF3-C725-445A-91C5-615FADF1DF99}" ShortID="953130238">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beds_Meeting_Room_LP" ID="{7DD290BF-BD6C-4F63-9B18-76D8E4F5FE3E}" WorkUnitID="{75B889A3-5814-408D-BCAA-5905B30ABAA3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Beds_Garage_OFFICE_02" ID="{730E3600-7F28-48A0-9BF0-F6D44C4B22B4}">
+					<ChildrenList>
+						<Action Name="" ID="{10E52A16-DAE7-4232-A3D9-B44EF4033BE3}" ShortID="563315839">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Beds_Garage_LP" ID="{17552E7F-CED0-4ACF-A30D-5070BF3E76E5}" WorkUnitID="{75B889A3-5814-408D-BCAA-5905B30ABAA3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Beds_Toilet_OFFICE_02" ID="{B9EF9E7E-4F3E-40F6-B510-DD2B7E7BD86E}">
+					<ChildrenList>
+						<Action Name="" ID="{31454FFA-B579-4B23-94F4-5E4B0EF82637}" ShortID="483145776">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Beds_Toilet_LP" ID="{6A8A905C-B806-46C6-B4E6-E78E989FAC91}" WorkUnitID="{75B889A3-5814-408D-BCAA-5905B30ABAA3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Sp_CameraOld_OFFICE_02" ID="{A1AD1F1F-00C1-4580-B779-E46CF2A7936B}">
+					<ChildrenList>
+						<Action Name="" ID="{BF4A6F64-B501-4215-92D3-FBFC2E8F7D77}" ShortID="787671011">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_SP_CameraOld_LP" ID="{78A07D70-433D-4A47-B954-C7175A8FC015}" WorkUnitID="{0BE4437C-1E1F-480C-A1DE-2AC62BC1BCE1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

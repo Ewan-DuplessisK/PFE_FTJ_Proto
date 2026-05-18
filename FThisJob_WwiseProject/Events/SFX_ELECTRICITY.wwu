@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B636FA0F-767A-4D5B-9F18-1F6FF8B96305}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_ELECTRICITY" ID="{B636FA0F-767A-4D5B-9F18-1F6FF8B96305}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_Sparks" ID="{7648441B-AB30-4B89-AC69-F8AA9EC0DA46}">
+					<ChildrenList>
+						<Action Name="" ID="{10A3E981-8635-4D1F-A382-8B8F3B508EB7}" ShortID="212637138">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Sparks_LP" ID="{1BADA4B9-E390-4EEA-9531-E89BB2AE62CB}" WorkUnitID="{D62C80B4-5111-4B70-8392-09F8807524FE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Elec_OneShot" ID="{3E980A51-B084-457A-9D83-6EB0917CE546}">
+					<ChildrenList>
+						<Action Name="" ID="{2E6629E3-AD11-40A9-8A25-78505F5D3936}" ShortID="775406703">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Electrcity" ID="{56EE051D-5474-48D6-BA00-107CE5F02F2B}" WorkUnitID="{D62C80B4-5111-4B70-8392-09F8807524FE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

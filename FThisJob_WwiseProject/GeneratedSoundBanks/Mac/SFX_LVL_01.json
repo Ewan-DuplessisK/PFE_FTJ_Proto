@@ -1,0 +1,1391 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1295416525",
+    "Type": "User",
+    "GUID": "{0E3F2FD3-8CC8-4DEA-8DB5-C2528A77AB79}",
+    "Color": "25",
+    "Language": "SFX",
+    "Hash": "{0A529CED-A210-ED32-AF7D-8C0D2C5B3226}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX\\SFX_LVL_01\\SFX_LVL_01",
+    "ShortName": "SFX_LVL_01",
+    "Path": "SFX_LVL_01.bnk",
+    "Media": [
+     {
+      "Id": "191849",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Glass_ImpactFloor_03.wav",
+      "CachePath": "65/{653C6A03-E03C-1735-A7D2-FA3C8E470572}.wem"
+     },
+     {
+      "Id": "6668094",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Bubble_03.wav",
+      "CachePath": "80/{8000CE6E-7470-CA1C-1A49-91D034027C4D}.wem"
+     },
+     {
+      "Id": "7787507",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Explosion_03.wav",
+      "CachePath": "7A/{7A0D0776-1F9A-80E9-C728-5E3385AF994D}.wem"
+     },
+     {
+      "Id": "20132580",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Explosion_02.wav",
+      "CachePath": "F4/{F4A6D4A8-AAD3-3BE5-90B7-F37CC02DBD3D}.wem"
+     },
+     {
+      "Id": "27831688",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Plastic_ImpactFloor_06.wav",
+      "CachePath": "29/{29C81B22-F434-87FD-D82B-470C7D967F34}.wem"
+     },
+     {
+      "Id": "28009572",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Paper_ImpactFloor_02.wav",
+      "CachePath": "87/{87F19C3F-24CF-3334-E1CF-7CBA29E8A77F}.wem"
+     },
+     {
+      "Id": "31608843",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Error_01.wav",
+      "CachePath": "33/{3324A7AE-C911-7D30-1070-8033A7CA33DA}.wem"
+     },
+     {
+      "Id": "49891760",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Grab_04.wav",
+      "CachePath": "D6/{D692B962-4D1D-4FF4-4BF4-1DBD36903F56}.wem"
+     },
+     {
+      "Id": "64959888",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_PCTower_ImpactFloor_03.wav",
+      "CachePath": "FB/{FB174998-A979-2E2A-BD48-4C33150D6134}.wem"
+     },
+     {
+      "Id": "85235490",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Paper_ImpactFloor_08.wav",
+      "CachePath": "D3/{D34350C5-0B82-AEE4-8973-59565C9782CA}.wem"
+     },
+     {
+      "Id": "89303166",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Broom_ImpactFloor_02.wav",
+      "CachePath": "1D/{1D26FBA2-7AFE-35DA-1DF1-20CADC54A0F2}.wem"
+     },
+     {
+      "Id": "91043950",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Paper_ImpactFloor_06.wav",
+      "CachePath": "74/{74F2134B-3DD3-D650-E35A-170998F918BC}.wem"
+     },
+     {
+      "Id": "103603842",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_PCTower_ImpactFloor_04.wav",
+      "CachePath": "4D/{4D82F753-2627-4D99-97FD-9C872AD07DC3}.wem"
+     },
+     {
+      "Id": "119382165",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_ImpactFloor_05.wav",
+      "CachePath": "CC/{CCF362A5-E139-A94C-CF4A-EE1F4A3A41F8}.wem"
+     },
+     {
+      "Id": "133641020",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Paper_ImpactFloor_05.wav",
+      "CachePath": "A9/{A947EB77-C324-1E09-49E9-7A4DAC2EDCB0}.wem"
+     },
+     {
+      "Id": "169874440",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Printer\\SFX_Printer_Jam_01.wav",
+      "CachePath": "2C/{2C4ACBDF-440E-8030-BD7B-77B3304454FF}.wem"
+     },
+     {
+      "Id": "187819171",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Paper_ImpactFloor_04.wav",
+      "CachePath": "5F/{5F73B5D0-7E5D-9CC6-02CB-8140C833462C}.wem"
+     },
+     {
+      "Id": "188116760",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Keyboard_ImpactFloor_03.wav",
+      "CachePath": "E6/{E6D7420B-07C8-79C0-C25C-E811BC50E823}.wem"
+     },
+     {
+      "Id": "192459302",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\FOL_Hit_Phone_02.wav",
+      "CachePath": "D8/{D890561B-8BE1-BEEF-D587-82F00004F9F0}.wem"
+     },
+     {
+      "Id": "221804162",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Plastic_ImpactFloor_07.wav",
+      "CachePath": "C0/{C022ECA9-3C73-F8F6-C67F-732ADD874644}.wem"
+     },
+     {
+      "Id": "247588139",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Explosion_01.wav",
+      "CachePath": "78/{78ED5F3F-1571-903F-0B29-63B77D20F758}.wem"
+     },
+     {
+      "Id": "251477048",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Plastic_ImpactFloor_05.wav",
+      "CachePath": "79/{794E2C11-0A36-A981-B823-EC6B68CC614D}.wem"
+     },
+     {
+      "Id": "251871451",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_PCTower_ImpactFloor_05.wav",
+      "CachePath": "91/{91F5AF71-43C4-1CBF-6F85-DF637FC433A5}.wem"
+     },
+     {
+      "Id": "275823625",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Glass_ImpactFloor_05.wav",
+      "CachePath": "A1/{A1F012A6-D29A-7220-A1F9-FC508258D3DA}.wem"
+     },
+     {
+      "Id": "303183892",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\FOL_Hit_Phone_06.wav",
+      "CachePath": "EC/{EC400463-C9CE-64AF-0B07-D3C66DF71E31}.wem"
+     },
+     {
+      "Id": "311677268",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Keyboard_ImpactFloor_02.wav",
+      "CachePath": "09/{09085E5F-6A41-F392-D780-23672F145AF2}.wem"
+     },
+     {
+      "Id": "322793078",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Glass_ImpactFloor_02.wav",
+      "CachePath": "AF/{AFBA42E3-7DCE-7B69-AA3E-9F20EC568562}.wem"
+     },
+     {
+      "Id": "323099087",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Printer\\SFX_Printer_Jam_02.wav",
+      "CachePath": "26/{269D472D-8B5B-1F0B-7BEB-DC4CCCE101E9}.wem"
+     },
+     {
+      "Id": "325565797",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_ImpactFloor_04.wav",
+      "CachePath": "78/{78EAE469-9EFD-D9F9-9BB6-041902910A97}.wem"
+     },
+     {
+      "Id": "332836176",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Plastic_ImpactFloor_01.wav",
+      "CachePath": "AE/{AEBF4DA5-9E70-D894-9BE8-CD3338FFEC39}.wem"
+     },
+     {
+      "Id": "351606694",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_Small_ImpactFloor_02.wav",
+      "CachePath": "8C/{8C2CD9CE-100B-8D13-B9DE-5FF95348D516}.wem"
+     },
+     {
+      "Id": "364997229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_Small_ImpactFloor_03.wav",
+      "CachePath": "86/{86A37207-82B2-5AA7-90EC-257B0C7EEB98}.wem"
+     },
+     {
+      "Id": "381002003",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Can_Drop_02.wav",
+      "CachePath": "DD/{DDA01B42-CC18-4AD4-BEE8-81583B216289}.wem"
+     },
+     {
+      "Id": "382311794",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_On_LP.wav",
+      "CachePath": "23/{234666EC-6A6F-C67C-3E3F-C95A1A6D71BC}.wem"
+     },
+     {
+      "Id": "386007605",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_PCTower_ImpactFloor_06.wav",
+      "CachePath": "2B/{2B69134E-CFF3-E4FA-3316-28D8D9A9A195}.wem"
+     },
+     {
+      "Id": "387081451",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Broken_LP.wav",
+      "CachePath": "EA/{EAB72C67-1DF0-536F-8190-EFC8DEB77E07}.wem"
+     },
+     {
+      "Id": "401291587",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Grab_03.wav",
+      "CachePath": "37/{371919CA-6F7A-313E-C026-9E0B3EF10BD9}.wem"
+     },
+     {
+      "Id": "406971862",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_PCTower_ImpactFloor_07.wav",
+      "CachePath": "7E/{7EEFFF66-899B-3C1D-F8BC-C461AC5438EC}.wem"
+     },
+     {
+      "Id": "408506513",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Explosion_02.wav",
+      "CachePath": "7C/{7C01217C-33BE-02C9-DB88-38F329CFE93E}.wem"
+     },
+     {
+      "Id": "419468268",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Rock_ImpactFloor_04.wav",
+      "CachePath": "F3/{F353B02A-A2DE-2DE4-3EBA-F3733C7DF5F8}.wem"
+     },
+     {
+      "Id": "421162085",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Rock_ImpactFloor_02.wav",
+      "CachePath": "F5/{F5FC072D-D0A5-56F2-A08F-AD20A41BD890}.wem"
+     },
+     {
+      "Id": "431201606",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Launch_02.wav",
+      "CachePath": "1C/{1C394276-A251-6034-FF79-4216B661BE09}.wem"
+     },
+     {
+      "Id": "441020098",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Rock_ImpactFloor_01.wav",
+      "CachePath": "D2/{D21BB947-759C-BD14-3501-75D666FE4CF8}.wem"
+     },
+     {
+      "Id": "460668222",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Launch_03.wav",
+      "CachePath": "18/{189B25F4-5D5D-31FB-019E-53EDCE5669A3}.wem"
+     },
+     {
+      "Id": "466561930",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Explosion_01.wav",
+      "CachePath": "62/{62B2FFA4-A49B-54D9-D64F-E252F530522E}.wem"
+     },
+     {
+      "Id": "468884063",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Bubble_01.wav",
+      "CachePath": "E4/{E4F451D2-56B9-5981-0098-DE55532971D9}.wem"
+     },
+     {
+      "Id": "527091229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Explosion_03.wav",
+      "CachePath": "E3/{E3B79BD8-E464-08E8-29C4-94684ACDFF08}.wem"
+     },
+     {
+      "Id": "536197975",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Broom_ImpactFloor_05.wav",
+      "CachePath": "D4/{D4AA2131-B514-EFA9-797B-841AE6D0FA27}.wem"
+     },
+     {
+      "Id": "545154186",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Printer\\SFX_Printer_Jam_03.wav",
+      "CachePath": "EC/{ECA94C70-97E3-8AEE-5806-C8CFE3111A3C}.wem"
+     },
+     {
+      "Id": "554164219",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_PCTower_ImpactFloor_02.wav",
+      "CachePath": "98/{98A94F4F-A607-8CFB-8E17-47184588B0A2}.wem"
+     },
+     {
+      "Id": "575286723",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Keyboard_ImpactFloor_05.wav",
+      "CachePath": "36/{36D16E5B-3599-F3E8-65A8-CD49FF675EBA}.wem"
+     },
+     {
+      "Id": "588207086",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\FOL_Hit_Phone_04.wav",
+      "CachePath": "81/{81965202-F225-7DFB-5DA7-D646443EFF7B}.wem"
+     },
+     {
+      "Id": "589421466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Broom_ImpactFloor_04.wav",
+      "CachePath": "AC/{ACC82023-BCAD-8A89-9325-7DE5586A9890}.wem"
+     },
+     {
+      "Id": "598473939",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Broom_ImpactFloor_03.wav",
+      "CachePath": "C9/{C99FE074-F8D2-14EB-DD36-BC2450BB57DB}.wem"
+     },
+     {
+      "Id": "610898438",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Keyboard_ImpactFloor_04.wav",
+      "CachePath": "14/{145F9695-C0F9-849F-DA52-AF7B4BA82D5A}.wem"
+     },
+     {
+      "Id": "651090652",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Can_Drop_01.wav",
+      "CachePath": "BF/{BFE3B47A-F5D4-9A46-B90E-C6728CE179E1}.wem"
+     },
+     {
+      "Id": "651193568",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Error_03.wav",
+      "CachePath": "CD/{CD3A6209-D5C7-16B0-93E0-3C20E2CBE256}.wem"
+     },
+     {
+      "Id": "654130016",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Error_02.wav",
+      "CachePath": "EE/{EE0E3C0B-DA42-A77E-338F-5392DB6817D1}.wem"
+     },
+     {
+      "Id": "654349745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_Small_ImpactFloor_01.wav",
+      "CachePath": "58/{588C2DFB-A8B4-064D-A042-39863010F73F}.wem"
+     },
+     {
+      "Id": "673174346",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\FOL_Hit_Phone_03.wav",
+      "CachePath": "7E/{7EA1F9DD-C77A-920A-50DF-5D55B6E729B1}.wem"
+     },
+     {
+      "Id": "685848877",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Rock_ImpactFloor_03.wav",
+      "CachePath": "44/{44A67836-6955-121C-0E30-8B293EBEB05B}.wem"
+     },
+     {
+      "Id": "689741404",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Launch_01.wav",
+      "CachePath": "FE/{FE5DD250-0A92-AF32-4254-B1398154DCD0}.wem"
+     },
+     {
+      "Id": "706967174",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Bubble_02.wav",
+      "CachePath": "DC/{DC25ADF8-9A0B-472D-AC71-AD92AB03A2C5}.wem"
+     },
+     {
+      "Id": "714347770",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Glass_ImpactFloor_01.wav",
+      "CachePath": "73/{73796117-9CF6-25A6-609E-193DD82D5DBA}.wem"
+     },
+     {
+      "Id": "715141264",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_PCTower_ImpactFloor_01.wav",
+      "CachePath": "A5/{A54FD126-0262-9492-111B-B507ED0CCEFC}.wem"
+     },
+     {
+      "Id": "744188786",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Paper_ImpactFloor_01.wav",
+      "CachePath": "A0/{A05A35BC-77CB-FB29-7F67-710FE7A5E5E1}.wem"
+     },
+     {
+      "Id": "754232796",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Launch_04.wav",
+      "CachePath": "67/{67165CC9-B924-C670-5A04-0F8072E7020C}.wem"
+     },
+     {
+      "Id": "756809246",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Paper_ImpactFloor_03.wav",
+      "CachePath": "A9/{A961F1BF-8B7A-4DCA-340A-20439F050A70}.wem"
+     },
+     {
+      "Id": "762718180",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Plastic_ImpactFloor_03.wav",
+      "CachePath": "0B/{0B62A41B-0594-96BC-DD9C-A5A918ED3AF9}.wem"
+     },
+     {
+      "Id": "764061570",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Glass_ImpactFloor_04.wav",
+      "CachePath": "9A/{9A78E643-92E0-21D8-DBEB-42132FAA2666}.wem"
+     },
+     {
+      "Id": "792447294",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Explosion_04.wav",
+      "CachePath": "5D/{5D74F618-F3AA-4606-CDD4-F6D1D0FE2044}.wem"
+     },
+     {
+      "Id": "797671900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Grab_01.wav",
+      "CachePath": "C3/{C33DB45A-3AD0-312C-C35F-7F9F80BD8A12}.wem"
+     },
+     {
+      "Id": "823052492",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_ImpactFloor_03.wav",
+      "CachePath": "FC/{FC2BE192-0776-F773-4900-1722C4B65D7C}.wem"
+     },
+     {
+      "Id": "851320441",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Broom_ImpactFloor_06.wav",
+      "CachePath": "B1/{B1377110-32E1-FBE4-1ADA-E4B9BD286392}.wem"
+     },
+     {
+      "Id": "872866144",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_ImpactFloor_01.wav",
+      "CachePath": "8D/{8D343A13-798C-5626-9BE5-8DB5C23AA57C}.wem"
+     },
+     {
+      "Id": "874848253",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\FOL_Hit_Phone_01.wav",
+      "CachePath": "55/{55D69854-2B02-6ADB-7DF1-51F5125CCEB3}.wem"
+     },
+     {
+      "Id": "879475126",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\FOL_Hit_Phone_05.wav",
+      "CachePath": "9D/{9D977D55-8E9A-F33F-51DF-434BD928CA01}.wem"
+     },
+     {
+      "Id": "919855225",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Paper_ImpactFloor_07.wav",
+      "CachePath": "1B/{1BC951F7-07C0-2E20-6DEC-276096099A3A}.wem"
+     },
+     {
+      "Id": "920078264",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\VendingMachine\\SFX_Vending_Machine_Jingle.wav",
+      "CachePath": "86/{86CE96E9-2CB3-8A74-123A-7CBA8AB340E0}.wem"
+     },
+     {
+      "Id": "923564588",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Plastic_ImpactFloor_04.wav",
+      "CachePath": "DC/{DC375D44-BBA4-E00E-E32D-C78A199195E7}.wem"
+     },
+     {
+      "Id": "948907926",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_ImpactFloor_02.wav",
+      "CachePath": "32/{3280EBBD-A238-870A-3BF7-5B6FA8C752EB}.wem"
+     },
+     {
+      "Id": "972693887",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Grab_05.wav",
+      "CachePath": "1F/{1F212B90-15FC-FAA5-F3AB-5A38FB5491E1}.wem"
+     },
+     {
+      "Id": "986348499",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_Grab_02.wav",
+      "CachePath": "E2/{E2794185-FDEC-FCB7-30CD-D58587003B57}.wem"
+     },
+     {
+      "Id": "993609511",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Keyboard_ImpactFloor_01.wav",
+      "CachePath": "11/{11B39309-89F1-831E-155A-009412D5D134}.wem"
+     },
+     {
+      "Id": "1001089294",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Metal_Small_ImpactFloor_04.wav",
+      "CachePath": "41/{417F0EA0-581F-6A6C-E52D-091FBAF223CA}.wem"
+     },
+     {
+      "Id": "1015088904",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Broom_ImpactFloor_01.wav",
+      "CachePath": "27/{278246C4-83EE-232D-1384-A98ED1FCAEB8}.wem"
+     },
+     {
+      "Id": "1042739709",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\PhysicsObject\\GPE_Plastic_ImpactFloor_02.wav",
+      "CachePath": "D7/{D7D0F900-4F00-4753-E266-468944C58E70}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2382358261",
+      "Name": "Broom_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Broom_Impact",
+      "GUID": "{84F256B9-EF41-4ACE-8B25-2C05BD9B72FF}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.44397917",
+      "DurationMax": "0.52639586",
+      "MediaRefs": [
+       {
+        "Id": "89303166"
+       },
+       {
+        "Id": "536197975"
+       },
+       {
+        "Id": "589421466"
+       },
+       {
+        "Id": "598473939"
+       },
+       {
+        "Id": "851320441"
+       },
+       {
+        "Id": "1015088904"
+       }
+      ]
+     },
+     {
+      "Id": "773416244",
+      "Name": "Glass_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Glass_Impact",
+      "GUID": "{695880C2-A764-45E2-9B44-DBF8FF0F84B6}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6333333",
+      "DurationMax": "0.6333333",
+      "MediaRefs": [
+       {
+        "Id": "191849"
+       },
+       {
+        "Id": "275823625"
+       },
+       {
+        "Id": "322793078"
+       },
+       {
+        "Id": "714347770"
+       },
+       {
+        "Id": "764061570"
+       }
+      ]
+     },
+     {
+      "Id": "2620348691",
+      "Name": "Keyboard_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Keyboard_Impact",
+      "GUID": "{C6A5E515-5FC1-4D79-B0E9-2C8C3DEAC132}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4",
+      "DurationMax": "0.48479167",
+      "MediaRefs": [
+       {
+        "Id": "188116760"
+       },
+       {
+        "Id": "311677268"
+       },
+       {
+        "Id": "575286723"
+       },
+       {
+        "Id": "610898438"
+       },
+       {
+        "Id": "993609511"
+       }
+      ]
+     },
+     {
+      "Id": "287322247",
+      "Name": "Metal_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Metal_Impact",
+      "GUID": "{4100B74F-A9D6-4EFD-932F-B5DF3B58796D}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.56666666",
+      "DurationMax": "0.7",
+      "MediaRefs": [
+       {
+        "Id": "119382165"
+       },
+       {
+        "Id": "325565797"
+       },
+       {
+        "Id": "823052492"
+       },
+       {
+        "Id": "872866144"
+       },
+       {
+        "Id": "948907926"
+       }
+      ]
+     },
+     {
+      "Id": "1169618243",
+      "Name": "Metal_Small_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Metal_Small_Impact",
+      "GUID": "{C716D0AC-CDAB-4DDD-A085-AB48C1BEF230}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.16666667",
+      "DurationMax": "0.23333333",
+      "MediaRefs": [
+       {
+        "Id": "351606694"
+       },
+       {
+        "Id": "364997229"
+       },
+       {
+        "Id": "654349745"
+       },
+       {
+        "Id": "1001089294"
+       }
+      ]
+     },
+     {
+      "Id": "597837610",
+      "Name": "Paper_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Paper_Impact",
+      "GUID": "{F720CC3C-7402-4734-A85C-8EA45BE3755D}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.39222917",
+      "DurationMax": "0.56485415",
+      "MediaRefs": [
+       {
+        "Id": "28009572"
+       },
+       {
+        "Id": "85235490"
+       },
+       {
+        "Id": "91043950"
+       },
+       {
+        "Id": "133641020"
+       },
+       {
+        "Id": "187819171"
+       },
+       {
+        "Id": "744188786"
+       },
+       {
+        "Id": "756809246"
+       },
+       {
+        "Id": "919855225"
+       }
+      ]
+     },
+     {
+      "Id": "3660102134",
+      "Name": "PCTower_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\PCTower_Impact",
+      "GUID": "{C53662D9-E27D-481D-9BD0-DBA846791146}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.33179167",
+      "DurationMax": "0.45554167",
+      "MediaRefs": [
+       {
+        "Id": "64959888"
+       },
+       {
+        "Id": "103603842"
+       },
+       {
+        "Id": "251871451"
+       },
+       {
+        "Id": "386007605"
+       },
+       {
+        "Id": "406971862"
+       },
+       {
+        "Id": "554164219"
+       },
+       {
+        "Id": "715141264"
+       }
+      ]
+     },
+     {
+      "Id": "3557809988",
+      "Name": "Phone_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Phone_Impact",
+      "GUID": "{BD8850F6-6E19-4739-8B05-0915ABF86DB4}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0333333",
+      "DurationMax": "1.5341667",
+      "MediaRefs": [
+       {
+        "Id": "192459302"
+       },
+       {
+        "Id": "303183892"
+       },
+       {
+        "Id": "588207086"
+       },
+       {
+        "Id": "673174346"
+       },
+       {
+        "Id": "874848253"
+       },
+       {
+        "Id": "879475126"
+       }
+      ]
+     },
+     {
+      "Id": "2663519280",
+      "Name": "Plastic_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Plastic_Impact",
+      "GUID": "{4B98F397-FC31-4CF4-9B00-0039550DF3F0}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.38233334",
+      "DurationMax": "0.5227917",
+      "MediaRefs": [
+       {
+        "Id": "27831688"
+       },
+       {
+        "Id": "221804162"
+       },
+       {
+        "Id": "251477048"
+       },
+       {
+        "Id": "332836176"
+       },
+       {
+        "Id": "762718180"
+       },
+       {
+        "Id": "923564588"
+       },
+       {
+        "Id": "1042739709"
+       }
+      ]
+     },
+     {
+      "Id": "2701579006",
+      "Name": "Printer_Jam",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Printer_Jam",
+      "GUID": "{E3F32042-3A59-49E7-8CAC-D24E4F7CD9DB}",
+      "Color": "25",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "3.4831874",
+      "DurationMax": "3.5666666",
+      "MediaRefs": [
+       {
+        "Id": "169874440"
+       },
+       {
+        "Id": "323099087"
+       },
+       {
+        "Id": "545154186"
+       }
+      ]
+     },
+     {
+      "Id": "4006766083",
+      "Name": "Rock_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Rock_Impact",
+      "GUID": "{2C3775C2-B481-4253-A47C-37AE075D5356}",
+      "Color": "25",
+      "MaxAttenuation": "1500",
+      "DurationType": "OneShot",
+      "DurationMin": "0.254",
+      "DurationMax": "0.254",
+      "MediaRefs": [
+       {
+        "Id": "419468268"
+       },
+       {
+        "Id": "421162085"
+       },
+       {
+        "Id": "441020098"
+       },
+       {
+        "Id": "685848877"
+       }
+      ]
+     },
+     {
+      "Id": "642557103",
+      "Name": "Vending_Machine_Can_Drop",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Vending_Machine_Can_Drop",
+      "GUID": "{A1349FE4-44FD-480D-8FEA-1E67E493D345}",
+      "Color": "25",
+      "MaxAttenuation": "1800.0001",
+      "DurationType": "OneShot",
+      "DurationMin": "2.6156042",
+      "DurationMax": "2.6156042",
+      "MediaRefs": [
+       {
+        "Id": "381002003"
+       },
+       {
+        "Id": "651090652"
+       }
+      ]
+     },
+     {
+      "Id": "2250670657",
+      "Name": "Vending_Machine_Error",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Vending_Machine_Error",
+      "GUID": "{34F4F43D-70AC-432F-9430-952CA3555096}",
+      "Color": "25",
+      "MaxAttenuation": "1800.0001",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0666667",
+      "DurationMax": "1.0666667",
+      "MediaRefs": [
+       {
+        "Id": "31608843"
+       },
+       {
+        "Id": "651193568"
+       },
+       {
+        "Id": "654130016"
+       }
+      ]
+     },
+     {
+      "Id": "1494932630",
+      "Name": "Vending_Machine_Explosion",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Vending_Machine_Explosion",
+      "GUID": "{3ED25EE4-02BD-41F9-B6B8-91AF60627694}",
+      "Color": "25",
+      "MaxAttenuation": "1800.0001",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "387081451"
+       },
+       {
+        "Id": "408506513"
+       },
+       {
+        "Id": "466561930"
+       },
+       {
+        "Id": "527091229"
+       }
+      ]
+     },
+     {
+      "Id": "2656773838",
+      "Name": "Vending_Machine_Jingle",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Vending_Machine_Jingle",
+      "GUID": "{07AA261E-BE8C-4756-AB46-90B9F1F4611D}",
+      "Color": "25",
+      "MaxAttenuation": "1800.0001",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4102292",
+      "DurationMax": "2.4102292",
+      "MediaRefs": [
+       {
+        "Id": "920078264"
+       }
+      ]
+     },
+     {
+      "Id": "3122897989",
+      "Name": "Vending_Machine_On_LP",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Vending_Machine_On_LP",
+      "GUID": "{14420DB1-A881-4056-8BCC-82D0A87DE709}",
+      "Color": "25",
+      "MaxAttenuation": "1800.0001",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "382311794"
+       }
+      ]
+     },
+     {
+      "Id": "1689087531",
+      "Name": "Water_Bubble",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Water_Bubble",
+      "GUID": "{9611DB26-8237-43D9-ADBA-4A34AC1A5E0C}",
+      "Color": "25",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1",
+      "DurationMax": "1.1",
+      "MediaRefs": [
+       {
+        "Id": "6668094"
+       },
+       {
+        "Id": "468884063"
+       },
+       {
+        "Id": "706967174"
+       }
+      ]
+     },
+     {
+      "Id": "3424549262",
+      "Name": "Water_Fall",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Water_Fall",
+      "GUID": "{565D1F07-667D-4E03-80E6-5FE88F54C3AE}",
+      "Color": "25",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6321739",
+      "DurationMax": "0.7",
+      "MediaRefs": [
+       {
+        "Id": "49891760"
+       },
+       {
+        "Id": "401291587"
+       },
+       {
+        "Id": "797671900"
+       },
+       {
+        "Id": "972693887"
+       },
+       {
+        "Id": "986348499"
+       }
+      ]
+     },
+     {
+      "Id": "4070152387",
+      "Name": "Water_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Water_Impact",
+      "GUID": "{26DB14F1-DE28-4353-B8AB-1DD7E33F1774}",
+      "Color": "25",
+      "DurationType": "OneShot",
+      "DurationMin": "2.1333334",
+      "DurationMax": "2.1333334",
+      "MediaRefs": [
+       {
+        "Id": "7787507"
+       },
+       {
+        "Id": "20132580"
+       },
+       {
+        "Id": "247588139"
+       },
+       {
+        "Id": "792447294"
+       }
+      ]
+     },
+     {
+      "Id": "2247869028",
+      "Name": "Water_Launch",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_01\\Water_Launch",
+      "GUID": "{BB2C9375-6A94-4ED9-963D-F629684E35B6}",
+      "Color": "25",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7767448",
+      "DurationMax": "0.78234094",
+      "MediaRefs": [
+       {
+        "Id": "431201606"
+       },
+       {
+        "Id": "460668222"
+       },
+       {
+        "Id": "689741404"
+       },
+       {
+        "Id": "754232796"
+       }
+      ]
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "1650947108",
+      "Name": "AB_SFX",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX\\AB_SFX",
+      "GUID": "{CA1A0EDF-BC5F-475D-BCB6-4E0333938D23}",
+      "Color": "11"
+     },
+     {
+      "Id": "1669415115",
+      "Name": "AB_SFX_LVL_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX\\AB_SFX\\AB_SFX_LVL_01",
+      "GUID": "{99C04D22-BE70-4FF5-A7FD-8AAFF7F5FDCA}",
+      "Color": "11"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "932301089",
+      "Name": "RTPC_SFX_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_SFX_Volume",
+      "GUID": "{0EB4588E-0728-469E-A6B1-EA1EF70CCB3E}",
+      "Color": "1"
+     },
+     {
+      "Id": "1400970647",
+      "Name": "RTPC_Music_SideChain_VOICEREACTION",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain_VOICEREACTION",
+      "GUID": "{DF6DAE97-E05E-4CFE-9371-581FF156106D}"
+     },
+     {
+      "Id": "1828041389",
+      "Name": "RTPC_Music_SideChain",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain",
+      "GUID": "{48035C4E-15B2-4C86-A81C-7505A68840D5}"
+     },
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     },
+     {
+      "Id": "3312150600",
+      "Name": "RTPC_Sidechain_Rage_Enter",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Sidechain_Rage_Enter",
+      "GUID": "{CDBA16C9-1E19-496A-B420-2194AE170CC6}",
+      "Color": "1"
+     },
+     {
+      "Id": "3723658470",
+      "Name": "RTPC_PhysicsObj_Volume",
+      "ObjectPath": "\\Game Parameters\\GPE\\RTPC_PhysicsObj_Volume",
+      "GUID": "{4D1D0569-F065-4E61-9FD3-D1C61711047D}",
+      "Color": "13"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "603700529",
+      "Name": "MC_CriticalHealth",
+      "ObjectPath": "\\States\\MC\\MC_CriticalHealth",
+      "GUID": "{A5FC26C3-7658-4327-B092-C5E156E8EE7C}",
+      "Color": "3",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\None",
+        "GUID": "{5BC3290D-432D-4808-8DF2-9ECD959311FD}",
+        "Color": "3"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\OFF",
+        "GUID": "{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}",
+        "Color": "3"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\ON",
+        "GUID": "{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "2037745005",
+      "Name": "STG_DUCKGAMEOVER",
+      "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER",
+      "GUID": "{F8602139-94B4-472E-AE05-7C1BACD04DDB}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\None",
+        "GUID": "{4249B618-F554-41B7-92C0-6474F0C51E05}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\OFF",
+        "GUID": "{2F7E0F06-4458-411D-94B6-8AB9D860C269}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\ON",
+        "GUID": "{ED100031-70CD-4F13-BF9B-914069821D22}",
+        "Color": "23"
+       }
+      ]
+     },
+     {
+      "Id": "3350389201",
+      "Name": "STG_SLOWMO",
+      "ObjectPath": "\\States\\SFX\\STG_SLOWMO",
+      "GUID": "{1D2DAD21-09CF-4E14-B2E1-0BEA47C47222}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\None",
+        "GUID": "{7A3FC7CE-16CA-40AC-816B-E0C6955D12CA}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\OFF",
+        "GUID": "{EF39E2B7-CB41-4B8D-84ED-75738314CD46}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\ON",
+        "GUID": "{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}",
+        "Color": "23"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7402F3A5-C7E0-0B79-EEB8-06A42061F909}"
+ }
+}

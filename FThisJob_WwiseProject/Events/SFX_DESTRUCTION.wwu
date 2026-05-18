@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CB2DDF1C-C81F-4031-A6BE-E9BFF90D7B8B}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_DESTRUCTION" ID="{CB2DDF1C-C81F-4031-A6BE-E9BFF90D7B8B}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_Door_Destruction" ID="{6451E38F-D1FC-49BB-834D-E17FBC29448E}">
+					<ChildrenList>
+						<Action Name="" ID="{EFB172DE-2372-443B-ADAF-8AAA42BBFCDC}" ShortID="10445521">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_SFX_Door_Destruction" ID="{79C99F87-A6F9-4F95-BC10-768BB18813B8}" WorkUnitID="{147BF0F2-CD6B-4D28-A27C-5D7D0271CE01}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Metal_Destruction" ID="{C68C2C02-6684-4FD5-8399-A62CAFC9FF6A}">
+					<ChildrenList>
+						<Action Name="" ID="{3F0C474E-7CAE-403A-B581-F0DAF91962F0}" ShortID="148517985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Metal_Destruction" ID="{E510E50C-60B2-412D-9A40-9AB73EC983EC}" WorkUnitID="{147BF0F2-CD6B-4D28-A27C-5D7D0271CE01}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5F6FD51C-94D0-42D4-85F3-40E9B0C0AB40}" ShortID="52561867">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Electrcity" ID="{56EE051D-5474-48D6-BA00-107CE5F02F2B}" WorkUnitID="{D62C80B4-5111-4B70-8392-09F8807524FE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Fan_Destruction" ID="{EAB7238C-044B-451B-A478-470C1D7CB366}">
+					<ChildrenList>
+						<Action Name="" ID="{D785D098-DECF-4BCC-BFBF-9BA1800702B2}" ShortID="540121360">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Fan_Destruction" ID="{BFBC5E50-FC0C-428E-ACD0-40EC93CFE178}" WorkUnitID="{147BF0F2-CD6B-4D28-A27C-5D7D0271CE01}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Chair_Destruction" ID="{C84599B9-A277-4AA8-AFA9-94F3165CC25D}">
+					<ChildrenList>
+						<Action Name="" ID="{62101A7F-347D-496F-A34E-805E551295DE}" ShortID="1036486437">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Chair_Destruction" ID="{A1F4780D-5936-4519-9841-008C748B8C1D}" WorkUnitID="{147BF0F2-CD6B-4D28-A27C-5D7D0271CE01}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Pot_Destruction" ID="{4EB2DD51-7A6E-440E-B29D-9CECF21F47B4}">
+					<ChildrenList>
+						<Action Name="" ID="{A51A6A95-4397-4B77-8AD0-7839EF528520}" ShortID="328502328">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Pot_Destruction" ID="{FA9C5B98-DC91-4C50-B245-24FCD5C364AD}" WorkUnitID="{147BF0F2-CD6B-4D28-A27C-5D7D0271CE01}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Glass_Destruction" ID="{8C53532A-DC9C-4C71-88D1-A84813E50C52}">
+					<ChildrenList>
+						<Action Name="" ID="{88A9A0E4-2C05-4A10-8DF2-E146F3659618}" ShortID="964142393">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Glass_Destruction" ID="{7BD4435D-B913-48A6-A368-1561E6CDB4A1}" WorkUnitID="{147BF0F2-CD6B-4D28-A27C-5D7D0271CE01}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_TV_Break" ID="{3031D57E-F2FD-41A3-BAAC-F6C2161F8DF6}">
+					<ChildrenList>
+						<Action Name="" ID="{24DA06D5-E63D-44B5-8962-638C3D09CFFE}" ShortID="873728578">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TV_Destruction" ID="{6FF5EDF6-FE08-4428-B9ED-73681FCFFCA0}" WorkUnitID="{147BF0F2-CD6B-4D28-A27C-5D7D0271CE01}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

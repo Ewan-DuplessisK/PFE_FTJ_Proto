@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F830C0FE-E3AB-4245-997C-C0CB614FAAD0}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_DOOR" ID="{F830C0FE-E3AB-4245-997C-C0CB614FAAD0}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_Door_Chain" ID="{CF6C2B3A-7374-4C19-A535-C3B7F577430B}">
+					<ChildrenList>
+						<Action Name="" ID="{D193B76E-4D30-4687-BA78-AC03BD92A147}" ShortID="958251541">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Door_Chain" ID="{09069755-1CF7-4054-B6AD-5E030E4A0735}" WorkUnitID="{2ABA2D3A-645C-407A-B888-A1AD19700DF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

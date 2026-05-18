@@ -10,6 +10,7 @@
 				<WorkUnit Name="SFX_LVL_01" ID="{37EB2B47-3352-422C-8900-870DFDB2179F}" PersistMode="Reference"/>
 				<WorkUnit Name="SFX_LVL_02" ID="{FEA4471B-E467-4DE5-B2CF-06CFCBC803E0}" PersistMode="Reference"/>
 				<WorkUnit Name="SFX_LVL_03" ID="{B46108AC-CC26-423F-9A41-54A0DA0C7308}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX_GLOBAL" ID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

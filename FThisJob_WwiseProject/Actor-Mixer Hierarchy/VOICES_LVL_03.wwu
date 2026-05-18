@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{F1AFAF7C-BE33-444D-92F6-F81CC65D46B9}" SchemaVersion="123" RootDocumentID="{50F281B2-308B-410C-A95E-7ED5349D7002}" ParentDocumentID="{B7D81390-F29E-47DE-874A-A1BC906853B9}">
+<WwiseDocument Type="WorkUnit" ID="{F1AFAF7C-BE33-444D-92F6-F81CC65D46B9}" SchemaVersion="123" RootDocumentID="{B7D81390-F29E-47DE-874A-A1BC906853B9}" ParentDocumentID="{B7D81390-F29E-47DE-874A-A1BC906853B9}">
 	<AudioObjects>
-		<WorkUnit Name="VOICES_LVL_03" ID="{F1AFAF7C-BE33-444D-92F6-F81CC65D46B9}" OwnerID="{B7D81390-F29E-47DE-874A-A1BC906853B9}" PersistMode="Nested">
+		<WorkUnit Name="VOICES_LVL_03" ID="{F1AFAF7C-BE33-444D-92F6-F81CC65D46B9}" OwnerID="{31CF7CE1-8F04-4667-9928-F84D7EBE385A}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="AM_VOICES_LVL_03" ID="{31DDC57B-7EDC-4C06-B476-87948A62FAA7}" ShortID="644184484">
 					<ReferenceList>
@@ -12,6 +12,179 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="AM_Voices_CEO" ID="{A64CC27C-4B94-43A8-A131-2DFDF0B591FD}" ShortID="86347481">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_CEO_Lab_01" ID="{7B4295B7-6A3F-4F19-BAA3-59A65BC55349}" ShortID="219083922">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Lab_01" ID="{0D5AA96B-F06D-4B6F-BF63-8507D689275C}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\LVL03\VOC_CEO_Lab_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="376798040"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Lab_01" ID="{0D5AA96B-F06D-4B6F-BF63-8507D689275C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Lab_02" ID="{D592B4F3-9776-4281-A738-7AFEDF9F72DA}" ShortID="868627525">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Lab_02" ID="{FAE68DCF-8488-414F-8AF1-57D1DF1C89E0}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\LVL03\VOC_CEO_Lab_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="289476327"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Lab_02" ID="{FAE68DCF-8488-414F-8AF1-57D1DF1C89E0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_CEO_Lab_03" ID="{2D280E86-64D9-435B-ABD8-1D38E12DA4C8}" ShortID="211295310">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_CEO_Lab_03" ID="{1C47CC9E-A056-4BC3-B9A3-BCCB36D5E939}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\LVL03\VOC_CEO_Lab_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="624129109"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_CEO_Lab_03" ID="{1C47CC9E-A056-4BC3-B9A3-BCCB36D5E939}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="AM_Voices_Jake" ID="{24243F23-6D9D-49A3-82E8-5D61C0896A8D}" ShortID="89591725">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_Jake_Lab_01" ID="{E9DCECD7-BDD5-414A-85A1-EC3C10669D5E}" ShortID="1013757341">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Lab_01" ID="{6AF929B8-EC62-410C-B54B-4FF2C49EBF7E}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\LVL03\VOC_Jake_Lab_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="94179451"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Lab_01" ID="{6AF929B8-EC62-410C-B54B-4FF2C49EBF7E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VOC_Jake_Lab_02" ID="{C22784F3-A196-4F5F-A95F-AE638FF72A49}" ShortID="167533573">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_Jake_Lab_02" ID="{4486CAE7-E913-4A19-8B22-2F40294D60B2}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\LVL03\VOC_Jake_Lab_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="167885643"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_Jake_Lab_02" ID="{4486CAE7-E913-4A19-8B22-2F40294D60B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="AM_Voices_AI" ID="{51C6EF2F-9CB2-4DFE-AF12-0653D81E473F}" ShortID="741210404">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="AB_VOICES_AI" ID="{16F58050-8B74-4F9F-8AC1-83F74BE018FE}" WorkUnitID="{D8E6497A-AC26-4659-A3E9-978F414BBEB3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VOC_AI" ID="{DD9D6601-1AA5-4B43-B26C-2C6FA3176DE2}" ShortID="376727826">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VOC_AI" ID="{B245B32F-3B32-4F07-8CDF-3F5F8592649B}">
+											<Language>SFX</Language>
+											<AudioFile>VOICE\LVL03\VOC_AI.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="178594592"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VOC_AI" ID="{B245B32F-3B32-4F07-8CDF-3F5F8592649B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

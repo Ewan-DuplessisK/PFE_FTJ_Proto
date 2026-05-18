@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{88921A96-35E4-4D6F-A03B-16BA4E32C809}" SchemaVersion="123" RootDocumentID="{D5404735-E68D-44AA-9086-19B05F4525F9}" ParentDocumentID="{D5404735-E68D-44AA-9086-19B05F4525F9}">
+	<AudioObjects>
+		<WorkUnit Name="AMB_LVL_MENU" ID="{88921A96-35E4-4D6F-A03B-16BA4E32C809}" OwnerID="{E106E4BB-1549-410E-9C4A-7D479C0A6334}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_LVL_MENU" ID="{DD8A5A24-9CB9-4919-B5D4-AB6B09483824}" ShortID="160134309">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AB_AMB_MENU" ID="{F4A6D689-F004-4F76-B835-22F4BD1E6977}" WorkUnitID="{D0811865-DBB9-4CA7-86EE-98046AB40B58}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="AM_BEDS" ID="{4B65D647-1084-4420-9E4D-2A127BE473A8}" ShortID="1063167436">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="AMB_Beds_Menu_General_LP" ID="{85B03A29-05A6-49B5-B3A2-3F5443FDF18D}" ShortID="866822529">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_Beds_Menu_General_LP" ID="{372BB102-F699-499A-AB34-9C22D7A7E99E}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\BEDS\AMB_Beds_Menu_General_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="154818342"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_Beds_Menu_General_LP" ID="{372BB102-F699-499A-AB34-9C22D7A7E99E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="AM_SOUNDPOINTS" ID="{2FDB6A97-9CED-4730-98E3-6DF0224FE1D1}" ShortID="188049109">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="AMB_SP_Menu_KeyboardTyping_LP" ID="{CB1FADD1-E5E4-44D6-B9EC-2243704145E5}" ShortID="531856477">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_SP_Menu_KeyboardTyping_LP" ID="{EFFE4A77-A189-4DDE-B83F-CD94568C3E03}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\SOUNDPOINTS\AMB_SP_Menu_KeyboardTyping_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="427483224"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_SP_Menu_KeyboardTyping_LP" ID="{EFFE4A77-A189-4DDE-B83F-CD94568C3E03}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AMB_SP_PcScreen_LP" ID="{7CF66E73-1D2A-4F90-8357-5450A502F304}" ShortID="845512624">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_15m" ID="{281C7EBD-0F06-438E-ADCE-99BDB61AE6BF}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_SP_PcScreen_LP" ID="{FA10EE8E-E1D2-49E9-B61F-57695F575C82}">
+											<Language>SFX</Language>
+											<AudioFile>AMB\SOUNDPOINTS\AMB_SP_PcScreen_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="232290851"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_SP_PcScreen_LP" ID="{FA10EE8E-E1D2-49E9-B61F-57695F575C82}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="AM_RFX" ID="{C44284D9-E0EF-4841-B719-FDA190029E8B}" ShortID="2732500">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="RC_Ringtone" ID="{34943AE7-2F49-48CC-9B8A-31DE11FA6166}" ShortID="915976705">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>1.5</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E3E8C8D8-F181-45A5-B6F3-7521855059D3}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0BAD0D11-48E1-459E-957C-36C09412E5F0}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="18"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_10m" ID="{DC8F0EC5-FE88-4C0F-A086-E76674593674}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="AMB_RFX_Menu_Ringtone_04" ID="{B6F803B7-45DF-4B70-AAC1-2F30D8AFCD35}" ShortID="715106888">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMB_RFX_Menu_Ringtone_04" ID="{1201514A-6D4E-4242-8A34-1A69BE8EA5D2}">
+													<Language>SFX</Language>
+													<AudioFile>AMB\RFX\AMB_RFX_Menu_Ringtone_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="99410385"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AMB_RFX_Menu_Ringtone_04" ID="{1201514A-6D4E-4242-8A34-1A69BE8EA5D2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AMB_RFX_Menu_Ringtone_01" ID="{F8A51367-5F5D-4626-AAC2-1E82FFFF0913}" ShortID="692991531">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMB_RFX_Menu_Ringtone_01" ID="{574EA8EC-0F18-4D83-8340-DA48CD359482}">
+													<Language>SFX</Language>
+													<AudioFile>AMB\RFX\AMB_RFX_Menu_Ringtone_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="611484354"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AMB_RFX_Menu_Ringtone_01" ID="{574EA8EC-0F18-4D83-8340-DA48CD359482}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AMB_RFX_Menu_Ringtone_02" ID="{AA75A4CD-5E43-44DB-A85D-F55EB8036861}" ShortID="912344352">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMB_RFX_Menu_Ringtone_02" ID="{1B9883F6-90F3-4BEC-8958-394267BCB798}">
+													<Language>SFX</Language>
+													<AudioFile>AMB\RFX\AMB_RFX_Menu_Ringtone_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="638581140"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AMB_RFX_Menu_Ringtone_02" ID="{1B9883F6-90F3-4BEC-8958-394267BCB798}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AMB_RFX_Menu_Ringtone_03" ID="{AAD1BC29-7DD8-4B06-B59C-FE25923E4AA3}" ShortID="720617068">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMB_RFX_Menu_Ringtone_03" ID="{49C61514-DC44-4364-84DF-B0B46BEF5870}">
+													<Language>SFX</Language>
+													<AudioFile>AMB\RFX\AMB_RFX_Menu_Ringtone_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="407966069"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AMB_RFX_Menu_Ringtone_03" ID="{49C61514-DC44-4364-84DF-B0B46BEF5870}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{501E10AD-26A2-49F0-8702-C15621D51D10}">
+											<PropertyList>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="RC_Ringtone_Path" ID="{82C64E50-389C-4903-8397-4A590159D08C}">
+													<PointList>
+														<Point>
+															<XPos>-69.54315</XPos>
+															<YPos>51.69492</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="RC_Ringtone_Path_01" ID="{BA3D9C72-C566-4E9D-BC1E-902F53774405}">
+													<PointList>
+														<Point>
+															<XPos>57.36041</XPos>
+															<YPos>53.9548</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="RC_Ringtone_Path_02" ID="{B4AADEA2-216F-4E4E-A609-5DD6150EAEE1}">
+													<PointList>
+														<Point>
+															<XPos>-49.23858</XPos>
+															<YPos>-37.00565</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="RC_Ringtone_Path_03" ID="{D778382C-50FE-4F4E-BFAB-D148FBBF0F5C}">
+													<PointList>
+														<Point>
+															<XPos>78.17259</XPos>
+															<YPos>-50.56497</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="AMB_Menu" ID="{E0DD2CA8-44C4-490C-8F09-281DD5B515A9}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Quit" ID="{2411D6AF-F760-4219-BE3B-79644F9E7638}"/>
+								<CustomState Name="" ID="{89026296-A7EC-4474-84A2-2307D926DB4F}" ShortID="362442481"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Enter" ID="{1485C4FB-D1D9-4C0D-8382-D398A80F912D}"/>
+								<CustomState Name="" ID="{AD55D220-0AED-4175-9153-B81430AE5110}" ShortID="973465638"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

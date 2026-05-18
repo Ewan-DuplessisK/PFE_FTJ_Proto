@@ -1,0 +1,232 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1295416526",
+    "Type": "User",
+    "GUID": "{A594CFB5-5ABD-45D6-A2E4-B75504554EF0}",
+    "Color": "25",
+    "Language": "SFX",
+    "Hash": "{08516FBF-7252-8D31-9097-A4BDBA6E5979}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX\\SFX_LVL_02\\SFX_LVL_02",
+    "ShortName": "SFX_LVL_02",
+    "Path": "SFX_LVL_02.bnk",
+    "Media": [
+     {
+      "Id": "143275072",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_ExplosionElec_03.wav",
+      "CachePath": "00/{00E37CC3-B078-DFC2-D0B2-B27E24A02457}.wem"
+     },
+     {
+      "Id": "217173671",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_ExplosionElec_04.wav",
+      "CachePath": "EA/{EA756C62-AAA9-3470-73F8-231DBEB98D0F}.wem"
+     },
+     {
+      "Id": "620209523",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_ExplosionElec_01.wav",
+      "CachePath": "B9/{B9B4F1F5-3637-17A2-BF78-EAA14797CE2D}.wem"
+     },
+     {
+      "Id": "989321473",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\Water\\SFX_Water_ExplosionElec_02.wav",
+      "CachePath": "2D/{2D905345-36EE-9698-D803-760DF6179EBB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2717964529",
+      "Name": "Water_ExplosionElec",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_LVL_02\\Water_ExplosionElec",
+      "GUID": "{EE40C742-4D9A-4660-AC28-CD9C05D5653A}",
+      "Color": "25",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "3.0833333",
+      "DurationMax": "3.0833333",
+      "MediaRefs": [
+       {
+        "Id": "143275072"
+       },
+       {
+        "Id": "217173671"
+       },
+       {
+        "Id": "620209523"
+       },
+       {
+        "Id": "989321473"
+       }
+      ]
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "1650947108",
+      "Name": "AB_SFX",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX\\AB_SFX",
+      "GUID": "{CA1A0EDF-BC5F-475D-BCB6-4E0333938D23}",
+      "Color": "11"
+     },
+     {
+      "Id": "1669415112",
+      "Name": "AB_SFX_LVL_02",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX\\AB_SFX\\AB_SFX_LVL_02",
+      "GUID": "{74DE5A6F-AEC5-4401-B3AA-29539587BB90}",
+      "Color": "11"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "932301089",
+      "Name": "RTPC_SFX_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_SFX_Volume",
+      "GUID": "{0EB4588E-0728-469E-A6B1-EA1EF70CCB3E}",
+      "Color": "1"
+     },
+     {
+      "Id": "1400970647",
+      "Name": "RTPC_Music_SideChain_VOICEREACTION",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain_VOICEREACTION",
+      "GUID": "{DF6DAE97-E05E-4CFE-9371-581FF156106D}"
+     },
+     {
+      "Id": "1828041389",
+      "Name": "RTPC_Music_SideChain",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain",
+      "GUID": "{48035C4E-15B2-4C86-A81C-7505A68840D5}"
+     },
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     },
+     {
+      "Id": "3312150600",
+      "Name": "RTPC_Sidechain_Rage_Enter",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Sidechain_Rage_Enter",
+      "GUID": "{CDBA16C9-1E19-496A-B420-2194AE170CC6}",
+      "Color": "1"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "603700529",
+      "Name": "MC_CriticalHealth",
+      "ObjectPath": "\\States\\MC\\MC_CriticalHealth",
+      "GUID": "{A5FC26C3-7658-4327-B092-C5E156E8EE7C}",
+      "Color": "3",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\None",
+        "GUID": "{5BC3290D-432D-4808-8DF2-9ECD959311FD}",
+        "Color": "3"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\OFF",
+        "GUID": "{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}",
+        "Color": "3"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\ON",
+        "GUID": "{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "2037745005",
+      "Name": "STG_DUCKGAMEOVER",
+      "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER",
+      "GUID": "{F8602139-94B4-472E-AE05-7C1BACD04DDB}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\None",
+        "GUID": "{4249B618-F554-41B7-92C0-6474F0C51E05}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\OFF",
+        "GUID": "{2F7E0F06-4458-411D-94B6-8AB9D860C269}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\ON",
+        "GUID": "{ED100031-70CD-4F13-BF9B-914069821D22}",
+        "Color": "23"
+       }
+      ]
+     },
+     {
+      "Id": "3350389201",
+      "Name": "STG_SLOWMO",
+      "ObjectPath": "\\States\\SFX\\STG_SLOWMO",
+      "GUID": "{1D2DAD21-09CF-4E14-B2E1-0BEA47C47222}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\None",
+        "GUID": "{7A3FC7CE-16CA-40AC-816B-E0C6955D12CA}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\OFF",
+        "GUID": "{EF39E2B7-CB41-4B8D-84ED-75738314CD46}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\ON",
+        "GUID": "{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}",
+        "Color": "23"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0877F9EB-2FCF-1F1B-419E-B972CD45257A}"
+ }
+}

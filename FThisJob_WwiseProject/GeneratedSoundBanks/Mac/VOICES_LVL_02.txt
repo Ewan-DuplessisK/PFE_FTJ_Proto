@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	215707281	VOC_Jake_Dark_Open_Space_02			\Default Work Unit\VOICES\VOICES_LVL_02\VOC_Jake_Dark_Open_Space_02	
+	215707282	VOC_Jake_Dark_Open_Space_01			\Default Work Unit\VOICES\VOICES_LVL_02\VOC_Jake_Dark_Open_Space_01	
+	3720297145	VOC_AI_Dark_Open_Space			\Default Work Unit\VOICES\VOICES_LVL_02\VOC_AI_Dark_Open_Space	
+	4224586905	VOC_CEO_Dark_Open_Space_02			\Default Work Unit\VOICES\VOICES_LVL_02\VOC_CEO_Dark_Open_Space_02	
+	4224586906	VOC_CEO_Dark_Open_Space_01			\Default Work Unit\VOICES\VOICES_LVL_02\VOC_CEO_Dark_Open_Space_01	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	203691350	SFX_Alarm	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\72\{72E90588-36A8-3C92-6D82-1994C13189FB}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\SFX_Alarm		135561
+	282820372	VOC_AI_Dark_Open_Space	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\F1\{F1B7BA93-FD1A-957B-5603-F040D797A386}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_02\AM_VOICES_LVL_02\AM_Voices_Robot\VOC_AI_Dark_Open_Space		41534
+	592821478	VOC_Jake_Dark_Open_Space_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\D1\{D11A82C0-8A47-4BB6-CB42-91AB5437D024}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_02\AM_VOICES_LVL_02\AM_Voices_Jake\VOC_Jake_Dark_Open_Space_02		17932
+	820073258	VOC_Jake_Dark_Open_Space_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\6E\{6E04FB76-F493-04B5-D587-55B663C045B6}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_02\AM_VOICES_LVL_02\AM_Voices_Jake\VOC_Jake_Dark_Open_Space_01		17188
+	880259693	VOC_VOC_CEO_Dark_Open_Space_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\C2\{C21EA320-A762-06FB-B846-23F701B509C2}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_02\AM_VOICES_LVL_02\AM_Voices_CEO\VOC_VOC_CEO_Dark_Open_Space_01		22108
+	912322422	VOC_VOC_CEO_Dark_Open_Space_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\84\{84B6C262-8ADD-C2B4-A7D0-46F178E67977}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_02\AM_VOICES_LVL_02\AM_Voices_CEO\VOC_VOC_CEO_Dark_Open_Space_02		48817
+

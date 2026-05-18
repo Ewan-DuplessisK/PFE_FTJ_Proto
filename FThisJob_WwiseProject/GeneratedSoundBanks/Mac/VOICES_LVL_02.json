@@ -1,0 +1,160 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1161578708",
+    "Type": "User",
+    "GUID": "{95EFF61B-B1A9-418F-95ED-7B812D45DCA8}",
+    "Color": "27",
+    "Language": "SFX",
+    "Hash": "{CD1A2B57-A387-A11C-50DD-AD1C88FDF611}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOICES\\VOICES_LVL_02\\VOICES_LVL_02",
+    "ShortName": "VOICES_LVL_02",
+    "Path": "VOICES_LVL_02.bnk",
+    "Media": [
+     {
+      "Id": "203691350",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX\\SFX_Alarm.wav",
+      "CachePath": "72/{72E90588-36A8-3C92-6D82-1994C13189FB}.wem"
+     },
+     {
+      "Id": "282820372",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL02\\VOC_AI_Dark_Open_Space.wav",
+      "CachePath": "F1/{F1B7BA93-FD1A-957B-5603-F040D797A386}.wem"
+     },
+     {
+      "Id": "592821478",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL02\\VOC_Jake_Dark_Open_Space_02.wav",
+      "CachePath": "D1/{D11A82C0-8A47-4BB6-CB42-91AB5437D024}.wem"
+     },
+     {
+      "Id": "820073258",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL02\\VOC_Jake_Dark_Open_Space_01.wav",
+      "CachePath": "6E/{6E04FB76-F493-04B5-D587-55B663C045B6}.wem"
+     },
+     {
+      "Id": "880259693",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL02\\VOC_VOC_CEO_Dark_Open_Space_01.wav",
+      "CachePath": "C2/{C21EA320-A762-06FB-B846-23F701B509C2}.wem"
+     },
+     {
+      "Id": "912322422",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVL02\\VOC_VOC_CEO_Dark_Open_Space_02.wav",
+      "CachePath": "84/{84B6C262-8ADD-C2B4-A7D0-46F178E67977}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3720297145",
+      "Name": "VOC_AI_Dark_Open_Space",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_02\\VOC_AI_Dark_Open_Space",
+      "GUID": "{9F2D0CDC-A267-4211-A492-11A60200C249}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "8.333333",
+      "DurationMax": "8.333333",
+      "MediaRefs": [
+       {
+        "Id": "203691350"
+       },
+       {
+        "Id": "282820372"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "1744732112",
+        "Name": "RVB_BIG_ROOM",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB_BIG_ROOM",
+        "GUID": "{D2A20092-DEE8-44A6-98B2-AA770CE07948}"
+       }
+      ]
+     },
+     {
+      "Id": "4224586906",
+      "Name": "VOC_CEO_Dark_Open_Space_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_02\\VOC_CEO_Dark_Open_Space_01",
+      "GUID": "{E9430C40-457A-4C8D-9E5A-1D6FDF4FD2E1}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "2.3758125",
+      "DurationMax": "2.3758125",
+      "MediaRefs": [
+       {
+        "Id": "880259693"
+       }
+      ]
+     },
+     {
+      "Id": "4224586905",
+      "Name": "VOC_CEO_Dark_Open_Space_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_02\\VOC_CEO_Dark_Open_Space_02",
+      "GUID": "{D7F1BC3A-34FE-478A-936C-53D813300BFB}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "4.7150416",
+      "DurationMax": "4.7150416",
+      "MediaRefs": [
+       {
+        "Id": "912322422"
+       }
+      ]
+     },
+     {
+      "Id": "215707282",
+      "Name": "VOC_Jake_Dark_Open_Space_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_02\\VOC_Jake_Dark_Open_Space_01",
+      "GUID": "{4249FEDB-7F4E-431C-8431-C2950DD3F757}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.7567708",
+      "DurationMax": "1.7567708",
+      "MediaRefs": [
+       {
+        "Id": "820073258"
+       }
+      ]
+     },
+     {
+      "Id": "215707281",
+      "Name": "VOC_Jake_Dark_Open_Space_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_LVL_02\\VOC_Jake_Dark_Open_Space_02",
+      "GUID": "{C716D1B7-CECE-40CA-A27B-8B319167F162}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.750875",
+      "DurationMax": "1.750875",
+      "MediaRefs": [
+       {
+        "Id": "592821478"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CEE9A5EB-3F4F-F352-6A96-218B26597194}"
+ }
+}

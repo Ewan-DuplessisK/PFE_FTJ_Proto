@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D22E2CDE-292C-41CB-97A4-5D5867D7F307}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}">
+	<Events>
+		<WorkUnit Name="AMB_GENERAL" ID="{D22E2CDE-292C-41CB-97A4-5D5867D7F307}" OwnerID="{9CD3C23A-4F4D-454D-B1A6-209A538C003E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Beds_Elevator_GENERAL" ID="{B923FC6B-0E74-42A6-AC66-8D0549315128}">
+					<ChildrenList>
+						<Action Name="" ID="{FB61EAB0-1D97-4A98-BE71-F7C9F9C5D7E5}" ShortID="485072935">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_BEDS_TUTO_Elevator_LP" ID="{8601EA44-C162-4410-8527-5C5F86B1B651}" WorkUnitID="{43CBA9E8-6686-4580-AF62-88D257134FAF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

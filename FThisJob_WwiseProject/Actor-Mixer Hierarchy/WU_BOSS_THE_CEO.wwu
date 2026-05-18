@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}" SchemaVersion="123" RootDocumentID="{50F281B2-308B-410C-A95E-7ED5349D7002}" ParentDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}">
+<WwiseDocument Type="WorkUnit" ID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}" SchemaVersion="123" RootDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" ParentDocumentID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}">
 	<AudioObjects>
-		<WorkUnit Name="WU_BOSS_THE_CEO" ID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}" OwnerID="{90E89024-BF28-4C5E-AB0F-EAB4354007D2}" PersistMode="Nested">
+		<WorkUnit Name="WU_BOSS_THE_CEO" ID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}" OwnerID="{E84919CA-0755-495B-B387-012B93C222C2}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="AM_BOSS_THE_CEO" ID="{AC57C1F3-427E-48F3-9FA2-BB5E2D29CB34}" ShortID="132200089">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 						</Reference>
@@ -12,6 +24,1115 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="RC_Walk" ID="{F0607369-1F71-41BA-A6C1-470B8E9BF269}" ShortID="927591220">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>18</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{75ACC241-F754-4286-BB20-62A0FD71B6D4}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="75"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_Walk_01" ID="{82945549-6D4E-49EB-B90E-3E4155369BB0}" ShortID="949178616">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Walk_01" ID="{E2FDE4B2-126A-4B6F-932E-A2DC59611A12}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Walk_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="563195805"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Walk_01" ID="{E2FDE4B2-126A-4B6F-932E-A2DC59611A12}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Walk_02" ID="{49578AF9-0F79-4732-BB96-E656511923EF}" ShortID="45956489">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Walk_02" ID="{7917C112-210D-4782-BF27-F8BAE249968E}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Walk_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="83188009"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Walk_02" ID="{7917C112-210D-4782-BF27-F8BAE249968E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Walk_03" ID="{66F7680C-6123-4AAA-A923-62032877F48F}" ShortID="743407326">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Walk_03" ID="{BADDF61C-7AD5-4F3C-BDC9-3C8FF266163E}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Walk_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="256475668"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Walk_03" ID="{BADDF61C-7AD5-4F3C-BDC9-3C8FF266163E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Walk_04" ID="{C5031BED-DC5B-414F-8A02-EAA03A2B320A}" ShortID="127260204">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Walk_04" ID="{3C6A9260-E7B0-4C9A-A2BF-8DEA2EE50798}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Walk_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="226557097"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Walk_04" ID="{3C6A9260-E7B0-4C9A-A2BF-8DEA2EE50798}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Walk_05" ID="{7FC0E7B9-A832-4957-B1BF-B37777A136C3}" ShortID="338075402">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Walk_05" ID="{5EB1235A-BCFD-4EE7-8053-2431827A8659}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Walk_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="918493882"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Walk_05" ID="{5EB1235A-BCFD-4EE7-8053-2431827A8659}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Walk_06" ID="{9216E462-5ACA-421B-A881-1D936C6B5544}" ShortID="346911891">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Walk_06" ID="{ACB283FC-8338-4212-B798-78425C8D1DEB}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Walk_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="798220226"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Walk_06" ID="{ACB283FC-8338-4212-B798-78425C8D1DEB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Walk_07" ID="{2FB357D9-A576-463F-AEE9-723C9AB92977}" ShortID="47871865">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Walk_07" ID="{28F338DB-4F14-4E41-B9EB-0980C9342699}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Walk_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="339912894"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Walk_07" ID="{28F338DB-4F14-4E41-B9EB-0980C9342699}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_Punch" ID="{A4529974-741F-411C-8B46-FB1C38C1AC2D}" ShortID="828651732">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_Punch_01" ID="{92E94EDD-9AFA-41E5-86AB-1258CA54EA0E}" ShortID="909385177">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Punch_01" ID="{5C9A74CE-B2C1-40FC-8A7B-EF2575E4C67D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Punch_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="667243300"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Punch_01" ID="{5C9A74CE-B2C1-40FC-8A7B-EF2575E4C67D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Punch_02" ID="{D1A7BFC9-FEC4-4CED-B97A-D338F5EB1648}" ShortID="768714327">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Punch_02" ID="{F106CCF2-3465-48B6-AC56-E7D48C3E87F6}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Punch_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="783068782"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Punch_02" ID="{F106CCF2-3465-48B6-AC56-E7D48C3E87F6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Punch_03" ID="{D64B6472-D719-480D-A081-F27B11CF11F9}" ShortID="597087242">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Punch_03" ID="{5E860F59-EA4A-41E8-BDBE-3A92E30186BB}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Punch_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="114077642"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Punch_03" ID="{5E860F59-EA4A-41E8-BDBE-3A92E30186BB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Punch_04" ID="{C0ABB7DD-E8D8-48A1-9808-756A872D3CBA}" ShortID="790253125">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Punch_04" ID="{2D72DE47-8E39-4C38-A044-AE5EE7C63A18}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Punch_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="57987035"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Punch_04" ID="{2D72DE47-8E39-4C38-A044-AE5EE7C63A18}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_HardPunch" ID="{9E27EB0F-740A-438C-AB7F-70E26AA3BCB2}" ShortID="469707152">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>250</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_HardPunch_01" ID="{741E3B00-A04A-4986-AE65-4C084314F816}" ShortID="460465894">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HardPunch_01" ID="{9AAB7EEF-A524-4F15-AB37-1A0B86801D1D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HardPunch_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="104849514"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HardPunch_01" ID="{9AAB7EEF-A524-4F15-AB37-1A0B86801D1D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HardPunch_02" ID="{42BA25D2-DE68-437C-A999-2CACD73F4581}" ShortID="959481800">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HardPunch_02" ID="{CF46D1D2-8B7C-4539-BD05-B0D0DB1C59F2}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HardPunch_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="569593932"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HardPunch_02" ID="{CF46D1D2-8B7C-4539-BD05-B0D0DB1C59F2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HardPunch_03" ID="{4FED5BF2-4798-49ED-8C85-CA8A270D010F}" ShortID="240788110">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HardPunch_03" ID="{5F9DA2F2-A6DE-4F0B-AC9C-CD311D753C64}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HardPunch_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="386091671"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HardPunch_03" ID="{5F9DA2F2-A6DE-4F0B-AC9C-CD311D753C64}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_Skid" ID="{4D0FE02B-84B4-48A9-9B75-95166C90D37F}" ShortID="60780179">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_Skid_01" ID="{66097772-F44E-48ED-A950-299B51A99043}" ShortID="958345184">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Skid_01" ID="{4D86F30F-9F54-4CFC-87AD-AD84F75C3C9D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Skid_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="631273764"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Skid_01" ID="{4D86F30F-9F54-4CFC-87AD-AD84F75C3C9D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Skid_02" ID="{6C479A75-B717-4B22-AA61-CB86AB5102D4}" ShortID="426822584">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Skid_02" ID="{4347334E-1DF0-4F8B-BC21-F995EAE8D3D1}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Skid_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="831127815"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Skid_02" ID="{4347334E-1DF0-4F8B-BC21-F995EAE8D3D1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Skid_03" ID="{9DA7B858-B839-4783-A501-16F3349981AE}" ShortID="321956600">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Skid_03" ID="{18F109C8-E2CA-40D4-A391-05A35146A6C7}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Skid_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="335445603"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Skid_03" ID="{18F109C8-E2CA-40D4-A391-05A35146A6C7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_Taunt" ID="{E3E7F6FA-E7B2-4489-9BB7-9C39C5DE3300}" ShortID="450867682">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>15</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B773E468-9F7E-4236-B468-D0FB8C6D0726}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_Taunt_01" ID="{B0B068E0-B79C-4817-8033-F3A083896B14}" ShortID="9593874">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Taunt_01" ID="{82FB835B-D410-41B2-B358-87489C9200CC}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Taunt_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="657443973"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Taunt_01" ID="{82FB835B-D410-41B2-B358-87489C9200CC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Taunt_02" ID="{D25BA223-5FE8-444A-B036-6B0A3A750B61}" ShortID="448053870">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Taunt_02" ID="{E783E3FC-8CF1-401C-83B4-19AE1A84E68C}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Taunt_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="429327604"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Taunt_02" ID="{E783E3FC-8CF1-401C-83B4-19AE1A84E68C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Taunt_03" ID="{DB18D335-27AB-4CC0-9D1B-06497F29EA10}" ShortID="263791492">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Taunt_03" ID="{1A805B92-20BD-493A-B94A-D46BF5E54D35}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Taunt_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="161220475"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Taunt_03" ID="{1A805B92-20BD-493A-B94A-D46BF5E54D35}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_Clap" ID="{F642F3FA-D60A-4ED0-9B94-3956286B7E2D}" ShortID="345033687">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>22</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_Clap_01" ID="{108CBF74-E10F-4684-BD3F-66C350EC372A}" ShortID="291986192">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Clap_01" ID="{52A54B54-8636-4634-A1C5-142FCE30D76B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0398009956179566"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.429850752673932"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.400000005960465"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Clap_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="167016017"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Clap_01" ID="{52A54B54-8636-4634-A1C5-142FCE30D76B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Clap_02" ID="{207EEBBD-F449-422E-AF9A-2EAF2E22C000}" ShortID="507491850">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Clap_02" ID="{AE999523-C275-4EF9-8ADB-0C7FD1E68E84}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.066956883935786"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.317060538637104"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Clap_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="413804379"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Clap_02" ID="{AE999523-C275-4EF9-8ADB-0C7FD1E68E84}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Clap_03" ID="{3E81AB7E-DFE0-414C-8FCF-9F8A106D019C}" ShortID="704503263">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Clap_03" ID="{939ED9ED-E5ED-4761-B284-DD1F391F01BC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0756218916741176"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.405970155303158"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Clap_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="881917615"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Clap_03" ID="{939ED9ED-E5ED-4761-B284-DD1F391F01BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_Hits" ID="{E72BDC38-5760-40C6-8346-97749CAA0C55}" ShortID="560064605">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="BOSS_HitsStomach_01" ID="{E12AC624-A4D8-4436-8A5D-C05AC6C896A2}" ShortID="510396748">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BOSS_HitsStomach_01" ID="{9BCEABC8-351E-4E29-AEF6-002CB6FA545D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\BOSS_HitsStomach_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="819012890"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BOSS_HitsStomach_01" ID="{9BCEABC8-351E-4E29-AEF6-002CB6FA545D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BOSS_HitsStomach_02" ID="{307B92B2-06D1-4AB1-9063-EA63582455AA}" ShortID="821658658">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BOSS_HitsStomach_02" ID="{5CB51953-157A-4A75-95E0-386607D63BE2}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\BOSS_HitsStomach_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="167436280"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BOSS_HitsStomach_02" ID="{5CB51953-157A-4A75-95E0-386607D63BE2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BOSS_HitsStomach_03" ID="{71DE5DF9-F955-4434-B9E8-E13A818222DA}" ShortID="902182261">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BOSS_HitsStomach_03" ID="{3C6B3B22-68F3-47CA-96DD-3FF31F07AFFF}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\BOSS_HitsStomach_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="649719106"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BOSS_HitsStomach_03" ID="{3C6B3B22-68F3-47CA-96DD-3FF31F07AFFF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BOSS_HitsStomach_04" ID="{6C098987-AA31-4B0C-A60D-85FD7371F55B}" ShortID="807296060">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BOSS_HitsStomach_04" ID="{6A9D6C93-CFF6-4D50-9494-5753B7FB8F80}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\BOSS_HitsStomach_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="798604289"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BOSS_HitsStomach_04" ID="{6A9D6C93-CFF6-4D50-9494-5753B7FB8F80}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BOSS_HitsStomach_05" ID="{8B2DCC5B-F018-4C8A-A381-C532BDAC75CE}" ShortID="314461906">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BOSS_HitsStomach_05" ID="{7963DDE8-550F-4667-97FC-E041E950738D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\BOSS_HitsStomach_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="433842962"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BOSS_HitsStomach_05" ID="{7963DDE8-550F-4667-97FC-E041E950738D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_Charge" ID="{45CA49A3-C66B-4CA8-A84A-8146576E3A4B}" ShortID="893406998">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>24</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_Charge_01" ID="{100E233A-CC0B-4867-B288-DB8A6668FBD3}" ShortID="877435598">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Charge_01" ID="{9F52EC31-5CB9-44C8-870C-1D9772354EBC}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Charge_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="880626459"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Charge_01" ID="{9F52EC31-5CB9-44C8-870C-1D9772354EBC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Charge_02" ID="{7E0E5B02-0C76-4BE4-89B7-E3A387743E86}" ShortID="772903585">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Charge_02" ID="{F15EDDD3-E37D-4BF8-B993-DE1361E2C0A5}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Charge_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="117409978"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Charge_02" ID="{F15EDDD3-E37D-4BF8-B993-DE1361E2C0A5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_Charge_03" ID="{437C18F6-E197-439A-9132-B5D3412C7366}" ShortID="546751649">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_Charge_03" ID="{7093AE69-22DD-44AC-A565-CAC66E7BBE34}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Charge_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="286233036"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_Charge_03" ID="{7093AE69-22DD-44AC-A565-CAC66E7BBE34}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_LaunchPunch" ID="{B51C7B45-E818-4045-906F-717C0DAE2428}" ShortID="8319189">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>27</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_LaunchPunch_01" ID="{D57A8F52-492C-41F0-B536-4BFFB0888E52}" ShortID="96997404">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_LaunchPunch_01" ID="{88B2DBBF-BE43-4971-AA57-874173FD3282}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_LaunchPunch_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="265079921"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_LaunchPunch_01" ID="{88B2DBBF-BE43-4971-AA57-874173FD3282}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_LaunchPunch_02" ID="{C34D369C-41B0-4211-9F30-273E6550A48D}" ShortID="389286938">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_LaunchPunch_02" ID="{22523B9B-A23C-4643-898F-23F8BAE0B397}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_LaunchPunch_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="825843620"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_LaunchPunch_02" ID="{22523B9B-A23C-4643-898F-23F8BAE0B397}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_LaunchPunch_03" ID="{1D20C643-7681-493F-94CB-5135CDD13528}" ShortID="885301409">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_LaunchPunch_03" ID="{80F6FFDA-F610-4CB4-9CA3-D8ED7E45D66D}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_LaunchPunch_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="464335915"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_LaunchPunch_03" ID="{80F6FFDA-F610-4CB4-9CA3-D8ED7E45D66D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_HitsConfirm" ID="{7559EE13-7D5E-423E-848B-425594AC3E17}" ShortID="1008368127">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_HitsConfirm_01" ID="{94149B2A-E481-475D-A182-5CCBD30EC4BE}" ShortID="394536648">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsConfirm_01" ID="{20BF79BC-5FB4-4F0A-BC80-2CF77775D53C}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsConfirm_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="589214320"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsConfirm_01" ID="{20BF79BC-5FB4-4F0A-BC80-2CF77775D53C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HitsConfirm_02" ID="{B5F7D797-AA74-4DEE-A2DB-A29F4B555BAA}" ShortID="63393632">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsConfirm_02" ID="{38990E5A-1DFF-40E9-8D9A-A7AEBFA35A1F}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsConfirm_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="501517817"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsConfirm_02" ID="{38990E5A-1DFF-40E9-8D9A-A7AEBFA35A1F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HitsConfirm_03" ID="{4FCE6693-5D0B-4846-A0AF-203AF40FFF56}" ShortID="632367635">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsConfirm_03" ID="{1EB2F2FB-978D-489D-8731-F743A6248C24}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsConfirm_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="245357120"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsConfirm_03" ID="{1EB2F2FB-978D-489D-8731-F743A6248C24}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HitsConfirm_04" ID="{5FB5BA6A-F9E0-42E1-A7D5-68A4033603E3}" ShortID="419679175">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsConfirm_04" ID="{B60AD75A-ECA1-42BD-991C-71DFFB66BCA8}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsConfirm_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="107848514"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsConfirm_04" ID="{B60AD75A-ECA1-42BD-991C-71DFFB66BCA8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HitsConfirm_05" ID="{D8E6EA8B-C692-4A43-AA32-964211A1F355}" ShortID="834287126">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsConfirm_05" ID="{DF21D161-0D1B-4C1B-A43E-42B4941AF482}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsConfirm_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="71463455"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsConfirm_05" ID="{DF21D161-0D1B-4C1B-A43E-42B4941AF482}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="ENEMY_Ceo_Stun_LP" ID="{DE9BDBED-5FCF-470D-98B0-9524338EF62D}" ShortID="93397683">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ENEMY_Ceo_Stun_LP" ID="{013FC585-325C-456B-B22B-8E55F78FB3AB}">
+									<Language>SFX</Language>
+									<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_Stun_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="444954411"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ENEMY_Ceo_Stun_LP" ID="{013FC585-325C-456B-B22B-8E55F78FB3AB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

@@ -1,6 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1457C4F2-19A3-4E28-ACA5-CBCC67E57A60}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}">
 	<Events>
-		<WorkUnit Name="FLYING_ROBOTS" ID="{1457C4F2-19A3-4E28-ACA5-CBCC67E57A60}" OwnerID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" PersistMode="Nested"/>
+		<WorkUnit Name="FLYING_ROBOTS" ID="{1457C4F2-19A3-4E28-ACA5-CBCC67E57A60}" OwnerID="{C0C2D996-DDF2-46ED-A1C2-017231AAE022}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="FlyingRobot_Fly" ID="{61084D9F-0C0D-44E8-969A-B965FB55829B}">
+					<ChildrenList>
+						<Action Name="" ID="{686E029B-628A-47EE-9CBE-47F5B5C8919B}" ShortID="692288127">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FlyingRobot_Fly_LP" ID="{549620EB-71A2-475C-97E8-AE3ED0801870}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{326B0E37-08D4-4863-916A-43AD2DCC816B}" ShortID="663318712">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4113FF90-8297-42C5-B873-60A0B5A31DDA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FlyingRobot_Fly_LP" ID="{549620EB-71A2-475C-97E8-AE3ED0801870}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FlyingRobot_Magnet" ID="{BD634FD7-4449-40FB-A208-3F082AC96876}">
+					<ChildrenList>
+						<Action Name="" ID="{1AF58280-EDF1-4BD4-8CE2-DD0AE31C5AFB}" ShortID="97864628">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FlyingRobot_Magnet_LP" ID="{F531F15C-4683-4B7E-AC63-C3FDD2766978}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0458C0EB-BD8B-4A6C-933A-2565AFBA5F03}" ShortID="944528813">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{62178EDF-D04F-4669-B537-552AAB47AFEC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FlyingRobot_Magnet_LP" ID="{F531F15C-4683-4B7E-AC63-C3FDD2766978}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FlyingRobot_Magnet_Stop" ID="{7C3F9B58-B22F-4F01-BCB2-30436C4B1A6D}">
+					<ChildrenList>
+						<Action Name="" ID="{E15C50BF-DF80-485A-8973-CE3DD291F494}" ShortID="733260288">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FlyingRobot_Magnet_LP" ID="{F531F15C-4683-4B7E-AC63-C3FDD2766978}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FlyingRobot_Launch" ID="{B77C9583-2644-409D-9056-919253FF91F0}">
+					<ChildrenList>
+						<Action Name="" ID="{89D47932-1BD6-4355-8A91-6D2893B84CD8}" ShortID="844613291">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_FlyingRobot_Launch" ID="{771F8ADE-8EF7-4777-BC46-ECD1C77B0457}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E22B8B77-FF72-434F-A1D6-C7D2DE1CDE74}" ShortID="347146253">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Voice_Attack" ID="{58829D46-6678-4FA1-BF1B-54936540585A}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FlyingRobot_Hit" ID="{1AA969B2-95A3-41F2-AFB8-7B925DA39636}">
+					<ChildrenList>
+						<Action Name="" ID="{4E531206-DC2D-4E2A-9AF7-4418EE413CB1}" ShortID="914018994">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="30"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Voice_Hurt" ID="{A2386296-E383-49FA-A3B4-3AD8146C8DB4}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4D70E8C4-841C-496E-8301-B638D4892A9F}" ShortID="1000416472">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Damage" ID="{2B066112-FF87-4CDB-B8AA-A6CA22CBA78F}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FlyingRobot_Death" ID="{A18970D9-014D-4D95-B30D-5DD676B16C28}">
+					<ChildrenList>
+						<Action Name="" ID="{8B34EBEA-D238-4519-BAC3-9D993EE5020F}" ShortID="62145833">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_TURRET_Explosion" ID="{3EC3D967-F5B0-4CD7-B54B-514C8B979BC2}" WorkUnitID="{93FCEA7C-DD36-45AC-BF97-97041C6A7DF4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E3EBA76A-6365-462D-AB85-CF6DD8D59B11}" ShortID="437719137">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Voice_Death" ID="{52730380-5281-4364-A1CD-87D57D8A0068}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A9A8BDE8-14A4-4891-9BAD-3B594F11FC82}" ShortID="524955542">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FlyingRobot_Fly_LP" ID="{549620EB-71A2-475C-97E8-AE3ED0801870}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1355D261-27C1-4BDC-BAB7-9058B6DE9C2A}" ShortID="407798210">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6D2B8BCA-53F6-4C39-8856-69B156DCAFA3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOICES_Jake_Combat" ID="{C4CA8051-3724-4F0A-9727-2403899970BB}" WorkUnitID="{B7D81390-F29E-47DE-874A-A1BC906853B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FlyingRobot_Loot" ID="{427E86E1-F5B4-446A-9B3F-A0B804EA006B}">
+					<ChildrenList>
+						<Action Name="" ID="{538732D9-F358-448F-8032-E30C0BBD929C}" ShortID="986772568">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_FlyingRobot_Loot" ID="{89822C15-255D-46AD-9A43-CE242BF79206}" WorkUnitID="{F92128FB-C181-480D-AC69-6CDB8D8215D5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

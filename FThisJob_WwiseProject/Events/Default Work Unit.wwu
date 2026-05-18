@@ -10,6 +10,8 @@
 				<WorkUnit Name="SFX" ID="{3C794BBE-5F60-40DF-881B-138623497689}" PersistMode="Reference"/>
 				<WorkUnit Name="UI" ID="{F6A0B217-C21E-4558-AAD0-E1FDB4EEDC42}" PersistMode="Reference"/>
 				<WorkUnit Name="VOICES" ID="{54C85867-2FC6-4A49-A289-14A282CE9297}" PersistMode="Reference"/>
+				<WorkUnit Name="MUSIC" ID="{17F843A6-CDFC-4DD2-9F3B-5E7CD27B614D}" PersistMode="Reference"/>
+				<WorkUnit Name="CINEMATIC" ID="{5BBE2AAA-1C83-4BC3-9C36-ABE901612B63}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

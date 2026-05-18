@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}" SchemaVersion="123">
+	<GameParameters>
+		<WorkUnit Name="GPE" ID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<GameParameter Name="RTPC_Extinguisher_Volume" ID="{8EDDB16F-2299-4A4E-99EF-673E78BADA20}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="150"/>
+						<Property Name="Max" Type="Real64" Value="1000"/>
+						<Property Name="Min" Type="Real64" Value="50"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_Extinguisher_Steam" ID="{A3C41D59-BF39-4B41-B974-01CE73817828}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}">
+					<PropertyList>
+						<Property Name="Max" Type="Real64" Value="1000"/>
+						<Property Name="Min" Type="Real64" Value="50"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

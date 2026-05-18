@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F720F9C2-D7EA-4C9E-AE59-D39836279D89}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{54C85867-2FC6-4A49-A289-14A282CE9297}">
+	<Events>
+		<WorkUnit Name="VOICES_REACTION" ID="{F720F9C2-D7EA-4C9E-AE59-D39836279D89}" OwnerID="{54C85867-2FC6-4A49-A289-14A282CE9297}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="VOICES_CEO_Laugh" ID="{16FFCC68-2459-48CA-ABD6-EFFD269A072E}">
+					<ChildrenList>
+						<Action Name="" ID="{916422F6-B82F-421B-942A-51AB8744AFA3}" ShortID="790702915">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOICES_CEO_Laugh" ID="{50B8D2C3-4411-4F08-B2C3-1B1FC7196F74}" WorkUnitID="{B7D81390-F29E-47DE-874A-A1BC906853B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOICES_CEO_Taunt" ID="{16B6B7DE-482D-4C1C-8E4D-E721749B5D5C}">
+					<ChildrenList>
+						<Action Name="" ID="{46666FAF-4AB7-455A-A601-367AEE902486}" ShortID="95004531">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOICES_CEO_Taunt" ID="{9554CE5F-19AE-48B3-845A-4661383E3333}" WorkUnitID="{B7D81390-F29E-47DE-874A-A1BC906853B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

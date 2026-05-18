@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FEA4471B-E467-4DE5-B2CF-06CFCBC803E0}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{3C794BBE-5F60-40DF-881B-138623497689}">
 	<Events>
-		<WorkUnit Name="SFX_LVL_02" ID="{FEA4471B-E467-4DE5-B2CF-06CFCBC803E0}" OwnerID="{3C794BBE-5F60-40DF-881B-138623497689}" PersistMode="Nested"/>
+		<WorkUnit Name="SFX_LVL_02" ID="{FEA4471B-E467-4DE5-B2CF-06CFCBC803E0}" OwnerID="{3C794BBE-5F60-40DF-881B-138623497689}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Water_ExplosionElec" ID="{EE40C742-4D9A-4660-AC28-CD9C05D5653A}">
+					<ChildrenList>
+						<Action Name="" ID="{42D31762-94A2-4B62-80A2-61E5286435A7}" ShortID="602274571">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Water_ExplosionElec" ID="{A28CBC6C-429A-4E50-B7D1-7A5BA7BC89CD}" WorkUnitID="{27F545BA-C7E4-455B-BE5E-23267845E2C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

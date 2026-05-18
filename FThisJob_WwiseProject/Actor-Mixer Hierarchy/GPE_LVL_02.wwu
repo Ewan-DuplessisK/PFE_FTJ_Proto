@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{3F008658-72BC-4C74-A846-DF1996455987}" SchemaVersion="123" RootDocumentID="{50F281B2-308B-410C-A95E-7ED5349D7002}" ParentDocumentID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}">
+<WwiseDocument Type="WorkUnit" ID="{3F008658-72BC-4C74-A846-DF1996455987}" SchemaVersion="123" RootDocumentID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}" ParentDocumentID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}">
 	<AudioObjects>
-		<WorkUnit Name="GPE_LVL_02" ID="{3F008658-72BC-4C74-A846-DF1996455987}" OwnerID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}" PersistMode="Nested">
+		<WorkUnit Name="GPE_LVL_02" ID="{3F008658-72BC-4C74-A846-DF1996455987}" OwnerID="{7AFEEE85-0C63-4638-A9E7-B9C620C83006}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="AM_GPE_LVL_02" ID="{2A088819-009B-4CB5-BDE3-D8AE9DEB83C3}" ShortID="989014588">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+							<ObjectRef Name="AB_GPE_LVL_02" ID="{42C742BC-AF99-48AF-AA3E-EE27609E93BD}" WorkUnitID="{E3C8A65D-504C-46C0-9917-8ACA728D43FD}"/>
 						</Reference>
 					</ReferenceList>
 				</ActorMixer>

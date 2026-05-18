@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1709258917	VOC_CEO_Lab_01			\Default Work Unit\VOICES\VOICES_LVL_03\VOC_CEO_Lab_01	
+	1709258918	VOC_CEO_Lab_02			\Default Work Unit\VOICES\VOICES_LVL_03\VOC_CEO_Lab_02	
+	1709258919	VOC_CEO_Lab_03			\Default Work Unit\VOICES\VOICES_LVL_03\VOC_CEO_Lab_03	
+	3069319072	VOC_AI_Lab			\Default Work Unit\VOICES\VOICES_LVL_03\VOC_AI_Lab	
+	3498193821	VOC_Jake_Lab_01			\Default Work Unit\VOICES\VOICES_LVL_03\VOC_Jake_Lab_01	
+	3498193822	VOC_Jake_Lab_02			\Default Work Unit\VOICES\VOICES_LVL_03\VOC_Jake_Lab_02	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	94179451	VOC_Jake_Lab_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\7A\{7AD122D7-7FAB-63E1-BAB9-3E4ED10F35A0}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_03\AM_VOICES_LVL_03\AM_Voices_Jake\VOC_Jake_Lab_01		30989
+	167885643	VOC_Jake_Lab_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\A5\{A5BA795D-F558-E99E-A388-72B079FF47E3}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_03\AM_VOICES_LVL_03\AM_Voices_Jake\VOC_Jake_Lab_02		19173
+	178594592	VOC_AI	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\B0\{B08565BD-635B-B879-713A-647C7F3E4B66}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_03\AM_VOICES_LVL_03\AM_Voices_AI\VOC_AI		38273
+	203691350	SFX_Alarm	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\72\{72E90588-36A8-3C92-6D82-1994C13189FB}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\SFX_Alarm		135561
+	289476327	VOC_CEO_Lab_02	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\5F\{5F12286B-DBB0-CF6A-90C8-237EBD5B23C9}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_03\AM_VOICES_LVL_03\AM_Voices_CEO\VOC_CEO_Lab_02		70160
+	376798040	VOC_CEO_Lab_01	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\79\{79EA7EC1-8C43-E1A0-1D3A-6E78C03B2509}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_03\AM_VOICES_LVL_03\AM_Voices_CEO\VOC_CEO_Lab_01		111989
+	624129109	VOC_CEO_Lab_03	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\12\{12F17E5D-0004-27D9-2599-51055D3E369F}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_LVL_03\AM_VOICES_LVL_03\AM_Voices_CEO\VOC_CEO_Lab_03		11709
+

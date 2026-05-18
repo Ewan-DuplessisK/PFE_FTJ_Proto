@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{54C85867-2FC6-4A49-A289-14A282CE9297}">
 	<Events>
-		<WorkUnit Name="VOICES_LVL_02" ID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" OwnerID="{54C85867-2FC6-4A49-A289-14A282CE9297}" PersistMode="Nested"/>
+		<WorkUnit Name="VOICES_LVL_02" ID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" OwnerID="{54C85867-2FC6-4A49-A289-14A282CE9297}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="VOC_CEO_Dark_Open_Space_01" ID="{E9430C40-457A-4C8D-9E5A-1D6FDF4FD2E1}">
+					<ChildrenList>
+						<Action Name="" ID="{EC4B5B1B-6248-4B7D-856D-E6E6BD4FFAB3}" ShortID="314213861">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_VOC_CEO_Dark_Open_Space_01" ID="{FCB14429-CC81-4226-93E8-28D27035C5E0}" WorkUnitID="{F075F924-0139-4D48-BC1E-4079AE3D0B83}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_CEO_Dark_Open_Space_02" ID="{D7F1BC3A-34FE-478A-936C-53D813300BFB}">
+					<ChildrenList>
+						<Action Name="" ID="{CC1A35AC-195B-445B-82FD-7DEB49811E6E}" ShortID="234362750">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_VOC_CEO_Dark_Open_Space_02" ID="{107B7F99-3742-4A81-B53C-93CC27441372}" WorkUnitID="{F075F924-0139-4D48-BC1E-4079AE3D0B83}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Dark_Open_Space_01" ID="{4249FEDB-7F4E-431C-8431-C2950DD3F757}">
+					<ChildrenList>
+						<Action Name="" ID="{6A04D40C-96D6-4586-90D9-EF86D6F11F05}" ShortID="677672856">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Dark_Open_Space_01" ID="{B387BE6F-7EE8-4E69-B388-D38068161211}" WorkUnitID="{F075F924-0139-4D48-BC1E-4079AE3D0B83}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_Jake_Dark_Open_Space_02" ID="{C716D1B7-CECE-40CA-A27B-8B319167F162}">
+					<ChildrenList>
+						<Action Name="" ID="{C94B89D5-DB7D-42C0-800C-3A367333E313}" ShortID="550558144">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_Jake_Dark_Open_Space_02" ID="{7B1B7587-0DDF-4FAF-8C42-53C3E6AE1C60}" WorkUnitID="{F075F924-0139-4D48-BC1E-4079AE3D0B83}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VOC_AI_Dark_Open_Space" ID="{9F2D0CDC-A267-4211-A492-11A60200C249}">
+					<ChildrenList>
+						<Action Name="" ID="{1ED04CEA-AB6D-43DA-B16E-0189DDA8B20B}" ShortID="879920765">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOC_AI_Dark_Open_Space" ID="{C6233017-E524-4C56-A86E-95E2572D426A}" WorkUnitID="{F075F924-0139-4D48-BC1E-4079AE3D0B83}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{54AC1C60-AC07-4676-9051-5C16B47A4670}" ShortID="892891062">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Alarm" ID="{80F10CEC-3472-4E7D-9C64-D9FE325F66CE}" WorkUnitID="{B7D81390-F29E-47DE-874A-A1BC906853B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

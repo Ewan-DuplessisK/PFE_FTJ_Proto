@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1845205119	Beds_Elevator_GENERAL			\Default Work Unit\AMB\AMB_GENERAL\Beds_Elevator_GENERAL	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	42638950	AMB_BEDS_TUTO_Elevator_LP	C:\Users\thesn\Desktop\Perforce_FTJ_Roussin\FThisJob\FThisJob_WwiseProject\.cache\7B\{7B492C5D-6FFA-50E1-932C-4A9FC36A65AC}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_TUTO\AM_AMB_LVL_TUTO\AM_BEDS\AMB_BEDS_TUTO_Elevator_LP		1650068
+

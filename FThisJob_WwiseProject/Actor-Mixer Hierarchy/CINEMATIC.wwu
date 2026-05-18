@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="CINEMATIC" ID="{74B1A0BC-EBB8-489B-90CE-C792ED792F3D}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="6"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="AM_SFX_CINEMATIC" ID="{A1B61043-AB7A-4A5D-93FC-1F1DDA108C78}" ShortID="818146642">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AB_CINEMATIC" ID="{B1F2DC65-F93B-48C1-B578-10C739F994E3}" WorkUnitID="{5351FC4D-D05D-4BE4-A41E-10C61D211ADC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="CINEMATIC_End_Ceo" ID="{E5B0CC63-2F65-4E0A-8342-710AC9D32C21}" ShortID="536895143">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CINEMATIC_End_Ceo" ID="{990085D1-8367-494B-A1BA-C73441F55153}">
+									<Language>SFX</Language>
+									<AudioFile>CINEMATIC_End_Ceo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="585842975"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CINEMATIC_End_Ceo" ID="{990085D1-8367-494B-A1BA-C73441F55153}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CINEMATIC_Open_Space_2" ID="{29D31497-44D2-4E0A-9468-0920CF10D02D}" ShortID="900164079">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CINEMATIC_Open_Space_2" ID="{C142D27C-5B69-48D9-8389-FA7506D452D6}">
+									<Language>SFX</Language>
+									<AudioFile>CINEMATIC\CINEMATIC_Open_Space_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="829787062"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CINEMATIC_Open_Space_2" ID="{C142D27C-5B69-48D9-8389-FA7506D452D6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CINEMATIC_AMB_Credit_JakeTalking" ID="{B3B99DB2-D308-46AB-9AF6-EF256E974A86}" ShortID="785196103">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CINEMATIC_AMB_Credit_JakeTalking" ID="{A969362C-3A2A-4D27-9959-9AEBD78E2775}">
+									<Language>SFX</Language>
+									<AudioFile>CINEMATIC\CINEMATIC_AMB_Credit_JakeTalking.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="231724061"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CINEMATIC_AMB_Credit_JakeTalking" ID="{A969362C-3A2A-4D27-9959-9AEBD78E2775}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CINEMATIC_CEO_Boss_Scene" ID="{7C5BC45F-51CB-44BC-BB9F-A34250F8E7B5}" ShortID="290626370">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CINEMATIC_CEO_Boss_Scene" ID="{4FA5A2EA-539D-46D3-8F2A-195D3E081707}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.441791059958994"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="7.62089578429265"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>CINEMATIC\CINEMATIC_CEO_Boss_Scene.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="861306818"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CINEMATIC_CEO_Boss_Scene" ID="{4FA5A2EA-539D-46D3-8F2A-195D3E081707}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CINEMATIC_TUTO_Intro" ID="{69EF58FD-79BE-441A-B3F9-61AFEA3F4AAF}" ShortID="98448375">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CINEMATIC_TUTO_Intro" ID="{E0FDB001-9135-46DA-ADA4-D877DCB8C551}">
+									<Language>SFX</Language>
+									<AudioFile>CINEMATIC\CINEMATIC_TUTO_Intro.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="101227745"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CINEMATIC_TUTO_Intro" ID="{E0FDB001-9135-46DA-ADA4-D877DCB8C551}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CINEMATIC_Credit_Hits_FTJ" ID="{1D81101B-0A1A-465C-8243-97AB8D320E8E}" ShortID="672992421">
+							<PropertyList>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="AB_VOICES" ID="{FDBDADD7-3A3D-43B4-A3C5-B9D7BB3EBA55}" WorkUnitID="{D8E6497A-AC26-4659-A3E9-978F414BBEB3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CINEMATIC_Credit_Hits_FTJ" ID="{4C34483E-FBA6-43E2-B392-BAD7CE99AF4E}">
+									<Language>SFX</Language>
+									<AudioFile>CINEMATIC\CINEMATIC_Credit_Hits_FTJ.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="695004644"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CINEMATIC_Credit_Hits_FTJ" ID="{4C34483E-FBA6-43E2-B392-BAD7CE99AF4E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CINEMATIC_CEO_Boss_Death" ID="{FF67B476-EDDD-448D-9DD5-361E5B44E389}" ShortID="302363069">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CINEMATIC_CEO_Boss_Death" ID="{B5D5C832-A165-45CA-B097-F5875BB7D960}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.813184092887006"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="15.9732589674233"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>CINEMATIC\CINEMATIC_CEO_Boss_Death.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="363210994"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CINEMATIC_CEO_Boss_Death" ID="{B5D5C832-A165-45CA-B097-F5875BB7D960}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

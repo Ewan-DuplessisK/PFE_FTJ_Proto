@@ -1,17 +1,3554 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}" SchemaVersion="123" RootDocumentID="{50F281B2-308B-410C-A95E-7ED5349D7002}" ParentDocumentID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}">
+<WwiseDocument Type="WorkUnit" ID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}" SchemaVersion="123" RootDocumentID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}" ParentDocumentID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}">
 	<AudioObjects>
-		<WorkUnit Name="GPE_LVL_01" ID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}" OwnerID="{8BE820D9-7810-414D-BFB8-244FCF6CDE9C}" PersistMode="Nested">
+		<WorkUnit Name="GPE_LVL_01" ID="{D8B05634-449A-4AD7-BC59-4E28D4AF8A4B}" OwnerID="{7AFEEE85-0C63-4638-A9E7-B9C620C83006}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="AM_GPE_LVL_01" ID="{322E8238-E6C9-4D41-9816-144F9DD46D82}" ShortID="968619606">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+							<ObjectRef Name="AB_GPE_LVL_01" ID="{545C53D3-F33D-4EE3-8DB4-63B06A445D87}" WorkUnitID="{E3C8A65D-504C-46C0-9917-8ACA728D43FD}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="GPE_Trolley" ID="{1A17D506-2671-48BD-8239-D6B23EB39615}" ShortID="810378131">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="RC_Trolley_Metal_Push" ID="{449B7460-AD29-4898-B943-7D6FFECA269A}" ShortID="1032755650">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Trolley_Metal_Push_01" ID="{7A60A1F6-95C2-42AF-B182-1EB94A08A8A3}" ShortID="1032261794">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Metal_Push_01" ID="{3BBE4216-E5BC-4AAC-A6D1-AF5C918ECA53}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Metal_Push_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="287751928"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Metal_Push_01" ID="{3BBE4216-E5BC-4AAC-A6D1-AF5C918ECA53}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Metal_Push_02" ID="{EC786AB2-E3B4-456E-ABC7-7980A2043057}" ShortID="238844627">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Metal_Push_02" ID="{5A5327B6-BB0C-4D6B-89E7-1301AA1572C7}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Metal_Push_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1036270381"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Metal_Push_02" ID="{5A5327B6-BB0C-4D6B-89E7-1301AA1572C7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Metal_Push_03" ID="{E7CACB36-6FFD-4E03-9536-EF114DFE1A70}" ShortID="112175161">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Metal_Push_03" ID="{83ECE6C5-3A0F-41BF-81A3-F6D944ACFD7F}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Metal_Push_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="735477568"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Metal_Push_03" ID="{83ECE6C5-3A0F-41BF-81A3-F6D944ACFD7F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Metal_Push_04" ID="{215C393C-9B1F-46BB-952C-8D8060652CBD}" ShortID="204924995">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Metal_Push_04" ID="{DBC81B75-130A-45A4-9E2F-939800C42619}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Metal_Push_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="264649836"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Metal_Push_04" ID="{DBC81B75-130A-45A4-9E2F-939800C42619}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Trolley_Plastic_Push" ID="{96BB9373-AC17-4BCF-BA8A-9EA8858072DA}" ShortID="107839250">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Trolley_Plastic_Push_01" ID="{96D2C406-FCEE-4912-8D74-5CC4D688CF0A}" ShortID="1020858137">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Plastic_Push_01" ID="{B8952534-56AE-454D-B828-90EB561C043A}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Plastic_Push_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="217541128"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Plastic_Push_01" ID="{B8952534-56AE-454D-B828-90EB561C043A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Plastic_Push_02" ID="{1F1786EB-E713-4E9F-A4C2-AECFFABE8A1A}" ShortID="772349239">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Plastic_Push_02" ID="{B9816CBB-D6C0-4E97-85C0-A54274F641A2}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Plastic_Push_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="379294725"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Plastic_Push_02" ID="{B9816CBB-D6C0-4E97-85C0-A54274F641A2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Plastic_Push_03" ID="{8D727C61-319B-4717-B10D-DB0801AECF99}" ShortID="748099112">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Plastic_Push_03" ID="{4796E9D5-8394-4E99-93D8-88644D354BBD}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Plastic_Push_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="388496544"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Plastic_Push_03" ID="{4796E9D5-8394-4E99-93D8-88644D354BBD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Plastic_Push_04" ID="{9AE71331-CF38-428F-9685-6A8010F0CAEE}" ShortID="14176695">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Plastic_Push_04" ID="{5C0B2EFE-22C7-497B-A385-53D6F9EF183A}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Plastic_Push_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="752327437"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Plastic_Push_04" ID="{5C0B2EFE-22C7-497B-A385-53D6F9EF183A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Trolley_Wood_Push" ID="{3C6527D0-C279-4DE3-86DD-560F4A4CA1B7}" ShortID="278878055">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Trolley_Wood_Push_01" ID="{D7B7EB2B-F8C5-4BD3-BD50-7DEBEACB5A25}" ShortID="376144439">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Wood_Push_01" ID="{97248CC5-7C63-4D7A-9C17-575DBAF56BE6}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Wood_Push_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="185949229"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Wood_Push_01" ID="{97248CC5-7C63-4D7A-9C17-575DBAF56BE6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Wood_Push_02" ID="{5C408C19-25C6-4670-8186-206058DFEF0A}" ShortID="39530269">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Wood_Push_02" ID="{B99FE663-AA63-4F7B-95EE-E0506FD754C9}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Wood_Push_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="646540880"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Wood_Push_02" ID="{B99FE663-AA63-4F7B-95EE-E0506FD754C9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Wood_Push_03" ID="{3B206C27-129D-4DD6-A5CC-7949148C9ECD}" ShortID="705401875">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Wood_Push_03" ID="{9E2FA662-E128-453D-9173-EEB0E07E7860}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Wood_Push_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="462574172"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Wood_Push_03" ID="{9E2FA662-E128-453D-9173-EEB0E07E7860}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Trolley_Wood_Push_04" ID="{9E4977E4-1886-4C6B-8943-3C9FAC227A4C}" ShortID="566000837">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Trolley_Wood_Push_04" ID="{8F3EB30F-425A-478C-9332-3A56EC0AF63E}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Trolley\SFX_Trolley_Wood_Push_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1015472390"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Trolley_Wood_Push_04" ID="{8F3EB30F-425A-478C-9332-3A56EC0AF63E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="GPE_Extinguisher" ID="{023DC028-A978-47AA-B936-A0FCD49F3811}" ShortID="720676448">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="RC_ImpactExplosion" ID="{D2278244-30DD-4524-B2D8-8FC965082C77}" ShortID="347987211">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-13</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Extinguisher_ImpactExplosion_03" ID="{6E9818F4-1917-45C0-93C7-4FCFDDAB579A}" ShortID="819121657">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_ImpactExplosion_03" ID="{A84F2CBC-17C9-45CB-ABC7-0E7116228F8F}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_ImpactExplosion_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="776925664"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_ImpactExplosion_03" ID="{A84F2CBC-17C9-45CB-ABC7-0E7116228F8F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Extinguisher_ImpactExplosion_01" ID="{439042B7-ACD8-48D4-AC6C-4B69E97F6E11}" ShortID="929487229">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_ImpactExplosion_01" ID="{21F1D579-E9F2-4DB8-96E8-609D42D80DE5}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_ImpactExplosion_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="958750338"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_ImpactExplosion_01" ID="{21F1D579-E9F2-4DB8-96E8-609D42D80DE5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Extinguisher_ImpactExplosion_02" ID="{31AB66B5-556D-46E3-B63C-FD98D5A1FA5D}" ShortID="69569697">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_ImpactExplosion_02" ID="{2D6A7A2B-782F-446B-B772-3F4EDF08F626}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_ImpactExplosion_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="823105612"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_ImpactExplosion_02" ID="{2D6A7A2B-782F-446B-B772-3F4EDF08F626}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_ImpactFloor" ID="{EB705545-0652-4271-A6B8-A941D428B374}" ShortID="650701349">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BC1783CA-E195-4DAF-B3A4-0BD50E893906}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="525"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Extinguisher_ImpactFloor_01" ID="{B091561A-07D4-42B4-91A4-BFA7FC9A61E1}" ShortID="435828379">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_ImpactFloor_01" ID="{1F804C88-BE0A-4840-A7BA-C6E472896672}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="792069997"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_ImpactFloor_01" ID="{1F804C88-BE0A-4840-A7BA-C6E472896672}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Extinguisher_ImpactFloor_03" ID="{2B2EF327-5AF9-4E7C-86D2-D1E0BA8F2097}" ShortID="878321901">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_ImpactFloor_03" ID="{70DE16CE-5E5A-4822-AEF3-997B286AFBF6}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="735447114"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_ImpactFloor_03" ID="{70DE16CE-5E5A-4822-AEF3-997B286AFBF6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Extinguisher_ImpactFloor_02" ID="{F4CC8BCC-0468-442F-9FE2-A7BD904E8DF7}" ShortID="1049322219">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_ImpactFloor_02" ID="{A84F2F34-680C-4CA5-BBBF-1C13DC8C8FA2}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="685031485"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_ImpactFloor_02" ID="{A84F2F34-680C-4CA5-BBBF-1C13DC8C8FA2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{7CE138F1-F127-4220-9B2B-75855E614403}" ShortID="462332020">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_Extinguisher_Volume" ID="{8EDDB16F-2299-4A4E-99EF-673E78BADA20}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{94009BE9-A881-4FD7-B154-0EA099547343}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-41.3267</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-5.69142</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_ImpactGrab" ID="{C80C8585-9C41-4B81-B244-F184285DAAFB}" ShortID="815146128">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Extinguisher_Grab_01" ID="{E9DE6320-A138-4A1E-8BE7-D79E1D34AD6F}" ShortID="762229324">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_Grab_01" ID="{B4D0E837-DC9F-45BC-A918-DD109F4199E8}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_Grab_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="939019149"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_Grab_01" ID="{B4D0E837-DC9F-45BC-A918-DD109F4199E8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Extinguisher_Grab_03" ID="{7294DFEE-55F3-4D9C-969C-81ED6EA96A7A}" ShortID="956960258">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_Grab_03" ID="{A0ADF1FD-D9CD-4DAB-AC6D-ADE9F296A5CC}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_Grab_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="536603680"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_Grab_03" ID="{A0ADF1FD-D9CD-4DAB-AC6D-ADE9F296A5CC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Extinguisher_Grab_02" ID="{8A4BFE45-E032-4109-A3D3-B23B920705C1}" ShortID="924201002">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Extinguisher_Grab_02" ID="{FE95B3E8-1129-4E3D-9076-F6AF1A5EEA08}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Extinguisher_Grab_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="461939361"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Extinguisher_Grab_02" ID="{FE95B3E8-1129-4E3D-9076-F6AF1A5EEA08}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="GPE_ExtinguisherSteam_LP" ID="{C5179663-BBA8-4435-9C52-2F312F6B8FE4}" ShortID="252157113">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GPE_ExtinguisherSteam_LP" ID="{9F482591-E11A-4F35-BC66-E7D4666CFF96}">
+											<Language>SFX</Language>
+											<AudioFile>GPE\Extinguisher\GPE_ExtinguisherSteam_LP.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="155149420"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{4BB8A8A9-2265-414E-923A-F52DB2EDAD66}" ShortID="260443490">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Pitch"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="MD_Extinguisher" ID="{13FC0624-078D-4B84-96D8-FA222ED4A7B7}" WorkUnitID="{2CD583A8-581F-4AD0-8554-50E4B426A2F3}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{B5B8C4BF-29EA-4DAD-9256-137A24F53F43}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>10</XPos>
+																				<YPos>3213</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{CC385607-2DAD-4244-8D32-64E11F94472D}" ShortID="1068649630">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="MD_Extinguisher" ID="{13FC0624-078D-4B84-96D8-FA222ED4A7B7}" WorkUnitID="{2CD583A8-581F-4AD0-8554-50E4B426A2F3}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{4B66C9E9-4D3E-4368-BC4D-814C849C6143}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-8.65715</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>10</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="GPE_ExtinguisherSteam_LP" ID="{9F482591-E11A-4F35-BC66-E7D4666CFF96}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="RC_Launch" ID="{7926E4CC-ED1B-49F5-A56F-74E083657486}" ShortID="306725433">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{982E7BA9-1BAB-4E45-8FF6-2C65CF2A3DA7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Estinguisher_Launch_01" ID="{51A2D51A-B43C-42DD-9FEF-694CCFBA1186}" ShortID="520532315">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Estinguisher_Launch_01" ID="{751785B9-149C-49EB-A241-51B527E8787E}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Estinguisher_Launch_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="168352679"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Estinguisher_Launch_01" ID="{751785B9-149C-49EB-A241-51B527E8787E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Estinguisher_Launch_02" ID="{590EBC63-DD8A-4A09-80E9-FBCA65499E0E}" ShortID="19076384">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Estinguisher_Launch_02" ID="{6ECCB37D-319D-4F00-B8C3-3BDB93389D8C}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Estinguisher_Launch_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="723370423"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Estinguisher_Launch_02" ID="{6ECCB37D-319D-4F00-B8C3-3BDB93389D8C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Estinguisher_Launch_03" ID="{7E09D3DE-A789-440A-9CDB-E3BC087CD378}" ShortID="405115006">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Estinguisher_Launch_03" ID="{D93F66F0-95E2-4F86-8455-7360D3310CA7}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\Extinguisher\GPE_Estinguisher_Launch_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="999162193"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Estinguisher_Launch_03" ID="{D93F66F0-95E2-4F86-8455-7360D3310CA7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="GPE_PhysicsObjects" ID="{5FBF2E0A-63B8-4B6E-8CA1-6BFEB3E38467}" ShortID="274108389">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.5"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="RC_Broom" ID="{A675B854-F4B8-45C0-B24E-109F64725A0D}" ShortID="447650312">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Broom_ImpactFloor_01" ID="{46F41FE3-CEE3-44F0-8C60-4FA2C1C831AD}" ShortID="915445200">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Broom_ImpactFloor_01" ID="{620171B8-6C99-478E-94EC-013829810CCD}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Broom_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1015088904"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Broom_ImpactFloor_01" ID="{620171B8-6C99-478E-94EC-013829810CCD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Broom_ImpactFloor_02" ID="{67EC1C7B-B94F-46EB-912C-764BB6A8F4EB}" ShortID="854056062">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Broom_ImpactFloor_02" ID="{DD5D1238-26F0-4CBD-9304-82F884C7325F}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Broom_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="89303166"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Broom_ImpactFloor_02" ID="{DD5D1238-26F0-4CBD-9304-82F884C7325F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Broom_ImpactFloor_03" ID="{E1A0C8DC-6CD6-4DDF-AB38-A8F368517D4D}" ShortID="617121841">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Broom_ImpactFloor_03" ID="{6F72E355-FD74-4C69-8F40-8332559F5732}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Broom_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="598473939"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Broom_ImpactFloor_03" ID="{6F72E355-FD74-4C69-8F40-8332559F5732}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Broom_ImpactFloor_04" ID="{E5103B40-B12A-4AC4-8D21-C8F294DC1B82}" ShortID="221019915">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Broom_ImpactFloor_04" ID="{FEE7696E-F22F-44C5-A08B-A367B61956A8}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Broom_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="589421466"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Broom_ImpactFloor_04" ID="{FEE7696E-F22F-44C5-A08B-A367B61956A8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Broom_ImpactFloor_05" ID="{1378655C-E399-41F9-8272-B7F2A7742E41}" ShortID="274965480">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Broom_ImpactFloor_05" ID="{EB6F3A50-2E29-43DE-9E3E-2992AC9FA147}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Broom_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="536197975"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Broom_ImpactFloor_05" ID="{EB6F3A50-2E29-43DE-9E3E-2992AC9FA147}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Broom_ImpactFloor_06" ID="{51E34810-CDEA-47FA-9D9C-F95D6569686A}" ShortID="65247054">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Broom_ImpactFloor_06" ID="{4F6C0ABE-F244-4719-806C-A8D1754CE7EA}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Broom_ImpactFloor_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="851320441"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Broom_ImpactFloor_06" ID="{4F6C0ABE-F244-4719-806C-A8D1754CE7EA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{A499651B-B0FC-41B5-A2A8-DC9C7A009FA2}" ShortID="641732738">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A5F13F04-13ED-4F30-9EF6-2E088AFD0080}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{37F77FAA-45B0-40A7-A17D-AC77E65E6E09}" ShortID="34678794">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{551FA74B-C28C-4EDA-83F9-B743AE9A36F2}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Keyboard" ID="{F51CBE7B-8025-4A3D-B084-CA1DC1D1A4AC}" ShortID="497086429">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Keyboard_ImpactFloor_01" ID="{D7AC2208-0D43-41EF-B732-07DDB3264E0E}" ShortID="896281802">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Keyboard_ImpactFloor_01" ID="{B5825CA5-F34C-412C-89D3-1D061F341E8E}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Keyboard_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="993609511"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Keyboard_ImpactFloor_01" ID="{B5825CA5-F34C-412C-89D3-1D061F341E8E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Keyboard_ImpactFloor_02" ID="{C76A34CA-5D46-4ED4-BD26-108C00FFE06E}" ShortID="905465590">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Keyboard_ImpactFloor_02" ID="{152481B2-E050-4554-A20E-1F03B1CDD9B2}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Keyboard_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="311677268"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Keyboard_ImpactFloor_02" ID="{152481B2-E050-4554-A20E-1F03B1CDD9B2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Keyboard_ImpactFloor_03" ID="{C8243F81-4803-45A0-B47E-389848B5461C}" ShortID="847897037">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Keyboard_ImpactFloor_03" ID="{84219B0E-18AC-4E37-811B-F7CE6F645366}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Keyboard_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="188116760"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Keyboard_ImpactFloor_03" ID="{84219B0E-18AC-4E37-811B-F7CE6F645366}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Keyboard_ImpactFloor_04" ID="{077D92E4-3610-46AE-B1D3-A272D68D8346}" ShortID="734231473">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Keyboard_ImpactFloor_04" ID="{78BF9A7E-64A7-41B8-BD54-9897BC65B918}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Keyboard_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="610898438"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Keyboard_ImpactFloor_04" ID="{78BF9A7E-64A7-41B8-BD54-9897BC65B918}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Keyboard_ImpactFloor_05" ID="{233344FD-CDBB-4F5E-9CC4-578231C964A4}" ShortID="979726868">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Keyboard_ImpactFloor_05" ID="{78E584C4-BAF1-44CD-9FF0-1C390A365AD6}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Keyboard_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="575286723"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Keyboard_ImpactFloor_05" ID="{78E584C4-BAF1-44CD-9FF0-1C390A365AD6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{8F76B129-EB0B-44FC-B244-B587DDFCBB2B}" ShortID="751250734">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{354D1947-2FDF-4E0C-9944-8506E6DC73DD}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704000000001</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{D15CF9A8-B410-4178-965C-6232C840FA53}" ShortID="1027298730">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{AFA5F913-1BB9-462D-9BD8-28E6EC52B9EE}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Metal" ID="{865918F2-3FAF-412C-B217-BE43048C4EB7}" ShortID="166254804">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Metal_ImpactFloor_01" ID="{08CF184F-6435-44A3-BA50-7F25A17E6C5D}" ShortID="373988547">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_ImpactFloor_01" ID="{880A04A6-2584-4FF5-A8E3-8D2C5DA0C178}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="872866144"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_ImpactFloor_01" ID="{880A04A6-2584-4FF5-A8E3-8D2C5DA0C178}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Metal_ImpactFloor_02" ID="{14C2C298-6D14-4226-8904-EFBE8007FE3D}" ShortID="279274655">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_ImpactFloor_02" ID="{A5ADC88F-FAA8-4508-9474-5A84974A04F1}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="948907926"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_ImpactFloor_02" ID="{A5ADC88F-FAA8-4508-9474-5A84974A04F1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Metal_ImpactFloor_03" ID="{4CDC9F0A-76C9-4607-A081-D1E7B0F42E77}" ShortID="996673837">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_ImpactFloor_03" ID="{C0643E5A-4ADF-4561-8536-3D9BB445EC3A}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="823052492"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_ImpactFloor_03" ID="{C0643E5A-4ADF-4561-8536-3D9BB445EC3A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Metal_ImpactFloor_04" ID="{1BBEDFDC-974F-4F80-AA5C-1A4CD03BB17F}" ShortID="146595654">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_ImpactFloor_04" ID="{59230C85-4160-425F-8D6C-34D2F0EDD083}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="325565797"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_ImpactFloor_04" ID="{59230C85-4160-425F-8D6C-34D2F0EDD083}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Metal_ImpactFloor_05" ID="{C7C34359-FB48-4CE0-9699-30F98A97A12C}" ShortID="996785005">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_ImpactFloor_05" ID="{762374B5-A8DF-45EC-AFED-BF76E519B0BB}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="119382165"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_ImpactFloor_05" ID="{762374B5-A8DF-45EC-AFED-BF76E519B0BB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{109F6823-FC39-4476-8668-E648992FF324}" ShortID="615778143">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{18FFC3E7-C8F5-43B2-B95B-750ACB39BDA1}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704000000001</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{65828ABE-3FAC-4877-8A55-71D962CF18D4}" ShortID="462424210">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{DE96E92B-0C4F-47BC-883A-6398B83B673B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Paper" ID="{1254C5A2-F2F8-4722-90EA-8369957061BF}" ShortID="727326652">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Paper_ImpactFloor_01" ID="{363FE192-7BF6-42E0-A09E-1227B3960ACE}" ShortID="886985853">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Paper_ImpactFloor_01" ID="{430BD335-7763-4DA3-9563-3F381350CCF2}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Paper_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="744188786"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Paper_ImpactFloor_01" ID="{430BD335-7763-4DA3-9563-3F381350CCF2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Paper_ImpactFloor_02" ID="{22B00633-041C-4FDF-841F-00E53170A438}" ShortID="940204329">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Paper_ImpactFloor_02" ID="{82B414CB-9761-435E-AAED-6277022FDDA4}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Paper_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="28009572"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Paper_ImpactFloor_02" ID="{82B414CB-9761-435E-AAED-6277022FDDA4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Paper_ImpactFloor_03" ID="{BDE6D59A-E549-4CB2-9AF8-5B9FEA805883}" ShortID="128189033">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Paper_ImpactFloor_03" ID="{2B104F65-A10B-4CD1-B649-DB740A30A65A}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Paper_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="756809246"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Paper_ImpactFloor_03" ID="{2B104F65-A10B-4CD1-B649-DB740A30A65A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Paper_ImpactFloor_04" ID="{FC84E96B-7634-48E1-8D87-837EE5CD1BE5}" ShortID="232162125">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Paper_ImpactFloor_04" ID="{685B6360-548D-44A4-BF5B-12FC0561A18C}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Paper_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="187819171"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Paper_ImpactFloor_04" ID="{685B6360-548D-44A4-BF5B-12FC0561A18C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Paper_ImpactFloor_05" ID="{BCE3C891-2325-4EF1-B1B2-FAC025D778A0}" ShortID="1026927155">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Paper_ImpactFloor_05" ID="{CF74A230-2267-4DCB-9A26-89F480DF6B7F}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Paper_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="133641020"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Paper_ImpactFloor_05" ID="{CF74A230-2267-4DCB-9A26-89F480DF6B7F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Paper_ImpactFloor_06" ID="{0D14083D-CF72-4814-B375-B25F7DDEAE18}" ShortID="708626086">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Paper_ImpactFloor_06" ID="{93CDDAD8-A9B9-43E6-9B5D-7215F6D0BCA4}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Paper_ImpactFloor_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="91043950"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Paper_ImpactFloor_06" ID="{93CDDAD8-A9B9-43E6-9B5D-7215F6D0BCA4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Paper_ImpactFloor_07" ID="{661E3E5B-4F60-4AA1-B66A-168D43B17001}" ShortID="139139101">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Paper_ImpactFloor_07" ID="{42B45709-E2FA-4547-8372-9D06D0C689E6}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Paper_ImpactFloor_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="919855225"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Paper_ImpactFloor_07" ID="{42B45709-E2FA-4547-8372-9D06D0C689E6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Paper_ImpactFloor_08" ID="{40EB8E46-85F4-45EA-ACA5-1885F8A9911C}" ShortID="792295969">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Paper_ImpactFloor_08" ID="{507A6ABA-6C9D-422D-BB8F-72B2874F6FD7}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Paper_ImpactFloor_08.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="85235490"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Paper_ImpactFloor_08" ID="{507A6ABA-6C9D-422D-BB8F-72B2874F6FD7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{B1CECC4A-751F-475D-B9B6-34A97F4FE604}" ShortID="861858003">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{2059BCC2-CBDC-44BB-81B0-1E381E0DB80B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704000000001</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{9D17E060-EEDD-4FAE-818A-15B4EA204D7E}" ShortID="541051396">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{F6CE8AB4-F135-4A25-A39C-962BD88A306D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_PCTower" ID="{D35C3CF9-2517-4D83-8DE4-C3D5ABE2D49B}" ShortID="11323024">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_PCTower_ImpactFloor_01" ID="{E33CA08A-2A3A-4781-90B8-B55ABC1F8700}" ShortID="493373911">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_PCTower_ImpactFloor_01" ID="{76A1E8E5-A59E-4496-A316-75B92D6CE215}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_PCTower_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="715141264"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_PCTower_ImpactFloor_01" ID="{76A1E8E5-A59E-4496-A316-75B92D6CE215}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_PCTower_ImpactFloor_02" ID="{2745F888-BB3D-49D0-B524-5EA3826B35AF}" ShortID="302885336">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_PCTower_ImpactFloor_02" ID="{04A800F7-02B4-4B86-9BE6-F0974362D0B8}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_PCTower_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="554164219"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_PCTower_ImpactFloor_02" ID="{04A800F7-02B4-4B86-9BE6-F0974362D0B8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_PCTower_ImpactFloor_03" ID="{9325FFC7-1F8F-4180-8FAA-9B3ED89DC05A}" ShortID="883922973">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_PCTower_ImpactFloor_03" ID="{4D4CB3E9-2589-4843-8AFF-A4D0A6ED589C}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_PCTower_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="64959888"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_PCTower_ImpactFloor_03" ID="{4D4CB3E9-2589-4843-8AFF-A4D0A6ED589C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_PCTower_ImpactFloor_04" ID="{C26F9B7F-4121-429E-856D-7527DD2D217A}" ShortID="504113906">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_PCTower_ImpactFloor_04" ID="{A99AB9CC-5D8E-41A1-A66A-64512708BFA0}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_PCTower_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="103603842"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_PCTower_ImpactFloor_04" ID="{A99AB9CC-5D8E-41A1-A66A-64512708BFA0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_PCTower_ImpactFloor_05" ID="{1046538B-331C-4ABF-9BE5-348D4F11D530}" ShortID="702565538">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_PCTower_ImpactFloor_05" ID="{26C4CBAD-D92A-4618-AACF-4C9598F3892D}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_PCTower_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="251871451"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_PCTower_ImpactFloor_05" ID="{26C4CBAD-D92A-4618-AACF-4C9598F3892D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_PCTower_ImpactFloor_06" ID="{926B7AD7-CC06-4F3B-8CD7-A9C12A3F5E45}" ShortID="622194346">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_PCTower_ImpactFloor_06" ID="{2EF4ABB2-85AF-40EB-96AE-022BA999604D}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_PCTower_ImpactFloor_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="386007605"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_PCTower_ImpactFloor_06" ID="{2EF4ABB2-85AF-40EB-96AE-022BA999604D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_PCTower_ImpactFloor_07" ID="{C7E26009-3261-4E97-898F-DB7140231C68}" ShortID="707397586">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_PCTower_ImpactFloor_07" ID="{A948830B-1E64-48BE-BCE9-D380B80E6805}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_PCTower_ImpactFloor_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="406971862"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_PCTower_ImpactFloor_07" ID="{A948830B-1E64-48BE-BCE9-D380B80E6805}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{7AD53759-0C34-48FA-A42B-5BF450904211}" ShortID="623530540">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{E4A13C22-A44D-473F-B237-D8AAAE3246A9}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704000000001</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{F2580567-8E54-49B6-B324-86D9AAF32185}" ShortID="139836459">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{77369D8D-F7A7-4719-AD93-EFA28C649AFA}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Plastic" ID="{B28178E0-101D-42A2-BEAC-FC78ECEE2C7B}" ShortID="919207412">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Plastic_ImpactFloor_01" ID="{AE29F1E4-70A4-42CE-A36C-608B46F9FBC3}" ShortID="132866677">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Plastic_ImpactFloor_01" ID="{2550FDB8-0D82-4593-9E9B-7A9D225D40C6}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Plastic_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="332836176"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Plastic_ImpactFloor_01" ID="{2550FDB8-0D82-4593-9E9B-7A9D225D40C6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Plastic_ImpactFloor_02" ID="{9A94B899-C47D-454A-9C57-59E181FA3DC6}" ShortID="511194550">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Plastic_ImpactFloor_02" ID="{C96A1C31-2870-4CB5-BF79-05F5B9DB260F}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Plastic_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1042739709"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Plastic_ImpactFloor_02" ID="{C96A1C31-2870-4CB5-BF79-05F5B9DB260F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Plastic_ImpactFloor_03" ID="{35500A3C-90B3-4534-BB8F-D31E5578D589}" ShortID="917921420">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Plastic_ImpactFloor_03" ID="{DDB87BA2-748E-497F-9377-5456CE924D05}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Plastic_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="762718180"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Plastic_ImpactFloor_03" ID="{DDB87BA2-748E-497F-9377-5456CE924D05}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Plastic_ImpactFloor_04" ID="{2D16A1D7-55E0-49CF-A646-04EBE51C2B1C}" ShortID="502474387">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Plastic_ImpactFloor_04" ID="{48D4785B-198D-4C5D-8D84-18ABEB5E04EA}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Plastic_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="923564588"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Plastic_ImpactFloor_04" ID="{48D4785B-198D-4C5D-8D84-18ABEB5E04EA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Plastic_ImpactFloor_05" ID="{0B0159A0-A05F-4C34-A2BF-0A3F5842A90C}" ShortID="897265361">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Plastic_ImpactFloor_05" ID="{FC37C6B0-08D3-4F95-9EFB-054FC6D1BC0F}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Plastic_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="251477048"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Plastic_ImpactFloor_05" ID="{FC37C6B0-08D3-4F95-9EFB-054FC6D1BC0F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Plastic_ImpactFloor_06" ID="{98DB948C-D328-41E1-8E79-293CDE20BC2A}" ShortID="89132145">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Plastic_ImpactFloor_06" ID="{912E5404-F3D4-4F7D-87C5-694F8735B105}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Plastic_ImpactFloor_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="27831688"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Plastic_ImpactFloor_06" ID="{912E5404-F3D4-4F7D-87C5-694F8735B105}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Plastic_ImpactFloor_07" ID="{28B66D32-9346-4238-88CB-A03530566BEE}" ShortID="817657064">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Plastic_ImpactFloor_07" ID="{3704E16F-E47D-4147-877F-2B9A384A1A18}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Plastic_ImpactFloor_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="221804162"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Plastic_ImpactFloor_07" ID="{3704E16F-E47D-4147-877F-2B9A384A1A18}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{C7C10A4F-EF9D-4096-830C-21FE26FD11CC}" ShortID="505109288">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{AFD798F8-1D39-466C-8C86-AAC1A0BCA51D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704000000001</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{12C77B71-7F95-4E66-9999-3FEB94C1083E}" ShortID="695234591">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{B0C3B2C9-DC49-42C4-8691-965A8782419F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Water" ID="{FBF90668-CDF5-4CD8-804F-A2C7983AEAA1}" ShortID="1021002944">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Water_ImpactFloor_01" ID="{39EAA8BF-03A4-4DA2-BC70-8C6A378AED9D}" ShortID="262010970">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_01" ID="{35EE38A3-EC52-4354-BC8A-9B70383F231A}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="319480974"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_01" ID="{35EE38A3-EC52-4354-BC8A-9B70383F231A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Water_ImpactFloor_02" ID="{B21C2738-C500-4930-B691-348027D4102E}" ShortID="686984135">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_02" ID="{F43D56BB-6CFF-446B-B8DA-952B28AA0403}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="529627611"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_02" ID="{F43D56BB-6CFF-446B-B8DA-952B28AA0403}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Water_ImpactFloor_03" ID="{68A02D4E-E23B-410A-8D0B-D71468FC0C3C}" ShortID="699396451">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_03" ID="{124BBA9F-4BF4-4235-9474-CE7362AE2FF7}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="925343777"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_03" ID="{124BBA9F-4BF4-4235-9474-CE7362AE2FF7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Water_ImpactFloor_04" ID="{3E6C064B-562F-4284-ADBF-D5C492B9E3AA}" ShortID="52196811">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_04" ID="{94BE297B-7FF0-4D73-BF88-C1A7B3FEF39E}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="313019093"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_04" ID="{94BE297B-7FF0-4D73-BF88-C1A7B3FEF39E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Water_ImpactFloor_05" ID="{F7B7951B-B565-47F7-897C-7B487162FEE3}" ShortID="873469496">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_05" ID="{0D319B95-F576-4B58-96D2-1A8E6E8B5F2D}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="559588764"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_05" ID="{0D319B95-F576-4B58-96D2-1A8E6E8B5F2D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Water_ImpactFloor_06" ID="{921812EA-174D-4E80-8583-AFD9A092CB6E}" ShortID="1025276260">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_06" ID="{C9D05D34-8C21-4415-B37A-EDF00ABD87C6}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="154118099"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_06" ID="{C9D05D34-8C21-4415-B37A-EDF00ABD87C6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Water_ImpactFloor_07" ID="{BE9CDA48-D1CB-4CEB-9AD8-6F5303E62124}" ShortID="260886327">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_07" ID="{DC1D61C7-DB30-49CE-9EAA-2DC1382356DB}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="271823175"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_07" ID="{DC1D61C7-DB30-49CE-9EAA-2DC1382356DB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Water_ImpactFloor_08" ID="{2A70D743-9D2D-481C-9599-21FF07B17F5C}" ShortID="927220937">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_08" ID="{F79E9AD7-3987-49C3-98F9-D5A8CFA5F345}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_08.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="475372052"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_08" ID="{F79E9AD7-3987-49C3-98F9-D5A8CFA5F345}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Water_ImpactFloor_09" ID="{BD2AF4AF-3AC1-44FA-910A-99EA0A060559}" ShortID="98864765">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Water_ImpactFloor_09" ID="{2F64FC6F-A583-4534-B642-499949652173}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Water_ImpactFloor_09.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="398184457"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Water_ImpactFloor_09" ID="{2F64FC6F-A583-4534-B642-499949652173}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{1488B60D-3B5D-45B5-8B9B-03EFA3097399}" ShortID="1044536826">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{DE877570-7A3C-4C96-AD17-51C39B7C1343}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704000000001</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{A2DE30F5-854E-4E37-85E1-216D328CD76E}" ShortID="479837374">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{F4F9E278-D1AB-4D14-B91F-CA3708EEAD9A}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Rock" ID="{71F492BA-87EA-4E2C-87E1-1CF97F34892C}" ShortID="582748629">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Rock_ImpactFloor_01" ID="{B9DE1499-0B72-4064-AE87-8E54697D947E}" ShortID="366811233">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Rock_ImpactFloor_01" ID="{E6106A2E-7AED-432F-8927-EEECEFD6B5AC}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Rock_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="441020098"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Rock_ImpactFloor_01" ID="{E6106A2E-7AED-432F-8927-EEECEFD6B5AC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Rock_ImpactFloor_02" ID="{52012492-3C69-4576-B191-607269E39960}" ShortID="516931422">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Rock_ImpactFloor_02" ID="{5C6BE0DE-2EA4-4266-8C72-5FF9815585BF}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Rock_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="421162085"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Rock_ImpactFloor_02" ID="{5C6BE0DE-2EA4-4266-8C72-5FF9815585BF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Rock_ImpactFloor_03" ID="{D4BA6AC7-DEC0-44B5-BC04-949E60896560}" ShortID="1042457490">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Rock_ImpactFloor_03" ID="{7BADB08B-EA4B-4E6A-98AB-2A80C3541885}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Rock_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="685848877"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Rock_ImpactFloor_03" ID="{7BADB08B-EA4B-4E6A-98AB-2A80C3541885}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Rock_ImpactFloor_04" ID="{7963BC09-1A10-44CB-ABBB-6A4FBCFEBDD1}" ShortID="129256092">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Rock_ImpactFloor_04" ID="{B7247418-B6EC-4B75-94BA-98A8DCAC399A}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Rock_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="419468268"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Rock_ImpactFloor_04" ID="{B7247418-B6EC-4B75-94BA-98A8DCAC399A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{AB38674B-11C5-4B38-A698-3C3A93F830C9}" ShortID="436131709">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{AFA75CD4-7126-47DF-A8FF-B3B814D90F40}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{A1C88D5C-AF4F-421F-A90B-7B4906FD363B}" ShortID="929163879">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{7F9F5F09-634D-4A2C-8C4E-7479E5A99507}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Phone" ID="{B1C70793-C788-4FDD-9A45-15B29BE6FD1E}" ShortID="67784661">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="FOL_Hit_Phone_01" ID="{0087D715-71C2-4AAC-A430-B7822DE93C4F}" ShortID="274230254">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FOL_Hit_Phone_01" ID="{141C62C5-D0E2-4270-8D6C-10DA6B269539}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\FOL_Hit_Phone_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="874848253"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FOL_Hit_Phone_01" ID="{141C62C5-D0E2-4270-8D6C-10DA6B269539}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="FOL_Hit_Phone_02" ID="{144E3021-C892-4295-9A02-B6C49AC39892}" ShortID="893752457">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FOL_Hit_Phone_02" ID="{89FBED3A-6984-46C4-BB0F-8D65993DEBCC}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\FOL_Hit_Phone_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="192459302"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FOL_Hit_Phone_02" ID="{89FBED3A-6984-46C4-BB0F-8D65993DEBCC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="FOL_Hit_Phone_03" ID="{E4B62A59-37E7-4890-A16C-4F4370E6B81E}" ShortID="953945389">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FOL_Hit_Phone_03" ID="{F40DB8DF-33F9-46B4-8AB8-12BB86CE45C7}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\FOL_Hit_Phone_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="673174346"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FOL_Hit_Phone_03" ID="{F40DB8DF-33F9-46B4-8AB8-12BB86CE45C7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="FOL_Hit_Phone_04" ID="{A8C2B48D-75C8-4BC9-823C-97DE568561A4}" ShortID="92158820">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FOL_Hit_Phone_04" ID="{10B19865-EAFF-411B-9D0D-E82EAF8F0D8F}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\FOL_Hit_Phone_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="588207086"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FOL_Hit_Phone_04" ID="{10B19865-EAFF-411B-9D0D-E82EAF8F0D8F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="FOL_Hit_Phone_05" ID="{B9F6CB53-DE9A-4971-88F3-9FC386A0BD36}" ShortID="192773486">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FOL_Hit_Phone_05" ID="{8E52DFC7-2E05-4CC5-8DB2-779A7987CC56}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\FOL_Hit_Phone_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="879475126"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FOL_Hit_Phone_05" ID="{8E52DFC7-2E05-4CC5-8DB2-779A7987CC56}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="FOL_Hit_Phone_06" ID="{E20FC5B8-4ED6-4F6D-B2E9-D7A75CC6F5C5}" ShortID="862943047">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FOL_Hit_Phone_06" ID="{7CCABC44-3E58-4A58-9CC1-16FC91D753F4}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\FOL_Hit_Phone_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="303183892"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FOL_Hit_Phone_06" ID="{7CCABC44-3E58-4A58-9CC1-16FC91D753F4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Glass" ID="{4A8AB799-A00B-40FB-9CD8-35D1B60E7041}" ShortID="232678464">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Glass_ImpactFloor_01" ID="{FA7E8078-5946-499C-A9C2-A2C94F8DB767}" ShortID="625810637">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Glass_ImpactFloor_01" ID="{578722D4-2C30-4F2B-900C-1DBF6DB8B720}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Glass_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="714347770"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Glass_ImpactFloor_01" ID="{578722D4-2C30-4F2B-900C-1DBF6DB8B720}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Glass_ImpactFloor_02" ID="{E4978AC8-75CD-4764-8BE2-A13D04CBB975}" ShortID="224336114">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Glass_ImpactFloor_02" ID="{EDD7B002-FC62-48F6-AF01-BB292BF51A7A}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Glass_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="322793078"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Glass_ImpactFloor_02" ID="{EDD7B002-FC62-48F6-AF01-BB292BF51A7A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Glass_ImpactFloor_03" ID="{D5FD635C-BD5E-423C-9E5A-352CA7DE1852}" ShortID="1010170475">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Glass_ImpactFloor_03" ID="{E646871E-64C7-4DAB-B349-CE697DE622B4}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Glass_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="191849"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Glass_ImpactFloor_03" ID="{E646871E-64C7-4DAB-B349-CE697DE622B4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Glass_ImpactFloor_04" ID="{CB0F9E57-A000-46A8-B129-08502FD1A308}" ShortID="226350218">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Glass_ImpactFloor_04" ID="{F7E5A7C1-6958-43B3-B426-7D7D2514918B}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Glass_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="764061570"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Glass_ImpactFloor_04" ID="{F7E5A7C1-6958-43B3-B426-7D7D2514918B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Glass_ImpactFloor_05" ID="{964CE7C0-0AFA-4F70-BA88-1C41A6FE6AD2}" ShortID="31258111">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Glass_ImpactFloor_05" ID="{98D58187-90E9-430A-9844-D04041ED64FB}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Glass_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="275823625"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Glass_ImpactFloor_05" ID="{98D58187-90E9-430A-9844-D04041ED64FB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{F06040DB-FDCA-4036-9CF7-4B09603EFE64}" ShortID="129107375">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{51387997-1210-4458-A3E4-CD9B53021273}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{D055723F-50C8-4516-972B-C1200FA00D12}" ShortID="93793466">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{191F64CB-B4ED-40EC-8B00-359B30F3B937}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Metal_Small" ID="{30A1C094-6AF9-4118-BA18-60317D9BC7C7}" ShortID="418724775">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Metal_Small_ImpactFloor_01" ID="{60C2F94A-4776-4E79-8674-25EE333FCCA4}" ShortID="110530756">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_Small_ImpactFloor_01" ID="{9A891611-79EE-482F-8188-764B5A8E4A65}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_Small_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="654349745"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_Small_ImpactFloor_01" ID="{9A891611-79EE-482F-8188-764B5A8E4A65}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Metal_Small_ImpactFloor_02" ID="{FBADEE8F-4C3E-49FB-8792-AC1CDD1D793E}" ShortID="1072637047">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_Small_ImpactFloor_02" ID="{EFAF3BF9-8626-4600-948A-5D33703EC306}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_Small_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="351606694"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_Small_ImpactFloor_02" ID="{EFAF3BF9-8626-4600-948A-5D33703EC306}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Metal_Small_ImpactFloor_03" ID="{A138CE24-56A5-4165-9478-13729D48E6BA}" ShortID="412718716">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_Small_ImpactFloor_03" ID="{F1FF53A1-5541-4EFB-A31F-12F2FBB1DEF4}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_Small_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="364997229"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_Small_ImpactFloor_03" ID="{F1FF53A1-5541-4EFB-A31F-12F2FBB1DEF4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Metal_Small_ImpactFloor_04" ID="{780C086B-8FB2-459F-8CFF-6FF5C52A3C62}" ShortID="603305177">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Metal_Small_ImpactFloor_04" ID="{2B20383A-76EF-4981-9703-10D48E506EB3}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Metal_Small_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1001089294"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Metal_Small_ImpactFloor_04" ID="{2B20383A-76EF-4981-9703-10D48E506EB3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{F844BDDD-2C79-49A5-A2FE-91CEA9FB3500}" ShortID="423822859">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{0CB29D47-71EA-4F89-8EAA-800A686336F1}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{49D2256D-8C9C-468D-A616-E5697AE4C717}" ShortID="249821046">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{6A0ACA3F-B73D-475B-A4E9-B557970DE1E4}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RC_Cheese" ID="{853540A9-4829-44FA-8508-9CFDF2FEA900}" ShortID="395217670">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="GPE_Cheese_ImpactFloor_01" ID="{AE7D8C67-D299-45C8-B1E9-0AD7FE05CF48}" ShortID="537874663">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Cheese_ImpactFloor_01" ID="{0BA2B352-7EBF-4BBA-838D-30EC64BCE297}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Cheese_ImpactFloor_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1299414"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Cheese_ImpactFloor_01" ID="{0BA2B352-7EBF-4BBA-838D-30EC64BCE297}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Cheese_ImpactFloor_02" ID="{FAD865A3-6101-40C9-AD47-FD04188C3AAE}" ShortID="651271855">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Cheese_ImpactFloor_02" ID="{A862A7B6-50E7-4FCE-A60C-077A2DE49D58}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Cheese_ImpactFloor_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1009819940"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Cheese_ImpactFloor_02" ID="{A862A7B6-50E7-4FCE-A60C-077A2DE49D58}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Cheese_ImpactFloor_03" ID="{DB938F83-6F29-4CF1-9D25-CAEAD547440D}" ShortID="1016168708">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Cheese_ImpactFloor_03" ID="{01BFBD89-877D-4F42-9512-D28DABCAFA10}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Cheese_ImpactFloor_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="934509316"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Cheese_ImpactFloor_03" ID="{01BFBD89-877D-4F42-9512-D28DABCAFA10}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Cheese_ImpactFloor_04" ID="{8FE2E15C-62A9-4AB4-B0A8-595B17497B9D}" ShortID="16113749">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Cheese_ImpactFloor_04" ID="{A5876FCA-E659-4A2C-94AE-55FC117C7AC7}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Cheese_ImpactFloor_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="40830720"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Cheese_ImpactFloor_04" ID="{A5876FCA-E659-4A2C-94AE-55FC117C7AC7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Cheese_ImpactFloor_05" ID="{40FE650D-C91D-45C5-955C-FED1FBACF5A3}" ShortID="963691066">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Cheese_ImpactFloor_05" ID="{9C361C76-EA0B-41C4-B59A-843BEAC462D7}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Cheese_ImpactFloor_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="938860283"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Cheese_ImpactFloor_05" ID="{9C361C76-EA0B-41C4-B59A-843BEAC462D7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="GPE_Cheese_ImpactFloor_06" ID="{0CF24B20-1050-4072-8B65-77F7EE04FA18}" ShortID="859755244">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GPE_Cheese_ImpactFloor_06" ID="{A8668D50-9076-4A5E-BDF3-674813AAB486}">
+													<Language>SFX</Language>
+													<AudioFile>GPE\PhysicsObject\GPE_Cheese_ImpactFloor_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="319725049"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GPE_Cheese_ImpactFloor_06" ID="{A8668D50-9076-4A5E-BDF3-674813AAB486}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{9503C264-2AFE-483B-B59D-7D56D0959047}" ShortID="975677900">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{E6402B5B-2403-4FFD-B603-A562E4FDA949}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>31</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{AA10F907-E2C0-40E1-996E-FAAC7B2BA8C0}" ShortID="1015324851">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PhysicsObj_Volume" ID="{4D1D0569-F065-4E61-9FD3-D1C61711047D}" WorkUnitID="{5A1C38AE-1DDD-4780-9EA9-D4F5AEEAF7A0}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{848A1E5E-3918-4275-AB43-BDAE8EF0C66A}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>50</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>165.54675</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1000</XPos>
+																				<YPos>-2.01704000000001</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

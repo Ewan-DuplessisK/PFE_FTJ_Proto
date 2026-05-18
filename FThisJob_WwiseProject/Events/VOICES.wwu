@@ -10,6 +10,10 @@
 				<WorkUnit Name="VOICES_LVL_01" ID="{2235F791-147B-4D44-9867-9D417B12B131}" PersistMode="Reference"/>
 				<WorkUnit Name="VOICES_LVL_02" ID="{370216C6-E410-4E1B-B8A7-411C24B6E454}" PersistMode="Reference"/>
 				<WorkUnit Name="VOICES_LVL_03" ID="{4967E7E3-3E7A-4D96-B5E8-DCE40023959C}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_LVL_CEO" ID="{36B3D402-6F19-4CC9-ACAC-19A4FC4D8363}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_BONUS_SCORE" ID="{81DDD046-B151-4896-A08D-A569724D907C}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_REACTION" ID="{F720F9C2-D7EA-4C9E-AE59-D39836279D89}" PersistMode="Reference"/>
+				<WorkUnit Name="VOICES_OUTRO" ID="{BE325C96-80F3-4D7B-9C0C-54FDEB87F1E8}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

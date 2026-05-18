@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FD2A2B62-CFF4-4B21-AD04-B46AD4FFE5CA}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_PRESSURE" ID="{FD2A2B62-CFF4-4B21-AD04-B46AD4FFE5CA}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_PressurePlate_Activate" ID="{175BF36D-2193-4F8A-8E96-6B240C126EC5}">
+					<ChildrenList>
+						<Action Name="" ID="{58CD66D6-19D4-4BAC-8D2D-3A771F7A04BD}" ShortID="569170940">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_PressurePlate_Activate" ID="{E1E561AC-1166-4B4D-91E1-33E89D381C3F}" WorkUnitID="{A9343B12-332F-48D4-A39E-F9C39BF0DB95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_PressurePlate_Deactivate" ID="{E7326BAA-F8CA-4167-90DF-96C6E63BE24F}">
+					<ChildrenList>
+						<Action Name="" ID="{51DB2745-6C88-412B-ACA9-99A2B316F2CE}" ShortID="629152564">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_PressurePlate_Deactivate" ID="{83A0EE44-5A01-4458-A68C-24A9FE5C9586}" WorkUnitID="{A9343B12-332F-48D4-A39E-F9C39BF0DB95}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

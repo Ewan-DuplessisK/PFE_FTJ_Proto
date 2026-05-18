@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{50BACD14-1621-446E-9115-D07B7950E75D}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_ELEVATOR" ID="{50BACD14-1621-446E-9115-D07B7950E75D}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_Elevator_Close" ID="{939D0FD0-87B3-4FB4-AD69-98CB82E8A758}">
+					<ChildrenList>
+						<Action Name="" ID="{F1861EF6-699A-4402-BA33-1A84ADA0A9D4}" ShortID="251103226">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Elevator_Close" ID="{E5C1BAE8-0AD1-4904-AC6E-0586E5B63ED0}" WorkUnitID="{7D946E0B-741B-474F-93CE-4AD64B6D6284}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Elevator_Button" ID="{183DAFCD-B7AF-42AE-ACAD-8BA914260320}">
+					<ChildrenList>
+						<Action Name="" ID="{073584EE-2315-4800-9925-53581516F47C}" ShortID="277890589">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Elevator_Button" ID="{C4E94E55-E58C-458E-96D0-6254780C6023}" WorkUnitID="{7D946E0B-741B-474F-93CE-4AD64B6D6284}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Elevator_Open" ID="{22E8D53B-0DF8-4B6F-98C2-6CCE894C6A04}">
+					<ChildrenList>
+						<Action Name="" ID="{4332E216-846D-4208-BAEF-18E61349B802}" ShortID="571210574">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Elevator_Open" ID="{5F6E8440-63EE-442F-BC03-F62535404D6B}" WorkUnitID="{7D946E0B-741B-474F-93CE-4AD64B6D6284}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Elevator_Ding" ID="{328E713F-62D1-4024-9D38-465504AF70A8}">
+					<ChildrenList>
+						<Action Name="" ID="{687C1BD4-5EE4-46B5-B1A1-0BC0F7AAAC2C}" ShortID="990175572">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Elevator_Ding" ID="{4CC337BF-78BB-459E-8A32-467C28067CFA}" WorkUnitID="{7D946E0B-741B-474F-93CE-4AD64B6D6284}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SEQ_SFX_Elevator_Open" ID="{5B3091AB-22AA-44C5-A78C-E780BDA95D74}">
+					<ChildrenList>
+						<Action Name="" ID="{0BA3E634-7946-4040-AB2B-47191DA8675A}" ShortID="625685066">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Elevator_Button" ID="{183DAFCD-B7AF-42AE-ACAD-8BA914260320}" WorkUnitID="{50BACD14-1621-446E-9115-D07B7950E75D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{888B4730-0D5D-448F-932C-8ED4E92F6DB9}" ShortID="80930475">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Elevator_Open" ID="{22E8D53B-0DF8-4B6F-98C2-6CCE894C6A04}" WorkUnitID="{50BACD14-1621-446E-9115-D07B7950E75D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F1605427-6C90-4795-8232-620040B8E450}" ShortID="117346394">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="1.357"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Elevator_Ding" ID="{328E713F-62D1-4024-9D38-465504AF70A8}" WorkUnitID="{50BACD14-1621-446E-9115-D07B7950E75D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

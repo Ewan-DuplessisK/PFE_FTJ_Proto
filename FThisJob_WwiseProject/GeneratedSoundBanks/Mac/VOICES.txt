@@ -1,0 +1,20 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+
+State	ID	Name	State Group			Notes
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1998977308	RTPC_Voice_Volume			\UI\RTPC_Voice_Volume	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1261969274	AB_VOICES			\Default Work Unit\Master Audio Bus\VOICES\AB_VOICES	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1072384616	Meter (Custom)	Wwise Meter			
+

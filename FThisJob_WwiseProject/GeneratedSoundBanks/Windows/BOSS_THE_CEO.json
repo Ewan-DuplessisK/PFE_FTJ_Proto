@@ -1,0 +1,679 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "659223616",
+    "Type": "User",
+    "GUID": "{82A8F8A9-776F-4FE0-BF0F-1D06DCAFAD68}",
+    "Color": "10",
+    "Language": "SFX",
+    "Hash": "{D9EC639F-9CD1-6903-9D34-3508F287374E}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_THE_CEO",
+    "ShortName": "BOSS_THE_CEO",
+    "Path": "BOSS_THE_CEO.bnk",
+    "Media": [
+     {
+      "Id": "57987035",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Punch_04.wav",
+      "CachePath": "2B/{2BE85825-4FE0-614F-A561-CE9B3152FBA5}.wem"
+     },
+     {
+      "Id": "71463455",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsConfirm_05.wav",
+      "CachePath": "D3/{D3F6D548-B134-E454-1D3D-A95FCA654698}.wem"
+     },
+     {
+      "Id": "83188009",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Walk_02.wav",
+      "CachePath": "B3/{B3AD811E-3FAF-3C91-D3C7-196156B1CCC8}.wem"
+     },
+     {
+      "Id": "104849514",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HardPunch_01.wav",
+      "CachePath": "75/{754A1DC7-1D7A-CDDA-3FC9-88EE1CF24746}.wem"
+     },
+     {
+      "Id": "107848514",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsConfirm_04.wav",
+      "CachePath": "5D/{5DC9C32A-F187-D193-561A-BA9B86F81B80}.wem"
+     },
+     {
+      "Id": "114077642",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Punch_03.wav",
+      "CachePath": "FF/{FFAD4ACD-6240-2BFF-9409-A52739C46415}.wem"
+     },
+     {
+      "Id": "117409978",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Charge_02.wav",
+      "CachePath": "D2/{D260409E-E159-4C8F-F20A-5FB7A4AE9062}.wem"
+     },
+     {
+      "Id": "161220475",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Taunt_03.wav",
+      "CachePath": "86/{868528B7-B6D4-4C3F-4ED5-15A2D61D2DB5}.wem"
+     },
+     {
+      "Id": "167016017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Clap_01.wav",
+      "CachePath": "9E/{9ECEFC7D-B15E-7161-03D8-8AFA784DD6FC}.wem"
+     },
+     {
+      "Id": "167436280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\BOSS_HitsStomach_02.wav",
+      "CachePath": "EC/{EC120946-6016-AD09-E9E7-B465CA3A1221}.wem"
+     },
+     {
+      "Id": "226557097",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Walk_04.wav",
+      "CachePath": "08/{08845705-AD8F-3903-3B3F-FEC3601F89AE}.wem"
+     },
+     {
+      "Id": "245357120",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsConfirm_03.wav",
+      "CachePath": "FF/{FF4A44F8-862E-6E73-469A-02F7B0FC916E}.wem"
+     },
+     {
+      "Id": "256475668",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Walk_03.wav",
+      "CachePath": "BF/{BF6339FA-B302-426E-5959-5793EBD0B508}.wem"
+     },
+     {
+      "Id": "265079921",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_LaunchPunch_01.wav",
+      "CachePath": "2B/{2B419241-1096-8F6F-AF97-C8D6534D872E}.wem"
+     },
+     {
+      "Id": "286233036",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Charge_03.wav",
+      "CachePath": "DE/{DE8732A6-5555-076B-8E18-525683AC1BBF}.wem"
+     },
+     {
+      "Id": "335445603",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Skid_03.wav",
+      "CachePath": "87/{879DE533-0034-721E-D202-8F8051B19DD5}.wem"
+     },
+     {
+      "Id": "339912894",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Walk_07.wav",
+      "CachePath": "EA/{EA6B7210-95AD-E292-152E-5564EE304DA8}.wem"
+     },
+     {
+      "Id": "350668619",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Boss_CEO_04.wav",
+      "CachePath": "9D/{9D9B64F1-F35D-1557-5361-B094E0E5E03A}.wem"
+     },
+     {
+      "Id": "386091671",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HardPunch_03.wav",
+      "CachePath": "F8/{F8690A31-8BFA-E9D0-BD68-8B18BAC51CAD}.wem"
+     },
+     {
+      "Id": "406524746",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Boss_CEO_03.wav",
+      "CachePath": "77/{773E3ECD-3A72-39DA-F8AB-6A43D548F0F3}.wem"
+     },
+     {
+      "Id": "413804379",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Clap_02.wav",
+      "CachePath": "F6/{F60FAE36-6944-BB96-34D9-430101AB9DFC}.wem"
+     },
+     {
+      "Id": "429327604",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Taunt_02.wav",
+      "CachePath": "2E/{2E3129DA-653F-50E3-5FA4-FD5CF5DDC4F2}.wem"
+     },
+     {
+      "Id": "433842962",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\BOSS_HitsStomach_05.wav",
+      "CachePath": "EC/{EC2807F1-6E9F-8E97-3191-64DDA193A0D2}.wem"
+     },
+     {
+      "Id": "444954411",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Stun_LP.wav",
+      "CachePath": "B6/{B6A723BD-BAF9-17EA-906C-FBA5D84E22F4}.wem"
+     },
+     {
+      "Id": "464335915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_LaunchPunch_03.wav",
+      "CachePath": "E3/{E3A9780F-F80E-3EA0-614F-83891A5BAA2C}.wem"
+     },
+     {
+      "Id": "501517817",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsConfirm_02.wav",
+      "CachePath": "C5/{C5AC2AB8-46A3-95C4-EFF6-FDF3185FB541}.wem"
+     },
+     {
+      "Id": "563195805",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Walk_01.wav",
+      "CachePath": "A6/{A6A1583E-CAD9-AA8B-70C5-1F7163ED3653}.wem"
+     },
+     {
+      "Id": "569593932",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HardPunch_02.wav",
+      "CachePath": "BE/{BE7F6195-4B6C-DB7C-A8FD-7C1AB985768C}.wem"
+     },
+     {
+      "Id": "589214320",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsConfirm_01.wav",
+      "CachePath": "35/{35BC287F-BAB3-581A-E701-669A42EB6E59}.wem"
+     },
+     {
+      "Id": "631273764",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Skid_01.wav",
+      "CachePath": "13/{137C9A2A-9CC7-ED68-1BE6-9E053152141A}.wem"
+     },
+     {
+      "Id": "649719106",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\BOSS_HitsStomach_03.wav",
+      "CachePath": "74/{74FF03E7-4A4F-B76E-DB10-18ED117023F4}.wem"
+     },
+     {
+      "Id": "657443973",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Taunt_01.wav",
+      "CachePath": "BD/{BD33D4C5-E468-E62D-82D9-33DEA1E2C438}.wem"
+     },
+     {
+      "Id": "667243300",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Punch_01.wav",
+      "CachePath": "08/{08F9024D-44D2-4163-F525-5E77A9553AA8}.wem"
+     },
+     {
+      "Id": "688991075",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Boss_CEO_05.wav",
+      "CachePath": "7B/{7B6D73D8-AC6F-7CF6-C489-EFD23EB96DDC}.wem"
+     },
+     {
+      "Id": "779356994",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Boss_CEO_01.wav",
+      "CachePath": "88/{886A0382-98DE-3F2D-9229-72469E6B06BC}.wem"
+     },
+     {
+      "Id": "783068782",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Punch_02.wav",
+      "CachePath": "98/{98E6B50F-2C81-85CC-C3D8-B7E4CF3DEEEA}.wem"
+     },
+     {
+      "Id": "798220226",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Walk_06.wav",
+      "CachePath": "23/{23012301-17DB-946D-68C9-7048DDA6BA27}.wem"
+     },
+     {
+      "Id": "798604289",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\BOSS_HitsStomach_04.wav",
+      "CachePath": "F4/{F48E958F-5596-F500-D83F-23B4228BD1A2}.wem"
+     },
+     {
+      "Id": "819012890",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\BOSS_HitsStomach_01.wav",
+      "CachePath": "1D/{1D7FE9EA-10F5-4292-9C04-B0259316AE20}.wem"
+     },
+     {
+      "Id": "825843620",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_LaunchPunch_02.wav",
+      "CachePath": "91/{911CA2A5-0A31-BD45-9898-B7A9F17916AB}.wem"
+     },
+     {
+      "Id": "831127815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Skid_02.wav",
+      "CachePath": "34/{342ECF4B-FB1F-6258-E605-5EF23BD95981}.wem"
+     },
+     {
+      "Id": "880626459",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Charge_01.wav",
+      "CachePath": "4B/{4BE2FE22-7939-BC6A-28CD-F27781C580F0}.wem"
+     },
+     {
+      "Id": "881917615",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Clap_03.wav",
+      "CachePath": "90/{907A209C-B617-82E5-1BC3-A7F64EE59154}.wem"
+     },
+     {
+      "Id": "918493882",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Walk_05.wav",
+      "CachePath": "5B/{5BC415BE-6729-C13C-6AE8-EF7D09815AE1}.wem"
+     },
+     {
+      "Id": "919622406",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\LVLCEO\\VOC_Boss_CEO_02.wav",
+      "CachePath": "70/{7084A087-EFDE-3D6D-702F-099696B0BE1A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1932666425",
+      "Name": "BOSS_Charge",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Charge",
+      "GUID": "{8A794F4D-02DD-4216-AB61-F33FCC427565}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4158113",
+      "DurationMax": "1.4158113",
+      "MediaRefs": [
+       {
+        "Id": "117409978"
+       },
+       {
+        "Id": "286233036"
+       },
+       {
+        "Id": "880626459"
+       }
+      ]
+     },
+     {
+      "Id": "858717863",
+      "Name": "BOSS_Clap",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Clap",
+      "GUID": "{70CF4375-E2E5-4C93-97B7-740BDA07B008}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0040554",
+      "DurationMax": "1.0648043",
+      "MediaRefs": [
+       {
+        "Id": "167016017"
+       },
+       {
+        "Id": "413804379"
+       },
+       {
+        "Id": "881917615"
+       }
+      ]
+     },
+     {
+      "Id": "2326191862",
+      "Name": "BOSS_HardPunch",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_HardPunch",
+      "GUID": "{35975F3D-0946-4652-A256-077B110D7551}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.2215438",
+      "DurationMax": "2.2215438",
+      "MediaRefs": [
+       {
+        "Id": "104849514"
+       },
+       {
+        "Id": "386091671"
+       },
+       {
+        "Id": "569593932"
+       }
+      ]
+     },
+     {
+      "Id": "259877839",
+      "Name": "BOSS_Hits",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Hits",
+      "GUID": "{0EC38A01-E5EF-4F2A-90F6-91D03E8E1A61}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.76666665",
+      "DurationMax": "1.25",
+      "MediaRefs": [
+       {
+        "Id": "167436280"
+       },
+       {
+        "Id": "350668619"
+       },
+       {
+        "Id": "406524746"
+       },
+       {
+        "Id": "433842962"
+       },
+       {
+        "Id": "649719106"
+       },
+       {
+        "Id": "688991075"
+       },
+       {
+        "Id": "779356994"
+       },
+       {
+        "Id": "798604289"
+       },
+       {
+        "Id": "819012890"
+       },
+       {
+        "Id": "919622406"
+       }
+      ]
+     },
+     {
+      "Id": "3834517357",
+      "Name": "BOSS_HitsConfirm",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_HitsConfirm",
+      "GUID": "{66327DFB-3281-48C3-85E8-A8FA94CBCC0D}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.76666665",
+      "DurationMax": "1.25",
+      "MediaRefs": [
+       {
+        "Id": "71463455"
+       },
+       {
+        "Id": "107848514"
+       },
+       {
+        "Id": "245357120"
+       },
+       {
+        "Id": "350668619"
+       },
+       {
+        "Id": "406524746"
+       },
+       {
+        "Id": "501517817"
+       },
+       {
+        "Id": "589214320"
+       },
+       {
+        "Id": "688991075"
+       },
+       {
+        "Id": "779356994"
+       },
+       {
+        "Id": "919622406"
+       }
+      ]
+     },
+     {
+      "Id": "4121852524",
+      "Name": "BOSS_LaunchPunch",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_LaunchPunch",
+      "GUID": "{8CFF0C87-5C63-463C-9F55-D0E7C376B4FB}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5333333",
+      "DurationMax": "1.5333333",
+      "MediaRefs": [
+       {
+        "Id": "265079921"
+       },
+       {
+        "Id": "464335915"
+       },
+       {
+        "Id": "825843620"
+       }
+      ]
+     },
+     {
+      "Id": "3733257623",
+      "Name": "BOSS_Punch",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Punch",
+      "GUID": "{3ED93F64-35D1-4FB4-B4F8-04D0006FDAC9}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.75",
+      "DurationMax": "1.75",
+      "MediaRefs": [
+       {
+        "Id": "57987035"
+       },
+       {
+        "Id": "114077642"
+       },
+       {
+        "Id": "667243300"
+       },
+       {
+        "Id": "783068782"
+       }
+      ]
+     },
+     {
+      "Id": "1442765092",
+      "Name": "BOSS_Skid",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Skid",
+      "GUID": "{90610836-6691-4B93-85D6-53740FE462AA}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.55",
+      "DurationMax": "1.55",
+      "MediaRefs": [
+       {
+        "Id": "335445603"
+       },
+       {
+        "Id": "631273764"
+       },
+       {
+        "Id": "831127815"
+       }
+      ]
+     },
+     {
+      "Id": "1642963821",
+      "Name": "BOSS_Stun",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Stun",
+      "GUID": "{874F0875-06AA-47D5-8EBF-2900C1A2FC02}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "444954411"
+       }
+      ]
+     },
+     {
+      "Id": "2051579091",
+      "Name": "BOSS_Taunt",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Taunt",
+      "GUID": "{7BB5F268-0F12-4328-B095-42B6675EDA45}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4333334",
+      "DurationMax": "2.4333334",
+      "MediaRefs": [
+       {
+        "Id": "161220475"
+       },
+       {
+        "Id": "429327604"
+       },
+       {
+        "Id": "657443973"
+       }
+      ]
+     },
+     {
+      "Id": "860246146",
+      "Name": "BOSS_Walk",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Walk",
+      "GUID": "{AAE5C561-3D34-4F8C-8213-5BD32AE84C82}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.35112122",
+      "DurationMax": "0.38577083",
+      "MediaRefs": [
+       {
+        "Id": "83188009"
+       },
+       {
+        "Id": "226557097"
+       },
+       {
+        "Id": "256475668"
+       },
+       {
+        "Id": "339912894"
+       },
+       {
+        "Id": "563195805"
+       },
+       {
+        "Id": "798220226"
+       },
+       {
+        "Id": "918493882"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{96CFBC41-AB79-597F-2823-4864DC5D40ED}"
+ }
+}

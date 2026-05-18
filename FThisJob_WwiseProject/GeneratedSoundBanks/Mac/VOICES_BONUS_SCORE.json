@@ -1,0 +1,333 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1629821195",
+    "Type": "User",
+    "GUID": "{8574D750-C226-4A34-9151-B78749E41D8A}",
+    "Color": "27",
+    "Language": "SFX",
+    "Hash": "{CD50EA4C-ECDC-7C45-AA75-53EB0AAED82F}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOICES_BONUS_SCORE",
+    "ShortName": "VOICES_BONUS_SCORE",
+    "Path": "VOICES_BONUS_SCORE.bnk",
+    "Media": [
+     {
+      "Id": "193646756",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Bonus_Score_01.wav",
+      "CachePath": "15/{15A51929-D601-3402-B9B9-F55732394FDF}.wem"
+     },
+     {
+      "Id": "237104830",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Multiplier_Score_04.wav",
+      "CachePath": "78/{785A5C2A-9071-8F6C-B2D5-624756C7004C}.wem"
+     },
+     {
+      "Id": "329405683",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Bonus_Score_02.wav",
+      "CachePath": "84/{8434DC86-CB08-F9B5-482A-A42FDFFF20F8}.wem"
+     },
+     {
+      "Id": "373535282",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Bonus_Score_04.wav",
+      "CachePath": "43/{430E71CA-3B1D-CEFB-5726-891B2C763428}.wem"
+     },
+     {
+      "Id": "610506887",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Multiplier_Score_07.wav",
+      "CachePath": "FE/{FE4B6FED-517D-664D-CA98-10B653C1FF36}.wem"
+     },
+     {
+      "Id": "735358259",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Multiplier_Score_08.wav",
+      "CachePath": "FC/{FC1415F0-5EFC-2868-1FE3-EE06729FB469}.wem"
+     },
+     {
+      "Id": "752587782",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Bonus_Score_05.wav",
+      "CachePath": "1F/{1F655B20-C7F4-A66A-B7B2-42765BF92D5D}.wem"
+     },
+     {
+      "Id": "849825148",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Multiplier_Score_02.wav",
+      "CachePath": "0B/{0B203EF8-5B67-719C-B599-175BAA329C37}.wem"
+     },
+     {
+      "Id": "894477837",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Bonus_Score_03.wav",
+      "CachePath": "E3/{E398FF0F-2B79-3F27-F0C1-DD8AFE56860D}.wem"
+     },
+     {
+      "Id": "1029252191",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Multiplier_Score_05.wav",
+      "CachePath": "F4/{F402250A-E150-E92E-DF82-F3376160F4BF}.wem"
+     },
+     {
+      "Id": "1044909127",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Multiplier_Score_03.wav",
+      "CachePath": "4C/{4C6EB80E-F1E5-743A-E57D-926813250DDA}.wem"
+     },
+     {
+      "Id": "1047589878",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Multiplier_Score_06.wav",
+      "CachePath": "86/{862D5117-8F55-DBE3-7966-7FB1A17664FE}.wem"
+     },
+     {
+      "Id": "1060442392",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\BonusScore\\VOC_Announcer_Multiplier_Score_01.wav",
+      "CachePath": "BF/{BFE99BE5-C138-0A92-6681-9F6FCFEAAAFA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1906018518",
+      "Name": "VOC_Announcer_Bonus_Score_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Bonus_Score_01",
+      "GUID": "{D2A86FFD-950B-42E6-80C5-8523D31DC786}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.771",
+      "DurationMax": "0.771",
+      "MediaRefs": [
+       {
+        "Id": "193646756"
+       }
+      ]
+     },
+     {
+      "Id": "1906018517",
+      "Name": "VOC_Announcer_Bonus_Score_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Bonus_Score_02",
+      "GUID": "{1CF0F152-C2A9-476B-9BC7-5970B38CC52E}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.828875",
+      "DurationMax": "0.828875",
+      "MediaRefs": [
+       {
+        "Id": "329405683"
+       }
+      ]
+     },
+     {
+      "Id": "1906018516",
+      "Name": "VOC_Announcer_Bonus_Score_03",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Bonus_Score_03",
+      "GUID": "{229AAAF1-C9E7-4415-AF08-35B9534D37D6}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8748958",
+      "DurationMax": "0.8748958",
+      "MediaRefs": [
+       {
+        "Id": "894477837"
+       }
+      ]
+     },
+     {
+      "Id": "1906018515",
+      "Name": "VOC_Announcer_Bonus_Score_04",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Bonus_Score_04",
+      "GUID": "{3021F375-6024-47AD-99D7-0038B77E1FF2}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.63652086",
+      "DurationMax": "0.63652086",
+      "MediaRefs": [
+       {
+        "Id": "373535282"
+       }
+      ]
+     },
+     {
+      "Id": "1906018514",
+      "Name": "VOC_Announcer_Bonus_Score_05",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Bonus_Score_05",
+      "GUID": "{C63D1D9E-81E4-4E6E-8161-D50D7350AEAC}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8693542",
+      "DurationMax": "0.8693542",
+      "MediaRefs": [
+       {
+        "Id": "752587782"
+       }
+      ]
+     },
+     {
+      "Id": "1317365318",
+      "Name": "VOC_Announcer_Multiplier_Score_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Multiplier_Score_01",
+      "GUID": "{0EE0FE7C-F633-4151-A640-761D23AF5BA8}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3971875",
+      "DurationMax": "1.3971875",
+      "MediaRefs": [
+       {
+        "Id": "1060442392"
+       }
+      ]
+     },
+     {
+      "Id": "1317365317",
+      "Name": "VOC_Announcer_Multiplier_Score_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Multiplier_Score_02",
+      "GUID": "{69DDCFD6-B7C7-4B68-A614-818ACB21A53F}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4",
+      "DurationMax": "1.4",
+      "MediaRefs": [
+       {
+        "Id": "849825148"
+       }
+      ]
+     },
+     {
+      "Id": "1317365316",
+      "Name": "VOC_Announcer_Multiplier_Score_03",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Multiplier_Score_03",
+      "GUID": "{3E4DB818-1965-44B6-A953-95A5B1266790}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.77329165",
+      "DurationMax": "0.77329165",
+      "MediaRefs": [
+       {
+        "Id": "1044909127"
+       }
+      ]
+     },
+     {
+      "Id": "1317365315",
+      "Name": "VOC_Announcer_Multiplier_Score_04",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Multiplier_Score_04",
+      "GUID": "{C8DAAAE0-AE81-4946-95CE-75ECFEA8DA1D}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.935",
+      "DurationMax": "0.935",
+      "MediaRefs": [
+       {
+        "Id": "237104830"
+       }
+      ]
+     },
+     {
+      "Id": "1317365314",
+      "Name": "VOC_Announcer_Multiplier_Score_05",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Multiplier_Score_05",
+      "GUID": "{216AE20B-390C-4EBC-826D-C0E8C44F3AD9}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "0.83445835",
+      "DurationMax": "0.83445835",
+      "MediaRefs": [
+       {
+        "Id": "1029252191"
+       }
+      ]
+     },
+     {
+      "Id": "1317365313",
+      "Name": "VOC_Announcer_Multiplier_Score_06",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Multiplier_Score_06",
+      "GUID": "{5D34D8BF-7803-4571-A38D-28C66FBC39E2}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3786042",
+      "DurationMax": "1.3786042",
+      "MediaRefs": [
+       {
+        "Id": "1047589878"
+       }
+      ]
+     },
+     {
+      "Id": "1317365312",
+      "Name": "VOC_Announcer_Multiplier_Score_07",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Multiplier_Score_07",
+      "GUID": "{93EE7EE6-6D36-4CFF-B800-CAB3FA4F187D}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3898333",
+      "DurationMax": "1.3898333",
+      "MediaRefs": [
+       {
+        "Id": "610506887"
+       }
+      ]
+     },
+     {
+      "Id": "1317365327",
+      "Name": "VOC_Announcer_Multiplier_Score_08",
+      "ObjectPath": "\\Events\\Default Work Unit\\VOICES\\VOICES_BONUS_SCORE\\VOC_Announcer_Multiplier_Score_08",
+      "GUID": "{F9C0BFD0-6885-44B9-A176-5E08C4FDBE99}",
+      "Color": "27",
+      "DurationType": "OneShot",
+      "DurationMin": "1.8096666",
+      "DurationMax": "1.8096666",
+      "MediaRefs": [
+       {
+        "Id": "735358259"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1828041389",
+      "Name": "RTPC_Music_SideChain",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain",
+      "GUID": "{48035C4E-15B2-4C86-A81C-7505A68840D5}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C5B88122-508E-2A50-DC8A-4A7EDECCE4F9}"
+ }
+}

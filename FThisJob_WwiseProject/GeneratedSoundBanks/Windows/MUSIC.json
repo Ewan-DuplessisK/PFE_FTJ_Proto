@@ -1,0 +1,1032 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3991942870",
+    "Type": "User",
+    "GUID": "{EDBBBC7E-6DB8-4FA8-A629-00998910B03A}",
+    "Color": "8",
+    "Language": "SFX",
+    "Hash": "{2E8B3620-AF29-7601-93B5-C4EA8EEC3B9A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MUSIC\\MUSIC",
+    "ShortName": "MUSIC",
+    "Path": "MUSIC.bnk",
+    "Media": [
+     {
+      "Id": "2065510",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\jin_victory.wav",
+      "CachePath": "BF/{BFC531E1-38C0-5FAF-C057-A8CC0C6B3355}.wem"
+     },
+     {
+      "Id": "10422668",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ost_lv01-02_182bpm_2drums.wav",
+      "CachePath": "3D/{3D028FF8-DC3B-C93E-2137-7FB46A1DE8DF}.wem"
+     },
+     {
+      "Id": "114658739",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv03_136bpm_2drums.wav",
+      "CachePath": "40/{40E6D87F-F357-BBD5-E56C-94E9725D349F}.wem"
+     },
+     {
+      "Id": "124218432",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv04_95bpm_2keys.wav",
+      "CachePath": "CA/{CA93EC83-D281-9F38-0590-33C083573C20}.wem"
+     },
+     {
+      "Id": "128193721",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv03_136bpm_fill2drums.wav",
+      "CachePath": "E8/{E8A352A3-3CF6-4A2C-4A47-B358D249C8D8}.wem"
+     },
+     {
+      "Id": "194520095",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_elevator_181bpm.wav",
+      "CachePath": "15/{15E4F499-F2D0-B9F9-E9D4-F7EC41553F34}.wem"
+     },
+     {
+      "Id": "228856885",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv04_95bpm_5shiny.wav",
+      "CachePath": "75/{75E6FD1C-E5BA-8619-404F-C19F10743E02}.wem"
+     },
+     {
+      "Id": "277001088",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv01-02_182bpm_2drums.wav",
+      "CachePath": "3D/{3D028FF8-DC3B-C93E-2137-7FB46A1DE8DF}.wem"
+     },
+     {
+      "Id": "357347755",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_boss_131.67bpm.wav",
+      "CachePath": "81/{8157F897-9F7F-29D7-1EB3-63CD8A677D56}.wem"
+     },
+     {
+      "Id": "370573153",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ost_lv01-02_182bpm_fill1guitbass.wav",
+      "CachePath": "A9/{A927BE08-94F8-AA84-D69D-F5BB6DBFA005}.wem"
+     },
+     {
+      "Id": "396034084",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv03_136bpm_3keys.wav",
+      "CachePath": "D3/{D33AD631-427A-9832-EDA0-A39E577070EA}.wem"
+     },
+     {
+      "Id": "520484862",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv03_136bpm_4solo.wav",
+      "CachePath": "BB/{BBD76FF9-47C7-4608-E0D3-E4CB17B7774F}.wem"
+     },
+     {
+      "Id": "569891710",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv03_136bpm_fill1guitbass.wav",
+      "CachePath": "65/{65FC903D-8D95-183E-99F3-B0DC14D03A48}.wem"
+     },
+     {
+      "Id": "679128944",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv04_95bpm_4cuivres.wav",
+      "CachePath": "B5/{B5912986-848F-9BB2-4A24-C98D2F4E7BFF}.wem"
+     },
+     {
+      "Id": "701101527",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv01-02_182bpm_1guitbass.wav",
+      "CachePath": "1B/{1BDB7546-8E94-E5FC-3F32-A76A359C47D6}.wem"
+     },
+     {
+      "Id": "711362159",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_titlescreen_146bpm.wav",
+      "CachePath": "97/{974A4C65-5F77-B659-2158-20F4794C8B18}.wem"
+     },
+     {
+      "Id": "742619833",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv04_95bpm_fill1drums.wav",
+      "CachePath": "F2/{F2EA220A-B560-6B3D-1915-AE240D97D8CF}.wem"
+     },
+     {
+      "Id": "772005986",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_credits_92bpm.wav",
+      "CachePath": "41/{41F3DA5E-A331-CAF9-5591-9D083557242B}.wem"
+     },
+     {
+      "Id": "781280541",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\jin_defeat.wav",
+      "CachePath": "F2/{F261623F-D2E8-F97C-F6E8-8907D956BD80}.wem"
+     },
+     {
+      "Id": "791595110",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv04_95bpm_1drums.wav",
+      "CachePath": "20/{20951298-27EF-BE3D-E7F0-75789060AF66}.wem"
+     },
+     {
+      "Id": "821610322",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv04_95bpm_3guitarbass.wav",
+      "CachePath": "BC/{BC2B2979-01D8-F9C4-9F8C-47C8B94A5314}.wem"
+     },
+     {
+      "Id": "880695016",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv01-02_182bpm_4horns.wav",
+      "CachePath": "F0/{F0320B79-DBF5-757F-FCD8-DCBBCC7119D3}.wem"
+     },
+     {
+      "Id": "944243448",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv01-02_182bpm_3keys.wav",
+      "CachePath": "1E/{1E750C27-47D3-696C-914B-836756F69ABF}.wem"
+     },
+     {
+      "Id": "964654305",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv01-02_182bpm_fill2drums.wav",
+      "CachePath": "AA/{AA41848D-E25D-3D4E-A84B-27F50A805061}.wem"
+     },
+     {
+      "Id": "1067114917",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC\\ost_lv03_136bpm_1bassguit.wav",
+      "CachePath": "46/{46EBC95B-8370-E4D3-9876-F451A32FA6A8}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1427760111",
+      "Name": "BossMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\BossMusic",
+      "GUID": "{CE8724A0-B61E-4B4E-8FF8-5779A44889C5}",
+      "Color": "8",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "357347755"
+       }
+      ]
+     },
+     {
+      "Id": "2201105581",
+      "Name": "Credits",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\Credits",
+      "GUID": "{DCCAFD7D-54D5-4978-B43F-991990B3C3D6}",
+      "Color": "8",
+      "DurationType": "OneShot",
+      "DurationMin": "73.69566",
+      "DurationMax": "73.69566",
+      "MediaRefs": [
+       {
+        "Id": "772005986"
+       }
+      ]
+     },
+     {
+      "Id": "3705378287",
+      "Name": "Elevator",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\Elevator",
+      "GUID": "{D55108C0-64A6-4743-9BD7-1D53FE6639E3}",
+      "Color": "8",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "1910067948",
+        "Id": "4098790517",
+        "Name": "ST_Elevator",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_MASTER\\ST_Elevator",
+        "GUID": "{3213DE3B-FF7C-48D5-BD38-3344869B6204}"
+       }
+      ]
+     },
+     {
+      "Id": "3318448171",
+      "Name": "MusicDuck_Off",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\MusicDuck_Off",
+      "GUID": "{E3E4CE59-0349-40B6-9334-CEEBDB0796BB}",
+      "Color": "8",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "1749661736",
+        "Id": "3534829270",
+        "Name": "ST_OFF",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSICDUCK\\ST_OFF",
+        "GUID": "{FE9BC0AA-680C-425C-86B1-BF236A007A2D}"
+       }
+      ]
+     },
+     {
+      "Id": "4030145175",
+      "Name": "MusicDuck_On",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\MusicDuck_On",
+      "GUID": "{142F4171-654E-4B2D-8AEB-35913AA371D0}",
+      "Color": "8",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "1749661736",
+        "Id": "1729289368",
+        "Name": "ST_ON",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSICDUCK\\ST_ON",
+        "GUID": "{DC975B96-2C67-4A36-BDA0-1CBAF00CB17E}"
+       }
+      ]
+     },
+     {
+      "Id": "3199789248",
+      "Name": "MusicMaster",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\MusicMaster",
+      "GUID": "{D3597931-BD3F-49B3-B99E-A6FA568A0439}",
+      "Color": "8",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1910067948",
+         "Id": "1823901586",
+         "GUID": "{56B0637B-0A1E-4A64-9F5A-C0AB7A5E6A0C}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "230524004",
+           "Id": "0",
+           "GUID": "{F7CAF8DC-C354-48E6-A674-6EE750A08CCC}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "781280541"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1910067948",
+         "Id": "1584013055",
+         "GUID": "{6BC16B51-0A9A-4221-A6E5-EBE895F5E1A4}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "230524004",
+           "Id": "0",
+           "GUID": "{F7CAF8DC-C354-48E6-A674-6EE750A08CCC}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "2065510"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1910067948",
+         "Id": "393732332",
+         "GUID": "{40807314-AE89-49E1-80E8-EC577135D35D}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "230524004",
+           "Id": "846576936",
+           "GUID": "{19645657-E006-48CA-A05C-755936DBB524}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "964654305"
+           }
+          ],
+          "Children": [
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "777581536",
+             "GUID": "{D0489C50-297F-4F23-ABA6-3C81E0A62EFD}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "277001088"
+             },
+             {
+              "Id": "370573153"
+             },
+             {
+              "Id": "701101527"
+             },
+             {
+              "Id": "880695016"
+             },
+             {
+              "Id": "944243448"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "2256071962",
+             "GUID": "{E5655C9F-9E44-4389-81B7-8CD2F50807F6}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "370573153"
+             },
+             {
+              "Id": "701101527"
+             },
+             {
+              "Id": "944243448"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "1149269995",
+             "GUID": "{BE760FC5-4883-4955-8567-42DBB5A5B6B5}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "277001088"
+             },
+             {
+              "Id": "370573153"
+             },
+             {
+              "Id": "701101527"
+             },
+             {
+              "Id": "944243448"
+             },
+             {
+              "Id": "964654305"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1910067948",
+         "Id": "4098790517",
+         "GUID": "{3213DE3B-FF7C-48D5-BD38-3344869B6204}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "230524004",
+           "Id": "0",
+           "GUID": "{F7CAF8DC-C354-48E6-A674-6EE750A08CCC}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "194520095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1910067948",
+         "Id": "393732332",
+         "GUID": "{40807314-AE89-49E1-80E8-EC577135D35D}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "230524004",
+           "Id": "846576937",
+           "GUID": "{08706C89-7D35-487A-B3CE-BF831FBDB320}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "128193721"
+           }
+          ],
+          "Children": [
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "777581536",
+             "GUID": "{D0489C50-297F-4F23-ABA6-3C81E0A62EFD}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "114658739"
+             },
+             {
+              "Id": "396034084"
+             },
+             {
+              "Id": "520484862"
+             },
+             {
+              "Id": "569891710"
+             },
+             {
+              "Id": "1067114917"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "2256071962",
+             "GUID": "{E5655C9F-9E44-4389-81B7-8CD2F50807F6}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "569891710"
+             },
+             {
+              "Id": "1067114917"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "1149269995",
+             "GUID": "{BE760FC5-4883-4955-8567-42DBB5A5B6B5}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "114658739"
+             },
+             {
+              "Id": "569891710"
+             },
+             {
+              "Id": "1067114917"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1910067948",
+         "Id": "393732332",
+         "GUID": "{40807314-AE89-49E1-80E8-EC577135D35D}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "230524004",
+           "Id": "846576942",
+           "GUID": "{7A46C7CB-4C74-4343-8653-24A07143C52F}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "742619833"
+           }
+          ],
+          "Children": [
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "777581536",
+             "GUID": "{D0489C50-297F-4F23-ABA6-3C81E0A62EFD}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "124218432"
+             },
+             {
+              "Id": "228856885"
+             },
+             {
+              "Id": "679128944"
+             },
+             {
+              "Id": "791595110"
+             },
+             {
+              "Id": "821610322"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "2256071962",
+             "GUID": "{E5655C9F-9E44-4389-81B7-8CD2F50807F6}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "124218432"
+             },
+             {
+              "Id": "228856885"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "State",
+             "GroupId": "1876089722",
+             "Id": "1149269995",
+             "GUID": "{BE760FC5-4883-4955-8567-42DBB5A5B6B5}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "124218432"
+             },
+             {
+              "Id": "228856885"
+             },
+             {
+              "Id": "791595110"
+             },
+             {
+              "Id": "821610322"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1910067948",
+         "Id": "393732332",
+         "GUID": "{40807314-AE89-49E1-80E8-EC577135D35D}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "230524004",
+           "Id": "1309654229",
+           "GUID": "{ECB6125B-D542-4DFD-8591-5F49F813D7B4}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "357347755"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1910067948",
+         "Id": "393732332",
+         "GUID": "{40807314-AE89-49E1-80E8-EC577135D35D}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "230524004",
+           "Id": "846576939",
+           "GUID": "{60A9EF33-38F1-45C3-BC57-6C14ABF6EC05}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "10422668"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "1059268390",
+      "Name": "Stop_MusicCredit",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\Stop_MusicCredit",
+      "GUID": "{F186E870-494D-4388-A62D-2D324C1A806A}",
+      "Color": "8",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "4080737523",
+      "Name": "Stop_MusicMaster",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\Stop_MusicMaster",
+      "GUID": "{3B9DA204-64B6-46D6-9BED-84E07774FB7D}",
+      "Color": "8",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1749069110",
+      "Name": "Stop_TitleScreen",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\Stop_TitleScreen",
+      "GUID": "{C5AEEAB6-083C-4A54-89FA-3A1430CD580C}",
+      "Color": "8",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "152105657",
+      "Name": "TitleScreen",
+      "ObjectPath": "\\Events\\Default Work Unit\\MUSIC\\TitleScreen",
+      "GUID": "{332431A6-2C65-44C7-B5BA-95F8ECFB9412}",
+      "Color": "8",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "711362159"
+       }
+      ]
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "2293551212",
+      "Name": "AB_MUSIC",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC\\AB_MUSIC",
+      "GUID": "{099EF0E6-6454-4176-A604-366A68C1CEA7}",
+      "Color": "8"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1400970647",
+      "Name": "RTPC_Music_SideChain_VOICEREACTION",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain_VOICEREACTION",
+      "GUID": "{DF6DAE97-E05E-4CFE-9371-581FF156106D}"
+     },
+     {
+      "Id": "1596647065",
+      "Name": "RTPC_Music_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Music_Volume",
+      "GUID": "{4EADD6C4-8BED-451D-9124-B5D0A0D4CFC0}",
+      "Color": "1"
+     },
+     {
+      "Id": "1828041389",
+      "Name": "RTPC_Music_SideChain",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain",
+      "GUID": "{48035C4E-15B2-4C86-A81C-7505A68840D5}"
+     },
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     },
+     {
+      "Id": "3151097548",
+      "Name": "RTPC_Music_Slowmo",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_Slowmo",
+      "GUID": "{8CE0CB95-49E6-470C-BE79-FC81C67D8BD8}"
+     },
+     {
+      "Id": "3312150600",
+      "Name": "RTPC_Sidechain_Rage_Enter",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Sidechain_Rage_Enter",
+      "GUID": "{CDBA16C9-1E19-496A-B420-2194AE170CC6}",
+      "Color": "1"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "230524004",
+      "Name": "STG_MUSIC_LEVEL_ID",
+      "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_LEVEL_ID",
+      "GUID": "{F7CAF8DC-C354-48E6-A674-6EE750A08CCC}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_LEVEL_ID\\None",
+        "GUID": "{786EC21B-FD47-490B-B4FF-BD9BFDAA58A6}"
+       },
+       {
+        "Id": "846576936",
+        "Name": "ST_LEVEL_02",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_LEVEL_ID\\ST_LEVEL_02",
+        "GUID": "{19645657-E006-48CA-A05C-755936DBB524}"
+       },
+       {
+        "Id": "846576937",
+        "Name": "ST_LEVEL_03",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_LEVEL_ID\\ST_LEVEL_03",
+        "GUID": "{08706C89-7D35-487A-B3CE-BF831FBDB320}"
+       },
+       {
+        "Id": "846576939",
+        "Name": "ST_LEVEL_01",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_LEVEL_ID\\ST_LEVEL_01",
+        "GUID": "{60A9EF33-38F1-45C3-BC57-6C14ABF6EC05}"
+       },
+       {
+        "Id": "846576942",
+        "Name": "ST_LEVEL_04",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_LEVEL_ID\\ST_LEVEL_04",
+        "GUID": "{7A46C7CB-4C74-4343-8653-24A07143C52F}"
+       },
+       {
+        "Id": "1309654229",
+        "Name": "ST_LEVEL_Boss",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_LEVEL_ID\\ST_LEVEL_Boss",
+        "GUID": "{ECB6125B-D542-4DFD-8591-5F49F813D7B4}"
+       }
+      ]
+     },
+     {
+      "Id": "603700529",
+      "Name": "MC_CriticalHealth",
+      "ObjectPath": "\\States\\MC\\MC_CriticalHealth",
+      "GUID": "{A5FC26C3-7658-4327-B092-C5E156E8EE7C}",
+      "Color": "3",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\None",
+        "GUID": "{5BC3290D-432D-4808-8DF2-9ECD959311FD}",
+        "Color": "3"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\OFF",
+        "GUID": "{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}",
+        "Color": "3"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\ON",
+        "GUID": "{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "1123292758",
+      "Name": "STG_MUTEMUSIC",
+      "ObjectPath": "\\States\\MUSIC\\STG_MUTEMUSIC",
+      "GUID": "{18651F0D-57FE-47DE-9C10-A36BFF7BE653}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUTEMUSIC\\None",
+        "GUID": "{95B6946E-D516-4476-BDC0-76D9406786FC}"
+       },
+       {
+        "Id": "1729289368",
+        "Name": "ST_ON",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUTEMUSIC\\ST_ON",
+        "GUID": "{DE09A316-6AB8-47B4-B0C0-8F7197EE0911}"
+       },
+       {
+        "Id": "3534829270",
+        "Name": "ST_OFF",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUTEMUSIC\\ST_OFF",
+        "GUID": "{DB606463-CE3B-4685-A20A-D51185180108}"
+       }
+      ]
+     },
+     {
+      "Id": "1749661736",
+      "Name": "STG_MUSICDUCK",
+      "ObjectPath": "\\States\\MUSIC\\STG_MUSICDUCK",
+      "GUID": "{4B162117-2BAE-4948-A0F1-81F07F0D4FEC}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSICDUCK\\None",
+        "GUID": "{66671BD1-1157-4BC5-BFC4-D47335CA2DE6}"
+       },
+       {
+        "Id": "1729289368",
+        "Name": "ST_ON",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSICDUCK\\ST_ON",
+        "GUID": "{DC975B96-2C67-4A36-BDA0-1CBAF00CB17E}"
+       },
+       {
+        "Id": "3534829270",
+        "Name": "ST_OFF",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSICDUCK\\ST_OFF",
+        "GUID": "{FE9BC0AA-680C-425C-86B1-BF236A007A2D}"
+       }
+      ]
+     },
+     {
+      "Id": "1876089722",
+      "Name": "STG_MUSIC_GAMEPLAY",
+      "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY",
+      "GUID": "{EB6E6A45-5646-484E-8633-75CE485228A6}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\None",
+        "GUID": "{10E7B2CF-4595-401F-BAF7-2F9EE0BAE887}"
+       },
+       {
+        "Id": "777581536",
+        "Name": "ST_Arena",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Arena",
+        "GUID": "{D0489C50-297F-4F23-ABA6-3C81E0A62EFD}"
+       },
+       {
+        "Id": "1149269995",
+        "Name": "ST_Fight",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Fight",
+        "GUID": "{BE760FC5-4883-4955-8567-42DBB5A5B6B5}"
+       },
+       {
+        "Id": "2256071962",
+        "Name": "ST_Calm",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_GAMEPLAY\\ST_Calm",
+        "GUID": "{E5655C9F-9E44-4389-81B7-8CD2F50807F6}"
+       }
+      ]
+     },
+     {
+      "Id": "1910067948",
+      "Name": "STG_MUSIC_MASTER",
+      "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_MASTER",
+      "GUID": "{47C3757E-92AA-4FA8-B80F-85307FFC3FAA}",
+      "States": [
+       {
+        "Id": "393732332",
+        "Name": "ST_InLevel",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_MASTER\\ST_InLevel",
+        "GUID": "{40807314-AE89-49E1-80E8-EC577135D35D}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_MASTER\\None",
+        "GUID": "{70D7E160-B039-4F5F-84EC-B59114771BAA}"
+       },
+       {
+        "Id": "1584013055",
+        "Name": "ST_Victory",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_MASTER\\ST_Victory",
+        "GUID": "{6BC16B51-0A9A-4221-A6E5-EBE895F5E1A4}"
+       },
+       {
+        "Id": "1823901586",
+        "Name": "ST_Defeat",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_MASTER\\ST_Defeat",
+        "GUID": "{56B0637B-0A1E-4A64-9F5A-C0AB7A5E6A0C}"
+       },
+       {
+        "Id": "4098790517",
+        "Name": "ST_Elevator",
+        "ObjectPath": "\\States\\MUSIC\\STG_MUSIC_MASTER\\ST_Elevator",
+        "GUID": "{3213DE3B-FF7C-48D5-BD38-3344869B6204}"
+       }
+      ]
+     },
+     {
+      "Id": "2925743549",
+      "Name": "STG_DUCKPAUSE",
+      "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE",
+      "GUID": "{15ECBCBF-3F06-4289-AFC6-8844C587E497}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\None",
+        "GUID": "{6A1E09E1-E251-4B2B-A184-1D936B6FE643}"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\OFF",
+        "GUID": "{05000AAB-A14A-470B-9CB9-8B447EF0C75F}"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\UI\\STG_DUCKPAUSE\\ON",
+        "GUID": "{24F35669-AD62-4CAA-ADE5-6808BDE93D74}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C10A7A57-1717-F6BA-34D0-F647AA25EFC8}"
+ }
+}

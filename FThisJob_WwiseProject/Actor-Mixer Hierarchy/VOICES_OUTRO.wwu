@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{26AEB92B-E136-4576-9C7C-0F9F172FF4EF}" SchemaVersion="123" RootDocumentID="{B7D81390-F29E-47DE-874A-A1BC906853B9}" ParentDocumentID="{B7D81390-F29E-47DE-874A-A1BC906853B9}">
+	<AudioObjects>
+		<WorkUnit Name="VOICES_OUTRO" ID="{26AEB92B-E136-4576-9C7C-0F9F172FF4EF}" OwnerID="{31CF7CE1-8F04-4667-9928-F84D7EBE385A}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="VOICES_Outro" ID="{5E894940-D707-4C72-9111-872F548168B5}" ShortID="43634519">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="VOC_Jake_Cutscene_Outro_01" ID="{B5AFB864-1953-4A4E-88E4-2DF5DF5758A1}" ShortID="253402793">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Jake_Cutscene_Outro_01" ID="{CBA4FE0D-D25C-4A4E-BBDF-9AA18B4167AA}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VOICE\Outro\VOC_Jake_Cutscene_Outro_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="400129071"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Jake_Cutscene_Outro_01" ID="{CBA4FE0D-D25C-4A4E-BBDF-9AA18B4167AA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Jake_Cutscene_Outro_02" ID="{2B7366D1-8B37-4266-AF8A-4054FA24ECDB}" ShortID="497311957">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Jake_Cutscene_Outro_02" ID="{8DBED355-5C68-436A-BEDA-036E41854CC1}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VOICE\Outro\VOC_Jake_Cutscene_Outro_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="534695601"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Jake_Cutscene_Outro_02" ID="{8DBED355-5C68-436A-BEDA-036E41854CC1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOC_Jake_Cutscene_Outro_03" ID="{10E29645-52A1-4B59-B6FD-76DEA857DC25}" ShortID="494189379">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOC_Jake_Cutscene_Outro_03" ID="{88E920A7-3CB5-456F-AE1E-71D697BEA301}">
+									<Language>SFX</Language>
+									<AudioFile>VOICE\Outro\VOC_Jake_Cutscene_Outro_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="630093348"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOC_Jake_Cutscene_Outro_03" ID="{88E920A7-3CB5-456F-AE1E-71D697BEA301}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

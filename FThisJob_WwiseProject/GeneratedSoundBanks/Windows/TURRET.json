@@ -1,0 +1,765 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2674766611",
+    "Type": "User",
+    "GUID": "{667EC829-AFB4-4643-B125-2D464A80D87B}",
+    "Color": "10",
+    "Language": "SFX",
+    "Hash": "{895AA145-3D97-99A4-60AD-28639C91743D}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\ENEMIES\\TURRET\\TURRET",
+    "ShortName": "TURRET",
+    "Path": "TURRET.bnk",
+    "Media": [
+     {
+      "Id": "1574637",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Appear_03.wav",
+      "CachePath": "1E/{1E056ECA-0D48-F239-C9B3-F5CA94451BB2}.wem"
+     },
+     {
+      "Id": "15783071",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Appear_02.wav",
+      "CachePath": "06/{062D8CB7-5874-62A2-8BC0-7FBAB621A676}.wem"
+     },
+     {
+      "Id": "33778773",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_03.wav",
+      "CachePath": "3B/{3BD5BE9F-597F-4C84-B7B6-8365CD8E3959}.wem"
+     },
+     {
+      "Id": "37212620",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\MC_Robot_Bullet_PassBy_03.wav",
+      "CachePath": "B7/{B7E8EA90-1E2D-9010-22F6-86909C5B6BA6}.wem"
+     },
+     {
+      "Id": "46689940",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Charge_02.wav",
+      "CachePath": "DD/{DD8ADF9E-E951-5357-C438-C57977FDCAC5}.wem"
+     },
+     {
+      "Id": "61687523",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_01.wav",
+      "CachePath": "65/{65CC57C5-9009-D5EE-B333-060F3C17D567}.wem"
+     },
+     {
+      "Id": "70762498",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Small_Voice_02.wav",
+      "CachePath": "D5/{D505A157-1BD4-B688-C0F8-6A4617F972C4}.wem"
+     },
+     {
+      "Id": "103560841",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Small_Voice_07.wav",
+      "CachePath": "BE/{BE92C054-81C2-13AF-2338-E087AE56A0F0}.wem"
+     },
+     {
+      "Id": "109281745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Disappear_02.wav",
+      "CachePath": "B6/{B609BD09-2875-6AAA-06E5-FD340B249592}.wem"
+     },
+     {
+      "Id": "120761753",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\MC_Robot_Bullet_PassBy_02.wav",
+      "CachePath": "BF/{BFAFDB00-24CF-FC9E-B260-2B5890390BE5}.wem"
+     },
+     {
+      "Id": "141567871",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Explosion_03.wav",
+      "CachePath": "0C/{0C56D3D1-A825-6FCF-C121-31389F8FD793}.wem"
+     },
+     {
+      "Id": "160347885",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_05.wav",
+      "CachePath": "D4/{D4FF1B47-1D8F-2427-C667-55E52AE2E6F8}.wem"
+     },
+     {
+      "Id": "174734452",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_03.wav",
+      "CachePath": "A2/{A29B6368-145E-C32C-DA3F-EC5B0240D349}.wem"
+     },
+     {
+      "Id": "201168655",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Small_Voice_06.wav",
+      "CachePath": "C2/{C238233B-652B-85A1-892F-6293019EFC64}.wem"
+     },
+     {
+      "Id": "211391567",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Explosion_02.wav",
+      "CachePath": "BC/{BCA1AB51-0E03-2B21-1E2F-100675689927}.wem"
+     },
+     {
+      "Id": "240985668",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Small_Voice_04.wav",
+      "CachePath": "7E/{7E233A9D-8254-6B5F-F62C-6E246E2F23ED}.wem"
+     },
+     {
+      "Id": "257863929",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_04.wav",
+      "CachePath": "88/{88730D32-25F4-AD5B-9876-700331CBFF2F}.wem"
+     },
+     {
+      "Id": "279961866",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_04.wav",
+      "CachePath": "15/{1540ADBD-492F-D1F7-A4FE-C38D6413923A}.wem"
+     },
+     {
+      "Id": "286642904",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_13.wav",
+      "CachePath": "42/{42E62114-A232-550A-B5F4-289154ED7025}.wem"
+     },
+     {
+      "Id": "288142238",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\MC_Robot_Bullet_PassBy_04.wav",
+      "CachePath": "EB/{EBA25AF2-53F3-6C52-AF28-244ED3879C00}.wem"
+     },
+     {
+      "Id": "306073926",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Appear_01.wav",
+      "CachePath": "E6/{E6583DDA-D1DA-CE4A-FE8F-58FC826708BA}.wem"
+     },
+     {
+      "Id": "307013799",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Disappear_01.wav",
+      "CachePath": "F3/{F35736CC-0CE3-C8BB-88C0-8B3F9EE9ECC1}.wem"
+     },
+     {
+      "Id": "319502260",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Small_Voice_03.wav",
+      "CachePath": "60/{604289AC-1EE8-3664-4623-3A4E6D2E70E1}.wem"
+     },
+     {
+      "Id": "337367894",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_05.wav",
+      "CachePath": "E7/{E75D89C3-CE9F-873C-CB4E-3FC8EA61D9C6}.wem"
+     },
+     {
+      "Id": "402622460",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Small_Voice_05.wav",
+      "CachePath": "D8/{D8AEE70F-25E4-6A3D-D290-F78FA4B4BD8C}.wem"
+     },
+     {
+      "Id": "408532320",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Charge_03.wav",
+      "CachePath": "D1/{D1B73202-1BC2-0FC8-F4F9-198DD7165B88}.wem"
+     },
+     {
+      "Id": "417871065",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_10.wav",
+      "CachePath": "F6/{F6F9BA52-F25A-DF6C-4077-CC2D9E800BAB}.wem"
+     },
+     {
+      "Id": "442363141",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_02.wav",
+      "CachePath": "FC/{FC0F607A-39EA-5444-6201-193A88A6F240}.wem"
+     },
+     {
+      "Id": "495853510",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Small_Voice_08.wav",
+      "CachePath": "D4/{D4217E46-A28C-B337-20ED-1583060E5D10}.wem"
+     },
+     {
+      "Id": "500083664",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_11.wav",
+      "CachePath": "CF/{CF275DC8-B2B1-50AA-CB0F-029C66AA378A}.wem"
+     },
+     {
+      "Id": "507113263",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_15.wav",
+      "CachePath": "E5/{E5158A85-3434-8381-87F2-B3DECA24A677}.wem"
+     },
+     {
+      "Id": "528944104",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Explosion_01.wav",
+      "CachePath": "3D/{3D693B01-A225-04DA-8688-869675A4D34A}.wem"
+     },
+     {
+      "Id": "575941717",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_12.wav",
+      "CachePath": "14/{14FF07ED-005D-2E6D-37F7-D6366E3EABF0}.wem"
+     },
+     {
+      "Id": "605545406",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_14.wav",
+      "CachePath": "D0/{D0B1C2D6-050D-0181-A4A4-84667CCD5A6E}.wem"
+     },
+     {
+      "Id": "614374098",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Disappear_03.wav",
+      "CachePath": "0B/{0BB9B231-F839-CD5F-54D9-E63D9363A1FC}.wem"
+     },
+     {
+      "Id": "736654975",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Shoot_01.wav",
+      "CachePath": "FC/{FCAB25A6-5E89-2519-048C-07B1299E72BB}.wem"
+     },
+     {
+      "Id": "742425535",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Small_Voice_01.wav",
+      "CachePath": "27/{2791FEF8-EF8A-94B4-C286-3AB46C4A8DF8}.wem"
+     },
+     {
+      "Id": "752299451",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Shoot_02.wav",
+      "CachePath": "FC/{FC13AB74-FAC2-9A56-AEBE-1E1FEA2F026A}.wem"
+     },
+     {
+      "Id": "775794782",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_02.wav",
+      "CachePath": "69/{6931E594-0C2D-A1E5-2FB8-2C07DCF56C3C}.wem"
+     },
+     {
+      "Id": "785713535",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Charge_01.wav",
+      "CachePath": "F3/{F3742C9E-9203-51DB-CD2D-9D618B3E933F}.wem"
+     },
+     {
+      "Id": "829377214",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_16.wav",
+      "CachePath": "09/{090B305D-4414-E6B2-E6D9-5F7D2D9B37A2}.wem"
+     },
+     {
+      "Id": "850772921",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Hit_01.wav",
+      "CachePath": "FC/{FCF85FD9-C687-C4D2-7FFF-8ACF42D4B805}.wem"
+     },
+     {
+      "Id": "889704423",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Explosion_04.wav",
+      "CachePath": "E5/{E50C94C9-5663-903A-0412-C3A8054EA511}.wem"
+     },
+     {
+      "Id": "897541544",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\MC_Robot_Bullet_PassBy_01.wav",
+      "CachePath": "1A/{1A4D6502-255C-85AA-D49B-A6F0F4CA40F3}.wem"
+     },
+     {
+      "Id": "959307242",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\TURRET\\SFX_Robot_Shoot_03.wav",
+      "CachePath": "CD/{CD934011-17FA-BE48-9839-7DE6137AB58E}.wem"
+     },
+     {
+      "Id": "1020512643",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VOICE\\Reaction\\VOC_Jake_Combat_06.wav",
+      "CachePath": "84/{845989DF-0ED3-BD95-51B8-C815B8C52A9D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2658411749",
+      "Name": "Turret_Appear",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\TURRET\\Turret_Appear",
+      "GUID": "{5A5170D0-1D46-47FD-9307-746E67620EE4}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6012083",
+      "DurationMax": "0.8483081",
+      "MediaRefs": [
+       {
+        "Id": "1574637"
+       },
+       {
+        "Id": "15783071"
+       },
+       {
+        "Id": "70762498"
+       },
+       {
+        "Id": "240985668"
+       },
+       {
+        "Id": "306073926"
+       },
+       {
+        "Id": "319502260"
+       }
+      ]
+     },
+     {
+      "Id": "645286053",
+      "Name": "Turret_Bullet_PassBy",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\TURRET\\Turret_Bullet_PassBy",
+      "GUID": "{360C5B83-FC1A-40CE-9BD0-A47091C9D725}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.44735417",
+      "DurationMax": "0.55027086",
+      "MediaRefs": [
+       {
+        "Id": "37212620"
+       },
+       {
+        "Id": "120761753"
+       },
+       {
+        "Id": "288142238"
+       },
+       {
+        "Id": "897541544"
+       }
+      ]
+     },
+     {
+      "Id": "2996230726",
+      "Name": "Turret_Charge",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\TURRET\\Turret_Charge",
+      "GUID": "{81CC9EBD-C986-4D25-8012-BECD6DD382FE}",
+      "Color": "10",
+      "MaxAttenuation": "1000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2",
+      "DurationMax": "1.2",
+      "MediaRefs": [
+       {
+        "Id": "46689940"
+       },
+       {
+        "Id": "408532320"
+       },
+       {
+        "Id": "785713535"
+       }
+      ]
+     },
+     {
+      "Id": "124877840",
+      "Name": "Turret_Death",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\TURRET\\Turret_Death",
+      "GUID": "{5E517214-7369-4813-9B61-C36581BCADEC}",
+      "Color": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2557917",
+      "DurationMax": "1.5382708",
+      "MediaRefs": [
+       {
+        "Id": "33778773"
+       },
+       {
+        "Id": "61687523"
+       },
+       {
+        "Id": "141567871"
+       },
+       {
+        "Id": "160347885"
+       },
+       {
+        "Id": "201168655"
+       },
+       {
+        "Id": "211391567"
+       },
+       {
+        "Id": "279961866"
+       },
+       {
+        "Id": "286642904"
+       },
+       {
+        "Id": "417871065"
+       },
+       {
+        "Id": "442363141"
+       },
+       {
+        "Id": "495853510"
+       },
+       {
+        "Id": "500083664"
+       },
+       {
+        "Id": "507113263"
+       },
+       {
+        "Id": "528944104"
+       },
+       {
+        "Id": "575941717"
+       },
+       {
+        "Id": "605545406"
+       },
+       {
+        "Id": "829377214"
+       },
+       {
+        "Id": "889704423"
+       },
+       {
+        "Id": "1020512643"
+       }
+      ]
+     },
+     {
+      "Id": "2647283225",
+      "Name": "Turret_Disappear",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\TURRET\\Turret_Disappear",
+      "GUID": "{D38D558E-E36B-4B2E-B9A3-06B1ECD964CB}",
+      "Color": "10",
+      "MaxAttenuation": "1000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7451875",
+      "DurationMax": "0.9412708",
+      "MediaRefs": [
+       {
+        "Id": "109281745"
+       },
+       {
+        "Id": "307013799"
+       },
+       {
+        "Id": "614374098"
+       }
+      ]
+     },
+     {
+      "Id": "246044385",
+      "Name": "Turret_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\TURRET\\Turret_Hit",
+      "GUID": "{17D52AB1-73F1-4442-8BA6-36544D80A4EC}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7324375",
+      "DurationMax": "0.8657708",
+      "MediaRefs": [
+       {
+        "Id": "103560841"
+       },
+       {
+        "Id": "174734452"
+       },
+       {
+        "Id": "257863929"
+       },
+       {
+        "Id": "337367894"
+       },
+       {
+        "Id": "402622460"
+       },
+       {
+        "Id": "742425535"
+       },
+       {
+        "Id": "775794782"
+       },
+       {
+        "Id": "850772921"
+       }
+      ]
+     },
+     {
+      "Id": "2888394459",
+      "Name": "Turret_Shoot",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\TURRET\\Turret_Shoot",
+      "GUID": "{28EC0E76-A3F5-4339-93AE-0C60E6812F7B}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6590833",
+      "DurationMax": "0.8333333",
+      "MediaRefs": [
+       {
+        "Id": "736654975"
+       },
+       {
+        "Id": "752299451"
+       },
+       {
+        "Id": "959307242"
+       }
+      ]
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "169480389",
+      "Name": "AB_ENEMIES_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\ENEMIES\\AB_ENEMIES\\AB_ENEMIES_01",
+      "GUID": "{96FA30C6-D9A0-4517-AF79-368F6E7D32CD}",
+      "Color": "10"
+     },
+     {
+      "Id": "1818530009",
+      "Name": "AB_ENEMIES",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\ENEMIES\\AB_ENEMIES",
+      "GUID": "{EE91C138-2EFC-4DF1-926C-0CA408E667CB}",
+      "Color": "10"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "932301089",
+      "Name": "RTPC_SFX_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_SFX_Volume",
+      "GUID": "{0EB4588E-0728-469E-A6B1-EA1EF70CCB3E}",
+      "Color": "1"
+     },
+     {
+      "Id": "1828041389",
+      "Name": "RTPC_Music_SideChain",
+      "ObjectPath": "\\Game Parameters\\MUSIC\\RTPC_Music_SideChain",
+      "GUID": "{48035C4E-15B2-4C86-A81C-7505A68840D5}"
+     },
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     },
+     {
+      "Id": "3312150600",
+      "Name": "RTPC_Sidechain_Rage_Enter",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Sidechain_Rage_Enter",
+      "GUID": "{CDBA16C9-1E19-496A-B420-2194AE170CC6}",
+      "Color": "1"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "603700529",
+      "Name": "MC_CriticalHealth",
+      "ObjectPath": "\\States\\MC\\MC_CriticalHealth",
+      "GUID": "{A5FC26C3-7658-4327-B092-C5E156E8EE7C}",
+      "Color": "3",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\None",
+        "GUID": "{5BC3290D-432D-4808-8DF2-9ECD959311FD}",
+        "Color": "3"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\OFF",
+        "GUID": "{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}",
+        "Color": "3"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\ON",
+        "GUID": "{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "2037745005",
+      "Name": "STG_DUCKGAMEOVER",
+      "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER",
+      "GUID": "{F8602139-94B4-472E-AE05-7C1BACD04DDB}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\None",
+        "GUID": "{4249B618-F554-41B7-92C0-6474F0C51E05}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\OFF",
+        "GUID": "{2F7E0F06-4458-411D-94B6-8AB9D860C269}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\ON",
+        "GUID": "{ED100031-70CD-4F13-BF9B-914069821D22}",
+        "Color": "23"
+       }
+      ]
+     },
+     {
+      "Id": "3350389201",
+      "Name": "STG_SLOWMO",
+      "ObjectPath": "\\States\\SFX\\STG_SLOWMO",
+      "GUID": "{1D2DAD21-09CF-4E14-B2E1-0BEA47C47222}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\None",
+        "GUID": "{7A3FC7CE-16CA-40AC-816B-E0C6955D12CA}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\OFF",
+        "GUID": "{EF39E2B7-CB41-4B8D-84ED-75738314CD46}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\ON",
+        "GUID": "{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}",
+        "Color": "23"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BD2C6860-8186-2125-5CCE-79A2C7006C61}"
+ }
+}

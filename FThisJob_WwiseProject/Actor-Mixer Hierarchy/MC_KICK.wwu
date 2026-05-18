@@ -1,0 +1,1940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}" SchemaVersion="123" RootDocumentID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}" ParentDocumentID="{943EEB9C-C300-454E-A5AB-41504B1F88A1}">
+	<AudioObjects>
+		<WorkUnit Name="MC_KICK" ID="{93BC1DCA-4F3A-40A7-9732-79241A97EC18}" OwnerID="{BBC3849B-9DE3-4971-A342-5E88E29BF080}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="AM_JAKE_KICK" ID="{B7FC7573-E6BB-4AE2-96D0-BA666F3CF3A8}" ShortID="18378403">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AB_MC" ID="{E427C276-6A85-4CFB-BBCA-A6B1B0F45E74}" WorkUnitID="{593669B8-3F66-44D2-889D-92F88F3ABEB9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="AM_JAKE_KICK_FOLEY" ID="{C06F7270-A86C-4A8E-8618-063054208AE4}" ShortID="328209623">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="MC_FOL_Kick" ID="{C19BEF88-B8C4-4BE2-B0A7-B16119608489}" ShortID="233929690">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A9DE79CE-1A4D-4332-B019-34A22F2C4162}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3C066E70-69D9-4659-8AD9-E6283079A80A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_FOL_Kick_01" ID="{18E9B2E1-C1BE-4C50-A719-CE01DC421040}" ShortID="552033464">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_FOL_Kick_01" ID="{3A501FDE-AD1F-4A8D-AEFA-78D62889C8A8}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_FOL_Kick_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="549018865"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_FOL_Kick_01" ID="{3A501FDE-AD1F-4A8D-AEFA-78D62889C8A8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_FOL_Kick_02" ID="{51D13D00-6768-4771-A907-D6346A633FC6}" ShortID="527985443">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_FOL_Kick_02" ID="{2019C839-DD66-4338-9CDE-773CAE8106DA}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_FOL_Kick_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="285288892"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_FOL_Kick_02" ID="{2019C839-DD66-4338-9CDE-773CAE8106DA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_FOL_Kick_03" ID="{2C599737-E771-4CFD-BA85-CD824D154686}" ShortID="967410362">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_FOL_Kick_03" ID="{7405D16B-D319-4DBA-9D2D-71E0920F6CCC}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_FOL_Kick_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="757580849"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_FOL_Kick_03" ID="{7405D16B-D319-4DBA-9D2D-71E0920F6CCC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_FOL_Kick_04" ID="{FD00E48B-B9FA-4AB4-90BD-C401624D7DCB}" ShortID="1010915740">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_FOL_Kick_04" ID="{55E5B4BD-1A4C-493B-8D69-715F46F466D1}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_FOL_Kick_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="103462543"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_FOL_Kick_04" ID="{55E5B4BD-1A4C-493B-8D69-715F46F466D1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<SwitchContainer Name="MC_Kick" ID="{C5DC4700-0EAD-4468-8C59-30B2E02489EB}" ShortID="511568579">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="None" ID="{4FD081FF-DF4E-4A7F-ADF9-75064E44F8FD}" WorkUnitID="{ED720400-EB28-4A80-B32C-E600131A82D2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="MC_KickMaterials" ID="{F4D2594D-96C1-46C9-96B3-A06B25B01E6B}" WorkUnitID="{ED720400-EB28-4A80-B32C-E600131A82D2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="MC_Kick_Generic" ID="{4B57F268-D390-4914-8480-F8C332A4A7C4}" ShortID="437906888">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0443EABD-E126-466D-8A1E-84396B5FFEA9}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9CD2FE52-C867-42E5-951B-2AA991513F1F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Generic_01" ID="{E2A3CB0A-2F0D-4ACE-891B-2826B3AF7CC5}" ShortID="819694856">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Generic_01" ID="{503AB4F5-8799-48A7-A09D-2C172FC22D02}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Generic_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1061764750"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Generic_01" ID="{503AB4F5-8799-48A7-A09D-2C172FC22D02}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Generic_02" ID="{43403BCC-493A-4950-A6B0-8D6779C9C8D9}" ShortID="18311118">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Generic_02" ID="{1D83AB35-AB2B-43B2-9E77-19E785A55DB2}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Generic_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="927769739"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Generic_02" ID="{1D83AB35-AB2B-43B2-9E77-19E785A55DB2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Generic_03" ID="{7C06CE01-7977-44BB-9768-06ACAA71822F}" ShortID="829087020">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Generic_03" ID="{40A02989-7CD7-439F-98BB-5A982D617507}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Generic_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="463033044"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Generic_03" ID="{40A02989-7CD7-439F-98BB-5A982D617507}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Generic_04" ID="{39064A97-3807-428B-B9FA-56F3D1E57160}" ShortID="870088357">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Generic_04" ID="{45EE5654-8466-48B3-9B52-20AE19210CFA}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Generic_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="992701844"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Generic_04" ID="{45EE5654-8466-48B3-9B52-20AE19210CFA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Door" ID="{3A505A2E-3EC4-4D0D-A20D-63D85B1C292D}" ShortID="938977739">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DE8D1F6F-1D63-40A0-9224-E054BD624379}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2E23F8E0-D882-4CAD-92E5-1E431CF884CE}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Door_01" ID="{0A36A079-49D0-49C3-B884-58573D47C1A4}" ShortID="1070923761">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Door_01" ID="{76C78E12-E56D-4D70-B942-F74FC4836382}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Door\MC_Kick_Door_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="839046186"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Door_01" ID="{76C78E12-E56D-4D70-B942-F74FC4836382}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Door_02" ID="{D0E327ED-CCAF-413B-9534-3DBFC738687C}" ShortID="153321358">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Door_02" ID="{6DBAF111-B5A3-4CE8-9E8C-6439BF216B4B}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Door\MC_Kick_Door_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1007322794"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Door_02" ID="{6DBAF111-B5A3-4CE8-9E8C-6439BF216B4B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Door_03" ID="{F1DD07FE-8208-4152-A99D-9B34FD95757D}" ShortID="301957315">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Door_03" ID="{6D84CB90-DC2F-4124-9BC5-1A7666CB36AD}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Door\MC_Kick_Door_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="335125051"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Door_03" ID="{6D84CB90-DC2F-4124-9BC5-1A7666CB36AD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Door_04" ID="{A8EEF46B-2253-408C-BC2C-E576C139264B}" ShortID="460290054">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Door_04" ID="{196F97DB-F0AD-478A-B4A1-3FD1398BA345}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Door\MC_Kick_Door_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="418318922"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Door_04" ID="{196F97DB-F0AD-478A-B4A1-3FD1398BA345}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Glass" ID="{54935D6B-958B-4699-93A6-5FC5D6477294}" ShortID="697256749">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{48B3F7E3-3A5F-4B31-B20C-F4417A2C0132}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FB720A19-FF04-4BC0-80AC-C3BE78F1192F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Glass_01" ID="{7937C90A-4CDF-4E78-91FA-C88181E26D5B}" ShortID="876562995">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Glass_01" ID="{8C24F23B-048F-4566-A081-ED2F85C762E8}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Glass_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="357711705"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Glass_01" ID="{8C24F23B-048F-4566-A081-ED2F85C762E8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Glass_02" ID="{9C458816-4694-418F-B9E1-EB113C7B9F99}" ShortID="55767072">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Glass_02" ID="{D508514B-F163-44FD-9B9B-3B1CAABA7F90}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Glass_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="903367123"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Glass_02" ID="{D508514B-F163-44FD-9B9B-3B1CAABA7F90}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Glass_03" ID="{1B265FAF-DE2E-49DD-82AF-4A4A7859514E}" ShortID="999497017">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Glass_03" ID="{B0930A21-0F4A-40F0-8831-558EA7749C9F}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Glass_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="547593459"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Glass_03" ID="{B0930A21-0F4A-40F0-8831-558EA7749C9F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Machine" ID="{690D5401-1D6E-433D-AE80-AE3E2CFB2B65}" ShortID="43515213">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Machine_01" ID="{58F02B32-0B4F-447B-9D78-3FEE20E23AB3}" ShortID="554826631">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Machine_01" ID="{9EA44D4F-7844-4779-BBE8-76BAF7166A48}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Machine_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="403619458"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Machine_01" ID="{9EA44D4F-7844-4779-BBE8-76BAF7166A48}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Machine_02" ID="{70A8433F-9176-4618-8D43-2FD523F2BF50}" ShortID="251616701">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Machine_02" ID="{E5E4A1DC-E0C7-4280-B1C1-1060E632D46E}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Machine_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="198339860"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Machine_02" ID="{E5E4A1DC-E0C7-4280-B1C1-1060E632D46E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Machine_03" ID="{D77784A4-27C3-462B-A3B9-24AAB123157C}" ShortID="809808427">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Machine_03" ID="{A7779D6C-39FC-4C6A-9BED-8A1DFB5E74AF}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Machine_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="451946310"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Machine_03" ID="{A7779D6C-39FC-4C6A-9BED-8A1DFB5E74AF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Machine_04" ID="{B048A9B8-FCD2-43C1-B5E6-B63A57DF33D9}" ShortID="1031104830">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Machine_04" ID="{1925E686-2836-4325-BEE4-951E3D7D9392}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Machine_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="68888245"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Machine_04" ID="{1925E686-2836-4325-BEE4-951E3D7D9392}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Toilet" ID="{94212D26-9F99-4C7B-8AFC-010696198256}" ShortID="43070956">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{256D911E-61A8-4A91-96FC-39E140EAF1BF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{4CB88D35-2D2F-44A7-A931-18D4D4C7155C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Toilet_01" ID="{0A06B92F-77CB-4FF8-AEE0-2585B3EA098F}" ShortID="266359958">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Toilet_01" ID="{567CEE5E-418E-4B09-8C46-45C9E5D62B04}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Toilet_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="304059092"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Toilet_01" ID="{567CEE5E-418E-4B09-8C46-45C9E5D62B04}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Toilet_02" ID="{9449F7A5-9FA4-4B55-B6B5-C38907C774FB}" ShortID="720137814">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Toilet_02" ID="{AA7873DD-D928-4145-A738-779BE10A17E5}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Toilet_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="308883168"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Toilet_02" ID="{AA7873DD-D928-4145-A738-779BE10A17E5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Toilet_03" ID="{EA9F0B3B-E529-4488-9DB7-97B92F00496E}" ShortID="865298532">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Toilet_03" ID="{EFC9E971-25A0-42D9-BA4B-221B0CB9914F}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Toilet_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="613403604"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Toilet_03" ID="{EFC9E971-25A0-42D9-BA4B-221B0CB9914F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Toilet_04" ID="{DD23CE4A-6292-4F4C-AB48-B5E6B417E930}" ShortID="660096727">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Toilet_04" ID="{1AD2CD92-BEC0-466F-ABED-88E32F57455C}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Toilet_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="219994796"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Toilet_04" ID="{1AD2CD92-BEC0-466F-ABED-88E32F57455C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Trash_Lid" ID="{F701475F-1A49-4E09-967F-58D0F155D67E}" ShortID="385717509">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{44FE84DC-A0D3-4024-8CCA-73A7F58FD952}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0410B851-38C0-44D9-BB32-D70D09A221CC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Kick_Trash_Lid_01" ID="{2B89DFC6-FA3B-44FB-9CA3-40083D12BFDB}" ShortID="337241622">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Trash_Lid_01" ID="{15F184A1-CC48-403C-9CFF-55A5092C8F67}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\SFX_Kick_Trash_Lid_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="519704722"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Trash_Lid_01" ID="{15F184A1-CC48-403C-9CFF-55A5092C8F67}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Trash_Lid_02" ID="{2742A9E7-9104-4439-B9C4-E73459EFECDA}" ShortID="1053368777">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Trash_Lid_02" ID="{12787A6A-E783-4FC0-91AA-2EF9BDCE21D0}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\SFX_Kick_Trash_Lid_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="305419068"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Trash_Lid_02" ID="{12787A6A-E783-4FC0-91AA-2EF9BDCE21D0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Trash_Lid_03" ID="{B6504CCF-DFBC-487F-947B-A10831418D9E}" ShortID="159643116">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Trash_Lid_03" ID="{71B925E9-C1F2-433A-8B69-C63BC33FABDE}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\SFX_Kick_Trash_Lid_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="173047694"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Trash_Lid_03" ID="{71B925E9-C1F2-433A-8B69-C63BC33FABDE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Trash_Lid_04" ID="{DEA796F7-CD76-4541-8564-34543F92FA8B}" ShortID="1008905060">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Trash_Lid_04" ID="{A9173D2F-BDE0-42AD-8B2D-21D8B967BF1D}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\SFX_Kick_Trash_Lid_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="460341718"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Trash_Lid_04" ID="{A9173D2F-BDE0-42AD-8B2D-21D8B967BF1D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Trash" ID="{77752D08-D0CB-45D2-B5D9-E14AB4933240}" ShortID="478494591">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2659B3AD-8D80-4459-94CC-46E5DD9676AC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{763AC9A0-C7C6-4CE0-BDC9-4D971F2C3A46}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AB_SFX_LVL_01" ID="{99C04D22-BE70-4FF5-A7FD-8AAFF7F5FDCA}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Kick_Trash_01" ID="{7848BB76-6A9C-4DA5-8A86-ACB79393E2CA}" ShortID="1053193022">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Trash_01" ID="{2C618A29-437E-41DD-B5FC-918F54447CAD}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Trash\SFX_Kick_Trash_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="743792807"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Trash_01" ID="{2C618A29-437E-41DD-B5FC-918F54447CAD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Trash_02" ID="{EAA41E01-3736-4390-A08E-AB187A5038D3}" ShortID="397086839">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Trash_02" ID="{C3C633CE-ADC8-4D70-8BCF-0BBCE8AD58F3}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Trash\SFX_Kick_Trash_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="759785794"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Trash_02" ID="{C3C633CE-ADC8-4D70-8BCF-0BBCE8AD58F3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Trash_03" ID="{7154A349-870B-47DD-98A6-3DD46E1DC77C}" ShortID="159299242">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Trash_03" ID="{3B80D7A4-8AF6-4470-A4D0-A1ADBB1A5BB5}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Trash\SFX_Kick_Trash_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="185880578"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Trash_03" ID="{3B80D7A4-8AF6-4470-A4D0-A1ADBB1A5BB5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Trash_04" ID="{623D8E7B-DB9A-4178-AF76-A76859249334}" ShortID="149426419">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Trash_04" ID="{BC7E5F80-3CF7-4315-8786-D2D567AB4FE0}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Trash\SFX_Kick_Trash_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="140028649"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Trash_04" ID="{BC7E5F80-3CF7-4315-8786-D2D567AB4FE0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Desk" ID="{7E0DD176-04B4-4DC9-B6F8-057577FD7A0B}" ShortID="944202638">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Desk_01" ID="{5617B3CF-E4D5-4768-B9AB-D7A8F067F0E6}" ShortID="1034446342">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Desk_01" ID="{0350C78D-5C2B-4543-9DBD-BC0D0EEAD89E}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Desk_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="308331471"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Desk_01" ID="{0350C78D-5C2B-4543-9DBD-BC0D0EEAD89E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Desk_02" ID="{27AA02B6-88EA-427B-8F0C-A83D9F5D5D94}" ShortID="567910311">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Desk_02" ID="{07B7CEAD-0D8A-440E-A399-26D2AA9B7A3B}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Desk_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="845348965"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Desk_02" ID="{07B7CEAD-0D8A-440E-A399-26D2AA9B7A3B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Desk_03" ID="{E3576A00-2401-42C0-AEFB-727B708AB919}" ShortID="496527339">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Desk_03" ID="{DC1FCA17-DB89-46B5-9317-DC99C658E072}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Desk_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="559625118"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Desk_03" ID="{DC1FCA17-DB89-46B5-9317-DC99C658E072}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Desk_04" ID="{342F091A-723F-4D9F-A17C-A957A0EEA3E6}" ShortID="944386136">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Desk_04" ID="{473300B7-8AD9-4BBD-9ACE-8F1F8DA79E4F}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Desk_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="503497753"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Desk_04" ID="{473300B7-8AD9-4BBD-9ACE-8F1F8DA79E4F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Lamp" ID="{974BED81-763B-4D78-B2A7-3E2CE9D26FBA}" ShortID="49044642">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Lamp_01" ID="{F8A68427-61CB-44F9-B74A-0F0C06335C4A}" ShortID="28141592">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Lamp_01" ID="{6C588286-4E87-4CA1-80BA-D25255E1B8B6}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Lamp_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="388513268"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Lamp_01" ID="{6C588286-4E87-4CA1-80BA-D25255E1B8B6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Lamp_02" ID="{8555BADC-A82B-4313-9FC1-F6C9EF483F18}" ShortID="819839600">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Lamp_02" ID="{3698200E-4B4B-4616-BD4A-27296BB30A27}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Lamp_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="736896278"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Lamp_02" ID="{3698200E-4B4B-4616-BD4A-27296BB30A27}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Lamp_03" ID="{141ACA0B-FA18-4510-93AA-8872BA758D07}" ShortID="888687784">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Lamp_03" ID="{6EB828D4-9D6F-4467-84EC-67EA745A4AAF}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Lamp_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="893691821"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Lamp_03" ID="{6EB828D4-9D6F-4467-84EC-67EA745A4AAF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Statue" ID="{48F4C49B-A0FC-4B23-AABA-CF43EB056E65}" ShortID="654654508">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Statue_01" ID="{D77A3AE9-7AB5-44CE-BD79-E0AD97775A8F}" ShortID="323037845">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Statue_01" ID="{C080742A-C189-4FE7-BEFB-8391E0549742}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Statue_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="918715412"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Statue_01" ID="{C080742A-C189-4FE7-BEFB-8391E0549742}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Statue_02" ID="{9D6990CE-1412-46D4-9B3B-A08516BA5B71}" ShortID="423640680">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Statue_02" ID="{A9296501-215C-4D37-9EFC-69854D3D8173}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Statue_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="279673314"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Statue_02" ID="{A9296501-215C-4D37-9EFC-69854D3D8173}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Statue_03" ID="{30D0875C-FA1E-454C-8C51-A305E69E8352}" ShortID="993006001">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Statue_03" ID="{27708799-B202-4D15-90A3-18BD9CF8C884}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Statue_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="433571903"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Statue_03" ID="{27708799-B202-4D15-90A3-18BD9CF8C884}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_DoorBoss" ID="{6EB1AEA1-AC14-4692-86B8-510274E84414}" ShortID="744604820">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_DoorBoss_02" ID="{6733A7BB-4C06-4C48-8E11-3F924DD0DDF6}" ShortID="832397832">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_DoorBoss_02" ID="{87B38BE1-874B-4637-839B-49FACFA730CC}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Door\MC_Kick_DoorBoss_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="232663823"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_DoorBoss_02" ID="{87B38BE1-874B-4637-839B-49FACFA730CC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_DoorBoss_01" ID="{8A1829A5-612A-43C0-BE19-F05163CA832B}" ShortID="296893534">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_DoorBoss_01" ID="{BF284AC4-DF5B-4A0C-8C60-43CBB604179C}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Door\MC_Kick_DoorBoss_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="700462340"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_DoorBoss_01" ID="{BF284AC4-DF5B-4A0C-8C60-43CBB604179C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_DoorBoss_03" ID="{B688C921-EFC3-46B4-9F17-C790C7822AC1}" ShortID="986842330">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_DoorBoss_03" ID="{1D348DB1-5D8F-4564-8E1F-614CD2B36FBD}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Door\MC_Kick_DoorBoss_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="828075890"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_DoorBoss_03" ID="{1D348DB1-5D8F-4564-8E1F-614CD2B36FBD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_DoorBoss_04" ID="{D9AA7363-B494-477D-AC73-6CFC11C323A0}" ShortID="251096701">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_SFX_GLOBAL" ID="{9C6CC8AA-7227-4483-8521-32F36C178B3F}" WorkUnitID="{59E0E8FB-2FC5-4E2E-9708-1A8A8B135F6F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_DoorBoss_04" ID="{491AB17F-3073-45E0-AFE1-6215D8ECF736}">
+													<Language>SFX</Language>
+													<AudioFile>SFX\Door\MC_Kick_DoorBoss_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="381585894"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_DoorBoss_04" ID="{491AB17F-3073-45E0-AFE1-6215D8ECF736}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_WaterMachine" ID="{ABB89B68-879C-436D-B37E-B3A8B24C268C}" ShortID="186236138">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Kick_Water_Machine_01" ID="{249BB65B-057A-44B3-ADB4-A8CAAD86893B}" ShortID="625718680">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Water_Machine_01" ID="{21B7E3BD-36EB-4273-9B38-841146221048}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\SFX_Kick_Water_Machine_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="873238609"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Water_Machine_01" ID="{21B7E3BD-36EB-4273-9B38-841146221048}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Water_Machine_02" ID="{23D490E7-2755-4867-B05E-6EB805214D8B}" ShortID="914118004">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Water_Machine_02" ID="{AD32FEAD-D4A7-46FF-8369-0438D51C0144}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\SFX_Kick_Water_Machine_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="106352443"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Water_Machine_02" ID="{AD32FEAD-D4A7-46FF-8369-0438D51C0144}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Water_Machine_03" ID="{421E9BCC-C12C-4EBD-BB1B-0978C5AC2CC9}" ShortID="275684965">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Water_Machine_03" ID="{4E3CCD31-2D14-42C4-A400-DBC4846A757A}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\SFX_Kick_Water_Machine_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="644372667"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Water_Machine_03" ID="{4E3CCD31-2D14-42C4-A400-DBC4846A757A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Kick_Water_Machine_04" ID="{2ABC8158-D941-4D29-8856-EDD5D9E1F356}" ShortID="384002420">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Kick_Water_Machine_04" ID="{63F0262D-7AEE-4E7E-A5FA-38A2E84E576F}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\SFX_Kick_Water_Machine_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="685064690"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Kick_Water_Machine_04" ID="{63F0262D-7AEE-4E7E-A5FA-38A2E84E576F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Server" ID="{7FADBBD0-517A-4499-A5A8-2095558DB310}" ShortID="872677740">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Server_01" ID="{4FB43771-C855-4955-9545-AE50C9C7C561}" ShortID="16246360">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Server_01" ID="{BB1A6696-ECE7-4CCA-946A-6FCB5CE726D6}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Server_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="218459455"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Server_01" ID="{BB1A6696-ECE7-4CCA-946A-6FCB5CE726D6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Server_02" ID="{B2CE00FF-0B08-4533-8FB8-5A7AE686CBE1}" ShortID="763454076">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Server_02" ID="{37A2177F-115C-4992-A685-02395E5933D8}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Server_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="379029924"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Server_02" ID="{37A2177F-115C-4992-A685-02395E5933D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Server_03" ID="{B5EA2CBB-78D9-4505-9843-44CFCDA04463}" ShortID="301783342">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Server_03" ID="{1791AEA8-7E3D-42D3-95E2-ACB9E5831DFF}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Server_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="163809128"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Server_03" ID="{1791AEA8-7E3D-42D3-95E2-ACB9E5831DFF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Projector" ID="{AB985ECC-6091-4572-B1AC-A05BC816CB88}" ShortID="427105396">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Projector_01" ID="{6F0D58F8-A060-4354-B180-D02B65EF94D6}" ShortID="50910516">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Projector_01" ID="{85C47DC8-129F-4B05-85F8-073EF8F3008A}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Projector_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="964299900"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Projector_01" ID="{85C47DC8-129F-4B05-85F8-073EF8F3008A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Projector_02" ID="{07D61D24-6059-4AD9-822D-A19A7F35D856}" ShortID="828508691">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Projector_02" ID="{7D6D601B-B990-40B1-87C7-95F2FAE19D07}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Projector_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="207562431"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Projector_02" ID="{7D6D601B-B990-40B1-87C7-95F2FAE19D07}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Projector_03" ID="{AFA68763-05B2-47FE-A262-B1048200A6FA}" ShortID="1016476844">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Projector_03" ID="{CCA6F609-78F0-46D4-AF4F-DC0EEEFBF512}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Projector_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="627708938"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Projector_03" ID="{CCA6F609-78F0-46D4-AF4F-DC0EEEFBF512}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Projector_04" ID="{BFA5FECF-F313-413B-A3AE-B79F79C6779F}" ShortID="24342820">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Projector_04" ID="{A50CD4E3-CFE2-431F-8096-F4AE9C489871}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Projector_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="352427947"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Projector_04" ID="{A50CD4E3-CFE2-431F-8096-F4AE9C489871}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MC_Kick_Hamster_Wheel" ID="{534D8706-31ED-45DD-822B-514B755C17A8}" ShortID="65443398">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{21C6B723-B109-4BDB-9F60-387E024F93BC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9CFA6762-3800-45AD-BDF6-B1CC2DB0CC5D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_30m" ID="{F2910B9F-1029-4BB5-ADEB-D943FABE2E28}" WorkUnitID="{BC7E2ED7-AC18-4CD5-82E6-1169A9F70F70}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="MC_Kick_Hamster_Wheel_01" ID="{B1BC6E7E-17A1-4EEA-9FDF-F9EE3A0667E1}" ShortID="785373584">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Hamster_Wheel_01" ID="{D216A42F-524A-41CF-B68A-AF483C291A4E}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Hamster_Wheel_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="360262765"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Hamster_Wheel_01" ID="{D216A42F-524A-41CF-B68A-AF483C291A4E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Hamster_Wheel_02" ID="{80CF0591-3DD6-4087-96F6-FBEF25051169}" ShortID="398563296">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Hamster_Wheel_02" ID="{EA30B8C8-CB7D-4666-B312-5C0A948CF84F}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Hamster_Wheel_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="998077053"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Hamster_Wheel_02" ID="{EA30B8C8-CB7D-4666-B312-5C0A948CF84F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Hamster_Wheel_03" ID="{A61738B9-68AF-4802-9540-8ED60CDB4DDE}" ShortID="619409348">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Hamster_Wheel_03" ID="{1B934544-7C22-4AC9-996B-12898ABCA3F1}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Hamster_Wheel_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="385815577"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Hamster_Wheel_03" ID="{1B934544-7C22-4AC9-996B-12898ABCA3F1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="MC_Kick_Hamster_Wheel_04" ID="{6CC72F89-218D-4B23-80F9-E62CD66CD880}" ShortID="675936887">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="MC_Kick_Hamster_Wheel_04" ID="{01C3FA8A-782D-48CF-B018-EB135ADF39F1}">
+													<Language>SFX</Language>
+													<AudioFile>MC\Kick\MC_Kick_Hamster_Wheel_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="992749175"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="MC_Kick_Hamster_Wheel_04" ID="{01C3FA8A-782D-48CF-B018-EB135ADF39F1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Machine" ID="{690D5401-1D6E-433D-AE80-AE3E2CFB2B65}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Hamster_Wheel" ID="{534D8706-31ED-45DD-822B-514B755C17A8}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Trash" ID="{77752D08-D0CB-45D2-B5D9-E14AB4933240}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Toilet" ID="{94212D26-9F99-4C7B-8AFC-010696198256}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Door" ID="{3A505A2E-3EC4-4D0D-A20D-63D85B1C292D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Trash_Lid" ID="{F701475F-1A49-4E09-967F-58D0F155D67E}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_WaterMachine" ID="{ABB89B68-879C-436D-B37E-B3A8B24C268C}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Generic" ID="{4B57F268-D390-4914-8480-F8C332A4A7C4}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Glass" ID="{54935D6B-958B-4699-93A6-5FC5D6477294}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Desk" ID="{7E0DD176-04B4-4DC9-B6F8-057577FD7A0B}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Lamp" ID="{974BED81-763B-4D78-B2A7-3E2CE9D26FBA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Statue" ID="{48F4C49B-A0FC-4B23-AABA-CF43EB056E65}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_DoorBoss" ID="{6EB1AEA1-AC14-4692-86B8-510274E84414}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Projector" ID="{AB985ECC-6091-4572-B1AC-A05BC816CB88}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="MC_Kick_Server" ID="{7FADBBD0-517A-4499-A5A8-2095558DB310}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Machine" ID="{C85DD532-0452-47C4-BF34-E5309C966EA9}"/>
+										<ItemList>
+											<ItemRef Name="MC_Kick_Machine" ID="{690D5401-1D6E-433D-AE80-AE3E2CFB2B65}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Generic" ID="{DB0C815E-184D-481C-86F8-121F43C626E4}"/>
+										<ItemList>
+											<ItemRef Name="MC_Kick_Machine" ID="{690D5401-1D6E-433D-AE80-AE3E2CFB2B65}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Glass" ID="{A2F8958F-0B85-4776-8468-4E39E3288256}"/>
+										<ItemList>
+											<ItemRef Name="MC_Kick_Glass" ID="{54935D6B-958B-4699-93A6-5FC5D6477294}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Door" ID="{7CF1E0AF-65B6-438C-8ED4-7F70F36CB07D}"/>
+										<ItemList>
+											<ItemRef Name="MC_Kick_Door" ID="{3A505A2E-3EC4-4D0D-A20D-63D85B1C292D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="None" ID="{4FD081FF-DF4E-4A7F-ADF9-75064E44F8FD}"/>
+										<ItemList>
+											<ItemRef Name="MC_Kick_Machine" ID="{690D5401-1D6E-433D-AE80-AE3E2CFB2B65}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

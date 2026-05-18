@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}" SchemaVersion="123" RootDocumentID="{5D03C61C-1390-431E-8873-8F79F45DF6DC}" ParentDocumentID="{1C48CCD6-76FE-42D9-B02D-E55B2CDA1878}">
+	<AudioObjects>
+		<WorkUnit Name="SFX_FINISH" ID="{36DB0ABD-14A3-4C81-89D5-449C2134A339}" OwnerID="{2BA1392D-644B-436A-A667-B17A98C20A88}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="SFX_FINISH" ID="{9EB43230-3636-4223-A67F-BD412194DC33}" ShortID="360263122">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Finish_Score_Big_Bad" ID="{83E2D457-490B-442A-84BA-D956D5C638B3}" ShortID="717622611">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Finish_Score_Big_Bad" ID="{A13C6AAE-3315-4246-B652-9EDC4D271FFC}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\Finish\SFX_Finish_Score_Big_Bad.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="392341909"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Finish_Score_Big_Bad" ID="{A13C6AAE-3315-4246-B652-9EDC4D271FFC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Finish_Score_Big_Good" ID="{8A27FECA-9760-4A2C-B3DE-EB1873689ADF}" ShortID="587937172">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Finish_Score_Big_Good" ID="{E93153DE-90D0-42CF-B8BE-33CCAB665E2A}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\Finish\SFX_Finish_Score_Big_Good.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="810759648"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Finish_Score_Big_Good" ID="{E93153DE-90D0-42CF-B8BE-33CCAB665E2A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Finish_Score_Big_Neutral" ID="{7CD9E673-0CF7-4691-BED4-64B7D1F8B3AA}" ShortID="597865248">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Finish_Score_Big_Neutral" ID="{1E738981-1038-4781-9E54-B73C7DC516FA}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\Finish\SFX_Finish_Score_Big_Neutral.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="416491899"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Finish_Score_Big_Neutral" ID="{1E738981-1038-4781-9E54-B73C7DC516FA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="RC_Score_Small_Good" ID="{4281D289-441A-461C-808C-CF5CF68FF0D9}" ShortID="1069593143">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{849DC89C-E3C4-4374-A3BE-D9A9327BC987}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Finish_Score_Small_Good_01" ID="{E40F63D1-5DE0-4A11-A564-BB24A5A18A95}" ShortID="669997337">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Finish_Score_Small_Good_01" ID="{50E64BF1-AC39-4D5F-A9A1-2216B08AD401}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Finish\SFX_Finish_Score_Small_Good_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="831245143"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Finish_Score_Small_Good_01" ID="{50E64BF1-AC39-4D5F-A9A1-2216B08AD401}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Finish_Score_Small_Good_02" ID="{38514A04-6F48-43A2-A6E7-AF73956EB5B0}" ShortID="337238642">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Finish_Score_Small_Good_02" ID="{74A92D3C-2B35-4E77-85BC-6B68C3C0639D}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Finish\SFX_Finish_Score_Small_Good_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="414024608"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Finish_Score_Small_Good_02" ID="{74A92D3C-2B35-4E77-85BC-6B68C3C0639D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Finish_Score_Small_Good_03" ID="{2A5B0A62-CC5D-4EF0-A09E-DFAC88E5EFEC}" ShortID="254628263">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Finish_Score_Small_Good_03" ID="{7843D86E-E1FB-4F3C-9716-0F345A75BCF7}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Finish\SFX_Finish_Score_Small_Good_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="767928250"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Finish_Score_Small_Good_03" ID="{7843D86E-E1FB-4F3C-9716-0F345A75BCF7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="RC_Score_Small_Neutral" ID="{51C131BD-E79A-4A4A-9134-C8822E4E4846}" ShortID="644919054">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9CC55CC1-8245-4C7C-80B2-14416EE8D186}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Finish_Score_Small_Neutral_01" ID="{C45F861A-A25D-450C-BA06-6A924A74B8E3}" ShortID="874525474">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Finish_Score_Small_Neutral_01" ID="{CBAEB7C2-5E29-48BB-9A59-61A015315661}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Finish\SFX_Finish_Score_Small_Neutral_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="247570954"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Finish_Score_Small_Neutral_01" ID="{CBAEB7C2-5E29-48BB-9A59-61A015315661}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Finish_Score_Small_Neutral_02" ID="{6F39633E-3353-4591-97D1-B16C8AC1E104}" ShortID="185504482">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Finish_Score_Small_Neutral_02" ID="{6C39B830-0784-471D-8B9A-71AA45AA2E66}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Finish\SFX_Finish_Score_Small_Neutral_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="761904340"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Finish_Score_Small_Neutral_02" ID="{6C39B830-0784-471D-8B9A-71AA45AA2E66}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Finish_Score_Small_Neutral_03" ID="{2392F58F-DA3E-4629-B548-A86940255B29}" ShortID="98576851">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Finish_Score_Small_Neutral_03" ID="{5DBF3E06-6B94-469B-A30A-4ED016AF7659}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\Finish\SFX_Finish_Score_Small_Neutral_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="64931513"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Finish_Score_Small_Neutral_03" ID="{5DBF3E06-6B94-469B-A30A-4ED016AF7659}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="SFX_Finish_Stamp" ID="{2AF4133F-B77A-4E62-A13A-1C1D8A7FF5DB}" ShortID="127465449">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Finish_Stamp" ID="{9A99BCAD-2B65-4A5C-B25D-B8CAEC34DD16}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\Finish\SFX_Finish_Stamp.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="273406520"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Finish_Stamp" ID="{9A99BCAD-2B65-4A5C-B25D-B8CAEC34DD16}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Finish_Start" ID="{A105AF30-F69A-4AEE-A177-39F97F687FF3}" ShortID="865520999">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Finish_Start" ID="{67264415-C29B-4688-93EA-ACBE86EF66C4}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\Finish\SFX_Finish_Start.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="385656086"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Finish_Start" ID="{67264415-C29B-4688-93EA-ACBE86EF66C4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2203717664	VOC_Jake_Cutscene_Outro_03			\Default Work Unit\VOICES\VOICES_OUTRO\VOC_Jake_Cutscene_Outro_03	
+	2203717665	VOC_Jake_Cutscene_Outro_02			\Default Work Unit\VOICES\VOICES_OUTRO\VOC_Jake_Cutscene_Outro_02	
+	2203717666	VOC_Jake_Cutscene_Outro_01			\Default Work Unit\VOICES\VOICES_OUTRO\VOC_Jake_Cutscene_Outro_01	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	400129071	VOC_Jake_Cutscene_Outro_01	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\80\{80CD448F-0A64-087E-846F-2AF54965892C}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_OUTRO\VOICES_Outro\VOC_Jake_Cutscene_Outro_01		123575
+	534695601	VOC_Jake_Cutscene_Outro_02	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\99\{99EE94DA-4679-1936-8C8F-A31D16B4E73C}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_OUTRO\VOICES_Outro\VOC_Jake_Cutscene_Outro_02		137797
+	630093348	VOC_Jake_Cutscene_Outro_03	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\60\{609B3A2C-7FF1-629D-8A2E-F09E607087EB}.wem		\Actor-Mixer Hierarchy\VOICES\AM_VOICES\VOICES_OUTRO\VOICES_Outro\VOC_Jake_Cutscene_Outro_03		26335
+

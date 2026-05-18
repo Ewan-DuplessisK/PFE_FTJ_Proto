@@ -1,0 +1,556 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "85035280",
+    "Type": "User",
+    "GUID": "{A2759956-F2AD-4580-83A4-2BF9D2AA540D}",
+    "Color": "13",
+    "Language": "SFX",
+    "Hash": "{DCC3D4A9-C70E-A04B-BF43-92F7E77B743A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\GPE\\GPE_LVL_01\\GPE_LVL_01",
+    "ShortName": "GPE_LVL_01",
+    "Path": "GPE_LVL_01.bnk",
+    "Media": [
+     {
+      "Id": "155149420",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_ExtinguisherSteam_LP.wav",
+      "CachePath": "9A/{9AA93CFB-63F7-A6E2-FBB4-B97B41AF29DD}.wem"
+     },
+     {
+      "Id": "168352679",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Estinguisher_Launch_01.wav",
+      "CachePath": "11/{11457B4F-A61F-7A3B-C9EC-EC3A0EC8CF65}.wem"
+     },
+     {
+      "Id": "185949229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Wood_Push_01.wav",
+      "CachePath": "67/{6738A00F-AF0E-BC7A-BF5C-3A248EE72164}.wem"
+     },
+     {
+      "Id": "217541128",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Plastic_Push_01.wav",
+      "CachePath": "6A/{6AC3F8BF-E4C2-55E4-1AE8-C2B97255FB2D}.wem"
+     },
+     {
+      "Id": "264649836",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Metal_Push_04.wav",
+      "CachePath": "E6/{E6CFCBF7-7DEB-C200-EEC8-CB65DBC09E22}.wem"
+     },
+     {
+      "Id": "287751928",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Metal_Push_01.wav",
+      "CachePath": "9B/{9BB80EDC-70E6-45D1-A957-43BF0D29796B}.wem"
+     },
+     {
+      "Id": "379294725",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Plastic_Push_02.wav",
+      "CachePath": "DD/{DDFEB59B-2F8B-086C-CAEA-AC5D96C1B54C}.wem"
+     },
+     {
+      "Id": "388496544",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Plastic_Push_03.wav",
+      "CachePath": "C4/{C4BCEC71-D185-E6F4-78EA-3327D274D922}.wem"
+     },
+     {
+      "Id": "461939361",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_Grab_02.wav",
+      "CachePath": "02/{021727E8-ACED-7CD1-1FCC-2B270E3A48BF}.wem"
+     },
+     {
+      "Id": "462574172",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Wood_Push_03.wav",
+      "CachePath": "B4/{B435AA61-5640-8FDD-8D9D-D4CEAD25E078}.wem"
+     },
+     {
+      "Id": "536603680",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_Grab_03.wav",
+      "CachePath": "CB/{CB9B3FB5-284B-1EE4-13FA-E8D71CC28837}.wem"
+     },
+     {
+      "Id": "646540880",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Wood_Push_02.wav",
+      "CachePath": "2C/{2C0B559F-8C0A-DF2C-B7B4-E0B27D767C09}.wem"
+     },
+     {
+      "Id": "685031485",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_ImpactFloor_02.wav",
+      "CachePath": "90/{9089E453-C278-EC33-7073-65DE13B20833}.wem"
+     },
+     {
+      "Id": "723370423",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Estinguisher_Launch_02.wav",
+      "CachePath": "D2/{D2060ED6-6E49-E1C9-7EA4-9B22A1E2EB70}.wem"
+     },
+     {
+      "Id": "735447114",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_ImpactFloor_03.wav",
+      "CachePath": "C9/{C9A45151-C7A3-CD5E-E18A-BCDC37DC0A5C}.wem"
+     },
+     {
+      "Id": "735477568",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Metal_Push_03.wav",
+      "CachePath": "91/{915CFA6D-FB19-536A-0836-47DE76FD9A69}.wem"
+     },
+     {
+      "Id": "752327437",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Plastic_Push_04.wav",
+      "CachePath": "03/{037F59DC-0475-C6AE-C3F0-B6639E0A7888}.wem"
+     },
+     {
+      "Id": "776925664",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_ImpactExplosion_03.wav",
+      "CachePath": "13/{13709052-9138-78D8-0AB9-90BB7F99D95C}.wem"
+     },
+     {
+      "Id": "792069997",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_ImpactFloor_01.wav",
+      "CachePath": "22/{22CE58BB-4F4F-4FDD-4930-2C26BF868908}.wem"
+     },
+     {
+      "Id": "823105612",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_ImpactExplosion_02.wav",
+      "CachePath": "33/{3307D6C4-2117-D561-C7AB-D50CF1247F53}.wem"
+     },
+     {
+      "Id": "939019149",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_Grab_01.wav",
+      "CachePath": "DD/{DDB0956A-1BEF-D01A-9611-C1F88C754757}.wem"
+     },
+     {
+      "Id": "958750338",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Extinguisher_ImpactExplosion_01.wav",
+      "CachePath": "02/{024A650E-C23F-FBEA-1A7A-A5A51B8C8F01}.wem"
+     },
+     {
+      "Id": "999162193",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Extinguisher\\GPE_Estinguisher_Launch_03.wav",
+      "CachePath": "B6/{B64F1249-B0AC-609F-1E76-9BD1D34C59CD}.wem"
+     },
+     {
+      "Id": "1015472390",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Wood_Push_04.wav",
+      "CachePath": "63/{63ED7C58-2892-9734-D5F6-1DB2AB3301D7}.wem"
+     },
+     {
+      "Id": "1036270381",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GPE\\Trolley\\SFX_Trolley_Metal_Push_02.wav",
+      "CachePath": "F3/{F3C4A6A9-6870-4412-02C6-EBA70A840D04}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1529599477",
+      "Name": "Extinguisher_Grab",
+      "ObjectPath": "\\Events\\Default Work Unit\\GPE\\GPE_LVL_01\\Extinguisher_Grab",
+      "GUID": "{7066E952-1C2A-43E0-8ADA-F0EDB5C56925}",
+      "Color": "13",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.76666665",
+      "DurationMax": "0.76666665",
+      "MediaRefs": [
+       {
+        "Id": "461939361"
+       },
+       {
+        "Id": "536603680"
+       },
+       {
+        "Id": "939019149"
+       }
+      ]
+     },
+     {
+      "Id": "781447242",
+      "Name": "Extinguisher_ImpactExplosion",
+      "ObjectPath": "\\Events\\Default Work Unit\\GPE\\GPE_LVL_01\\Extinguisher_ImpactExplosion",
+      "GUID": "{6DB36355-AFFF-4F31-B0F3-F6577408882C}",
+      "Color": "13",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.3333333",
+      "DurationMax": "2.4666667",
+      "MediaRefs": [
+       {
+        "Id": "776925664"
+       },
+       {
+        "Id": "823105612"
+       },
+       {
+        "Id": "958750338"
+       }
+      ]
+     },
+     {
+      "Id": "1397545049",
+      "Name": "Extinguisher_ImpactFloor",
+      "ObjectPath": "\\Events\\Default Work Unit\\GPE\\GPE_LVL_01\\Extinguisher_ImpactFloor",
+      "GUID": "{01A8D39C-7E7D-401F-9827-7BC4552D3662}",
+      "Color": "13",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6503532",
+      "DurationMax": "2.235",
+      "MediaRefs": [
+       {
+        "Id": "685031485"
+       },
+       {
+        "Id": "735447114"
+       },
+       {
+        "Id": "792069997"
+       }
+      ]
+     },
+     {
+      "Id": "3446414162",
+      "Name": "Extinguisher_Launch",
+      "ObjectPath": "\\Events\\Default Work Unit\\GPE\\GPE_LVL_01\\Extinguisher_Launch",
+      "GUID": "{506A5F83-5BD6-4176-A17D-A6996A9CB5A6}",
+      "Color": "13",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6503532",
+      "DurationMax": "2.235",
+      "MediaRefs": [
+       {
+        "Id": "168352679"
+       },
+       {
+        "Id": "685031485"
+       },
+       {
+        "Id": "723370423"
+       },
+       {
+        "Id": "735447114"
+       },
+       {
+        "Id": "792069997"
+       },
+       {
+        "Id": "999162193"
+       }
+      ]
+     },
+     {
+      "Id": "276231153",
+      "Name": "Extinguisher_Steam",
+      "ObjectPath": "\\Events\\Default Work Unit\\GPE\\GPE_LVL_01\\Extinguisher_Steam",
+      "GUID": "{1C004F4A-651D-4EC1-97E5-DC7316436A81}",
+      "Color": "13",
+      "MaxAttenuation": "3000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "155149420"
+       }
+      ]
+     },
+     {
+      "Id": "2800942775",
+      "Name": "Trolley_Metal_Push",
+      "ObjectPath": "\\Events\\Default Work Unit\\GPE\\GPE_LVL_01\\Trolley_Metal_Push",
+      "GUID": "{66BD37FC-A052-47E6-952D-E0D3A1232027}",
+      "Color": "13",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0666667",
+      "DurationMax": "1.0668958",
+      "MediaRefs": [
+       {
+        "Id": "264649836"
+       },
+       {
+        "Id": "287751928"
+       },
+       {
+        "Id": "735477568"
+       },
+       {
+        "Id": "1036270381"
+       }
+      ]
+     },
+     {
+      "Id": "2493400436",
+      "Name": "Trolley_Plastic_Push",
+      "ObjectPath": "\\Events\\Default Work Unit\\GPE\\GPE_LVL_01\\Trolley_Plastic_Push",
+      "GUID": "{6072CC44-55C3-4CCD-9CBB-967010CF0262}",
+      "Color": "13",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2256042",
+      "DurationMax": "1.3333334",
+      "MediaRefs": [
+       {
+        "Id": "217541128"
+       },
+       {
+        "Id": "379294725"
+       },
+       {
+        "Id": "388496544"
+       },
+       {
+        "Id": "752327437"
+       }
+      ]
+     },
+     {
+      "Id": "323939019",
+      "Name": "Trolley_Wood_Push",
+      "ObjectPath": "\\Events\\Default Work Unit\\GPE\\GPE_LVL_01\\Trolley_Wood_Push",
+      "GUID": "{5FEC68C5-E5C8-4F3D-B0E8-9DCDFDDBE3F8}",
+      "Color": "13",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.78741664",
+      "DurationMax": "0.8530833",
+      "MediaRefs": [
+       {
+        "Id": "185949229"
+       },
+       {
+        "Id": "462574172"
+       },
+       {
+        "Id": "646540880"
+       },
+       {
+        "Id": "1015472390"
+       }
+      ]
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "1485142487",
+      "Name": "AB_GPE",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\GPE\\AB_GPE",
+      "GUID": "{5DC2031F-A86D-4FFB-A8D7-F1A25361B9B8}",
+      "Color": "13"
+     },
+     {
+      "Id": "3565491922",
+      "Name": "AB_GPE_LVL_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\GPE\\AB_GPE\\AB_GPE_LVL_01",
+      "GUID": "{545C53D3-F33D-4EE3-8DB4-63B06A445D87}",
+      "Color": "13"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "932301089",
+      "Name": "RTPC_SFX_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_SFX_Volume",
+      "GUID": "{0EB4588E-0728-469E-A6B1-EA1EF70CCB3E}",
+      "Color": "1"
+     },
+     {
+      "Id": "2564988978",
+      "Name": "RTPC_Master_Volume",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Master_Volume",
+      "GUID": "{6BBFD9D3-4275-4D55-97B9-6ADF22AC4960}",
+      "Color": "1"
+     },
+     {
+      "Id": "3312150600",
+      "Name": "RTPC_Sidechain_Rage_Enter",
+      "ObjectPath": "\\Game Parameters\\UI\\RTPC_Sidechain_Rage_Enter",
+      "GUID": "{CDBA16C9-1E19-496A-B420-2194AE170CC6}",
+      "Color": "1"
+     },
+     {
+      "Id": "4144970303",
+      "Name": "RTPC_Extinguisher_Volume",
+      "ObjectPath": "\\Game Parameters\\GPE\\RTPC_Extinguisher_Volume",
+      "GUID": "{8EDDB16F-2299-4A4E-99EF-673E78BADA20}",
+      "Color": "13"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "603700529",
+      "Name": "MC_CriticalHealth",
+      "ObjectPath": "\\States\\MC\\MC_CriticalHealth",
+      "GUID": "{A5FC26C3-7658-4327-B092-C5E156E8EE7C}",
+      "Color": "3",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\None",
+        "GUID": "{5BC3290D-432D-4808-8DF2-9ECD959311FD}",
+        "Color": "3"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\OFF",
+        "GUID": "{EF19C540-85C5-48D1-86D8-DB6F3F49A3A5}",
+        "Color": "3"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\MC\\MC_CriticalHealth\\ON",
+        "GUID": "{9DAEC584-B39C-4E83-A1D2-680C5AF854E0}",
+        "Color": "3"
+       }
+      ]
+     },
+     {
+      "Id": "2037745005",
+      "Name": "STG_DUCKGAMEOVER",
+      "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER",
+      "GUID": "{F8602139-94B4-472E-AE05-7C1BACD04DDB}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\None",
+        "GUID": "{4249B618-F554-41B7-92C0-6474F0C51E05}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\OFF",
+        "GUID": "{2F7E0F06-4458-411D-94B6-8AB9D860C269}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_DUCKGAMEOVER\\ON",
+        "GUID": "{ED100031-70CD-4F13-BF9B-914069821D22}",
+        "Color": "23"
+       }
+      ]
+     },
+     {
+      "Id": "3350389201",
+      "Name": "STG_SLOWMO",
+      "ObjectPath": "\\States\\SFX\\STG_SLOWMO",
+      "GUID": "{1D2DAD21-09CF-4E14-B2E1-0BEA47C47222}",
+      "Color": "23",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\None",
+        "GUID": "{7A3FC7CE-16CA-40AC-816B-E0C6955D12CA}",
+        "Color": "23"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\OFF",
+        "GUID": "{EF39E2B7-CB41-4B8D-84ED-75738314CD46}",
+        "Color": "23"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\SFX\\STG_SLOWMO\\ON",
+        "GUID": "{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}",
+        "Color": "23"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{51AEBEC0-02BF-C389-ECB1-5B15AA037847}"
+ }
+}

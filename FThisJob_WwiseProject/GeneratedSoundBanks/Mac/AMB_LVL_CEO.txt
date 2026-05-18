@@ -1,0 +1,43 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1844273965	Beds_CeoLarge_LVL_CEO			\Default Work Unit\AMB\AMB_LVL_CEO\Beds_CeoLarge_LVL_CEO	
+	2475367957	Beds_CeoSmall_LVL_CEO			\Default Work Unit\AMB\AMB_LVL_CEO\Beds_CeoSmall_LVL_CEO	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	603700529	MC_CriticalHealth			\MC\MC_CriticalHealth	
+	1876089722	STG_MUSIC_GAMEPLAY			\MUSIC\STG_MUSIC_GAMEPLAY	
+	2037745005	STG_DUCKGAMEOVER			\SFX\STG_DUCKGAMEOVER	
+	2925743549	STG_DUCKPAUSE			\UI\STG_DUCKPAUSE	
+	3350389201	STG_SLOWMO			\SFX\STG_SLOWMO	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MC_CriticalHealth			
+	930712164	OFF	MC_CriticalHealth			
+	1651971902	ON	MC_CriticalHealth			
+	748895195	None	STG_MUSIC_GAMEPLAY			
+	777581536	ST_Arena	STG_MUSIC_GAMEPLAY			
+	1149269995	ST_Fight	STG_MUSIC_GAMEPLAY			
+	2256071962	ST_Calm	STG_MUSIC_GAMEPLAY			
+	748895195	None	STG_DUCKGAMEOVER			
+	930712164	OFF	STG_DUCKGAMEOVER			
+	1651971902	ON	STG_DUCKGAMEOVER			
+	748895195	None	STG_DUCKPAUSE			
+	930712164	OFF	STG_DUCKPAUSE			
+	1651971902	ON	STG_DUCKPAUSE			
+	748895195	None	STG_SLOWMO			
+	930712164	OFF	STG_SLOWMO			
+	1651971902	ON	STG_SLOWMO			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	932301089	RTPC_SFX_Volume			\UI\RTPC_SFX_Volume	
+	2564988978	RTPC_Master_Volume			\UI\RTPC_Master_Volume	
+	3312150600	RTPC_Sidechain_Rage_Enter			\UI\RTPC_Sidechain_Rage_Enter	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1770656193	AB_AMB			\Default Work Unit\Master Audio Bus\AMB\AB_AMB	
+	1943276111	AB_AMB_CEO			\Default Work Unit\Master Audio Bus\AMB\AB_AMB\AB_AMB_CEO	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	117875982	AMB_Beds_Ceo_Small_LP	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\C3\{C32E3AC3-3E44-3BD5-A622-B3700AE22DA0}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_CEO\AM_LVL_CEO\AM_BEDS\AMB_Beds_Ceo_Small_LP		777297
+	425915999	AMB_Beds_Ceo_Large_LP	C:\Users\ninol\Documents\NHericher_DESKTOP-IERF7E2_1653\FThisJob\FThisJob_WwiseProject\.cache\BC\{BC50B5EF-292E-E3BE-55C0-6980BBB5D306}.wem		\Actor-Mixer Hierarchy\AMB\AM_AMB\AMB_LVL_CEO\AM_LVL_CEO\AM_BEDS\AMB_Beds_Ceo_Large_LP		675019
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{11F5A011-3997-4C9C-A18D-955213F50FD7}" SchemaVersion="123" RootDocumentID="{62CC4FAA-3740-4C3E-8116-67F5D987BB88}" ParentDocumentID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}">
+	<Events>
+		<WorkUnit Name="SFX_SLOWMO" ID="{11F5A011-3997-4C9C-A18D-955213F50FD7}" OwnerID="{64CC0B7E-DD07-4F11-B6C0-2A93134BAF1F}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="SFX_Slowmo_Start" ID="{46F60FCE-E6E8-4EFF-8F7F-6A386A2707AC}">
+					<ChildrenList>
+						<Action Name="" ID="{94528CCD-37EB-48AC-AF4C-A8006F7A8F02}" ShortID="522036890">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_SlowMo_Start" ID="{6535254A-448A-4F0D-BCC3-C7B4CC18FFD2}" WorkUnitID="{EA07B130-056B-4B24-A9A4-F455581CCB5A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{01BDA587-3B50-48DA-AA47-8A05188533F4}" ShortID="726000677">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_SlowMo_LP" ID="{E3CC147A-33FB-41B6-936A-A23E08CEA062}" WorkUnitID="{EA07B130-056B-4B24-A9A4-F455581CCB5A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{237C2A49-0E47-4398-A3BA-BA0B72D942AD}" ShortID="359912968">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{91DDBD46-99A5-4381-B6F5-4905C9E434D7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_SlowMo_LP" ID="{E3CC147A-33FB-41B6-936A-A23E08CEA062}" WorkUnitID="{EA07B130-056B-4B24-A9A4-F455581CCB5A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{758AAED9-523D-4916-BFC5-2F953EEF6228}" ShortID="6558861">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ON" ID="{0267AD40-ECBC-4494-8EBF-9CE72421D0B9}" WorkUnitID="{BF9A5B04-D68B-4696-A88F-810D05B05C28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1DEF7266-B1F9-416F-BFE8-A04A7B435DF3}" ShortID="178405687">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="0.8"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_Music_Slowmo" ID="{8CE0CB95-49E6-470C-BE79-FC81C67D8BD8}" WorkUnitID="{4A76EC59-EA3D-4446-9363-3DD63FE2886C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SFX_Slowmo_End" ID="{A838BBD1-0413-49A8-9B23-49236BBB9A80}">
+					<ChildrenList>
+						<Action Name="" ID="{3CDCF493-FCC7-4093-9290-4242A014D124}" ShortID="654635373">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_SlowMo_LP" ID="{E3CC147A-33FB-41B6-936A-A23E08CEA062}" WorkUnitID="{EA07B130-056B-4B24-A9A4-F455581CCB5A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6C63D3EE-76C8-4733-B32D-509501CDD314}" ShortID="911768710">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_SlowMo_Start" ID="{6535254A-448A-4F0D-BCC3-C7B4CC18FFD2}" WorkUnitID="{EA07B130-056B-4B24-A9A4-F455581CCB5A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EE8725A5-A919-4BA2-895E-CBA4A2275026}" ShortID="613002533">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_SlowMo_End" ID="{02C8A8DB-A095-4484-9097-E53DE3AE288A}" WorkUnitID="{EA07B130-056B-4B24-A9A4-F455581CCB5A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DD3F9E5A-9475-4FDC-924F-B25D05CED363}" ShortID="547017789">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OFF" ID="{EF39E2B7-CB41-4B8D-84ED-75738314CD46}" WorkUnitID="{BF9A5B04-D68B-4696-A88F-810D05B05C28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7209965A-65B9-4523-820C-A302E9B8DD65}" ShortID="381556562">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_Music_Slowmo" ID="{8CE0CB95-49E6-470C-BE79-FC81C67D8BD8}" WorkUnitID="{4A76EC59-EA3D-4446-9363-3DD63FE2886C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
