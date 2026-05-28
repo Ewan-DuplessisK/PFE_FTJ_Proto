@@ -12,6 +12,28 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{35B675C0-6D2F-4947-8907-3B6ED16E5AA5}" ShortID="784432591">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7F026DAA-5BEB-4EF1-8E92-B8222EC7B22A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Sparks_LP" ID="{1BADA4B9-E390-4EEA-9531-E89BB2AE62CB}" WorkUnitID="{D62C80B4-5111-4B70-8392-09F8807524FE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="SFX_Elec_OneShot" ID="{3E980A51-B084-457A-9D83-6EB0917CE546}">

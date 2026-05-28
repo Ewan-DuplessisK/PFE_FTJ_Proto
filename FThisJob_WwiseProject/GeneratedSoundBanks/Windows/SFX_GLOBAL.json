@@ -11,7 +11,7 @@
     "GUID": "{A0EDC394-AD37-471D-B719-4E5E6FF07C75}",
     "Color": "25",
     "Language": "SFX",
-    "Hash": "{71E19137-FFBF-5B12-C9AC-756497461610}",
+    "Hash": "{0AF0E62E-C307-690D-5601-F34D370E87B7}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX\\SFX_GLOBAL\\SFX_GLOBAL",
     "ShortName": "SFX_GLOBAL",
     "Path": "SFX_GLOBAL.bnk",
@@ -526,7 +526,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SFX\\Electrecity\\SFX_Sparks_LP.wav",
-      "CachePath": "1B/{1B02FCA0-E88C-4D9D-F74E-2E3E018DBE65}.wem"
+      "CachePath": "BE/{BE7A1026-3E9A-8792-6671-6362456C03DC}.wem"
      },
      {
       "Id": "633144456",
@@ -1655,9 +1655,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\SFX_GLOBAL\\SFX_ELECTRICITY\\SFX_Sparks",
       "GUID": "{7648441B-AB30-4B89-AC69-F8AA9EC0DA46}",
       "Color": "25",
-      "DurationType": "OneShot",
-      "DurationMin": "22",
-      "DurationMax": "22",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "604834086"
@@ -2001,6 +1999,6 @@
     ]
    }
   ],
-  "FileHash": "{2A6D2D3C-DD93-B7A2-CB69-92303C5F1C3B}"
+  "FileHash": "{6CE832F3-E9F9-A121-3D03-D7C844464490}"
  }
 }

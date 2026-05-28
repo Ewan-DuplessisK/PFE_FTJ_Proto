@@ -1111,6 +1111,14 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<Sound Name="ENEMY_Ceo_Stun_LP" ID="{DE9BDBED-5FCF-470D-98B0-9524338EF62D}" ShortID="93397683">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>26</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
@@ -1132,6 +1140,106 @@
 								<ActiveSource Name="ENEMY_Ceo_Stun_LP" ID="{013FC585-325C-456B-B22B-8E55F78FB3AB}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="RC_HitsObjects" ID="{80E4C9A2-C218-4BAD-9542-3AB70C3817DA}" ShortID="443257311">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ENEMY_Ceo_HitsObjects_01" ID="{E8D73DB5-32D0-4886-AB57-E542E9B2135B}" ShortID="714075923">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsObjects_01" ID="{138EA506-E326-4F50-A7B1-1C27E90B27F9}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsObjects_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="157295214"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsObjects_01" ID="{138EA506-E326-4F50-A7B1-1C27E90B27F9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HitsObjects_02" ID="{8C077831-98DB-4DF4-A4AE-F6C072149DE4}" ShortID="291548381">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsObjects_02" ID="{E7ABF473-30F8-4E04-99B4-49C566F62CA7}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsObjects_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="845358125"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsObjects_02" ID="{E7ABF473-30F8-4E04-99B4-49C566F62CA7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HitsObjects_03" ID="{F699576C-0EC3-48FA-86EC-67882BDEB7B7}" ShortID="362293922">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsObjects_03" ID="{1EAE1258-19C8-41F5-B9A6-243BD5F911CE}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsObjects_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="925357106"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsObjects_03" ID="{1EAE1258-19C8-41F5-B9A6-243BD5F911CE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ENEMY_Ceo_HitsObjects_04" ID="{5EF030F0-E1AE-40BD-8E61-26778A28DB41}" ShortID="526645735">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AF56C3FC-A9E1-41C5-99C1-E5002368157A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{909C546A-B380-4B84-8E0F-4B654B38C3CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ENEMY_Ceo_HitsObjects_04" ID="{CCB781FC-6B7F-4611-9916-0E1593D72118}">
+											<Language>SFX</Language>
+											<AudioFile>ENNEMIES\CEO\ENEMY_Ceo_HitsObjects_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="22895283"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ENEMY_Ceo_HitsObjects_04" ID="{CCB781FC-6B7F-4611-9916-0E1593D72118}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

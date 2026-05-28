@@ -234,6 +234,32 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="BOSS_HitsObjects" ID="{FF8E2C3E-CFAF-4B11-A74E-03B7B6D05046}">
+					<ChildrenList>
+						<Action Name="" ID="{ABF0EDDC-8159-4005-805E-F17BC53E475B}" ShortID="217623463">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_HitsObjects" ID="{80E4C9A2-C218-4BAD-9542-3AB70C3817DA}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BOSS_Stop_Stun" ID="{F60C1522-5939-4C65-9150-06717CAEF1D2}">
+					<ChildrenList>
+						<Action Name="" ID="{BE80FFF3-156C-4CB7-8A86-08A57A7E1121}" ShortID="101498029">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ENEMY_Ceo_Stun_LP" ID="{DE9BDBED-5FCF-470D-98B0-9524338EF62D}" WorkUnitID="{4AE18590-098A-452B-8CD9-D47A0815A5D4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

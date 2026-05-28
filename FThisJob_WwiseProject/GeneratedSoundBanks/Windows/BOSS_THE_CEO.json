@@ -11,11 +11,19 @@
     "GUID": "{82A8F8A9-776F-4FE0-BF0F-1D06DCAFAD68}",
     "Color": "10",
     "Language": "SFX",
-    "Hash": "{D9EC639F-9CD1-6903-9D34-3508F287374E}",
+    "Hash": "{712B90FA-8E2F-709F-A079-58B593EBE87A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_THE_CEO",
     "ShortName": "BOSS_THE_CEO",
     "Path": "BOSS_THE_CEO.bnk",
     "Media": [
+     {
+      "Id": "22895283",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsObjects_04.wav",
+      "CachePath": "16/{16AB8FAD-14B9-B209-D46B-115724975021}.wem"
+     },
      {
       "Id": "57987035",
       "Language": "SFX",
@@ -71,6 +79,14 @@
       "Location": "Memory",
       "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Charge_02.wav",
       "CachePath": "D2/{D260409E-E159-4C8F-F20A-5FB7A4AE9062}.wem"
+     },
+     {
+      "Id": "157295214",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsObjects_01.wav",
+      "CachePath": "61/{61241C62-D2C8-89AE-A39E-2E92221C6996}.wem"
      },
      {
       "Id": "161220475",
@@ -206,7 +222,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_Stun_LP.wav",
-      "CachePath": "B6/{B6A723BD-BAF9-17EA-906C-FBA5D84E22F4}.wem"
+      "CachePath": "6C/{6CA20A79-2F4A-0EC3-E495-F81530C39BEB}.wem"
      },
      {
       "Id": "464335915",
@@ -345,6 +361,14 @@
       "CachePath": "34/{342ECF4B-FB1F-6258-E605-5EF23BD95981}.wem"
      },
      {
+      "Id": "845358125",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsObjects_02.wav",
+      "CachePath": "EB/{EB2881C8-310A-782C-2C8A-DD39B9CC2F71}.wem"
+     },
+     {
       "Id": "880626459",
       "Language": "SFX",
       "Streaming": "false",
@@ -375,6 +399,14 @@
       "Location": "Memory",
       "ShortName": "VOICE\\LVLCEO\\VOC_Boss_CEO_02.wav",
       "CachePath": "70/{7084A087-EFDE-3D6D-702F-099696B0BE1A}.wem"
+     },
+     {
+      "Id": "925357106",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ENNEMIES\\CEO\\ENEMY_Ceo_HitsObjects_03.wav",
+      "CachePath": "99/{9914076A-636E-B3D4-9E92-BA6B71F4447E}.wem"
      }
     ],
     "Events": [
@@ -531,6 +563,31 @@
       ]
      },
      {
+      "Id": "2198432865",
+      "Name": "BOSS_HitsObjects",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_HitsObjects",
+      "GUID": "{FF8E2C3E-CFAF-4B11-A74E-03B7B6D05046}",
+      "Color": "10",
+      "MaxAttenuation": "3000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.3",
+      "DurationMax": "2.3",
+      "MediaRefs": [
+       {
+        "Id": "22895283"
+       },
+       {
+        "Id": "157295214"
+       },
+       {
+        "Id": "845358125"
+       },
+       {
+        "Id": "925357106"
+       }
+      ]
+     },
+     {
       "Id": "4121852524",
       "Name": "BOSS_LaunchPunch",
       "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_LaunchPunch",
@@ -600,15 +657,24 @@
       ]
      },
      {
+      "Id": "3379276188",
+      "Name": "BOSS_Stop_Stun",
+      "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Stop_Stun",
+      "GUID": "{F60C1522-5939-4C65-9150-06717CAEF1D2}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "1642963821",
       "Name": "BOSS_Stun",
       "ObjectPath": "\\Events\\Default Work Unit\\ENEMIES\\BOSS_THE_CEO\\BOSS_Stun",
       "GUID": "{874F0875-06AA-47D5-8EBF-2900C1A2FC02}",
       "Color": "10",
       "MaxAttenuation": "3000",
-      "DurationType": "OneShot",
-      "DurationMin": "2",
-      "DurationMax": "2",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "444954411"
@@ -674,6 +740,6 @@
     ]
    }
   ],
-  "FileHash": "{96CFBC41-AB79-597F-2823-4864DC5D40ED}"
+  "FileHash": "{3F9B9BC2-612A-9FE7-018A-73DDC5BDB0C3}"
  }
 }
