@@ -46,11 +46,11 @@ UCLASS() class FTHISJOB_API AGameHUD : public ABaseHUD
 
     public:
 
-    UFUNCTION(BlueprintCallable) void PauseGame();
+    UFUNCTION(BlueprintNativeEvent,BlueprintCallable) void PauseGame();
 
     UFUNCTION(BlueprintImplementableEvent) void OnPauseGameSound();
 
-    UFUNCTION() void ResumeGame();
+    UFUNCTION(BlueprintNativeEvent,BlueprintCallable) void ResumeGame();
 
     UFUNCTION(BlueprintImplementableEvent) void OnResumeGameSound();
 };

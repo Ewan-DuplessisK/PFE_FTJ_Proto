@@ -57,7 +57,7 @@ TSubclassOf<UCommonActivatableWidget> AGameHUD::GetEndScreenClass()
 
 //Public
 
-void AGameHUD::PauseGame() 
+void AGameHUD::PauseGame_Implementation() 
 {
     UGameplayStatics::SetGamePaused(GetWorld() , true);
     check(PauseMenuWidgetClass);
@@ -65,7 +65,7 @@ void AGameHUD::PauseGame()
     OnPauseGameSound();
 }
 
-void AGameHUD::ResumeGame() 
+void AGameHUD::ResumeGame_Implementation() 
 {
     UGameplayStatics::SetGamePaused(GetWorld() , false);
     if(PauseMenuWidgetInstance)
